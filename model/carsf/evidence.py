@@ -189,7 +189,11 @@ def _is_placeholder_source(source: dict[str, Any]) -> bool:
     return "placeholder" in combined.lower() or source.get("illustrative_placeholder_only") is True
 
 
-def assess_evidence(example_or_group: dict[str, Any], required_for: str | list[str]) -> EvidenceAssessment:
+def assess_evidence(
+    example_or_group: dict[str, Any],
+    required_for: str | list[str],
+    evidence_packet: Any | None = None,
+) -> EvidenceAssessment:
     """Assess whether supplied evidence items meet prototype requirements."""
 
     targets = _targets(required_for)
@@ -198,12 +202,17 @@ def assess_evidence(example_or_group: dict[str, Any], required_for: str | list[s
         for requirement in get_default_evidence_requirements()
         if targets.intersection(requirement.required_for)
     ]
-    supplied = {item.requirement_id: item for item in _items(example_or_group) if item.provided}
+    supplied_items = _items(example_or_group)
+    if evidence_packet is not None:
+        supplied_items.extend(list(getattr(evidence_packet, "evidence_items", [])))
+    supplied = {item.requirement_id: item for item in supplied_items if item.provided}
     missing: list[str] = []
     low_confidence: list[str] = []
     warnings = [
         "Evidence assessment is prototype-only and does not validate any liability, legal position, tax position, or audit finding.",
     ]
+    if evidence_packet is not None:
+        warnings.append("Mock evidence can upgrade prototype status only; it does not create real-world sufficiency.")
 
     for requirement in requirements:
         item = supplied.get(requirement.requirement_id)
@@ -217,6 +226,10 @@ def assess_evidence(example_or_group: dict[str, Any], required_for: str | list[s
         status = "placeholder_only"
     elif not supplied:
         status = "insufficient"
+    elif evidence_packet is not None and (missing or low_confidence):
+        status = "partial"
+    elif evidence_packet is not None:
+        status = "sufficient_for_prototype"
     elif missing or low_confidence:
         status = "partial"
     else:

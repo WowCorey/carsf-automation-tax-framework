@@ -837,6 +837,12 @@ def evidence_json_payload(
         "example_evidence_summary": [evidence_summary_row(result.name, result) for result in results],
         "grouped_evidence_summary": evidence_summary_row("Grouped-entity preview", grouped),
         "transfer_pricing_evidence_summary": evidence_summary_row("Transfer-pricing preview", transfer_report),
+        "controlled_mock_evidence_workflow": {
+            "report_markdown": "reports/mock_evidence_workflow.md",
+            "report_json": "reports/mock_evidence_workflow.json",
+            "status": "synthetic_mock_evidence_workflow_only",
+            "non_claim": "Mock evidence can support prototype workflow testing only; it cannot create real-world sufficiency.",
+        },
         "high_sensitivity_categories": sorted(
             {
                 requirement.category
@@ -939,6 +945,14 @@ def build_evidence_markdown(
             "## I. Future Review Needs",
             "",
             "- Legal, tax, privacy, economic, Treasury/ATO-style, and sector-specific review before any external use.",
+            "",
+            "## J. Controlled Mock Evidence Workflow",
+            "",
+            "Synthetic mock evidence packets can be generated and reviewed with `python scripts/run_evidence_workflow.py`.",
+            "",
+            "- Markdown report: `reports/mock_evidence_workflow.md`",
+            "- JSON report: `reports/mock_evidence_workflow.json`",
+            "- Mock evidence can support prototype workflow testing only; it cannot create real-world sufficiency.",
         ]
     )
     return "\n".join(lines).rstrip() + "\n"

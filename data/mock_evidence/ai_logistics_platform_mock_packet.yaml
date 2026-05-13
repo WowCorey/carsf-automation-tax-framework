@@ -1,0 +1,82 @@
+packet_id: ai_logistics_platform_mock_packet
+linked_example_id: logistics_ai_platform
+synthetic_mock_evidence_only: true
+created_for:
+  - core_formula
+  - avoidance
+  - grouping
+  - transfer_pricing
+privacy_classification: moderate
+secrecy_classification: internal_research
+review_state: submitted_mock
+ready_for_external_review: false
+tests_pass_marker: false
+warnings:
+  - Synthetic packet for high automation, offshore service, and grouping review workflow testing only.
+metadata:
+  expected_outcome: needs_tax_review_and_needs_legal_review
+  scenario_note: AI logistics platform with offshore AI service, platform owner, and thin Australian employer entity.
+evidence_items:
+  - evidence_id: ai_logistics_offshore_ai
+    requirement_id: avoid_offshore_ai
+    source_type: synthetic_service_record
+    source_description: Synthetic offshore AI service record for prototype avoidance review.
+    confidence: medium
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - Does not validate cross-border attribution.
+  - evidence_id: ai_logistics_related_party
+    requirement_id: tp_related_party_agreements
+    source_type: synthetic_related_party_agreement
+    source_description: Synthetic related-party agreement placeholder for transfer-pricing review.
+    confidence: medium
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - Does not implement transfer-pricing law.
+  - evidence_id: ai_logistics_platform_owner
+    requirement_id: group_ip_owner
+    source_type: synthetic_group_chart
+    source_description: Synthetic group chart showing a platform and IP owner role.
+    confidence: medium
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - Grouping flag only.
+  - evidence_id: ai_logistics_customer_entity
+    requirement_id: group_customer_facing
+    source_type: synthetic_group_chart
+    source_description: Synthetic group chart showing Australian customer-facing entity role.
+    confidence: medium
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - Review flag only.
+  - evidence_id: ai_logistics_employer_entity
+    requirement_id: group_employer
+    source_type: synthetic_employment_summary
+    source_description: Synthetic summary showing a thin Australian employer entity.
+    confidence: low
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - Mock summary contains no personal records.
+  - evidence_id: ai_logistics_offshore_provider
+    requirement_id: group_offshore_provider
+    source_type: synthetic_group_chart
+    source_description: Synthetic group chart showing offshore automation service provider role.
+    confidence: medium
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - Review flag only.
+  - evidence_id: ai_logistics_aava_inputs
+    requirement_id: core_aava_revenue_costs
+    source_type: synthetic_management_account
+    source_description: Synthetic firm-level financial summary where offshore service costs may suppress reported AAVA.
+    confidence: low
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - No audited accounts are supplied.

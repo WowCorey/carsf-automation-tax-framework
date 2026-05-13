@@ -171,3 +171,38 @@ Limitations:
 - No real data has been collected.
 - No calibration has occurred.
 - Legal, tax, privacy, economic, Treasury/ATO-style, and sector-specific review remains required.
+
+## V1.5 Controlled Mock Evidence and Review Workflow
+
+Branch: `v1.5-controlled-mock-evidence-and-review-workflow`
+
+Baseline: PR #6 merged into `main`, including evidence requirements, decision-log summaries, calibration shell, data source registry, evidence/calibration reports, and Streamlit evidence page.
+
+Purpose of this build:
+
+- Add synthetic mock evidence packet models.
+- Add prototype review-state workflow transitions.
+- Add privacy/secrecy classification helpers.
+- Add controlled mock evidence fixtures with `synthetic_mock_evidence_only: true`.
+- Generate mock evidence workflow JSON/Markdown reports.
+- Add Streamlit mock evidence workflow page.
+
+Tests run:
+
+- `python -m pytest` - 246 passed, 1 pytest-asyncio deprecation warning under Python 3.14.
+- `python -m compileall -q model simulator scripts` - passed.
+- Recursive YAML parse check for schedules/examples/data - parsed 20 YAML files.
+- `python scripts/run_examples.py` - regenerated example, grouped, transfer-pricing, evidence, and calibration reports.
+- `python scripts/run_evidence_workflow.py` - generated mock evidence workflow reports.
+- Streamlit bare import probe for `simulator/app.py`, evidence page, and mock evidence workflow page - passed. HTTP probe timed out locally and no lingering Streamlit process remained.
+
+Reports generated:
+
+- `reports/mock_evidence_workflow.json`
+- `reports/mock_evidence_workflow.md`
+
+Limitations:
+
+- Mock evidence is workflow scaffolding only.
+- It does not validate real data, liability, tax positions, audit findings, legal conclusions, Treasury assessments, ATO assessments, or economic claims.
+- Future real evidence handling requires privacy, secrecy, legal, ATO/Treasury, data-owner, and governance controls.

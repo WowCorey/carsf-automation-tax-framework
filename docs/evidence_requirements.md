@@ -23,6 +23,23 @@ Acceptable source categories include audited records, payroll and timesheets, co
 
 All current worked examples and grouped examples remain illustrative placeholders. Their evidence assessments should remain `placeholder_only`, `insufficient`, or `partial` until real evidence is supplied and reviewed.
 
+## Controlled Mock Evidence Workflow
+
+Synthetic mock packets in `data/mock_evidence/` test how evidence could be submitted, summarised, classified, and moved through prototype review states. Every fixture is marked `synthetic_mock_evidence_only: true`.
+
+The workflow can upgrade an example from placeholder-only modelling to a prototype status such as `partial` or `sufficient_for_prototype`, but only for workflow testing. It never creates real-world sufficiency, and it does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.
+
+Run:
+
+```powershell
+python scripts/run_evidence_workflow.py
+```
+
+Generated reports:
+
+- `reports/mock_evidence_workflow.md`
+- `reports/mock_evidence_workflow.json`
+
 ## Non-Claims
 
 This evidence layer is not legal, tax, Treasury, ATO, evidentiary, forensic, audit, or economic validation. It does not validate liability or prove that any firm would owe tax.

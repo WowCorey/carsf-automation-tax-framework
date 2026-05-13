@@ -24,6 +24,9 @@ The standard decision log can record:
 - grouping
 - transfer-pricing preview
 - mixed-unit handling
+- mock evidence packet assessment
+- review-state workflow transition
+- privacy/secrecy classification
 
 ## Determinism
 
@@ -32,6 +35,8 @@ Decision logs use deterministic run identifiers and step identifiers. The only i
 ## Data Controls
 
 Decision logs must not include secrets, credentials, personal identifiers, or personal data. They should store compact summaries, not raw payroll, tax, or personal records.
+
+Mock evidence workflow logs should record only synthetic packet identifiers, counts, classifications, review states, warnings, and non-claims.
 
 ## Non-Claims
 

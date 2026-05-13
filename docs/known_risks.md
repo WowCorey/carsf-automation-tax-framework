@@ -16,6 +16,9 @@
 - Mixed-unit value-weighted exposure is not a tax base and may mislead if treated as a substitute for calibrated sector schedules.
 - Related-party service fees, offshore AI services, IP royalties, platform licences, cloud/inference relabelling, and robotics leasing require transfer-pricing, GST, treaty, and legal review before any operative use.
 - Evidence requirements may create false comfort if readers mistake placeholder-only assessments for actual evidentiary validation.
+- Synthetic mock evidence may create false comfort if `partial` or `sufficient_for_prototype` is mistaken for real evidence sufficiency.
+- Review-state workflow labels may be misread as approval states unless the non-claim warnings remain visible.
+- Privacy/secrecy classification is prototype-only and may be inadequate for actual protected, taxpayer, worker, commercially sensitive, or restricted government data.
 - Decision logs are compact model-flow summaries and may omit facts that a real audit trail would require.
 - Calibration source categories may be incomplete until Treasury/ATO-style, legal, privacy, data-owner, and economic review occurs.
 - Destination and activity attribution may create treaty, trade, and compliance disputes.

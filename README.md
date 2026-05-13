@@ -21,6 +21,7 @@ All sector values, schedule values, examples, caps, Fiscal Replacement Value val
 - `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, and mixed-unit handling.
 - `model/tests/` - pytest coverage for formula bounds, caps, examples, and avoidance flags.
 - `data/` - source-category registry and placeholder policy; no datasets are committed.
+- `data/mock_evidence/` - synthetic mock evidence packets for workflow testing only; no real evidence or personal data is committed.
 - `schedules/` - prototype sector schedules for automotive repair and logistics / warehousing.
 - `examples/` - illustrative placeholder firm cases.
 - `examples/groups/` - illustrative grouped-entity and apportionment preview cases.
@@ -53,7 +54,19 @@ Generated reports:
 - `reports/calibration_requirements.md`
 - `reports/calibration_requirements.json`
 
+Run controlled mock evidence workflow reports separately:
+
+```powershell
+python scripts/run_evidence_workflow.py
+```
+
+Generated mock workflow reports:
+
+- `reports/mock_evidence_workflow.md`
+- `reports/mock_evidence_workflow.json`
+
 The reports are illustrative placeholder outputs only. They are not legal grouping findings, transfer-pricing adjustments, ATO findings, tax assessments, Treasury guidance, OECD/BEPS analysis, economic validation, or real liability calculations.
+Mock evidence reports use synthetic fixtures only and do not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.
 
 ## Run the Simulator
 
@@ -77,6 +90,7 @@ V1.5 is not just an examples update. It is V1.4 plus two prototype sector schedu
 - preview related-party / transfer-pricing adjustment candidates without replacing reported AAVA or calculating any legal addback;
 - handle mixed canonical output units by prohibiting direct output/HLE aggregation and showing only standalone liability sums, schedule-level comparison, and a value-weighted exposure index;
 - record prototype evidence requirements and decision-log summaries without validating liability;
+- test controlled mock evidence packet submission, review states, and privacy/secrecy classification without real evidence;
 - define a calibration shell and data source registry without collecting real data;
 - identify open-source AI and R&D Tax Incentive interaction questions without overclaiming.
 
@@ -88,3 +102,4 @@ Safe-harbour outputs are prototype classification only. They do not reduce, cap,
 Grouped-entity and apportionment outputs are prototype modelling previews only. They do not establish legal grouping, tax attribution, or actual liability.
 Adjusted AAVA is preview-only and does not replace reported AAVA. The value-weighted exposure index is not a tax base and is not a replacement for calibrated sector schedules.
 Evidence assessments are prototype governance scaffolding only. No calibration has occurred and no real evidence or restricted datasets have been collected.
+Controlled mock evidence can upgrade only prototype workflow status, such as `partial` or `sufficient_for_prototype`; it never creates real-world sufficiency.
