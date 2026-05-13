@@ -85,6 +85,28 @@ def compact_inputs(result: ExampleResult) -> list[str]:
     ]
 
 
+def risk_review_required(result: ExampleResult) -> bool:
+    return (
+        result.safe_harbour_result.review_required
+        or result.avoidance_result.risk_level != "low"
+        or result.grouping_risk_result.risk_level != "low"
+    )
+
+
+def main_risk_reason(result: ExampleResult) -> str:
+    if result.safe_harbour_result.reasons:
+        return result.safe_harbour_result.reasons[0]
+    if result.avoidance_result.reasons:
+        return result.avoidance_result.reasons[0]
+    if result.grouping_risk_result.reasons:
+        return result.grouping_risk_result.reasons[0]
+    return "No prototype review reason recorded."
+
+
+def risk_flags(flags: list[str]) -> str:
+    return ", ".join(flags) if flags else "none"
+
+
 def build_json_payload(results: list[ExampleResult], metadata: dict[str, Any]) -> dict[str, Any]:
     return {
         "metadata": metadata,
@@ -122,6 +144,24 @@ def build_markdown(results: list[ExampleResult], metadata: dict[str, Any]) -> st
         [
             "",
             "The comparison should be read directionally only: AI-admin repair is not treated like robotic repair, robotic repair is higher-risk than traditional repair, and the AI logistics platform is higher-risk than hybrid logistics under these placeholders.",
+            "",
+            "## Safe Harbour and Review Flags",
+            "",
+            "These are prototype review flags, not legal findings. Safe harbour classification does not reduce or erase liability in this build.",
+            "",
+            "| Example | Safe Harbour Category | Avoidance Risk | Grouping Risk | Review Required | Main Reason |",
+            "| --- | --- | --- | --- | --- | --- |",
+        ]
+    )
+    for result in results:
+        lines.append(
+            "| "
+            f"{result.name} | {result.safe_harbour_result.category} | "
+            f"{result.avoidance_result.risk_level} | {result.grouping_risk_result.risk_level} | "
+            f"{'yes' if risk_review_required(result) else 'no'} | {main_risk_reason(result)} |"
+        )
+    lines.extend(
+        [
             "",
         ]
     )
@@ -181,6 +221,52 @@ def build_markdown(results: list[ExampleResult], metadata: dict[str, Any]) -> st
         notes = result.red_team_notes.get("notes", [])
         lines.append(f"- Flags: {', '.join(flags) if flags else 'none'}")
         lines.extend(f"- {note}" for note in notes)
+        lines.extend(
+            [
+                "",
+                "### G. Safe Harbour Assessment",
+                "",
+                f"- Eligible: {str(result.safe_harbour_result.eligible).lower()}",
+                f"- Category: {result.safe_harbour_result.category}",
+                f"- Review required: {str(result.safe_harbour_result.review_required).lower()}",
+                "- Reasons:",
+            ]
+        )
+        lines.extend(f"  - {reason}" for reason in result.safe_harbour_result.reasons)
+        lines.extend(["- Warnings:"])
+        lines.extend(f"  - {warning}" for warning in result.safe_harbour_result.warnings)
+        lines.extend(["- Placeholder basis:"])
+        lines.extend(f"  - {basis}" for basis in result.safe_harbour_result.placeholder_basis)
+        lines.extend(
+            [
+                "",
+                "### H. Avoidance / Gaming Risk Assessment",
+                "",
+                f"- Risk level: {result.avoidance_result.risk_level}",
+                f"- Flags: {risk_flags(result.avoidance_result.flags)}",
+                "- Reasons:",
+            ]
+        )
+        lines.extend(f"  - {reason}" for reason in result.avoidance_result.reasons)
+        lines.extend(["- Recommended review:"])
+        lines.extend(f"  - {review}" for review in result.avoidance_result.recommended_review)
+        lines.extend(["- Placeholder basis:"])
+        lines.extend(f"  - {basis}" for basis in result.avoidance_result.placeholder_basis)
+        lines.extend(
+            [
+                "",
+                "### I. Grouped-Entity Review Flag",
+                "",
+                f"- Risk level: {result.grouping_risk_result.risk_level}",
+                f"- Flags: {risk_flags(result.grouping_risk_result.flags)}",
+                "- Reasons:",
+            ]
+        )
+        lines.extend(f"  - {reason}" for reason in result.grouping_risk_result.reasons)
+        lines.extend(["- Recommended review:"])
+        lines.extend(f"  - {review}" for review in result.grouping_risk_result.recommended_review)
+        lines.extend(["- Placeholder basis:"])
+        lines.extend(f"  - {basis}" for basis in result.grouping_risk_result.placeholder_basis)
         lines.append("")
     return "\n".join(lines).rstrip() + "\n"
 

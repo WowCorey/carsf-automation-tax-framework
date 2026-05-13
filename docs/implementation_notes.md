@@ -12,17 +12,23 @@ The Python model intentionally implements only concept-level formulas.
 - CoverageRatio is `None` when measured fiscal damage is zero, so UI can display `N/A - no measured damage` instead of implying 100% coverage.
 - CARS-I uses epsilon to avoid divide-by-zero when captured revenue is zero.
 - The end-to-end example runner uses the same formula modules as the simulator and writes illustrative reports to `reports/example_results.md` and `reports/example_results.json`.
+- Safe-harbour classification is executable as a prototype review layer in `model/carsf/safe_harbour.py`.
+- Anti-avoidance checks are executable prototype heuristics in `model/carsf/avoidance.py`.
+- Grouping checks are executable review flags in `model/carsf/grouping.py`, not full legal grouping logic.
+- Safe-harbour outputs do not modify AEL, ARL, credits, caps, or final liability.
+- Risk flags are emitted into the example runner, Markdown reports, JSON reports, and Streamlit worked examples page.
 
 ## Not Implemented Yet
 
 - Real schedule calibration.
-- Safe-harbour eligibility engine.
+- Safe-harbour rules that legally alter liability.
 - Multi-schedule apportionment.
-- Grouped-entity aggregation.
+- Full grouped-entity aggregation.
 - Related-party pricing adjustments.
 - International tax treaty logic.
 - Privacy-preserving disclosure schema.
 - Behavioural elasticity and deadweight-loss modelling.
+- Calibrated thresholds for safe-harbour, grouping, offshore attribution, and related-party review.
 
 ## Example Runner
 

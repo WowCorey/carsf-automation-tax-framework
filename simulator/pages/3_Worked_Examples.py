@@ -33,6 +33,7 @@ result = next(item for item in results if item.name == selected)
 
 st.subheader(result.business_description)
 st.warning("All values are illustrative placeholders. No legal, tax, Treasury, ATO, or economic validation is implied.")
+st.info("Safe harbour and avoidance outputs are prototype review flags, not legal findings.")
 
 left, right = st.columns([1, 1])
 with left:
@@ -77,6 +78,41 @@ for item in result.formula_trace:
 
 st.markdown("### Plain-English Interpretation")
 st.write(result.interpretation)
+
+st.markdown("### Safe Harbour Assessment")
+safe_harbour = result.safe_harbour_result
+st.write(
+    {
+        "eligible": safe_harbour.eligible,
+        "category": safe_harbour.category,
+        "review_required": safe_harbour.review_required,
+        "reasons": safe_harbour.reasons,
+        "warnings": safe_harbour.warnings,
+    }
+)
+st.caption("Safe harbour classification does not reduce or erase liability in this prototype build.")
+
+st.markdown("### Avoidance Risk")
+avoidance = result.avoidance_result
+st.write(
+    {
+        "risk_level": avoidance.risk_level,
+        "flags": avoidance.flags,
+        "reasons": avoidance.reasons,
+        "recommended_review": avoidance.recommended_review,
+    }
+)
+
+st.markdown("### Grouping Risk")
+grouping = result.grouping_risk_result
+st.write(
+    {
+        "risk_level": grouping.risk_level,
+        "flags": grouping.flags,
+        "reasons": grouping.reasons,
+        "recommended_review": grouping.recommended_review,
+    }
+)
 
 st.markdown("### Red-Team Notes")
 st.write(result.red_team_notes)

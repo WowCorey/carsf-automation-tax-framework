@@ -11,11 +11,14 @@ import yaml
 
 from .aii import automation_intensity_index
 from .aava import australian_automated_value_added
+from .avoidance import AvoidanceResult, evaluate_avoidance_risk
 from .coverage import coverage_measures, format_coverage_ratio
 from .frv import net_labour_tax_gap
+from .grouping import GroupingRiskResult, evaluate_grouping_risk
 from .levy import calculate_liability
 from .libc import human_labour_equivalent
 from .qlc import qualified_labour_contribution_firm
+from .safe_harbour import SafeHarbourResult, evaluate_safe_harbour
 from .types import AIIWeights, LevyParameters, QLCWeights, Worker
 
 
@@ -73,6 +76,9 @@ class ExampleResult:
     outputs: ExampleOutputs
     formula_trace: list[str]
     interpretation: str
+    safe_harbour_result: SafeHarbourResult
+    avoidance_result: AvoidanceResult
+    grouping_risk_result: GroupingRiskResult
     warnings: list[str] = field(default_factory=list)
     evidence_labels: list[str] = field(default_factory=list)
     limitation_notes: list[str] = field(default_factory=list)
@@ -193,6 +199,7 @@ def build_inputs_summary(example: dict[str, Any], schedule: dict[str, Any]) -> d
         "aava_inputs": require_field(example, "aava_inputs"),
         "capital_base": require_field(example, "capital_base"),
         "credits": require_field(example, "credits"),
+        "risk_metadata": example.get("risk_metadata", {}),
         "schedule_placeholders": {
             "opfte_libc_placeholder": require_field(schedule, "opfte_libc_placeholder"),
             "frv": require_field(schedule, "frv"),
@@ -316,10 +323,14 @@ def run_example(example: dict[str, Any], schedule: dict[str, Any]) -> ExampleRes
             coverage_ratio=coverage_ratio_value,
             coverage_ratio_display=coverage_display,
         )
+        safe_harbour_result = evaluate_safe_harbour(example, schedule, outputs)
+        avoidance_result = evaluate_avoidance_risk(example, schedule, outputs)
+        grouping_risk_result = evaluate_grouping_risk(example, outputs)
         warnings = [
             "Illustrative placeholder output only.",
             "Do not use this result to estimate real tax payable.",
             "No legal, tax, Treasury, ATO, or economic validation is implied.",
+            "Safe harbour and avoidance outputs are prototype review flags, not legal findings.",
             *coverage_notes,
         ]
         if require_field(example, "status") != "illustrative_placeholder":
@@ -344,7 +355,9 @@ def run_example(example: dict[str, Any], schedule: dict[str, Any]) -> ExampleRes
             str(require_field(example, "placeholder_notice")),
             "Schedule values are not calibrated.",
             "AAVA deductibility remains a prototype taxonomy.",
-            "Safe harbour, entity grouping, related-party, and international tax logic are not executable in this runner.",
+            "Safe harbour, anti-avoidance, and grouping checks are executable review flags only.",
+            "Safe harbour classification does not automatically reduce or erase liability in this build.",
+            "Related-party, offshore, and sector-classification outputs are not legal or tax conclusions.",
         ]
         return ExampleResult(
             id=example_id,
@@ -356,6 +369,9 @@ def run_example(example: dict[str, Any], schedule: dict[str, Any]) -> ExampleRes
             outputs=outputs,
             formula_trace=trace,
             interpretation=interpretation_for_example(example_id, outputs),
+            safe_harbour_result=safe_harbour_result,
+            avoidance_result=avoidance_result,
+            grouping_risk_result=grouping_risk_result,
             warnings=warnings,
             evidence_labels=evidence_labels,
             limitation_notes=limitation_notes,

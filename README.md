@@ -18,7 +18,7 @@ All sector values, schedule values, examples, caps, Fiscal Replacement Value val
 
 - `paper/` - Markdown policy paper, V1.5 working draft, formulas, glossary, references, and export notes.
 - `audits/` - review notes, responses, and red-team register.
-- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, and coverage.
+- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, and grouping review flags.
 - `model/tests/` - pytest coverage for formula bounds, caps, examples, and avoidance flags.
 - `schedules/` - prototype sector schedules for automotive repair and logistics / warehousing.
 - `examples/` - illustrative placeholder firm cases.
@@ -62,8 +62,11 @@ V1.5 is not just an examples update. It is V1.4 plus two prototype sector schedu
 - report CoverageRatio alongside CARS-I;
 - distinguish worker-assist AI from labour-substituting automation;
 - handle automotive repair and logistics / warehousing as prototype schedules;
+- classify prototype safe-harbour, anti-avoidance, and grouped-entity review signals without changing liability;
 - identify open-source AI and R&D Tax Incentive interaction questions without overclaiming.
 
 ## Not Yet Solved
 
-The model still needs real Treasury, ATO, ABS, DSS, HILDA, HELP, superannuation, state payroll tax, industry, and legal data. It also needs behavioural elasticity estimates, tax incidence modelling, anti-avoidance drafting, privacy review, and independent tax counsel review before any external policy use.
+The model still needs real Treasury, ATO, ABS, DSS, HILDA, HELP, superannuation, state payroll tax, industry, and legal data. It also needs calibrated safe-harbour thresholds, apportionment, grouped-entity aggregation, related-party adjustments, behavioural elasticity estimates, tax incidence modelling, anti-avoidance drafting, privacy review, and independent tax counsel review before any external policy use.
+
+Safe-harbour outputs are prototype classification only. They do not reduce, cap, or erase calculated liability in this build.

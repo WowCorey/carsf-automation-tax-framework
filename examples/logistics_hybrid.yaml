@@ -78,3 +78,19 @@ red_team_notes:
   flags: []
   notes:
     - Tests useful productivity where QLC remains substantial.
+risk_metadata:
+  status: illustrative_placeholder_review_metadata
+  offshore_automation_service: false
+  related_party_ai_service_fees: false
+  entity_splitting_risk: false
+  sector_classification_risk: false
+  token_human_oversight_risk: false
+  fake_qlc_inflation_risk: false
+  cloud_cost_relabeling_risk: false
+  robotics_leasing_risk: false
+  artificial_low_profit_or_aava_risk: false
+  essential_service_review: false
+  startup_placeholder: false
+  small_business_placeholder: true
+  worker_assist_admin_ai: false
+  related_entities: []

@@ -6,6 +6,6 @@ Status: private research prototype.
 
 Validation status: no legal, tax, Treasury, ATO, or economic validation.
 
-Current build focus: end-to-end worked examples from illustrative YAML inputs through the model pipeline into JSON and Markdown reports.
+Current build focus: executable prototype safe-harbour, anti-avoidance, and grouped-entity review outputs for the worked examples.
 
 Non-claim: this repository must not be used to estimate actual tax payable.

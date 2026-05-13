@@ -54,6 +54,11 @@ caps:
   uplift_rate: 1.12
   rent_tax_rate: 0.20
 safe_harbours:
+  threshold_status: illustrative_placeholder_values_only
+  small_business_revenue_threshold_placeholder: 10000000.0
+  low_nltg_threshold_placeholder: 0.25
+  substantial_human_labour_qlc_hle_ratio_placeholder: 0.35
+  low_qlc_review_ratio_placeholder: 0.30
   startup:
     placeholder_rule: Five years from incorporation or pre-revenue period, whichever ends first.
     anti_avoidance_note: Subject to aggregation and entity-splitting integrity rules.
