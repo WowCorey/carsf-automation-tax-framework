@@ -387,3 +387,44 @@ Limitations:
 - Transition-payment outputs are illustrative placeholders only.
 - They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.
 - The transition funding layer does not modify firm-level CARSF liability.
+
+## V1.5 Payment Interactions and Targeting Mechanics
+
+Branch: `v1.5-payment-interaction-and-targeting-mechanics`
+
+Baseline: PR #12 merged into `main`, including transition-payment funding, payment portfolio coverage, fiscal trajectory linkage, cliff-risk preview, and payment sensitivity sweeps.
+
+Purpose of this build:
+
+- Add existing transfer baseline separation.
+- Add placeholder targeting mechanics for displaced-worker and retraining eligibility.
+- Add phase-in and phase-out mechanics.
+- Add payment-stack double-counting previews.
+- Add support fiscal-incidence previews without treating offsets as validated savings.
+- Add payment interaction examples, reports, tests, CI step, and Streamlit page.
+
+Tests run:
+
+- `python -m pytest` - 413 passed, 1 pytest-asyncio deprecation warning under Python 3.14.
+- `python -m compileall -q model simulator scripts` - passed.
+- Recursive YAML parse check for schedules/examples/data - parsed 49 YAML files.
+- `python scripts/run_examples.py` - regenerated existing example report outputs successfully.
+- `python scripts/run_evidence_workflow.py` - regenerated mock evidence workflow reports successfully.
+- `python scripts/run_ingestion_controls.py` - regenerated secure-ingestion control reports successfully.
+- `python scripts/run_repo_guardrails.py` - passed with zero denied findings and 48 warning findings.
+- `python scripts/run_investment_guardrails.py` - regenerated investment guardrail reports successfully.
+- `python scripts/run_fiscal_trajectory.py` - regenerated fiscal trajectory reports successfully.
+- `python scripts/run_transition_funding.py` - regenerated transition funding reports successfully.
+- `python scripts/run_payment_interactions.py` - generated payment interaction reports successfully.
+- Streamlit bare import probe for `simulator/pages/15_Payment_Interactions.py` - passed.
+
+Reports generated:
+
+- `reports/payment_interactions.json`
+- `reports/payment_interactions.md`
+
+Limitations:
+
+- Payment-interaction outputs are illustrative placeholders only.
+- They are not UBI policy, welfare advice, eligibility law, Centrelink/DSS/Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.
+- The payment interaction layer does not modify firm-level CARSF liability.

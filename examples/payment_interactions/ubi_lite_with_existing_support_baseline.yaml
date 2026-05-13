@@ -1,0 +1,64 @@
+example_id: ubi_lite_with_existing_support_baseline
+name: UBI-Lite With Existing Support Baseline
+purpose: Universal-lite payment separated from existing baseline transfer cost.
+status: prototype_only
+illustrative_placeholder_only: true
+not_calibrated: true
+no_policy_claim: true
+no_welfare_advice: true
+synthetic_placeholder_only: true
+placeholder_notice: All values are illustrative placeholders only and are not real welfare, DSS, Services Australia, Treasury, PBO, or budget calibration values.
+year: 2028
+automation_revenue_available: 4000000
+commonwealth_gap_after_carsf: 3000000
+baseline:
+  baseline_id: existing_transfer_baseline_ubi_lite
+  eligible_population: 3000
+  average_existing_support_per_person: 4000
+  existing_admin_cost_per_person: 200
+  baseline_program_type: existing_support_placeholder
+  illustrative_placeholder_only: true
+target_population:
+  total_population: 10000
+  displaced_workers: 1000
+  reabsorbed_workers: 200
+  retraining_participants: 500
+  existing_support_recipients: 3000
+  counts_may_overlap: true
+  criteria:
+    criteria_id: universal_lite_placeholder
+    target_group: broad adult population placeholder
+    displaced_worker_required: false
+    retraining_required: false
+    income_test_placeholder: false
+    household_test_placeholder: false
+    recent_employment_link_required: false
+    automation_displacement_link_required: false
+    exclusion_rules: []
+    illustrative_placeholder_only: true
+phase_rule:
+  rule_id: ubi_lite_full_placeholder
+  phase_in_start_year: 2026
+  phase_in_end_year: 2026
+  phase_out_start_year:
+  phase_out_end_year:
+  minimum_payment_multiplier: 1.0
+  maximum_payment_multiplier: 1.0
+  taper_rate_placeholder: 0.0
+  illustrative_placeholder_only: true
+stack_components:
+  - component_id: ubi_lite
+    component_type: UBI_LITE
+    eligible_people: 10000
+    payment_per_person: 1000
+    stack_priority: 1
+    mutually_exclusive_with: []
+    can_stack_with: []
+    phase_multiplier: 1.0
+support_incidence_assumption:
+  household_spend_share: 0.65
+  gst_recovery_rate_placeholder: 0.04
+  hardship_offset_rate_placeholder: 0.05
+  savings_or_debt_repayment_share: 0.25
+  illustrative_placeholder_only: true
+interpretation: UBI-lite is shown separately from existing transfer baseline cost. It has broad inclusion risk under placeholders because it is not limited to directly displaced workers.

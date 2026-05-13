@@ -1,0 +1,826 @@
+{
+  "examples": [
+    {
+      "example_id": "displaced_worker_targeted_supplement",
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\payment_interactions\\displaced_worker_targeted_supplement.yaml",
+      "interaction_input": {
+        "automation_revenue_available": 6000000,
+        "baseline": {
+          "average_existing_support_per_person": 1000,
+          "baseline_id": "existing_transfer_baseline_targeted_supplement",
+          "baseline_program_type": "existing_support_placeholder",
+          "eligible_population": 300,
+          "existing_admin_cost_per_person": 100,
+          "illustrative_placeholder_only": true,
+          "placeholder_basis": [
+            "synthetic baseline separation placeholder"
+          ]
+        },
+        "commonwealth_gap_after_carsf": 2000000,
+        "interaction_id": "displaced_worker_targeted_supplement",
+        "phase_rule": {
+          "illustrative_placeholder_only": true,
+          "maximum_payment_multiplier": 1.0,
+          "minimum_payment_multiplier": 1.0,
+          "phase_in_end_year": 2026,
+          "phase_in_start_year": 2026,
+          "phase_out_end_year": null,
+          "phase_out_start_year": null,
+          "rule_id": "immediate_full_placeholder",
+          "taper_rate_placeholder": 0.0
+        },
+        "placeholder_basis": [
+          "payment interaction example: displaced_worker_targeted_supplement"
+        ],
+        "stack_components": [
+          {
+            "can_stack_with": [],
+            "component_id": "displaced_worker_supplement",
+            "component_type": "DISPLACED_WORKER_SUPPLEMENT",
+            "eligible_people": 800,
+            "mutually_exclusive_with": [],
+            "payment_per_person": 5000,
+            "phase_multiplier": 1.0,
+            "placeholder_basis": [
+              "synthetic payment-stack placeholder"
+            ],
+            "stack_priority": 1
+          }
+        ],
+        "support_incidence_assumption": {
+          "gst_recovery_rate_placeholder": 0.04,
+          "hardship_offset_rate_placeholder": 0.1,
+          "household_spend_share": 0.7,
+          "illustrative_placeholder_only": true,
+          "placeholder_basis": [
+            "synthetic support-incidence placeholder"
+          ],
+          "savings_or_debt_repayment_share": 0.2
+        },
+        "target_population": {
+          "counts_may_overlap": false,
+          "criteria": {
+            "automation_displacement_link_required": true,
+            "criteria_id": "direct_displacement_link",
+            "displaced_worker_required": true,
+            "exclusion_rules": [],
+            "household_test_placeholder": false,
+            "illustrative_placeholder_only": true,
+            "income_test_placeholder": false,
+            "placeholder_basis": [
+              "synthetic direct-displacement criteria placeholder"
+            ],
+            "recent_employment_link_required": true,
+            "retraining_required": false,
+            "target_group": "unreabsorbed automation-displaced workers"
+          },
+          "displaced_workers": 1000,
+          "existing_support_recipients": 300,
+          "reabsorbed_workers": 200,
+          "retraining_participants": 600,
+          "total_population": 10000
+        },
+        "year": 2028
+      },
+      "interaction_result": {
+        "automation_revenue_available": 6000000.0,
+        "baseline_cost": 330000.0,
+        "combined_commonwealth_gap": 2000000.0,
+        "double_count_adjustment": 0.0,
+        "gross_stack_cost": 4000000.0,
+        "interaction_id": "displaced_worker_targeted_supplement",
+        "interaction_risk_band": "low",
+        "net_stack_cost": 4000000.0,
+        "non_claims": [
+          "These are prototype payment-interaction outputs only. They are not UBI policy, welfare advice, eligibility law, Centrelink/DSS/Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Payment interaction outputs do not modify firm-level CARSF liability.",
+          "Support incidence offsets are not validated savings."
+        ],
+        "phase_multiplier": 1.0,
+        "residual_support_gap": 0.0,
+        "support_incidence": {
+          "gross_support_cost": 4000000.0,
+          "hardship_offset_preview": 400000.0,
+          "household_spending_flow": 2800000.0,
+          "net_fiscal_cost_after_placeholder_offsets": 3488000.0,
+          "non_claims": [
+            "These are prototype payment-interaction outputs only. They are not UBI policy, welfare advice, eligibility law, Centrelink/DSS/Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+            "Existing transfer baseline outputs are illustrative placeholders only.",
+            "Existing transfer baseline outputs do not modify firm-level CARSF liability."
+          ],
+          "placeholder_gst_recovery": 112000.0,
+          "warnings": [
+            "Support incidence offsets are placeholder previews, not validated savings.",
+            "This is not a macroeconomic multiplier, GST estimate, welfare costing, or budget offset."
+          ]
+        },
+        "targeted_eligible_people": 800.0,
+        "targeting_risk_band": "low",
+        "warnings": [
+          "Existing transfer baseline is separated from new automation-transition payment cost.",
+          "This is not a real DSS, Centrelink, Services Australia, Treasury, or PBO estimate.",
+          "Targeting estimate is placeholder-only and uses no person-level data.",
+          "Household and income test fields are unresolved policy placeholders.",
+          "Phase-rule output is illustrative placeholder-only and not eligibility law.",
+          "Payment-stack interaction is placeholder-only and does not use person-level eligibility data.",
+          "Double-count adjustments are review previews, not real welfare-system offsets.",
+          "Support incidence offsets are placeholder previews, not validated savings.",
+          "This is not a macroeconomic multiplier, GST estimate, welfare costing, or budget offset.",
+          "Existing baseline cost is reported separately from new transition-payment stack cost.",
+          "Firm-level CARSF liability is not modified by payment interaction outputs."
+        ],
+        "year": 2028
+      },
+      "interpretation": "Targeted supplement keeps the existing transfer baseline separate, limits eligibility to directly displaced unreabsorbed workers, and has a low residual support gap under these placeholders.",
+      "name": "Displaced Worker Targeted Supplement",
+      "purpose": "Targeted supplement for directly displaced workers.",
+      "status": "prototype_only"
+    },
+    {
+      "example_id": "high_cliff_risk_interaction_case",
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\payment_interactions\\high_cliff_risk_interaction_case.yaml",
+      "interaction_input": {
+        "automation_revenue_available": 1000000,
+        "baseline": {
+          "average_existing_support_per_person": 3500,
+          "baseline_id": "existing_transfer_baseline_high_cliff",
+          "baseline_program_type": "existing_support_placeholder",
+          "eligible_population": 2500,
+          "existing_admin_cost_per_person": 250,
+          "illustrative_placeholder_only": true
+        },
+        "commonwealth_gap_after_carsf": 12000000,
+        "interaction_id": "high_cliff_risk_interaction_case",
+        "phase_rule": {
+          "illustrative_placeholder_only": true,
+          "maximum_payment_multiplier": 1.0,
+          "minimum_payment_multiplier": 1.0,
+          "phase_in_end_year": 2026,
+          "phase_in_start_year": 2026,
+          "phase_out_end_year": null,
+          "phase_out_start_year": null,
+          "rule_id": "high_cliff_full_placeholder",
+          "taper_rate_placeholder": 0.0
+        },
+        "placeholder_basis": [
+          "payment interaction example: high_cliff_risk_interaction_case"
+        ],
+        "stack_components": [
+          {
+            "can_stack_with": [
+              "retraining_grant"
+            ],
+            "component_id": "broad_transition_income",
+            "component_type": "TRANSITION_INCOME",
+            "eligible_people": 5000,
+            "mutually_exclusive_with": [],
+            "payment_per_person": 9000,
+            "phase_multiplier": 1.0,
+            "stack_priority": 1
+          },
+          {
+            "can_stack_with": [
+              "broad_transition_income"
+            ],
+            "component_id": "retraining_grant",
+            "component_type": "RETRAINING_GRANT",
+            "eligible_people": 500,
+            "mutually_exclusive_with": [],
+            "payment_per_person": 4000,
+            "phase_multiplier": 1.0,
+            "stack_priority": 2
+          }
+        ],
+        "support_incidence_assumption": {
+          "gst_recovery_rate_placeholder": 0.04,
+          "hardship_offset_rate_placeholder": 0.12,
+          "household_spend_share": 0.75,
+          "illustrative_placeholder_only": true,
+          "savings_or_debt_repayment_share": 0.15
+        },
+        "target_population": {
+          "counts_may_overlap": true,
+          "criteria": {
+            "automation_displacement_link_required": false,
+            "criteria_id": "weak_link_high_cliff_placeholder",
+            "displaced_worker_required": false,
+            "exclusion_rules": [],
+            "household_test_placeholder": true,
+            "illustrative_placeholder_only": true,
+            "income_test_placeholder": true,
+            "recent_employment_link_required": false,
+            "retraining_required": true,
+            "target_group": "broad automation-transition support with weak displacement linkage"
+          },
+          "displaced_workers": 5000,
+          "existing_support_recipients": 2500,
+          "reabsorbed_workers": 200,
+          "retraining_participants": 500,
+          "total_population": 20000
+        },
+        "year": 2029
+      },
+      "interaction_result": {
+        "automation_revenue_available": 1000000.0,
+        "baseline_cost": 9375000.0,
+        "combined_commonwealth_gap": 58000000.0,
+        "double_count_adjustment": 0.0,
+        "gross_stack_cost": 47000000.0,
+        "interaction_id": "high_cliff_risk_interaction_case",
+        "interaction_risk_band": "critical",
+        "net_stack_cost": 47000000.0,
+        "non_claims": [
+          "These are prototype payment-interaction outputs only. They are not UBI policy, welfare advice, eligibility law, Centrelink/DSS/Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Payment interaction outputs do not modify firm-level CARSF liability.",
+          "Support incidence offsets are not validated savings."
+        ],
+        "phase_multiplier": 1.0,
+        "residual_support_gap": 46000000.0,
+        "support_incidence": {
+          "gross_support_cost": 47000000.0,
+          "hardship_offset_preview": 5640000.0,
+          "household_spending_flow": 35250000.0,
+          "net_fiscal_cost_after_placeholder_offsets": 39950000.0,
+          "non_claims": [
+            "These are prototype payment-interaction outputs only. They are not UBI policy, welfare advice, eligibility law, Centrelink/DSS/Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+            "Existing transfer baseline outputs are illustrative placeholders only.",
+            "Existing transfer baseline outputs do not modify firm-level CARSF liability."
+          ],
+          "placeholder_gst_recovery": 1410000.0,
+          "warnings": [
+            "Support incidence offsets are placeholder previews, not validated savings.",
+            "This is not a macroeconomic multiplier, GST estimate, welfare costing, or budget offset."
+          ]
+        },
+        "targeted_eligible_people": 500.0,
+        "targeting_risk_band": "critical",
+        "warnings": [
+          "Existing transfer baseline is separated from new automation-transition payment cost.",
+          "This is not a real DSS, Centrelink, Services Australia, Treasury, or PBO estimate.",
+          "Targeting estimate is placeholder-only and uses no person-level data.",
+          "Household and income test fields are unresolved policy placeholders.",
+          "Targeting may exclude some unreabsorbed displaced workers.",
+          "Phase-rule output is illustrative placeholder-only and not eligibility law.",
+          "Payment-stack interaction is placeholder-only and does not use person-level eligibility data.",
+          "Double-count adjustments are review previews, not real welfare-system offsets.",
+          "No explicit overlap metadata supplied; stack assumes no double-count adjustment pending review.",
+          "Support incidence offsets are placeholder previews, not validated savings.",
+          "This is not a macroeconomic multiplier, GST estimate, welfare costing, or budget offset.",
+          "Existing baseline cost is reported separately from new transition-payment stack cost.",
+          "Firm-level CARSF liability is not modified by payment interaction outputs."
+        ],
+        "year": 2029
+      },
+      "interpretation": "High displacement and weak automation revenue create a large residual support gap. The weak targeting link and unresolved household/income tests push this into a high or critical review band under placeholders.",
+      "name": "High Cliff-Risk Interaction Case",
+      "purpose": "Shows high displacement, weak automation revenue, and high residual support gap.",
+      "status": "prototype_only"
+    },
+    {
+      "example_id": "household_eligibility_placeholder_review",
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\payment_interactions\\household_eligibility_placeholder_review.yaml",
+      "interaction_input": {
+        "automation_revenue_available": 2500000,
+        "baseline": {
+          "average_existing_support_per_person": 3000,
+          "baseline_id": "existing_transfer_baseline_household_review",
+          "baseline_program_type": "existing_support_placeholder",
+          "eligible_population": 700,
+          "existing_admin_cost_per_person": 200,
+          "illustrative_placeholder_only": true
+        },
+        "commonwealth_gap_after_carsf": 2200000,
+        "interaction_id": "household_eligibility_placeholder_review",
+        "phase_rule": {
+          "illustrative_placeholder_only": true,
+          "maximum_payment_multiplier": 1.0,
+          "minimum_payment_multiplier": 0.25,
+          "phase_in_end_year": 2026,
+          "phase_in_start_year": 2026,
+          "phase_out_end_year": 2034,
+          "phase_out_start_year": 2032,
+          "rule_id": "household_review_phase_placeholder",
+          "taper_rate_placeholder": 0.25
+        },
+        "placeholder_basis": [
+          "payment interaction example: household_eligibility_placeholder_review"
+        ],
+        "stack_components": [
+          {
+            "can_stack_with": [],
+            "component_id": "household_review_supplement",
+            "component_type": "DISPLACED_WORKER_SUPPLEMENT",
+            "eligible_people": 750,
+            "mutually_exclusive_with": [],
+            "payment_per_person": 4500,
+            "phase_multiplier": 1.0,
+            "stack_priority": 1
+          }
+        ],
+        "support_incidence_assumption": {
+          "gst_recovery_rate_placeholder": 0.04,
+          "hardship_offset_rate_placeholder": 0.1,
+          "household_spend_share": 0.68,
+          "illustrative_placeholder_only": true,
+          "savings_or_debt_repayment_share": 0.22
+        },
+        "target_population": {
+          "counts_may_overlap": true,
+          "criteria": {
+            "automation_displacement_link_required": true,
+            "criteria_id": "household_income_placeholder",
+            "displaced_worker_required": true,
+            "exclusion_rules": [],
+            "household_test_placeholder": true,
+            "illustrative_placeholder_only": true,
+            "income_test_placeholder": true,
+            "recent_employment_link_required": true,
+            "retraining_required": false,
+            "target_group": "displaced workers subject to unresolved household and income tests"
+          },
+          "displaced_workers": 900,
+          "existing_support_recipients": 700,
+          "reabsorbed_workers": 150,
+          "retraining_participants": 300,
+          "total_population": 8000
+        },
+        "year": 2028
+      },
+      "interaction_result": {
+        "automation_revenue_available": 2500000.0,
+        "baseline_cost": 2240000.0,
+        "combined_commonwealth_gap": 3075000.0,
+        "double_count_adjustment": 0.0,
+        "gross_stack_cost": 3375000.0,
+        "interaction_id": "household_eligibility_placeholder_review",
+        "interaction_risk_band": "high",
+        "net_stack_cost": 3375000.0,
+        "non_claims": [
+          "These are prototype payment-interaction outputs only. They are not UBI policy, welfare advice, eligibility law, Centrelink/DSS/Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Payment interaction outputs do not modify firm-level CARSF liability.",
+          "Support incidence offsets are not validated savings."
+        ],
+        "phase_multiplier": 1.0,
+        "residual_support_gap": 875000.0,
+        "support_incidence": {
+          "gross_support_cost": 3375000.0,
+          "hardship_offset_preview": 337500.0,
+          "household_spending_flow": 2295000.0,
+          "net_fiscal_cost_after_placeholder_offsets": 2945700.0,
+          "non_claims": [
+            "These are prototype payment-interaction outputs only. They are not UBI policy, welfare advice, eligibility law, Centrelink/DSS/Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+            "Existing transfer baseline outputs are illustrative placeholders only.",
+            "Existing transfer baseline outputs do not modify firm-level CARSF liability."
+          ],
+          "placeholder_gst_recovery": 91800.0,
+          "warnings": [
+            "Support incidence offsets are placeholder previews, not validated savings.",
+            "This is not a macroeconomic multiplier, GST estimate, welfare costing, or budget offset."
+          ]
+        },
+        "targeted_eligible_people": 750.0,
+        "targeting_risk_band": "medium",
+        "warnings": [
+          "Existing transfer baseline is separated from new automation-transition payment cost.",
+          "This is not a real DSS, Centrelink, Services Australia, Treasury, or PBO estimate.",
+          "Targeting estimate is placeholder-only and uses no person-level data.",
+          "Household and income test fields are unresolved policy placeholders.",
+          "Phase-rule output is illustrative placeholder-only and not eligibility law.",
+          "Payment-stack interaction is placeholder-only and does not use person-level eligibility data.",
+          "Double-count adjustments are review previews, not real welfare-system offsets.",
+          "Support incidence offsets are placeholder previews, not validated savings.",
+          "This is not a macroeconomic multiplier, GST estimate, welfare costing, or budget offset.",
+          "Existing baseline cost is reported separately from new transition-payment stack cost.",
+          "Firm-level CARSF liability is not modified by payment interaction outputs."
+        ],
+        "year": 2028
+      },
+      "interpretation": "This case keeps household and income eligibility unresolved. It should require review rather than implying a final welfare eligibility rule.",
+      "name": "Household Eligibility Placeholder Review",
+      "purpose": "Shows household and income test placeholders requiring review.",
+      "status": "prototype_only"
+    },
+    {
+      "example_id": "hybrid_stack_double_counting_review",
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\payment_interactions\\hybrid_stack_double_counting_review.yaml",
+      "interaction_input": {
+        "automation_revenue_available": 7000000,
+        "baseline": {
+          "average_existing_support_per_person": 2500,
+          "baseline_id": "existing_transfer_baseline_hybrid_stack",
+          "baseline_program_type": "existing_support_placeholder",
+          "eligible_population": 1200,
+          "existing_admin_cost_per_person": 150,
+          "illustrative_placeholder_only": true
+        },
+        "commonwealth_gap_after_carsf": 2500000,
+        "interaction_id": "hybrid_stack_double_counting_review",
+        "phase_rule": {
+          "illustrative_placeholder_only": true,
+          "maximum_payment_multiplier": 1.0,
+          "minimum_payment_multiplier": 1.0,
+          "phase_in_end_year": 2026,
+          "phase_in_start_year": 2026,
+          "phase_out_end_year": null,
+          "phase_out_start_year": null,
+          "rule_id": "hybrid_full_placeholder",
+          "taper_rate_placeholder": 0.0
+        },
+        "placeholder_basis": [
+          "payment interaction example: hybrid_stack_double_counting_review"
+        ],
+        "stack_components": [
+          {
+            "can_stack_with": [
+              "displaced_worker_supplement",
+              "retraining_grant"
+            ],
+            "component_id": "ubi_lite",
+            "component_type": "UBI_LITE",
+            "eligible_people": 12000,
+            "mutually_exclusive_with": [],
+            "payment_per_person": 500,
+            "phase_multiplier": 1.0,
+            "stack_priority": 1
+          },
+          {
+            "can_stack_with": [
+              "ubi_lite"
+            ],
+            "component_id": "displaced_worker_supplement",
+            "component_type": "DISPLACED_WORKER_SUPPLEMENT",
+            "eligible_people": 1100,
+            "mutually_exclusive_with": [
+              "retraining_grant"
+            ],
+            "payment_per_person": 4000,
+            "phase_multiplier": 1.0,
+            "stack_priority": 2
+          },
+          {
+            "can_stack_with": [
+              "ubi_lite"
+            ],
+            "component_id": "retraining_grant",
+            "component_type": "RETRAINING_GRANT",
+            "eligible_people": 600,
+            "mutually_exclusive_with": [
+              "displaced_worker_supplement"
+            ],
+            "payment_per_person": 3000,
+            "phase_multiplier": 1.0,
+            "stack_priority": 3
+          }
+        ],
+        "support_incidence_assumption": {
+          "gst_recovery_rate_placeholder": 0.04,
+          "hardship_offset_rate_placeholder": 0.08,
+          "household_spend_share": 0.7,
+          "illustrative_placeholder_only": true,
+          "savings_or_debt_repayment_share": 0.2
+        },
+        "target_population": {
+          "counts_may_overlap": true,
+          "criteria": {
+            "automation_displacement_link_required": true,
+            "criteria_id": "hybrid_support_placeholder",
+            "displaced_worker_required": true,
+            "exclusion_rules": [],
+            "household_test_placeholder": true,
+            "illustrative_placeholder_only": true,
+            "income_test_placeholder": true,
+            "recent_employment_link_required": true,
+            "retraining_required": false,
+            "target_group": "displaced workers with partial universal component"
+          },
+          "displaced_workers": 1400,
+          "existing_support_recipients": 1200,
+          "reabsorbed_workers": 300,
+          "retraining_participants": 600,
+          "total_population": 12000
+        },
+        "year": 2028
+      },
+      "interaction_result": {
+        "automation_revenue_available": 7000000.0,
+        "baseline_cost": 3180000.0,
+        "combined_commonwealth_gap": 5900000.0,
+        "double_count_adjustment": 1800000.0,
+        "gross_stack_cost": 12200000.0,
+        "interaction_id": "hybrid_stack_double_counting_review",
+        "interaction_risk_band": "high",
+        "net_stack_cost": 10400000.0,
+        "non_claims": [
+          "These are prototype payment-interaction outputs only. They are not UBI policy, welfare advice, eligibility law, Centrelink/DSS/Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Payment interaction outputs do not modify firm-level CARSF liability.",
+          "Support incidence offsets are not validated savings."
+        ],
+        "phase_multiplier": 1.0,
+        "residual_support_gap": 3400000.0,
+        "support_incidence": {
+          "gross_support_cost": 10400000.0,
+          "hardship_offset_preview": 832000.0,
+          "household_spending_flow": 7280000.0,
+          "net_fiscal_cost_after_placeholder_offsets": 9276800.0,
+          "non_claims": [
+            "These are prototype payment-interaction outputs only. They are not UBI policy, welfare advice, eligibility law, Centrelink/DSS/Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+            "Existing transfer baseline outputs are illustrative placeholders only.",
+            "Existing transfer baseline outputs do not modify firm-level CARSF liability."
+          ],
+          "placeholder_gst_recovery": 291200.0,
+          "warnings": [
+            "Support incidence offsets are placeholder previews, not validated savings.",
+            "This is not a macroeconomic multiplier, GST estimate, welfare costing, or budget offset."
+          ]
+        },
+        "targeted_eligible_people": 1100.0,
+        "targeting_risk_band": "medium",
+        "warnings": [
+          "Existing transfer baseline is separated from new automation-transition payment cost.",
+          "This is not a real DSS, Centrelink, Services Australia, Treasury, or PBO estimate.",
+          "Targeting estimate is placeholder-only and uses no person-level data.",
+          "Household and income test fields are unresolved policy placeholders.",
+          "Phase-rule output is illustrative placeholder-only and not eligibility law.",
+          "Payment-stack interaction is placeholder-only and does not use person-level eligibility data.",
+          "Double-count adjustments are review previews, not real welfare-system offsets.",
+          "Support incidence offsets are placeholder previews, not validated savings.",
+          "This is not a macroeconomic multiplier, GST estimate, welfare costing, or budget offset.",
+          "Existing baseline cost is reported separately from new transition-payment stack cost.",
+          "Firm-level CARSF liability is not modified by payment interaction outputs."
+        ],
+        "year": 2028
+      },
+      "interpretation": "The hybrid package shows a gross stack cost, then a prototype double-count adjustment where retraining grants and supplements are mutually exclusive.",
+      "name": "Hybrid Stack Double-Counting Review",
+      "purpose": "Shows supplement plus retraining plus UBI-lite overlap and double-count prevention.",
+      "status": "prototype_only"
+    },
+    {
+      "example_id": "retraining_income_phase_in",
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\payment_interactions\\retraining_income_phase_in.yaml",
+      "interaction_input": {
+        "automation_revenue_available": 3500000,
+        "baseline": {
+          "average_existing_support_per_person": 1200,
+          "baseline_id": "existing_transfer_baseline_retraining",
+          "baseline_program_type": "existing_support_placeholder",
+          "eligible_population": 400,
+          "existing_admin_cost_per_person": 150,
+          "illustrative_placeholder_only": true
+        },
+        "commonwealth_gap_after_carsf": 2500000,
+        "interaction_id": "retraining_income_phase_in",
+        "phase_rule": {
+          "illustrative_placeholder_only": true,
+          "maximum_payment_multiplier": 1.0,
+          "minimum_payment_multiplier": 0.25,
+          "phase_in_end_year": 2028,
+          "phase_in_start_year": 2026,
+          "phase_out_end_year": null,
+          "phase_out_start_year": null,
+          "rule_id": "retraining_phase_in_placeholder",
+          "taper_rate_placeholder": 0.0
+        },
+        "placeholder_basis": [
+          "payment interaction example: retraining_income_phase_in"
+        ],
+        "stack_components": [
+          {
+            "can_stack_with": [],
+            "component_id": "retraining_income",
+            "component_type": "TRANSITION_INCOME",
+            "eligible_people": 550,
+            "mutually_exclusive_with": [],
+            "payment_per_person": 8000,
+            "phase_multiplier": 1.0,
+            "stack_priority": 1
+          }
+        ],
+        "support_incidence_assumption": {
+          "gst_recovery_rate_placeholder": 0.04,
+          "hardship_offset_rate_placeholder": 0.12,
+          "household_spend_share": 0.75,
+          "illustrative_placeholder_only": true,
+          "savings_or_debt_repayment_share": 0.15
+        },
+        "target_population": {
+          "counts_may_overlap": false,
+          "criteria": {
+            "automation_displacement_link_required": true,
+            "criteria_id": "retraining_participant_placeholder",
+            "displaced_worker_required": true,
+            "exclusion_rules": [],
+            "household_test_placeholder": false,
+            "illustrative_placeholder_only": true,
+            "income_test_placeholder": false,
+            "recent_employment_link_required": true,
+            "retraining_required": true,
+            "target_group": "displaced workers enrolled in retraining"
+          },
+          "displaced_workers": 1200,
+          "existing_support_recipients": 400,
+          "reabsorbed_workers": 250,
+          "retraining_participants": 550,
+          "total_population": 10000
+        },
+        "year": 2027
+      },
+      "interaction_result": {
+        "automation_revenue_available": 3500000.0,
+        "baseline_cost": 540000.0,
+        "combined_commonwealth_gap": 2500000.0,
+        "double_count_adjustment": 0.0,
+        "gross_stack_cost": 2750000.0,
+        "interaction_id": "retraining_income_phase_in",
+        "interaction_risk_band": "medium",
+        "net_stack_cost": 2750000.0,
+        "non_claims": [
+          "These are prototype payment-interaction outputs only. They are not UBI policy, welfare advice, eligibility law, Centrelink/DSS/Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Payment interaction outputs do not modify firm-level CARSF liability.",
+          "Support incidence offsets are not validated savings."
+        ],
+        "phase_multiplier": 0.625,
+        "residual_support_gap": 0.0,
+        "support_incidence": {
+          "gross_support_cost": 2750000.0,
+          "hardship_offset_preview": 330000.0,
+          "household_spending_flow": 2062500.0,
+          "net_fiscal_cost_after_placeholder_offsets": 2337500.0,
+          "non_claims": [
+            "These are prototype payment-interaction outputs only. They are not UBI policy, welfare advice, eligibility law, Centrelink/DSS/Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+            "Existing transfer baseline outputs are illustrative placeholders only.",
+            "Existing transfer baseline outputs do not modify firm-level CARSF liability."
+          ],
+          "placeholder_gst_recovery": 82500.0,
+          "warnings": [
+            "Support incidence offsets are placeholder previews, not validated savings.",
+            "This is not a macroeconomic multiplier, GST estimate, welfare costing, or budget offset."
+          ]
+        },
+        "targeted_eligible_people": 550.0,
+        "targeting_risk_band": "medium",
+        "warnings": [
+          "Existing transfer baseline is separated from new automation-transition payment cost.",
+          "This is not a real DSS, Centrelink, Services Australia, Treasury, or PBO estimate.",
+          "Targeting estimate is placeholder-only and uses no person-level data.",
+          "Household and income test fields are unresolved policy placeholders.",
+          "Targeting may exclude some unreabsorbed displaced workers.",
+          "Phase-rule output is illustrative placeholder-only and not eligibility law.",
+          "Payment-stack interaction is placeholder-only and does not use person-level eligibility data.",
+          "Double-count adjustments are review previews, not real welfare-system offsets.",
+          "Support incidence offsets are placeholder previews, not validated savings.",
+          "This is not a macroeconomic multiplier, GST estimate, welfare costing, or budget offset.",
+          "Existing baseline cost is reported separately from new transition-payment stack cost.",
+          "Firm-level CARSF liability is not modified by payment interaction outputs."
+        ],
+        "year": 2027
+      },
+      "interpretation": "Retraining-linked income phases in gradually, reducing first-year cost while still showing exclusion risk if retraining capacity is lower than displacement.",
+      "name": "Retraining Income Phase-In",
+      "purpose": "Transition income that phases in with retraining participation.",
+      "status": "prototype_only"
+    },
+    {
+      "example_id": "ubi_lite_with_existing_support_baseline",
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\payment_interactions\\ubi_lite_with_existing_support_baseline.yaml",
+      "interaction_input": {
+        "automation_revenue_available": 4000000,
+        "baseline": {
+          "average_existing_support_per_person": 4000,
+          "baseline_id": "existing_transfer_baseline_ubi_lite",
+          "baseline_program_type": "existing_support_placeholder",
+          "eligible_population": 3000,
+          "existing_admin_cost_per_person": 200,
+          "illustrative_placeholder_only": true
+        },
+        "commonwealth_gap_after_carsf": 3000000,
+        "interaction_id": "ubi_lite_with_existing_support_baseline",
+        "phase_rule": {
+          "illustrative_placeholder_only": true,
+          "maximum_payment_multiplier": 1.0,
+          "minimum_payment_multiplier": 1.0,
+          "phase_in_end_year": 2026,
+          "phase_in_start_year": 2026,
+          "phase_out_end_year": null,
+          "phase_out_start_year": null,
+          "rule_id": "ubi_lite_full_placeholder",
+          "taper_rate_placeholder": 0.0
+        },
+        "placeholder_basis": [
+          "payment interaction example: ubi_lite_with_existing_support_baseline"
+        ],
+        "stack_components": [
+          {
+            "can_stack_with": [],
+            "component_id": "ubi_lite",
+            "component_type": "UBI_LITE",
+            "eligible_people": 10000,
+            "mutually_exclusive_with": [],
+            "payment_per_person": 1000,
+            "phase_multiplier": 1.0,
+            "stack_priority": 1
+          }
+        ],
+        "support_incidence_assumption": {
+          "gst_recovery_rate_placeholder": 0.04,
+          "hardship_offset_rate_placeholder": 0.05,
+          "household_spend_share": 0.65,
+          "illustrative_placeholder_only": true,
+          "savings_or_debt_repayment_share": 0.25
+        },
+        "target_population": {
+          "counts_may_overlap": true,
+          "criteria": {
+            "automation_displacement_link_required": false,
+            "criteria_id": "universal_lite_placeholder",
+            "displaced_worker_required": false,
+            "exclusion_rules": [],
+            "household_test_placeholder": false,
+            "illustrative_placeholder_only": true,
+            "income_test_placeholder": false,
+            "recent_employment_link_required": false,
+            "retraining_required": false,
+            "target_group": "broad adult population placeholder"
+          },
+          "displaced_workers": 1000,
+          "existing_support_recipients": 3000,
+          "reabsorbed_workers": 200,
+          "retraining_participants": 500,
+          "total_population": 10000
+        },
+        "year": 2028
+      },
+      "interaction_result": {
+        "automation_revenue_available": 4000000.0,
+        "baseline_cost": 12600000.0,
+        "combined_commonwealth_gap": 9000000.0,
+        "double_count_adjustment": 0.0,
+        "gross_stack_cost": 10000000.0,
+        "interaction_id": "ubi_lite_with_existing_support_baseline",
+        "interaction_risk_band": "critical",
+        "net_stack_cost": 10000000.0,
+        "non_claims": [
+          "These are prototype payment-interaction outputs only. They are not UBI policy, welfare advice, eligibility law, Centrelink/DSS/Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Payment interaction outputs do not modify firm-level CARSF liability.",
+          "Support incidence offsets are not validated savings."
+        ],
+        "phase_multiplier": 1.0,
+        "residual_support_gap": 6000000.0,
+        "support_incidence": {
+          "gross_support_cost": 10000000.0,
+          "hardship_offset_preview": 500000.0,
+          "household_spending_flow": 6500000.0,
+          "net_fiscal_cost_after_placeholder_offsets": 9240000.0,
+          "non_claims": [
+            "These are prototype payment-interaction outputs only. They are not UBI policy, welfare advice, eligibility law, Centrelink/DSS/Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+            "Existing transfer baseline outputs are illustrative placeholders only.",
+            "Existing transfer baseline outputs do not modify firm-level CARSF liability."
+          ],
+          "placeholder_gst_recovery": 260000.0,
+          "warnings": [
+            "Support incidence offsets are placeholder previews, not validated savings.",
+            "This is not a macroeconomic multiplier, GST estimate, welfare costing, or budget offset."
+          ]
+        },
+        "targeted_eligible_people": 10000.0,
+        "targeting_risk_band": "high",
+        "warnings": [
+          "Existing transfer baseline is separated from new automation-transition payment cost.",
+          "This is not a real DSS, Centrelink, Services Australia, Treasury, or PBO estimate.",
+          "Targeting estimate is placeholder-only and uses no person-level data.",
+          "Household and income test fields are unresolved policy placeholders.",
+          "Targeting may include people not directly counted as displaced workers.",
+          "Phase-rule output is illustrative placeholder-only and not eligibility law.",
+          "Payment-stack interaction is placeholder-only and does not use person-level eligibility data.",
+          "Double-count adjustments are review previews, not real welfare-system offsets.",
+          "Support incidence offsets are placeholder previews, not validated savings.",
+          "This is not a macroeconomic multiplier, GST estimate, welfare costing, or budget offset.",
+          "Existing baseline cost is reported separately from new transition-payment stack cost.",
+          "Firm-level CARSF liability is not modified by payment interaction outputs."
+        ],
+        "year": 2028
+      },
+      "interpretation": "UBI-lite is shown separately from existing transfer baseline cost. It has broad inclusion risk under placeholders because it is not limited to directly displaced workers.",
+      "name": "UBI-Lite With Existing Support Baseline",
+      "purpose": "Universal-lite payment separated from existing baseline transfer cost.",
+      "status": "prototype_only"
+    }
+  ],
+  "metadata": {
+    "generated_at": "2026-05-13T17:13:57+00:00",
+    "non_claims": [
+      "These are prototype payment-interaction outputs only. They are not UBI policy, welfare advice, eligibility law, Centrelink/DSS/Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+      "All targeting, phase, household, and support-incidence values are illustrative placeholders.",
+      "Support incidence offsets are not validated savings.",
+      "Payment interaction outputs do not modify firm-level CARSF liability."
+    ],
+    "status": "prototype_payment_interaction_outputs_only",
+    "version": "CARSF V1.5 prototype"
+  }
+}

@@ -37,6 +37,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Add non-operative investment, tax-incidence, burden-balance, and sensitivity guardrails without modifying final liability.
 - Add a national fiscal trajectory engine for placeholder PAYG erosion, transfer pressure, automation revenue captured, and residual public-sector gaps without modifying firm-level liability.
 - Add a non-operative transition-payment funding module for displaced-worker supplements, UBI-lite placeholders, retraining grants, automation-dividend previews, and hybrid support packages.
+- Add prototype payment-interaction mechanics for existing transfer baseline separation, targeting, phase-in / phase-out, payment-stack double-counting, support incidence, and residual support gaps without modifying firm-level liability.
 
 ## Data Separation
 
@@ -62,6 +63,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Investment and incidence guardrail reports can be generated with `python scripts/run_investment_guardrails.py`.
 - Fiscal trajectory reports can be generated with `python scripts/run_fiscal_trajectory.py`.
 - Transition funding reports can be generated with `python scripts/run_transition_funding.py`.
+- Payment interaction reports can be generated with `python scripts/run_payment_interactions.py`.
 - Hybrid logistics stress variant demonstrates non-zero but intermediate NLTG.
 - V1.5 working paper contains TODO markers where policy drafting remains open.
 - Limitations document clearly blocks actual tax-payable claims.
@@ -78,4 +80,4 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Tune repository guardrail allowlists and integrate external DLP/secret-scanning tooling before any evidence-adjacent external review.
 - Calibrate investment deterrence, pass-through, normal-return preservation, and public-revenue coverage using Treasury/economic/tax-incidence review.
 - Replace calibration shell placeholders with authorised datasets only after formal source review.
-- Add deeper welfare-program interaction and phase-out mechanics only after legal, DSS / Services Australia, Treasury, PBO, and labour-market review.
+- Add deeper welfare-program interaction, household eligibility, phase-out mechanics, and support-incidence calibration only after legal, DSS / Services Australia, Treasury, PBO, and labour-market review.

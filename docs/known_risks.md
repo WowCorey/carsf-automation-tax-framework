@@ -42,4 +42,9 @@
 - Transition-payment funding previews may be mistaken for UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, or PBO costing if non-claim warnings are removed.
 - Payment participation rates, population bases, retraining costs, administrative costs, and cliff-risk bands remain uncalibrated.
 - Automation revenue captured may be insufficient for transition-payment obligations if displacement rises faster than funding coverage.
+- Payment-interaction previews may be mistaken for eligibility law, Centrelink/DSS/Services Australia administration, welfare advice, Treasury costing, or PBO costing if non-claim warnings are removed.
+- Existing transfer baseline separation is a prototype accounting distinction, not a real welfare-program baseline.
+- Household eligibility, income-test placeholders, and phase-in / phase-out rules are unresolved policy mechanics and may create exclusion, leakage, or cliff risks.
+- Payment-stack double-counting adjustments use synthetic aggregate assumptions and do not prove actual person-level entitlement interactions.
+- Support fiscal incidence offsets are not validated savings and may mislead if treated as budget offsets.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.

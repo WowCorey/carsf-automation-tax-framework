@@ -28,6 +28,7 @@ All sector values, schedule values, examples, caps, Fiscal Replacement Value val
 - `examples/investment_guardrails/` - illustrative placeholder stress cases for burden, investment, incidence, and coverage-sensitivity guardrails.
 - `examples/fiscal_trajectory/` - illustrative placeholder national fiscal trajectory cases.
 - `examples/transition_payments/` - illustrative placeholder transition-payment, UBI-lite, retraining, and automation-dividend funding cases.
+- `examples/payment_interactions/` - illustrative placeholder payment targeting, phase, stack, and support-incidence cases.
 - `simulator/` - Streamlit interface for policy review, tax model inputs, worked examples, red-team tests, and audit log.
 - `docs/` - data requirements, limitations, implementation notes, known risks, and V1.5 plan.
 
@@ -123,6 +124,17 @@ Generated transition-funding reports:
 - `reports/transition_funding.md`
 - `reports/transition_funding.json`
 
+Run payment interaction and targeting previews:
+
+```powershell
+python scripts/run_payment_interactions.py
+```
+
+Generated payment-interaction reports:
+
+- `reports/payment_interactions.md`
+- `reports/payment_interactions.json`
+
 The reports are illustrative placeholder outputs only. They are not legal grouping findings, transfer-pricing adjustments, ATO findings, tax assessments, Treasury guidance, OECD/BEPS analysis, economic validation, or real liability calculations.
 Mock evidence reports use synthetic fixtures only and do not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.
 Secure-ingestion reports are prototype governance controls only. Only synthetic mock evidence is allowed in this repository; real evidence must not be committed.
@@ -130,6 +142,7 @@ Repository guardrail reports are prototype enforcement checks only. They are not
 Investment and incidence guardrail reports are prototype review outputs only. They are not economic validation, investment advice, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice.
 Fiscal trajectory reports are prototype national-level outputs only. They are not forecasts, Treasury modelling, ATO estimates, ABS analysis, DSS estimates, PBO costing, legal advice, tax advice, or economic validation.
 Transition-funding reports are prototype payment-funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.
+Payment-interaction reports are prototype targeting, phase-rule, baseline-separation, double-counting, and support-incidence outputs only. They are not UBI policy, welfare advice, eligibility law, Centrelink/DSS/Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.
 
 ## Run the Simulator
 
@@ -159,6 +172,7 @@ V1.5 is not just an examples update. It is V1.4 plus two prototype sector schedu
 - surface effective burden, normal-return preservation, pass-through, investment-risk, under-capture, and over-capture warnings without changing final liability;
 - model placeholder national fiscal trajectories for PAYG erosion, transfer pressure, automation revenue captured, and residual fiscal gaps without changing firm-level liability;
 - preview transition-payment, UBI-lite, retraining, automation-dividend, and hybrid funding options without changing firm-level liability;
+- preview existing transfer baseline separation, targeting, phase-in / phase-out, payment-stack double-counting, and support-payment fiscal incidence without changing firm-level liability;
 - define a calibration shell and data source registry without collecting real data;
 - identify open-source AI and R&D Tax Incentive interaction questions without overclaiming.
 
@@ -176,3 +190,4 @@ Repository guardrails are over-blocking by design and cannot prove that the repo
 Investment, incidence, pass-through, and burden-balance outputs are uncalibrated placeholders. They do not validate economic effects and do not modify final liability.
 National fiscal trajectory outputs are uncalibrated placeholders. They are not forecasts, do not validate public revenue impacts, and do not modify firm-level CARSF liability.
 Transition-payment funding outputs are uncalibrated placeholders. They are not UBI or welfare policy, do not validate social-policy effects, and do not modify firm-level CARSF liability.
+Payment-interaction outputs are uncalibrated placeholders. They do not implement welfare eligibility law, Centrelink/DSS/Services Australia administration, household means testing, or validated support-payment fiscal incidence.
