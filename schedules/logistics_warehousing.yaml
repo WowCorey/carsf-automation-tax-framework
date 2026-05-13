@@ -1,0 +1,57 @@
+schedule_id: logistics_warehousing
+schedule_name: Prototype Schedule B - Logistics / Warehousing
+status: placeholder_prototype_for_v1_5
+canonical_output_unit: tonne_kilometres_or_pallet_movements
+calibration_status: illustrative_placeholder_values_only
+confirmed_baseline_figures: []
+qlc:
+  weights:
+    alpha_wage_quality: 0.18
+    beta_job_security: 0.20
+    gamma_skill_development: 0.12
+    delta_australian_nexus: 0.20
+  qlc_max_multiplier: 1.25
+  notes:
+    - Scores are bounded in [0, 1].
+    - Schedule must eventually split freight, last-mile delivery, warehousing, and platform dispatch if data supports it.
+aii:
+  weights:
+    compute_ratio: 0.20
+    auto_decision_ratio: 0.30
+    robotics_capital_ratio: 0.20
+    auto_process_share: 0.30
+  component_notes:
+    compute_ratio: Routing, dispatch, optimisation, and autonomous-system compute spend as a share of operating expenditure.
+    auto_decision_ratio: Automated route, dispatch, allocation, or fulfilment decisions without human review.
+    robotics_capital_ratio: Warehouse robotics, autonomous vehicles, and automated handling capital share.
+    auto_process_share: Share of tonne-kilometres or pallet movements handled through automated processes.
+opfte_libc_placeholder:
+  value: 100000.0
+  unit: tonne_kilometres_or_pallet_movements_per_qualified_fte
+  evidence_label: illustrative_placeholder
+frv:
+  floor_placeholder: 26000.0
+  standard_placeholder: 47000.0
+  full_placeholder: 90000.0
+  evidence_label: illustrative_placeholder
+caps:
+  lambda_sector: 0.20
+  LAMBDA_sector: 0.27
+  theta: 0.60
+  uplift_rate: 1.12
+  rent_tax_rate: 0.22
+safe_harbours:
+  startup:
+    placeholder_rule: Five years from incorporation or pre-revenue period, whichever ends first.
+    anti_avoidance_note: Subject to aggregation and entity-splitting integrity rules.
+  small_business:
+    placeholder_rule: Simplified exemption below AUD 10m turnover unless grouped or high-scale autonomous production applies.
+  cross_border_automation_notes:
+    - Offshore dispatch, routing, optimisation, and warehouse-control services require related-party disclosure.
+    - Australian-facing output is attributed by destination and activity, not server location or IP ownership alone.
+data_required_for_real_calibration:
+  - ATO, ABS, and industry data separating freight, last-mile delivery, warehousing, and platform dispatch.
+  - State payroll tax exposure and regional employment concentration.
+  - HILDA and DSS data on driver, picker, packer, dispatcher, and warehouse transition outcomes.
+  - Autonomous vehicle kilometres, automated dispatch share, and warehouse robotics adoption data.
+  - Transfer pricing, diverted profits tax, and significant global entity interaction analysis.

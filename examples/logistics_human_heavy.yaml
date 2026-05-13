@@ -1,0 +1,80 @@
+example_id: logistics_human_heavy
+status: illustrative_placeholder
+business_description: Human-heavy logistics operator with drivers, dispatchers, and warehouse workers.
+schedule_used: logistics_warehousing
+placeholder_notice: Numbers are illustrative placeholders and are not Australian logistics data.
+output:
+  value: 900000.0
+  unit: tonne_kilometres_or_pallet_movements
+workers:
+  - role: driver
+    annual_hours: 1820
+    wage_quality: 0.62
+    job_security: 0.70
+    skill_development: 0.45
+    australian_nexus: 1.00
+  - role: driver
+    annual_hours: 1820
+    wage_quality: 0.62
+    job_security: 0.70
+    skill_development: 0.45
+    australian_nexus: 1.00
+  - role: driver
+    annual_hours: 1820
+    wage_quality: 0.62
+    job_security: 0.70
+    skill_development: 0.45
+    australian_nexus: 1.00
+  - role: driver
+    annual_hours: 1820
+    wage_quality: 0.62
+    job_security: 0.70
+    skill_development: 0.45
+    australian_nexus: 1.00
+  - role: warehouse_worker
+    annual_hours: 1820
+    wage_quality: 0.58
+    job_security: 0.68
+    skill_development: 0.45
+    australian_nexus: 1.00
+  - role: warehouse_worker
+    annual_hours: 1820
+    wage_quality: 0.58
+    job_security: 0.68
+    skill_development: 0.45
+    australian_nexus: 1.00
+  - role: dispatcher
+    annual_hours: 1820
+    wage_quality: 0.65
+    job_security: 0.72
+    skill_development: 0.55
+    australian_nexus: 1.00
+  - role: dispatcher
+    annual_hours: 1820
+    wage_quality: 0.65
+    job_security: 0.72
+    skill_development: 0.55
+    australian_nexus: 1.00
+  - role: admin
+    annual_hours: 1600
+    wage_quality: 0.55
+    job_security: 0.65
+    skill_development: 0.35
+    australian_nexus: 1.00
+automation_components:
+  compute_ratio: 0.05
+  auto_decision_ratio: 0.05
+  robotics_capital_ratio: 0.02
+  auto_process_share: 0.06
+aava_inputs:
+  australian_attributable_revenue: 2100000.0
+  verified_non_automation_input_costs: 1300000.0
+  verified_qlc_wage_cost: 650000.0
+capital_base: 600000.0
+credits:
+  verified_credits: 30000.0
+expected_behaviour: Human-heavy logistics operator should have low or zero NLTG.
+red_team_notes:
+  flags: []
+  notes:
+    - Human-heavy comparator for logistics schedule.

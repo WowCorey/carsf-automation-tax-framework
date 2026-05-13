@@ -1,0 +1,56 @@
+example_id: mechanic_traditional
+status: illustrative_placeholder
+business_description: Traditional suburban automotive repair workshop with human mechanics and low automation.
+schedule_used: automotive_repair
+placeholder_notice: Numbers are illustrative placeholders and are not Australian industry data.
+output:
+  value: 4200.0
+  unit: book_hour_equivalent_jobs_completed
+workers:
+  - role: senior_mechanic
+    annual_hours: 1820
+    wage_quality: 0.70
+    job_security: 0.80
+    skill_development: 0.60
+    australian_nexus: 1.00
+  - role: mechanic
+    annual_hours: 1820
+    wage_quality: 0.62
+    job_security: 0.75
+    skill_development: 0.55
+    australian_nexus: 1.00
+  - role: mechanic
+    annual_hours: 1820
+    wage_quality: 0.62
+    job_security: 0.75
+    skill_development: 0.55
+    australian_nexus: 1.00
+  - role: apprentice
+    annual_hours: 1600
+    wage_quality: 0.50
+    job_security: 0.70
+    skill_development: 0.90
+    australian_nexus: 1.00
+  - role: admin
+    annual_hours: 1500
+    wage_quality: 0.55
+    job_security: 0.70
+    skill_development: 0.40
+    australian_nexus: 1.00
+automation_components:
+  compute_ratio: 0.03
+  auto_decision_ratio: 0.02
+  robotics_capital_ratio: 0.01
+  auto_process_share: 0.03
+aava_inputs:
+  australian_attributable_revenue: 850000.0
+  verified_non_automation_input_costs: 420000.0
+  verified_qlc_wage_cost: 360000.0
+capital_base: 180000.0
+credits:
+  verified_credits: 15000.0
+expected_behaviour: Benchmark-style human shop should have little or no NLTG.
+red_team_notes:
+  flags: []
+  notes:
+    - Serves as the human-heavy comparator.

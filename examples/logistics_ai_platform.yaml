@@ -1,0 +1,48 @@
+example_id: logistics_ai_platform
+status: illustrative_placeholder
+business_description: AI logistics platform using automated dispatch, offshore optimisation services, and contracted fulfilment with thin Australian QLC.
+schedule_used: logistics_warehousing
+placeholder_notice: Numbers are illustrative placeholders and are not Australian logistics data.
+output:
+  value: 4000000.0
+  unit: tonne_kilometres_or_pallet_movements
+workers:
+  - role: country_manager
+    annual_hours: 1820
+    wage_quality: 0.78
+    job_security: 0.75
+    skill_development: 0.55
+    australian_nexus: 1.00
+  - role: operations_specialist
+    annual_hours: 1820
+    wage_quality: 0.70
+    job_security: 0.65
+    skill_development: 0.60
+    australian_nexus: 1.00
+  - role: compliance_admin
+    annual_hours: 1200
+    wage_quality: 0.60
+    job_security: 0.55
+    skill_development: 0.35
+    australian_nexus: 1.00
+automation_components:
+  compute_ratio: 0.70
+  auto_decision_ratio: 0.88
+  robotics_capital_ratio: 0.35
+  auto_process_share: 0.86
+aava_inputs:
+  australian_attributable_revenue: 8500000.0
+  verified_non_automation_input_costs: 4300000.0
+  verified_qlc_wage_cost: 360000.0
+capital_base: 2600000.0
+credits:
+  verified_credits: 50000.0
+expected_behaviour: Thin Australian labour and high automated dispatch should produce materially higher NLTG than hybrid logistics.
+red_team_notes:
+  flags:
+    - entity_splitting_safe_harbour
+    - offshore_automation_service
+    - related_party_ai_service_fees
+  notes:
+    - Tests grouped-entity aggregation for safe-harbour avoidance.
+    - Tests destination and activity attribution for offshore automation services.

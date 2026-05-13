@@ -1,0 +1,58 @@
+schedule_id: automotive_repair
+schedule_name: Prototype Schedule A - Automotive Repair
+status: placeholder_prototype_for_v1_5
+canonical_output_unit: book_hour_equivalent_jobs_completed
+calibration_status: illustrative_placeholder_values_only
+confirmed_baseline_figures: []
+qlc:
+  weights:
+    alpha_wage_quality: 0.20
+    beta_job_security: 0.20
+    gamma_skill_development: 0.15
+    delta_australian_nexus: 0.15
+  qlc_max_multiplier: 1.25
+  notes:
+    - Scores are bounded in [0, 1].
+    - The per-worker cap is a V1.5 measurement guardrail against token-worker inflation.
+aii:
+  weights:
+    compute_ratio: 0.15
+    auto_decision_ratio: 0.25
+    robotics_capital_ratio: 0.35
+    auto_process_share: 0.25
+  component_notes:
+    compute_ratio: Diagnostic and administrative compute spend as a share of operating expenditure.
+    auto_decision_ratio: Automated diagnostic or quoting decisions without human review.
+    robotics_capital_ratio: Robotic repair, inspection, or workshop automation capital share.
+    auto_process_share: Share of book-hour-equivalent jobs completed by automated processes.
+opfte_libc_placeholder:
+  value: 900.0
+  unit: book_hour_equivalent_jobs_completed_per_qualified_fte
+  evidence_label: illustrative_placeholder
+frv:
+  floor_placeholder: 25000.0
+  standard_placeholder: 45000.0
+  full_placeholder: 85000.0
+  evidence_label: illustrative_placeholder
+caps:
+  lambda_sector: 0.18
+  LAMBDA_sector: 0.25
+  theta: 0.60
+  uplift_rate: 1.12
+  rent_tax_rate: 0.20
+safe_harbours:
+  startup:
+    placeholder_rule: Five years from incorporation or pre-revenue period, whichever ends first.
+    anti_avoidance_note: Subject to aggregation and entity-splitting integrity rules.
+  small_business:
+    placeholder_rule: Simplified exemption below AUD 10m turnover unless grouped or high-scale autonomous production applies.
+  worker_assist_concession_notes:
+    - Applies only where QLC-per-output is at or above the schedule percentile threshold.
+    - AI used for admin, safety, accessibility, or compliance is not enough by self-description.
+data_required_for_real_calibration:
+  - ATO small-business and company tax data by automotive repair ANZSIC class.
+  - ABS labour force and output measures for repair and maintenance.
+  - Fair Work occupational classifications, wage distributions, and casualisation measures.
+  - HILDA income-transition and wage-scarring data for displaced mechanics and apprentices.
+  - DSS transfer-system data and HELP repayment loss assumptions.
+  - Workshop robotics and AI diagnostic adoption data from industry surveys.

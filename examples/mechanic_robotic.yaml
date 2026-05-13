@@ -1,0 +1,39 @@
+example_id: mechanic_robotic
+status: illustrative_placeholder
+business_description: Highly automated repair facility using robotic inspection, automated quoting, and limited human supervision.
+schedule_used: automotive_repair
+placeholder_notice: Numbers are illustrative placeholders and are not Australian industry data.
+output:
+  value: 7200.0
+  unit: book_hour_equivalent_jobs_completed
+workers:
+  - role: supervising_mechanic
+    annual_hours: 1820
+    wage_quality: 0.75
+    job_security: 0.70
+    skill_development: 0.60
+    australian_nexus: 1.00
+  - role: technician
+    annual_hours: 700
+    wage_quality: 0.60
+    job_security: 0.50
+    skill_development: 0.40
+    australian_nexus: 1.00
+automation_components:
+  compute_ratio: 0.58
+  auto_decision_ratio: 0.78
+  robotics_capital_ratio: 0.92
+  auto_process_share: 0.82
+aava_inputs:
+  australian_attributable_revenue: 1550000.0
+  verified_non_automation_input_costs: 520000.0
+  verified_qlc_wage_cost: 150000.0
+capital_base: 900000.0
+credits:
+  verified_credits: 10000.0
+expected_behaviour: Robotic substitution case should produce materially higher NLTG than human-heavy and AI-admin workshops.
+red_team_notes:
+  flags:
+    - token_human_oversight_jobs
+  notes:
+    - Tests whether nominal supervision roles are enough to suppress NLTG.

@@ -1,0 +1,21 @@
+schema_version: 0.1.0
+status: prototype_schema
+disclaimer: >
+  This schema is a concept modelling aid only. It is not legislation, tax advice,
+  Treasury guidance, ATO guidance, or a calibrated Australian schedule.
+required_fields:
+  - schedule_id
+  - status
+  - canonical_output_unit
+  - qlc
+  - aii
+  - opfte_libc_placeholder
+  - frv
+  - caps
+  - safe_harbours
+  - data_required_for_real_calibration
+field_notes:
+  confirmed_baseline_figures: Must be sourced to official data.
+  illustrative_assumptions: May be used for examples but cannot be presented as real settings.
+  placeholder_values: Must be labelled as placeholders.
+  future_research_requirements: Must identify the data or legal review still required.
