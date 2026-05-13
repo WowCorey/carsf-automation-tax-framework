@@ -6,6 +6,8 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
 
+from .decision_log import build_standard_decision_log, summarise_decision_log
+from .evidence import EvidenceAssessment, assess_evidence
 from .example_runner import ExampleRunnerError, load_yaml_file
 from .group_runner import load_schedules_by_id
 from .mixed_units import (
@@ -57,6 +59,8 @@ class TransferPricingScenarioResult:
     transfer_pricing_result: TransferPricingPreviewResult
     adjusted_aava_preview: AdjustedAAVAPreview
     liability_preview: LiabilityAdjustmentPreview
+    evidence_assessment: EvidenceAssessment
+    decision_log_summary: dict[str, Any]
 
     def to_jsonable(self) -> dict[str, Any]:
         return asdict(self)
@@ -71,6 +75,8 @@ class TransferPricingPreviewReport:
     mixed_unit_group: dict[str, Any]
     unit_compatibility: UnitCompatibilityResult
     mixed_unit_exposure: MixedUnitExposureResult
+    evidence_assessment: EvidenceAssessment
+    decision_log_summary: dict[str, Any]
 
     def to_jsonable(self) -> dict[str, Any]:
         return {
@@ -79,6 +85,8 @@ class TransferPricingPreviewReport:
             "mixed_unit_group": self.mixed_unit_group,
             "unit_compatibility": asdict(self.unit_compatibility),
             "mixed_unit_exposure": asdict(self.mixed_unit_exposure),
+            "evidence_assessment": asdict(self.evidence_assessment),
+            "decision_log_summary": self.decision_log_summary,
         }
 
 
@@ -123,6 +131,25 @@ def _run_transfer_scenario(
         capital_base=float(source.get("capital_base", 0.0)),
         verified_credits=float(source.get("verified_credits", 0.0)),
     )
+    evidence_assessment = assess_evidence(source, ["transfer_pricing", "avoidance", "core_formula"])
+    decision_log = build_standard_decision_log(
+        str(source["group_id"]),
+        evidence_assessment.status,
+        {},
+        extra_steps=[
+            (
+                "transfer_pricing_preview",
+                "Transfer-pricing / related-party preview",
+                {"reported_aava": reported_aava},
+                {
+                    "candidate_count": len(transfer_result.candidates),
+                    "adjusted_aava_preview": adjusted_preview.adjusted_aava_preview,
+                    "review_required": transfer_result.review_required,
+                },
+                "Recorded non-operative adjusted-AAVA review preview.",
+            )
+        ],
+    )
     return TransferPricingScenarioResult(
         scenario_id=str(source["group_id"]),
         title=str(source["title"]),
@@ -132,6 +159,8 @@ def _run_transfer_scenario(
         transfer_pricing_result=transfer_result,
         adjusted_aava_preview=adjusted_preview,
         liability_preview=liability_preview,
+        evidence_assessment=evidence_assessment,
+        decision_log_summary=summarise_decision_log(decision_log),
     )
 
 
@@ -145,11 +174,37 @@ def run_transfer_pricing_previews(repo_root: Path) -> TransferPricingPreviewRepo
     entities = mixed_unit_group.get("entities")
     if not isinstance(entities, list):
         raise ExampleRunnerError("mixed_unit_platform_group entities must be a list")
+    unit_compatibility = evaluate_unit_compatibility(entities)
+    mixed_unit_exposure = evaluate_mixed_unit_exposure(entities)
+    evidence_assessment = assess_evidence(mixed_unit_group, ["mixed_units", "transfer_pricing"])
+    decision_log = build_standard_decision_log(
+        MIXED_UNIT_PLATFORM_ID,
+        evidence_assessment.status,
+        {},
+        extra_steps=[
+            (
+                "transfer_pricing_preview",
+                "Transfer-pricing report preview",
+                {"scenario_count": 2},
+                {"status": "non_operative_preview_only"},
+                "Recorded transfer-pricing report preview.",
+            ),
+            (
+                "mixed_unit_handling",
+                "Mixed-unit handling",
+                {"unit_count": len(unit_compatibility.unit_set)},
+                {"compatible": unit_compatibility.compatible, "method": mixed_unit_exposure.method},
+                "Recorded mixed-unit compatibility and exposure preview.",
+            ),
+        ],
+    )
 
     return TransferPricingPreviewReport(
         related_party_ai_fee=_run_transfer_scenario(related_party_ai_fee, schedules_by_id),
         robotics_leasing=_run_transfer_scenario(robotics_leasing, schedules_by_id),
         mixed_unit_group=mixed_unit_group,
-        unit_compatibility=evaluate_unit_compatibility(entities),
-        mixed_unit_exposure=evaluate_mixed_unit_exposure(entities),
+        unit_compatibility=unit_compatibility,
+        mixed_unit_exposure=mixed_unit_exposure,
+        evidence_assessment=evidence_assessment,
+        decision_log_summary=summarise_decision_log(decision_log),
     )

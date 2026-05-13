@@ -1,6 +1,6 @@
 # CARSF V1.5 Grouped-Entity and Apportionment Results
 
-Generated at: `2026-05-13T08:00:58+00:00`
+Generated at: `2026-05-13T08:32:02+00:00`
 
 Version: CARSF V1.5 prototype
 
@@ -11,6 +11,8 @@ These outputs are prototype review previews only. They are not legal grouping fi
 ## A. Grouped-Entity Aggregation Overview
 
 This report shows non-operative modelling previews for related-entity aggregation, mixed-activity apportionment, and a hybrid logistics stress case. It does not alter any final liability calculation in the single-entity examples.
+
+Evidence status: `placeholder_only`. Decision-log entries: `4`.
 
 Related-party and mixed-unit previews are generated in `reports/transfer_pricing_results.md` and `reports/transfer_pricing_results.json`.
 
@@ -107,6 +109,12 @@ Hybrid logistics stress variant: automation is meaningful and NLTG is non-zero, 
 
 ## J. Limitations and Non-Claims
 
+Evidence and decision-log summary:
+
+- Evidence status: placeholder_only
+- Missing evidence requirements: 28
+- Decision-log steps: evidence_assessment, group_aggregation, apportionment, mixed_unit_handling
+
 - Prototype grouped-entity preview only; no legal, tax, Treasury, or ATO validation is provided.
 - This is not full tax-law grouping, transfer-pricing, or attribution logic.
 - Prototype apportionment preview only; no legal, tax, Treasury, or ATO validation is provided.
@@ -115,6 +123,8 @@ Hybrid logistics stress variant: automation is meaningful and NLTG is non-zero, 
 - No legal, tax, Treasury, ATO, or economic validation is implied.
 - Safe harbour and avoidance outputs are prototype review flags, not legal findings.
 - Coverage metrics not calculated because this example has no national monitoring inputs.
+- Evidence assessment is prototype-only and does not validate any liability, legal position, tax position, or audit finding.
+- Evidence remains insufficient for real calibration, legal use, or actual tax-payable claims.
 - Grouped aggregation is a prototype modelling preview only.
 - Numbers are illustrative placeholders and are not Australian logistics, tax, or transfer-pricing data.
 - Do not use this result as legal grouping, tax assessment, Treasury guidance, or ATO guidance.

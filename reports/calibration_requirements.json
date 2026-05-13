@@ -1,0 +1,395 @@
+{
+  "metadata": {
+    "generated_at": "2026-05-13T08:32:02+00:00",
+    "no_fake_calibration_values": true,
+    "non_claims": [
+      "Not legal advice.",
+      "Not tax advice.",
+      "Not Treasury or ATO guidance.",
+      "Not economic validation.",
+      "Not a real tax-payable calculation.",
+      "All outputs use illustrative placeholder values unless explicitly labelled otherwise."
+    ],
+    "status": "prototype_calibration_shell_only",
+    "version": "CARSF V1.5 prototype"
+  },
+  "registry": {
+    "non_claims": [
+      "This calibration registry is a prototype shell only.",
+      "No real calibration values, official data, legal validation, tax validation, Treasury validation, ATO validation, ABS validation, Fair Work validation, or economic validation are included.",
+      "All calibration statuses remain not_collected or placeholder until authorised data and review are supplied."
+    ],
+    "placeholder_fields": [
+      "OPFTE_LIBC benchmarks",
+      "FRV floor/standard/full",
+      "QLC weights and QLCMaxMultiplier",
+      "AII component weights",
+      "AAVA deductibility categories",
+      "cap rates lambda_sector / LAMBDA_sector",
+      "theta credit cap",
+      "uplift rate and rent tax rate",
+      "safe-harbour thresholds",
+      "avoidance risk thresholds",
+      "transfer-pricing review shares",
+      "mixed-unit exposure weighting",
+      "labour-market absorption rates",
+      "wage compression / underemployment modules",
+      "GST consumption effects",
+      "superannuation and HELP/HECS effects",
+      "state payroll tax effects",
+      "regional weighting",
+      "public-sector automation",
+      "investment deterrence / tax incidence parameters"
+    ],
+    "requirements": [
+      {
+        "calibration_status": "not_collected",
+        "fallback_source": "industry productivity datasets",
+        "geographic_scope": "Australia; finer regional scope unresolved",
+        "legal_sensitivity": "medium",
+        "model_component": "OPFTE_LIBC benchmarks",
+        "notes": [
+          "No real value is stored in this registry.",
+          "Requires authorised source data, privacy review, and independent policy/legal review before use."
+        ],
+        "preferred_source": "ABS labour force / industry data",
+        "privacy_sensitivity": "medium",
+        "required_dataset": "OPFTE_LIBC benchmarks calibration dataset placeholder",
+        "requirement_id": "cal_opfte_libc_benchmarks",
+        "sector_scope": "Schedule-specific; prototype schedules only in V1.5",
+        "update_frequency": "to_be_determined_after_policy_review"
+      },
+      {
+        "calibration_status": "not_collected",
+        "fallback_source": "PBO fiscal projections",
+        "geographic_scope": "Australia; finer regional scope unresolved",
+        "legal_sensitivity": "medium",
+        "model_component": "FRV floor/standard/full",
+        "notes": [
+          "No real value is stored in this registry.",
+          "Requires authorised source data, privacy review, and independent policy/legal review before use."
+        ],
+        "preferred_source": "ATO aggregated tax data",
+        "privacy_sensitivity": "medium",
+        "required_dataset": "FRV floor/standard/full calibration dataset placeholder",
+        "requirement_id": "cal_frv_floor_standard_full",
+        "sector_scope": "Schedule-specific; prototype schedules only in V1.5",
+        "update_frequency": "to_be_determined_after_policy_review"
+      },
+      {
+        "calibration_status": "not_collected",
+        "fallback_source": "HILDA longitudinal labour data",
+        "geographic_scope": "Australia; finer regional scope unresolved",
+        "legal_sensitivity": "medium",
+        "model_component": "QLC weights and QLCMaxMultiplier",
+        "notes": [
+          "No real value is stored in this registry.",
+          "Requires authorised source data, privacy review, and independent policy/legal review before use."
+        ],
+        "preferred_source": "Fair Work / wage award data",
+        "privacy_sensitivity": "medium",
+        "required_dataset": "QLC weights and QLCMaxMultiplier calibration dataset placeholder",
+        "requirement_id": "cal_qlc_weights_and_qlcmaxmultiplier",
+        "sector_scope": "Schedule-specific; prototype schedules only in V1.5",
+        "update_frequency": "to_be_determined_after_policy_review"
+      },
+      {
+        "calibration_status": "not_collected",
+        "fallback_source": "industry productivity datasets",
+        "geographic_scope": "Australia; finer regional scope unresolved",
+        "legal_sensitivity": "medium",
+        "model_component": "AII component weights",
+        "notes": [
+          "No real value is stored in this registry.",
+          "Requires authorised source data, privacy review, and independent policy/legal review before use."
+        ],
+        "preferred_source": "business survey data",
+        "privacy_sensitivity": "medium",
+        "required_dataset": "AII component weights calibration dataset placeholder",
+        "requirement_id": "cal_aii_component_weights",
+        "sector_scope": "Schedule-specific; prototype schedules only in V1.5",
+        "update_frequency": "to_be_determined_after_policy_review"
+      },
+      {
+        "calibration_status": "not_collected",
+        "fallback_source": "Treasury modelling",
+        "geographic_scope": "Australia; finer regional scope unresolved",
+        "legal_sensitivity": "high",
+        "model_component": "AAVA deductibility categories",
+        "notes": [
+          "No real value is stored in this registry.",
+          "Requires authorised source data, privacy review, and independent policy/legal review before use."
+        ],
+        "preferred_source": "independent legal/tax review",
+        "privacy_sensitivity": "medium",
+        "required_dataset": "AAVA deductibility categories calibration dataset placeholder",
+        "requirement_id": "cal_aava_deductibility_categories",
+        "sector_scope": "Schedule-specific; prototype schedules only in V1.5",
+        "update_frequency": "to_be_determined_after_policy_review"
+      },
+      {
+        "calibration_status": "not_collected",
+        "fallback_source": "business survey data",
+        "geographic_scope": "Australia; finer regional scope unresolved",
+        "legal_sensitivity": "medium",
+        "model_component": "cap rates lambda_sector / LAMBDA_sector",
+        "notes": [
+          "No real value is stored in this registry.",
+          "Requires authorised source data, privacy review, and independent policy/legal review before use."
+        ],
+        "preferred_source": "Treasury modelling",
+        "privacy_sensitivity": "medium",
+        "required_dataset": "cap rates lambda_sector / LAMBDA_sector calibration dataset placeholder",
+        "requirement_id": "cal_cap_rates_lambda_sector__lambda_sector",
+        "sector_scope": "Schedule-specific; prototype schedules only in V1.5",
+        "update_frequency": "to_be_determined_after_policy_review"
+      },
+      {
+        "calibration_status": "not_collected",
+        "fallback_source": "business survey data",
+        "geographic_scope": "Australia; finer regional scope unresolved",
+        "legal_sensitivity": "medium",
+        "model_component": "theta credit cap",
+        "notes": [
+          "No real value is stored in this registry.",
+          "Requires authorised source data, privacy review, and independent policy/legal review before use."
+        ],
+        "preferred_source": "Treasury modelling",
+        "privacy_sensitivity": "medium",
+        "required_dataset": "theta credit cap calibration dataset placeholder",
+        "requirement_id": "cal_theta_credit_cap",
+        "sector_scope": "Schedule-specific; prototype schedules only in V1.5",
+        "update_frequency": "to_be_determined_after_policy_review"
+      },
+      {
+        "calibration_status": "not_collected",
+        "fallback_source": "PBO fiscal projections",
+        "geographic_scope": "Australia; finer regional scope unresolved",
+        "legal_sensitivity": "medium",
+        "model_component": "uplift rate and rent tax rate",
+        "notes": [
+          "No real value is stored in this registry.",
+          "Requires authorised source data, privacy review, and independent policy/legal review before use."
+        ],
+        "preferred_source": "ATO aggregated tax data",
+        "privacy_sensitivity": "medium",
+        "required_dataset": "uplift rate and rent tax rate calibration dataset placeholder",
+        "requirement_id": "cal_uplift_rate_and_rent_tax_rate",
+        "sector_scope": "Schedule-specific; prototype schedules only in V1.5",
+        "update_frequency": "to_be_determined_after_policy_review"
+      },
+      {
+        "calibration_status": "not_collected",
+        "fallback_source": "business survey data",
+        "geographic_scope": "Australia; finer regional scope unresolved",
+        "legal_sensitivity": "medium",
+        "model_component": "safe-harbour thresholds",
+        "notes": [
+          "No real value is stored in this registry.",
+          "Requires authorised source data, privacy review, and independent policy/legal review before use."
+        ],
+        "preferred_source": "Treasury modelling",
+        "privacy_sensitivity": "medium",
+        "required_dataset": "safe-harbour thresholds calibration dataset placeholder",
+        "requirement_id": "cal_safe_harbour_thresholds",
+        "sector_scope": "Schedule-specific; prototype schedules only in V1.5",
+        "update_frequency": "to_be_determined_after_policy_review"
+      },
+      {
+        "calibration_status": "not_collected",
+        "fallback_source": "business survey data",
+        "geographic_scope": "Australia; finer regional scope unresolved",
+        "legal_sensitivity": "medium",
+        "model_component": "avoidance risk thresholds",
+        "notes": [
+          "No real value is stored in this registry.",
+          "Requires authorised source data, privacy review, and independent policy/legal review before use."
+        ],
+        "preferred_source": "Treasury modelling",
+        "privacy_sensitivity": "medium",
+        "required_dataset": "avoidance risk thresholds calibration dataset placeholder",
+        "requirement_id": "cal_avoidance_risk_thresholds",
+        "sector_scope": "Schedule-specific; prototype schedules only in V1.5",
+        "update_frequency": "to_be_determined_after_policy_review"
+      },
+      {
+        "calibration_status": "not_collected",
+        "fallback_source": "Treasury modelling",
+        "geographic_scope": "Australia; finer regional scope unresolved",
+        "legal_sensitivity": "high",
+        "model_component": "transfer-pricing review shares",
+        "notes": [
+          "No real value is stored in this registry.",
+          "Requires authorised source data, privacy review, and independent policy/legal review before use."
+        ],
+        "preferred_source": "independent legal/tax review",
+        "privacy_sensitivity": "medium",
+        "required_dataset": "transfer-pricing review shares calibration dataset placeholder",
+        "requirement_id": "cal_transfer_pricing_review_shares",
+        "sector_scope": "Schedule-specific; prototype schedules only in V1.5",
+        "update_frequency": "to_be_determined_after_policy_review"
+      },
+      {
+        "calibration_status": "not_collected",
+        "fallback_source": "industry productivity datasets",
+        "geographic_scope": "Australia; finer regional scope unresolved",
+        "legal_sensitivity": "medium",
+        "model_component": "mixed-unit exposure weighting",
+        "notes": [
+          "No real value is stored in this registry.",
+          "Requires authorised source data, privacy review, and independent policy/legal review before use."
+        ],
+        "preferred_source": "business survey data",
+        "privacy_sensitivity": "medium",
+        "required_dataset": "mixed-unit exposure weighting calibration dataset placeholder",
+        "requirement_id": "cal_mixed_unit_exposure_weighting",
+        "sector_scope": "Schedule-specific; prototype schedules only in V1.5",
+        "update_frequency": "to_be_determined_after_policy_review"
+      },
+      {
+        "calibration_status": "not_collected",
+        "fallback_source": "HILDA longitudinal labour data",
+        "geographic_scope": "Australia; finer regional scope unresolved",
+        "legal_sensitivity": "medium",
+        "model_component": "labour-market absorption rates",
+        "notes": [
+          "No real value is stored in this registry.",
+          "Requires authorised source data, privacy review, and independent policy/legal review before use."
+        ],
+        "preferred_source": "DSS / Services Australia payment data",
+        "privacy_sensitivity": "high",
+        "required_dataset": "labour-market absorption rates calibration dataset placeholder",
+        "requirement_id": "cal_labour_market_absorption_rates",
+        "sector_scope": "Schedule-specific; prototype schedules only in V1.5",
+        "update_frequency": "to_be_determined_after_policy_review"
+      },
+      {
+        "calibration_status": "not_collected",
+        "fallback_source": "HILDA longitudinal labour data",
+        "geographic_scope": "Australia; finer regional scope unresolved",
+        "legal_sensitivity": "medium",
+        "model_component": "wage compression / underemployment modules",
+        "notes": [
+          "No real value is stored in this registry.",
+          "Requires authorised source data, privacy review, and independent policy/legal review before use."
+        ],
+        "preferred_source": "Fair Work / wage award data",
+        "privacy_sensitivity": "high",
+        "required_dataset": "wage compression / underemployment modules calibration dataset placeholder",
+        "requirement_id": "cal_wage_compression__underemployment_modules",
+        "sector_scope": "Schedule-specific; prototype schedules only in V1.5",
+        "update_frequency": "to_be_determined_after_policy_review"
+      },
+      {
+        "calibration_status": "not_collected",
+        "fallback_source": "business survey data",
+        "geographic_scope": "Australia; finer regional scope unresolved",
+        "legal_sensitivity": "medium",
+        "model_component": "GST consumption effects",
+        "notes": [
+          "No real value is stored in this registry.",
+          "Requires authorised source data, privacy review, and independent policy/legal review before use."
+        ],
+        "preferred_source": "Treasury modelling",
+        "privacy_sensitivity": "medium",
+        "required_dataset": "GST consumption effects calibration dataset placeholder",
+        "requirement_id": "cal_gst_consumption_effects",
+        "sector_scope": "Schedule-specific; prototype schedules only in V1.5",
+        "update_frequency": "to_be_determined_after_policy_review"
+      },
+      {
+        "calibration_status": "not_collected",
+        "fallback_source": "PBO fiscal projections",
+        "geographic_scope": "Australia; finer regional scope unresolved",
+        "legal_sensitivity": "medium",
+        "model_component": "superannuation and HELP/HECS effects",
+        "notes": [
+          "No real value is stored in this registry.",
+          "Requires authorised source data, privacy review, and independent policy/legal review before use."
+        ],
+        "preferred_source": "ATO aggregated tax data",
+        "privacy_sensitivity": "medium",
+        "required_dataset": "superannuation and HELP/HECS effects calibration dataset placeholder",
+        "requirement_id": "cal_superannuation_and_help_hecs_effects",
+        "sector_scope": "Schedule-specific; prototype schedules only in V1.5",
+        "update_frequency": "to_be_determined_after_policy_review"
+      },
+      {
+        "calibration_status": "not_collected",
+        "fallback_source": "PBO fiscal projections",
+        "geographic_scope": "Australia; finer regional scope unresolved",
+        "legal_sensitivity": "medium",
+        "model_component": "state payroll tax effects",
+        "notes": [
+          "No real value is stored in this registry.",
+          "Requires authorised source data, privacy review, and independent policy/legal review before use."
+        ],
+        "preferred_source": "ATO aggregated tax data",
+        "privacy_sensitivity": "medium",
+        "required_dataset": "state payroll tax effects calibration dataset placeholder",
+        "requirement_id": "cal_state_payroll_tax_effects",
+        "sector_scope": "Schedule-specific; prototype schedules only in V1.5",
+        "update_frequency": "to_be_determined_after_policy_review"
+      },
+      {
+        "calibration_status": "not_collected",
+        "fallback_source": "business survey data",
+        "geographic_scope": "Australia; finer regional scope unresolved",
+        "legal_sensitivity": "medium",
+        "model_component": "regional weighting",
+        "notes": [
+          "No real value is stored in this registry.",
+          "Requires authorised source data, privacy review, and independent policy/legal review before use."
+        ],
+        "preferred_source": "Treasury modelling",
+        "privacy_sensitivity": "medium",
+        "required_dataset": "regional weighting calibration dataset placeholder",
+        "requirement_id": "cal_regional_weighting",
+        "sector_scope": "Schedule-specific; prototype schedules only in V1.5",
+        "update_frequency": "to_be_determined_after_policy_review"
+      },
+      {
+        "calibration_status": "not_collected",
+        "fallback_source": "business survey data",
+        "geographic_scope": "Australia; finer regional scope unresolved",
+        "legal_sensitivity": "medium",
+        "model_component": "public-sector automation",
+        "notes": [
+          "No real value is stored in this registry.",
+          "Requires authorised source data, privacy review, and independent policy/legal review before use."
+        ],
+        "preferred_source": "Treasury modelling",
+        "privacy_sensitivity": "medium",
+        "required_dataset": "public-sector automation calibration dataset placeholder",
+        "requirement_id": "cal_public_sector_automation",
+        "sector_scope": "Schedule-specific; prototype schedules only in V1.5",
+        "update_frequency": "to_be_determined_after_policy_review"
+      },
+      {
+        "calibration_status": "not_collected",
+        "fallback_source": "PBO fiscal projections",
+        "geographic_scope": "Australia; finer regional scope unresolved",
+        "legal_sensitivity": "medium",
+        "model_component": "investment deterrence / tax incidence parameters",
+        "notes": [
+          "No real value is stored in this registry.",
+          "Requires authorised source data, privacy review, and independent policy/legal review before use."
+        ],
+        "preferred_source": "ATO aggregated tax data",
+        "privacy_sensitivity": "medium",
+        "required_dataset": "investment deterrence / tax incidence parameters calibration dataset placeholder",
+        "requirement_id": "cal_investment_deterrence__tax_incidence_parameters",
+        "sector_scope": "Schedule-specific; prototype schedules only in V1.5",
+        "update_frequency": "to_be_determined_after_policy_review"
+      }
+    ],
+    "unresolved_dependencies": [
+      "Treasury/ATO-style data access and modelling governance",
+      "Privacy and secrecy review for restricted datasets",
+      "Independent legal/tax review",
+      "Sector-specific calibration methodology",
+      "Economic incidence and behavioural response modelling"
+    ],
+    "version": "CARSF V1.5 calibration shell"
+  }
+}

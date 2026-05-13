@@ -17,3 +17,24 @@ Confirmed baseline figures must come from official sources such as Treasury, PBO
 ## Current Repository Values
 
 The schedules and examples in this repository use illustrative placeholder values only. They are intended to test formula mechanics and red-team behaviour, not to estimate real Australian fiscal exposure.
+
+## Source Registry
+
+The prototype source registry lives at `data/source_registry.yaml`. It lists future source categories only. No datasets have been collected, downloaded, or committed.
+
+## Evidence and Calibration Reports
+
+Run:
+
+```powershell
+python scripts/run_examples.py
+```
+
+Then review:
+
+- `reports/evidence_requirements.md`
+- `reports/evidence_requirements.json`
+- `reports/calibration_requirements.md`
+- `reports/calibration_requirements.json`
+
+These reports do not validate evidence, liability, law, tax, Treasury, ATO, ABS, Fair Work, OECD/BEPS, audit, forensic, or economic claims.

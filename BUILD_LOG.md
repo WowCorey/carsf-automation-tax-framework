@@ -135,3 +135,39 @@ Limitations:
 - Adjusted AAVA is preview-only.
 - Mixed-unit value-weighted exposure is not a tax base.
 - Future work requires international tax, GST, transfer-pricing, legal, and calibrated sector-schedule review.
+
+## V1.5 Evidence, Decision Log, and Calibration Shell
+
+Branch: `v1.5-evidence-decision-log-calibration-shell`
+
+Baseline: PR #5 merged into `main`, including transfer-pricing previews, adjusted-AAVA preview logic, mixed-unit handling, transfer-pricing reports, and Streamlit transfer-pricing/mixed-unit page.
+
+Purpose of this build:
+
+- Add prototype evidence requirements for formula inputs and review flags.
+- Add deterministic decision-log summaries for example, grouped, and transfer-pricing runs.
+- Add a calibration registry shell without real values.
+- Add data source registry and placeholder policy.
+- Generate evidence and calibration JSON/Markdown reports.
+
+Tests run:
+
+- `python -m pytest` - 226 passed, 1 pytest-asyncio deprecation warning under Python 3.14.
+- `python -m compileall -q model simulator scripts` - passed.
+- Recursive YAML parse check for schedules/examples/data - passed.
+- `python scripts/run_examples.py` - regenerated example, grouped, transfer-pricing, evidence, and calibration reports.
+- Streamlit probe - HTTP 200.
+
+Reports generated:
+
+- `reports/evidence_requirements.json`
+- `reports/evidence_requirements.md`
+- `reports/calibration_requirements.json`
+- `reports/calibration_requirements.md`
+
+Limitations:
+
+- Evidence assessment does not validate liability, law, tax, audit, or forensic sufficiency.
+- No real data has been collected.
+- No calibration has occurred.
+- Legal, tax, privacy, economic, Treasury/ATO-style, and sector-specific review remains required.

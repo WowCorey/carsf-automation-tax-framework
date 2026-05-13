@@ -1,12 +1,14 @@
 # CARSF V1.5 Transfer-Pricing and Mixed-Unit Preview Results
 
-Generated at: `2026-05-13T08:00:58+00:00`
+Generated at: `2026-05-13T08:32:02+00:00`
 
 Version: CARSF V1.5 prototype
 
 Status: `illustrative_transfer_pricing_and_mixed_unit_previews_only`
 
 These outputs are prototype review previews only. They are not transfer-pricing adjustments, ATO findings, legal findings, Treasury guidance, OECD/BEPS analysis, or economic validation.
+
+Evidence status: `placeholder_only`. Decision-log entries: `3`.
 
 ## A. Purpose and Non-Claims
 
@@ -161,6 +163,12 @@ Where units differ, the prototype prohibits direct output and HLE aggregation. I
 - No legal, tax, ATO, Treasury, OECD, BEPS, or economic validation is implied.
 
 ## J. Limitations and Required Legal/Tax Review
+
+Evidence and decision-log summary:
+
+- Evidence status: placeholder_only
+- Missing evidence requirements: 24
+- Decision-log steps: evidence_assessment, transfer_pricing_preview, mixed_unit_handling
 
 - Value-weighted exposure index is not a tax base.
 - Direct output and HLE aggregation are prohibited until units are compatible or a reviewed conversion method exists.

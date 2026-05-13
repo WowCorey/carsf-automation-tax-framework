@@ -107,6 +107,87 @@
     }
   },
   "apportionment_scope_note": "This example currently uses the combined logistics_warehousing prototype schedule for all activity slices. It tests apportionment plumbing and share-validation logic, not final cross-sector schedule blending. True multi-schedule blending requires additional calibrated sector schedules.",
+  "decision_log_summary": {
+    "decisions": {
+      "apportionment": "Recorded prototype apportionment share validation.",
+      "evidence_assessment": "Evidence reviewed as prototype-only input governance.",
+      "group_aggregation": "Recorded non-operative grouped-entity aggregation preview.",
+      "mixed_unit_handling": "Mixed-unit handling remains a review-only modelling path."
+    },
+    "entry_count": 4,
+    "evidence_status_by_step": {
+      "apportionment": "placeholder_only",
+      "evidence_assessment": "placeholder_only",
+      "group_aggregation": "placeholder_only",
+      "mixed_unit_handling": "placeholder_only"
+    },
+    "example_id": "logistics_split_structure",
+    "generated_at": "2026-05-13T08:32:02+00:00",
+    "limitations": [
+      "Inputs are illustrative placeholders unless separately verified.",
+      "Decision entries record model flow and review signals only."
+    ],
+    "non_claims": [
+      "Decision logs are prototype audit trails only.",
+      "Decision logs do not create legal findings, tax findings, Treasury guidance, ATO guidance, or economic validation.",
+      "Decision logs must not contain raw sensitive identifiers or personal records."
+    ],
+    "run_id": "carsf-v1.5-logistics_split_structure",
+    "steps": [
+      "evidence_assessment",
+      "group_aggregation",
+      "apportionment",
+      "mixed_unit_handling"
+    ],
+    "warnings": [
+      "Prototype decision log only.",
+      "No legal, tax, Treasury, ATO, audit, forensic, or economic validation is implied."
+    ]
+  },
+  "evidence_assessment": {
+    "low_confidence_items": [],
+    "missing_requirements": [
+      "core_output_value",
+      "core_output_unit",
+      "core_opfte_libc",
+      "core_worker_hours",
+      "core_wage_quality",
+      "core_job_security",
+      "core_skill_development",
+      "core_australian_nexus",
+      "core_aii_components",
+      "core_aava_revenue_costs",
+      "core_frv",
+      "core_capital_base",
+      "core_rates",
+      "core_credits",
+      "safe_harbour_startup",
+      "avoid_entity_splitting",
+      "avoid_sector_classification",
+      "group_common_control",
+      "group_ip_owner",
+      "group_service_provider",
+      "group_customer_facing",
+      "group_employer",
+      "group_offshore_provider",
+      "mixed_unit_evidence",
+      "mixed_conversion_metadata",
+      "mixed_activity_shares",
+      "mixed_revenue_aava_basis",
+      "mixed_schedule_classification"
+    ],
+    "non_claims": [
+      "This is a prototype evidence assessment only. It is not legal, tax, Treasury, ATO, evidentiary, forensic, or audit validation.",
+      "Evidence requirements are draft scaffolding and are not final policy, law, guidance, or audit procedure.",
+      "Placeholder examples remain insufficient for real liability, calibration, or policy claims."
+    ],
+    "review_required": true,
+    "status": "placeholder_only",
+    "warnings": [
+      "Evidence assessment is prototype-only and does not validate any liability, legal position, tax position, or audit finding.",
+      "Evidence remains insufficient for real calibration, legal use, or actual tax-payable claims."
+    ]
+  },
   "hybrid_stress_result": {
     "avoidance_result": {
       "flags": [
@@ -127,6 +208,116 @@
       "risk_level": "medium"
     },
     "business_description": "Hybrid logistics operator with meaningful route automation and warehouse automation while retaining substantial Australian driving, dispatch, and warehouse labour.",
+    "decision_log_summary": {
+      "decisions": {
+        "aava": "Recorded aava prototype model step.",
+        "ael": "Recorded ael prototype model step.",
+        "aii": "Recorded aii prototype model step.",
+        "arl": "Recorded arl prototype model step.",
+        "avoidance": "Recorded avoidance prototype model step.",
+        "caps": "Recorded caps prototype model step.",
+        "evidence_assessment": "Evidence reviewed as prototype-only input governance.",
+        "grouping": "Recorded grouping prototype model step.",
+        "hle": "Recorded hle prototype model step.",
+        "nltg": "Recorded nltg prototype model step.",
+        "qlc": "Recorded qlc prototype model step.",
+        "safe_harbour": "Recorded safe_harbour prototype model step."
+      },
+      "entry_count": 12,
+      "evidence_status_by_step": {
+        "aava": "placeholder_only",
+        "ael": "placeholder_only",
+        "aii": "placeholder_only",
+        "arl": "placeholder_only",
+        "avoidance": "placeholder_only",
+        "caps": "placeholder_only",
+        "evidence_assessment": "placeholder_only",
+        "grouping": "placeholder_only",
+        "hle": "placeholder_only",
+        "nltg": "placeholder_only",
+        "qlc": "placeholder_only",
+        "safe_harbour": "placeholder_only"
+      },
+      "example_id": "logistics_hybrid_stress",
+      "generated_at": "2026-05-13T08:32:02+00:00",
+      "limitations": [
+        "Inputs are illustrative placeholders unless separately verified.",
+        "Decision entries record model flow and review signals only."
+      ],
+      "non_claims": [
+        "Decision logs are prototype audit trails only.",
+        "Decision logs do not create legal findings, tax findings, Treasury guidance, ATO guidance, or economic validation.",
+        "Decision logs must not contain raw sensitive identifiers or personal records."
+      ],
+      "run_id": "carsf-v1.5-logistics_hybrid_stress",
+      "steps": [
+        "evidence_assessment",
+        "qlc",
+        "hle",
+        "aii",
+        "nltg",
+        "aava",
+        "ael",
+        "arl",
+        "caps",
+        "safe_harbour",
+        "avoidance",
+        "grouping"
+      ],
+      "warnings": [
+        "Prototype decision log only.",
+        "No legal, tax, Treasury, ATO, audit, forensic, or economic validation is implied."
+      ]
+    },
+    "evidence_assessment": {
+      "low_confidence_items": [],
+      "missing_requirements": [
+        "core_output_value",
+        "core_output_unit",
+        "core_opfte_libc",
+        "core_worker_hours",
+        "core_wage_quality",
+        "core_job_security",
+        "core_skill_development",
+        "core_australian_nexus",
+        "core_aii_components",
+        "core_aava_revenue_costs",
+        "core_frv",
+        "core_capital_base",
+        "core_rates",
+        "core_credits",
+        "safe_harbour_revenue",
+        "safe_harbour_worker_assist",
+        "safe_harbour_low_nltg",
+        "safe_harbour_startup",
+        "safe_harbour_essential_service",
+        "avoid_token_oversight",
+        "avoid_fake_qlc",
+        "avoid_offshore_ai",
+        "avoid_related_party_fees",
+        "avoid_cloud_relabelling",
+        "avoid_robotics_leasing",
+        "avoid_entity_splitting",
+        "avoid_sector_classification",
+        "group_common_control",
+        "group_ip_owner",
+        "group_service_provider",
+        "group_customer_facing",
+        "group_employer",
+        "group_offshore_provider"
+      ],
+      "non_claims": [
+        "This is a prototype evidence assessment only. It is not legal, tax, Treasury, ATO, evidentiary, forensic, or audit validation.",
+        "Evidence requirements are draft scaffolding and are not final policy, law, guidance, or audit procedure.",
+        "Placeholder examples remain insufficient for real liability, calibration, or policy claims."
+      ],
+      "review_required": true,
+      "status": "placeholder_only",
+      "warnings": [
+        "Evidence assessment is prototype-only and does not validate any liability, legal position, tax position, or audit finding.",
+        "Evidence remains insufficient for real calibration, legal use, or actual tax-payable claims."
+      ]
+    },
     "evidence_labels": [
       "example.status=illustrative_placeholder",
       "example.placeholder_notice=Numbers are illustrative placeholders and are not Australian logistics data.",
@@ -344,7 +535,7 @@
   },
   "metadata": {
     "apportionment_scope_note": "This example currently uses the combined logistics_warehousing prototype schedule for all activity slices. It tests apportionment plumbing and share-validation logic, not final cross-sector schedule blending. True multi-schedule blending requires additional calibrated sector schedules.",
-    "generated_at": "2026-05-13T08:00:58+00:00",
+    "generated_at": "2026-05-13T08:32:02+00:00",
     "non_claims": [
       "Not legal grouping analysis.",
       "Not tax-law attribution.",

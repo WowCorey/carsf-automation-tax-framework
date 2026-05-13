@@ -9,7 +9,28 @@ from .aava import australian_automated_value_added
 from .aggregation import AggregationResult, EntityInput, evaluate_group_aggregation
 from .apportionment import ApportionmentActivity, ApportionmentResult, evaluate_apportionment
 from .avoidance import AvoidanceResult, evaluate_avoidance_risk
+from .calibration import (
+    CalibrationRegistry,
+    CalibrationRequirement,
+    get_calibration_registry,
+    list_requirements_by_component,
+    validate_no_fake_calibration_values,
+)
 from .coverage import coverage_measures, cars_i, coverage_ratio, format_coverage_ratio
+from .decision_log import (
+    DecisionLog,
+    DecisionLogEntry,
+    add_decision_entry,
+    create_decision_log,
+    summarise_decision_log,
+)
+from .evidence import (
+    EvidenceAssessment,
+    EvidenceItem,
+    EvidenceRequirement,
+    assess_evidence,
+    get_default_evidence_requirements,
+)
 from .example_runner import ExampleResult, ExampleRunnerError, run_all_examples, run_example
 from .frv import net_labour_tax_gap
 from .group_runner import GroupedPreviewResult, run_grouped_previews
@@ -53,8 +74,15 @@ __all__ = [
     "ApportionmentActivity",
     "ApportionmentResult",
     "AvoidanceResult",
+    "CalibrationRegistry",
+    "CalibrationRequirement",
     "CoverageResult",
+    "DecisionLog",
+    "DecisionLogEntry",
     "EntityInput",
+    "EvidenceAssessment",
+    "EvidenceItem",
+    "EvidenceRequirement",
     "ExampleResult",
     "ExampleRunnerError",
     "GroupedPreviewResult",
@@ -71,6 +99,8 @@ __all__ = [
     "TransferPricingScenarioResult",
     "UnitCompatibilityResult",
     "Worker",
+    "add_decision_entry",
+    "assess_evidence",
     "automation_equilibrium_levy",
     "automation_intensity_index",
     "automation_rent_levy",
@@ -79,6 +109,7 @@ __all__ = [
     "cars_i",
     "coverage_measures",
     "coverage_ratio",
+    "create_decision_log",
     "evaluate_apportionment",
     "evaluate_avoidance_risk",
     "evaluate_group_aggregation",
@@ -88,7 +119,10 @@ __all__ = [
     "evaluate_transfer_pricing_preview",
     "evaluate_unit_compatibility",
     "format_coverage_ratio",
+    "get_calibration_registry",
+    "get_default_evidence_requirements",
     "human_labour_equivalent",
+    "list_requirements_by_component",
     "net_labour_tax_gap",
     "output_per_fte_benchmark",
     "preview_adjusted_aava",
@@ -99,4 +133,6 @@ __all__ = [
     "run_grouped_previews",
     "run_example",
     "run_transfer_pricing_previews",
+    "summarise_decision_log",
+    "validate_no_fake_calibration_values",
 ]

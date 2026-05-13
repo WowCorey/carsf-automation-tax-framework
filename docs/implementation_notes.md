@@ -23,6 +23,10 @@ The Python model intentionally implements only concept-level formulas.
 - Adjusted AAVA is preview-only and does not mutate reported AAVA or replace any existing final liability calculation.
 - Mixed-unit handling lives in `model/carsf/mixed_units.py`; when canonical output units differ, direct output/HLE aggregation is prohibited.
 - Mixed-unit exposure may show standalone liability summation, schedule-level comparison, and a value-weighted exposure index. The index is not a tax base and is not a replacement for sector schedules.
+- Evidence requirements live in `model/carsf/evidence.py` and classify supplied evidence as sufficient, partial, insufficient, or placeholder-only without changing liability.
+- Decision-log helpers live in `model/carsf/decision_log.py` and record deterministic step summaries for review.
+- Calibration registry scaffolding lives in `model/carsf/calibration.py` and deliberately stores no real calibration values.
+- The data source registry lives in `data/source_registry.yaml`; no datasets are committed.
 - `scripts/run_examples.py` now writes grouped preview and transfer-pricing/mixed-unit reports as well as the original six-example reports.
 
 ## Not Implemented Yet
@@ -37,6 +41,9 @@ The Python model intentionally implements only concept-level formulas.
 - GST interaction.
 - Tax-law attribution for mixed activity firms.
 - Privacy-preserving disclosure schema.
+- Real evidence ingestion and confidence scoring.
+- Formal audit trail retention rules.
+- Calibration data access, ingestion, and update workflow.
 - Behavioural elasticity and deadweight-loss modelling.
 - Calibrated thresholds for safe-harbour, grouping, offshore attribution, and related-party review.
 
@@ -56,6 +63,10 @@ Then view:
 - `reports/grouped_entity_results.json`
 - `reports/transfer_pricing_results.md`
 - `reports/transfer_pricing_results.json`
+- `reports/evidence_requirements.md`
+- `reports/evidence_requirements.json`
+- `reports/calibration_requirements.md`
+- `reports/calibration_requirements.json`
 
 Run the simulator:
 
