@@ -27,11 +27,16 @@ st.warning(
     "This page shows prototype evidence requirements, decision-log summaries, and calibration dependencies. "
     "It is not legal, tax, Treasury, ATO, ABS, Fair Work, OECD, BEPS, audit, forensic, or economic validation."
 )
+st.info(
+    "Controlled mock evidence workflow reports can be generated with `python scripts/run_evidence_workflow.py`. "
+    "Those packets are synthetic mock evidence only and cannot create real-world sufficiency."
+)
 
 requirements = get_default_evidence_requirements()
 registry = get_calibration_registry()
 evidence_report = load_report(REPO_ROOT / "reports" / "evidence_requirements.json")
 calibration_report = load_report(REPO_ROOT / "reports" / "calibration_requirements.json")
+mock_workflow_report = load_report(REPO_ROOT / "reports" / "mock_evidence_workflow.json")
 
 st.markdown("### Evidence Requirements Overview")
 category_counts = {category: len(items) for category, items in requirements_by_category().items()}
@@ -66,6 +71,22 @@ st.write(
     "Decision logs record compact step summaries for evidence assessment, formula flow, review flags, "
     "transfer-pricing previews, and mixed-unit handling. They do not store raw records or create legal findings."
 )
+
+st.markdown("### Controlled Mock Evidence Workflow")
+if mock_workflow_report:
+    st.table(
+        [
+            {
+                "Packet": packet["summary"]["packet_id"],
+                "Linked Example": packet["summary"]["linked_example_id"],
+                "Evidence Status": packet["evidence_assessment"]["status"],
+                "Review Flags": ", ".join(packet["summary"]["review_flags"]) or "none",
+            }
+            for packet in mock_workflow_report.get("packets", [])
+        ]
+    )
+else:
+    st.info("Run `python scripts/run_evidence_workflow.py` to generate synthetic mock evidence workflow reports.")
 
 st.markdown("### Calibration Requirements")
 st.write(

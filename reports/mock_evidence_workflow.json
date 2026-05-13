@@ -1,0 +1,1214 @@
+{
+  "metadata": {
+    "generated_at": "2026-05-13T09:11:23+00:00",
+    "non_claims": [
+      "These packets are synthetic mock evidence only. They do not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.",
+      "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.",
+      "Mock evidence can support prototype workflow testing only; it cannot create real-world sufficiency."
+    ],
+    "status": "synthetic_mock_evidence_workflow_only",
+    "version": "CARSF V1.5 prototype"
+  },
+  "packets": [
+    {
+      "classification": {
+        "item_classifications": [
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "low",
+            "reason": "Prototype classification only.",
+            "review_required": true,
+            "secrecy_classification": "internal_research"
+          },
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "high",
+            "reason": "Transfer-pricing contracts and related-party records are high sensitivity in this prototype.",
+            "review_required": true,
+            "secrecy_classification": "confidential_placeholder"
+          },
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "low",
+            "reason": "Prototype classification only.",
+            "review_required": true,
+            "secrecy_classification": "internal_research"
+          },
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "low",
+            "reason": "Prototype classification only.",
+            "review_required": true,
+            "secrecy_classification": "internal_research"
+          },
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "low",
+            "reason": "Prototype classification only.",
+            "review_required": true,
+            "secrecy_classification": "internal_research"
+          },
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "low",
+            "reason": "Prototype classification only.",
+            "review_required": true,
+            "secrecy_classification": "internal_research"
+          },
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "moderate",
+            "reason": "Firm-level financial evidence is at least moderate/internal research.",
+            "review_required": true,
+            "secrecy_classification": "internal_research"
+          }
+        ],
+        "non_claims": [
+          "Prototype privacy/secrecy classification only; not legal, tax, ATO, Treasury, audit, forensic, or privacy validation."
+        ],
+        "packet_id": "ai_logistics_platform_mock_packet",
+        "privacy_classification": "high",
+        "review_required": true,
+        "secrecy_classification": "confidential_placeholder"
+      },
+      "evidence_assessment": {
+        "low_confidence_items": [
+          "ai_logistics_aava_inputs",
+          "ai_logistics_employer_entity"
+        ],
+        "missing_requirements": [
+          "core_output_value",
+          "core_output_unit",
+          "core_opfte_libc",
+          "core_worker_hours",
+          "core_wage_quality",
+          "core_job_security",
+          "core_skill_development",
+          "core_australian_nexus",
+          "core_aii_components",
+          "core_frv",
+          "core_capital_base",
+          "core_rates",
+          "core_credits",
+          "safe_harbour_worker_assist",
+          "safe_harbour_startup",
+          "avoid_token_oversight",
+          "avoid_fake_qlc",
+          "avoid_related_party_fees",
+          "avoid_cloud_relabelling",
+          "avoid_robotics_leasing",
+          "avoid_entity_splitting",
+          "avoid_sector_classification",
+          "group_common_control",
+          "group_service_provider",
+          "tp_service_fee_invoices",
+          "tp_royalty_licence",
+          "tp_cost_sharing",
+          "tp_cloud_inference",
+          "tp_robotics_leasing",
+          "tp_data_model_access",
+          "tp_management_technical"
+        ],
+        "non_claims": [
+          "This is a prototype evidence assessment only. It is not legal, tax, Treasury, ATO, evidentiary, forensic, or audit validation.",
+          "Evidence requirements are draft scaffolding and are not final policy, law, guidance, or audit procedure.",
+          "Placeholder examples remain insufficient for real liability, calibration, or policy claims."
+        ],
+        "review_required": true,
+        "status": "partial",
+        "warnings": [
+          "Evidence assessment is prototype-only and does not validate any liability, legal position, tax position, or audit finding.",
+          "Mock evidence can upgrade prototype status only; it does not create real-world sufficiency.",
+          "Evidence remains insufficient for real calibration, legal use, or actual tax-payable claims."
+        ]
+      },
+      "missing_evidence": [
+        "core_output_value",
+        "core_output_unit",
+        "core_opfte_libc",
+        "core_worker_hours",
+        "core_wage_quality",
+        "core_job_security",
+        "core_skill_development",
+        "core_australian_nexus",
+        "core_aii_components",
+        "core_frv",
+        "core_capital_base",
+        "core_rates",
+        "core_credits",
+        "safe_harbour_worker_assist",
+        "safe_harbour_startup",
+        "avoid_token_oversight",
+        "avoid_fake_qlc",
+        "avoid_related_party_fees",
+        "avoid_cloud_relabelling",
+        "avoid_robotics_leasing",
+        "avoid_entity_splitting",
+        "avoid_sector_classification",
+        "group_common_control",
+        "group_service_provider",
+        "tp_service_fee_invoices",
+        "tp_royalty_licence",
+        "tp_cost_sharing",
+        "tp_cloud_inference",
+        "tp_robotics_leasing",
+        "tp_data_model_access",
+        "tp_management_technical"
+      ],
+      "packet": {
+        "created_for": [
+          "core_formula",
+          "avoidance",
+          "grouping",
+          "transfer_pricing"
+        ],
+        "evidence_items": [
+          {
+            "confidence": "medium",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "ai_logistics_offshore_ai",
+            "limitations": [
+              "Does not validate cross-border attribution."
+            ],
+            "provided": true,
+            "requirement_id": "avoid_offshore_ai",
+            "source_description": "Synthetic offshore AI service record for prototype avoidance review.",
+            "source_type": "synthetic_service_record"
+          },
+          {
+            "confidence": "medium",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "ai_logistics_related_party",
+            "limitations": [
+              "Does not implement transfer-pricing law."
+            ],
+            "provided": true,
+            "requirement_id": "tp_related_party_agreements",
+            "source_description": "Synthetic related-party agreement placeholder for transfer-pricing review.",
+            "source_type": "synthetic_related_party_agreement"
+          },
+          {
+            "confidence": "medium",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "ai_logistics_platform_owner",
+            "limitations": [
+              "Grouping flag only."
+            ],
+            "provided": true,
+            "requirement_id": "group_ip_owner",
+            "source_description": "Synthetic group chart showing a platform and IP owner role.",
+            "source_type": "synthetic_group_chart"
+          },
+          {
+            "confidence": "medium",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "ai_logistics_customer_entity",
+            "limitations": [
+              "Review flag only."
+            ],
+            "provided": true,
+            "requirement_id": "group_customer_facing",
+            "source_description": "Synthetic group chart showing Australian customer-facing entity role.",
+            "source_type": "synthetic_group_chart"
+          },
+          {
+            "confidence": "low",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "ai_logistics_employer_entity",
+            "limitations": [
+              "Mock summary contains no personal records."
+            ],
+            "provided": true,
+            "requirement_id": "group_employer",
+            "source_description": "Synthetic summary showing a thin Australian employer entity.",
+            "source_type": "synthetic_employment_summary"
+          },
+          {
+            "confidence": "medium",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "ai_logistics_offshore_provider",
+            "limitations": [
+              "Review flag only."
+            ],
+            "provided": true,
+            "requirement_id": "group_offshore_provider",
+            "source_description": "Synthetic group chart showing offshore automation service provider role.",
+            "source_type": "synthetic_group_chart"
+          },
+          {
+            "confidence": "low",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "ai_logistics_aava_inputs",
+            "limitations": [
+              "No audited accounts are supplied."
+            ],
+            "provided": true,
+            "requirement_id": "core_aava_revenue_costs",
+            "source_description": "Synthetic firm-level financial summary where offshore service costs may suppress reported AAVA.",
+            "source_type": "synthetic_management_account"
+          }
+        ],
+        "linked_example_id": "logistics_ai_platform",
+        "metadata": {
+          "expected_outcome": "needs_tax_review_and_needs_legal_review",
+          "scenario_note": "AI logistics platform with offshore AI service, platform owner, and thin Australian employer entity."
+        },
+        "non_claims": [
+          "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim."
+        ],
+        "packet_id": "ai_logistics_platform_mock_packet",
+        "privacy_classification": "moderate",
+        "ready_for_external_review": false,
+        "review_state": "submitted_mock",
+        "secrecy_classification": "internal_research",
+        "synthetic_mock_evidence_only": true,
+        "tests_pass_marker": false,
+        "warnings": [
+          "Synthetic packet for high automation, offshore service, and grouping review workflow testing only."
+        ]
+      },
+      "packet_path": "data\\mock_evidence\\ai_logistics_platform_mock_packet.yaml",
+      "placeholder_to_submitted": {
+        "allowed": true,
+        "approved_state": "submitted_mock",
+        "non_claims": [
+          "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.",
+          "Review states are prototype workflow states only and do not imply real-world validation."
+        ],
+        "original_state": "placeholder_only",
+        "reasons": [
+          "Review workflow is prototype-only and does not validate real-world evidence.",
+          "Valid mock packet can move placeholder-only evidence into submitted_mock."
+        ],
+        "requested_state": "submitted_mock",
+        "warnings": [
+          "No review state may imply legal, tax, Treasury, ATO, audit, forensic, or economic validation."
+        ]
+      },
+      "summary": {
+        "item_count": 7,
+        "linked_example_id": "logistics_ai_platform",
+        "low_confidence_items": 2,
+        "missing_items": 0,
+        "non_claims": [
+          "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim."
+        ],
+        "packet_id": "ai_logistics_platform_mock_packet",
+        "partial_items": 2,
+        "privacy_classification": "high",
+        "ready_for_external_review": false,
+        "review_flags": [
+          "needs_legal_review",
+          "needs_privacy_review",
+          "needs_tax_review"
+        ],
+        "review_state": "submitted_mock",
+        "secrecy_classification": "confidential_placeholder",
+        "sufficient_items": 5,
+        "tests_pass_marker": false,
+        "warnings": [
+          "Synthetic packet for high automation, offshore service, and grouping review workflow testing only.",
+          "Prototype classification only."
+        ]
+      },
+      "target_transition": {
+        "allowed": true,
+        "approved_state": "needs_privacy_review",
+        "non_claims": [
+          "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.",
+          "Review states are prototype workflow states only and do not imply real-world validation."
+        ],
+        "original_state": "submitted_mock",
+        "reasons": [
+          "Review workflow is prototype-only and does not validate real-world evidence.",
+          "Manual review state is allowed as a prototype workflow flag."
+        ],
+        "requested_state": "needs_privacy_review",
+        "warnings": [
+          "No review state may imply legal, tax, Treasury, ATO, audit, forensic, or economic validation."
+        ]
+      }
+    },
+    {
+      "classification": {
+        "item_classifications": [
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "low",
+            "reason": "Prototype classification only.",
+            "review_required": true,
+            "secrecy_classification": "internal_research"
+          },
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "low",
+            "reason": "Prototype classification only.",
+            "review_required": true,
+            "secrecy_classification": "internal_research"
+          },
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "high",
+            "reason": "Worker-level wage/hour evidence is high sensitivity in this prototype.",
+            "review_required": true,
+            "secrecy_classification": "confidential_placeholder"
+          },
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "low",
+            "reason": "Prototype classification only.",
+            "review_required": true,
+            "secrecy_classification": "internal_research"
+          },
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "low",
+            "reason": "Prototype classification only.",
+            "review_required": true,
+            "secrecy_classification": "internal_research"
+          },
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "moderate",
+            "reason": "Firm-level financial evidence is at least moderate/internal research.",
+            "review_required": true,
+            "secrecy_classification": "internal_research"
+          },
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "high",
+            "reason": "Worker-level wage/hour evidence is high sensitivity in this prototype.",
+            "review_required": true,
+            "secrecy_classification": "confidential_placeholder"
+          },
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "low",
+            "reason": "Prototype classification only.",
+            "review_required": true,
+            "secrecy_classification": "internal_research"
+          }
+        ],
+        "non_claims": [
+          "Prototype privacy/secrecy classification only; not legal, tax, ATO, Treasury, audit, forensic, or privacy validation."
+        ],
+        "packet_id": "mechanic_ai_admin_mock_packet",
+        "privacy_classification": "high",
+        "review_required": true,
+        "secrecy_classification": "confidential_placeholder"
+      },
+      "evidence_assessment": {
+        "low_confidence_items": [
+          "mech_ai_admin_aava_inputs"
+        ],
+        "missing_requirements": [
+          "core_opfte_libc",
+          "core_wage_quality",
+          "core_job_security",
+          "core_skill_development",
+          "core_frv",
+          "core_capital_base",
+          "core_rates",
+          "core_credits",
+          "safe_harbour_revenue",
+          "safe_harbour_startup",
+          "safe_harbour_essential_service",
+          "avoid_token_oversight",
+          "avoid_fake_qlc",
+          "avoid_offshore_ai",
+          "avoid_related_party_fees",
+          "avoid_cloud_relabelling",
+          "avoid_robotics_leasing",
+          "avoid_entity_splitting",
+          "avoid_sector_classification"
+        ],
+        "non_claims": [
+          "This is a prototype evidence assessment only. It is not legal, tax, Treasury, ATO, evidentiary, forensic, or audit validation.",
+          "Evidence requirements are draft scaffolding and are not final policy, law, guidance, or audit procedure.",
+          "Placeholder examples remain insufficient for real liability, calibration, or policy claims."
+        ],
+        "review_required": true,
+        "status": "partial",
+        "warnings": [
+          "Evidence assessment is prototype-only and does not validate any liability, legal position, tax position, or audit finding.",
+          "Mock evidence can upgrade prototype status only; it does not create real-world sufficiency.",
+          "Evidence remains insufficient for real calibration, legal use, or actual tax-payable claims."
+        ]
+      },
+      "missing_evidence": [
+        "core_opfte_libc",
+        "core_wage_quality",
+        "core_job_security",
+        "core_skill_development",
+        "core_frv",
+        "core_capital_base",
+        "core_rates",
+        "core_credits",
+        "safe_harbour_revenue",
+        "safe_harbour_startup",
+        "safe_harbour_essential_service",
+        "avoid_token_oversight",
+        "avoid_fake_qlc",
+        "avoid_offshore_ai",
+        "avoid_related_party_fees",
+        "avoid_cloud_relabelling",
+        "avoid_robotics_leasing",
+        "avoid_entity_splitting",
+        "avoid_sector_classification"
+      ],
+      "packet": {
+        "created_for": [
+          "core_formula",
+          "safe_harbour",
+          "avoidance"
+        ],
+        "evidence_items": [
+          {
+            "confidence": "medium",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "mech_ai_admin_output_unit",
+            "limitations": [
+              "Mock source does not calibrate the automotive repair schedule."
+            ],
+            "provided": true,
+            "requirement_id": "core_output_unit",
+            "source_description": "Synthetic job-management extract showing book-hour equivalent repair jobs as the prototype output unit.",
+            "source_type": "synthetic_system_record"
+          },
+          {
+            "confidence": "medium",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "mech_ai_admin_output_value",
+            "limitations": [
+              "Placeholder quantity only."
+            ],
+            "provided": true,
+            "requirement_id": "core_output_value",
+            "source_description": "Synthetic repair-order count for prototype formula tracing.",
+            "source_type": "synthetic_system_record"
+          },
+          {
+            "confidence": "medium",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "mech_ai_admin_worker_hours",
+            "limitations": [
+              "Mock roster contains no personal records."
+            ],
+            "provided": true,
+            "requirement_id": "core_worker_hours",
+            "source_description": "Synthetic roster summary showing human repair labour remains substantial.",
+            "source_type": "synthetic_worker_roster"
+          },
+          {
+            "confidence": "medium",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "mech_ai_admin_australian_nexus",
+            "limitations": [
+              "Mock location evidence only."
+            ],
+            "provided": true,
+            "requirement_id": "core_australian_nexus",
+            "source_description": "Synthetic location summary for Australian nexus in the example.",
+            "source_type": "synthetic_location_summary"
+          },
+          {
+            "confidence": "medium",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "mech_ai_admin_aii_components",
+            "limitations": [
+              "Does not validate final AII weights."
+            ],
+            "provided": true,
+            "requirement_id": "core_aii_components",
+            "source_description": "Synthetic workflow classification showing AI used for booking, invoicing, compliance, customer support, and diagnostic support.",
+            "source_type": "synthetic_workflow_log"
+          },
+          {
+            "confidence": "low",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "mech_ai_admin_aava_inputs",
+            "limitations": [
+              "No audited accounts are supplied."
+            ],
+            "provided": true,
+            "requirement_id": "core_aava_revenue_costs",
+            "source_description": "Synthetic firm-level financial summary for placeholder AAVA inputs.",
+            "source_type": "synthetic_management_account"
+          },
+          {
+            "confidence": "medium",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "mech_ai_admin_worker_assist",
+            "limitations": [
+              "Prototype classification only."
+            ],
+            "provided": true,
+            "requirement_id": "safe_harbour_worker_assist",
+            "source_description": "Synthetic record supporting worker-assist/admin AI treatment rather than labour-substituting robotics.",
+            "source_type": "synthetic_workflow_record"
+          },
+          {
+            "confidence": "medium",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "mech_ai_admin_low_nltg",
+            "limitations": [
+              "NLTG result remains illustrative only."
+            ],
+            "provided": true,
+            "requirement_id": "safe_harbour_low_nltg",
+            "source_description": "Synthetic output trace showing low NLTG under placeholder assumptions.",
+            "source_type": "synthetic_model_output"
+          }
+        ],
+        "linked_example_id": "mechanic_ai_admin",
+        "metadata": {
+          "expected_outcome": "partial_or_sufficient_for_prototype",
+          "scenario_note": "Worker-assist and admin AI use with human repair labour remaining substantial."
+        },
+        "non_claims": [
+          "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim."
+        ],
+        "packet_id": "mechanic_ai_admin_mock_packet",
+        "privacy_classification": "moderate",
+        "ready_for_external_review": false,
+        "review_state": "submitted_mock",
+        "secrecy_classification": "internal_research",
+        "synthetic_mock_evidence_only": true,
+        "tests_pass_marker": false,
+        "warnings": [
+          "Synthetic packet for workflow testing only; no actual business evidence is included."
+        ]
+      },
+      "packet_path": "data\\mock_evidence\\mechanic_ai_admin_mock_packet.yaml",
+      "placeholder_to_submitted": {
+        "allowed": true,
+        "approved_state": "submitted_mock",
+        "non_claims": [
+          "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.",
+          "Review states are prototype workflow states only and do not imply real-world validation."
+        ],
+        "original_state": "placeholder_only",
+        "reasons": [
+          "Review workflow is prototype-only and does not validate real-world evidence.",
+          "Valid mock packet can move placeholder-only evidence into submitted_mock."
+        ],
+        "requested_state": "submitted_mock",
+        "warnings": [
+          "No review state may imply legal, tax, Treasury, ATO, audit, forensic, or economic validation."
+        ]
+      },
+      "summary": {
+        "item_count": 8,
+        "linked_example_id": "mechanic_ai_admin",
+        "low_confidence_items": 1,
+        "missing_items": 0,
+        "non_claims": [
+          "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim."
+        ],
+        "packet_id": "mechanic_ai_admin_mock_packet",
+        "partial_items": 1,
+        "privacy_classification": "high",
+        "ready_for_external_review": false,
+        "review_flags": [
+          "needs_privacy_review"
+        ],
+        "review_state": "submitted_mock",
+        "secrecy_classification": "confidential_placeholder",
+        "sufficient_items": 7,
+        "tests_pass_marker": false,
+        "warnings": [
+          "Synthetic packet for workflow testing only; no actual business evidence is included.",
+          "Prototype classification only."
+        ]
+      },
+      "target_transition": {
+        "allowed": true,
+        "approved_state": "needs_privacy_review",
+        "non_claims": [
+          "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.",
+          "Review states are prototype workflow states only and do not imply real-world validation."
+        ],
+        "original_state": "submitted_mock",
+        "reasons": [
+          "Review workflow is prototype-only and does not validate real-world evidence.",
+          "Manual review state is allowed as a prototype workflow flag."
+        ],
+        "requested_state": "needs_privacy_review",
+        "warnings": [
+          "No review state may imply legal, tax, Treasury, ATO, audit, forensic, or economic validation."
+        ]
+      }
+    },
+    {
+      "classification": {
+        "item_classifications": [
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "low",
+            "reason": "Prototype classification only.",
+            "review_required": true,
+            "secrecy_classification": "internal_research"
+          },
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "high",
+            "reason": "Worker-level wage/hour evidence is high sensitivity in this prototype.",
+            "review_required": true,
+            "secrecy_classification": "confidential_placeholder"
+          },
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "low",
+            "reason": "Prototype classification only.",
+            "review_required": true,
+            "secrecy_classification": "internal_research"
+          },
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "low",
+            "reason": "Prototype classification only.",
+            "review_required": true,
+            "secrecy_classification": "internal_research"
+          },
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "moderate",
+            "reason": "Firm-level financial evidence is at least moderate/internal research.",
+            "review_required": true,
+            "secrecy_classification": "internal_research"
+          }
+        ],
+        "non_claims": [
+          "Prototype privacy/secrecy classification only; not legal, tax, ATO, Treasury, audit, forensic, or privacy validation."
+        ],
+        "packet_id": "mechanic_robotic_review_packet",
+        "privacy_classification": "high",
+        "review_required": true,
+        "secrecy_classification": "confidential_placeholder"
+      },
+      "evidence_assessment": {
+        "low_confidence_items": [
+          "mech_robotic_aava_inputs"
+        ],
+        "missing_requirements": [
+          "core_output_value",
+          "core_output_unit",
+          "core_opfte_libc",
+          "core_wage_quality",
+          "core_job_security",
+          "core_skill_development",
+          "core_australian_nexus",
+          "core_frv",
+          "core_capital_base",
+          "core_rates",
+          "core_credits",
+          "safe_harbour_worker_assist",
+          "avoid_fake_qlc",
+          "avoid_offshore_ai",
+          "avoid_related_party_fees",
+          "avoid_cloud_relabelling",
+          "avoid_robotics_leasing",
+          "avoid_entity_splitting",
+          "avoid_sector_classification",
+          "group_ip_owner",
+          "group_offshore_provider",
+          "tp_related_party_agreements",
+          "tp_service_fee_invoices",
+          "tp_royalty_licence",
+          "tp_cost_sharing",
+          "tp_cloud_inference",
+          "tp_data_model_access",
+          "tp_management_technical"
+        ],
+        "non_claims": [
+          "This is a prototype evidence assessment only. It is not legal, tax, Treasury, ATO, evidentiary, forensic, or audit validation.",
+          "Evidence requirements are draft scaffolding and are not final policy, law, guidance, or audit procedure.",
+          "Placeholder examples remain insufficient for real liability, calibration, or policy claims."
+        ],
+        "review_required": true,
+        "status": "partial",
+        "warnings": [
+          "Evidence assessment is prototype-only and does not validate any liability, legal position, tax position, or audit finding.",
+          "Mock evidence can upgrade prototype status only; it does not create real-world sufficiency.",
+          "Evidence remains insufficient for real calibration, legal use, or actual tax-payable claims."
+        ]
+      },
+      "missing_evidence": [
+        "core_output_value",
+        "core_output_unit",
+        "core_opfte_libc",
+        "core_wage_quality",
+        "core_job_security",
+        "core_skill_development",
+        "core_australian_nexus",
+        "core_frv",
+        "core_capital_base",
+        "core_rates",
+        "core_credits",
+        "safe_harbour_worker_assist",
+        "avoid_fake_qlc",
+        "avoid_offshore_ai",
+        "avoid_related_party_fees",
+        "avoid_cloud_relabelling",
+        "avoid_robotics_leasing",
+        "avoid_entity_splitting",
+        "avoid_sector_classification",
+        "group_ip_owner",
+        "group_offshore_provider",
+        "tp_related_party_agreements",
+        "tp_service_fee_invoices",
+        "tp_royalty_licence",
+        "tp_cost_sharing",
+        "tp_cloud_inference",
+        "tp_data_model_access",
+        "tp_management_technical"
+      ],
+      "packet": {
+        "created_for": [
+          "core_formula",
+          "avoidance",
+          "transfer_pricing"
+        ],
+        "evidence_items": [
+          {
+            "confidence": "medium",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "mech_robotic_robotics_automation",
+            "limitations": [
+              "Does not calibrate robotics weights."
+            ],
+            "provided": true,
+            "requirement_id": "core_aii_components",
+            "source_description": "Synthetic equipment log showing high robotics and process automation indicators.",
+            "source_type": "synthetic_equipment_log"
+          },
+          {
+            "confidence": "medium",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "mech_robotic_low_qlc",
+            "limitations": [
+              "Mock staffing summary contains no personal records."
+            ],
+            "provided": true,
+            "requirement_id": "core_worker_hours",
+            "source_description": "Synthetic staffing summary showing low human labour relative to output.",
+            "source_type": "synthetic_staffing_summary"
+          },
+          {
+            "confidence": "medium",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "mech_robotic_token_oversight",
+            "limitations": [
+              "Review flag only; not a legal finding."
+            ],
+            "provided": true,
+            "requirement_id": "avoid_token_oversight",
+            "source_description": "Synthetic review note flagging token human oversight and nominal supervision.",
+            "source_type": "synthetic_review_note"
+          },
+          {
+            "confidence": "medium",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "mech_robotic_robotics_lease",
+            "limitations": [
+              "Non-operative review preview only."
+            ],
+            "provided": true,
+            "requirement_id": "tp_robotics_leasing",
+            "source_description": "Synthetic robotics leasing agreement placeholder for tax-sensitive review.",
+            "source_type": "synthetic_related_party_agreement"
+          },
+          {
+            "confidence": "low",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "mech_robotic_aava_inputs",
+            "limitations": [
+              "No audited accounts are supplied."
+            ],
+            "provided": true,
+            "requirement_id": "core_aava_revenue_costs",
+            "source_description": "Synthetic firm-level financial summary with low reported AAVA under lease-cost assumptions.",
+            "source_type": "synthetic_management_account"
+          }
+        ],
+        "linked_example_id": "mechanic_robotic",
+        "metadata": {
+          "expected_outcome": "needs_tax_review_or_partial",
+          "scenario_note": "Robotics-heavy repair shop with low QLC and capital lease review issues."
+        },
+        "non_claims": [
+          "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim."
+        ],
+        "packet_id": "mechanic_robotic_review_packet",
+        "privacy_classification": "moderate",
+        "ready_for_external_review": false,
+        "review_state": "submitted_mock",
+        "secrecy_classification": "internal_research",
+        "synthetic_mock_evidence_only": true,
+        "tests_pass_marker": false,
+        "warnings": [
+          "Synthetic packet for robotics-heavy review workflow testing only."
+        ]
+      },
+      "packet_path": "data\\mock_evidence\\mechanic_robotic_review_packet.yaml",
+      "placeholder_to_submitted": {
+        "allowed": true,
+        "approved_state": "submitted_mock",
+        "non_claims": [
+          "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.",
+          "Review states are prototype workflow states only and do not imply real-world validation."
+        ],
+        "original_state": "placeholder_only",
+        "reasons": [
+          "Review workflow is prototype-only and does not validate real-world evidence.",
+          "Valid mock packet can move placeholder-only evidence into submitted_mock."
+        ],
+        "requested_state": "submitted_mock",
+        "warnings": [
+          "No review state may imply legal, tax, Treasury, ATO, audit, forensic, or economic validation."
+        ]
+      },
+      "summary": {
+        "item_count": 5,
+        "linked_example_id": "mechanic_robotic",
+        "low_confidence_items": 1,
+        "missing_items": 0,
+        "non_claims": [
+          "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim."
+        ],
+        "packet_id": "mechanic_robotic_review_packet",
+        "partial_items": 1,
+        "privacy_classification": "high",
+        "ready_for_external_review": false,
+        "review_flags": [
+          "needs_legal_review",
+          "needs_privacy_review",
+          "needs_tax_review"
+        ],
+        "review_state": "submitted_mock",
+        "secrecy_classification": "confidential_placeholder",
+        "sufficient_items": 4,
+        "tests_pass_marker": false,
+        "warnings": [
+          "Synthetic packet for robotics-heavy review workflow testing only.",
+          "Prototype classification only."
+        ]
+      },
+      "target_transition": {
+        "allowed": true,
+        "approved_state": "needs_privacy_review",
+        "non_claims": [
+          "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.",
+          "Review states are prototype workflow states only and do not imply real-world validation."
+        ],
+        "original_state": "submitted_mock",
+        "reasons": [
+          "Review workflow is prototype-only and does not validate real-world evidence.",
+          "Manual review state is allowed as a prototype workflow flag."
+        ],
+        "requested_state": "needs_privacy_review",
+        "warnings": [
+          "No review state may imply legal, tax, Treasury, ATO, audit, forensic, or economic validation."
+        ]
+      }
+    },
+    {
+      "classification": {
+        "item_classifications": [
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "low",
+            "reason": "Prototype classification only.",
+            "review_required": true,
+            "secrecy_classification": "internal_research"
+          },
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "low",
+            "reason": "Prototype classification only.",
+            "review_required": true,
+            "secrecy_classification": "internal_research"
+          },
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "moderate",
+            "reason": "Firm-level financial evidence is at least moderate/internal research.",
+            "review_required": true,
+            "secrecy_classification": "internal_research"
+          },
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "low",
+            "reason": "Prototype classification only.",
+            "review_required": true,
+            "secrecy_classification": "internal_research"
+          },
+          {
+            "non_claims": [
+              "Prototype classification only; no legal, tax, audit, or privacy validation."
+            ],
+            "privacy_classification": "low",
+            "reason": "Prototype classification only.",
+            "review_required": true,
+            "secrecy_classification": "internal_research"
+          }
+        ],
+        "non_claims": [
+          "Prototype privacy/secrecy classification only; not legal, tax, ATO, Treasury, audit, forensic, or privacy validation."
+        ],
+        "packet_id": "mixed_unit_platform_mock_packet",
+        "privacy_classification": "moderate",
+        "review_required": false,
+        "secrecy_classification": "internal_research"
+      },
+      "evidence_assessment": {
+        "low_confidence_items": [
+          "mixed_unit_activity_shares",
+          "mixed_unit_revenue_basis"
+        ],
+        "missing_requirements": [
+          "core_output_value",
+          "core_output_unit",
+          "core_opfte_libc",
+          "core_australian_nexus",
+          "core_frv",
+          "core_rates",
+          "safe_harbour_startup",
+          "avoid_entity_splitting",
+          "avoid_sector_classification",
+          "group_common_control",
+          "group_ip_owner",
+          "group_service_provider",
+          "group_customer_facing",
+          "group_employer",
+          "group_offshore_provider",
+          "mixed_conversion_metadata"
+        ],
+        "non_claims": [
+          "This is a prototype evidence assessment only. It is not legal, tax, Treasury, ATO, evidentiary, forensic, or audit validation.",
+          "Evidence requirements are draft scaffolding and are not final policy, law, guidance, or audit procedure.",
+          "Placeholder examples remain insufficient for real liability, calibration, or policy claims."
+        ],
+        "review_required": true,
+        "status": "partial",
+        "warnings": [
+          "Evidence assessment is prototype-only and does not validate any liability, legal position, tax position, or audit finding.",
+          "Mock evidence can upgrade prototype status only; it does not create real-world sufficiency.",
+          "Evidence remains insufficient for real calibration, legal use, or actual tax-payable claims."
+        ]
+      },
+      "missing_evidence": [
+        "core_output_value",
+        "core_output_unit",
+        "core_opfte_libc",
+        "core_australian_nexus",
+        "core_frv",
+        "core_rates",
+        "safe_harbour_startup",
+        "avoid_entity_splitting",
+        "avoid_sector_classification",
+        "group_common_control",
+        "group_ip_owner",
+        "group_service_provider",
+        "group_customer_facing",
+        "group_employer",
+        "group_offshore_provider",
+        "mixed_conversion_metadata"
+      ],
+      "packet": {
+        "created_for": [
+          "mixed_units",
+          "grouping",
+          "calibration"
+        ],
+        "evidence_items": [
+          {
+            "confidence": "medium",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "mixed_unit_units",
+            "limitations": [
+              "Does not create a conversion factor."
+            ],
+            "provided": true,
+            "requirement_id": "mixed_unit_evidence",
+            "source_description": "Synthetic schedule mapping showing logistics, digital platform, and repair/admin output units.",
+            "source_type": "synthetic_schedule_mapping"
+          },
+          {
+            "confidence": "low",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "mixed_unit_activity_shares",
+            "limitations": [
+              "Not calibrated against audited records."
+            ],
+            "provided": true,
+            "requirement_id": "mixed_activity_shares",
+            "source_description": "Synthetic activity-share basis for mixed operations.",
+            "source_type": "synthetic_management_account"
+          },
+          {
+            "confidence": "low",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "mixed_unit_revenue_basis",
+            "limitations": [
+              "No audited accounts are supplied."
+            ],
+            "provided": true,
+            "requirement_id": "mixed_revenue_aava_basis",
+            "source_description": "Synthetic revenue and AAVA share basis for standalone comparison.",
+            "source_type": "synthetic_financial_summary"
+          },
+          {
+            "confidence": "medium",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "mixed_unit_schedule_classification",
+            "limitations": [
+              "Does not resolve final schedule attribution."
+            ],
+            "provided": true,
+            "requirement_id": "mixed_schedule_classification",
+            "source_description": "Synthetic schedule classification notes for prototype-only mixed activity review.",
+            "source_type": "synthetic_policy_mapping"
+          },
+          {
+            "confidence": "low",
+            "date_or_period": "synthetic 2026 period",
+            "evidence_id": "mixed_unit_conversion_gap",
+            "limitations": [
+              "Direct output aggregation remains prohibited."
+            ],
+            "provided": false,
+            "requirement_id": "mixed_conversion_metadata",
+            "source_description": "Synthetic note that true conversion metadata is unavailable.",
+            "source_type": "synthetic_gap_note"
+          }
+        ],
+        "linked_example_id": "mixed_unit_platform_group",
+        "metadata": {
+          "expected_outcome": "partial_needs_calibration",
+          "scenario_note": "Mixed canonical output units with conversion metadata limitations."
+        },
+        "non_claims": [
+          "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim."
+        ],
+        "packet_id": "mixed_unit_platform_mock_packet",
+        "privacy_classification": "moderate",
+        "ready_for_external_review": false,
+        "review_state": "submitted_mock",
+        "secrecy_classification": "internal_research",
+        "synthetic_mock_evidence_only": true,
+        "tests_pass_marker": false,
+        "warnings": [
+          "Synthetic packet for mixed canonical output unit workflow testing only."
+        ]
+      },
+      "packet_path": "data\\mock_evidence\\mixed_unit_platform_mock_packet.yaml",
+      "placeholder_to_submitted": {
+        "allowed": true,
+        "approved_state": "submitted_mock",
+        "non_claims": [
+          "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.",
+          "Review states are prototype workflow states only and do not imply real-world validation."
+        ],
+        "original_state": "placeholder_only",
+        "reasons": [
+          "Review workflow is prototype-only and does not validate real-world evidence.",
+          "Valid mock packet can move placeholder-only evidence into submitted_mock."
+        ],
+        "requested_state": "submitted_mock",
+        "warnings": [
+          "No review state may imply legal, tax, Treasury, ATO, audit, forensic, or economic validation."
+        ]
+      },
+      "summary": {
+        "item_count": 5,
+        "linked_example_id": "mixed_unit_platform_group",
+        "low_confidence_items": 2,
+        "missing_items": 1,
+        "non_claims": [
+          "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim."
+        ],
+        "packet_id": "mixed_unit_platform_mock_packet",
+        "partial_items": 2,
+        "privacy_classification": "moderate",
+        "ready_for_external_review": false,
+        "review_flags": [
+          "needs_calibration"
+        ],
+        "review_state": "submitted_mock",
+        "secrecy_classification": "internal_research",
+        "sufficient_items": 2,
+        "tests_pass_marker": false,
+        "warnings": [
+          "Synthetic packet for mixed canonical output unit workflow testing only.",
+          "Prototype classification only."
+        ]
+      },
+      "target_transition": {
+        "allowed": true,
+        "approved_state": "needs_calibration",
+        "non_claims": [
+          "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.",
+          "Review states are prototype workflow states only and do not imply real-world validation."
+        ],
+        "original_state": "submitted_mock",
+        "reasons": [
+          "Review workflow is prototype-only and does not validate real-world evidence.",
+          "Manual review state is allowed as a prototype workflow flag."
+        ],
+        "requested_state": "needs_calibration",
+        "warnings": [
+          "No review state may imply legal, tax, Treasury, ATO, audit, forensic, or economic validation."
+        ]
+      }
+    }
+  ]
+}

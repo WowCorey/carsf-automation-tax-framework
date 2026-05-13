@@ -1,0 +1,63 @@
+packet_id: mechanic_robotic_review_packet
+linked_example_id: mechanic_robotic
+synthetic_mock_evidence_only: true
+created_for:
+  - core_formula
+  - avoidance
+  - transfer_pricing
+privacy_classification: moderate
+secrecy_classification: internal_research
+review_state: submitted_mock
+ready_for_external_review: false
+tests_pass_marker: false
+warnings:
+  - Synthetic packet for robotics-heavy review workflow testing only.
+metadata:
+  expected_outcome: needs_tax_review_or_partial
+  scenario_note: Robotics-heavy repair shop with low QLC and capital lease review issues.
+evidence_items:
+  - evidence_id: mech_robotic_robotics_automation
+    requirement_id: core_aii_components
+    source_type: synthetic_equipment_log
+    source_description: Synthetic equipment log showing high robotics and process automation indicators.
+    confidence: medium
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - Does not calibrate robotics weights.
+  - evidence_id: mech_robotic_low_qlc
+    requirement_id: core_worker_hours
+    source_type: synthetic_staffing_summary
+    source_description: Synthetic staffing summary showing low human labour relative to output.
+    confidence: medium
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - Mock staffing summary contains no personal records.
+  - evidence_id: mech_robotic_token_oversight
+    requirement_id: avoid_token_oversight
+    source_type: synthetic_review_note
+    source_description: Synthetic review note flagging token human oversight and nominal supervision.
+    confidence: medium
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - Review flag only; not a legal finding.
+  - evidence_id: mech_robotic_robotics_lease
+    requirement_id: tp_robotics_leasing
+    source_type: synthetic_related_party_agreement
+    source_description: Synthetic robotics leasing agreement placeholder for tax-sensitive review.
+    confidence: medium
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - Non-operative review preview only.
+  - evidence_id: mech_robotic_aava_inputs
+    requirement_id: core_aava_revenue_costs
+    source_type: synthetic_management_account
+    source_description: Synthetic firm-level financial summary with low reported AAVA under lease-cost assumptions.
+    confidence: low
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - No audited accounts are supplied.

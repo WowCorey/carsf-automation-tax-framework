@@ -1,0 +1,63 @@
+packet_id: mixed_unit_platform_mock_packet
+linked_example_id: mixed_unit_platform_group
+synthetic_mock_evidence_only: true
+created_for:
+  - mixed_units
+  - grouping
+  - calibration
+privacy_classification: moderate
+secrecy_classification: internal_research
+review_state: submitted_mock
+ready_for_external_review: false
+tests_pass_marker: false
+warnings:
+  - Synthetic packet for mixed canonical output unit workflow testing only.
+metadata:
+  expected_outcome: partial_needs_calibration
+  scenario_note: Mixed canonical output units with conversion metadata limitations.
+evidence_items:
+  - evidence_id: mixed_unit_units
+    requirement_id: mixed_unit_evidence
+    source_type: synthetic_schedule_mapping
+    source_description: Synthetic schedule mapping showing logistics, digital platform, and repair/admin output units.
+    confidence: medium
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - Does not create a conversion factor.
+  - evidence_id: mixed_unit_activity_shares
+    requirement_id: mixed_activity_shares
+    source_type: synthetic_management_account
+    source_description: Synthetic activity-share basis for mixed operations.
+    confidence: low
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - Not calibrated against audited records.
+  - evidence_id: mixed_unit_revenue_basis
+    requirement_id: mixed_revenue_aava_basis
+    source_type: synthetic_financial_summary
+    source_description: Synthetic revenue and AAVA share basis for standalone comparison.
+    confidence: low
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - No audited accounts are supplied.
+  - evidence_id: mixed_unit_schedule_classification
+    requirement_id: mixed_schedule_classification
+    source_type: synthetic_policy_mapping
+    source_description: Synthetic schedule classification notes for prototype-only mixed activity review.
+    confidence: medium
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - Does not resolve final schedule attribution.
+  - evidence_id: mixed_unit_conversion_gap
+    requirement_id: mixed_conversion_metadata
+    source_type: synthetic_gap_note
+    source_description: Synthetic note that true conversion metadata is unavailable.
+    confidence: low
+    provided: false
+    date_or_period: synthetic 2026 period
+    limitations:
+      - Direct output aggregation remains prohibited.

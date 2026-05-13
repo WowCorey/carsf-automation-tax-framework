@@ -1,6 +1,6 @@
 # CARSF V1.5 Evidence Requirements Report
 
-Generated at: `2026-05-13T08:32:02+00:00`
+Generated at: `2026-05-13T09:11:15+00:00`
 
 ## A. Purpose
 
@@ -109,3 +109,11 @@ This report defines prototype evidence requirements for model inputs, review fla
 ## I. Future Review Needs
 
 - Legal, tax, privacy, economic, Treasury/ATO-style, and sector-specific review before any external use.
+
+## J. Controlled Mock Evidence Workflow
+
+Synthetic mock evidence packets can be generated and reviewed with `python scripts/run_evidence_workflow.py`.
+
+- Markdown report: `reports/mock_evidence_workflow.md`
+- JSON report: `reports/mock_evidence_workflow.json`
+- Mock evidence can support prototype workflow testing only; it cannot create real-world sufficiency.

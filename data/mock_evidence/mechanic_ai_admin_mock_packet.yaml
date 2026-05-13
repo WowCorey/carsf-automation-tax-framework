@@ -1,0 +1,90 @@
+packet_id: mechanic_ai_admin_mock_packet
+linked_example_id: mechanic_ai_admin
+synthetic_mock_evidence_only: true
+created_for:
+  - core_formula
+  - safe_harbour
+  - avoidance
+privacy_classification: moderate
+secrecy_classification: internal_research
+review_state: submitted_mock
+ready_for_external_review: false
+tests_pass_marker: false
+warnings:
+  - Synthetic packet for workflow testing only; no actual business evidence is included.
+metadata:
+  expected_outcome: partial_or_sufficient_for_prototype
+  scenario_note: Worker-assist and admin AI use with human repair labour remaining substantial.
+evidence_items:
+  - evidence_id: mech_ai_admin_output_unit
+    requirement_id: core_output_unit
+    source_type: synthetic_system_record
+    source_description: Synthetic job-management extract showing book-hour equivalent repair jobs as the prototype output unit.
+    confidence: medium
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - Mock source does not calibrate the automotive repair schedule.
+  - evidence_id: mech_ai_admin_output_value
+    requirement_id: core_output_value
+    source_type: synthetic_system_record
+    source_description: Synthetic repair-order count for prototype formula tracing.
+    confidence: medium
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - Placeholder quantity only.
+  - evidence_id: mech_ai_admin_worker_hours
+    requirement_id: core_worker_hours
+    source_type: synthetic_worker_roster
+    source_description: Synthetic roster summary showing human repair labour remains substantial.
+    confidence: medium
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - Mock roster contains no personal records.
+  - evidence_id: mech_ai_admin_australian_nexus
+    requirement_id: core_australian_nexus
+    source_type: synthetic_location_summary
+    source_description: Synthetic location summary for Australian nexus in the example.
+    confidence: medium
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - Mock location evidence only.
+  - evidence_id: mech_ai_admin_aii_components
+    requirement_id: core_aii_components
+    source_type: synthetic_workflow_log
+    source_description: Synthetic workflow classification showing AI used for booking, invoicing, compliance, customer support, and diagnostic support.
+    confidence: medium
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - Does not validate final AII weights.
+  - evidence_id: mech_ai_admin_aava_inputs
+    requirement_id: core_aava_revenue_costs
+    source_type: synthetic_management_account
+    source_description: Synthetic firm-level financial summary for placeholder AAVA inputs.
+    confidence: low
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - No audited accounts are supplied.
+  - evidence_id: mech_ai_admin_worker_assist
+    requirement_id: safe_harbour_worker_assist
+    source_type: synthetic_workflow_record
+    source_description: Synthetic record supporting worker-assist/admin AI treatment rather than labour-substituting robotics.
+    confidence: medium
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - Prototype classification only.
+  - evidence_id: mech_ai_admin_low_nltg
+    requirement_id: safe_harbour_low_nltg
+    source_type: synthetic_model_output
+    source_description: Synthetic output trace showing low NLTG under placeholder assumptions.
+    confidence: medium
+    provided: true
+    date_or_period: synthetic 2026 period
+    limitations:
+      - NLTG result remains illustrative only.

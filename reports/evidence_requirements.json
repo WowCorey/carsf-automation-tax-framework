@@ -1,4 +1,10 @@
 {
+  "controlled_mock_evidence_workflow": {
+    "non_claim": "Mock evidence can support prototype workflow testing only; it cannot create real-world sufficiency.",
+    "report_json": "reports/mock_evidence_workflow.json",
+    "report_markdown": "reports/mock_evidence_workflow.md",
+    "status": "synthetic_mock_evidence_workflow_only"
+  },
   "example_evidence_summary": [
     {
       "low_confidence_count": 0,
@@ -58,7 +64,7 @@
     "transfer_pricing"
   ],
   "metadata": {
-    "generated_at": "2026-05-13T08:32:02+00:00",
+    "generated_at": "2026-05-13T09:11:15+00:00",
     "non_claims": [
       "This is a prototype evidence assessment only. It is not legal, tax, Treasury, ATO, evidentiary, forensic, or audit validation.",
       "Evidence reports do not validate liability or calibration."
