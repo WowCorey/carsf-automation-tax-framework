@@ -27,7 +27,7 @@ jobs:
         run: python -m pytest
 
       - name: Compile Python modules
-        run: python -m compileall -q model simulator
+        run: python -m compileall -q model simulator scripts
 
       - name: Parse YAML schedules and examples
         run: |
@@ -40,3 +40,6 @@ jobs:
                   yaml.safe_load(path.read_text(encoding="utf-8"))
                   print(f"parsed {path}")
           PY
+
+      - name: Run worked examples
+        run: python scripts/run_examples.py

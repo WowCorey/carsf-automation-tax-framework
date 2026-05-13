@@ -34,6 +34,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 
 - Automotive and logistics prototype schedules exist.
 - Six illustrative examples calculate through the Python engine.
+- End-to-end example reports can be generated with `python scripts/run_examples.py`.
 - Tests prove cap, bounds, zero handling, and avoidance metadata.
 - V1.5 working paper contains TODO markers where policy drafting remains open.
 - Limitations document clearly blocks actual tax-payable claims.

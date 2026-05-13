@@ -11,6 +11,7 @@ The Python model intentionally implements only concept-level formulas.
 - ARL uses "PRRT-inspired uplift logic" and is not a full PRRT model.
 - CoverageRatio is `None` when measured fiscal damage is zero, so UI can display `N/A - no measured damage` instead of implying 100% coverage.
 - CARS-I uses epsilon to avoid divide-by-zero when captured revenue is zero.
+- The end-to-end example runner uses the same formula modules as the simulator and writes illustrative reports to `reports/example_results.md` and `reports/example_results.json`.
 
 ## Not Implemented Yet
 
@@ -22,3 +23,22 @@ The Python model intentionally implements only concept-level formulas.
 - International tax treaty logic.
 - Privacy-preserving disclosure schema.
 - Behavioural elasticity and deadweight-loss modelling.
+
+## Example Runner
+
+Run from the repository root:
+
+```powershell
+python scripts/run_examples.py
+```
+
+Then view:
+
+- `reports/example_results.md`
+- `reports/example_results.json`
+
+Run the simulator:
+
+```powershell
+python -m streamlit run simulator/app.py
+```

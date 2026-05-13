@@ -1,0 +1,930 @@
+{
+  "examples": [
+    {
+      "business_description": "Traditional suburban automotive repair workshop with human mechanics and low automation.",
+      "evidence_labels": [
+        "example.status=illustrative_placeholder",
+        "example.placeholder_notice=Numbers are illustrative placeholders and are not Australian industry data.",
+        "schedule.status=placeholder_prototype_for_v1_5",
+        "schedule.calibration_status=illustrative_placeholder_values_only",
+        "schedule.opfte_libc.evidence_label=illustrative_placeholder",
+        "schedule.frv.evidence_label=illustrative_placeholder"
+      ],
+      "formula_trace": [
+        "QLC = sum capped worker QLC = 5.8791",
+        "OPFTE_LIBC = schedule placeholder benchmark = 900.0000",
+        "HLE = output / OPFTE_LIBC = 4.6667",
+        "AII = weighted bounded automation components = 0.0205",
+        "NLTG = max(0, HLE * AII - QLC) = 0.0000",
+        "AAVA = revenue - non-automation costs - QLC wage costs = 70000.00",
+        "AEL raw = NLTG * FRV standard = 0.00",
+        "AEL payable = min(AEL raw, lambda_sector * AAVA) = 0.00",
+        "Shortfall = AEL raw - AEL payable = 0.00",
+        "ARL = PRRT-inspired uplift logic result = 0.00",
+        "Credits = capped verified credits = 0.00",
+        "Final liability = capped combined liability = 0.00"
+      ],
+      "id": "mechanic_traditional",
+      "inputs": {
+        "aava_inputs": {
+          "australian_attributable_revenue": 850000.0,
+          "verified_non_automation_input_costs": 420000.0,
+          "verified_qlc_wage_cost": 360000.0
+        },
+        "automation_components": {
+          "auto_decision_ratio": 0.02,
+          "auto_process_share": 0.03,
+          "compute_ratio": 0.03,
+          "robotics_capital_ratio": 0.01
+        },
+        "capital_base": 180000.0,
+        "credits": {
+          "verified_credits": 15000.0
+        },
+        "output": {
+          "unit": "book_hour_equivalent_jobs_completed",
+          "value": 4200.0
+        },
+        "schedule_placeholders": {
+          "caps": {
+            "ael_capacity_cap_rate": 0.18,
+            "combined_liability_cap_rate": 0.25,
+            "credit_cap_rate": 0.6,
+            "rent_tax_rate": 0.2,
+            "uplift_rate": 1.12
+          },
+          "frv": {
+            "evidence_label": "illustrative_placeholder",
+            "floor_placeholder": 25000.0,
+            "full_placeholder": 85000.0,
+            "standard_placeholder": 45000.0
+          },
+          "opfte_libc_placeholder": {
+            "evidence_label": "illustrative_placeholder",
+            "unit": "book_hour_equivalent_jobs_completed_per_qualified_fte",
+            "value": 900.0
+          }
+        },
+        "workers": [
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.8,
+            "role": "senior_mechanic",
+            "skill_development": 0.6,
+            "wage_quality": 0.7
+          },
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.75,
+            "role": "mechanic",
+            "skill_development": 0.55,
+            "wage_quality": 0.62
+          },
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.75,
+            "role": "mechanic",
+            "skill_development": 0.55,
+            "wage_quality": 0.62
+          },
+          {
+            "annual_hours": 1600,
+            "australian_nexus": 1.0,
+            "job_security": 0.7,
+            "role": "apprentice",
+            "skill_development": 0.9,
+            "wage_quality": 0.5
+          },
+          {
+            "annual_hours": 1500,
+            "australian_nexus": 1.0,
+            "job_security": 0.7,
+            "role": "admin",
+            "skill_development": 0.4,
+            "wage_quality": 0.55
+          }
+        ]
+      },
+      "interpretation": "Traditional mechanic shop: high human labour contribution and low automation intensity produce low or zero NLTG. This illustrative case should not be treated as automation-heavy.",
+      "limitation_notes": [
+        "Numbers are illustrative placeholders and are not Australian industry data.",
+        "Schedule values are not calibrated.",
+        "AAVA deductibility remains a prototype taxonomy.",
+        "Safe harbour, entity grouping, related-party, and international tax logic are not executable in this runner."
+      ],
+      "name": "Mechanic Traditional",
+      "outputs": {
+        "aava": 70000.0,
+        "ael_payable": 0.0,
+        "ael_raw": 0.0,
+        "aii": 0.020499999999999997,
+        "arl": 0.0,
+        "cars_i": null,
+        "coverage_ratio": null,
+        "coverage_ratio_display": "N/A - no national monitoring inputs",
+        "credits": 0.0,
+        "hle": 4.666666666666667,
+        "liability": 0.0,
+        "nltg": 0.0,
+        "opfte_libc": 900.0,
+        "qlc": 5.8791208791208796,
+        "shortfall": 0.0
+      },
+      "red_team_notes": {
+        "flags": [],
+        "notes": [
+          "Serves as the human-heavy comparator."
+        ]
+      },
+      "schedule": "automotive_repair",
+      "sector": "Prototype Schedule A - Automotive Repair",
+      "warnings": [
+        "Illustrative placeholder output only.",
+        "Do not use this result to estimate real tax payable.",
+        "No legal, tax, Treasury, ATO, or economic validation is implied.",
+        "Coverage metrics not calculated because this example has no national monitoring inputs."
+      ]
+    },
+    {
+      "business_description": "Human workshop using AI for booking, invoicing, reminders, and diagnostic support with mechanics still doing repair work.",
+      "evidence_labels": [
+        "example.status=illustrative_placeholder",
+        "example.placeholder_notice=Numbers are illustrative placeholders and are not Australian industry data.",
+        "schedule.status=placeholder_prototype_for_v1_5",
+        "schedule.calibration_status=illustrative_placeholder_values_only",
+        "schedule.opfte_libc.evidence_label=illustrative_placeholder",
+        "schedule.frv.evidence_label=illustrative_placeholder"
+      ],
+      "formula_trace": [
+        "QLC = sum capped worker QLC = 4.8489",
+        "OPFTE_LIBC = schedule placeholder benchmark = 900.0000",
+        "HLE = output / OPFTE_LIBC = 5.3333",
+        "AII = weighted bounded automation components = 0.1100",
+        "NLTG = max(0, HLE * AII - QLC) = 0.0000",
+        "AAVA = revenue - non-automation costs - QLC wage costs = 170000.00",
+        "AEL raw = NLTG * FRV standard = 0.00",
+        "AEL payable = min(AEL raw, lambda_sector * AAVA) = 0.00",
+        "Shortfall = AEL raw - AEL payable = 0.00",
+        "ARL = PRRT-inspired uplift logic result = 0.00",
+        "Credits = capped verified credits = 0.00",
+        "Final liability = capped combined liability = 0.00"
+      ],
+      "id": "mechanic_ai_admin",
+      "inputs": {
+        "aava_inputs": {
+          "australian_attributable_revenue": 940000.0,
+          "verified_non_automation_input_costs": 440000.0,
+          "verified_qlc_wage_cost": 330000.0
+        },
+        "automation_components": {
+          "auto_decision_ratio": 0.18,
+          "auto_process_share": 0.16,
+          "compute_ratio": 0.12,
+          "robotics_capital_ratio": 0.02
+        },
+        "capital_base": 220000.0,
+        "credits": {
+          "verified_credits": 22000.0
+        },
+        "output": {
+          "unit": "book_hour_equivalent_jobs_completed",
+          "value": 4800.0
+        },
+        "schedule_placeholders": {
+          "caps": {
+            "ael_capacity_cap_rate": 0.18,
+            "combined_liability_cap_rate": 0.25,
+            "credit_cap_rate": 0.6,
+            "rent_tax_rate": 0.2,
+            "uplift_rate": 1.12
+          },
+          "frv": {
+            "evidence_label": "illustrative_placeholder",
+            "floor_placeholder": 25000.0,
+            "full_placeholder": 85000.0,
+            "standard_placeholder": 45000.0
+          },
+          "opfte_libc_placeholder": {
+            "evidence_label": "illustrative_placeholder",
+            "unit": "book_hour_equivalent_jobs_completed_per_qualified_fte",
+            "value": 900.0
+          }
+        },
+        "workers": [
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.8,
+            "role": "senior_mechanic",
+            "skill_development": 0.65,
+            "wage_quality": 0.72
+          },
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.75,
+            "role": "mechanic",
+            "skill_development": 0.6,
+            "wage_quality": 0.64
+          },
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.75,
+            "role": "mechanic",
+            "skill_development": 0.6,
+            "wage_quality": 0.64
+          },
+          {
+            "annual_hours": 1600,
+            "australian_nexus": 1.0,
+            "job_security": 0.7,
+            "role": "apprentice",
+            "skill_development": 0.95,
+            "wage_quality": 0.5
+          }
+        ]
+      },
+      "interpretation": "AI-admin mechanic shop: AI is mainly supporting booking, compliance, customer support, and diagnostics while humans still perform core repair work. The low NLTG relative to the robotic shop illustrates the distinction between worker-assist/admin AI and labour-substituting robotics.",
+      "limitation_notes": [
+        "Numbers are illustrative placeholders and are not Australian industry data.",
+        "Schedule values are not calibrated.",
+        "AAVA deductibility remains a prototype taxonomy.",
+        "Safe harbour, entity grouping, related-party, and international tax logic are not executable in this runner."
+      ],
+      "name": "Mechanic Ai Admin",
+      "outputs": {
+        "aava": 170000.0,
+        "ael_payable": 0.0,
+        "ael_raw": 0.0,
+        "aii": 0.11000000000000001,
+        "arl": 0.0,
+        "cars_i": null,
+        "coverage_ratio": null,
+        "coverage_ratio_display": "N/A - no national monitoring inputs",
+        "credits": 0.0,
+        "hle": 5.333333333333333,
+        "liability": 0.0,
+        "nltg": 0.0,
+        "opfte_libc": 900.0,
+        "qlc": 4.8489010989010985,
+        "shortfall": 0.0
+      },
+      "red_team_notes": {
+        "flags": [],
+        "notes": [
+          "Tests the worker-assist concession boundary."
+        ]
+      },
+      "schedule": "automotive_repair",
+      "sector": "Prototype Schedule A - Automotive Repair",
+      "warnings": [
+        "Illustrative placeholder output only.",
+        "Do not use this result to estimate real tax payable.",
+        "No legal, tax, Treasury, ATO, or economic validation is implied.",
+        "Coverage metrics not calculated because this example has no national monitoring inputs."
+      ]
+    },
+    {
+      "business_description": "Highly automated repair facility using robotic inspection, automated quoting, and limited human supervision.",
+      "evidence_labels": [
+        "example.status=illustrative_placeholder",
+        "example.placeholder_notice=Numbers are illustrative placeholders and are not Australian industry data.",
+        "schedule.status=placeholder_prototype_for_v1_5",
+        "schedule.calibration_status=illustrative_placeholder_values_only",
+        "schedule.opfte_libc.evidence_label=illustrative_placeholder",
+        "schedule.frv.evidence_label=illustrative_placeholder"
+      ],
+      "formula_trace": [
+        "QLC = sum capped worker QLC = 1.7308",
+        "OPFTE_LIBC = schedule placeholder benchmark = 900.0000",
+        "HLE = output / OPFTE_LIBC = 8.0000",
+        "AII = weighted bounded automation components = 0.8090",
+        "NLTG = max(0, HLE * AII - QLC) = 4.7412",
+        "AAVA = revenue - non-automation costs - QLC wage costs = 880000.00",
+        "AEL raw = NLTG * FRV standard = 213355.38",
+        "AEL payable = min(AEL raw, lambda_sector * AAVA) = 158400.00",
+        "Shortfall = AEL raw - AEL payable = 54955.38",
+        "ARL = PRRT-inspired uplift logic result = 0.00",
+        "Credits = capped verified credits = 10000.00",
+        "Final liability = capped combined liability = 148400.00"
+      ],
+      "id": "mechanic_robotic",
+      "inputs": {
+        "aava_inputs": {
+          "australian_attributable_revenue": 1550000.0,
+          "verified_non_automation_input_costs": 520000.0,
+          "verified_qlc_wage_cost": 150000.0
+        },
+        "automation_components": {
+          "auto_decision_ratio": 0.78,
+          "auto_process_share": 0.82,
+          "compute_ratio": 0.58,
+          "robotics_capital_ratio": 0.92
+        },
+        "capital_base": 900000.0,
+        "credits": {
+          "verified_credits": 10000.0
+        },
+        "output": {
+          "unit": "book_hour_equivalent_jobs_completed",
+          "value": 7200.0
+        },
+        "schedule_placeholders": {
+          "caps": {
+            "ael_capacity_cap_rate": 0.18,
+            "combined_liability_cap_rate": 0.25,
+            "credit_cap_rate": 0.6,
+            "rent_tax_rate": 0.2,
+            "uplift_rate": 1.12
+          },
+          "frv": {
+            "evidence_label": "illustrative_placeholder",
+            "floor_placeholder": 25000.0,
+            "full_placeholder": 85000.0,
+            "standard_placeholder": 45000.0
+          },
+          "opfte_libc_placeholder": {
+            "evidence_label": "illustrative_placeholder",
+            "unit": "book_hour_equivalent_jobs_completed_per_qualified_fte",
+            "value": 900.0
+          }
+        },
+        "workers": [
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.7,
+            "role": "supervising_mechanic",
+            "skill_development": 0.6,
+            "wage_quality": 0.75
+          },
+          {
+            "annual_hours": 700,
+            "australian_nexus": 1.0,
+            "job_security": 0.5,
+            "role": "technician",
+            "skill_development": 0.4,
+            "wage_quality": 0.6
+          }
+        ]
+      },
+      "interpretation": "Fully robotic mechanic shop: high automation intensity and low QLC relative to output create a materially higher NLTG than the traditional shop. The result is a stronger liability or recorded shortfall signal in this prototype.",
+      "limitation_notes": [
+        "Numbers are illustrative placeholders and are not Australian industry data.",
+        "Schedule values are not calibrated.",
+        "AAVA deductibility remains a prototype taxonomy.",
+        "Safe harbour, entity grouping, related-party, and international tax logic are not executable in this runner."
+      ],
+      "name": "Mechanic Robotic",
+      "outputs": {
+        "aava": 880000.0,
+        "ael_payable": 158400.0,
+        "ael_raw": 213355.38461538462,
+        "aii": 0.809,
+        "arl": 0.0,
+        "cars_i": null,
+        "coverage_ratio": null,
+        "coverage_ratio_display": "N/A - no national monitoring inputs",
+        "credits": 10000.0,
+        "hle": 8.0,
+        "liability": 148400.0,
+        "nltg": 4.74123076923077,
+        "opfte_libc": 900.0,
+        "qlc": 1.7307692307692308,
+        "shortfall": 54955.384615384624
+      },
+      "red_team_notes": {
+        "flags": [
+          "token_human_oversight_jobs",
+          "fake_qlc_inflation"
+        ],
+        "notes": [
+          "Tests whether nominal supervision roles are enough to suppress NLTG."
+        ]
+      },
+      "schedule": "automotive_repair",
+      "sector": "Prototype Schedule A - Automotive Repair",
+      "warnings": [
+        "Illustrative placeholder output only.",
+        "Do not use this result to estimate real tax payable.",
+        "No legal, tax, Treasury, ATO, or economic validation is implied.",
+        "Coverage metrics not calculated because this example has no national monitoring inputs."
+      ]
+    },
+    {
+      "business_description": "Human-heavy logistics operator with drivers, dispatchers, and warehouse workers.",
+      "evidence_labels": [
+        "example.status=illustrative_placeholder",
+        "example.placeholder_notice=Numbers are illustrative placeholders and are not Australian logistics data.",
+        "schedule.status=placeholder_prototype_for_v1_5",
+        "schedule.calibration_status=illustrative_placeholder_values_only",
+        "schedule.opfte_libc.evidence_label=illustrative_placeholder",
+        "schedule.frv.evidence_label=illustrative_placeholder"
+      ],
+      "formula_trace": [
+        "QLC = sum capped worker QLC = 11.0989",
+        "OPFTE_LIBC = schedule placeholder benchmark = 100000.0000",
+        "HLE = output / OPFTE_LIBC = 9.0000",
+        "AII = weighted bounded automation components = 0.0470",
+        "NLTG = max(0, HLE * AII - QLC) = 0.0000",
+        "AAVA = revenue - non-automation costs - QLC wage costs = 150000.00",
+        "AEL raw = NLTG * FRV standard = 0.00",
+        "AEL payable = min(AEL raw, lambda_sector * AAVA) = 0.00",
+        "Shortfall = AEL raw - AEL payable = 0.00",
+        "ARL = PRRT-inspired uplift logic result = 0.00",
+        "Credits = capped verified credits = 0.00",
+        "Final liability = capped combined liability = 0.00"
+      ],
+      "id": "logistics_human_heavy",
+      "inputs": {
+        "aava_inputs": {
+          "australian_attributable_revenue": 2100000.0,
+          "verified_non_automation_input_costs": 1300000.0,
+          "verified_qlc_wage_cost": 650000.0
+        },
+        "automation_components": {
+          "auto_decision_ratio": 0.05,
+          "auto_process_share": 0.06,
+          "compute_ratio": 0.05,
+          "robotics_capital_ratio": 0.02
+        },
+        "capital_base": 600000.0,
+        "credits": {
+          "verified_credits": 30000.0
+        },
+        "output": {
+          "unit": "tonne_kilometres_or_pallet_movements",
+          "value": 900000.0
+        },
+        "schedule_placeholders": {
+          "caps": {
+            "ael_capacity_cap_rate": 0.2,
+            "combined_liability_cap_rate": 0.27,
+            "credit_cap_rate": 0.6,
+            "rent_tax_rate": 0.22,
+            "uplift_rate": 1.12
+          },
+          "frv": {
+            "evidence_label": "illustrative_placeholder",
+            "floor_placeholder": 26000.0,
+            "full_placeholder": 90000.0,
+            "standard_placeholder": 47000.0
+          },
+          "opfte_libc_placeholder": {
+            "evidence_label": "illustrative_placeholder",
+            "unit": "tonne_kilometres_or_pallet_movements_per_qualified_fte",
+            "value": 100000.0
+          }
+        },
+        "workers": [
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.7,
+            "role": "driver",
+            "skill_development": 0.45,
+            "wage_quality": 0.62
+          },
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.7,
+            "role": "driver",
+            "skill_development": 0.45,
+            "wage_quality": 0.62
+          },
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.7,
+            "role": "driver",
+            "skill_development": 0.45,
+            "wage_quality": 0.62
+          },
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.7,
+            "role": "driver",
+            "skill_development": 0.45,
+            "wage_quality": 0.62
+          },
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.68,
+            "role": "warehouse_worker",
+            "skill_development": 0.45,
+            "wage_quality": 0.58
+          },
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.68,
+            "role": "warehouse_worker",
+            "skill_development": 0.45,
+            "wage_quality": 0.58
+          },
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.72,
+            "role": "dispatcher",
+            "skill_development": 0.55,
+            "wage_quality": 0.65
+          },
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.72,
+            "role": "dispatcher",
+            "skill_development": 0.55,
+            "wage_quality": 0.65
+          },
+          {
+            "annual_hours": 1600,
+            "australian_nexus": 1.0,
+            "job_security": 0.65,
+            "role": "admin",
+            "skill_development": 0.35,
+            "wage_quality": 0.55
+          }
+        ]
+      },
+      "interpretation": "Human-heavy logistics company: a larger human workforce and lower automation intensity produce lower NLTG than the automated logistics examples.",
+      "limitation_notes": [
+        "Numbers are illustrative placeholders and are not Australian logistics data.",
+        "Schedule values are not calibrated.",
+        "AAVA deductibility remains a prototype taxonomy.",
+        "Safe harbour, entity grouping, related-party, and international tax logic are not executable in this runner."
+      ],
+      "name": "Logistics Human Heavy",
+      "outputs": {
+        "aava": 150000.0,
+        "ael_payable": 0.0,
+        "ael_raw": 0.0,
+        "aii": 0.047,
+        "arl": 0.0,
+        "cars_i": null,
+        "coverage_ratio": null,
+        "coverage_ratio_display": "N/A - no national monitoring inputs",
+        "credits": 0.0,
+        "hle": 9.0,
+        "liability": 0.0,
+        "nltg": 0.0,
+        "opfte_libc": 100000.0,
+        "qlc": 11.098901098901099,
+        "shortfall": 0.0
+      },
+      "red_team_notes": {
+        "flags": [],
+        "notes": [
+          "Human-heavy comparator for logistics schedule."
+        ]
+      },
+      "schedule": "logistics_warehousing",
+      "sector": "Prototype Schedule B - Logistics / Warehousing",
+      "warnings": [
+        "Illustrative placeholder output only.",
+        "Do not use this result to estimate real tax payable.",
+        "No legal, tax, Treasury, ATO, or economic validation is implied.",
+        "Coverage metrics not calculated because this example has no national monitoring inputs."
+      ]
+    },
+    {
+      "business_description": "Logistics operator using route optimisation and warehouse scanning while retaining substantial human driving and warehouse labour.",
+      "evidence_labels": [
+        "example.status=illustrative_placeholder",
+        "example.placeholder_notice=Numbers are illustrative placeholders and are not Australian logistics data.",
+        "schedule.status=placeholder_prototype_for_v1_5",
+        "schedule.calibration_status=illustrative_placeholder_values_only",
+        "schedule.opfte_libc.evidence_label=illustrative_placeholder",
+        "schedule.frv.evidence_label=illustrative_placeholder"
+      ],
+      "formula_trace": [
+        "QLC = sum capped worker QLC = 11.0989",
+        "OPFTE_LIBC = schedule placeholder benchmark = 100000.0000",
+        "HLE = output / OPFTE_LIBC = 20.0000",
+        "AII = weighted bounded automation components = 0.2690",
+        "NLTG = max(0, HLE * AII - QLC) = 0.0000",
+        "AAVA = revenue - non-automation costs - QLC wage costs = 800000.00",
+        "AEL raw = NLTG * FRV standard = 0.00",
+        "AEL payable = min(AEL raw, lambda_sector * AAVA) = 0.00",
+        "Shortfall = AEL raw - AEL payable = 0.00",
+        "ARL = PRRT-inspired uplift logic result = 0.00",
+        "Credits = capped verified credits = 0.00",
+        "Final liability = capped combined liability = 0.00"
+      ],
+      "id": "logistics_hybrid",
+      "inputs": {
+        "aava_inputs": {
+          "australian_attributable_revenue": 4200000.0,
+          "verified_non_automation_input_costs": 2500000.0,
+          "verified_qlc_wage_cost": 900000.0
+        },
+        "automation_components": {
+          "auto_decision_ratio": 0.35,
+          "auto_process_share": 0.28,
+          "compute_ratio": 0.22,
+          "robotics_capital_ratio": 0.18
+        },
+        "capital_base": 1600000.0,
+        "credits": {
+          "verified_credits": 65000.0
+        },
+        "output": {
+          "unit": "tonne_kilometres_or_pallet_movements",
+          "value": 2000000.0
+        },
+        "schedule_placeholders": {
+          "caps": {
+            "ael_capacity_cap_rate": 0.2,
+            "combined_liability_cap_rate": 0.27,
+            "credit_cap_rate": 0.6,
+            "rent_tax_rate": 0.22,
+            "uplift_rate": 1.12
+          },
+          "frv": {
+            "evidence_label": "illustrative_placeholder",
+            "floor_placeholder": 26000.0,
+            "full_placeholder": 90000.0,
+            "standard_placeholder": 47000.0
+          },
+          "opfte_libc_placeholder": {
+            "evidence_label": "illustrative_placeholder",
+            "unit": "tonne_kilometres_or_pallet_movements_per_qualified_fte",
+            "value": 100000.0
+          }
+        },
+        "workers": [
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.72,
+            "role": "driver",
+            "skill_development": 0.5,
+            "wage_quality": 0.64
+          },
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.72,
+            "role": "driver",
+            "skill_development": 0.5,
+            "wage_quality": 0.64
+          },
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.72,
+            "role": "driver",
+            "skill_development": 0.5,
+            "wage_quality": 0.64
+          },
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.72,
+            "role": "driver",
+            "skill_development": 0.5,
+            "wage_quality": 0.64
+          },
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.7,
+            "role": "warehouse_worker",
+            "skill_development": 0.5,
+            "wage_quality": 0.6
+          },
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.7,
+            "role": "warehouse_worker",
+            "skill_development": 0.5,
+            "wage_quality": 0.6
+          },
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.72,
+            "role": "dispatcher",
+            "skill_development": 0.6,
+            "wage_quality": 0.66
+          },
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.75,
+            "role": "systems_operator",
+            "skill_development": 0.75,
+            "wage_quality": 0.7
+          },
+          {
+            "annual_hours": 1600,
+            "australian_nexus": 1.0,
+            "job_security": 0.68,
+            "role": "apprentice",
+            "skill_development": 0.9,
+            "wage_quality": 0.5
+          }
+        ]
+      },
+      "interpretation": "Hybrid logistics company: mixed human and automated output creates middle-band results in the placeholder set. It should not behave like the thin-labour AI platform stress case.",
+      "limitation_notes": [
+        "Numbers are illustrative placeholders and are not Australian logistics data.",
+        "Schedule values are not calibrated.",
+        "AAVA deductibility remains a prototype taxonomy.",
+        "Safe harbour, entity grouping, related-party, and international tax logic are not executable in this runner."
+      ],
+      "name": "Logistics Hybrid",
+      "outputs": {
+        "aava": 800000.0,
+        "ael_payable": 0.0,
+        "ael_raw": 0.0,
+        "aii": 0.269,
+        "arl": 0.0,
+        "cars_i": null,
+        "coverage_ratio": null,
+        "coverage_ratio_display": "N/A - no national monitoring inputs",
+        "credits": 0.0,
+        "hle": 20.0,
+        "liability": 0.0,
+        "nltg": 0.0,
+        "opfte_libc": 100000.0,
+        "qlc": 11.098901098901099,
+        "shortfall": 0.0
+      },
+      "red_team_notes": {
+        "flags": [],
+        "notes": [
+          "Tests useful productivity where QLC remains substantial."
+        ]
+      },
+      "schedule": "logistics_warehousing",
+      "sector": "Prototype Schedule B - Logistics / Warehousing",
+      "warnings": [
+        "Illustrative placeholder output only.",
+        "Do not use this result to estimate real tax payable.",
+        "No legal, tax, Treasury, ATO, or economic validation is implied.",
+        "Coverage metrics not calculated because this example has no national monitoring inputs."
+      ]
+    },
+    {
+      "business_description": "AI logistics platform using automated dispatch, offshore optimisation services, and contracted fulfilment with thin Australian QLC.",
+      "evidence_labels": [
+        "example.status=illustrative_placeholder",
+        "example.placeholder_notice=Numbers are illustrative placeholders and are not Australian logistics data.",
+        "schedule.status=placeholder_prototype_for_v1_5",
+        "schedule.calibration_status=illustrative_placeholder_values_only",
+        "schedule.opfte_libc.evidence_label=illustrative_placeholder",
+        "schedule.frv.evidence_label=illustrative_placeholder"
+      ],
+      "formula_trace": [
+        "QLC = sum capped worker QLC = 3.3242",
+        "OPFTE_LIBC = schedule placeholder benchmark = 100000.0000",
+        "HLE = output / OPFTE_LIBC = 40.0000",
+        "AII = weighted bounded automation components = 0.7320",
+        "NLTG = max(0, HLE * AII - QLC) = 25.9558",
+        "AAVA = revenue - non-automation costs - QLC wage costs = 3840000.00",
+        "AEL raw = NLTG * FRV standard = 1219923.74",
+        "AEL payable = min(AEL raw, lambda_sector * AAVA) = 768000.00",
+        "Shortfall = AEL raw - AEL payable = 451923.74",
+        "ARL = PRRT-inspired uplift logic result = 204160.00",
+        "Credits = capped verified credits = 50000.00",
+        "Final liability = capped combined liability = 922160.00"
+      ],
+      "id": "logistics_ai_platform",
+      "inputs": {
+        "aava_inputs": {
+          "australian_attributable_revenue": 8500000.0,
+          "verified_non_automation_input_costs": 4300000.0,
+          "verified_qlc_wage_cost": 360000.0
+        },
+        "automation_components": {
+          "auto_decision_ratio": 0.88,
+          "auto_process_share": 0.86,
+          "compute_ratio": 0.7,
+          "robotics_capital_ratio": 0.35
+        },
+        "capital_base": 2600000.0,
+        "credits": {
+          "verified_credits": 50000.0
+        },
+        "output": {
+          "unit": "tonne_kilometres_or_pallet_movements",
+          "value": 4000000.0
+        },
+        "schedule_placeholders": {
+          "caps": {
+            "ael_capacity_cap_rate": 0.2,
+            "combined_liability_cap_rate": 0.27,
+            "credit_cap_rate": 0.6,
+            "rent_tax_rate": 0.22,
+            "uplift_rate": 1.12
+          },
+          "frv": {
+            "evidence_label": "illustrative_placeholder",
+            "floor_placeholder": 26000.0,
+            "full_placeholder": 90000.0,
+            "standard_placeholder": 47000.0
+          },
+          "opfte_libc_placeholder": {
+            "evidence_label": "illustrative_placeholder",
+            "unit": "tonne_kilometres_or_pallet_movements_per_qualified_fte",
+            "value": 100000.0
+          }
+        },
+        "workers": [
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.75,
+            "role": "country_manager",
+            "skill_development": 0.55,
+            "wage_quality": 0.78
+          },
+          {
+            "annual_hours": 1820,
+            "australian_nexus": 1.0,
+            "job_security": 0.65,
+            "role": "operations_specialist",
+            "skill_development": 0.6,
+            "wage_quality": 0.7
+          },
+          {
+            "annual_hours": 1200,
+            "australian_nexus": 1.0,
+            "job_security": 0.55,
+            "role": "compliance_admin",
+            "skill_development": 0.35,
+            "wage_quality": 0.6
+          }
+        ]
+      },
+      "interpretation": "AI logistics platform: high automated productive capacity and low QLC relative to output create the strongest stress case among the six examples.",
+      "limitation_notes": [
+        "Numbers are illustrative placeholders and are not Australian logistics data.",
+        "Schedule values are not calibrated.",
+        "AAVA deductibility remains a prototype taxonomy.",
+        "Safe harbour, entity grouping, related-party, and international tax logic are not executable in this runner."
+      ],
+      "name": "Logistics Ai Platform",
+      "outputs": {
+        "aava": 3840000.0,
+        "ael_payable": 768000.0,
+        "ael_raw": 1219923.7362637364,
+        "aii": 0.732,
+        "arl": 204159.9999999999,
+        "cars_i": null,
+        "coverage_ratio": null,
+        "coverage_ratio_display": "N/A - no national monitoring inputs",
+        "credits": 50000.0,
+        "hle": 40.0,
+        "liability": 922159.9999999999,
+        "nltg": 25.955824175824176,
+        "opfte_libc": 100000.0,
+        "qlc": 3.324175824175824,
+        "shortfall": 451923.7362637364
+      },
+      "red_team_notes": {
+        "flags": [
+          "entity_splitting_safe_harbour",
+          "offshore_automation_service",
+          "related_party_ai_service_fees",
+          "sector_classification_arbitrage"
+        ],
+        "notes": [
+          "Tests grouped-entity aggregation for safe-harbour avoidance.",
+          "Tests destination and activity attribution for offshore automation services."
+        ]
+      },
+      "schedule": "logistics_warehousing",
+      "sector": "Prototype Schedule B - Logistics / Warehousing",
+      "warnings": [
+        "Illustrative placeholder output only.",
+        "Do not use this result to estimate real tax payable.",
+        "No legal, tax, Treasury, ATO, or economic validation is implied.",
+        "Coverage metrics not calculated because this example has no national monitoring inputs."
+      ]
+    }
+  ],
+  "metadata": {
+    "generated_at": "2026-05-13T06:05:40+00:00",
+    "non_claims": [
+      "Not legal advice.",
+      "Not tax advice.",
+      "Not Treasury or ATO guidance.",
+      "Not economic validation.",
+      "Not a real tax-payable calculation.",
+      "All outputs use illustrative placeholder values unless explicitly labelled otherwise."
+    ],
+    "status": "illustrative_placeholder_outputs_only",
+    "version": "CARSF V1.5 prototype"
+  }
+}
