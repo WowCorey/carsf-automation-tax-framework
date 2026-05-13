@@ -57,6 +57,14 @@ from .mixed_units import (
 )
 from .qlc import qualified_labour_contribution_firm, qualified_labour_contribution_worker
 from .redaction import RedactionPlan, create_redaction_plan
+from .repo_guardrails import (
+    RepoGuardrailPolicy,
+    RepoScanFinding,
+    RepoScanResult,
+    get_default_repo_guardrail_policy,
+    scan_file,
+    scan_repo,
+)
 from .retention import AccessControlPolicy, RetentionPolicy, get_access_control_policy, get_retention_policy
 from .review_workflow import ReviewTransition, ReviewWorkflowResult, evaluate_review_transition
 from .safe_harbour import SafeHarbourResult, evaluate_safe_harbour
@@ -121,6 +129,9 @@ __all__ = [
     "QLCWeights",
     "RelatedPartyTransaction",
     "RedactionPlan",
+    "RepoGuardrailPolicy",
+    "RepoScanFinding",
+    "RepoScanResult",
     "ReviewTransition",
     "ReviewWorkflowResult",
     "RetentionPolicy",
@@ -161,6 +172,7 @@ __all__ = [
     "get_calibration_registry",
     "get_default_evidence_requirements",
     "get_default_ingestion_policy",
+    "get_default_repo_guardrail_policy",
     "get_retention_policy",
     "human_labour_equivalent",
     "list_requirements_by_component",
@@ -176,6 +188,8 @@ __all__ = [
     "run_example",
     "run_transfer_pricing_previews",
     "scan_mapping_for_sensitive_markers",
+    "scan_file",
+    "scan_repo",
     "scan_text_for_sensitive_markers",
     "summarise_decision_log",
     "summarise_evidence_packet",

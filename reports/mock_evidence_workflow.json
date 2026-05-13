@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-05-13T09:38:46+00:00",
+    "generated_at": "2026-05-13T10:04:04+00:00",
     "non_claims": [
       "These packets are synthetic mock evidence only. They do not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.",
       "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.",
@@ -174,104 +174,14 @@
         "tp_data_model_access",
         "tp_management_technical"
       ],
-      "packet": {
+      "packet_metadata": {
         "created_for": [
           "core_formula",
           "avoidance",
           "grouping",
           "transfer_pricing"
         ],
-        "evidence_items": [
-          {
-            "confidence": "medium",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "ai_logistics_offshore_ai",
-            "limitations": [
-              "Does not validate cross-border attribution."
-            ],
-            "provided": true,
-            "requirement_id": "avoid_offshore_ai",
-            "source_description": "Synthetic offshore AI service record for prototype avoidance review.",
-            "source_type": "synthetic_service_record"
-          },
-          {
-            "confidence": "medium",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "ai_logistics_related_party",
-            "limitations": [
-              "Does not implement transfer-pricing law."
-            ],
-            "provided": true,
-            "requirement_id": "tp_related_party_agreements",
-            "source_description": "Synthetic related-party agreement placeholder for transfer-pricing review.",
-            "source_type": "synthetic_related_party_agreement"
-          },
-          {
-            "confidence": "medium",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "ai_logistics_platform_owner",
-            "limitations": [
-              "Grouping flag only."
-            ],
-            "provided": true,
-            "requirement_id": "group_ip_owner",
-            "source_description": "Synthetic group chart showing a platform and IP owner role.",
-            "source_type": "synthetic_group_chart"
-          },
-          {
-            "confidence": "medium",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "ai_logistics_customer_entity",
-            "limitations": [
-              "Review flag only."
-            ],
-            "provided": true,
-            "requirement_id": "group_customer_facing",
-            "source_description": "Synthetic group chart showing Australian customer-facing entity role.",
-            "source_type": "synthetic_group_chart"
-          },
-          {
-            "confidence": "low",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "ai_logistics_employer_entity",
-            "limitations": [
-              "Mock summary contains no personal records."
-            ],
-            "provided": true,
-            "requirement_id": "group_employer",
-            "source_description": "Synthetic summary showing a thin Australian employer entity.",
-            "source_type": "synthetic_employment_summary"
-          },
-          {
-            "confidence": "medium",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "ai_logistics_offshore_provider",
-            "limitations": [
-              "Review flag only."
-            ],
-            "provided": true,
-            "requirement_id": "group_offshore_provider",
-            "source_description": "Synthetic group chart showing offshore automation service provider role.",
-            "source_type": "synthetic_group_chart"
-          },
-          {
-            "confidence": "low",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "ai_logistics_aava_inputs",
-            "limitations": [
-              "No audited accounts are supplied."
-            ],
-            "provided": true,
-            "requirement_id": "core_aava_revenue_costs",
-            "source_description": "Synthetic firm-level financial summary where offshore service costs may suppress reported AAVA.",
-            "source_type": "synthetic_management_account"
-          }
-        ],
         "linked_example_id": "logistics_ai_platform",
-        "metadata": {
-          "expected_outcome": "needs_tax_review_and_needs_legal_review",
-          "scenario_note": "AI logistics platform with offshore AI service, platform owner, and thin Australian employer entity."
-        },
         "non_claims": [
           "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim."
         ],
@@ -491,115 +401,13 @@
         "avoid_entity_splitting",
         "avoid_sector_classification"
       ],
-      "packet": {
+      "packet_metadata": {
         "created_for": [
           "core_formula",
           "safe_harbour",
           "avoidance"
         ],
-        "evidence_items": [
-          {
-            "confidence": "medium",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "mech_ai_admin_output_unit",
-            "limitations": [
-              "Mock source does not calibrate the automotive repair schedule."
-            ],
-            "provided": true,
-            "requirement_id": "core_output_unit",
-            "source_description": "Synthetic job-management extract showing book-hour equivalent repair jobs as the prototype output unit.",
-            "source_type": "synthetic_system_record"
-          },
-          {
-            "confidence": "medium",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "mech_ai_admin_output_value",
-            "limitations": [
-              "Placeholder quantity only."
-            ],
-            "provided": true,
-            "requirement_id": "core_output_value",
-            "source_description": "Synthetic repair-order count for prototype formula tracing.",
-            "source_type": "synthetic_system_record"
-          },
-          {
-            "confidence": "medium",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "mech_ai_admin_worker_hours",
-            "limitations": [
-              "Mock roster contains no personal records."
-            ],
-            "provided": true,
-            "requirement_id": "core_worker_hours",
-            "source_description": "Synthetic roster summary showing human repair labour remains substantial.",
-            "source_type": "synthetic_worker_roster"
-          },
-          {
-            "confidence": "medium",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "mech_ai_admin_australian_nexus",
-            "limitations": [
-              "Mock location evidence only."
-            ],
-            "provided": true,
-            "requirement_id": "core_australian_nexus",
-            "source_description": "Synthetic location summary for Australian nexus in the example.",
-            "source_type": "synthetic_location_summary"
-          },
-          {
-            "confidence": "medium",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "mech_ai_admin_aii_components",
-            "limitations": [
-              "Does not validate final AII weights."
-            ],
-            "provided": true,
-            "requirement_id": "core_aii_components",
-            "source_description": "Synthetic workflow classification showing AI used for booking, invoicing, compliance, customer support, and diagnostic support.",
-            "source_type": "synthetic_workflow_log"
-          },
-          {
-            "confidence": "low",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "mech_ai_admin_aava_inputs",
-            "limitations": [
-              "No audited accounts are supplied."
-            ],
-            "provided": true,
-            "requirement_id": "core_aava_revenue_costs",
-            "source_description": "Synthetic firm-level financial summary for placeholder AAVA inputs.",
-            "source_type": "synthetic_management_account"
-          },
-          {
-            "confidence": "medium",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "mech_ai_admin_worker_assist",
-            "limitations": [
-              "Prototype classification only."
-            ],
-            "provided": true,
-            "requirement_id": "safe_harbour_worker_assist",
-            "source_description": "Synthetic record supporting worker-assist/admin AI treatment rather than labour-substituting robotics.",
-            "source_type": "synthetic_workflow_record"
-          },
-          {
-            "confidence": "medium",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "mech_ai_admin_low_nltg",
-            "limitations": [
-              "NLTG result remains illustrative only."
-            ],
-            "provided": true,
-            "requirement_id": "safe_harbour_low_nltg",
-            "source_description": "Synthetic output trace showing low NLTG under placeholder assumptions.",
-            "source_type": "synthetic_model_output"
-          }
-        ],
         "linked_example_id": "mechanic_ai_admin",
-        "metadata": {
-          "expected_outcome": "partial_or_sufficient_for_prototype",
-          "scenario_note": "Worker-assist and admin AI use with human repair labour remaining substantial."
-        },
         "non_claims": [
           "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim."
         ],
@@ -808,79 +616,13 @@
         "tp_data_model_access",
         "tp_management_technical"
       ],
-      "packet": {
+      "packet_metadata": {
         "created_for": [
           "core_formula",
           "avoidance",
           "transfer_pricing"
         ],
-        "evidence_items": [
-          {
-            "confidence": "medium",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "mech_robotic_robotics_automation",
-            "limitations": [
-              "Does not calibrate robotics weights."
-            ],
-            "provided": true,
-            "requirement_id": "core_aii_components",
-            "source_description": "Synthetic equipment log showing high robotics and process automation indicators.",
-            "source_type": "synthetic_equipment_log"
-          },
-          {
-            "confidence": "medium",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "mech_robotic_low_qlc",
-            "limitations": [
-              "Mock staffing summary contains no personal records."
-            ],
-            "provided": true,
-            "requirement_id": "core_worker_hours",
-            "source_description": "Synthetic staffing summary showing low human labour relative to output.",
-            "source_type": "synthetic_staffing_summary"
-          },
-          {
-            "confidence": "medium",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "mech_robotic_token_oversight",
-            "limitations": [
-              "Review flag only; not a legal finding."
-            ],
-            "provided": true,
-            "requirement_id": "avoid_token_oversight",
-            "source_description": "Synthetic review note flagging token human oversight and nominal supervision.",
-            "source_type": "synthetic_review_note"
-          },
-          {
-            "confidence": "medium",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "mech_robotic_robotics_lease",
-            "limitations": [
-              "Non-operative review preview only."
-            ],
-            "provided": true,
-            "requirement_id": "tp_robotics_leasing",
-            "source_description": "Synthetic robotics leasing agreement placeholder for tax-sensitive review.",
-            "source_type": "synthetic_related_party_agreement"
-          },
-          {
-            "confidence": "low",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "mech_robotic_aava_inputs",
-            "limitations": [
-              "No audited accounts are supplied."
-            ],
-            "provided": true,
-            "requirement_id": "core_aava_revenue_costs",
-            "source_description": "Synthetic firm-level financial summary with low reported AAVA under lease-cost assumptions.",
-            "source_type": "synthetic_management_account"
-          }
-        ],
         "linked_example_id": "mechanic_robotic",
-        "metadata": {
-          "expected_outcome": "needs_tax_review_or_partial",
-          "scenario_note": "Robotics-heavy repair shop with low QLC and capital lease review issues."
-        },
         "non_claims": [
           "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim."
         ],
@@ -1068,79 +810,13 @@
         "group_offshore_provider",
         "mixed_conversion_metadata"
       ],
-      "packet": {
+      "packet_metadata": {
         "created_for": [
           "mixed_units",
           "grouping",
           "calibration"
         ],
-        "evidence_items": [
-          {
-            "confidence": "medium",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "mixed_unit_units",
-            "limitations": [
-              "Does not create a conversion factor."
-            ],
-            "provided": true,
-            "requirement_id": "mixed_unit_evidence",
-            "source_description": "Synthetic schedule mapping showing logistics, digital platform, and repair/admin output units.",
-            "source_type": "synthetic_schedule_mapping"
-          },
-          {
-            "confidence": "low",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "mixed_unit_activity_shares",
-            "limitations": [
-              "Not calibrated against audited records."
-            ],
-            "provided": true,
-            "requirement_id": "mixed_activity_shares",
-            "source_description": "Synthetic activity-share basis for mixed operations.",
-            "source_type": "synthetic_management_account"
-          },
-          {
-            "confidence": "low",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "mixed_unit_revenue_basis",
-            "limitations": [
-              "No audited accounts are supplied."
-            ],
-            "provided": true,
-            "requirement_id": "mixed_revenue_aava_basis",
-            "source_description": "Synthetic revenue and AAVA share basis for standalone comparison.",
-            "source_type": "synthetic_financial_summary"
-          },
-          {
-            "confidence": "medium",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "mixed_unit_schedule_classification",
-            "limitations": [
-              "Does not resolve final schedule attribution."
-            ],
-            "provided": true,
-            "requirement_id": "mixed_schedule_classification",
-            "source_description": "Synthetic schedule classification notes for prototype-only mixed activity review.",
-            "source_type": "synthetic_policy_mapping"
-          },
-          {
-            "confidence": "low",
-            "date_or_period": "synthetic 2026 period",
-            "evidence_id": "mixed_unit_conversion_gap",
-            "limitations": [
-              "Direct output aggregation remains prohibited."
-            ],
-            "provided": false,
-            "requirement_id": "mixed_conversion_metadata",
-            "source_description": "Synthetic note that true conversion metadata is unavailable.",
-            "source_type": "synthetic_gap_note"
-          }
-        ],
         "linked_example_id": "mixed_unit_platform_group",
-        "metadata": {
-          "expected_outcome": "partial_needs_calibration",
-          "scenario_note": "Mixed canonical output units with conversion metadata limitations."
-        },
         "non_claims": [
           "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim."
         ],

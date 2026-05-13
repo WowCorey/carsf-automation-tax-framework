@@ -1,0 +1,13 @@
+{
+  "metadata": {
+    "status": "prototype",
+    "non_claims": [
+      "This prototype report is not legal, tax, Treasury, ATO, privacy, cybersecurity, audit, or forensic validation."
+    ]
+  },
+  "evidence_items": [
+    {
+      "evidence_id": "raw_payload_marker"
+    }
+  ]
+}

@@ -3,7 +3,7 @@ evidence_mode: external_real
 source_description: Synthetic fixture representing a proposed non-synthetic evidence path with no payload attached.
 intended_use: Test default-deny path for any non-synthetic evidence.
 storage_zone: data/mock_evidence/
-synthetic_mock_evidence_only: false
+synthetic_mock_evidence_only: true
 contains_personal_data: false
 contains_real_business_data: false
 contains_restricted_data: false

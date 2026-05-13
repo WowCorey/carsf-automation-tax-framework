@@ -35,7 +35,7 @@ jobs:
           from pathlib import Path
           import yaml
 
-          for folder in ["schedules", "examples"]:
+          for folder in ["schedules", "examples", "data"]:
               for path in sorted(Path(folder).rglob("*.yaml")):
                   yaml.safe_load(path.read_text(encoding="utf-8"))
                   print(f"parsed {path}")
@@ -43,3 +43,12 @@ jobs:
 
       - name: Run worked examples
         run: python scripts/run_examples.py
+
+      - name: Run mock evidence workflow
+        run: python scripts/run_evidence_workflow.py
+
+      - name: Run secure ingestion controls
+        run: python scripts/run_ingestion_controls.py
+
+      - name: Run repository guardrails
+        run: python scripts/run_repo_guardrails.py

@@ -29,6 +29,18 @@ Evidence must not be stored under `reports/`, `docs/`, `paper/`, `model/`, `simu
 
 The `.gitignore` blocks likely real-evidence and secret paths such as `data/incoming/`, `data/private/`, `data/restricted/`, `data/real_evidence/`, `evidence_inbox/`, `secure_drop/`, `*.secret`, `*.key`, `*.pem`, `*.p12`, and `*.pfx`.
 
+## Repository Guardrails
+
+Run:
+
+```powershell
+python scripts/run_repo_guardrails.py
+```
+
+The repository guardrail scan enforces the storage boundary at repo/CI level. It fails closed on prohibited paths, prohibited secret/database extensions, sensitive markers outside controlled synthetic fixtures or documented examples, missing report non-claims, and raw evidence payload markers in generated reports.
+
+CI runs the same command and fails when denied findings exist.
+
 ## Reports
 
 Run:
@@ -45,5 +57,7 @@ Generated reports:
 ## Non-Claims
 
 These controls are prototype governance controls only. They do not create legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit validation.
+
+Repository guardrails are not a complete DLP system, secret scanner, cybersecurity control, legal/privacy audit, Treasury control, ATO control, or forensic validation.
 
 Future real evidence handling requires external secure infrastructure, legal/privacy review, data-owner approval, security review, access controls, retention controls, deletion controls, and formal audit logging.

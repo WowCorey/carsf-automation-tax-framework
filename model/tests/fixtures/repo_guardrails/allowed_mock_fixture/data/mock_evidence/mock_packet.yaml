@@ -1,0 +1,11 @@
+packet_id: allowed_guardrail_mock_packet
+linked_example_id: guardrail_fixture
+synthetic_mock_evidence_only: true
+created_for:
+  - guardrail_test
+privacy_classification: low
+secrecy_classification: internal_research
+review_state: submitted_mock
+warnings:
+  - Synthetic fixture containing FAKE_TFN_MARKER for allowlist testing only.
+evidence_items: []

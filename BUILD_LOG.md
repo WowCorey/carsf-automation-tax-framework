@@ -241,3 +241,39 @@ Limitations:
 
 - Controls are prototype governance controls only.
 - They do not implement real secure storage, IAM, redaction, deletion, cybersecurity assurance, legal validation, privacy validation, tax validation, Treasury/ATO guidance, forensic validation, or audit enforcement.
+
+## V1.5 Repository-Level Enforcement Gates
+
+Branch: `v1.5-repository-enforcement-gates`
+
+Baseline: PR #8 merged into `main`, including secure evidence-ingestion controls, default-deny ingestion policy, sensitive scanning, redaction metadata, retention/access policy, immutable-style ingestion audit records, and `.gitignore` guardrails.
+
+Purpose of this build:
+
+- Add reusable repository guardrail scanning.
+- Add a CI enforcement step that fails on denied guardrail findings.
+- Add optional local pre-commit hook configuration.
+- Add synthetic guardrail test fixtures for prohibited paths, extensions, marker handling, report non-claims, and raw evidence payload checks.
+- Generate repository guardrail JSON/Markdown reports.
+
+Tests run:
+
+- `python -m pytest` - 287 passed, 1 pytest-asyncio deprecation warning under Python 3.14.
+- `python -m compileall -q model simulator scripts` - passed.
+- Recursive YAML parse check for schedules/examples/data - parsed 27 YAML files.
+- `python scripts/run_examples.py` - regenerated example, grouped, transfer-pricing, evidence, and calibration reports.
+- `python scripts/run_evidence_workflow.py` - regenerated mock evidence workflow reports.
+- `python scripts/run_ingestion_controls.py` - regenerated secure-ingestion control reports.
+- `python scripts/run_repo_guardrails.py` - generated repository guardrail reports with zero denied findings.
+- Streamlit bare import probe for `simulator/pages/11_Repository_Guardrails.py` - passed.
+
+Reports generated:
+
+- `reports/repo_guardrails.json`
+- `reports/repo_guardrails.md`
+
+Limitations:
+
+- Repository guardrails are prototype checks only.
+- They are not complete DLP, secret scanning, cybersecurity control, legal/privacy audit, Treasury control, ATO control, or forensic validation.
+- Passing the guardrails does not prove that the repository is free of sensitive content.

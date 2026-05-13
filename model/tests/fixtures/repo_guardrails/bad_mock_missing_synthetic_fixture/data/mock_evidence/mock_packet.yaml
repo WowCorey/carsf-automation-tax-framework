@@ -1,0 +1,10 @@
+packet_id: missing_synthetic_guardrail_packet
+linked_example_id: guardrail_fixture
+created_for:
+  - guardrail_test
+privacy_classification: low
+secrecy_classification: internal_research
+review_state: submitted_mock
+warnings:
+  - Synthetic fixture is intentionally missing the synthetic flag.
+evidence_items: []
