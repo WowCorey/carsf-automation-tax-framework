@@ -2013,12 +2013,11 @@
     }
   ],
   "metadata": {
-    "generated_at": "2026-05-13T11:37:38+00:00",
+    "generated_at": "2026-05-13T11:46:05+00:00",
     "non_claims": [
       "These are prototype investment and tax-incidence guardrails only. They are not economic validation, investment advice, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice.",
-      "These are prototype investment and tax-incidence guardrails only.",
-      "They are not economic validation, investment advice, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice.",
-      "Guardrail outputs do not automatically modify final liability."
+      "Guardrail outputs do not automatically modify final liability.",
+      "Pass-through, burden, normal-return, and sensitivity values are illustrative placeholders requiring calibration."
     ],
     "status": "prototype_investment_incidence_guardrails_only",
     "version": "CARSF V1.5 prototype"

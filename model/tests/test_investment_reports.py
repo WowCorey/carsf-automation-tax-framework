@@ -36,6 +36,39 @@ def test_investment_report_includes_non_claim_warning(repo_root) -> None:
     assert all(example["final_liability_modified"] is False for example in payload["examples"])
 
 
+def test_investment_report_does_not_duplicate_required_non_claim_warning(repo_root) -> None:
+    reports_dir = repo_root / "tmp" / "test-investment-deduped-nonclaims"
+    subprocess.run(
+        [sys.executable, "scripts/run_investment_guardrails.py", "--reports-dir", str(reports_dir)],
+        cwd=repo_root,
+        check=True,
+    )
+    required = (
+        "These are prototype investment and tax-incidence guardrails only. They are not economic validation, "
+        "investment advice, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+    )
+    markdown = (reports_dir / "investment_guardrails.md").read_text(encoding="utf-8")
+    payload = json.loads((reports_dir / "investment_guardrails.json").read_text(encoding="utf-8"))
+
+    assert markdown.count(required) == 1
+    assert payload["metadata"]["non_claims"].count(required) == 1
+
+
+def test_investment_report_clarifies_under_capture_checks_are_separate(repo_root) -> None:
+    reports_dir = repo_root / "tmp" / "test-investment-under-capture-clarity"
+    subprocess.run(
+        [sys.executable, "scripts/run_investment_guardrails.py", "--reports-dir", str(reports_dir)],
+        cwd=repo_root,
+        check=True,
+    )
+    markdown = (reports_dir / "investment_guardrails.md").read_text(encoding="utf-8")
+
+    assert "Firm-level zero-liability under-capture warning" in markdown
+    assert "Public-revenue burden-balance band" in markdown
+    assert "separate prototype checks" in markdown
+    assert "no firm-level zero-liability warning while still showing public-revenue under-capture" in markdown
+
+
 def test_existing_reports_and_repo_guardrails_still_generate(repo_root) -> None:
     reports_dir = repo_root / "tmp" / "test-existing-plus-investment"
     commands = [

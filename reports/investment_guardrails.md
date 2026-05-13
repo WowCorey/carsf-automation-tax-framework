@@ -1,6 +1,6 @@
 # CARSF V1.5 Investment and Tax-Incidence Guardrails
 
-Generated at: `2026-05-13T11:37:38+00:00`
+Generated at: `2026-05-13T11:46:05+00:00`
 
 ## A. Purpose
 
@@ -9,9 +9,8 @@ This report previews non-operative guardrails for effective automation burden, n
 ## B. Non-Claims
 
 - These are prototype investment and tax-incidence guardrails only. They are not economic validation, investment advice, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice.
-- These are prototype investment and tax-incidence guardrails only.
-- They are not economic validation, investment advice, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice.
 - Guardrail outputs do not automatically modify final liability.
+- Pass-through, burden, normal-return, and sensitivity values are illustrative placeholders requiring calibration.
 
 ## C. Why Investment/Tax-Incidence Guardrails Matter
 
@@ -48,6 +47,8 @@ A prototype automation fiscal framework can be too weak, too punitive, or shifte
 | Under-Capture Public Revenue Gap Case | 100,000.00 | 25,000.00 | 25,000.00 | 100,000.00 | 250,000.00 | medium |
 
 ## G. Under-Capture / Over-Capture Review
+
+Firm-level zero-liability under-capture warning and public-revenue burden-balance are separate prototype checks. A case can have no firm-level zero-liability warning while still showing public-revenue under-capture.
 
 | Example | Coverage Ratio | Capture Gap | Band | Review Required |
 | --- | ---: | ---: | --- | --- |
@@ -101,14 +102,16 @@ A prototype automation fiscal framework can be too weak, too punitive, or shifte
 
 ## I. Example-by-Example Plain-English Interpretation
 
+Firm-level zero-liability under-capture warning and public-revenue burden-balance are separate prototype checks. A case can have no firm-level zero-liability warning while still showing public-revenue under-capture.
+
 ### AI Logistics Pass-Through Risk Case
 
 Pass-through risk is material under placeholders and requires incidence calibration before external use.
 
 - Investment risk band: `medium`
 - Over-capture warning: `false`
-- Under-capture warning: `false`
-- Burden-balance band: `not_assessable`
+- Firm-level zero-liability under-capture warning: `false`
+- Public-revenue burden-balance band: `not_assessable`
 - Final liability modified by this report: `false`
 
 ### Low-AAVA High-Liability Warning Case
@@ -117,8 +120,8 @@ Positive liability with zero AAVA is a critical prototype warning, not a validat
 
 - Investment risk band: `critical`
 - Over-capture warning: `true`
-- Under-capture warning: `false`
-- Burden-balance band: `over_capture`
+- Firm-level zero-liability under-capture warning: `false`
+- Public-revenue burden-balance band: `over_capture`
 - Final liability modified by this report: `false`
 
 ### Productive Hybrid Low-Burden Case
@@ -127,8 +130,8 @@ Low placeholder burden suggests ordinary hybrid investment is not automatically 
 
 - Investment risk band: `low`
 - Over-capture warning: `false`
-- Under-capture warning: `false`
-- Burden-balance band: `not_assessable`
+- Firm-level zero-liability under-capture warning: `false`
+- Public-revenue burden-balance band: `not_assessable`
 - Final liability modified by this report: `false`
 
 ### Robotic High-Burden Review Case
@@ -137,8 +140,8 @@ High placeholder burden does not prove deterrence, but it should trigger review 
 
 - Investment risk band: `high`
 - Over-capture warning: `true`
-- Under-capture warning: `false`
-- Burden-balance band: `not_assessable`
+- Firm-level zero-liability under-capture warning: `false`
+- Public-revenue burden-balance band: `not_assessable`
 - Final liability modified by this report: `false`
 
 ### Under-Capture Public Revenue Gap Case
@@ -147,8 +150,8 @@ Captured revenue is below placeholder fiscal damage, showing under-capture revie
 
 - Investment risk band: `low`
 - Over-capture warning: `false`
-- Under-capture warning: `false`
-- Burden-balance band: `under_capture`
+- Firm-level zero-liability under-capture warning: `false`
+- Public-revenue burden-balance band: `under_capture`
 - Final liability modified by this report: `false`
 
 ## J. Limitations and Future Calibration Needs

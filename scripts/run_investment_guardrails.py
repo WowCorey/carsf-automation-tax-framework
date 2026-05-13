@@ -20,11 +20,7 @@ if str(MODEL_ROOT) not in sys.path:
 from carsf.burden_balance import BurdenBalanceResult, evaluate_burden_balance  # noqa: E402
 from carsf.example_runner import report_metadata  # noqa: E402
 from carsf.incidence import IncidenceResult, evaluate_tax_incidence  # noqa: E402
-from carsf.investment import (  # noqa: E402
-    INVESTMENT_NON_CLAIMS,
-    InvestmentGuardrailResult,
-    evaluate_investment_guardrail,
-)
+from carsf.investment import InvestmentGuardrailResult, evaluate_investment_guardrail  # noqa: E402
 from carsf.sensitivity import (  # noqa: E402
     SensitivitySweepResult,
     sweep_aava,
@@ -38,6 +34,11 @@ REPORT_WARNING = (
     "investment advice, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
 )
 REPORT_STATUS = "prototype_investment_incidence_guardrails_only"
+REPORT_NON_CLAIMS = [
+    REPORT_WARNING,
+    "Guardrail outputs do not automatically modify final liability.",
+    "Pass-through, burden, normal-return, and sensitivity values are illustrative placeholders requiring calibration.",
+]
 
 
 def _jsonable(value: Any) -> Any:
@@ -134,7 +135,7 @@ def build_json_payload(rows: list[dict[str, Any]], metadata: dict[str, Any]) -> 
         "metadata": {
             **metadata,
             "status": REPORT_STATUS,
-            "non_claims": [REPORT_WARNING, *INVESTMENT_NON_CLAIMS],
+            "non_claims": REPORT_NON_CLAIMS,
         },
         "examples": [
             {
@@ -204,9 +205,8 @@ def build_markdown(rows: list[dict[str, Any]], metadata: dict[str, Any]) -> str:
         "",
         "## B. Non-Claims",
         "",
-        f"- {REPORT_WARNING}",
     ]
-    lines.extend(f"- {item}" for item in INVESTMENT_NON_CLAIMS)
+    lines.extend(f"- {item}" for item in REPORT_NON_CLAIMS)
     lines.extend(
         [
             "",
@@ -258,6 +258,8 @@ def build_markdown(rows: list[dict[str, Any]], metadata: dict[str, Any]) -> str:
             "",
             "## G. Under-Capture / Over-Capture Review",
             "",
+            "Firm-level zero-liability under-capture warning and public-revenue burden-balance are separate prototype checks. A case can have no firm-level zero-liability warning while still showing public-revenue under-capture.",
+            "",
             "| Example | Coverage Ratio | Capture Gap | Band | Review Required |",
             "| --- | ---: | ---: | --- | --- |",
         ]
@@ -280,7 +282,14 @@ def build_markdown(rows: list[dict[str, Any]], metadata: dict[str, Any]) -> str:
         lines.extend([f"### {row['example']['name']}", ""])
         lines.extend(_sweep_summary(row))
         lines.append("")
-    lines.extend(["## I. Example-by-Example Plain-English Interpretation", ""])
+    lines.extend(
+        [
+            "## I. Example-by-Example Plain-English Interpretation",
+            "",
+            "Firm-level zero-liability under-capture warning and public-revenue burden-balance are separate prototype checks. A case can have no firm-level zero-liability warning while still showing public-revenue under-capture.",
+            "",
+        ]
+    )
     for row in rows:
         investment: InvestmentGuardrailResult = row["investment_result"]
         burden: BurdenBalanceResult = row["burden_balance_result"]
@@ -292,8 +301,8 @@ def build_markdown(rows: list[dict[str, Any]], metadata: dict[str, Any]) -> str:
                 "",
                 f"- Investment risk band: `{investment.investment_risk_band}`",
                 f"- Over-capture warning: `{str(investment.over_capture_warning).lower()}`",
-                f"- Under-capture warning: `{str(investment.under_capture_warning).lower()}`",
-                f"- Burden-balance band: `{burden.burden_balance_band}`",
+                f"- Firm-level zero-liability under-capture warning: `{str(investment.under_capture_warning).lower()}`",
+                f"- Public-revenue burden-balance band: `{burden.burden_balance_band}`",
                 "- Final liability modified by this report: `false`",
                 "",
             ]
