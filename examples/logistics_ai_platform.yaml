@@ -47,3 +47,27 @@ red_team_notes:
   notes:
     - Tests grouped-entity aggregation for safe-harbour avoidance.
     - Tests destination and activity attribution for offshore automation services.
+risk_metadata:
+  status: illustrative_placeholder_review_metadata
+  offshore_automation_service: true
+  related_party_ai_service_fees: true
+  entity_splitting_risk: true
+  sector_classification_risk: true
+  token_human_oversight_risk: false
+  fake_qlc_inflation_risk: false
+  cloud_cost_relabeling_risk: true
+  robotics_leasing_risk: false
+  artificial_low_profit_or_aava_risk: false
+  essential_service_review: false
+  startup_placeholder: false
+  small_business_placeholder: false
+  worker_assist_admin_ai: false
+  related_party_fee_review: true
+  related_entities:
+    - offshore_ai_service_provider
+    - platform_ip_owner
+    - australian_employing_entity
+  ip_owner_entity: platform_ip_owner
+  platform_owner_entity: offshore_ai_service_provider
+  employer_entity: australian_employing_entity
+  contractor_entity: contracted_fulfilment_network

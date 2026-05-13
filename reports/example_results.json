@@ -1,6 +1,21 @@
 {
   "examples": [
     {
+      "avoidance_result": {
+        "flags": [],
+        "placeholder_basis": [
+          "Avoidance checks are prototype heuristics only.",
+          "Thresholds are illustrative placeholders and not calibrated enforcement rules.",
+          "No result constitutes legal, tax, Treasury, or ATO validation."
+        ],
+        "reasons": [
+          "No executable prototype avoidance flags were triggered."
+        ],
+        "recommended_review": [
+          "Prototype review flags only; no legal, tax, Treasury, or ATO validation is provided."
+        ],
+        "risk_level": "low"
+      },
       "business_description": "Traditional suburban automotive repair workshop with human mechanics and low automation.",
       "evidence_labels": [
         "example.status=illustrative_placeholder",
@@ -24,6 +39,20 @@
         "Credits = capped verified credits = 0.00",
         "Final liability = capped combined liability = 0.00"
       ],
+      "grouping_risk_result": {
+        "flags": [],
+        "placeholder_basis": [
+          "Grouping checks are prototype review flags only.",
+          "No full legal grouping, transfer-pricing, or attribution rule is implemented."
+        ],
+        "reasons": [
+          "No grouped-entity review flags were triggered."
+        ],
+        "recommended_review": [
+          "Prototype grouping review only; this is not legal grouping analysis or tax-law validation."
+        ],
+        "risk_level": "low"
+      },
       "id": "mechanic_traditional",
       "inputs": {
         "aava_inputs": {
@@ -44,6 +73,23 @@
         "output": {
           "unit": "book_hour_equivalent_jobs_completed",
           "value": 4200.0
+        },
+        "risk_metadata": {
+          "artificial_low_profit_or_aava_risk": false,
+          "cloud_cost_relabeling_risk": false,
+          "entity_splitting_risk": false,
+          "essential_service_review": false,
+          "fake_qlc_inflation_risk": false,
+          "offshore_automation_service": false,
+          "related_entities": [],
+          "related_party_ai_service_fees": false,
+          "robotics_leasing_risk": false,
+          "sector_classification_risk": false,
+          "small_business_placeholder": true,
+          "startup_placeholder": false,
+          "status": "illustrative_placeholder_review_metadata",
+          "token_human_oversight_risk": false,
+          "worker_assist_admin_ai": false
         },
         "schedule_placeholders": {
           "caps": {
@@ -113,7 +159,9 @@
         "Numbers are illustrative placeholders and are not Australian industry data.",
         "Schedule values are not calibrated.",
         "AAVA deductibility remains a prototype taxonomy.",
-        "Safe harbour, entity grouping, related-party, and international tax logic are not executable in this runner."
+        "Safe harbour, anti-avoidance, and grouping checks are executable review flags only.",
+        "Safe harbour classification does not automatically reduce or erase liability in this build.",
+        "Related-party, offshore, and sector-classification outputs are not legal or tax conclusions."
       ],
       "name": "Mechanic Traditional",
       "outputs": {
@@ -139,16 +187,53 @@
           "Serves as the human-heavy comparator."
         ]
       },
+      "safe_harbour_result": {
+        "category": "SMALL_BUSINESS_PLACEHOLDER",
+        "eligible": true,
+        "placeholder_basis": [
+          "Prototype safe-harbour checks use illustrative placeholder thresholds only.",
+          "low_nltg_threshold_placeholder=0.25",
+          "substantial_human_labour_qlc_hle_ratio_placeholder=0.35",
+          "small_business_revenue_threshold_placeholder=10000000.0",
+          "Safe-harbour classification does not alter liability in this build."
+        ],
+        "reasons": [
+          "Revenue is below the schedule placeholder small-business threshold.",
+          "No high-risk avoidance metadata is present.",
+          "NLTG is zero or near-zero and human labour remains substantial."
+        ],
+        "review_required": false,
+        "warnings": [
+          "Prototype classification only; not legal advice, tax advice, Treasury guidance, or ATO guidance.",
+          "This result does not constitute legal validation of any actual safe harbour."
+        ]
+      },
       "schedule": "automotive_repair",
       "sector": "Prototype Schedule A - Automotive Repair",
       "warnings": [
         "Illustrative placeholder output only.",
         "Do not use this result to estimate real tax payable.",
         "No legal, tax, Treasury, ATO, or economic validation is implied.",
+        "Safe harbour and avoidance outputs are prototype review flags, not legal findings.",
         "Coverage metrics not calculated because this example has no national monitoring inputs."
       ]
     },
     {
+      "avoidance_result": {
+        "flags": [],
+        "placeholder_basis": [
+          "Avoidance checks are prototype heuristics only.",
+          "Thresholds are illustrative placeholders and not calibrated enforcement rules.",
+          "No result constitutes legal, tax, Treasury, or ATO validation."
+        ],
+        "reasons": [
+          "No executable prototype avoidance flags were triggered."
+        ],
+        "recommended_review": [
+          "Prototype review flags only; no legal, tax, Treasury, or ATO validation is provided."
+        ],
+        "risk_level": "low"
+      },
       "business_description": "Human workshop using AI for booking, invoicing, reminders, and diagnostic support with mechanics still doing repair work.",
       "evidence_labels": [
         "example.status=illustrative_placeholder",
@@ -172,6 +257,20 @@
         "Credits = capped verified credits = 0.00",
         "Final liability = capped combined liability = 0.00"
       ],
+      "grouping_risk_result": {
+        "flags": [],
+        "placeholder_basis": [
+          "Grouping checks are prototype review flags only.",
+          "No full legal grouping, transfer-pricing, or attribution rule is implemented."
+        ],
+        "reasons": [
+          "No grouped-entity review flags were triggered."
+        ],
+        "recommended_review": [
+          "Prototype grouping review only; this is not legal grouping analysis or tax-law validation."
+        ],
+        "risk_level": "low"
+      },
       "id": "mechanic_ai_admin",
       "inputs": {
         "aava_inputs": {
@@ -192,6 +291,30 @@
         "output": {
           "unit": "book_hour_equivalent_jobs_completed",
           "value": 4800.0
+        },
+        "risk_metadata": {
+          "artificial_low_profit_or_aava_risk": false,
+          "cloud_cost_relabeling_risk": false,
+          "entity_splitting_risk": false,
+          "essential_service_review": false,
+          "fake_qlc_inflation_risk": false,
+          "offshore_automation_service": false,
+          "related_entities": [],
+          "related_party_ai_service_fees": false,
+          "robotics_leasing_risk": false,
+          "sector_classification_risk": false,
+          "small_business_placeholder": true,
+          "startup_placeholder": false,
+          "status": "illustrative_placeholder_review_metadata",
+          "token_human_oversight_risk": false,
+          "worker_assist_admin_ai": true,
+          "worker_assist_uses": [
+            "booking",
+            "invoicing",
+            "compliance",
+            "customer_support",
+            "diagnostics_support"
+          ]
         },
         "schedule_placeholders": {
           "caps": {
@@ -253,7 +376,9 @@
         "Numbers are illustrative placeholders and are not Australian industry data.",
         "Schedule values are not calibrated.",
         "AAVA deductibility remains a prototype taxonomy.",
-        "Safe harbour, entity grouping, related-party, and international tax logic are not executable in this runner."
+        "Safe harbour, anti-avoidance, and grouping checks are executable review flags only.",
+        "Safe harbour classification does not automatically reduce or erase liability in this build.",
+        "Related-party, offshore, and sector-classification outputs are not legal or tax conclusions."
       ],
       "name": "Mechanic Ai Admin",
       "outputs": {
@@ -279,16 +404,59 @@
           "Tests the worker-assist concession boundary."
         ]
       },
+      "safe_harbour_result": {
+        "category": "WORKER_ASSIST_OR_ADMIN_AI",
+        "eligible": true,
+        "placeholder_basis": [
+          "Prototype safe-harbour checks use illustrative placeholder thresholds only.",
+          "low_nltg_threshold_placeholder=0.25",
+          "substantial_human_labour_qlc_hle_ratio_placeholder=0.35",
+          "small_business_revenue_threshold_placeholder=10000000.0",
+          "Safe-harbour classification does not alter liability in this build."
+        ],
+        "reasons": [
+          "Metadata identifies worker-assist/admin AI rather than labour-substituting automation.",
+          "QLC remains substantial relative to HLE under placeholder rules.",
+          "NLTG is zero or near-zero under placeholder rules."
+        ],
+        "review_required": false,
+        "warnings": [
+          "Prototype classification only; not legal advice, tax advice, Treasury guidance, or ATO guidance.",
+          "This result does not constitute legal validation of any actual safe harbour."
+        ]
+      },
       "schedule": "automotive_repair",
       "sector": "Prototype Schedule A - Automotive Repair",
       "warnings": [
         "Illustrative placeholder output only.",
         "Do not use this result to estimate real tax payable.",
         "No legal, tax, Treasury, ATO, or economic validation is implied.",
+        "Safe harbour and avoidance outputs are prototype review flags, not legal findings.",
         "Coverage metrics not calculated because this example has no national monitoring inputs."
       ]
     },
     {
+      "avoidance_result": {
+        "flags": [
+          "TOKEN_HUMAN_OVERSIGHT",
+          "FAKE_QLC_INFLATION"
+        ],
+        "placeholder_basis": [
+          "Avoidance checks are prototype heuristics only.",
+          "Thresholds are illustrative placeholders and not calibrated enforcement rules.",
+          "No result constitutes legal, tax, Treasury, or ATO validation."
+        ],
+        "reasons": [
+          "High automation with low QLC/HLE and a small workforce may indicate nominal human oversight.",
+          "QLC scoring may be inflated or concentrated in too few roles relative to automated output."
+        ],
+        "recommended_review": [
+          "Prototype review flags only; no legal, tax, Treasury, or ATO validation is provided.",
+          "Review whether human roles are substantive, verified, and appropriately scored for QLC.",
+          "Review payroll, hours, wage quality, security, training, and Australian nexus evidence."
+        ],
+        "risk_level": "medium"
+      },
       "business_description": "Highly automated repair facility using robotic inspection, automated quoting, and limited human supervision.",
       "evidence_labels": [
         "example.status=illustrative_placeholder",
@@ -312,6 +480,20 @@
         "Credits = capped verified credits = 10000.00",
         "Final liability = capped combined liability = 148400.00"
       ],
+      "grouping_risk_result": {
+        "flags": [],
+        "placeholder_basis": [
+          "Grouping checks are prototype review flags only.",
+          "No full legal grouping, transfer-pricing, or attribution rule is implemented."
+        ],
+        "reasons": [
+          "No grouped-entity review flags were triggered."
+        ],
+        "recommended_review": [
+          "Prototype grouping review only; this is not legal grouping analysis or tax-law validation."
+        ],
+        "risk_level": "low"
+      },
       "id": "mechanic_robotic",
       "inputs": {
         "aava_inputs": {
@@ -332,6 +514,23 @@
         "output": {
           "unit": "book_hour_equivalent_jobs_completed",
           "value": 7200.0
+        },
+        "risk_metadata": {
+          "artificial_low_profit_or_aava_risk": false,
+          "cloud_cost_relabeling_risk": false,
+          "entity_splitting_risk": false,
+          "essential_service_review": false,
+          "fake_qlc_inflation_risk": true,
+          "offshore_automation_service": false,
+          "related_entities": [],
+          "related_party_ai_service_fees": false,
+          "robotics_leasing_risk": false,
+          "sector_classification_risk": false,
+          "small_business_placeholder": false,
+          "startup_placeholder": false,
+          "status": "illustrative_placeholder_review_metadata",
+          "token_human_oversight_risk": true,
+          "worker_assist_admin_ai": false
         },
         "schedule_placeholders": {
           "caps": {
@@ -377,7 +576,9 @@
         "Numbers are illustrative placeholders and are not Australian industry data.",
         "Schedule values are not calibrated.",
         "AAVA deductibility remains a prototype taxonomy.",
-        "Safe harbour, entity grouping, related-party, and international tax logic are not executable in this runner."
+        "Safe harbour, anti-avoidance, and grouping checks are executable review flags only.",
+        "Safe harbour classification does not automatically reduce or erase liability in this build.",
+        "Related-party, offshore, and sector-classification outputs are not legal or tax conclusions."
       ],
       "name": "Mechanic Robotic",
       "outputs": {
@@ -406,16 +607,51 @@
           "Tests whether nominal supervision roles are enough to suppress NLTG."
         ]
       },
+      "safe_harbour_result": {
+        "category": "NO_SAFE_HARBOUR_REVIEW",
+        "eligible": false,
+        "placeholder_basis": [
+          "Prototype safe-harbour checks use illustrative placeholder thresholds only.",
+          "low_nltg_threshold_placeholder=0.25",
+          "substantial_human_labour_qlc_hle_ratio_placeholder=0.35",
+          "small_business_revenue_threshold_placeholder=10000000.0",
+          "Safe-harbour classification does not alter liability in this build."
+        ],
+        "reasons": [
+          "High-risk avoidance metadata or red-team flags require review before any safe harbour."
+        ],
+        "review_required": true,
+        "warnings": [
+          "Prototype classification only; not legal advice, tax advice, Treasury guidance, or ATO guidance.",
+          "This result does not constitute legal validation of any actual safe harbour."
+        ]
+      },
       "schedule": "automotive_repair",
       "sector": "Prototype Schedule A - Automotive Repair",
       "warnings": [
         "Illustrative placeholder output only.",
         "Do not use this result to estimate real tax payable.",
         "No legal, tax, Treasury, ATO, or economic validation is implied.",
+        "Safe harbour and avoidance outputs are prototype review flags, not legal findings.",
         "Coverage metrics not calculated because this example has no national monitoring inputs."
       ]
     },
     {
+      "avoidance_result": {
+        "flags": [],
+        "placeholder_basis": [
+          "Avoidance checks are prototype heuristics only.",
+          "Thresholds are illustrative placeholders and not calibrated enforcement rules.",
+          "No result constitutes legal, tax, Treasury, or ATO validation."
+        ],
+        "reasons": [
+          "No executable prototype avoidance flags were triggered."
+        ],
+        "recommended_review": [
+          "Prototype review flags only; no legal, tax, Treasury, or ATO validation is provided."
+        ],
+        "risk_level": "low"
+      },
       "business_description": "Human-heavy logistics operator with drivers, dispatchers, and warehouse workers.",
       "evidence_labels": [
         "example.status=illustrative_placeholder",
@@ -439,6 +675,20 @@
         "Credits = capped verified credits = 0.00",
         "Final liability = capped combined liability = 0.00"
       ],
+      "grouping_risk_result": {
+        "flags": [],
+        "placeholder_basis": [
+          "Grouping checks are prototype review flags only.",
+          "No full legal grouping, transfer-pricing, or attribution rule is implemented."
+        ],
+        "reasons": [
+          "No grouped-entity review flags were triggered."
+        ],
+        "recommended_review": [
+          "Prototype grouping review only; this is not legal grouping analysis or tax-law validation."
+        ],
+        "risk_level": "low"
+      },
       "id": "logistics_human_heavy",
       "inputs": {
         "aava_inputs": {
@@ -459,6 +709,23 @@
         "output": {
           "unit": "tonne_kilometres_or_pallet_movements",
           "value": 900000.0
+        },
+        "risk_metadata": {
+          "artificial_low_profit_or_aava_risk": false,
+          "cloud_cost_relabeling_risk": false,
+          "entity_splitting_risk": false,
+          "essential_service_review": false,
+          "fake_qlc_inflation_risk": false,
+          "offshore_automation_service": false,
+          "related_entities": [],
+          "related_party_ai_service_fees": false,
+          "robotics_leasing_risk": false,
+          "sector_classification_risk": false,
+          "small_business_placeholder": true,
+          "startup_placeholder": false,
+          "status": "illustrative_placeholder_review_metadata",
+          "token_human_oversight_risk": false,
+          "worker_assist_admin_ai": false
         },
         "schedule_placeholders": {
           "caps": {
@@ -560,7 +827,9 @@
         "Numbers are illustrative placeholders and are not Australian logistics data.",
         "Schedule values are not calibrated.",
         "AAVA deductibility remains a prototype taxonomy.",
-        "Safe harbour, entity grouping, related-party, and international tax logic are not executable in this runner."
+        "Safe harbour, anti-avoidance, and grouping checks are executable review flags only.",
+        "Safe harbour classification does not automatically reduce or erase liability in this build.",
+        "Related-party, offshore, and sector-classification outputs are not legal or tax conclusions."
       ],
       "name": "Logistics Human Heavy",
       "outputs": {
@@ -586,16 +855,53 @@
           "Human-heavy comparator for logistics schedule."
         ]
       },
+      "safe_harbour_result": {
+        "category": "SMALL_BUSINESS_PLACEHOLDER",
+        "eligible": true,
+        "placeholder_basis": [
+          "Prototype safe-harbour checks use illustrative placeholder thresholds only.",
+          "low_nltg_threshold_placeholder=0.25",
+          "substantial_human_labour_qlc_hle_ratio_placeholder=0.35",
+          "small_business_revenue_threshold_placeholder=10000000.0",
+          "Safe-harbour classification does not alter liability in this build."
+        ],
+        "reasons": [
+          "Revenue is below the schedule placeholder small-business threshold.",
+          "No high-risk avoidance metadata is present.",
+          "NLTG is zero or near-zero and human labour remains substantial."
+        ],
+        "review_required": false,
+        "warnings": [
+          "Prototype classification only; not legal advice, tax advice, Treasury guidance, or ATO guidance.",
+          "This result does not constitute legal validation of any actual safe harbour."
+        ]
+      },
       "schedule": "logistics_warehousing",
       "sector": "Prototype Schedule B - Logistics / Warehousing",
       "warnings": [
         "Illustrative placeholder output only.",
         "Do not use this result to estimate real tax payable.",
         "No legal, tax, Treasury, ATO, or economic validation is implied.",
+        "Safe harbour and avoidance outputs are prototype review flags, not legal findings.",
         "Coverage metrics not calculated because this example has no national monitoring inputs."
       ]
     },
     {
+      "avoidance_result": {
+        "flags": [],
+        "placeholder_basis": [
+          "Avoidance checks are prototype heuristics only.",
+          "Thresholds are illustrative placeholders and not calibrated enforcement rules.",
+          "No result constitutes legal, tax, Treasury, or ATO validation."
+        ],
+        "reasons": [
+          "No executable prototype avoidance flags were triggered."
+        ],
+        "recommended_review": [
+          "Prototype review flags only; no legal, tax, Treasury, or ATO validation is provided."
+        ],
+        "risk_level": "low"
+      },
       "business_description": "Logistics operator using route optimisation and warehouse scanning while retaining substantial human driving and warehouse labour.",
       "evidence_labels": [
         "example.status=illustrative_placeholder",
@@ -619,6 +925,20 @@
         "Credits = capped verified credits = 0.00",
         "Final liability = capped combined liability = 0.00"
       ],
+      "grouping_risk_result": {
+        "flags": [],
+        "placeholder_basis": [
+          "Grouping checks are prototype review flags only.",
+          "No full legal grouping, transfer-pricing, or attribution rule is implemented."
+        ],
+        "reasons": [
+          "No grouped-entity review flags were triggered."
+        ],
+        "recommended_review": [
+          "Prototype grouping review only; this is not legal grouping analysis or tax-law validation."
+        ],
+        "risk_level": "low"
+      },
       "id": "logistics_hybrid",
       "inputs": {
         "aava_inputs": {
@@ -639,6 +959,23 @@
         "output": {
           "unit": "tonne_kilometres_or_pallet_movements",
           "value": 2000000.0
+        },
+        "risk_metadata": {
+          "artificial_low_profit_or_aava_risk": false,
+          "cloud_cost_relabeling_risk": false,
+          "entity_splitting_risk": false,
+          "essential_service_review": false,
+          "fake_qlc_inflation_risk": false,
+          "offshore_automation_service": false,
+          "related_entities": [],
+          "related_party_ai_service_fees": false,
+          "robotics_leasing_risk": false,
+          "sector_classification_risk": false,
+          "small_business_placeholder": true,
+          "startup_placeholder": false,
+          "status": "illustrative_placeholder_review_metadata",
+          "token_human_oversight_risk": false,
+          "worker_assist_admin_ai": false
         },
         "schedule_placeholders": {
           "caps": {
@@ -740,7 +1077,9 @@
         "Numbers are illustrative placeholders and are not Australian logistics data.",
         "Schedule values are not calibrated.",
         "AAVA deductibility remains a prototype taxonomy.",
-        "Safe harbour, entity grouping, related-party, and international tax logic are not executable in this runner."
+        "Safe harbour, anti-avoidance, and grouping checks are executable review flags only.",
+        "Safe harbour classification does not automatically reduce or erase liability in this build.",
+        "Related-party, offshore, and sector-classification outputs are not legal or tax conclusions."
       ],
       "name": "Logistics Hybrid",
       "outputs": {
@@ -766,16 +1105,74 @@
           "Tests useful productivity where QLC remains substantial."
         ]
       },
+      "safe_harbour_result": {
+        "category": "SMALL_BUSINESS_PLACEHOLDER",
+        "eligible": true,
+        "placeholder_basis": [
+          "Prototype safe-harbour checks use illustrative placeholder thresholds only.",
+          "low_nltg_threshold_placeholder=0.25",
+          "substantial_human_labour_qlc_hle_ratio_placeholder=0.35",
+          "small_business_revenue_threshold_placeholder=10000000.0",
+          "Safe-harbour classification does not alter liability in this build."
+        ],
+        "reasons": [
+          "Revenue is below the schedule placeholder small-business threshold.",
+          "No high-risk avoidance metadata is present.",
+          "NLTG is zero or near-zero and human labour remains substantial."
+        ],
+        "review_required": false,
+        "warnings": [
+          "Prototype classification only; not legal advice, tax advice, Treasury guidance, or ATO guidance.",
+          "This result does not constitute legal validation of any actual safe harbour."
+        ]
+      },
       "schedule": "logistics_warehousing",
       "sector": "Prototype Schedule B - Logistics / Warehousing",
       "warnings": [
         "Illustrative placeholder output only.",
         "Do not use this result to estimate real tax payable.",
         "No legal, tax, Treasury, ATO, or economic validation is implied.",
+        "Safe harbour and avoidance outputs are prototype review flags, not legal findings.",
         "Coverage metrics not calculated because this example has no national monitoring inputs."
       ]
     },
     {
+      "avoidance_result": {
+        "flags": [
+          "TOKEN_HUMAN_OVERSIGHT",
+          "FAKE_QLC_INFLATION",
+          "OFFSHORE_AUTOMATION_SERVICE",
+          "RELATED_PARTY_AI_SERVICE_FEES",
+          "ENTITY_SPLITTING",
+          "SECTOR_CLASSIFICATION_ARBITRAGE",
+          "CLOUD_COST_RELABELING"
+        ],
+        "placeholder_basis": [
+          "Avoidance checks are prototype heuristics only.",
+          "Thresholds are illustrative placeholders and not calibrated enforcement rules.",
+          "No result constitutes legal, tax, Treasury, or ATO validation."
+        ],
+        "reasons": [
+          "High automation with low QLC/HLE and a small workforce may indicate nominal human oversight.",
+          "QLC scoring may be inflated or concentrated in too few roles relative to automated output.",
+          "Metadata or red-team notes identify offshore automation services serving Australian output.",
+          "Related-party AI service fees may reduce AAVA without arm's-length support.",
+          "Metadata or red-team notes indicate potential grouped-entity threshold avoidance.",
+          "Schedule choice may be material to liability or may not match Australian-facing activity.",
+          "AI cloud or inference costs may be relabelled as ordinary non-automation input costs."
+        ],
+        "recommended_review": [
+          "Prototype review flags only; no legal, tax, Treasury, or ATO validation is provided.",
+          "Review whether human roles are substantive, verified, and appropriately scored for QLC.",
+          "Review payroll, hours, wage quality, security, training, and Australian nexus evidence.",
+          "Review destination/activity attribution and offshore automation-as-a-service contracts.",
+          "Review transfer-pricing support, service descriptions, and AAVA deductibility treatment.",
+          "Review related entities, output ownership, employment entity, IP owner, and platform owner.",
+          "Review dominant activity, schedule apportionment, and Schedules Authority classification.",
+          "Review cloud invoices, inference allocation, and AAVA deductibility taxonomy treatment."
+        ],
+        "risk_level": "high"
+      },
       "business_description": "AI logistics platform using automated dispatch, offshore optimisation services, and contracted fulfilment with thin Australian QLC.",
       "evidence_labels": [
         "example.status=illustrative_placeholder",
@@ -799,6 +1196,32 @@
         "Credits = capped verified credits = 50000.00",
         "Final liability = capped combined liability = 922160.00"
       ],
+      "grouping_risk_result": {
+        "flags": [
+          "ENTITY_SPLITTING_SAFE_HARBOUR",
+          "RELATED_OPERATING_ENTITIES",
+          "SEPARATED_IP_PLATFORM_EMPLOYER",
+          "THIN_AUSTRALIAN_EMPLOYING_ENTITY"
+        ],
+        "placeholder_basis": [
+          "Grouping checks are prototype review flags only.",
+          "No full legal grouping, transfer-pricing, or attribution rule is implemented."
+        ],
+        "reasons": [
+          "Metadata or red-team notes indicate possible entity splitting to access safe harbours or thresholds.",
+          "Example metadata lists related operating entities relevant to the output or automation chain.",
+          "Metadata indicates separation of IP, platform, employer, or contractor entities.",
+          "Thin Australian QLC is paired with high automated Australian-facing output."
+        ],
+        "recommended_review": [
+          "Prototype grouping review only; this is not legal grouping analysis or tax-law validation.",
+          "Review grouped turnover, output, employment, IP, platform, and contractor entities together.",
+          "Review whether related entities should be aggregated for schedule thresholds and output attribution.",
+          "Review whether the split suppresses QLC, hides automation, or shifts AAVA outside the measured firm.",
+          "Review whether automated productive capacity sits in another related entity or offshore service provider."
+        ],
+        "risk_level": "high"
+      },
       "id": "logistics_ai_platform",
       "inputs": {
         "aava_inputs": {
@@ -819,6 +1242,32 @@
         "output": {
           "unit": "tonne_kilometres_or_pallet_movements",
           "value": 4000000.0
+        },
+        "risk_metadata": {
+          "artificial_low_profit_or_aava_risk": false,
+          "cloud_cost_relabeling_risk": true,
+          "contractor_entity": "contracted_fulfilment_network",
+          "employer_entity": "australian_employing_entity",
+          "entity_splitting_risk": true,
+          "essential_service_review": false,
+          "fake_qlc_inflation_risk": false,
+          "ip_owner_entity": "platform_ip_owner",
+          "offshore_automation_service": true,
+          "platform_owner_entity": "offshore_ai_service_provider",
+          "related_entities": [
+            "offshore_ai_service_provider",
+            "platform_ip_owner",
+            "australian_employing_entity"
+          ],
+          "related_party_ai_service_fees": true,
+          "related_party_fee_review": true,
+          "robotics_leasing_risk": false,
+          "sector_classification_risk": true,
+          "small_business_placeholder": false,
+          "startup_placeholder": false,
+          "status": "illustrative_placeholder_review_metadata",
+          "token_human_oversight_risk": false,
+          "worker_assist_admin_ai": false
         },
         "schedule_placeholders": {
           "caps": {
@@ -872,7 +1321,9 @@
         "Numbers are illustrative placeholders and are not Australian logistics data.",
         "Schedule values are not calibrated.",
         "AAVA deductibility remains a prototype taxonomy.",
-        "Safe harbour, entity grouping, related-party, and international tax logic are not executable in this runner."
+        "Safe harbour, anti-avoidance, and grouping checks are executable review flags only.",
+        "Safe harbour classification does not automatically reduce or erase liability in this build.",
+        "Related-party, offshore, and sector-classification outputs are not legal or tax conclusions."
       ],
       "name": "Logistics Ai Platform",
       "outputs": {
@@ -904,18 +1355,38 @@
           "Tests destination and activity attribution for offshore automation services."
         ]
       },
+      "safe_harbour_result": {
+        "category": "NO_SAFE_HARBOUR_REVIEW",
+        "eligible": false,
+        "placeholder_basis": [
+          "Prototype safe-harbour checks use illustrative placeholder thresholds only.",
+          "low_nltg_threshold_placeholder=0.25",
+          "substantial_human_labour_qlc_hle_ratio_placeholder=0.35",
+          "small_business_revenue_threshold_placeholder=10000000.0",
+          "Safe-harbour classification does not alter liability in this build."
+        ],
+        "reasons": [
+          "High-risk avoidance metadata or red-team flags require review before any safe harbour."
+        ],
+        "review_required": true,
+        "warnings": [
+          "Prototype classification only; not legal advice, tax advice, Treasury guidance, or ATO guidance.",
+          "This result does not constitute legal validation of any actual safe harbour."
+        ]
+      },
       "schedule": "logistics_warehousing",
       "sector": "Prototype Schedule B - Logistics / Warehousing",
       "warnings": [
         "Illustrative placeholder output only.",
         "Do not use this result to estimate real tax payable.",
         "No legal, tax, Treasury, ATO, or economic validation is implied.",
+        "Safe harbour and avoidance outputs are prototype review flags, not legal findings.",
         "Coverage metrics not calculated because this example has no national monitoring inputs."
       ]
     }
   ],
   "metadata": {
-    "generated_at": "2026-05-13T06:09:26+00:00",
+    "generated_at": "2026-05-13T06:42:50+00:00",
     "non_claims": [
       "Not legal advice.",
       "Not tax advice.",

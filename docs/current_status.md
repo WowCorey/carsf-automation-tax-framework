@@ -13,6 +13,9 @@ Status: private research prototype.
 - Hostile tests for formula bounds, numeric fail-closed handling, avoidance metadata, and prototype schedule hardening.
 - Streamlit simulator.
 - End-to-end example runner and generated reports.
+- Executable prototype safe-harbour classification for small-business, worker-assist/admin AI, startup, low-NLTG, and essential-services review pathways.
+- Executable prototype anti-avoidance heuristics for token oversight, fake QLC inflation, offshore automation services, related-party AI fees, entity splitting, sector classification arbitrage, cloud-cost relabelling, robotics leasing, and artificial low AAVA.
+- Prototype grouped-entity review flags for entity splitting, related operating entities, separated IP/platform/employer structures, and thin Australian employing entities.
 
 ## What Is Still Placeholder
 
@@ -23,12 +26,14 @@ Status: private research prototype.
 - Example business numbers.
 - AAVA deductibility treatments.
 - Coverage and CARS-I national monitoring inputs.
+- Safe-harbour thresholds and review categories.
+- Anti-avoidance and grouping thresholds.
 
 ## What Is Not Yet Solved
 
 - Real calibration with Treasury, ATO, ABS, DSS, HILDA, HELP, superannuation, state payroll tax, and industry data.
-- Safe-harbour eligibility engine.
-- Grouped-entity aggregation.
+- Safe-harbour rules that modify liability.
+- Full grouped-entity aggregation.
 - Multi-schedule apportionment.
 - Related-party service charge adjustment.
 - Offshore AI service attribution.
@@ -43,3 +48,6 @@ Status: private research prototype.
 - Whether hybrid logistics should produce a non-zero NLTG under alternative placeholder scenarios.
 - Whether the AAVA taxonomy creates double-deduction or double-counting risks.
 - Whether reports could be mistaken for real tax estimates despite warnings.
+- Whether the safe-harbour heuristics are too broad for zero-NLTG cases.
+- Whether the AI logistics platform flags are over-inclusive or miss more subtle offshore/related-party structures.
+- Whether grouping review should become executable aggregation in the next build.
