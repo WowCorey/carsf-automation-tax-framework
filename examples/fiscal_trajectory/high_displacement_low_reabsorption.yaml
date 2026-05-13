@@ -1,0 +1,83 @@
+trajectory_id: high_displacement_low_reabsorption
+name: High Displacement / Low Reabsorption
+purpose: Shows higher fiscal stress when automation displacement outruns transition capacity.
+status: illustrative_placeholder_only
+illustrative_placeholder_only: true
+not_calibrated: true
+no_forecast_claim: true
+placeholder_notice: All values are illustrative placeholders and are not official data or forecasts.
+workforce:
+  start_year: 2026
+  end_year: 2034
+  baseline_employed_workers: 10000000
+  annual_displacement_rate: 0.035
+  annual_reabsorption_rate: 0.12
+  labour_force_growth_rate: 0.005
+  average_taxable_income: 80000
+  average_payg_tax_per_worker: 18000
+  average_super_contribution_per_worker: 9500
+  average_help_repayment_per_worker: 900
+  placeholder_basis:
+    - high displacement placeholder
+    - low reabsorption placeholder
+average_support_payment_per_person: 26000
+transition_support_share: 0.65
+retraining_support_share: 0.25
+administrative_cost_per_person: 1500
+company_tax_change_by_year:
+  2026: 180000000
+  2027: 210000000
+  2028: 240000000
+  2029: 270000000
+  2030: 300000000
+  2031: 330000000
+  2032: 360000000
+  2033: 390000000
+  2034: 420000000
+gst_consumption_change_by_year:
+  2026: 130000000
+  2027: 155000000
+  2028: 180000000
+  2029: 205000000
+  2030: 230000000
+  2031: 255000000
+  2032: 280000000
+  2033: 305000000
+  2034: 330000000
+state_payroll_tax_loss_by_year:
+  2026: 85000000
+  2027: 100000000
+  2028: 115000000
+  2029: 130000000
+  2030: 145000000
+  2031: 160000000
+  2032: 175000000
+  2033: 190000000
+  2034: 205000000
+automation_revenue_captured_by_year:
+  2026: 1050000000
+  2027: 1150000000
+  2028: 1250000000
+  2029: 1350000000
+  2030: 1450000000
+  2031: 1550000000
+  2032: 1650000000
+  2033: 1750000000
+  2034: 1850000000
+other_revenue_change_by_year:
+  2026: 35000000
+  2027: 45000000
+  2028: 55000000
+  2029: 65000000
+  2030: 75000000
+  2031: 85000000
+  2032: 95000000
+  2033: 105000000
+  2034: 115000000
+placeholder_basis:
+  - high stress comparator for deterministic tests
+sensitivity:
+  annual_displacement_rate: [0.025, 0.035, 0.045]
+  annual_reabsorption_rate: [0.08, 0.12, 0.20]
+  automation_revenue_capture_multiplier: [0.50, 1.00, 1.25]
+interpretation: Weak reabsorption allows displacement stock and fiscal pressure to compound, producing a larger residual gap than the low-displacement comparator.

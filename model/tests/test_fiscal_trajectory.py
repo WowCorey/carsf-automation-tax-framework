@@ -1,0 +1,81 @@
+from __future__ import annotations
+
+import yaml
+
+from carsf.fiscal_trajectory import run_fiscal_trajectory
+
+
+def _load(repo_root, name: str) -> dict:
+    return yaml.safe_load((repo_root / "examples" / "fiscal_trajectory" / f"{name}.yaml").read_text(encoding="utf-8"))
+
+
+def test_fiscal_trajectory_runs_all_fiscal_examples(repo_root) -> None:
+    paths = sorted((repo_root / "examples" / "fiscal_trajectory").glob("*.yaml"))
+    assert len(paths) >= 5
+
+    for path in paths:
+        example = yaml.safe_load(path.read_text(encoding="utf-8"))
+        result = run_fiscal_trajectory(example)
+        assert result.years
+        assert result.non_claims
+        assert result.cumulative_total_public_sector_gap >= 0
+
+
+def test_fiscal_trajectory_coverage_ratio_is_none_when_denominator_zero() -> None:
+    example = {
+        "trajectory_id": "zero_denominator",
+        "workforce": {
+            "start_year": 2026,
+            "end_year": 2026,
+            "baseline_employed_workers": 100,
+            "annual_displacement_rate": 0.0,
+            "annual_reabsorption_rate": 0.0,
+            "labour_force_growth_rate": 0.0,
+            "average_taxable_income": 0,
+            "average_payg_tax_per_worker": 0,
+            "average_super_contribution_per_worker": 0,
+            "average_help_repayment_per_worker": 0,
+        },
+        "average_support_payment_per_person": 0,
+        "transition_support_share": 0,
+        "retraining_support_share": 0,
+        "administrative_cost_per_person": 0,
+        "automation_revenue_captured_by_year": {2026: 0},
+    }
+    result = run_fiscal_trajectory(example)
+
+    assert result.years[0].coverage_ratio is None
+    assert result.years[0].warning_band == "not_assessable"
+
+
+def test_fiscal_trajectory_coverage_ratio_calculates_when_denominator_positive(repo_root) -> None:
+    example = _load(repo_root, "baseline_placeholder_2026_2034")
+    result = run_fiscal_trajectory(example)
+    first = result.years[0]
+
+    assert first.coverage_ratio == first.automation_revenue_captured / (
+        first.payg_revenue_loss + first.transfer_pressure
+    )
+
+
+def test_high_displacement_produces_higher_gap_than_low_displacement(repo_root) -> None:
+    high = run_fiscal_trajectory(_load(repo_root, "high_displacement_low_reabsorption"))
+    low = run_fiscal_trajectory(_load(repo_root, "low_displacement_high_reabsorption"))
+
+    assert high.cumulative_total_public_sector_gap > low.cumulative_total_public_sector_gap
+
+
+def test_weak_capture_produces_higher_residual_gap_than_stronger_capture(repo_root) -> None:
+    weak = run_fiscal_trajectory(_load(repo_root, "weak_automation_revenue_capture"))
+    strong = run_fiscal_trajectory(_load(repo_root, "stronger_automation_revenue_capture"))
+
+    assert weak.cumulative_commonwealth_gap_after_carsf > strong.cumulative_commonwealth_gap_after_carsf
+
+
+def test_first_warning_years_are_deterministic(repo_root) -> None:
+    example = _load(repo_root, "high_displacement_low_reabsorption")
+    first = run_fiscal_trajectory(example)
+    second = run_fiscal_trajectory(example)
+
+    assert first.first_high_warning_year == second.first_high_warning_year
+    assert first.first_critical_warning_year == second.first_critical_warning_year

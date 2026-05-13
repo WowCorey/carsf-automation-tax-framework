@@ -1,0 +1,84 @@
+trajectory_id: baseline_placeholder_2026_2034
+name: Baseline Placeholder 2026-2034
+purpose: Deterministic illustrative placeholder trajectory from 2026 to 2034.
+status: illustrative_placeholder_only
+illustrative_placeholder_only: true
+not_calibrated: true
+no_forecast_claim: true
+placeholder_notice: All values are illustrative placeholders and are not official fiscal, labour-market, Treasury, ATO, ABS, DSS, PBO, or state data.
+workforce:
+  start_year: 2026
+  end_year: 2034
+  baseline_employed_workers: 10000000
+  annual_displacement_rate: 0.018
+  annual_reabsorption_rate: 0.35
+  labour_force_growth_rate: 0.005
+  average_taxable_income: 80000
+  average_payg_tax_per_worker: 18000
+  average_super_contribution_per_worker: 9500
+  average_help_repayment_per_worker: 900
+  placeholder_basis:
+    - placeholder national workforce stock for deterministic engine testing
+    - not calibrated to ABS labour force data
+average_support_payment_per_person: 24000
+transition_support_share: 0.55
+retraining_support_share: 0.20
+administrative_cost_per_person: 1200
+company_tax_change_by_year:
+  2026: 120000000
+  2027: 135000000
+  2028: 150000000
+  2029: 165000000
+  2030: 180000000
+  2031: 195000000
+  2032: 210000000
+  2033: 225000000
+  2034: 240000000
+gst_consumption_change_by_year:
+  2026: 80000000
+  2027: 90000000
+  2028: 100000000
+  2029: 110000000
+  2030: 120000000
+  2031: 130000000
+  2032: 140000000
+  2033: 150000000
+  2034: 160000000
+state_payroll_tax_loss_by_year:
+  2026: 45000000
+  2027: 52000000
+  2028: 59000000
+  2029: 66000000
+  2030: 73000000
+  2031: 80000000
+  2032: 87000000
+  2033: 94000000
+  2034: 101000000
+automation_revenue_captured_by_year:
+  2026: 900000000
+  2027: 1000000000
+  2028: 1100000000
+  2029: 1200000000
+  2030: 1300000000
+  2031: 1400000000
+  2032: 1500000000
+  2033: 1600000000
+  2034: 1700000000
+other_revenue_change_by_year:
+  2026: 20000000
+  2027: 25000000
+  2028: 30000000
+  2029: 35000000
+  2030: 40000000
+  2031: 45000000
+  2032: 50000000
+  2033: 55000000
+  2034: 60000000
+placeholder_basis:
+  - deterministic placeholder fiscal trajectory only
+  - no forecast claim
+sensitivity:
+  annual_displacement_rate: [0.012, 0.018, 0.026]
+  annual_reabsorption_rate: [0.20, 0.35, 0.50]
+  automation_revenue_capture_multiplier: [0.60, 1.00, 1.40]
+interpretation: Baseline placeholder scenario shows the fiscal trajectory engine plumbing across PAYG erosion, transfer pressure, automation revenue capture, and residual public-sector gap without making any forecast-validity claim.

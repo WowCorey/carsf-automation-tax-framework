@@ -35,4 +35,7 @@
 - Pass-through previews may overstate or understate consumer, worker, supplier, or capital burden without real elasticity estimates.
 - Normal-return preservation proxies may be misleading until sector-specific capital returns and risk premia are calibrated.
 - Under-capture and over-capture flags cannot be credible without calibrated national automation fiscal damage and captured revenue data.
+- Fiscal trajectory outputs may be mistaken for forecasts if placeholder labels and non-claim warnings are removed or ignored.
+- Workforce displacement, reabsorption, PAYG loss, transfer pressure, GST effects, superannuation, HELP/HECS, and state payroll-tax effects remain uncalibrated.
+- National fiscal trajectory results do not determine firm-level liability and may mislead if used as operative CARSF settings.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.
