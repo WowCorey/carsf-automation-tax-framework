@@ -735,7 +735,7 @@
           }
         ]
       },
-      "interpretation": "Hybrid logistics company: mixed human and automated output creates middle-band results in the placeholder set. It should not behave like the thin-labour AI platform stress case.",
+      "interpretation": "Hybrid logistics company: AII is intermediate, but NLTG and liability remain zero under the current placeholders because QLC remains strong. This demonstrates that hybrid automation is not automatically penalised. A later stress variant should test non-zero but intermediate NLTG.",
       "limitation_notes": [
         "Numbers are illustrative placeholders and are not Australian logistics data.",
         "Schedule values are not calibrated.",
@@ -915,7 +915,7 @@
     }
   ],
   "metadata": {
-    "generated_at": "2026-05-13T06:05:40+00:00",
+    "generated_at": "2026-05-13T06:09:26+00:00",
     "non_claims": [
       "Not legal advice.",
       "Not tax advice.",

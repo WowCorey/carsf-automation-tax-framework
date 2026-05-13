@@ -1,6 +1,6 @@
 # CARSF V1.5 Worked Example Results
 
-Generated at: `2026-05-13T06:05:40+00:00`
+Generated at: `2026-05-13T06:09:26+00:00`
 
 Version: CARSF V1.5 prototype
 
@@ -16,7 +16,7 @@ These outputs are illustrative placeholders only. They are not legal, tax, Treas
 | Mechanic Ai Admin | automotive_repair | 4.85 | 5.33 | 0.11 | 0.00 | 170,000.00 | 0.00 | 0.00 | 0.00 | AI-admin mechanic shop: AI is mainly supporting booking, compliance, customer support, and diagnostics while humans still perform core repair work. The low NLTG relative to the robotic shop illustrates the distinction between worker-assist/admin AI and labour-substituting robotics. |
 | Mechanic Robotic | automotive_repair | 1.73 | 8.00 | 0.81 | 4.74 | 880,000.00 | 158,400.00 | 0.00 | 148,400.00 | Fully robotic mechanic shop: high automation intensity and low QLC relative to output create a materially higher NLTG than the traditional shop. The result is a stronger liability or recorded shortfall signal in this prototype. |
 | Logistics Human Heavy | logistics_warehousing | 11.10 | 9.00 | 0.05 | 0.00 | 150,000.00 | 0.00 | 0.00 | 0.00 | Human-heavy logistics company: a larger human workforce and lower automation intensity produce lower NLTG than the automated logistics examples. |
-| Logistics Hybrid | logistics_warehousing | 11.10 | 20.00 | 0.27 | 0.00 | 800,000.00 | 0.00 | 0.00 | 0.00 | Hybrid logistics company: mixed human and automated output creates middle-band results in the placeholder set. It should not behave like the thin-labour AI platform stress case. |
+| Logistics Hybrid | logistics_warehousing | 11.10 | 20.00 | 0.27 | 0.00 | 800,000.00 | 0.00 | 0.00 | 0.00 | Hybrid logistics company: AII is intermediate, but NLTG and liability remain zero under the current placeholders because QLC remains strong. This demonstrates that hybrid automation is not automatically penalised. A later stress variant should test non-zero but intermediate NLTG. |
 | Logistics Ai Platform | logistics_warehousing | 3.32 | 40.00 | 0.73 | 25.96 | 3,840,000.00 | 768,000.00 | 204,160.00 | 922,160.00 | AI logistics platform: high automated productive capacity and low QLC relative to output create the strongest stress case among the six examples. |
 
 The comparison should be read directionally only: AI-admin repair is not treated like robotic repair, robotic repair is higher-risk than traditional repair, and the AI logistics platform is higher-risk than hybrid logistics under these placeholders.
@@ -409,7 +409,7 @@ Logistics operator using route optimisation and warehouse scanning while retaini
 
 ### E. Plain-English Interpretation
 
-Hybrid logistics company: mixed human and automated output creates middle-band results in the placeholder set. It should not behave like the thin-labour AI platform stress case.
+Hybrid logistics company: AII is intermediate, but NLTG and liability remain zero under the current placeholders because QLC remains strong. This demonstrates that hybrid automation is not automatically penalised. A later stress variant should test non-zero but intermediate NLTG.
 
 ### F. Red-Team / Limitation Notes
 

@@ -230,9 +230,10 @@ def interpretation_for_example(example_id: str, outputs: ExampleOutputs) -> str:
             "intensity produce lower NLTG than the automated logistics examples."
         ),
         "logistics_hybrid": (
-            "Hybrid logistics company: mixed human and automated output creates middle-band "
-            "results in the placeholder set. It should not behave like the thin-labour AI "
-            "platform stress case."
+            "Hybrid logistics company: AII is intermediate, but NLTG and liability "
+            "remain zero under the current placeholders because QLC remains strong. "
+            "This demonstrates that hybrid automation is not automatically penalised. "
+            "A later stress variant should test non-zero but intermediate NLTG."
         ),
         "logistics_ai_platform": (
             "AI logistics platform: high automated productive capacity and low QLC relative "

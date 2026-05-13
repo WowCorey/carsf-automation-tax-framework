@@ -53,6 +53,19 @@ def test_hybrid_logistics_sits_between_human_and_platform_where_supported(repo_r
     assert human.aii < hybrid.aii < platform.aii
 
 
+def test_hybrid_interpretation_matches_zero_nltg_and_liability(repo_root: Path) -> None:
+    result = results_by_id(repo_root)["logistics_hybrid"]
+    interpretation = result.interpretation.lower()
+
+    assert result.outputs.nltg == 0
+    assert result.outputs.liability == 0
+    assert "aii is intermediate" in interpretation
+    assert "nltg and liability remain zero" in interpretation
+    assert "qlc remains strong" in interpretation
+    assert "not automatically penalised" in interpretation
+    assert "non-zero but intermediate nltg" in interpretation
+
+
 def test_reports_are_generated(repo_root: Path) -> None:
     reports_dir = repo_root / "tmp" / "test-example-reports"
     completed = subprocess.run(
