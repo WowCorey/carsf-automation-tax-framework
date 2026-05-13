@@ -21,6 +21,9 @@
 - Privacy/secrecy classification is prototype-only and may be inadequate for actual protected, taxpayer, worker, commercially sensitive, or restricted government data.
 - Secure-ingestion controls are not real DLP, IAM, secure storage, malware scanning, deletion enforcement, or cybersecurity tooling.
 - Sensitive-marker scanning may miss forms of sensitive data not represented in the marker list.
+- Repository guardrails may miss sensitive content if it does not match the prototype marker or path rules.
+- Repository guardrails may over-block governance text, fixtures, or documentation unless allowlists are carefully maintained.
+- Passing repository guardrails does not prove that the repository is free of secrets, personal data, taxpayer data, real business records, or restricted evidence.
 - Over-blocking synthetic fixtures is acceptable, but under-blocking real sensitive data would be unacceptable outside the prototype.
 - Redaction metadata may create false confidence if readers think real redaction is implemented in the repo.
 - Decision logs are compact model-flow summaries and may omit facts that a real audit trail would require.

@@ -18,7 +18,7 @@ All sector values, schedule values, examples, caps, Fiscal Replacement Value val
 
 - `paper/` - Markdown policy paper, V1.5 working draft, formulas, glossary, references, and export notes.
 - `audits/` - review notes, responses, and red-team register.
-- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, and mixed-unit handling.
+- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, and repository guardrails.
 - `model/tests/` - pytest coverage for formula bounds, caps, examples, and avoidance flags.
 - `data/` - source-category registry and placeholder policy; no datasets are committed.
 - `data/mock_evidence/` - synthetic mock evidence packets for workflow testing only; no real evidence or personal data is committed.
@@ -76,9 +76,21 @@ Generated secure-ingestion reports:
 - `reports/secure_ingestion_controls.md`
 - `reports/secure_ingestion_controls.json`
 
+Run repository guardrail enforcement:
+
+```powershell
+python scripts/run_repo_guardrails.py
+```
+
+Generated repository-guardrail reports:
+
+- `reports/repo_guardrails.md`
+- `reports/repo_guardrails.json`
+
 The reports are illustrative placeholder outputs only. They are not legal grouping findings, transfer-pricing adjustments, ATO findings, tax assessments, Treasury guidance, OECD/BEPS analysis, economic validation, or real liability calculations.
 Mock evidence reports use synthetic fixtures only and do not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.
 Secure-ingestion reports are prototype governance controls only. Only synthetic mock evidence is allowed in this repository; real evidence must not be committed.
+Repository guardrail reports are prototype enforcement checks only. They are not a complete DLP system, secret scanner, cybersecurity control, legal/privacy audit, Treasury control, ATO control, or forensic validation.
 
 ## Run the Simulator
 
@@ -104,6 +116,7 @@ V1.5 is not just an examples update. It is V1.4 plus two prototype sector schedu
 - record prototype evidence requirements and decision-log summaries without validating liability;
 - test controlled mock evidence packet submission, review states, and privacy/secrecy classification without real evidence;
 - enforce a default-deny prototype ingestion policy before any non-synthetic evidence could enter the repo;
+- enforce repository-level CI guardrails for likely evidence leaks, secret markers, wrong storage zones, and unsafe generated report content;
 - define a calibration shell and data source registry without collecting real data;
 - identify open-source AI and R&D Tax Incentive interaction questions without overclaiming.
 
@@ -117,3 +130,4 @@ Adjusted AAVA is preview-only and does not replace reported AAVA. The value-weig
 Evidence assessments are prototype governance scaffolding only. No calibration has occurred and no real evidence or restricted datasets have been collected.
 Controlled mock evidence can upgrade only prototype workflow status, such as `partial` or `sufficient_for_prototype`; it never creates real-world sufficiency.
 Secure storage, real redaction, real access control, legal/privacy approval, and audit enforcement remain out of scope.
+Repository guardrails are over-blocking by design and cannot prove that the repository is free of sensitive content. Real evidence remains prohibited.

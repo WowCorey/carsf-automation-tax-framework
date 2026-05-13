@@ -1,0 +1,1 @@
+Synthetic fixture under a prohibited evidence path.

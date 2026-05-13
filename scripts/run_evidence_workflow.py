@@ -88,7 +88,19 @@ def run_mock_evidence_workflow(data_dir: Path) -> list[dict[str, Any]]:
         rows.append(
             {
                 "packet_path": str(path.relative_to(REPO_ROOT)),
-                "packet": packet.to_jsonable(),
+                "packet_metadata": {
+                    "packet_id": packet.packet_id,
+                    "linked_example_id": packet.linked_example_id,
+                    "synthetic_mock_evidence_only": packet.synthetic_mock_evidence_only,
+                    "created_for": packet.created_for,
+                    "privacy_classification": packet.privacy_classification,
+                    "secrecy_classification": packet.secrecy_classification,
+                    "review_state": packet.review_state,
+                    "warnings": packet.warnings,
+                    "non_claims": packet.non_claims,
+                    "ready_for_external_review": packet.ready_for_external_review,
+                    "tests_pass_marker": packet.tests_pass_marker,
+                },
                 "summary": summary.to_jsonable(),
                 "classification": classification,
                 "placeholder_to_submitted": submit_transition.to_jsonable(),

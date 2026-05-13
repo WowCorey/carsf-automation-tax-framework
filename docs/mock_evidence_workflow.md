@@ -52,3 +52,15 @@ python scripts/run_ingestion_controls.py
 ```
 
 Real evidence, personal data, taxpayer data, business records, restricted government data, secrets, credentials, invoices, contracts, employment records, payslips, and transfer-pricing documents must not be committed to this repository.
+
+## Repository Enforcement
+
+Run:
+
+```powershell
+python scripts/run_repo_guardrails.py
+```
+
+The repo guardrails allow synthetic mock fixtures only in controlled mock paths and require `synthetic_mock_evidence_only: true`. Generated reports must contain non-claim language and must not include raw evidence packet payloads.
+
+These are prototype repository guardrails only. They are not a complete DLP system, secret scanner, cybersecurity control, legal/privacy audit, Treasury control, ATO control, or forensic validation.
