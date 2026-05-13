@@ -31,4 +31,8 @@
 - Destination and activity attribution may create treaty, trade, and compliance disputes.
 - Excessive liability may deter useful productivity-enhancing investment.
 - Under-calibrated caps may make the framework fiscally symbolic rather than stabilising.
+- Investment guardrails may create false comfort if placeholder burden bands are mistaken for calibrated economic incidence modelling.
+- Pass-through previews may overstate or understate consumer, worker, supplier, or capital burden without real elasticity estimates.
+- Normal-return preservation proxies may be misleading until sector-specific capital returns and risk premia are calibrated.
+- Under-capture and over-capture flags cannot be credible without calibrated national automation fiscal damage and captured revenue data.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.

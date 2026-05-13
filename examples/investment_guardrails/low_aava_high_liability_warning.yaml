@@ -1,0 +1,44 @@
+example_id: low_aava_high_liability_warning
+name: Low-AAVA High-Liability Warning Case
+status: illustrative_placeholder_only
+placeholder_notice: All values are illustrative placeholders for over-capture guardrail testing only.
+sector: automotive_repair
+scenario: Low reported AAVA paired with high placeholder liability, requiring critical review before any operative use.
+investment_inputs:
+  aava: 0.0
+  final_liability: 250000.0
+  capital_base: 2000000.0
+  uplift_rate: 0.10
+  revenue: 5000000.0
+  normal_return_proxy: 200000.0
+  sector: automotive_repair
+  placeholder_basis:
+    - illustrative over-capture warning case
+    - no real AAVA calibration
+incidence_assumption:
+  pass_through_rate: 0.35
+  worker_pressure_rate: 0.15
+  supplier_pressure_rate: 0.10
+  capital_absorption_rate: 0.20
+  assumption_basis: illustrative stress placeholder
+  illustrative_placeholder_only: true
+burden_balance:
+  automation_fiscal_damage: 150000.0
+  automation_revenue_captured: 250000.0
+  final_liability: 250000.0
+  aava: 0.0
+  nltg: 8.0
+  safe_harbour_category: NONE
+  avoidance_risk: medium
+  placeholder_basis:
+    - illustrative over-capture public revenue case
+sensitivity:
+  pass_through_rates: [0.0, 0.25, 0.50]
+  cap_rates: [0.05, 0.10, 0.20]
+  aava_values: [0.0, 500000.0, 1000000.0]
+  raw_liability: 250000.0
+interpretation: Positive liability with zero AAVA is a critical prototype warning, not a validated policy outcome.
+non_claims:
+  - not economic validation
+  - not investment advice
+  - not tax advice

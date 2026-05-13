@@ -277,3 +277,40 @@ Limitations:
 - Repository guardrails are prototype checks only.
 - They are not complete DLP, secret scanning, cybersecurity control, legal/privacy audit, Treasury control, ATO control, or forensic validation.
 - Passing the guardrails does not prove that the repository is free of sensitive content.
+
+## V1.5 Investment and Incidence Guardrails
+
+Branch: `v1.5-investment-incidence-and-burden-guardrails`
+
+Baseline: PR #9 merged into `main`, including repository-level enforcement gates and CI guardrails.
+
+Purpose of this build:
+
+- Add non-operative investment burden review guardrails.
+- Add tax-incidence / pass-through placeholder previews.
+- Add under-capture and over-capture burden-balance checks.
+- Add placeholder sensitivity sweeps for pass-through rates, cap rates, and AAVA values.
+- Add illustrative investment guardrail stress examples and reports.
+
+Tests run:
+
+- `python -m pytest` - 310 passed, 1 pytest-asyncio deprecation warning under Python 3.14.
+- `python -m compileall -q model simulator scripts` - passed.
+- Recursive YAML parse check for schedules/examples/data - parsed 32 YAML files.
+- `python scripts/run_examples.py` - regenerated example, grouped, transfer-pricing, evidence, and calibration reports.
+- `python scripts/run_evidence_workflow.py` - regenerated mock evidence workflow reports.
+- `python scripts/run_ingestion_controls.py` - regenerated secure-ingestion control reports.
+- `python scripts/run_investment_guardrails.py` - generated investment and incidence guardrail reports.
+- `python scripts/run_repo_guardrails.py` - generated repository guardrail reports with zero denied findings.
+- Streamlit bare import probe for `simulator/pages/12_Investment_and_Incidence_Guardrails.py` - passed.
+
+Reports generated:
+
+- `reports/investment_guardrails.json`
+- `reports/investment_guardrails.md`
+
+Limitations:
+
+- Investment and incidence guardrails are prototype review outputs only.
+- They are not economic validation, investment advice, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice.
+- Guardrail outputs do not automatically modify final liability.

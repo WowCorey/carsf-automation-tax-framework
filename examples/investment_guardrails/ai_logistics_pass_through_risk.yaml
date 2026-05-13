@@ -1,0 +1,44 @@
+example_id: ai_logistics_pass_through_risk
+name: AI Logistics Pass-Through Risk Case
+status: illustrative_placeholder_only
+placeholder_notice: All values are illustrative placeholders for incidence guardrail testing only.
+sector: logistics_warehousing
+scenario: AI logistics platform with material placeholder liability and consumer pass-through sensitivity.
+investment_inputs:
+  aava: 9000000.0
+  final_liability: 1800000.0
+  capital_base: 12000000.0
+  uplift_rate: 0.10
+  revenue: 30000000.0
+  normal_return_proxy: 1200000.0
+  sector: logistics_warehousing
+  placeholder_basis:
+    - illustrative pass-through risk case
+    - no real elasticity values
+incidence_assumption:
+  pass_through_rate: 0.45
+  worker_pressure_rate: 0.10
+  supplier_pressure_rate: 0.05
+  capital_absorption_rate: 0.20
+  assumption_basis: illustrative consumer pass-through stress placeholder
+  illustrative_placeholder_only: true
+burden_balance:
+  automation_fiscal_damage:
+  automation_revenue_captured:
+  final_liability: 1800000.0
+  aava: 9000000.0
+  nltg: 24.0
+  safe_harbour_category: NONE
+  avoidance_risk: high
+  placeholder_basis:
+    - national damage data not supplied
+sensitivity:
+  pass_through_rates: [0.15, 0.30, 0.45, 0.60]
+  cap_rates: [0.10, 0.20, 0.30]
+  aava_values: [7000000.0, 9000000.0, 12000000.0]
+  raw_liability: 2400000.0
+interpretation: Pass-through risk is material under placeholders and requires incidence calibration before external use.
+non_claims:
+  - not economic validation
+  - not market forecasting
+  - not tax advice
