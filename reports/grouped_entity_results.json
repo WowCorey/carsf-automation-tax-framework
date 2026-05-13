@@ -1,0 +1,611 @@
+{
+  "aggregation_result": {
+    "aggregate_aava": 3700000.0,
+    "aggregate_hle": 40.0,
+    "aggregate_liability_preview": 863359.9999999999,
+    "aggregate_nltg_preview": 23.200000000000003,
+    "aggregate_output": 4000000.0,
+    "aggregate_qlc": 3.4,
+    "aggregate_revenue": 8500000.0,
+    "entity_count": 4,
+    "flags": [
+      "OFFSHORE_AUTOMATION_SERVICE",
+      "RELATED_PARTY_AI_SERVICE_FEES",
+      "ENTITY_SPLITTING_PREVIEW",
+      "SECTOR_CLASSIFICATION_ARBITRAGE"
+    ],
+    "group_id": "logistics_split_structure",
+    "group_recomputed_liability_preview": 863359.9999999999,
+    "output_units_match": true,
+    "placeholder_basis": [
+      "Grouped aggregation is a prototype modelling preview only.",
+      "Numbers are illustrative placeholders and are not Australian logistics, tax, or transfer-pricing data.",
+      "Do not use this result as legal grouping, tax assessment, Treasury guidance, or ATO guidance."
+    ],
+    "review_required": true,
+    "risk_level": "high",
+    "standalone_entity_liability_sum": 0.0,
+    "warnings": [
+      "Prototype grouped-entity preview only; no legal, tax, Treasury, or ATO validation is provided.",
+      "This is not full tax-law grouping, transfer-pricing, or attribution logic."
+    ],
+    "weighted_aii": 0.665
+  },
+  "apportionment_result": {
+    "activities": [
+      {
+        "activity_id": "logistics_transport",
+        "basis": "audited_placeholder_output_and_revenue_share",
+        "description": "Line-haul and last-mile freight movement.",
+        "placeholder_basis": [
+          "illustrative_placeholder_only",
+          "would require transport-management records and revenue attribution in a real schedule"
+        ],
+        "schedule_id": "logistics_warehousing",
+        "share": 0.6
+      },
+      {
+        "activity_id": "warehousing",
+        "basis": "audited_placeholder_pallet_movement_share",
+        "description": "Pallet movements and warehouse fulfilment.",
+        "placeholder_basis": [
+          "illustrative_placeholder_only",
+          "current prototype schedule combines logistics and warehousing until calibrated split exists"
+        ],
+        "schedule_id": "logistics_warehousing",
+        "share": 0.25
+      },
+      {
+        "activity_id": "platform_dispatch",
+        "basis": "audited_placeholder_platform_dispatch_share",
+        "description": "Automated dispatch, routing, and allocation platform activity.",
+        "placeholder_basis": [
+          "illustrative_placeholder_only",
+          "platform dispatch remains inside Prototype Schedule B pending schedule split"
+        ],
+        "schedule_id": "logistics_warehousing",
+        "share": 0.1
+      },
+      {
+        "activity_id": "customer_support_admin",
+        "basis": "audited_placeholder_support_workshare",
+        "description": "Customer support and administrative activity tied to Australian logistics output.",
+        "placeholder_basis": [
+          "illustrative_placeholder_only",
+          "support/admin allocation requires policy review before any real use"
+        ],
+        "schedule_id": "logistics_warehousing",
+        "share": 0.05
+      }
+    ],
+    "placeholder_basis": [
+      "Apportionment is a prototype schedule-blending model only.",
+      "It is not legal attribution, tax-law apportionment, Treasury guidance, or ATO guidance.",
+      "All shares and weighted parameters are illustrative placeholders unless separately calibrated.",
+      "Shares are illustrative placeholders and are not Australian industry data."
+    ],
+    "review_required": false,
+    "valid": true,
+    "warnings": [
+      "Prototype apportionment preview only; no legal, tax, Treasury, or ATO validation is provided."
+    ],
+    "weighted_parameters": {
+      "LAMBDA_sector": 0.27,
+      "aii_weights": {
+        "auto_decision_ratio": 0.3,
+        "auto_process_share": 0.3,
+        "compute_ratio": 0.2,
+        "robotics_capital_ratio": 0.2
+      },
+      "frv_floor": 26000.0,
+      "frv_full": 90000.0,
+      "frv_standard": 47000.0,
+      "lambda_sector": 0.2,
+      "opfte_libc": 100000.0,
+      "qlc_max_multiplier": 1.25,
+      "theta": 0.6000000000000001
+    }
+  },
+  "hybrid_stress_result": {
+    "avoidance_result": {
+      "flags": [
+        "FAKE_QLC_INFLATION"
+      ],
+      "placeholder_basis": [
+        "Avoidance checks are prototype heuristics only.",
+        "Thresholds are illustrative placeholders and not calibrated enforcement rules.",
+        "No result constitutes legal, tax, Treasury, or ATO validation."
+      ],
+      "reasons": [
+        "QLC scoring may be inflated or concentrated in too few roles relative to automated output."
+      ],
+      "recommended_review": [
+        "Prototype review flags only; no legal, tax, Treasury, or ATO validation is provided.",
+        "Review payroll, hours, wage quality, security, training, and Australian nexus evidence."
+      ],
+      "risk_level": "medium"
+    },
+    "business_description": "Hybrid logistics operator with meaningful route automation and warehouse automation while retaining substantial Australian driving, dispatch, and warehouse labour.",
+    "evidence_labels": [
+      "example.status=illustrative_placeholder",
+      "example.placeholder_notice=Numbers are illustrative placeholders and are not Australian logistics data.",
+      "schedule.status=placeholder_prototype_for_v1_5",
+      "schedule.calibration_status=illustrative_placeholder_values_only",
+      "schedule.opfte_libc.evidence_label=illustrative_placeholder",
+      "schedule.frv.evidence_label=illustrative_placeholder"
+    ],
+    "formula_trace": [
+      "QLC = sum capped worker QLC = 8.7500",
+      "OPFTE_LIBC = schedule placeholder benchmark = 100000.0000",
+      "HLE = output / OPFTE_LIBC = 30.0000",
+      "AII = weighted bounded automation components = 0.5300",
+      "NLTG = max(0, HLE * AII - QLC) = 7.1500",
+      "AAVA = revenue - non-automation costs - QLC wage costs = 1850000.00",
+      "AEL raw = NLTG * FRV standard = 336050.00",
+      "AEL payable = min(AEL raw, lambda_sector * AAVA) = 336050.00",
+      "Shortfall = AEL raw - AEL payable = 0.00",
+      "ARL = PRRT-inspired uplift logic result = 0.00",
+      "Credits = capped verified credits = 80000.00",
+      "Final liability = capped combined liability = 256050.00"
+    ],
+    "grouping_risk_result": {
+      "flags": [],
+      "placeholder_basis": [
+        "Grouping checks are prototype review flags only.",
+        "No full legal grouping, transfer-pricing, or attribution rule is implemented."
+      ],
+      "reasons": [
+        "No grouped-entity review flags were triggered."
+      ],
+      "recommended_review": [
+        "Prototype grouping review only; this is not legal grouping analysis or tax-law validation."
+      ],
+      "risk_level": "low"
+    },
+    "id": "logistics_hybrid_stress",
+    "inputs": {
+      "aava_inputs": {
+        "australian_attributable_revenue": 6000000.0,
+        "verified_non_automation_input_costs": 3300000.0,
+        "verified_qlc_wage_cost": 850000.0
+      },
+      "automation_components": {
+        "auto_decision_ratio": 0.6,
+        "auto_process_share": 0.6,
+        "compute_ratio": 0.45,
+        "robotics_capital_ratio": 0.4
+      },
+      "capital_base": 2200000.0,
+      "credits": {
+        "verified_credits": 80000.0
+      },
+      "output": {
+        "unit": "tonne_kilometres_or_pallet_movements",
+        "value": 3000000.0
+      },
+      "risk_metadata": {
+        "artificial_low_profit_or_aava_risk": false,
+        "cloud_cost_relabeling_risk": false,
+        "entity_splitting_risk": false,
+        "essential_service_review": false,
+        "fake_qlc_inflation_risk": false,
+        "offshore_automation_service": false,
+        "related_entities": [],
+        "related_party_ai_service_fees": false,
+        "robotics_leasing_risk": false,
+        "sector_classification_risk": false,
+        "small_business_placeholder": true,
+        "startup_placeholder": false,
+        "status": "illustrative_placeholder_review_metadata",
+        "token_human_oversight_risk": false,
+        "worker_assist_admin_ai": false
+      },
+      "schedule_placeholders": {
+        "caps": {
+          "ael_capacity_cap_rate": 0.2,
+          "combined_liability_cap_rate": 0.27,
+          "credit_cap_rate": 0.6,
+          "rent_tax_rate": 0.22,
+          "uplift_rate": 1.12
+        },
+        "frv": {
+          "evidence_label": "illustrative_placeholder",
+          "floor_placeholder": 26000.0,
+          "full_placeholder": 90000.0,
+          "standard_placeholder": 47000.0
+        },
+        "opfte_libc_placeholder": {
+          "evidence_label": "illustrative_placeholder",
+          "unit": "tonne_kilometres_or_pallet_movements_per_qualified_fte",
+          "value": 100000.0
+        }
+      },
+      "workers": [
+        {
+          "annual_hours": 1820,
+          "australian_nexus": 1.0,
+          "job_security": 0.72,
+          "role": "driver",
+          "skill_development": 0.5,
+          "wage_quality": 0.64
+        },
+        {
+          "annual_hours": 1820,
+          "australian_nexus": 1.0,
+          "job_security": 0.72,
+          "role": "driver",
+          "skill_development": 0.5,
+          "wage_quality": 0.64
+        },
+        {
+          "annual_hours": 1820,
+          "australian_nexus": 1.0,
+          "job_security": 0.72,
+          "role": "driver",
+          "skill_development": 0.5,
+          "wage_quality": 0.64
+        },
+        {
+          "annual_hours": 1820,
+          "australian_nexus": 1.0,
+          "job_security": 0.7,
+          "role": "warehouse_worker",
+          "skill_development": 0.5,
+          "wage_quality": 0.6
+        },
+        {
+          "annual_hours": 1820,
+          "australian_nexus": 1.0,
+          "job_security": 0.7,
+          "role": "warehouse_worker",
+          "skill_development": 0.5,
+          "wage_quality": 0.6
+        },
+        {
+          "annual_hours": 1820,
+          "australian_nexus": 1.0,
+          "job_security": 0.72,
+          "role": "dispatcher",
+          "skill_development": 0.6,
+          "wage_quality": 0.66
+        },
+        {
+          "annual_hours": 1820,
+          "australian_nexus": 1.0,
+          "job_security": 0.75,
+          "role": "systems_operator",
+          "skill_development": 0.75,
+          "wage_quality": 0.7
+        }
+      ]
+    },
+    "interpretation": "Hybrid logistics stress variant: automation is meaningful and NLTG is non-zero, but the result remains below the thin-labour AI logistics platform because substantial Australian labour is still present.",
+    "limitation_notes": [
+      "Numbers are illustrative placeholders and are not Australian logistics data.",
+      "Schedule values are not calibrated.",
+      "AAVA deductibility remains a prototype taxonomy.",
+      "Safe harbour, anti-avoidance, and grouping checks are executable review flags only.",
+      "Safe harbour classification does not automatically reduce or erase liability in this build.",
+      "Related-party, offshore, and sector-classification outputs are not legal or tax conclusions."
+    ],
+    "name": "Logistics Hybrid Stress",
+    "outputs": {
+      "aava": 1850000.0,
+      "ael_payable": 336050.0,
+      "ael_raw": 336050.0,
+      "aii": 0.53,
+      "arl": 0.0,
+      "cars_i": null,
+      "coverage_ratio": null,
+      "coverage_ratio_display": "N/A - no national monitoring inputs",
+      "credits": 80000.0,
+      "hle": 30.0,
+      "liability": 256050.0,
+      "nltg": 7.15,
+      "opfte_libc": 100000.0,
+      "qlc": 8.75,
+      "shortfall": 0.0
+    },
+    "red_team_notes": {
+      "flags": [],
+      "notes": [
+        "Tests useful hybrid automation where NLTG is non-zero but not platform-level."
+      ]
+    },
+    "safe_harbour_result": {
+      "category": "NO_SAFE_HARBOUR_REVIEW",
+      "eligible": false,
+      "placeholder_basis": [
+        "Prototype safe-harbour checks use illustrative placeholder thresholds only.",
+        "low_nltg_threshold_placeholder=0.25",
+        "substantial_human_labour_qlc_hle_ratio_placeholder=0.35",
+        "small_business_revenue_threshold_placeholder=10000000.0",
+        "Safe-harbour classification does not alter liability in this build."
+      ],
+      "reasons": [
+        "No prototype safe-harbour category was satisfied under the placeholder checks."
+      ],
+      "review_required": true,
+      "warnings": [
+        "Prototype classification only; not legal advice, tax advice, Treasury guidance, or ATO guidance.",
+        "This result does not constitute legal validation of any actual safe harbour."
+      ]
+    },
+    "schedule": "logistics_warehousing",
+    "sector": "Prototype Schedule B - Logistics / Warehousing",
+    "warnings": [
+      "Illustrative placeholder output only.",
+      "Do not use this result to estimate real tax payable.",
+      "No legal, tax, Treasury, ATO, or economic validation is implied.",
+      "Safe harbour and avoidance outputs are prototype review flags, not legal findings.",
+      "Coverage metrics not calculated because this example has no national monitoring inputs."
+    ]
+  },
+  "metadata": {
+    "generated_at": "2026-05-13T07:06:27+00:00",
+    "non_claims": [
+      "Not legal grouping analysis.",
+      "Not tax-law attribution.",
+      "Not Treasury or ATO guidance.",
+      "Not economic validation.",
+      "Not a real tax assessment.",
+      "All grouped and apportioned values use illustrative placeholder inputs."
+    ],
+    "status": "illustrative_grouped_entity_and_apportionment_previews_only",
+    "version": "CARSF V1.5 prototype"
+  },
+  "mixed_apportionment": {
+    "apportionment": {
+      "activities": [
+        {
+          "activity_id": "logistics_transport",
+          "basis": "audited_placeholder_output_and_revenue_share",
+          "description": "Line-haul and last-mile freight movement.",
+          "placeholder_basis": [
+            "illustrative_placeholder_only",
+            "would require transport-management records and revenue attribution in a real schedule"
+          ],
+          "schedule_id": "logistics_warehousing",
+          "share": 0.6
+        },
+        {
+          "activity_id": "warehousing",
+          "basis": "audited_placeholder_pallet_movement_share",
+          "description": "Pallet movements and warehouse fulfilment.",
+          "placeholder_basis": [
+            "illustrative_placeholder_only",
+            "current prototype schedule combines logistics and warehousing until calibrated split exists"
+          ],
+          "schedule_id": "logistics_warehousing",
+          "share": 0.25
+        },
+        {
+          "activity_id": "platform_dispatch",
+          "basis": "audited_placeholder_platform_dispatch_share",
+          "description": "Automated dispatch, routing, and allocation platform activity.",
+          "placeholder_basis": [
+            "illustrative_placeholder_only",
+            "platform dispatch remains inside Prototype Schedule B pending schedule split"
+          ],
+          "schedule_id": "logistics_warehousing",
+          "share": 0.1
+        },
+        {
+          "activity_id": "customer_support_admin",
+          "basis": "audited_placeholder_support_workshare",
+          "description": "Customer support and administrative activity tied to Australian logistics output.",
+          "placeholder_basis": [
+            "illustrative_placeholder_only",
+            "support/admin allocation requires policy review before any real use"
+          ],
+          "schedule_id": "logistics_warehousing",
+          "share": 0.05
+        }
+      ],
+      "normalisation_permitted": false
+    },
+    "expected_behaviour": "The apportionment preview should validate shares, compute weighted placeholder parameters, and require review where basis quality is not yet externally supported.",
+    "group_id": "mixed_logistics_warehousing_platform",
+    "illustrative_placeholder_only": true,
+    "limitations": [
+      "Only Prototype Schedule B exists for these logistics sub-activities in V1.5.",
+      "This is not final legal schedule attribution."
+    ],
+    "placeholder_notice": "Shares are illustrative placeholders and are not Australian industry data.",
+    "purpose": "Show prototype apportionment by activity rather than forcing a mixed firm into a single unreviewed classification.",
+    "status": "illustrative_placeholder",
+    "title": "Mixed logistics, warehousing, platform dispatch, and customer support activity mix"
+  },
+  "split_entities": [
+    {
+      "aava": 700000.0,
+      "aii": 0.12,
+      "canonical_output_unit": "tonne_kilometres_or_pallet_movements",
+      "capital_base": 300000.0,
+      "description": "Australian customer-contracting entity booking logistics output.",
+      "entity_id": "au_customer_facing_entity",
+      "flags": [],
+      "hle": 8.0,
+      "liability": 0.0,
+      "nltg": 0.0,
+      "output_value": 800000.0,
+      "qlc": 2.0,
+      "revenue": 2200000.0,
+      "role": "customer_facing_revenue_entity",
+      "standalone_risk": "low",
+      "verified_credits": 10000.0
+    },
+    {
+      "aava": 1700000.0,
+      "aii": 0.86,
+      "canonical_output_unit": "tonne_kilometres_or_pallet_movements",
+      "capital_base": 1700000.0,
+      "description": "Offshore optimisation and dispatch service provider for Australian-facing logistics output.",
+      "entity_id": "offshore_ai_service_provider",
+      "flags": [
+        "OFFSHORE_AUTOMATION_SERVICE",
+        "RELATED_PARTY_AI_SERVICE_FEES"
+      ],
+      "hle": 24.0,
+      "liability": 0.0,
+      "nltg": 20.54,
+      "output_value": 2400000.0,
+      "qlc": 0.1,
+      "revenue": 3500000.0,
+      "role": "offshore_automation_service_provider",
+      "standalone_risk": "low",
+      "verified_credits": 20000.0
+    },
+    {
+      "aava": 950000.0,
+      "aii": 0.8,
+      "canonical_output_unit": "tonne_kilometres_or_pallet_movements",
+      "capital_base": 500000.0,
+      "description": "Related platform and IP owner charging service fees.",
+      "entity_id": "platform_ip_owner",
+      "flags": [
+        "ENTITY_SPLITTING_PREVIEW",
+        "SECTOR_CLASSIFICATION_ARBITRAGE"
+      ],
+      "hle": 6.0,
+      "liability": 0.0,
+      "nltg": 4.6,
+      "output_value": 600000.0,
+      "qlc": 0.2,
+      "revenue": 1900000.0,
+      "role": "platform_ip_owner",
+      "standalone_risk": "low",
+      "verified_credits": 15000.0
+    },
+    {
+      "aava": 350000.0,
+      "aii": 0.1,
+      "canonical_output_unit": "tonne_kilometres_or_pallet_movements",
+      "capital_base": 100000.0,
+      "description": "Thin Australian employer entity holding local management and compliance staff.",
+      "entity_id": "small_au_employer_entity",
+      "flags": [],
+      "hle": 2.0,
+      "liability": 0.0,
+      "nltg": 0.0,
+      "output_value": 200000.0,
+      "qlc": 1.1,
+      "revenue": 900000.0,
+      "role": "australian_employing_entity",
+      "standalone_risk": "low",
+      "verified_credits": 5000.0
+    }
+  ],
+  "split_structure": {
+    "canonical_output_unit": "tonne_kilometres_or_pallet_movements",
+    "capital_base": 2600000.0,
+    "entities": [
+      {
+        "aava": 700000.0,
+        "aii": 0.12,
+        "canonical_output_unit": "tonne_kilometres_or_pallet_movements",
+        "capital_base": 300000.0,
+        "description": "Australian customer-contracting entity booking logistics output.",
+        "entity_id": "au_customer_facing_entity",
+        "flags": [],
+        "hle": 8.0,
+        "liability": 0.0,
+        "nltg": 0.0,
+        "output_value": 800000.0,
+        "qlc": 2.0,
+        "revenue": 2200000.0,
+        "role": "customer_facing_revenue_entity",
+        "standalone_risk": "low",
+        "verified_credits": 10000.0
+      },
+      {
+        "aava": 1700000.0,
+        "aii": 0.86,
+        "canonical_output_unit": "tonne_kilometres_or_pallet_movements",
+        "capital_base": 1700000.0,
+        "description": "Offshore optimisation and dispatch service provider for Australian-facing logistics output.",
+        "entity_id": "offshore_ai_service_provider",
+        "flags": [
+          "OFFSHORE_AUTOMATION_SERVICE",
+          "RELATED_PARTY_AI_SERVICE_FEES"
+        ],
+        "hle": 24.0,
+        "liability": 0.0,
+        "nltg": 20.54,
+        "output_value": 2400000.0,
+        "qlc": 0.1,
+        "revenue": 3500000.0,
+        "role": "offshore_automation_service_provider",
+        "standalone_risk": "low",
+        "verified_credits": 20000.0
+      },
+      {
+        "aava": 950000.0,
+        "aii": 0.8,
+        "canonical_output_unit": "tonne_kilometres_or_pallet_movements",
+        "capital_base": 500000.0,
+        "description": "Related platform and IP owner charging service fees.",
+        "entity_id": "platform_ip_owner",
+        "flags": [
+          "ENTITY_SPLITTING_PREVIEW",
+          "SECTOR_CLASSIFICATION_ARBITRAGE"
+        ],
+        "hle": 6.0,
+        "liability": 0.0,
+        "nltg": 4.6,
+        "output_value": 600000.0,
+        "qlc": 0.2,
+        "revenue": 1900000.0,
+        "role": "platform_ip_owner",
+        "standalone_risk": "low",
+        "verified_credits": 15000.0
+      },
+      {
+        "aava": 350000.0,
+        "aii": 0.1,
+        "canonical_output_unit": "tonne_kilometres_or_pallet_movements",
+        "capital_base": 100000.0,
+        "description": "Thin Australian employer entity holding local management and compliance staff.",
+        "entity_id": "small_au_employer_entity",
+        "flags": [],
+        "hle": 2.0,
+        "liability": 0.0,
+        "nltg": 0.0,
+        "output_value": 200000.0,
+        "qlc": 1.1,
+        "revenue": 900000.0,
+        "role": "australian_employing_entity",
+        "standalone_risk": "low",
+        "verified_credits": 5000.0
+      }
+    ],
+    "expected_behaviour": "Aggregated group preview should show higher review concern than standalone fragments.",
+    "group_id": "logistics_split_structure",
+    "illustrative_placeholder_only": true,
+    "limitations": [
+      "This is not legal grouping logic.",
+      "Transfer pricing, treaty, diverted-profits, GST, and corporate tax rules are not modelled."
+    ],
+    "placeholder_notice": "Numbers are illustrative placeholders and are not Australian logistics, tax, or transfer-pricing data.",
+    "purpose": "Show that standalone fragments may appear lower risk while the grouped preview raises review concern.",
+    "recompute_parameters": {
+      "frv_standard": 47000.0,
+      "lambda_combined": 0.27,
+      "lambda_sector": 0.2,
+      "rent_tax_rate": 0.22,
+      "theta": 0.6,
+      "uplift_rate": 1.12
+    },
+    "risk_metadata": {
+      "entity_splitting_risk": true,
+      "offshore_automation_service": true,
+      "related_party_ai_service_fees": true,
+      "sector_classification_risk": true,
+      "status": "illustrative_placeholder_review_metadata"
+    },
+    "schedule_used": "logistics_warehousing",
+    "status": "illustrative_placeholder",
+    "title": "Split AI logistics platform structure",
+    "verified_credits": 50000.0
+  }
+}

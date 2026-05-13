@@ -1,0 +1,96 @@
+group_id: logistics_split_structure
+status: illustrative_placeholder
+illustrative_placeholder_only: true
+title: Split AI logistics platform structure
+placeholder_notice: Numbers are illustrative placeholders and are not Australian logistics, tax, or transfer-pricing data.
+purpose: Show that standalone fragments may appear lower risk while the grouped preview raises review concern.
+canonical_output_unit: tonne_kilometres_or_pallet_movements
+schedule_used: logistics_warehousing
+capital_base: 2600000.0
+verified_credits: 50000.0
+recompute_parameters:
+  frv_standard: 47000.0
+  lambda_sector: 0.20
+  lambda_combined: 0.27
+  theta: 0.60
+  uplift_rate: 1.12
+  rent_tax_rate: 0.22
+risk_metadata:
+  status: illustrative_placeholder_review_metadata
+  entity_splitting_risk: true
+  offshore_automation_service: true
+  related_party_ai_service_fees: true
+  sector_classification_risk: true
+entities:
+  - entity_id: au_customer_facing_entity
+    description: Australian customer-contracting entity booking logistics output.
+    role: customer_facing_revenue_entity
+    standalone_risk: low
+    revenue: 2200000.0
+    output_value: 800000.0
+    canonical_output_unit: tonne_kilometres_or_pallet_movements
+    qlc: 2.00
+    hle: 8.00
+    aii: 0.12
+    nltg: 0.00
+    aava: 700000.0
+    liability: 0.0
+    capital_base: 300000.0
+    verified_credits: 10000.0
+    flags: []
+  - entity_id: offshore_ai_service_provider
+    description: Offshore optimisation and dispatch service provider for Australian-facing logistics output.
+    role: offshore_automation_service_provider
+    standalone_risk: low
+    revenue: 3500000.0
+    output_value: 2400000.0
+    canonical_output_unit: tonne_kilometres_or_pallet_movements
+    qlc: 0.10
+    hle: 24.00
+    aii: 0.86
+    nltg: 20.54
+    aava: 1700000.0
+    liability: 0.0
+    capital_base: 1700000.0
+    verified_credits: 20000.0
+    flags:
+      - OFFSHORE_AUTOMATION_SERVICE
+      - RELATED_PARTY_AI_SERVICE_FEES
+  - entity_id: platform_ip_owner
+    description: Related platform and IP owner charging service fees.
+    role: platform_ip_owner
+    standalone_risk: low
+    revenue: 1900000.0
+    output_value: 600000.0
+    canonical_output_unit: tonne_kilometres_or_pallet_movements
+    qlc: 0.20
+    hle: 6.00
+    aii: 0.80
+    nltg: 4.60
+    aava: 950000.0
+    liability: 0.0
+    capital_base: 500000.0
+    verified_credits: 15000.0
+    flags:
+      - ENTITY_SPLITTING_PREVIEW
+      - SECTOR_CLASSIFICATION_ARBITRAGE
+  - entity_id: small_au_employer_entity
+    description: Thin Australian employer entity holding local management and compliance staff.
+    role: australian_employing_entity
+    standalone_risk: low
+    revenue: 900000.0
+    output_value: 200000.0
+    canonical_output_unit: tonne_kilometres_or_pallet_movements
+    qlc: 1.10
+    hle: 2.00
+    aii: 0.10
+    nltg: 0.00
+    aava: 350000.0
+    liability: 0.0
+    capital_base: 100000.0
+    verified_credits: 5000.0
+    flags: []
+expected_behaviour: Aggregated group preview should show higher review concern than standalone fragments.
+limitations:
+  - This is not legal grouping logic.
+  - Transfer pricing, treaty, diverted-profits, GST, and corporate tax rules are not modelled.

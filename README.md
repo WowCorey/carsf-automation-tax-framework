@@ -22,6 +22,7 @@ All sector values, schedule values, examples, caps, Fiscal Replacement Value val
 - `model/tests/` - pytest coverage for formula bounds, caps, examples, and avoidance flags.
 - `schedules/` - prototype sector schedules for automotive repair and logistics / warehousing.
 - `examples/` - illustrative placeholder firm cases.
+- `examples/groups/` - illustrative grouped-entity and apportionment preview cases.
 - `simulator/` - Streamlit interface for policy review, tax model inputs, worked examples, red-team tests, and audit log.
 - `docs/` - data requirements, limitations, implementation notes, known risks, and V1.5 plan.
 
@@ -42,8 +43,10 @@ Generated reports:
 
 - `reports/example_results.md`
 - `reports/example_results.json`
+- `reports/grouped_entity_results.md`
+- `reports/grouped_entity_results.json`
 
-The reports are illustrative placeholder outputs only. They are not legal, tax, Treasury, ATO, economic, or real liability calculations.
+The reports are illustrative placeholder outputs only. They are not legal grouping findings, tax assessments, Treasury guidance, ATO guidance, economic validation, or real liability calculations.
 
 ## Run the Simulator
 
@@ -63,10 +66,12 @@ V1.5 is not just an examples update. It is V1.4 plus two prototype sector schedu
 - distinguish worker-assist AI from labour-substituting automation;
 - handle automotive repair and logistics / warehousing as prototype schedules;
 - classify prototype safe-harbour, anti-avoidance, and grouped-entity review signals without changing liability;
+- preview grouped-entity aggregation and multi-schedule apportionment without implementing tax-law grouping or attribution;
 - identify open-source AI and R&D Tax Incentive interaction questions without overclaiming.
 
 ## Not Yet Solved
 
-The model still needs real Treasury, ATO, ABS, DSS, HILDA, HELP, superannuation, state payroll tax, industry, and legal data. It also needs calibrated safe-harbour thresholds, apportionment, grouped-entity aggregation, related-party adjustments, behavioural elasticity estimates, tax incidence modelling, anti-avoidance drafting, privacy review, and independent tax counsel review before any external policy use.
+The model still needs real Treasury, ATO, ABS, DSS, HILDA, HELP, superannuation, state payroll tax, industry, and legal data. It also needs calibrated safe-harbour thresholds, legal grouped-entity rules, tax-law attribution, transfer pricing, GST and international tax review, related-party adjustments, behavioural elasticity estimates, tax incidence modelling, anti-avoidance drafting, privacy review, and independent tax counsel review before any external policy use.
 
 Safe-harbour outputs are prototype classification only. They do not reduce, cap, or erase calculated liability in this build.
+Grouped-entity and apportionment outputs are prototype modelling previews only. They do not establish legal grouping, tax attribution, or actual liability.

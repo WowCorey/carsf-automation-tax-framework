@@ -23,6 +23,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Add schedule-specific canonical output units and AII component mappings.
 - Add anti-avoidance examples for entity splitting, offshore automation services, sector arbitrage, token oversight jobs, and related-party AI service fees.
 - Add executable prototype safe-harbour, anti-avoidance, and grouped-entity review flags without modifying liability.
+- Add prototype grouped-entity aggregation previews and multi-schedule apportionment previews without implementing legal grouping or tax-law attribution.
 
 ## Data Separation
 
@@ -39,12 +40,14 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Tests prove cap, bounds, zero handling, and avoidance metadata.
 - Tests prove AI-admin repair is not classified like robotic repair and AI logistics is riskier than human-heavy logistics.
 - Reports include safe-harbour, avoidance, and grouping review outputs.
+- Grouped reports can be generated with `python scripts/run_examples.py`.
+- Hybrid logistics stress variant demonstrates non-zero but intermediate NLTG.
 - V1.5 working paper contains TODO markers where policy drafting remains open.
 - Limitations document clearly blocks actual tax-payable claims.
 
 ## Next Build Candidates
 
-- Add multi-schedule apportionment for mixed-activity firms.
 - Add calibrated-threshold placeholders that can later be replaced by official data.
-- Convert grouping review flags into a prototype aggregation calculation.
-- Add non-zero but intermediate hybrid logistics stress variants.
+- Replace preview apportionment shares with evidence-backed activity allocation once official data and legal review exist.
+- Extend grouped aggregation to recompute full group-level outputs only after legal grouping and attribution rules are drafted.
+- Add transfer-pricing, GST, and international tax review stubs.

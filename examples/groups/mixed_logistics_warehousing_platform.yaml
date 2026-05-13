@@ -1,0 +1,45 @@
+group_id: mixed_logistics_warehousing_platform
+status: illustrative_placeholder
+illustrative_placeholder_only: true
+title: Mixed logistics, warehousing, platform dispatch, and customer support activity mix
+placeholder_notice: Shares are illustrative placeholders and are not Australian industry data.
+purpose: Show prototype apportionment by activity rather than forcing a mixed firm into a single unreviewed classification.
+apportionment:
+  normalisation_permitted: false
+  activities:
+    - activity_id: logistics_transport
+      description: Line-haul and last-mile freight movement.
+      schedule_id: logistics_warehousing
+      share: 0.60
+      basis: audited_placeholder_output_and_revenue_share
+      placeholder_basis:
+        - illustrative_placeholder_only
+        - would require transport-management records and revenue attribution in a real schedule
+    - activity_id: warehousing
+      description: Pallet movements and warehouse fulfilment.
+      schedule_id: logistics_warehousing
+      share: 0.25
+      basis: audited_placeholder_pallet_movement_share
+      placeholder_basis:
+        - illustrative_placeholder_only
+        - current prototype schedule combines logistics and warehousing until calibrated split exists
+    - activity_id: platform_dispatch
+      description: Automated dispatch, routing, and allocation platform activity.
+      schedule_id: logistics_warehousing
+      share: 0.10
+      basis: audited_placeholder_platform_dispatch_share
+      placeholder_basis:
+        - illustrative_placeholder_only
+        - platform dispatch remains inside Prototype Schedule B pending schedule split
+    - activity_id: customer_support_admin
+      description: Customer support and administrative activity tied to Australian logistics output.
+      schedule_id: logistics_warehousing
+      share: 0.05
+      basis: audited_placeholder_support_workshare
+      placeholder_basis:
+        - illustrative_placeholder_only
+        - support/admin allocation requires policy review before any real use
+expected_behaviour: The apportionment preview should validate shares, compute weighted placeholder parameters, and require review where basis quality is not yet externally supported.
+limitations:
+  - Only Prototype Schedule B exists for these logistics sub-activities in V1.5.
+  - This is not final legal schedule attribution.

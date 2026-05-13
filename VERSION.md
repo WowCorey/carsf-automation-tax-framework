@@ -6,6 +6,6 @@ Status: private research prototype.
 
 Validation status: no legal, tax, Treasury, ATO, or economic validation.
 
-Current build focus: executable prototype safe-harbour, anti-avoidance, and grouped-entity review outputs for the worked examples.
+Current build focus: grouped-entity aggregation previews and multi-schedule apportionment previews for V1.5 worked examples.
 
 Non-claim: this repository must not be used to estimate actual tax payable.

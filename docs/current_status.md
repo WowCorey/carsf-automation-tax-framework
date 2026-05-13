@@ -16,6 +16,9 @@ Status: private research prototype.
 - Executable prototype safe-harbour classification for small-business, worker-assist/admin AI, startup, low-NLTG, and essential-services review pathways.
 - Executable prototype anti-avoidance heuristics for token oversight, fake QLC inflation, offshore automation services, related-party AI fees, entity splitting, sector classification arbitrage, cloud-cost relabelling, robotics leasing, and artificial low AAVA.
 - Prototype grouped-entity review flags for entity splitting, related operating entities, separated IP/platform/employer structures, and thin Australian employing entities.
+- Prototype grouped-entity aggregation preview for illustrative related-entity structures.
+- Prototype multi-schedule apportionment preview for mixed activity examples.
+- Hybrid logistics stress variant with non-zero but intermediate NLTG.
 
 ## What Is Still Placeholder
 
@@ -28,13 +31,15 @@ Status: private research prototype.
 - Coverage and CARS-I national monitoring inputs.
 - Safe-harbour thresholds and review categories.
 - Anti-avoidance and grouping thresholds.
+- Grouped-entity aggregation preview inputs.
+- Apportionment activity shares and bases.
 
 ## What Is Not Yet Solved
 
 - Real calibration with Treasury, ATO, ABS, DSS, HILDA, HELP, superannuation, state payroll tax, and industry data.
 - Safe-harbour rules that modify liability.
-- Full grouped-entity aggregation.
-- Multi-schedule apportionment.
+- Legal grouped-entity aggregation.
+- Legal/tax-law multi-schedule attribution.
 - Related-party service charge adjustment.
 - Offshore AI service attribution.
 - Open-source AI treatment.
@@ -50,4 +55,6 @@ Status: private research prototype.
 - Whether reports could be mistaken for real tax estimates despite warnings.
 - Whether the safe-harbour heuristics are too broad for zero-NLTG cases.
 - Whether the AI logistics platform flags are over-inclusive or miss more subtle offshore/related-party structures.
-- Whether grouping review should become executable aggregation in the next build.
+- Whether the grouped-entity preview should aggregate more than output-compatible entities.
+- Whether apportionment should support real multi-schedule activity splits once more schedules exist.
+- Whether hybrid stress assumptions create the intended middle band without smuggling in calibration claims.

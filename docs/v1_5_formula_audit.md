@@ -27,6 +27,7 @@ This audit does not legally, economically, or empirically validate CARSF. It che
 
 - No real calibration values exist in this repo.
 - AAVA deductibility taxonomy is not legal drafting.
-- Grouped-entity aggregation, related-party adjustments, transfer-pricing checks, and schedule apportionment are documented but not implemented as executable logic.
+- Grouped-entity aggregation and schedule apportionment now exist only as executable modelling previews; they are not legal grouping, tax-law attribution, transfer-pricing, or calibrated policy logic.
+- Related-party adjustments and transfer-pricing checks remain review flags only.
 - Coverage metrics are national-monitoring aids, not fiscal validation.
 - Streamlit UI remains a prototype and must not be used for actual liability estimates.

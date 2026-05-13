@@ -246,6 +246,11 @@ def interpretation_for_example(example_id: str, outputs: ExampleOutputs) -> str:
             "AI logistics platform: high automated productive capacity and low QLC relative "
             "to output create the strongest stress case among the six examples."
         ),
+        "logistics_hybrid_stress": (
+            "Hybrid logistics stress variant: automation is meaningful and NLTG is non-zero, "
+            "but the result remains below the thin-labour AI logistics platform because "
+            "substantial Australian labour is still present."
+        ),
     }
     return interpretations.get(
         example_id,
