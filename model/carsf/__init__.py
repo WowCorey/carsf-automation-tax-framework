@@ -20,13 +20,36 @@ from .levy import (
     automation_rent_levy,
     calculate_liability,
 )
+from .mixed_units import (
+    MixedUnitExposureResult,
+    UnitCompatibilityResult,
+    evaluate_mixed_unit_exposure,
+    evaluate_unit_compatibility,
+)
 from .qlc import qualified_labour_contribution_firm, qualified_labour_contribution_worker
 from .safe_harbour import SafeHarbourResult, evaluate_safe_harbour
+from .transfer_pricing import (
+    AdjustedAAVAPreview,
+    AdjustmentCandidate,
+    LiabilityAdjustmentPreview,
+    RelatedPartyTransaction,
+    TransferPricingPreviewResult,
+    evaluate_transfer_pricing_preview,
+    preview_adjusted_aava,
+    preview_liability_with_adjusted_aava,
+)
+from .transfer_runner import (
+    TransferPricingPreviewReport,
+    TransferPricingScenarioResult,
+    run_transfer_pricing_previews,
+)
 from .types import AIIWeights, CoverageResult, LevyParameters, LevyResult, QLCWeights, Worker
 
 __all__ = [
     "AIIWeights",
+    "AdjustedAAVAPreview",
     "AggregationResult",
+    "AdjustmentCandidate",
     "ApportionmentActivity",
     "ApportionmentResult",
     "AvoidanceResult",
@@ -38,8 +61,15 @@ __all__ = [
     "GroupingRiskResult",
     "LevyParameters",
     "LevyResult",
+    "LiabilityAdjustmentPreview",
+    "MixedUnitExposureResult",
     "QLCWeights",
+    "RelatedPartyTransaction",
     "SafeHarbourResult",
+    "TransferPricingPreviewResult",
+    "TransferPricingPreviewReport",
+    "TransferPricingScenarioResult",
+    "UnitCompatibilityResult",
     "Worker",
     "automation_equilibrium_levy",
     "automation_intensity_index",
@@ -53,14 +83,20 @@ __all__ = [
     "evaluate_avoidance_risk",
     "evaluate_group_aggregation",
     "evaluate_grouping_risk",
+    "evaluate_mixed_unit_exposure",
     "evaluate_safe_harbour",
+    "evaluate_transfer_pricing_preview",
+    "evaluate_unit_compatibility",
     "format_coverage_ratio",
     "human_labour_equivalent",
     "net_labour_tax_gap",
     "output_per_fte_benchmark",
+    "preview_adjusted_aava",
+    "preview_liability_with_adjusted_aava",
     "qualified_labour_contribution_firm",
     "qualified_labour_contribution_worker",
     "run_all_examples",
     "run_grouped_previews",
     "run_example",
+    "run_transfer_pricing_previews",
 ]

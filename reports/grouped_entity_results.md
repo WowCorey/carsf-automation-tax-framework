@@ -1,6 +1,6 @@
 # CARSF V1.5 Grouped-Entity and Apportionment Results
 
-Generated at: `2026-05-13T07:14:14+00:00`
+Generated at: `2026-05-13T08:00:58+00:00`
 
 Version: CARSF V1.5 prototype
 
@@ -11,6 +11,8 @@ These outputs are prototype review previews only. They are not legal grouping fi
 ## A. Grouped-Entity Aggregation Overview
 
 This report shows non-operative modelling previews for related-entity aggregation, mixed-activity apportionment, and a hybrid logistics stress case. It does not alter any final liability calculation in the single-entity examples.
+
+Related-party and mixed-unit previews are generated in `reports/transfer_pricing_results.md` and `reports/transfer_pricing_results.json`.
 
 ## B. Why Grouping Matters
 

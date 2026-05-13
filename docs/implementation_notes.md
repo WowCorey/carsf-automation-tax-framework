@@ -19,15 +19,20 @@ The Python model intentionally implements only concept-level formulas.
 - Risk flags are emitted into the example runner, Markdown reports, JSON reports, and Streamlit worked examples page.
 - Grouped-entity aggregation previews live in `model/carsf/aggregation.py` and show aggregate revenue, output, QLC, HLE, weighted AII, preview NLTG, AAVA, standalone liability sums, and group recomputed liability where comparable inputs exist.
 - Multi-schedule apportionment previews live in `model/carsf/apportionment.py` and blend placeholder schedule parameters only when shares are valid and labelled.
-- `scripts/run_examples.py` now writes grouped preview reports as well as the original six-example reports.
+- Transfer-pricing / related-party previews live in `model/carsf/transfer_pricing.py` and identify non-operative adjusted-AAVA review candidates.
+- Adjusted AAVA is preview-only and does not mutate reported AAVA or replace any existing final liability calculation.
+- Mixed-unit handling lives in `model/carsf/mixed_units.py`; when canonical output units differ, direct output/HLE aggregation is prohibited.
+- Mixed-unit exposure may show standalone liability summation, schedule-level comparison, and a value-weighted exposure index. The index is not a tax base and is not a replacement for sector schedules.
+- `scripts/run_examples.py` now writes grouped preview and transfer-pricing/mixed-unit reports as well as the original six-example reports.
 
 ## Not Implemented Yet
 
 - Real schedule calibration.
 - Safe-harbour rules that legally alter liability.
-- Multi-schedule apportionment.
 - Legal grouped-entity aggregation.
-- Related-party pricing adjustments.
+- Real multi-schedule apportionment with calibrated schedules.
+- Legal related-party pricing adjustments.
+- OECD transfer-pricing rules or BEPS analysis.
 - International tax treaty logic.
 - GST interaction.
 - Tax-law attribution for mixed activity firms.
@@ -47,6 +52,10 @@ Then view:
 
 - `reports/example_results.md`
 - `reports/example_results.json`
+- `reports/grouped_entity_results.md`
+- `reports/grouped_entity_results.json`
+- `reports/transfer_pricing_results.md`
+- `reports/transfer_pricing_results.json`
 
 Run the simulator:
 
