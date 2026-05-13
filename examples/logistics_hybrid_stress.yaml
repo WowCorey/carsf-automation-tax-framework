@@ -1,0 +1,85 @@
+example_id: logistics_hybrid_stress
+status: illustrative_placeholder
+illustrative_placeholder_only: true
+business_description: Hybrid logistics operator with meaningful route automation and warehouse automation while retaining substantial Australian driving, dispatch, and warehouse labour.
+schedule_used: logistics_warehousing
+placeholder_notice: Numbers are illustrative placeholders and are not Australian logistics data.
+output:
+  value: 3000000.0
+  unit: tonne_kilometres_or_pallet_movements
+workers:
+  - role: driver
+    annual_hours: 1820
+    wage_quality: 0.64
+    job_security: 0.72
+    skill_development: 0.50
+    australian_nexus: 1.00
+  - role: driver
+    annual_hours: 1820
+    wage_quality: 0.64
+    job_security: 0.72
+    skill_development: 0.50
+    australian_nexus: 1.00
+  - role: driver
+    annual_hours: 1820
+    wage_quality: 0.64
+    job_security: 0.72
+    skill_development: 0.50
+    australian_nexus: 1.00
+  - role: warehouse_worker
+    annual_hours: 1820
+    wage_quality: 0.60
+    job_security: 0.70
+    skill_development: 0.50
+    australian_nexus: 1.00
+  - role: warehouse_worker
+    annual_hours: 1820
+    wage_quality: 0.60
+    job_security: 0.70
+    skill_development: 0.50
+    australian_nexus: 1.00
+  - role: dispatcher
+    annual_hours: 1820
+    wage_quality: 0.66
+    job_security: 0.72
+    skill_development: 0.60
+    australian_nexus: 1.00
+  - role: systems_operator
+    annual_hours: 1820
+    wage_quality: 0.70
+    job_security: 0.75
+    skill_development: 0.75
+    australian_nexus: 1.00
+automation_components:
+  compute_ratio: 0.45
+  auto_decision_ratio: 0.60
+  robotics_capital_ratio: 0.40
+  auto_process_share: 0.60
+aava_inputs:
+  australian_attributable_revenue: 6000000.0
+  verified_non_automation_input_costs: 3300000.0
+  verified_qlc_wage_cost: 850000.0
+capital_base: 2200000.0
+credits:
+  verified_credits: 80000.0
+expected_behaviour: Hybrid stress case should produce non-zero but intermediate NLTG, above human-heavy logistics and below the thin-labour AI logistics platform.
+red_team_notes:
+  flags: []
+  notes:
+    - Tests useful hybrid automation where NLTG is non-zero but not platform-level.
+risk_metadata:
+  status: illustrative_placeholder_review_metadata
+  offshore_automation_service: false
+  related_party_ai_service_fees: false
+  entity_splitting_risk: false
+  sector_classification_risk: false
+  token_human_oversight_risk: false
+  fake_qlc_inflation_risk: false
+  cloud_cost_relabeling_risk: false
+  robotics_leasing_risk: false
+  artificial_low_profit_or_aava_risk: false
+  essential_service_review: false
+  startup_placeholder: false
+  small_business_placeholder: true
+  worker_assist_admin_ai: false
+  related_entities: []

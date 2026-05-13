@@ -7,7 +7,10 @@
 - Safe harbours may encourage entity splitting.
 - Prototype safe-harbour classification may be too broad if low NLTG is caused by manipulated QLC, related-party charges, or incomplete grouping.
 - Anti-avoidance heuristics may over-flag ordinary structures or under-flag subtle offshore, platform, leasing, or service-fee arrangements.
-- Grouping checks are review flags only and do not yet aggregate entities or recalculate output, QLC, AAVA, or liability.
+- Grouping checks remain review flags, while grouped aggregation previews are non-operative modelling outputs rather than legal grouping rules.
+- Grouped-entity aggregation previews may create false confidence if readers mistake modelling aggregation for legal grouping.
+- Apportionment previews may hide classification disputes if activity shares are based on unsupported management estimates.
+- Output aggregation is unsafe where canonical output units differ; those cases require apportionment or policy review.
 - Destination and activity attribution may create treaty, trade, and compliance disputes.
 - Excessive liability may deter useful productivity-enhancing investment.
 - Under-calibrated caps may make the framework fiscally symbolic rather than stabilising.

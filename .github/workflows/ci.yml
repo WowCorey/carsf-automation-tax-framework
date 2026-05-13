@@ -36,7 +36,7 @@ jobs:
           import yaml
 
           for folder in ["schedules", "examples"]:
-              for path in sorted(Path(folder).glob("*.yaml")):
+              for path in sorted(Path(folder).rglob("*.yaml")):
                   yaml.safe_load(path.read_text(encoding="utf-8"))
                   print(f"parsed {path}")
           PY

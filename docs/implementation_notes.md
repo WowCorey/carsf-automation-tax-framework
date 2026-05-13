@@ -17,15 +17,20 @@ The Python model intentionally implements only concept-level formulas.
 - Grouping checks are executable review flags in `model/carsf/grouping.py`, not full legal grouping logic.
 - Safe-harbour outputs do not modify AEL, ARL, credits, caps, or final liability.
 - Risk flags are emitted into the example runner, Markdown reports, JSON reports, and Streamlit worked examples page.
+- Grouped-entity aggregation previews live in `model/carsf/aggregation.py` and show aggregate revenue, output, QLC, HLE, weighted AII, preview NLTG, AAVA, standalone liability sums, and group recomputed liability where comparable inputs exist.
+- Multi-schedule apportionment previews live in `model/carsf/apportionment.py` and blend placeholder schedule parameters only when shares are valid and labelled.
+- `scripts/run_examples.py` now writes grouped preview reports as well as the original six-example reports.
 
 ## Not Implemented Yet
 
 - Real schedule calibration.
 - Safe-harbour rules that legally alter liability.
 - Multi-schedule apportionment.
-- Full grouped-entity aggregation.
+- Legal grouped-entity aggregation.
 - Related-party pricing adjustments.
 - International tax treaty logic.
+- GST interaction.
+- Tax-law attribution for mixed activity firms.
 - Privacy-preserving disclosure schema.
 - Behavioural elasticity and deadweight-loss modelling.
 - Calibrated thresholds for safe-harbour, grouping, offshore attribution, and related-party review.

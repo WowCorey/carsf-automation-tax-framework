@@ -21,6 +21,14 @@ from carsf.example_runner import (  # noqa: E402
     report_metadata,
     run_all_examples,
 )
+from carsf.group_runner import (  # noqa: E402
+    APPORTIONMENT_SCOPE_NOTE,
+    GROUPED_NON_CLAIMS,
+    GROUPED_REPORT_STATUS,
+    GroupedPreviewResult,
+    run_grouped_previews,
+    standalone_max_risk,
+)
 
 
 def money(value: float) -> str:
@@ -284,6 +292,191 @@ def write_reports(reports_dir: Path, results: list[ExampleResult]) -> tuple[Path
     return json_path, md_path
 
 
+def grouped_json_payload(grouped: GroupedPreviewResult, metadata: dict[str, Any]) -> dict[str, Any]:
+    payload = grouped.to_jsonable()
+    payload["apportionment_scope_note"] = APPORTIONMENT_SCOPE_NOTE
+    payload["metadata"] = {
+        **metadata,
+        "status": GROUPED_REPORT_STATUS,
+        "non_claims": GROUPED_NON_CLAIMS,
+        "apportionment_scope_note": APPORTIONMENT_SCOPE_NOTE,
+    }
+    return payload
+
+
+def _grouped_number(value: float | None) -> str:
+    if value is None:
+        return "N/A"
+    return f"{value:,.2f}"
+
+
+def build_grouped_markdown(grouped: GroupedPreviewResult, metadata: dict[str, Any]) -> str:
+    aggregation = grouped.aggregation_result
+    apportionment = grouped.apportionment_result
+    stress = grouped.hybrid_stress_result
+    split = grouped.split_structure
+    mixed = grouped.mixed_apportionment
+    standalone_liability = aggregation.standalone_entity_liability_sum
+    group_liability = aggregation.group_recomputed_liability_preview
+    liability_difference = None if group_liability is None else group_liability - standalone_liability
+
+    lines = [
+        "# CARSF V1.5 Grouped-Entity and Apportionment Results",
+        "",
+        f"Generated at: `{metadata['generated_at']}`",
+        "",
+        f"Version: {metadata['version']}",
+        "",
+        f"Status: `{GROUPED_REPORT_STATUS}`",
+        "",
+        "These outputs are prototype review previews only. They are not legal grouping findings, tax assessments, Treasury guidance, ATO guidance, or economic validation.",
+        "",
+        "## A. Grouped-Entity Aggregation Overview",
+        "",
+        "This report shows non-operative modelling previews for related-entity aggregation, mixed-activity apportionment, and a hybrid logistics stress case. It does not alter any final liability calculation in the single-entity examples.",
+        "",
+        "## B. Why Grouping Matters",
+        "",
+        "A split structure can make each standalone entity look lower-risk while the economic group still contains high automated output, thin Australian QLC, offshore automation services, and related-party fee paths. The preview aggregates only where output units are comparable and flags review where they are not.",
+        "",
+        "| Example | Standalone Risk | Group Risk | Aggregation Needed | Apportionment Needed | Main Reason |",
+        "| --- | --- | --- | --- | --- | --- |",
+        (
+            f"| {split['title']} | {standalone_max_risk(grouped.split_entities)} | "
+            f"{aggregation.risk_level} | yes | no | Split entities share Australian-facing automated logistics output. |"
+        ),
+        (
+            f"| {mixed['title']} | N/A | {'medium' if apportionment.review_required else 'low'} | no | yes | "
+            "Mixed activities require schedule-share review rather than unreviewed single classification. |"
+        ),
+        (
+            f"| {stress.name} | {stress.avoidance_result.risk_level} | N/A | no | no | "
+            "Stress variant tests non-zero but intermediate NLTG for hybrid automation. |"
+        ),
+        "",
+        "## C. Split Logistics Structure Example",
+        "",
+        split["purpose"],
+        "",
+        "## D. Standalone Entity View",
+        "",
+        "| Entity | Role | Standalone Risk | Revenue | Output | QLC | HLE | AII | NLTG | AAVA | Liability | Flags |",
+        "| --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |",
+    ]
+    for entity in grouped.split_entities:
+        lines.append(
+            "| "
+            f"{entity.entity_id} | {entity.role} | {entity.standalone_risk} | "
+            f"{entity.revenue:,.2f} | {entity.output_value:,.2f} | {entity.qlc:.2f} | "
+            f"{entity.hle:.2f} | {entity.aii:.2f} | {entity.nltg:.2f} | "
+            f"{entity.aava:,.2f} | {entity.liability:,.2f} | {risk_flags(entity.flags)} |"
+        )
+    lines.extend(
+        [
+            "",
+            "## E. Aggregated Group Preview",
+            "",
+            "| Metric | Value |",
+            "| --- | ---: |",
+            f"| Entity count | {aggregation.entity_count} |",
+            f"| Aggregate revenue | {aggregation.aggregate_revenue:,.2f} |",
+            f"| Aggregate output | {_grouped_number(aggregation.aggregate_output)} |",
+            f"| Aggregate QLC | {aggregation.aggregate_qlc:.2f} |",
+            f"| Aggregate HLE | {_grouped_number(aggregation.aggregate_hle)} |",
+            f"| Weighted AII | {_grouped_number(aggregation.weighted_aii)} |",
+            f"| Aggregate NLTG preview | {_grouped_number(aggregation.aggregate_nltg_preview)} |",
+            f"| Aggregate AAVA | {aggregation.aggregate_aava:,.2f} |",
+            f"| Standalone entity liability sum | {standalone_liability:,.2f} |",
+            f"| Group recomputed liability preview | {_grouped_number(group_liability)} |",
+            f"| Group risk | {aggregation.risk_level} |",
+            "",
+            "## F. Difference Between Standalone and Group-Level Preview",
+            "",
+            f"- Standalone entity liability sum: {standalone_liability:,.2f}",
+            f"- Group recomputed liability preview: {_grouped_number(group_liability)}",
+            f"- Difference: {_grouped_number(liability_difference)}",
+            f"- Aggregation flags: {risk_flags(aggregation.flags)}",
+            "",
+            "## G. Mixed-Activity / Prototype Apportionment Example",
+            "",
+            mixed["purpose"],
+            "",
+            APPORTIONMENT_SCOPE_NOTE,
+            "",
+            f"- Valid: {str(apportionment.valid).lower()}",
+            f"- Review required: {str(apportionment.review_required).lower()}",
+            "",
+            "Weighted placeholder parameters:",
+            "",
+        ]
+    )
+    for key, value in apportionment.weighted_parameters.items():
+        if isinstance(value, dict):
+            lines.append(f"- {key}: {json.dumps(value, sort_keys=True)}")
+        else:
+            lines.append(f"- {key}: {value:.6f}")
+    lines.extend(
+        [
+            "",
+            "## H. Apportionment Basis Table",
+            "",
+            "| Activity | Schedule | Share | Basis | Placeholder Basis |",
+            "| --- | --- | ---: | --- | --- |",
+        ]
+    )
+    for activity in apportionment.activities:
+        placeholder_basis = activity.placeholder_basis
+        if isinstance(placeholder_basis, list):
+            basis_text = "; ".join(str(item) for item in placeholder_basis)
+        else:
+            basis_text = str(placeholder_basis)
+        lines.append(
+            f"| {activity.activity_id or activity.description} | {activity.schedule_id} | "
+            f"{activity.share:.2f} | {activity.basis} | {basis_text} |"
+        )
+    lines.extend(
+        [
+            "",
+            "## I. Hybrid Logistics Stress Variant",
+            "",
+            stress.business_description,
+            "",
+            "| Metric | Value |",
+            "| --- | ---: |",
+            f"| QLC | {stress.outputs.qlc:.2f} |",
+            f"| HLE | {stress.outputs.hle:.2f} |",
+            f"| AII | {stress.outputs.aii:.2f} |",
+            f"| NLTG | {stress.outputs.nltg:.2f} |",
+            f"| AAVA | {stress.outputs.aava:,.2f} |",
+            f"| Final liability preview | {stress.outputs.liability:,.2f} |",
+            "",
+            stress.interpretation,
+            "",
+            "## J. Limitations and Non-Claims",
+            "",
+        ]
+    )
+    for warning in aggregation.warnings + apportionment.warnings + stress.warnings:
+        lines.append(f"- {warning}")
+    for basis in aggregation.placeholder_basis + apportionment.placeholder_basis + stress.limitation_notes:
+        lines.append(f"- {basis}")
+    lines.append("- These outputs are prototype review previews only. They are not legal grouping findings, tax assessments, Treasury guidance, ATO guidance, or economic validation.")
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def write_grouped_reports(reports_dir: Path, grouped: GroupedPreviewResult) -> tuple[Path, Path]:
+    reports_dir.mkdir(parents=True, exist_ok=True)
+    metadata = report_metadata()
+    json_path = reports_dir / "grouped_entity_results.json"
+    md_path = reports_dir / "grouped_entity_results.md"
+    json_path.write_text(
+        json.dumps(grouped_json_payload(grouped, metadata), indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    md_path.write_text(build_grouped_markdown(grouped, metadata), encoding="utf-8")
+    return json_path, md_path
+
+
 def main() -> int:
     parser = ArgumentParser(description="Run illustrative CARSF worked examples.")
     parser.add_argument(
@@ -299,11 +492,15 @@ def main() -> int:
         if expected_ids != EXAMPLE_IDS:
             raise ExampleRunnerError(f"Unexpected example order or set: {expected_ids}")
         json_path, md_path = write_reports(args.reports_dir, results)
+        grouped = run_grouped_previews(REPO_ROOT)
+        grouped_json_path, grouped_md_path = write_grouped_reports(args.reports_dir, grouped)
     except ExampleRunnerError as exc:
         print(f"example runner failed: {exc}", file=sys.stderr)
         return 1
     print(f"wrote {json_path}")
     print(f"wrote {md_path}")
+    print(f"wrote {grouped_json_path}")
+    print(f"wrote {grouped_md_path}")
     return 0
 
 
