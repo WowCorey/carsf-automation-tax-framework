@@ -1,0 +1,1674 @@
+{
+  "examples": [
+    {
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\fiscal_trajectory\\baseline_placeholder_2026_2034.yaml",
+      "illustrative_placeholder_only": true,
+      "interpretation": "Baseline placeholder scenario shows the fiscal trajectory engine plumbing across PAYG erosion, transfer pressure, automation revenue capture, and residual public-sector gap without making any forecast-validity claim.",
+      "name": "Baseline Placeholder 2026-2034",
+      "no_forecast_claim": true,
+      "not_calibrated": true,
+      "purpose": "Deterministic illustrative placeholder trajectory from 2026 to 2034.",
+      "sensitivity_result": {
+        "max_gap": 146302525157.63678,
+        "min_gap": 47899375879.60239,
+        "non_claims": [
+          "Fiscal sensitivity sweeps are deterministic placeholders and are not forecasts.",
+          "No real elasticity, Treasury, ATO, ABS, DSS, PBO, legal, tax, or economic validation is implied."
+        ],
+        "points": [
+          {
+            "cumulative_gap": 54042639344.78132,
+            "first_critical_warning_year": null,
+            "first_high_warning_year": 2026,
+            "parameter_name": "annual_displacement_rate",
+            "parameter_value": 0.012,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 85055459017.17197,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "annual_displacement_rate",
+            "parameter_value": 0.018,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 126405885247.0262,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "annual_displacement_rate",
+            "parameter_value": 0.026,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 146302525157.63678,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "annual_reabsorption_rate",
+            "parameter_value": 0.2,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 85055459017.17197,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "annual_reabsorption_rate",
+            "parameter_value": 0.35,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 47899375879.60239,
+            "first_critical_warning_year": null,
+            "first_high_warning_year": 2026,
+            "parameter_name": "annual_reabsorption_rate",
+            "parameter_value": 0.5,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 89735459017.17197,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "automation_revenue_capture_multiplier",
+            "parameter_value": 0.6,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 85055459017.17197,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "automation_revenue_capture_multiplier",
+            "parameter_value": 1.0,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 80375459017.17197,
+            "first_critical_warning_year": null,
+            "first_high_warning_year": 2026,
+            "parameter_name": "automation_revenue_capture_multiplier",
+            "parameter_value": 1.4,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          }
+        ],
+        "trajectory_id": "baseline_placeholder_2026_2034",
+        "warnings": [
+          "Sensitivity sweeps do not modify firm-level liability."
+        ]
+      },
+      "status": "illustrative_placeholder_only",
+      "trajectory_id": "baseline_placeholder_2026_2034",
+      "trajectory_result": {
+        "cumulative_automation_revenue_captured": 11700000000.0,
+        "cumulative_broader_labour_linked_pressure": 108254024913.84213,
+        "cumulative_commonwealth_gap_after_carsf": 84398459017.17197,
+        "cumulative_help_repayment_loss": 2197758874.421385,
+        "cumulative_payg_loss": 43955177488.4277,
+        "cumulative_retirement_contribution_pressure": 23198565896.670174,
+        "cumulative_state_revenue_pressure": 657000000.0,
+        "cumulative_total_public_sector_gap": 85055459017.17197,
+        "cumulative_transfer_pressure": 46885522654.32288,
+        "end_year": 2034,
+        "first_critical_warning_year": 2027,
+        "first_high_warning_year": 2026,
+        "non_claims": [
+          "These are prototype fiscal trajectory outputs only. They are not forecasts, Treasury modelling, ATO estimates, ABS analysis, DSS estimates, PBO costing, legal advice, tax advice, or economic validation.",
+          "Fiscal trajectory outputs do not modify firm-level CARSF liability.",
+          "All thresholds and values are illustrative placeholders requiring calibration."
+        ],
+        "start_year": 2026,
+        "trajectory_id": "baseline_placeholder_2026_2034",
+        "warnings": [
+          "National trajectory inputs are placeholders and are not fiscal forecasts.",
+          "Firm-level CARSF liability is not modified by this national trajectory layer."
+        ],
+        "years": [
+          {
+            "automation_revenue_captured": 900000000.0,
+            "broader_labour_linked_pressure": 4934200000.0,
+            "commonwealth_gap_after_carsf": 3777700000.0,
+            "company_tax_change": 120000000.0,
+            "coverage_ratio": 0.20678246484698098,
+            "gst_consumption_change": 80000000.0,
+            "help_repayment_loss": 105300000.0,
+            "net_displaced_workers": 117000.0,
+            "payg_revenue_loss": 2106000000.0,
+            "retirement_contribution_pressure": 1111500000.0,
+            "state_payroll_tax_loss": 45000000.0,
+            "super_contribution_loss": 1111500000.0,
+            "total_public_sector_gap": 3822700000.0,
+            "transfer_pressure": 2246400000.0,
+            "warning_band": "high",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2026
+          },
+          {
+            "automation_revenue_captured": 1000000000.0,
+            "broader_labour_linked_pressure": 8519025999.999999,
+            "commonwealth_gap_after_carsf": 6627493499.999999,
+            "company_tax_change": 135000000.0,
+            "coverage_ratio": 0.13882676391203827,
+            "gst_consumption_change": 90000000.0,
+            "help_repayment_loss": 174271499.99999997,
+            "net_displaced_workers": 193634.99999999997,
+            "payg_revenue_loss": 3485429999.9999995,
+            "retirement_contribution_pressure": 1839532499.9999998,
+            "state_payroll_tax_loss": 52000000.0,
+            "super_contribution_loss": 1839532499.9999998,
+            "total_public_sector_gap": 6679493499.999999,
+            "transfer_pressure": 3717791999.9999995,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2027
+          },
+          {
+            "automation_revenue_captured": 1100000000.0,
+            "broader_labour_linked_pressure": 10855098129.999998,
+            "commonwealth_gap_after_carsf": 8477759217.499998,
+            "company_tax_change": 150000000.0,
+            "coverage_ratio": 0.12117036770594417,
+            "gst_consumption_change": 100000000.0,
+            "help_repayment_loss": 219632107.49999994,
+            "net_displaced_workers": 244035.67499999993,
+            "payg_revenue_loss": 4392642149.999999,
+            "retirement_contribution_pressure": 2318338912.4999995,
+            "state_payroll_tax_loss": 59000000.0,
+            "super_contribution_loss": 2318338912.4999995,
+            "total_public_sector_gap": 8536759217.499998,
+            "transfer_pressure": 4685484959.999999,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2028
+          },
+          {
+            "automation_revenue_captured": 1200000000.0,
+            "broader_labour_linked_pressure": 12379620170.649992,
+            "commonwealth_gap_after_carsf": 9678443876.087494,
+            "company_tax_change": 165000000.0,
+            "coverage_ratio": 0.11629264179993087,
+            "gst_consumption_change": 110000000.0,
+            "help_repayment_loss": 249648280.53749985,
+            "net_displaced_workers": 277386.97837499983,
+            "payg_revenue_loss": 4992965610.749997,
+            "retirement_contribution_pressure": 2635176294.5624986,
+            "state_payroll_tax_loss": 66000000.0,
+            "super_contribution_loss": 2635176294.5624986,
+            "total_public_sector_gap": 9744443876.087494,
+            "transfer_pressure": 5325829984.799998,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2029
+          },
+          {
+            "automation_revenue_captured": 1300000000.0,
+            "broader_labour_linked_pressure": 13376775279.00324,
+            "commonwealth_gap_after_carsf": 10457013406.09293,
+            "company_tax_change": 180000000.0,
+            "coverage_ratio": 0.11661995703645829,
+            "gst_consumption_change": 120000000.0,
+            "help_repayment_loss": 269693230.06518734,
+            "net_displaced_workers": 299659.1445168748,
+            "payg_revenue_loss": 5393864601.303746,
+            "retirement_contribution_pressure": 2846761872.9103107,
+            "state_payroll_tax_loss": 73000000.0,
+            "super_contribution_loss": 2846761872.9103107,
+            "total_public_sector_gap": 10530013406.09293,
+            "transfer_pressure": 5753455574.723996,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2030
+          },
+          {
+            "automation_revenue_captured": 1400000000.0,
+            "broader_labour_linked_pressure": 14031283210.273256,
+            "commonwealth_gap_after_carsf": 10961321225.029644,
+            "company_tax_change": 195000000.0,
+            "coverage_ratio": 0.1195757282149191,
+            "gst_consumption_change": 130000000.0,
+            "help_repayment_loss": 283259556.4967632,
+            "net_displaced_workers": 314732.8405519592,
+            "payg_revenue_loss": 5665191129.935266,
+            "retirement_contribution_pressure": 2989961985.2436123,
+            "state_payroll_tax_loss": 80000000.0,
+            "super_contribution_loss": 2989961985.2436123,
+            "total_public_sector_gap": 11041321225.029644,
+            "transfer_pressure": 6042870538.597615,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2031
+          },
+          {
+            "automation_revenue_captured": 1500000000.0,
+            "broader_labour_linked_pressure": 14463212511.993374,
+            "commonwealth_gap_after_carsf": 11287472619.893856,
+            "company_tax_change": 210000000.0,
+            "coverage_ratio": 0.12401967453097865,
+            "gst_consumption_change": 140000000.0,
+            "help_repayment_loss": 292617463.46205956,
+            "net_displaced_workers": 325130.51495784393,
+            "payg_revenue_loss": 5852349269.241191,
+            "retirement_contribution_pressure": 3088739892.0995173,
+            "state_payroll_tax_loss": 87000000.0,
+            "super_contribution_loss": 3088739892.0995173,
+            "total_public_sector_gap": 11374472619.893856,
+            "transfer_pressure": 6242505887.190604,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2032
+          },
+          {
+            "automation_revenue_captured": 1600000000.0,
+            "broader_labour_linked_pressure": 14750608450.238022,
+            "commonwealth_gap_after_carsf": 11497936595.67371,
+            "company_tax_change": 225000000.0,
+            "coverage_ratio": 0.1293588474368429,
+            "gst_consumption_change": 150000000.0,
+            "help_repayment_loss": 299242596.7481979,
+            "net_displaced_workers": 332491.7741646643,
+            "payg_revenue_loss": 5984851934.963958,
+            "retirement_contribution_pressure": 3158671854.564311,
+            "state_payroll_tax_loss": 94000000.0,
+            "super_contribution_loss": 3158671854.564311,
+            "total_public_sector_gap": 11591936595.67371,
+            "transfer_pressure": 6383842063.9615555,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2033
+          },
+          {
+            "automation_revenue_captured": 1700000000.0,
+            "broader_labour_linked_pressure": 14944201161.684258,
+            "commonwealth_gap_after_carsf": 11633318576.894333,
+            "company_tax_change": 240000000.0,
+            "coverage_ratio": 0.1352509861274721,
+            "gst_consumption_change": 160000000.0,
+            "help_repayment_loss": 304094139.6116771,
+            "net_displaced_workers": 337882.3773463079,
+            "payg_revenue_loss": 6081882792.233542,
+            "retirement_contribution_pressure": 3209882584.789925,
+            "state_payroll_tax_loss": 101000000.0,
+            "super_contribution_loss": 3209882584.789925,
+            "total_public_sector_gap": 11734318576.894333,
+            "transfer_pressure": 6487341645.049113,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2034
+          }
+        ]
+      }
+    },
+    {
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\fiscal_trajectory\\high_displacement_low_reabsorption.yaml",
+      "illustrative_placeholder_only": true,
+      "interpretation": "Weak reabsorption allows displacement stock and fiscal pressure to compound, producing a larger residual gap than the low-displacement comparator.",
+      "name": "High Displacement / Low Reabsorption",
+      "no_forecast_claim": true,
+      "not_calibrated": true,
+      "purpose": "Shows higher fiscal stress when automation displacement outruns transition capacity.",
+      "sensitivity_result": {
+        "max_gap": 578640828132.9604,
+        "min_gap": 318667126740.53357,
+        "non_claims": [
+          "Fiscal sensitivity sweeps are deterministic placeholders and are not forecasts.",
+          "No real elasticity, Treasury, ATO, ABS, DSS, PBO, legal, tax, or economic validation is implied."
+        ],
+        "points": [
+          {
+            "cumulative_gap": 318667126740.53357,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "annual_displacement_rate",
+            "parameter_value": 0.025,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 448653977436.7471,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "annual_displacement_rate",
+            "parameter_value": 0.035,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 578640828132.9604,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "annual_displacement_rate",
+            "parameter_value": 0.045,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 517670656322.99054,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "annual_reabsorption_rate",
+            "parameter_value": 0.08,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 448653977436.7471,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "annual_reabsorption_rate",
+            "parameter_value": 0.12,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 338581466997.1671,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "annual_reabsorption_rate",
+            "parameter_value": 0.2,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 455178977436.7471,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "automation_revenue_capture_multiplier",
+            "parameter_value": 0.5,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 448653977436.7471,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "automation_revenue_capture_multiplier",
+            "parameter_value": 1.0,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 445391477436.7471,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "automation_revenue_capture_multiplier",
+            "parameter_value": 1.25,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          }
+        ],
+        "trajectory_id": "high_displacement_low_reabsorption",
+        "warnings": [
+          "Sensitivity sweeps do not modify firm-level liability."
+        ]
+      },
+      "status": "illustrative_placeholder_only",
+      "trajectory_id": "high_displacement_low_reabsorption",
+      "trajectory_result": {
+        "cumulative_automation_revenue_captured": 13050000000.0,
+        "cumulative_broader_labour_linked_pressure": 547331209985.81323,
+        "cumulative_commonwealth_gap_after_carsf": 447348977436.7471,
+        "cumulative_help_repayment_loss": 9348369399.385214,
+        "cumulative_payg_loss": 186967387987.70428,
+        "cumulative_retirement_contribution_pressure": 98677232549.06615,
+        "cumulative_state_revenue_pressure": 1305000000.0,
+        "cumulative_total_public_sector_gap": 448653977436.7471,
+        "cumulative_transfer_pressure": 258638220049.6576,
+        "end_year": 2034,
+        "first_critical_warning_year": 2027,
+        "first_high_warning_year": 2026,
+        "non_claims": [
+          "These are prototype fiscal trajectory outputs only. They are not forecasts, Treasury modelling, ATO estimates, ABS analysis, DSS estimates, PBO costing, legal advice, tax advice, or economic validation.",
+          "Fiscal trajectory outputs do not modify firm-level CARSF liability.",
+          "All thresholds and values are illustrative placeholders requiring calibration."
+        ],
+        "start_year": 2026,
+        "trajectory_id": "high_displacement_low_reabsorption",
+        "warnings": [
+          "National trajectory inputs are placeholders and are not fiscal forecasts.",
+          "Firm-level CARSF liability is not modified by this national trajectory layer."
+        ],
+        "years": [
+          {
+            "automation_revenue_captured": 1050000000.0,
+            "broader_labour_linked_pressure": 15796400000.000004,
+            "commonwealth_gap_after_carsf": 12785400000.000004,
+            "company_tax_change": 180000000.0,
+            "coverage_ratio": 0.07946598855689763,
+            "gst_consumption_change": 130000000.0,
+            "help_repayment_loss": 277200000.00000006,
+            "net_displaced_workers": 308000.00000000006,
+            "payg_revenue_loss": 5544000000.000001,
+            "retirement_contribution_pressure": 2926000000.0000005,
+            "state_payroll_tax_loss": 85000000.0,
+            "super_contribution_loss": 2926000000.0000005,
+            "total_public_sector_gap": 12870400000.000004,
+            "transfer_pressure": 7669200000.000002,
+            "warning_band": "high",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2026
+          },
+          {
+            "automation_revenue_captured": 1150000000.0,
+            "broader_labour_linked_pressure": 30304914000.0,
+            "commonwealth_gap_after_carsf": 24689404000.0,
+            "company_tax_change": 210000000.0,
+            "coverage_ratio": 0.04617197768873679,
+            "gst_consumption_change": 155000000.0,
+            "help_repayment_loss": 522522000.0,
+            "net_displaced_workers": 580580.0,
+            "payg_revenue_loss": 10450440000.0,
+            "retirement_contribution_pressure": 5515510000.0,
+            "state_payroll_tax_loss": 100000000.0,
+            "super_contribution_loss": 5515510000.0,
+            "total_public_sector_gap": 24789404000.0,
+            "transfer_pressure": 14456442000.0,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2027
+          },
+          {
+            "automation_revenue_captured": 1250000000.0,
+            "broader_labour_linked_pressure": 43152498729.99999,
+            "commonwealth_gap_after_carsf": 35228516779.99999,
+            "company_tax_change": 240000000.0,
+            "coverage_ratio": 0.03544719767299845,
+            "gst_consumption_change": 180000000.0,
+            "help_repayment_loss": 739798289.9999999,
+            "net_displaced_workers": 821998.0999999999,
+            "payg_revenue_loss": 14795965799.999998,
+            "retirement_contribution_pressure": 7808981949.999999,
+            "state_payroll_tax_loss": 115000000.0,
+            "super_contribution_loss": 7808981949.999999,
+            "total_public_sector_gap": 35343516779.99999,
+            "transfer_pressure": 20467752689.999996,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2028
+          },
+          {
+            "automation_revenue_captured": 1350000000.0,
+            "broader_labour_linked_pressure": 54538878164.45,
+            "commonwealth_gap_after_carsf": 44566864232.7,
+            "company_tax_change": 270000000.0,
+            "coverage_ratio": 0.03037498737800433,
+            "gst_consumption_change": 205000000.0,
+            "help_repayment_loss": 932401319.8499999,
+            "net_displaced_workers": 1036001.4664999999,
+            "payg_revenue_loss": 18648026396.999996,
+            "retirement_contribution_pressure": 9842013931.749998,
+            "state_payroll_tax_loss": 130000000.0,
+            "super_contribution_loss": 9842013931.749998,
+            "total_public_sector_gap": 44696864232.7,
+            "transfer_pressure": 25796436515.85,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2029
+          },
+          {
+            "automation_revenue_captured": 1450000000.0,
+            "broader_labour_linked_pressure": 64639811463.17623,
+            "commonwealth_gap_after_carsf": 52848878838.407486,
+            "company_tax_change": 300000000.0,
+            "coverage_ratio": 0.027571477651575974,
+            "gst_consumption_change": 230000000.0,
+            "help_repayment_loss": 1103298880.2412498,
+            "net_displaced_workers": 1225887.6447124998,
+            "payg_revenue_loss": 22065977604.824997,
+            "retirement_contribution_pressure": 11645932624.768747,
+            "state_payroll_tax_loss": 145000000.0,
+            "super_contribution_loss": 11645932624.768747,
+            "total_public_sector_gap": 52993878838.407486,
+            "transfer_pressure": 30524602353.341244,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2030
+          },
+          {
+            "automation_revenue_captured": 1550000000.0,
+            "broader_labour_linked_pressure": 73609968759.44763,
+            "commonwealth_gap_after_carsf": 60201662882.998245,
+            "company_tax_change": 330000000.0,
+            "coverage_ratio": 0.025908225281109167,
+            "gst_consumption_change": 255000000.0,
+            "help_repayment_loss": 1255102661.979416,
+            "net_displaced_workers": 1394558.5133104622,
+            "payg_revenue_loss": 25102053239.58832,
+            "retirement_contribution_pressure": 13248305876.44939,
+            "state_payroll_tax_loss": 160000000.0,
+            "super_contribution_loss": 13248305876.44939,
+            "total_public_sector_gap": 60361662882.998245,
+            "transfer_pressure": 34724506981.43051,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2031
+          },
+          {
+            "automation_revenue_captured": 1650000000.0,
+            "broader_labour_linked_pressure": 81585461853.52573,
+            "commonwealth_gap_after_carsf": 66737068089.7641,
+            "company_tax_change": 360000000.0,
+            "coverage_ratio": 0.02490116610153224,
+            "gst_consumption_change": 280000000.0,
+            "help_repayment_loss": 1390110988.1458378,
+            "net_displaced_workers": 1544567.7646064863,
+            "payg_revenue_loss": 27802219762.91675,
+            "retirement_contribution_pressure": 14673393763.76162,
+            "state_payroll_tax_loss": 175000000.0,
+            "super_contribution_loss": 14673393763.76162,
+            "total_public_sector_gap": 66912068089.7641,
+            "transfer_pressure": 38459737338.70151,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2032
+          },
+          {
+            "automation_revenue_captured": 1750000000.0,
+            "broader_labour_linked_pressure": 88686071223.04048,
+            "commonwealth_gap_after_carsf": 72553525695.48167,
+            "company_tax_change": 390000000.0,
+            "coverage_ratio": 0.02430785829397456,
+            "gst_consumption_change": 305000000.0,
+            "help_repayment_loss": 1510346418.4003084,
+            "net_displaced_workers": 1678162.6871114539,
+            "payg_revenue_loss": 30206928368.00617,
+            "retirement_contribution_pressure": 15942545527.558811,
+            "state_payroll_tax_loss": 190000000.0,
+            "super_contribution_loss": 15942545527.558811,
+            "total_public_sector_gap": 72743525695.48167,
+            "transfer_pressure": 41786250909.0752,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2033
+          },
+          {
+            "automation_revenue_captured": 1850000000.0,
+            "broader_labour_linked_pressure": 95017205792.17319,
+            "commonwealth_gap_after_carsf": 77737656917.3956,
+            "company_tax_change": 420000000.0,
+            "coverage_ratio": 0.023993234765858264,
+            "gst_consumption_change": 330000000.0,
+            "help_repayment_loss": 1617588840.7684023,
+            "net_displaced_workers": 1797320.9341871138,
+            "payg_revenue_loss": 32351776815.36805,
+            "retirement_contribution_pressure": 17074548874.77758,
+            "state_payroll_tax_loss": 205000000.0,
+            "super_contribution_loss": 17074548874.77758,
+            "total_public_sector_gap": 77942656917.3956,
+            "transfer_pressure": 44753291261.25914,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2034
+          }
+        ]
+      }
+    },
+    {
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\fiscal_trajectory\\low_displacement_high_reabsorption.yaml",
+      "illustrative_placeholder_only": true,
+      "interpretation": "Faster reabsorption keeps net displacement, PAYG loss, and support pressure lower under placeholder assumptions.",
+      "name": "Low Displacement / High Reabsorption",
+      "no_forecast_claim": true,
+      "not_calibrated": true,
+      "purpose": "Shows lower fiscal stress when displaced workers are reabsorbed faster.",
+      "sensitivity_result": {
+        "max_gap": 16836348714.493605,
+        "min_gap": 124117251.70448112,
+        "non_claims": [
+          "Fiscal sensitivity sweeps are deterministic placeholders and are not forecasts.",
+          "No real elasticity, Treasury, ATO, ABS, DSS, PBO, legal, tax, or economic validation is implied."
+        ],
+        "points": [
+          {
+            "cumulative_gap": 2020427351.2438486,
+            "first_critical_warning_year": null,
+            "first_high_warning_year": null,
+            "parameter_name": "annual_displacement_rate",
+            "parameter_value": 0.005,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 6937683761.990157,
+            "first_critical_warning_year": null,
+            "first_high_warning_year": null,
+            "parameter_name": "annual_displacement_rate",
+            "parameter_value": 0.008,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 13494025642.985237,
+            "first_critical_warning_year": null,
+            "first_high_warning_year": 2027,
+            "parameter_name": "annual_displacement_rate",
+            "parameter_value": 0.012,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 16836348714.493605,
+            "first_critical_warning_year": null,
+            "first_high_warning_year": 2027,
+            "parameter_name": "annual_reabsorption_rate",
+            "parameter_value": 0.5,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 6937683761.990157,
+            "first_critical_warning_year": null,
+            "first_high_warning_year": null,
+            "parameter_name": "annual_reabsorption_rate",
+            "parameter_value": 0.65,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 124117251.70448112,
+            "first_critical_warning_year": null,
+            "first_high_warning_year": null,
+            "parameter_name": "annual_reabsorption_rate",
+            "parameter_value": 0.8,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          }
+        ],
+        "trajectory_id": "low_displacement_high_reabsorption",
+        "warnings": [
+          "Sensitivity sweeps do not modify firm-level liability."
+        ]
+      },
+      "status": "illustrative_placeholder_only",
+      "trajectory_id": "low_displacement_high_reabsorption",
+      "trajectory_result": {
+        "cumulative_automation_revenue_captured": 7930000000.0,
+        "cumulative_broader_labour_linked_pressure": 10466592989.72122,
+        "cumulative_commonwealth_gap_after_carsf": 6649683761.990157,
+        "cumulative_help_repayment_loss": 334317716.31136376,
+        "cumulative_payg_loss": 6686354326.227276,
+        "cumulative_retirement_contribution_pressure": 3528909227.731062,
+        "cumulative_state_revenue_pressure": 288000000.0,
+        "cumulative_total_public_sector_gap": 6937683761.990157,
+        "cumulative_transfer_pressure": 6092011719.451518,
+        "end_year": 2034,
+        "first_critical_warning_year": null,
+        "first_high_warning_year": null,
+        "non_claims": [
+          "These are prototype fiscal trajectory outputs only. They are not forecasts, Treasury modelling, ATO estimates, ABS analysis, DSS estimates, PBO costing, legal advice, tax advice, or economic validation.",
+          "Fiscal trajectory outputs do not modify firm-level CARSF liability.",
+          "All thresholds and values are illustrative placeholders requiring calibration."
+        ],
+        "start_year": 2026,
+        "trajectory_id": "low_displacement_high_reabsorption",
+        "warnings": [
+          "National trajectory inputs are placeholders and are not fiscal forecasts.",
+          "Firm-level CARSF liability is not modified by this national trajectory layer."
+        ],
+        "years": [
+          {
+            "automation_revenue_captured": 650000000.0,
+            "broader_labour_linked_pressure": 739400000.0,
+            "commonwealth_gap_after_carsf": 453400000.0,
+            "company_tax_change": 70000000.0,
+            "coverage_ratio": 0.6748338870431894,
+            "gst_consumption_change": 35000000.0,
+            "help_repayment_loss": 25200000.0,
+            "net_displaced_workers": 28000.0,
+            "payg_revenue_loss": 504000000.0,
+            "retirement_contribution_pressure": 266000000.0,
+            "state_payroll_tax_loss": 20000000.0,
+            "super_contribution_loss": 266000000.0,
+            "total_public_sector_gap": 473400000.0,
+            "transfer_pressure": 459200000.0,
+            "warning_band": "medium",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2026
+          },
+          {
+            "automation_revenue_captured": 700000000.0,
+            "broader_labour_linked_pressure": 1149711999.9999995,
+            "commonwealth_gap_after_carsf": 766281999.9999995,
+            "company_tax_change": 76000000.0,
+            "coverage_ratio": 0.5363425727280531,
+            "gst_consumption_change": 39000000.0,
+            "help_repayment_loss": 34145999.999999985,
+            "net_displaced_workers": 37939.999999999985,
+            "payg_revenue_loss": 682919999.9999998,
+            "retirement_contribution_pressure": 360429999.9999999,
+            "state_payroll_tax_loss": 23000000.0,
+            "super_contribution_loss": 360429999.9999999,
+            "total_public_sector_gap": 789281999.9999995,
+            "transfer_pressure": 622215999.9999998,
+            "warning_band": "medium",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2027
+          },
+          {
+            "automation_revenue_captured": 760000000.0,
+            "broader_labour_linked_pressure": 1266874559.9999993,
+            "commonwealth_gap_after_carsf": 846057409.9999994,
+            "company_tax_change": 82000000.0,
+            "coverage_ratio": 0.5315972746630501,
+            "gst_consumption_change": 43000000.0,
+            "help_repayment_loss": 37403729.999999985,
+            "net_displaced_workers": 41559.69999999998,
+            "payg_revenue_loss": 748074599.9999996,
+            "retirement_contribution_pressure": 394817149.9999998,
+            "state_payroll_tax_loss": 26000000.0,
+            "super_contribution_loss": 394817149.9999998,
+            "total_public_sector_gap": 872057409.9999994,
+            "transfer_pressure": 681579079.9999998,
+            "warning_band": "medium",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2028
+          },
+          {
+            "automation_revenue_captured": 820000000.0,
+            "broader_labour_linked_pressure": 1284966332.7999988,
+            "commonwealth_gap_after_carsf": 847770347.0499991,
+            "company_tax_change": 88000000.0,
+            "coverage_ratio": 0.5547665736007135,
+            "gst_consumption_change": 47000000.0,
+            "help_repayment_loss": 38671198.649999976,
+            "net_displaced_workers": 42967.99849999997,
+            "payg_revenue_loss": 773423972.9999995,
+            "retirement_contribution_pressure": 408195985.74999976,
+            "state_payroll_tax_loss": 29000000.0,
+            "super_contribution_loss": 408195985.74999976,
+            "total_public_sector_gap": 876770347.0499991,
+            "transfer_pressure": 704675175.3999996,
+            "warning_band": "medium",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2029
+          },
+          {
+            "automation_revenue_captured": 880000000.0,
+            "broader_labour_linked_pressure": 1268415004.4639988,
+            "commonwealth_gap_after_carsf": 822186376.2852491,
+            "company_tax_change": 94000000.0,
+            "coverage_ratio": 0.5866887010742362,
+            "gst_consumption_change": 51000000.0,
+            "help_repayment_loss": 39242712.14324997,
+            "net_displaced_workers": 43603.01349249997,
+            "payg_revenue_loss": 784854242.8649995,
+            "retirement_contribution_pressure": 414228628.17874974,
+            "state_payroll_tax_loss": 32000000.0,
+            "super_contribution_loss": 414228628.17874974,
+            "total_public_sector_gap": 854186376.2852491,
+            "transfer_pressure": 715089421.2769996,
+            "warning_band": "medium",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2030
+          },
+          {
+            "automation_revenue_captured": 940000000.0,
+            "broader_labour_linked_pressure": 1239770423.4863183,
+            "commonwealth_gap_after_carsf": 787073570.291675,
+            "company_tax_change": 100000000.0,
+            "coverage_ratio": 0.6214866625649336,
+            "gst_consumption_change": 55000000.0,
+            "help_repayment_loss": 39571280.828966215,
+            "net_displaced_workers": 43968.08980996246,
+            "payg_revenue_loss": 791425616.5793242,
+            "retirement_contribution_pressure": 417696853.1946434,
+            "state_payroll_tax_loss": 35000000.0,
+            "super_contribution_loss": 417696853.1946434,
+            "total_public_sector_gap": 822073570.291675,
+            "transfer_pressure": 721076672.8833845,
+            "warning_band": "medium",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2031
+          },
+          {
+            "automation_revenue_captured": 1000000000.0,
+            "broader_labour_linked_pressure": 1206925196.0037498,
+            "commonwealth_gap_after_carsf": 748650879.8868831,
+            "company_tax_change": 106000000.0,
+            "coverage_ratio": 0.6571012791104781,
+            "gst_consumption_change": 59000000.0,
+            "help_repayment_loss": 39815461.52686104,
+            "net_displaced_workers": 44239.40169651227,
+            "payg_revenue_loss": 796309230.5372208,
+            "retirement_contribution_pressure": 420274316.1168666,
+            "state_payroll_tax_loss": 38000000.0,
+            "super_contribution_loss": 420274316.1168666,
+            "total_public_sector_gap": 786650879.8868831,
+            "transfer_pressure": 725526187.8228012,
+            "warning_band": "medium",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2032
+          },
+          {
+            "automation_revenue_captured": 1060000000.0,
+            "broader_labour_linked_pressure": 1172641894.123768,
+            "commonwealth_gap_after_carsf": 709095063.8966298,
+            "company_tax_change": 112000000.0,
+            "coverage_ratio": 0.6927813373541998,
+            "gst_consumption_change": 63000000.0,
+            "help_repayment_loss": 40030752.33730784,
+            "net_displaced_workers": 44478.613708119825,
+            "payg_revenue_loss": 800615046.7461568,
+            "retirement_contribution_pressure": 422546830.22713834,
+            "state_payroll_tax_loss": 41000000.0,
+            "super_contribution_loss": 422546830.22713834,
+            "total_public_sector_gap": 750095063.8966298,
+            "transfer_pressure": 729449264.8131652,
+            "warning_band": "medium",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2033
+          },
+          {
+            "automation_revenue_captured": 1120000000.0,
+            "broader_labour_linked_pressure": 1137887578.8433871,
+            "commonwealth_gap_after_carsf": 669168114.5797224,
+            "company_tax_change": 118000000.0,
+            "coverage_ratio": 0.7282508846577875,
+            "gst_consumption_change": 67000000.0,
+            "help_repayment_loss": 40236580.824978754,
+            "net_displaced_workers": 44707.312027754175,
+            "payg_revenue_loss": 804731616.4995751,
+            "retirement_contribution_pressure": 424719464.26366466,
+            "state_payroll_tax_loss": 44000000.0,
+            "super_contribution_loss": 424719464.26366466,
+            "total_public_sector_gap": 713168114.5797224,
+            "transfer_pressure": 733199917.2551686,
+            "warning_band": "medium",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2034
+          }
+        ]
+      }
+    },
+    {
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\fiscal_trajectory\\stronger_automation_revenue_capture.yaml",
+      "illustrative_placeholder_only": true,
+      "interpretation": "Stronger placeholder automation revenue capture improves coverage relative to the weak-capture comparator, but it remains non-forecast and uncalibrated.",
+      "name": "Stronger Automation Revenue Capture",
+      "no_forecast_claim": true,
+      "not_calibrated": true,
+      "purpose": "Shows improved coverage but remains placeholder-only.",
+      "sensitivity_result": {
+        "max_gap": 221852287861.13824,
+        "min_gap": 144084315773.91766,
+        "non_claims": [
+          "Fiscal sensitivity sweeps are deterministic placeholders and are not forecasts.",
+          "No real elasticity, Treasury, ATO, ABS, DSS, PBO, legal, tax, or economic validation is implied."
+        ],
+        "points": [
+          {
+            "cumulative_gap": 221852287861.13824,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "annual_reabsorption_rate",
+            "parameter_value": 0.18,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 192094734641.71356,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "annual_reabsorption_rate",
+            "parameter_value": 0.22,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 144084315773.91766,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "annual_reabsorption_rate",
+            "parameter_value": 0.3,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 195919734641.71356,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "automation_revenue_capture_multiplier",
+            "parameter_value": 0.75,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 192094734641.71356,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "automation_revenue_capture_multiplier",
+            "parameter_value": 1.0,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 188269734641.71356,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "automation_revenue_capture_multiplier",
+            "parameter_value": 1.25,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          }
+        ],
+        "trajectory_id": "stronger_automation_revenue_capture",
+        "warnings": [
+          "Sensitivity sweeps do not modify firm-level liability."
+        ]
+      },
+      "status": "illustrative_placeholder_only",
+      "trajectory_id": "stronger_automation_revenue_capture",
+      "trajectory_result": {
+        "cumulative_automation_revenue_captured": 15300000000.0,
+        "cumulative_broader_labour_linked_pressure": 238658593069.25687,
+        "cumulative_commonwealth_gap_after_carsf": 191194734641.71356,
+        "cumulative_help_repayment_loss": 4397697740.379089,
+        "cumulative_payg_loss": 87953954807.58179,
+        "cumulative_retirement_contribution_pressure": 46563858427.543304,
+        "cumulative_state_revenue_pressure": 900000000.0,
+        "cumulative_total_public_sector_gap": 192094734641.71356,
+        "cumulative_transfer_pressure": 110408082093.75267,
+        "end_year": 2034,
+        "first_critical_warning_year": 2027,
+        "first_high_warning_year": 2026,
+        "non_claims": [
+          "These are prototype fiscal trajectory outputs only. They are not forecasts, Treasury modelling, ATO estimates, ABS analysis, DSS estimates, PBO costing, legal advice, tax advice, or economic validation.",
+          "Fiscal trajectory outputs do not modify firm-level CARSF liability.",
+          "All thresholds and values are illustrative placeholders requiring calibration."
+        ],
+        "start_year": 2026,
+        "trajectory_id": "stronger_automation_revenue_capture",
+        "warnings": [
+          "National trajectory inputs are placeholders and are not fiscal forecasts.",
+          "Firm-level CARSF liability is not modified by this national trajectory layer."
+        ],
+        "years": [
+          {
+            "automation_revenue_captured": 1100000000.0,
+            "broader_labour_linked_pressure": 8499285400.0,
+            "commonwealth_gap_after_carsf": 6705345400.0,
+            "company_tax_change": 140000000.0,
+            "coverage_ratio": 0.14891862604318173,
+            "gst_consumption_change": 90000000.0,
+            "help_repayment_loss": 163761000.0,
+            "net_displaced_workers": 192660.0,
+            "payg_revenue_loss": 3275220000.0,
+            "retirement_contribution_pressure": 1733940000.0,
+            "state_payroll_tax_loss": 60000000.0,
+            "super_contribution_loss": 1733940000.0,
+            "total_public_sector_gap": 6765345400.0,
+            "transfer_pressure": 4111364400.0,
+            "warning_band": "high",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2026
+          },
+          {
+            "automation_revenue_captured": 1250000000.0,
+            "broader_labour_linked_pressure": 15678165153.6,
+            "commonwealth_gap_after_carsf": 12514816193.6,
+            "company_tax_change": 160000000.0,
+            "coverage_ratio": 0.0948574615542077,
+            "gst_consumption_change": 105000000.0,
+            "help_repayment_loss": 292149624.0,
+            "net_displaced_workers": 343705.44,
+            "payg_revenue_loss": 5842992480.0,
+            "retirement_contribution_pressure": 3093348960.0,
+            "state_payroll_tax_loss": 70000000.0,
+            "super_contribution_loss": 3093348960.0,
+            "total_public_sector_gap": 12584816193.6,
+            "transfer_pressure": 7334674089.6,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2027
+          },
+          {
+            "automation_revenue_captured": 1400000000.0,
+            "broader_labour_linked_pressure": 21292977051.5744,
+            "commonwealth_gap_after_carsf": 17052325599.7344,
+            "company_tax_change": 180000000.0,
+            "coverage_ratio": 0.07898726953137243,
+            "gst_consumption_change": 120000000.0,
+            "help_repayment_loss": 392950414.896,
+            "net_displaced_workers": 462294.60576,
+            "payg_revenue_loss": 7859008297.92,
+            "retirement_contribution_pressure": 4160651451.84,
+            "state_payroll_tax_loss": 80000000.0,
+            "super_contribution_loss": 4160651451.84,
+            "total_public_sector_gap": 17132325599.7344,
+            "transfer_pressure": 9865366886.9184,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2028
+          },
+          {
+            "automation_revenue_captured": 1550000000.0,
+            "broader_labour_linked_pressure": 25687965164.9215,
+            "commonwealth_gap_after_carsf": 20597826412.394142,
+            "company_tax_change": 200000000.0,
+            "coverage_ratio": 0.07276793370470072,
+            "gst_consumption_change": 135000000.0,
+            "help_repayment_loss": 472235326.6275841,
+            "net_displaced_workers": 555570.9725030401,
+            "payg_revenue_loss": 9444706532.551682,
+            "retirement_contribution_pressure": 5000138752.527361,
+            "state_payroll_tax_loss": 90000000.0,
+            "super_contribution_loss": 5000138752.527361,
+            "total_public_sector_gap": 20687826412.394142,
+            "transfer_pressure": 11855884553.214874,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2029
+          },
+          {
+            "automation_revenue_captured": 1700000000.0,
+            "broader_labour_linked_pressure": 29131640465.59102,
+            "commonwealth_gap_after_carsf": 23369682296.047146,
+            "company_tax_change": 220000000.0,
+            "coverage_ratio": 0.07048109874962186,
+            "gst_consumption_change": 150000000.0,
+            "help_repayment_loss": 534740493.7902545,
+            "net_displaced_workers": 629106.4632826523,
+            "payg_revenue_loss": 10694809875.80509,
+            "retirement_contribution_pressure": 5661958169.543871,
+            "state_payroll_tax_loss": 100000000.0,
+            "super_contribution_loss": 5661958169.543871,
+            "total_public_sector_gap": 23469682296.047146,
+            "transfer_pressure": 13425131926.451801,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2030
+          },
+          {
+            "automation_revenue_captured": 1850000000.0,
+            "broader_labour_linked_pressure": 31833442110.66104,
+            "commonwealth_gap_after_carsf": 25538217396.074,
+            "company_tax_change": 240000000.0,
+            "coverage_ratio": 0.07021124057874721,
+            "gst_consumption_change": 165000000.0,
+            "help_repayment_loss": 584160111.9332203,
+            "net_displaced_workers": 687247.1905096709,
+            "payg_revenue_loss": 11683202238.664406,
+            "retirement_contribution_pressure": 6185224714.587038,
+            "state_payroll_tax_loss": 110000000.0,
+            "super_contribution_loss": 6185224714.587038,
+            "total_public_sector_gap": 25648217396.074,
+            "transfer_pressure": 14665855045.476376,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2031
+          },
+          {
+            "automation_revenue_captured": 2000000000.0,
+            "broader_labour_linked_pressure": 33956733244.00566,
+            "commonwealth_gap_after_carsf": 27236285034.91558,
+            "company_tax_change": 260000000.0,
+            "coverage_ratio": 0.0711290435441261,
+            "gst_consumption_change": 180000000.0,
+            "help_repayment_loss": 623375664.1918409,
+            "net_displaced_workers": 733383.1343433422,
+            "payg_revenue_loss": 12467513283.836817,
+            "retirement_contribution_pressure": 6600448209.090079,
+            "state_payroll_tax_loss": 120000000.0,
+            "super_contribution_loss": 6600448209.090079,
+            "total_public_sector_gap": 27356285034.91558,
+            "transfer_pressure": 15650396086.886923,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2032
+          },
+          {
+            "automation_revenue_captured": 2150000000.0,
+            "broader_labour_linked_pressure": 35628937721.605225,
+            "commonwealth_gap_after_carsf": 28567511295.075924,
+            "company_tax_change": 280000000.0,
+            "coverage_ratio": 0.07281255035025476,
+            "gst_consumption_change": 195000000.0,
+            "help_repayment_loss": 654634718.0611007,
+            "net_displaced_workers": 770158.4918365891,
+            "payg_revenue_loss": 13092694361.222013,
+            "retirement_contribution_pressure": 6931426426.529302,
+            "state_payroll_tax_loss": 130000000.0,
+            "super_contribution_loss": 6931426426.529302,
+            "total_public_sector_gap": 28697511295.075924,
+            "transfer_pressure": 16435182215.79281,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2033
+          },
+          {
+            "automation_revenue_captured": 2300000000.0,
+            "broader_labour_linked_pressure": 36949446757.29801,
+            "commonwealth_gap_after_carsf": 29612725013.87236,
+            "company_tax_change": 300000000.0,
+            "coverage_ratio": 0.07502111691057113,
+            "gst_consumption_change": 210000000.0,
+            "help_repayment_loss": 679690386.8790892,
+            "net_displaced_workers": 799635.7492695168,
+            "payg_revenue_loss": 13593807737.581785,
+            "retirement_contribution_pressure": 7196721743.425652,
+            "state_payroll_tax_loss": 140000000.0,
+            "super_contribution_loss": 7196721743.425652,
+            "total_public_sector_gap": 29752725013.87236,
+            "transfer_pressure": 17064226889.411488,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2034
+          }
+        ]
+      }
+    },
+    {
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\fiscal_trajectory\\weak_automation_revenue_capture.yaml",
+      "illustrative_placeholder_only": true,
+      "interpretation": "Automation revenue captured remains weak relative to PAYG loss and support pressure, so the residual public-sector gap remains high under placeholder assumptions.",
+      "name": "Weak Automation Revenue Capture",
+      "no_forecast_claim": true,
+      "not_calibrated": true,
+      "purpose": "Shows under-capture where CARSF-like revenue fails to cover PAYG loss and transfer pressure.",
+      "sensitivity_result": {
+        "max_gap": 219586020784.228,
+        "min_gap": 188543448499.19913,
+        "non_claims": [
+          "Fiscal sensitivity sweeps are deterministic placeholders and are not forecasts.",
+          "No real elasticity, Treasury, ATO, ABS, DSS, PBO, legal, tax, or economic validation is implied."
+        ],
+        "points": [
+          {
+            "cumulative_gap": 205729734641.71356,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "automation_revenue_capture_multiplier",
+            "parameter_value": 0.5,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 204064734641.71356,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "automation_revenue_capture_multiplier",
+            "parameter_value": 1.0,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 202399734641.71356,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "automation_revenue_capture_multiplier",
+            "parameter_value": 1.5,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 188543448499.19913,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "average_payg_tax_per_worker",
+            "parameter_value": 14000.0,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 204064734641.71356,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "average_payg_tax_per_worker",
+            "parameter_value": 17000.0,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          },
+          {
+            "cumulative_gap": 219586020784.228,
+            "first_critical_warning_year": 2027,
+            "first_high_warning_year": 2026,
+            "parameter_name": "average_payg_tax_per_worker",
+            "parameter_value": 20000.0,
+            "warnings": [
+              "Fiscal sensitivity point is placeholder-only and not a forecast."
+            ]
+          }
+        ],
+        "trajectory_id": "weak_automation_revenue_capture",
+        "warnings": [
+          "Sensitivity sweeps do not modify firm-level liability."
+        ]
+      },
+      "status": "illustrative_placeholder_only",
+      "trajectory_id": "weak_automation_revenue_capture",
+      "trajectory_result": {
+        "cumulative_automation_revenue_captured": 3330000000.0,
+        "cumulative_broader_labour_linked_pressure": 250628593069.25687,
+        "cumulative_commonwealth_gap_after_carsf": 203164734641.71356,
+        "cumulative_help_repayment_loss": 4397697740.379089,
+        "cumulative_payg_loss": 87953954807.58179,
+        "cumulative_retirement_contribution_pressure": 46563858427.543304,
+        "cumulative_state_revenue_pressure": 900000000.0,
+        "cumulative_total_public_sector_gap": 204064734641.71356,
+        "cumulative_transfer_pressure": 110408082093.75267,
+        "end_year": 2034,
+        "first_critical_warning_year": 2027,
+        "first_high_warning_year": 2026,
+        "non_claims": [
+          "These are prototype fiscal trajectory outputs only. They are not forecasts, Treasury modelling, ATO estimates, ABS analysis, DSS estimates, PBO costing, legal advice, tax advice, or economic validation.",
+          "Fiscal trajectory outputs do not modify firm-level CARSF liability.",
+          "All thresholds and values are illustrative placeholders requiring calibration."
+        ],
+        "start_year": 2026,
+        "trajectory_id": "weak_automation_revenue_capture",
+        "warnings": [
+          "National trajectory inputs are placeholders and are not fiscal forecasts.",
+          "Firm-level CARSF liability is not modified by this national trajectory layer."
+        ],
+        "years": [
+          {
+            "automation_revenue_captured": 250000000.0,
+            "broader_labour_linked_pressure": 9349285400.0,
+            "commonwealth_gap_after_carsf": 7555345400.0,
+            "company_tax_change": 140000000.0,
+            "coverage_ratio": 0.033845142282541305,
+            "gst_consumption_change": 90000000.0,
+            "help_repayment_loss": 163761000.0,
+            "net_displaced_workers": 192660.0,
+            "payg_revenue_loss": 3275220000.0,
+            "retirement_contribution_pressure": 1733940000.0,
+            "state_payroll_tax_loss": 60000000.0,
+            "super_contribution_loss": 1733940000.0,
+            "total_public_sector_gap": 7615345400.0,
+            "transfer_pressure": 4111364400.0,
+            "warning_band": "high",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2026
+          },
+          {
+            "automation_revenue_captured": 280000000.0,
+            "broader_labour_linked_pressure": 16648165153.6,
+            "commonwealth_gap_after_carsf": 13484816193.6,
+            "company_tax_change": 160000000.0,
+            "coverage_ratio": 0.021248071388142522,
+            "gst_consumption_change": 105000000.0,
+            "help_repayment_loss": 292149624.0,
+            "net_displaced_workers": 343705.44,
+            "payg_revenue_loss": 5842992480.0,
+            "retirement_contribution_pressure": 3093348960.0,
+            "state_payroll_tax_loss": 70000000.0,
+            "super_contribution_loss": 3093348960.0,
+            "total_public_sector_gap": 13554816193.6,
+            "transfer_pressure": 7334674089.6,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2027
+          },
+          {
+            "automation_revenue_captured": 310000000.0,
+            "broader_labour_linked_pressure": 22382977051.574398,
+            "commonwealth_gap_after_carsf": 18142325599.734398,
+            "company_tax_change": 180000000.0,
+            "coverage_ratio": 0.017490038253375324,
+            "gst_consumption_change": 120000000.0,
+            "help_repayment_loss": 392950414.896,
+            "net_displaced_workers": 462294.60576,
+            "payg_revenue_loss": 7859008297.92,
+            "retirement_contribution_pressure": 4160651451.84,
+            "state_payroll_tax_loss": 80000000.0,
+            "super_contribution_loss": 4160651451.84,
+            "total_public_sector_gap": 18222325599.734398,
+            "transfer_pressure": 9865366886.9184,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2028
+          },
+          {
+            "automation_revenue_captured": 340000000.0,
+            "broader_labour_linked_pressure": 26897965164.9215,
+            "commonwealth_gap_after_carsf": 21807826412.394142,
+            "company_tax_change": 200000000.0,
+            "coverage_ratio": 0.015961998361031127,
+            "gst_consumption_change": 135000000.0,
+            "help_repayment_loss": 472235326.6275841,
+            "net_displaced_workers": 555570.9725030401,
+            "payg_revenue_loss": 9444706532.551682,
+            "retirement_contribution_pressure": 5000138752.527361,
+            "state_payroll_tax_loss": 90000000.0,
+            "super_contribution_loss": 5000138752.527361,
+            "total_public_sector_gap": 21897826412.394142,
+            "transfer_pressure": 11855884553.214874,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2029
+          },
+          {
+            "automation_revenue_captured": 370000000.0,
+            "broader_labour_linked_pressure": 30461640465.59102,
+            "commonwealth_gap_after_carsf": 24699682296.047146,
+            "company_tax_change": 220000000.0,
+            "coverage_ratio": 0.015340003845505934,
+            "gst_consumption_change": 150000000.0,
+            "help_repayment_loss": 534740493.7902545,
+            "net_displaced_workers": 629106.4632826523,
+            "payg_revenue_loss": 10694809875.80509,
+            "retirement_contribution_pressure": 5661958169.543871,
+            "state_payroll_tax_loss": 100000000.0,
+            "super_contribution_loss": 5661958169.543871,
+            "total_public_sector_gap": 24799682296.047146,
+            "transfer_pressure": 13425131926.451801,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2030
+          },
+          {
+            "automation_revenue_captured": 400000000.0,
+            "broader_labour_linked_pressure": 33283442110.66104,
+            "commonwealth_gap_after_carsf": 26988217396.074,
+            "company_tax_change": 240000000.0,
+            "coverage_ratio": 0.01518080877378318,
+            "gst_consumption_change": 165000000.0,
+            "help_repayment_loss": 584160111.9332203,
+            "net_displaced_workers": 687247.1905096709,
+            "payg_revenue_loss": 11683202238.664406,
+            "retirement_contribution_pressure": 6185224714.587038,
+            "state_payroll_tax_loss": 110000000.0,
+            "super_contribution_loss": 6185224714.587038,
+            "total_public_sector_gap": 27098217396.074,
+            "transfer_pressure": 14665855045.476376,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2031
+          },
+          {
+            "automation_revenue_captured": 430000000.0,
+            "broader_labour_linked_pressure": 35526733244.00566,
+            "commonwealth_gap_after_carsf": 28806285034.91558,
+            "company_tax_change": 260000000.0,
+            "coverage_ratio": 0.015292744361987111,
+            "gst_consumption_change": 180000000.0,
+            "help_repayment_loss": 623375664.1918409,
+            "net_displaced_workers": 733383.1343433422,
+            "payg_revenue_loss": 12467513283.836817,
+            "retirement_contribution_pressure": 6600448209.090079,
+            "state_payroll_tax_loss": 120000000.0,
+            "super_contribution_loss": 6600448209.090079,
+            "total_public_sector_gap": 28926285034.91558,
+            "transfer_pressure": 15650396086.886923,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2032
+          },
+          {
+            "automation_revenue_captured": 460000000.0,
+            "broader_labour_linked_pressure": 37318937721.605225,
+            "commonwealth_gap_after_carsf": 30257511295.075924,
+            "company_tax_change": 280000000.0,
+            "coverage_ratio": 0.015578499144705668,
+            "gst_consumption_change": 195000000.0,
+            "help_repayment_loss": 654634718.0611007,
+            "net_displaced_workers": 770158.4918365891,
+            "payg_revenue_loss": 13092694361.222013,
+            "retirement_contribution_pressure": 6931426426.529302,
+            "state_payroll_tax_loss": 130000000.0,
+            "super_contribution_loss": 6931426426.529302,
+            "total_public_sector_gap": 30387511295.075924,
+            "transfer_pressure": 16435182215.79281,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2033
+          },
+          {
+            "automation_revenue_captured": 490000000.0,
+            "broader_labour_linked_pressure": 38759446757.29801,
+            "commonwealth_gap_after_carsf": 31422725013.87236,
+            "company_tax_change": 300000000.0,
+            "coverage_ratio": 0.015982759689643414,
+            "gst_consumption_change": 210000000.0,
+            "help_repayment_loss": 679690386.8790892,
+            "net_displaced_workers": 799635.7492695168,
+            "payg_revenue_loss": 13593807737.581785,
+            "retirement_contribution_pressure": 7196721743.425652,
+            "state_payroll_tax_loss": 140000000.0,
+            "super_contribution_loss": 7196721743.425652,
+            "total_public_sector_gap": 31562725013.87236,
+            "transfer_pressure": 17064226889.411488,
+            "warning_band": "critical",
+            "warnings": [
+              "Warning-band thresholds are illustrative placeholders.",
+              "Coverage ratio uses PAYG loss plus transfer pressure as a prototype denominator.",
+              "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss."
+            ],
+            "year": 2034
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "generated_at": "2026-05-13T12:19:41+00:00",
+    "non_claims": [
+      "These are prototype fiscal trajectory outputs only. They are not forecasts, Treasury modelling, ATO estimates, ABS analysis, DSS estimates, PBO costing, legal advice, tax advice, or economic validation.",
+      "All fiscal values are illustrative placeholders and are not calibrated Australian fiscal data.",
+      "National fiscal trajectory outputs do not modify firm-level CARSF liability."
+    ],
+    "status": "prototype_fiscal_trajectory_outputs_only",
+    "version": "CARSF V1.5 prototype"
+  }
+}

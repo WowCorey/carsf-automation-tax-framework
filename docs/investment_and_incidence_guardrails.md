@@ -8,6 +8,8 @@ The investment and incidence guardrails test whether illustrative CARSF outputs 
 
 The guardrails are non-operative. They do not change final liability.
 
+The separate national fiscal trajectory engine extends this review perspective to PAYG erosion, transfer pressure, automation revenue captured, and residual fiscal gaps. It also remains non-operative and does not change final liability.
+
 ## What Exists
 
 - Effective automation burden preview.

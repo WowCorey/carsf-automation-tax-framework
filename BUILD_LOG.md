@@ -314,3 +314,48 @@ Limitations:
 - Investment and incidence guardrails are prototype review outputs only.
 - They are not economic validation, investment advice, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice.
 - Guardrail outputs do not automatically modify final liability.
+
+## V1.5 National Fiscal Trajectory Engine
+
+Branch: `v1.5-national-fiscal-trajectory-engine`
+
+Baseline: PR #10 merged into `main`, including investment guardrails, tax-incidence previews, burden-balance checks, and sensitivity sweeps.
+
+Purpose of this build:
+
+- Add deterministic placeholder workforce displacement trajectories.
+- Add placeholder public-revenue and transfer-pressure calculations.
+- Add national fiscal trajectory outputs for PAYG loss, support pressure, automation revenue captured, and residual public-sector gaps.
+- Add fiscal sensitivity sweeps.
+- Add fiscal trajectory examples, reports, CI step, tests, and Streamlit page.
+
+Tests run:
+
+- `python -m pytest` - 358 passed, 1 pytest-asyncio deprecation warning under Python 3.14.
+- `python -m compileall -q model simulator scripts` - passed.
+- Recursive YAML parse check for schedules/examples/data - parsed 37 YAML files.
+- `python scripts/run_examples.py` - regenerated example, grouped, transfer-pricing, evidence, and calibration reports.
+- `python scripts/run_evidence_workflow.py` - regenerated mock evidence workflow reports.
+- `python scripts/run_ingestion_controls.py` - regenerated secure-ingestion control reports.
+- `python scripts/run_investment_guardrails.py` - regenerated investment and incidence guardrail reports.
+- `python scripts/run_fiscal_trajectory.py` - generated fiscal trajectory reports.
+- `python scripts/run_repo_guardrails.py` - generated repository guardrail reports with zero denied findings.
+- Streamlit bare import probe for `simulator/app.py` and `simulator/pages/13_Fiscal_Trajectory.py` - passed.
+
+Fiscal-accounting hardening added before merge:
+
+- Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss.
+- Commonwealth gap and total public-sector gap exclude superannuation contribution pressure.
+- Broader labour-linked pressure reports superannuation contribution pressure separately.
+- Offsetting company tax, GST, and other Commonwealth revenue gains are allowed only when `allow_revenue_gains: true`.
+
+Reports generated:
+
+- `reports/fiscal_trajectory.json`
+- `reports/fiscal_trajectory.md`
+
+Limitations:
+
+- Fiscal trajectory outputs are prototype placeholders only.
+- They are not forecasts, Treasury modelling, ATO estimates, ABS analysis, DSS estimates, PBO costing, legal advice, tax advice, or economic validation.
+- The national fiscal trajectory layer does not modify firm-level CARSF liability.

@@ -1,0 +1,82 @@
+trajectory_id: low_displacement_high_reabsorption
+name: Low Displacement / High Reabsorption
+purpose: Shows lower fiscal stress when displaced workers are reabsorbed faster.
+status: illustrative_placeholder_only
+illustrative_placeholder_only: true
+not_calibrated: true
+no_forecast_claim: true
+placeholder_notice: All values are illustrative placeholders and are not official data or forecasts.
+workforce:
+  start_year: 2026
+  end_year: 2034
+  baseline_employed_workers: 10000000
+  annual_displacement_rate: 0.008
+  annual_reabsorption_rate: 0.65
+  labour_force_growth_rate: 0.005
+  average_taxable_income: 80000
+  average_payg_tax_per_worker: 18000
+  average_super_contribution_per_worker: 9500
+  average_help_repayment_per_worker: 900
+  placeholder_basis:
+    - low displacement placeholder
+    - high reabsorption placeholder
+average_support_payment_per_person: 22000
+transition_support_share: 0.45
+retraining_support_share: 0.25
+administrative_cost_per_person: 1000
+company_tax_change_by_year:
+  2026: 70000000
+  2027: 76000000
+  2028: 82000000
+  2029: 88000000
+  2030: 94000000
+  2031: 100000000
+  2032: 106000000
+  2033: 112000000
+  2034: 118000000
+gst_consumption_change_by_year:
+  2026: 35000000
+  2027: 39000000
+  2028: 43000000
+  2029: 47000000
+  2030: 51000000
+  2031: 55000000
+  2032: 59000000
+  2033: 63000000
+  2034: 67000000
+state_payroll_tax_loss_by_year:
+  2026: 20000000
+  2027: 23000000
+  2028: 26000000
+  2029: 29000000
+  2030: 32000000
+  2031: 35000000
+  2032: 38000000
+  2033: 41000000
+  2034: 44000000
+automation_revenue_captured_by_year:
+  2026: 650000000
+  2027: 700000000
+  2028: 760000000
+  2029: 820000000
+  2030: 880000000
+  2031: 940000000
+  2032: 1000000000
+  2033: 1060000000
+  2034: 1120000000
+other_revenue_change_by_year:
+  2026: 10000000
+  2027: 12000000
+  2028: 14000000
+  2029: 16000000
+  2030: 18000000
+  2031: 20000000
+  2032: 22000000
+  2033: 24000000
+  2034: 26000000
+placeholder_basis:
+  - lower stress comparator for deterministic tests
+sensitivity:
+  annual_displacement_rate: [0.005, 0.008, 0.012]
+  annual_reabsorption_rate: [0.50, 0.65, 0.80]
+interpretation: Faster reabsorption keeps net displacement, PAYG loss, and support pressure lower under placeholder assumptions.

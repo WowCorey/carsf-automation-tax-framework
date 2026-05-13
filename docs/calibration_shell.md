@@ -45,6 +45,26 @@ The investment and incidence guardrails require future calibration before any po
 
 No such calibration has occurred in this repository.
 
+## Fiscal Trajectory Calibration
+
+The national fiscal trajectory engine also requires future calibration before any policy claim:
+
+- labour displacement and reabsorption rates by sector and region
+- PAYG tax loss per displaced worker
+- superannuation contribution loss
+- HELP/HECS repayment loss
+- support-payment and retraining pressure
+- administrative cost assumptions
+- GST consumption effects
+- company tax changes
+- state payroll-tax pressure
+- automation revenue captured
+- public-revenue coverage thresholds
+
+Required source categories include Treasury modelling, ATO aggregated tax data, ABS labour force and industry data, DSS / Services Australia payment data, PBO costing methods, state payroll-tax datasets, superannuation data, HELP/HECS repayment data, and labour-market transition datasets.
+
+No such calibration has occurred in this repository, and fiscal trajectory outputs are not forecasts.
+
 ## Non-Claims
 
 The calibration shell is not legal, tax, Treasury, ATO, ABS, Fair Work, OECD, BEPS, audit, forensic, or economic validation. It does not prove any model setting is correct.

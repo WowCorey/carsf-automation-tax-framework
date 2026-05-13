@@ -1,0 +1,81 @@
+trajectory_id: weak_automation_revenue_capture
+name: Weak Automation Revenue Capture
+purpose: Shows under-capture where CARSF-like revenue fails to cover PAYG loss and transfer pressure.
+status: illustrative_placeholder_only
+illustrative_placeholder_only: true
+not_calibrated: true
+no_forecast_claim: true
+placeholder_notice: All values are illustrative placeholders and are not official data or forecasts.
+workforce:
+  start_year: 2026
+  end_year: 2034
+  baseline_employed_workers: 9500000
+  annual_displacement_rate: 0.026
+  annual_reabsorption_rate: 0.22
+  labour_force_growth_rate: 0.004
+  average_taxable_income: 78000
+  average_payg_tax_per_worker: 17000
+  average_super_contribution_per_worker: 9000
+  average_help_repayment_per_worker: 850
+  placeholder_basis:
+    - weak capture comparator workforce placeholder
+average_support_payment_per_person: 24500
+transition_support_share: 0.60
+retraining_support_share: 0.22
+administrative_cost_per_person: 1250
+company_tax_change_by_year:
+  2026: 140000000
+  2027: 160000000
+  2028: 180000000
+  2029: 200000000
+  2030: 220000000
+  2031: 240000000
+  2032: 260000000
+  2033: 280000000
+  2034: 300000000
+gst_consumption_change_by_year:
+  2026: 90000000
+  2027: 105000000
+  2028: 120000000
+  2029: 135000000
+  2030: 150000000
+  2031: 165000000
+  2032: 180000000
+  2033: 195000000
+  2034: 210000000
+state_payroll_tax_loss_by_year:
+  2026: 60000000
+  2027: 70000000
+  2028: 80000000
+  2029: 90000000
+  2030: 100000000
+  2031: 110000000
+  2032: 120000000
+  2033: 130000000
+  2034: 140000000
+automation_revenue_captured_by_year:
+  2026: 250000000
+  2027: 280000000
+  2028: 310000000
+  2029: 340000000
+  2030: 370000000
+  2031: 400000000
+  2032: 430000000
+  2033: 460000000
+  2034: 490000000
+other_revenue_change_by_year:
+  2026: 25000000
+  2027: 30000000
+  2028: 35000000
+  2029: 40000000
+  2030: 45000000
+  2031: 50000000
+  2032: 55000000
+  2033: 60000000
+  2034: 65000000
+placeholder_basis:
+  - weak automation revenue capture placeholder
+sensitivity:
+  automation_revenue_capture_multiplier: [0.50, 1.00, 1.50]
+  average_payg_tax_per_worker: [14000, 17000, 20000]
+interpretation: Automation revenue captured remains weak relative to PAYG loss and support pressure, so the residual public-sector gap remains high under placeholder assumptions.

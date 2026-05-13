@@ -35,6 +35,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Add default-deny secure ingestion controls, sensitive-marker scanning, redaction metadata, retention/access policy scaffolding, and immutable-style ingestion audit records.
 - Add repository-level enforcement gates for prohibited evidence paths, secret-like file extensions, sensitive markers, generated-report non-claims, and raw evidence payload checks.
 - Add non-operative investment, tax-incidence, burden-balance, and sensitivity guardrails without modifying final liability.
+- Add a national fiscal trajectory engine for placeholder PAYG erosion, transfer pressure, automation revenue captured, and residual public-sector gaps without modifying firm-level liability.
 
 ## Data Separation
 
@@ -58,6 +59,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Secure ingestion-control reports can be generated with `python scripts/run_ingestion_controls.py`.
 - Repository guardrail reports can be generated with `python scripts/run_repo_guardrails.py` and CI fails on denied findings.
 - Investment and incidence guardrail reports can be generated with `python scripts/run_investment_guardrails.py`.
+- Fiscal trajectory reports can be generated with `python scripts/run_fiscal_trajectory.py`.
 - Hybrid logistics stress variant demonstrates non-zero but intermediate NLTG.
 - V1.5 working paper contains TODO markers where policy drafting remains open.
 - Limitations document clearly blocks actual tax-payable claims.
@@ -74,3 +76,4 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Tune repository guardrail allowlists and integrate external DLP/secret-scanning tooling before any evidence-adjacent external review.
 - Calibrate investment deterrence, pass-through, normal-return preservation, and public-revenue coverage using Treasury/economic/tax-incidence review.
 - Replace calibration shell placeholders with authorised datasets only after formal source review.
+- Add UBI / transition-payment funding module as a future non-operative prototype layer.

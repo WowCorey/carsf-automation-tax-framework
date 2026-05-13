@@ -41,6 +41,8 @@ from .evidence_packet import (
     validate_evidence_packet,
 )
 from .example_runner import ExampleResult, ExampleRunnerError, run_all_examples, run_example
+from .fiscal_sensitivity import FiscalSensitivityPoint, FiscalSensitivityResult, run_fiscal_sensitivity
+from .fiscal_trajectory import FiscalTrajectoryInput, FiscalTrajectoryResult, FiscalYearResult, run_fiscal_trajectory
 from .frv import net_labour_tax_gap
 from .group_runner import GroupedPreviewResult, run_grouped_previews
 from .grouping import GroupingRiskResult, evaluate_grouping_risk
@@ -58,6 +60,7 @@ from .mixed_units import (
     evaluate_mixed_unit_exposure,
     evaluate_unit_compatibility,
 )
+from .public_revenue import PublicRevenueInput, PublicRevenueResult, evaluate_public_revenue
 from .qlc import qualified_labour_contribution_firm, qualified_labour_contribution_worker
 from .redaction import RedactionPlan, create_redaction_plan
 from .repo_guardrails import (
@@ -102,7 +105,14 @@ from .transfer_runner import (
     TransferPricingScenarioResult,
     run_transfer_pricing_previews,
 )
+from .transfer_pressure import TransferPressureInput, TransferPressureResult, evaluate_transfer_pressure
 from .types import AIIWeights, CoverageResult, LevyParameters, LevyResult, QLCWeights, Worker
+from .workforce_displacement import (
+    WorkforceTrajectoryInput,
+    WorkforceTrajectoryResult,
+    WorkforceYearResult,
+    run_workforce_trajectory,
+)
 
 __all__ = [
     "AIIWeights",
@@ -128,6 +138,11 @@ __all__ = [
     "EvidenceRequirement",
     "ExampleResult",
     "ExampleRunnerError",
+    "FiscalSensitivityPoint",
+    "FiscalSensitivityResult",
+    "FiscalTrajectoryInput",
+    "FiscalTrajectoryResult",
+    "FiscalYearResult",
     "GroupedPreviewResult",
     "GroupingRiskResult",
     "IncidenceAssumption",
@@ -142,6 +157,8 @@ __all__ = [
     "LevyResult",
     "LiabilityAdjustmentPreview",
     "MixedUnitExposureResult",
+    "PublicRevenueInput",
+    "PublicRevenueResult",
     "QLCWeights",
     "RelatedPartyTransaction",
     "RedactionPlan",
@@ -158,8 +175,13 @@ __all__ = [
     "TransferPricingPreviewResult",
     "TransferPricingPreviewReport",
     "TransferPricingScenarioResult",
+    "TransferPressureInput",
+    "TransferPressureResult",
     "UnitCompatibilityResult",
     "Worker",
+    "WorkforceTrajectoryInput",
+    "WorkforceTrajectoryResult",
+    "WorkforceYearResult",
     "add_decision_entry",
     "assess_evidence",
     "automation_equilibrium_levy",
@@ -183,9 +205,11 @@ __all__ = [
     "evaluate_ingestion_request",
     "evaluate_investment_guardrail",
     "evaluate_mixed_unit_exposure",
+    "evaluate_public_revenue",
     "evaluate_review_transition",
     "evaluate_safe_harbour",
     "evaluate_tax_incidence",
+    "evaluate_transfer_pressure",
     "evaluate_transfer_pricing_preview",
     "evaluate_unit_compatibility",
     "format_coverage_ratio",
@@ -205,9 +229,12 @@ __all__ = [
     "qualified_labour_contribution_firm",
     "qualified_labour_contribution_worker",
     "run_all_examples",
+    "run_fiscal_sensitivity",
+    "run_fiscal_trajectory",
     "run_grouped_previews",
     "run_example",
     "run_transfer_pricing_previews",
+    "run_workforce_trajectory",
     "scan_mapping_for_sensitive_markers",
     "scan_file",
     "scan_repo",
