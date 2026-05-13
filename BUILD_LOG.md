@@ -331,7 +331,7 @@ Purpose of this build:
 
 Tests run:
 
-- `python -m pytest` - 347 passed, 1 pytest-asyncio deprecation warning under Python 3.14.
+- `python -m pytest` - 358 passed, 1 pytest-asyncio deprecation warning under Python 3.14.
 - `python -m compileall -q model simulator scripts` - passed.
 - Recursive YAML parse check for schedules/examples/data - parsed 37 YAML files.
 - `python scripts/run_examples.py` - regenerated example, grouped, transfer-pricing, evidence, and calibration reports.
@@ -341,6 +341,13 @@ Tests run:
 - `python scripts/run_fiscal_trajectory.py` - generated fiscal trajectory reports.
 - `python scripts/run_repo_guardrails.py` - generated repository guardrail reports with zero denied findings.
 - Streamlit bare import probe for `simulator/app.py` and `simulator/pages/13_Fiscal_Trajectory.py` - passed.
+
+Fiscal-accounting hardening added before merge:
+
+- Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss.
+- Commonwealth gap and total public-sector gap exclude superannuation contribution pressure.
+- Broader labour-linked pressure reports superannuation contribution pressure separately.
+- Offsetting company tax, GST, and other Commonwealth revenue gains are allowed only when `allow_revenue_gains: true`.
 
 Reports generated:
 

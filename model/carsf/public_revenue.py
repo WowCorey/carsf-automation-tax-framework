@@ -33,14 +33,27 @@ class PublicRevenueInput:
 
 @dataclass(frozen=True)
 class PublicRevenueResult:
-    labour_linked_revenue_loss: float
-    total_revenue_loss_before_carsf: float
+    commonwealth_revenue_loss_before_carsf: float
+    retirement_contribution_pressure: float
     automation_revenue_captured: float
     net_commonwealth_gap_after_carsf: float
     state_revenue_pressure: float
     total_public_sector_gap: float
+    broader_labour_linked_pressure: float
     warnings: list[str] = field(default_factory=list)
     non_claims: list[str] = field(default_factory=lambda: list(PUBLIC_REVENUE_NON_CLAIMS))
+
+    @property
+    def labour_linked_revenue_loss(self) -> float:
+        """Backward-compatible alias for Commonwealth revenue pressure only."""
+
+        return self.commonwealth_revenue_loss_before_carsf
+
+    @property
+    def total_revenue_loss_before_carsf(self) -> float:
+        """Backward-compatible alias for Commonwealth revenue loss before CARSF."""
+
+        return self.commonwealth_revenue_loss_before_carsf
 
     def to_jsonable(self) -> dict[str, Any]:
         return asdict(self)
@@ -98,17 +111,21 @@ def evaluate_public_revenue(inputs: PublicRevenueInput | dict[str, Any]) -> Publ
     automation_captured = _non_negative_number(inputs.automation_revenue_captured, "automation_revenue_captured")
     other_change = _revenue_loss_or_gain(inputs.other_revenue_change, "other_revenue_change", allow_gain)
 
-    labour_linked_loss = payg_loss + super_loss + help_loss
-    total_before_carsf = labour_linked_loss + company_tax_change + gst_consumption_change + other_change
-    commonwealth_gap = total_before_carsf - automation_captured
+    commonwealth_before_carsf = payg_loss + help_loss + company_tax_change + gst_consumption_change + other_change
+    commonwealth_gap = commonwealth_before_carsf - automation_captured
     total_public_gap = commonwealth_gap + state_loss
+    broader_pressure = total_public_gap + super_loss
 
     return PublicRevenueResult(
-        labour_linked_revenue_loss=labour_linked_loss,
-        total_revenue_loss_before_carsf=total_before_carsf,
+        commonwealth_revenue_loss_before_carsf=commonwealth_before_carsf,
+        retirement_contribution_pressure=super_loss,
         automation_revenue_captured=automation_captured,
         net_commonwealth_gap_after_carsf=commonwealth_gap,
         state_revenue_pressure=state_loss,
         total_public_sector_gap=total_public_gap,
-        warnings=["Revenue changes are placeholder inputs and are not government revenue estimates."],
+        broader_labour_linked_pressure=broader_pressure,
+        warnings=[
+            "Revenue changes are placeholder inputs and are not government revenue estimates.",
+            "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss.",
+        ],
     )

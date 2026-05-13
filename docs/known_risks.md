@@ -37,5 +37,6 @@
 - Under-capture and over-capture flags cannot be credible without calibrated national automation fiscal damage and captured revenue data.
 - Fiscal trajectory outputs may be mistaken for forecasts if placeholder labels and non-claim warnings are removed or ignored.
 - Workforce displacement, reabsorption, PAYG loss, transfer pressure, GST effects, superannuation, HELP/HECS, and state payroll-tax effects remain uncalibrated.
+- Superannuation contribution pressure is broader labour-linked pressure, not ordinary Commonwealth revenue loss; reports may mislead if that distinction is removed.
 - National fiscal trajectory results do not determine firm-level liability and may mislead if used as operative CARSF settings.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.

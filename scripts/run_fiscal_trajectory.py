@@ -136,18 +136,20 @@ def build_json_payload(rows: list[dict[str, Any]], metadata: dict[str, Any]) -> 
 
 def _summary_table(rows: list[dict[str, Any]]) -> list[str]:
     lines = [
-        "| Example | Years | PAYG Loss | Transfer Pressure | Automation Revenue Captured | Commonwealth Gap | Public-Sector Gap | First High | First Critical |",
-        "| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- | --- |",
+        "| Example | Years | PAYG Loss | HELP/HECS Loss | Retirement Contribution Pressure | Transfer Pressure | Automation Revenue Captured | Commonwealth Gap | State Pressure | Public-Sector Gap | Broader Pressure | First High | First Critical |",
+        "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- | --- |",
     ]
     for row in rows:
         result: FiscalTrajectoryResult = row["trajectory_result"]
         lines.append(
             "| "
             f"{row['example']['name']} | {result.start_year}-{result.end_year} | "
-            f"{money(result.cumulative_payg_loss)} | {money(result.cumulative_transfer_pressure)} | "
+            f"{money(result.cumulative_payg_loss)} | {money(result.cumulative_help_repayment_loss)} | "
+            f"{money(result.cumulative_retirement_contribution_pressure)} | {money(result.cumulative_transfer_pressure)} | "
             f"{money(result.cumulative_automation_revenue_captured)} | "
             f"{money(result.cumulative_commonwealth_gap_after_carsf)} | "
-            f"{money(result.cumulative_total_public_sector_gap)} | "
+            f"{money(result.cumulative_state_revenue_pressure)} | {money(result.cumulative_total_public_sector_gap)} | "
+            f"{money(result.cumulative_broader_labour_linked_pressure)} | "
             f"{result.first_high_warning_year or 'N/A'} | {result.first_critical_warning_year or 'N/A'} |"
         )
     return lines
@@ -155,16 +157,18 @@ def _summary_table(rows: list[dict[str, Any]]) -> list[str]:
 
 def _year_table(result: FiscalTrajectoryResult) -> list[str]:
     lines = [
-        "| Year | Net Displaced Workers | PAYG Loss | Transfer Pressure | Automation Revenue Captured | Coverage Ratio | Commonwealth Gap | Total Public-Sector Gap | Warning Band |",
-        "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |",
+        "| Year | Net Displaced Workers | PAYG Loss | HELP/HECS Loss | Retirement Contribution Pressure | Transfer Pressure | Automation Revenue Captured | Coverage Ratio | Commonwealth Gap | State Pressure | Public-Sector Gap | Broader Pressure | Warning Band |",
+        "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |",
     ]
     for year in result.years:
         lines.append(
             "| "
             f"{year.year} | {year.net_displaced_workers:,.2f} | {money(year.payg_revenue_loss)} | "
+            f"{money(year.help_repayment_loss)} | {money(year.retirement_contribution_pressure)} | "
             f"{money(year.transfer_pressure)} | {money(year.automation_revenue_captured)} | "
             f"{rate(year.coverage_ratio)} | {money(year.commonwealth_gap_after_carsf)} | "
-            f"{money(year.total_public_sector_gap)} | {year.warning_band} |"
+            f"{money(year.state_payroll_tax_loss)} | {money(year.total_public_sector_gap)} | "
+            f"{money(year.broader_labour_linked_pressure)} | {year.warning_band} |"
         )
     return lines
 
@@ -193,7 +197,7 @@ def build_markdown(rows: list[dict[str, Any]], metadata: dict[str, Any]) -> str:
         "",
         "## A. Purpose",
         "",
-        "This report runs deterministic placeholder national fiscal trajectories for labour-linked revenue erosion, transfer-payment pressure, automation revenue captured, and residual fiscal gaps.",
+        "This report runs deterministic placeholder national fiscal trajectories for PAYG erosion, HELP/HECS repayment loss, retirement-system contribution pressure, transfer-payment pressure, automation revenue captured, and residual fiscal gaps.",
         "",
         "## B. Non-Claims",
         "",
@@ -204,7 +208,9 @@ def build_markdown(rows: list[dict[str, Any]], metadata: dict[str, Any]) -> str:
             "",
             "## C. Why Fiscal Trajectory Matters",
             "",
-            "CARSF exists because productive capacity may migrate from labour to automation-heavy capital. This national layer tests whether placeholder automation revenue capture tracks PAYG erosion, support pressure, superannuation contribution loss, HELP/HECS repayment loss, GST effects, and state payroll-tax pressure. It does not change firm-level liability.",
+            "CARSF exists because productive capacity may migrate from labour to automation-heavy capital. This national layer tests whether placeholder automation revenue capture tracks PAYG erosion, HELP/HECS repayment loss, support pressure, retirement-system contribution pressure from lost superannuation, GST effects, and state payroll-tax pressure. It does not change firm-level liability.",
+            "",
+            "Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss.",
             "",
             "## D. Input Assumptions Summary",
             "",
@@ -229,7 +235,9 @@ def build_markdown(rows: list[dict[str, Any]], metadata: dict[str, Any]) -> str:
         lines.append("")
     lines.extend(
         [
-            "## F. PAYG Erosion",
+            "## F. PAYG Erosion, HELP/HECS Loss, and Retirement-System Contribution Pressure",
+            "",
+            "PAYG loss and HELP/HECS repayment loss are included in Commonwealth fiscal pressure. Superannuation contribution loss is tracked separately as retirement-system contribution pressure, not ordinary Commonwealth revenue loss.",
             "",
         ]
     )
@@ -247,11 +255,11 @@ def build_markdown(rows: list[dict[str, Any]], metadata: dict[str, Any]) -> str:
             "",
             "## I. Residual Commonwealth Gap",
             "",
-            "Residual Commonwealth gap equals placeholder revenue loss before CARSF minus automation revenue captured, plus transfer pressure.",
+            "Residual Commonwealth gap equals placeholder Commonwealth revenue/cashflow pressure before CARSF minus automation revenue captured, plus transfer pressure. It excludes superannuation contribution loss.",
             "",
-            "## J. Total Public-Sector Pressure",
+            "## J. State Revenue Pressure and Broader Labour-Linked Pressure",
             "",
-            "Total public-sector pressure adds placeholder state payroll-tax pressure to the Commonwealth gap. It is not an intergovernmental fiscal model.",
+            "Total public-sector gap adds placeholder state payroll-tax pressure to the Commonwealth gap. Broader labour-linked pressure adds retirement-system contribution pressure as a separate broader pressure measure. It is not an intergovernmental fiscal model and not ordinary Commonwealth revenue loss.",
             "",
             "## K. Coverage Ratio",
             "",
@@ -259,9 +267,17 @@ def build_markdown(rows: list[dict[str, Any]], metadata: dict[str, Any]) -> str:
             "",
             "## L. First High/Critical Warning Year",
             "",
+            "| Example | First High Warning Year | First Critical Warning Year |",
+            "| --- | --- | --- |",
         ]
     )
-    lines.extend(_summary_table(rows))
+    for row in rows:
+        result = row["trajectory_result"]
+        lines.append(
+            "| "
+            f"{row['example']['name']} | {result.first_high_warning_year or 'N/A'} | "
+            f"{result.first_critical_warning_year or 'N/A'} |"
+        )
     lines.extend(["", "## M. Sensitivity Sweep Summary", ""])
     for row in rows:
         lines.extend([f"### {row['example']['name']}", ""])

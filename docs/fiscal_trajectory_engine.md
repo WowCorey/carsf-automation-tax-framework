@@ -8,6 +8,8 @@ The fiscal trajectory engine tests the original fiscal problem behind CARSF: aut
 
 It tracks placeholder PAYG erosion, superannuation contribution loss, HELP/HECS repayment loss, GST consumption effects, state payroll-tax pressure, support-payment pressure, automation revenue captured, and residual public-sector gaps.
 
+Superannuation contribution loss is tracked as retirement-system contribution pressure, not ordinary Commonwealth revenue loss. The broader labour-linked pressure field includes that retirement-system pressure separately from the Commonwealth gap and state revenue pressure.
+
 ## What Exists
 
 - `model/carsf/workforce_displacement.py` for deterministic placeholder labour displacement and reabsorption.

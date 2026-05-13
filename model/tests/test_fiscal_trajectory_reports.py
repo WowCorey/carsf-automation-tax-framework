@@ -39,6 +39,25 @@ def test_fiscal_report_includes_required_non_claim_warning(repo_root) -> None:
     assert payload["metadata"]["status"] == "prototype_fiscal_trajectory_outputs_only"
 
 
+def test_fiscal_report_clarifies_super_is_retirement_pressure(repo_root) -> None:
+    reports_dir = repo_root / "tmp" / "test-fiscal-super-clarity"
+    subprocess.run(
+        [sys.executable, "scripts/run_fiscal_trajectory.py", "--reports-dir", str(reports_dir)],
+        cwd=repo_root,
+        check=True,
+    )
+    markdown = (reports_dir / "fiscal_trajectory.md").read_text(encoding="utf-8")
+    payload = json.loads((reports_dir / "fiscal_trajectory.json").read_text(encoding="utf-8"))
+
+    assert (
+        "Superannuation contribution loss is tracked as retirement-system contribution pressure, "
+        "not ordinary Commonwealth revenue loss."
+    ) in markdown
+    first_year = payload["examples"][0]["trajectory_result"]["years"][0]
+    assert "retirement_contribution_pressure" in first_year
+    assert "broader_labour_linked_pressure" in first_year
+
+
 def test_existing_reports_and_repo_guardrails_still_generate_with_fiscal(repo_root) -> None:
     reports_dir = repo_root / "tmp" / "test-existing-plus-fiscal"
     commands = [
