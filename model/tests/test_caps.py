@@ -1,4 +1,9 @@
+from math import inf, nan
+
+import pytest
+
 from carsf import LevyParameters
+from carsf.caps import capped_credits
 from carsf.levy import calculate_liability
 
 
@@ -64,3 +69,18 @@ def test_ael_and_combined_caps_zero_out_when_aava_is_negative() -> None:
     assert result.ael_payable == 0
     assert result.arl == 0
     assert result.liability == 0
+
+
+@pytest.mark.parametrize("bad_value", [nan, inf, -inf])
+@pytest.mark.parametrize("field", ["verified_credits", "theta", "ael_payable", "arl"])
+def test_capped_credits_rejects_nan_and_infinity(field: str, bad_value: float) -> None:
+    inputs = {
+        "verified_credits": 100.0,
+        "theta": 0.6,
+        "ael_payable": 200.0,
+        "arl": 50.0,
+    }
+    inputs[field] = bad_value
+
+    with pytest.raises(ValueError):
+        capped_credits(**inputs)
