@@ -1,6 +1,6 @@
 # CARSF V1.5 Repository Guardrails
 
-Generated at: `2026-05-13T10:04:21+00:00`
+Generated at: `2026-05-13T10:14:36+00:00`
 
 ## A. Purpose
 
@@ -15,7 +15,7 @@ This report runs prototype repository-level guardrails for likely evidence leaks
 ## C. Files Scanned/Skipped
 
 - Files scanned: 175
-- Files skipped: 914
+- Files skipped: 995
 - Clean: true
 
 ## D. Denied Findings
@@ -52,12 +52,12 @@ This report runs prototype repository-level guardrails for likely evidence leaks
 | docs/v1_5_plan.md | low | documented_marker_example | N/A | Documentation/test file contains marker examples: SECRET. |
 | examples/groups/robotics_leasing_structure.yaml | low | documented_marker_example | N/A | Documentation/test file contains marker examples: INVOICE. |
 | gitignore | low | documented_marker_example | N/A | Documentation/test file contains marker examples: SECRET. |
-| model/carsf/avoidance.py | low | policy_marker_definition | N/A | Guardrail implementation contains policy marker definitions: INVOICE. |
+| model/carsf/avoidance.py | low | documented_model_marker_reference | N/A | Model file contains narrowly documented marker vocabulary: INVOICE. |
 | model/carsf/classification.py | low | policy_marker_definition | N/A | Guardrail implementation contains policy marker definitions: ABN, API_KEY, BANK_ACCOUNT, INVOICE, MEDICARE_NUMBER, PASSWORD, PRIVATE_KEY, REAL_TAXPAYER, SECRET, TAX_FILE_NUMBER, TFN. |
-| model/carsf/decision_log.py | low | policy_marker_definition | N/A | Guardrail implementation contains policy marker definitions: API_KEY, PASSWORD, TFN. |
-| model/carsf/evidence.py | low | policy_marker_definition | N/A | Guardrail implementation contains policy marker definitions: EMPLOYMENT_CONTRACT, INVOICE. |
+| model/carsf/decision_log.py | low | documented_model_marker_reference | N/A | Model file contains narrowly documented marker vocabulary: API_KEY, PASSWORD, TFN. |
+| model/carsf/evidence.py | low | documented_model_marker_reference | N/A | Model file contains narrowly documented marker vocabulary: EMPLOYMENT_CONTRACT, INVOICE. |
 | model/carsf/evidence_packet.py | low | policy_marker_definition | N/A | Guardrail implementation contains policy marker definitions: ABN, API_KEY, BANK_ACCOUNT, MEDICARE_NUMBER, PASSWORD, PRIVATE_KEY, REAL_TAXPAYER, SECRET, TAX_FILE_NUMBER, TFN. |
-| model/carsf/repo_guardrails.py | low | policy_marker_definition | N/A | Guardrail implementation contains policy marker definitions: SECRET. |
+| model/carsf/repo_guardrails.py | low | policy_marker_definition | N/A | Guardrail implementation contains policy marker definitions: API_KEY, INVOICE, PASSWORD, SECRET, TFN. |
 | model/carsf/secure_ingestion.py | low | policy_marker_definition | N/A | Guardrail implementation contains policy marker definitions: ABN, ACN, API_KEY, INVOICE, MEDICARE_NUMBER, PAYSLIP, PRIVATE_KEY, REAL_BUSINESS_RECORD, REAL_TAXPAYER, SECRET, TFN. |
 | model/carsf/sensitive_scan.py | low | policy_marker_definition | N/A | Guardrail implementation contains policy marker definitions: ABN, ACCESS_TOKEN, ACN, API_KEY, BANK_ACCOUNT, BSB, CREDIT_CARD, DATE_OF_BIRTH, EMPLOYMENT_CONTRACT, INVOICE, MEDICARE_NUMBER, PASSPHRASE, PASSWORD, PAYSLIP, PRIVATE_KEY, REAL_BUSINESS_RECORD, REAL_TAXPAYER, RESIDENTIAL_ADDRESS, SECRET, TAX_FILE_NUMBER, TFN. |
 | model/tests/test_classification.py | low | documented_marker_example | N/A | Documentation/test file contains marker examples: PRIVATE_KEY. |

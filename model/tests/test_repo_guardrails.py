@@ -41,6 +41,13 @@ def test_secret_marker_fails_outside_allowlisted_mock_path():
     assert "sensitive_marker" in finding_types(result)
 
 
+def test_sensitive_marker_in_non_guardrail_model_file_fails():
+    result = scan_repo(FIXTURES / "bad_model_file_marker_fixture")
+
+    assert result.clean is False
+    assert "sensitive_marker" in finding_types(result)
+
+
 def test_fake_marker_passes_inside_allowed_synthetic_mock_fixture():
     result = scan_repo(FIXTURES / "allowed_mock_fixture")
 

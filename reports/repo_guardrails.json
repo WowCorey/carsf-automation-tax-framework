@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-05-13T10:04:21+00:00",
+    "generated_at": "2026-05-13T10:14:36+00:00",
     "non_claims": [
       "These are prototype repository guardrails only. They are not a complete DLP system, secret scanner, cybersecurity control, legal/privacy audit, Treasury control, ATO control, or forensic validation.",
       "These are prototype repository guardrails only.",
@@ -83,7 +83,7 @@
     "clean": true,
     "denied_findings": [],
     "files_scanned": 175,
-    "files_skipped": 914,
+    "files_skipped": 995,
     "findings": [
       {
         "allowlisted": true,
@@ -352,12 +352,12 @@
       {
         "allowlisted": true,
         "deny": false,
-        "finding_id": "policy_marker_definition:model/carsf/avoidance.py:0",
-        "finding_type": "policy_marker_definition",
+        "finding_id": "documented_model_marker_reference:model/carsf/avoidance.py:0",
+        "finding_type": "documented_model_marker_reference",
         "line_number": null,
-        "message": "Guardrail implementation contains policy marker definitions: INVOICE.",
+        "message": "Model file contains narrowly documented marker vocabulary: INVOICE.",
         "path": "model/carsf/avoidance.py",
-        "reason": "Allowed in guardrail policy implementation files only.",
+        "reason": "Allowed only because the avoidance review text names cloud invoices as evidence vocabulary.",
         "severity": "low"
       },
       {
@@ -374,23 +374,23 @@
       {
         "allowlisted": true,
         "deny": false,
-        "finding_id": "policy_marker_definition:model/carsf/decision_log.py:0",
-        "finding_type": "policy_marker_definition",
+        "finding_id": "documented_model_marker_reference:model/carsf/decision_log.py:0",
+        "finding_type": "documented_model_marker_reference",
         "line_number": null,
-        "message": "Guardrail implementation contains policy marker definitions: API_KEY, PASSWORD, TFN.",
+        "message": "Model file contains narrowly documented marker vocabulary: API_KEY, PASSWORD, TFN.",
         "path": "model/carsf/decision_log.py",
-        "reason": "Allowed in guardrail policy implementation files only.",
+        "reason": "Allowed only because the decision-log sanitizer defines marker names that must not appear in log content.",
         "severity": "low"
       },
       {
         "allowlisted": true,
         "deny": false,
-        "finding_id": "policy_marker_definition:model/carsf/evidence.py:0",
-        "finding_type": "policy_marker_definition",
+        "finding_id": "documented_model_marker_reference:model/carsf/evidence.py:0",
+        "finding_type": "documented_model_marker_reference",
         "line_number": null,
-        "message": "Guardrail implementation contains policy marker definitions: EMPLOYMENT_CONTRACT, INVOICE.",
+        "message": "Model file contains narrowly documented marker vocabulary: EMPLOYMENT_CONTRACT, INVOICE.",
         "path": "model/carsf/evidence.py",
-        "reason": "Allowed in guardrail policy implementation files only.",
+        "reason": "Allowed only because the evidence registry enumerates prototype acceptable-source categories.",
         "severity": "low"
       },
       {
@@ -410,7 +410,7 @@
         "finding_id": "policy_marker_definition:model/carsf/repo_guardrails.py:0",
         "finding_type": "policy_marker_definition",
         "line_number": null,
-        "message": "Guardrail implementation contains policy marker definitions: SECRET.",
+        "message": "Guardrail implementation contains policy marker definitions: API_KEY, INVOICE, PASSWORD, SECRET, TFN.",
         "path": "model/carsf/repo_guardrails.py",
         "reason": "Allowed in guardrail policy implementation files only.",
         "severity": "low"
@@ -886,12 +886,12 @@
       {
         "allowlisted": true,
         "deny": false,
-        "finding_id": "policy_marker_definition:model/carsf/avoidance.py:0",
-        "finding_type": "policy_marker_definition",
+        "finding_id": "documented_model_marker_reference:model/carsf/avoidance.py:0",
+        "finding_type": "documented_model_marker_reference",
         "line_number": null,
-        "message": "Guardrail implementation contains policy marker definitions: INVOICE.",
+        "message": "Model file contains narrowly documented marker vocabulary: INVOICE.",
         "path": "model/carsf/avoidance.py",
-        "reason": "Allowed in guardrail policy implementation files only.",
+        "reason": "Allowed only because the avoidance review text names cloud invoices as evidence vocabulary.",
         "severity": "low"
       },
       {
@@ -908,23 +908,23 @@
       {
         "allowlisted": true,
         "deny": false,
-        "finding_id": "policy_marker_definition:model/carsf/decision_log.py:0",
-        "finding_type": "policy_marker_definition",
+        "finding_id": "documented_model_marker_reference:model/carsf/decision_log.py:0",
+        "finding_type": "documented_model_marker_reference",
         "line_number": null,
-        "message": "Guardrail implementation contains policy marker definitions: API_KEY, PASSWORD, TFN.",
+        "message": "Model file contains narrowly documented marker vocabulary: API_KEY, PASSWORD, TFN.",
         "path": "model/carsf/decision_log.py",
-        "reason": "Allowed in guardrail policy implementation files only.",
+        "reason": "Allowed only because the decision-log sanitizer defines marker names that must not appear in log content.",
         "severity": "low"
       },
       {
         "allowlisted": true,
         "deny": false,
-        "finding_id": "policy_marker_definition:model/carsf/evidence.py:0",
-        "finding_type": "policy_marker_definition",
+        "finding_id": "documented_model_marker_reference:model/carsf/evidence.py:0",
+        "finding_type": "documented_model_marker_reference",
         "line_number": null,
-        "message": "Guardrail implementation contains policy marker definitions: EMPLOYMENT_CONTRACT, INVOICE.",
+        "message": "Model file contains narrowly documented marker vocabulary: EMPLOYMENT_CONTRACT, INVOICE.",
         "path": "model/carsf/evidence.py",
-        "reason": "Allowed in guardrail policy implementation files only.",
+        "reason": "Allowed only because the evidence registry enumerates prototype acceptable-source categories.",
         "severity": "low"
       },
       {
@@ -944,7 +944,7 @@
         "finding_id": "policy_marker_definition:model/carsf/repo_guardrails.py:0",
         "finding_type": "policy_marker_definition",
         "line_number": null,
-        "message": "Guardrail implementation contains policy marker definitions: SECRET.",
+        "message": "Guardrail implementation contains policy marker definitions: API_KEY, INVOICE, PASSWORD, SECRET, TFN.",
         "path": "model/carsf/repo_guardrails.py",
         "reason": "Allowed in guardrail policy implementation files only.",
         "severity": "low"

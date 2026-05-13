@@ -232,19 +232,47 @@ def _is_documented_marker_example(path: str, text: str) -> bool:
 
 def _is_guardrail_policy_definition(path: str, text: str) -> bool:
     normalised = _normalise(path).lower()
-    allowed_code_paths = (
-        normalised.startswith("model/carsf/")
-        or normalised in {
-            "scripts/run_evidence_workflow.py",
-            "scripts/run_ingestion_controls.py",
-            "scripts/run_repo_guardrails.py",
-            "simulator/pages/10_secure_ingestion_controls.py",
-            "simulator/pages/11_repository_guardrails.py",
-        }
-    )
-    if not allowed_code_paths:
-        return False
-    return True
+    allowed_code_paths = {
+        "model/carsf/sensitive_scan.py",
+        "model/carsf/secure_ingestion.py",
+        "model/carsf/evidence_packet.py",
+        "model/carsf/classification.py",
+        "model/carsf/redaction.py",
+        "model/carsf/retention.py",
+        "model/carsf/ingestion_audit.py",
+        "model/carsf/repo_guardrails.py",
+        "scripts/run_evidence_workflow.py",
+        "scripts/run_ingestion_controls.py",
+        "scripts/run_repo_guardrails.py",
+        "simulator/pages/10_secure_ingestion_controls.py",
+        "simulator/pages/11_repository_guardrails.py",
+    }
+    return normalised in allowed_code_paths
+
+
+def _documented_model_marker_reason(path: str, markers: list[str]) -> str | None:
+    normalised = _normalise(path).lower()
+    marker_set = set(markers)
+    documented_references = {
+        "model/carsf/avoidance.py": (
+            {"INVOICE"},
+            "Allowed only because the avoidance review text names cloud invoices as evidence vocabulary.",
+        ),
+        "model/carsf/evidence.py": (
+            {"EMPLOYMENT_CONTRACT", "INVOICE"},
+            "Allowed only because the evidence registry enumerates prototype acceptable-source categories.",
+        ),
+        "model/carsf/decision_log.py": (
+            {"API_KEY", "PASSWORD", "TFN"},
+            "Allowed only because the decision-log sanitizer defines marker names that must not appear in log content.",
+        ),
+    }
+    if normalised not in documented_references:
+        return None
+    allowed_markers, reason = documented_references[normalised]
+    if marker_set <= allowed_markers:
+        return reason
+    return None
 
 
 def _has_required_non_claim(text: str, policy: RepoGuardrailPolicy) -> bool:
@@ -371,6 +399,18 @@ def _scan_file_with_relative(
                     deny=False,
                     allowlisted=True,
                     reason="Allowed in guardrail policy implementation files only.",
+                )
+            )
+        elif model_reason := _documented_model_marker_reason(relative_path, scan.markers_found):
+            findings.append(
+                _finding(
+                    relative_path,
+                    "documented_model_marker_reference",
+                    f"Model file contains narrowly documented marker vocabulary: {', '.join(scan.markers_found)}.",
+                    severity="low",
+                    deny=False,
+                    allowlisted=True,
+                    reason=model_reason,
                 )
             )
         else:
