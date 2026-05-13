@@ -1,6 +1,6 @@
 # CARSF V1.5 Payment Interactions and Targeting Preview
 
-Generated at: `2026-05-13T17:13:57+00:00`
+Generated at: `2026-05-13T17:24:43+00:00`
 
 ## A. Purpose
 
@@ -52,80 +52,82 @@ Transition funding should not double-count existing transfer support, imply fina
 
 ## G. Payment Stack and Double-Counting Review
 
+Component costs are phase-adjusted before double-counting adjustments. The effective multiplier equals component multiplier × year phase multiplier.
+
 ### Displaced Worker Targeted Supplement
 
-Gross stack cost before interactions: `4,000,000.00`
+Phase-adjusted gross stack cost before interactions: `4,000,000.00`
 
 Double-count adjustment: `0.00`
 
 Net stack cost after interactions: `4,000,000.00`
 
-| Component | Type | Eligible People | Payment Per Person | Priority | Phase Multiplier | Mutually Exclusive With |
-| --- | --- | ---: | ---: | ---: | ---: | --- |
-| displaced_worker_supplement | DISPLACED_WORKER_SUPPLEMENT | 800.00 | 5,000.00 | 1 | 1.00 | None |
+| Component | Type | Eligible People | Payment Per Person | Priority | Component Multiplier | Year Phase Multiplier | Effective Multiplier | Phase-Adjusted Cost | Mutually Exclusive With |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| displaced_worker_supplement | DISPLACED_WORKER_SUPPLEMENT | 800.00 | 5,000.00 | 1 | 1.00 | 1.00 | 1.00 | 4,000,000.00 | None |
 
 ### High Cliff-Risk Interaction Case
 
-Gross stack cost before interactions: `47,000,000.00`
+Phase-adjusted gross stack cost before interactions: `47,000,000.00`
 
 Double-count adjustment: `0.00`
 
 Net stack cost after interactions: `47,000,000.00`
 
-| Component | Type | Eligible People | Payment Per Person | Priority | Phase Multiplier | Mutually Exclusive With |
-| --- | --- | ---: | ---: | ---: | ---: | --- |
-| broad_transition_income | TRANSITION_INCOME | 5,000.00 | 9,000.00 | 1 | 1.00 | None |
-| retraining_grant | RETRAINING_GRANT | 500.00 | 4,000.00 | 2 | 1.00 | None |
+| Component | Type | Eligible People | Payment Per Person | Priority | Component Multiplier | Year Phase Multiplier | Effective Multiplier | Phase-Adjusted Cost | Mutually Exclusive With |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| broad_transition_income | TRANSITION_INCOME | 5,000.00 | 9,000.00 | 1 | 1.00 | 1.00 | 1.00 | 45,000,000.00 | None |
+| retraining_grant | RETRAINING_GRANT | 500.00 | 4,000.00 | 2 | 1.00 | 1.00 | 1.00 | 2,000,000.00 | None |
 
 ### Household Eligibility Placeholder Review
 
-Gross stack cost before interactions: `3,375,000.00`
+Phase-adjusted gross stack cost before interactions: `3,375,000.00`
 
 Double-count adjustment: `0.00`
 
 Net stack cost after interactions: `3,375,000.00`
 
-| Component | Type | Eligible People | Payment Per Person | Priority | Phase Multiplier | Mutually Exclusive With |
-| --- | --- | ---: | ---: | ---: | ---: | --- |
-| household_review_supplement | DISPLACED_WORKER_SUPPLEMENT | 750.00 | 4,500.00 | 1 | 1.00 | None |
+| Component | Type | Eligible People | Payment Per Person | Priority | Component Multiplier | Year Phase Multiplier | Effective Multiplier | Phase-Adjusted Cost | Mutually Exclusive With |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| household_review_supplement | DISPLACED_WORKER_SUPPLEMENT | 750.00 | 4,500.00 | 1 | 1.00 | 1.00 | 1.00 | 3,375,000.00 | None |
 
 ### Hybrid Stack Double-Counting Review
 
-Gross stack cost before interactions: `12,200,000.00`
+Phase-adjusted gross stack cost before interactions: `12,200,000.00`
 
 Double-count adjustment: `1,800,000.00`
 
 Net stack cost after interactions: `10,400,000.00`
 
-| Component | Type | Eligible People | Payment Per Person | Priority | Phase Multiplier | Mutually Exclusive With |
-| --- | --- | ---: | ---: | ---: | ---: | --- |
-| ubi_lite | UBI_LITE | 12,000.00 | 500.00 | 1 | 1.00 | None |
-| displaced_worker_supplement | DISPLACED_WORKER_SUPPLEMENT | 1,100.00 | 4,000.00 | 2 | 1.00 | retraining_grant |
-| retraining_grant | RETRAINING_GRANT | 600.00 | 3,000.00 | 3 | 1.00 | displaced_worker_supplement |
+| Component | Type | Eligible People | Payment Per Person | Priority | Component Multiplier | Year Phase Multiplier | Effective Multiplier | Phase-Adjusted Cost | Mutually Exclusive With |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| ubi_lite | UBI_LITE | 12,000.00 | 500.00 | 1 | 1.00 | 1.00 | 1.00 | 6,000,000.00 | None |
+| displaced_worker_supplement | DISPLACED_WORKER_SUPPLEMENT | 1,100.00 | 4,000.00 | 2 | 1.00 | 1.00 | 1.00 | 4,400,000.00 | retraining_grant |
+| retraining_grant | RETRAINING_GRANT | 600.00 | 3,000.00 | 3 | 1.00 | 1.00 | 1.00 | 1,800,000.00 | displaced_worker_supplement |
 
 ### Retraining Income Phase-In
 
-Gross stack cost before interactions: `2,750,000.00`
+Phase-adjusted gross stack cost before interactions: `2,750,000.00`
 
 Double-count adjustment: `0.00`
 
 Net stack cost after interactions: `2,750,000.00`
 
-| Component | Type | Eligible People | Payment Per Person | Priority | Phase Multiplier | Mutually Exclusive With |
-| --- | --- | ---: | ---: | ---: | ---: | --- |
-| retraining_income | TRANSITION_INCOME | 550.00 | 8,000.00 | 1 | 1.00 | None |
+| Component | Type | Eligible People | Payment Per Person | Priority | Component Multiplier | Year Phase Multiplier | Effective Multiplier | Phase-Adjusted Cost | Mutually Exclusive With |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| retraining_income | TRANSITION_INCOME | 550.00 | 8,000.00 | 1 | 1.00 | 0.62 | 0.62 | 2,750,000.00 | None |
 
 ### UBI-Lite With Existing Support Baseline
 
-Gross stack cost before interactions: `10,000,000.00`
+Phase-adjusted gross stack cost before interactions: `10,000,000.00`
 
 Double-count adjustment: `0.00`
 
 Net stack cost after interactions: `10,000,000.00`
 
-| Component | Type | Eligible People | Payment Per Person | Priority | Phase Multiplier | Mutually Exclusive With |
-| --- | --- | ---: | ---: | ---: | ---: | --- |
-| ubi_lite | UBI_LITE | 10,000.00 | 1,000.00 | 1 | 1.00 | None |
+| Component | Type | Eligible People | Payment Per Person | Priority | Component Multiplier | Year Phase Multiplier | Effective Multiplier | Phase-Adjusted Cost | Mutually Exclusive With |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| ubi_lite | UBI_LITE | 10,000.00 | 1,000.00 | 1 | 1.00 | 1.00 | 1.00 | 10,000,000.00 | None |
 
 ## H. Support Fiscal Incidence Preview
 
@@ -150,7 +152,7 @@ Combined gap adds the residual support gap to the placeholder Commonwealth gap a
 
 ## K. Targeting and Interaction Risk Bands
 
-| Example | Baseline Cost | Targeted Eligible People | Phase Multiplier | Gross Stack Cost | Double-Count Adjustment | Net Stack Cost | Residual Support Gap | Interaction Risk | Final Liability Modified |
+| Example | Baseline Cost | Targeted Eligible People | Phase Multiplier | Phase-Adjusted Gross Stack Cost | Double-Count Adjustment | Net Stack Cost | Residual Support Gap | Interaction Risk | Final Liability Modified |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- | --- |
 | Displaced Worker Targeted Supplement | 330,000.00 | 800.00 | 1.00 | 4,000,000.00 | 0.00 | 4,000,000.00 | 0.00 | low | false |
 | High Cliff-Risk Interaction Case | 9,375,000.00 | 500.00 | 1.00 | 47,000,000.00 | 0.00 | 47,000,000.00 | 46,000,000.00 | critical | false |

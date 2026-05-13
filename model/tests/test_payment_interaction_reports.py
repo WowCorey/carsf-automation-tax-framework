@@ -40,6 +40,36 @@ def test_payment_interaction_report_includes_required_non_claims(repo_root) -> N
     assert payload["metadata"]["status"] == "prototype_payment_interaction_outputs_only"
 
 
+def test_payment_interaction_report_shows_effective_phase_multiplier(repo_root) -> None:
+    reports_dir = repo_root / "tmp" / "test-payment-interaction-effective-phase"
+    subprocess.run(
+        [sys.executable, "scripts/run_payment_interactions.py", "--reports-dir", str(reports_dir)],
+        cwd=repo_root,
+        check=True,
+    )
+    markdown = (reports_dir / "payment_interactions.md").read_text(encoding="utf-8")
+
+    assert "Effective Multiplier" in markdown
+    assert "Component costs are phase-adjusted before double-counting adjustments." in markdown
+    assert "component multiplier × year phase multiplier" in markdown
+    assert "### Retraining Income Phase-In" in markdown
+    assert "| retraining_income | TRANSITION_INCOME | 550.00 | 8,000.00 | 1 | 1.00 | 0.62 | 0.62 | 2,750,000.00 | None |" in markdown
+
+
+def test_payment_interaction_report_keeps_final_liability_unmodified(repo_root) -> None:
+    reports_dir = repo_root / "tmp" / "test-payment-interaction-liability-unmodified"
+    subprocess.run(
+        [sys.executable, "scripts/run_payment_interactions.py", "--reports-dir", str(reports_dir)],
+        cwd=repo_root,
+        check=True,
+    )
+    payload = json.loads((reports_dir / "payment_interactions.json").read_text(encoding="utf-8"))
+    markdown = (reports_dir / "payment_interactions.md").read_text(encoding="utf-8")
+
+    assert all(item["firm_level_liability_modified"] is False for item in payload["examples"])
+    assert "Payment interaction outputs do not modify firm-level CARSF liability." in markdown
+
+
 def test_existing_reports_and_repo_guardrails_still_generate_with_payment_interactions(repo_root) -> None:
     reports_dir = repo_root / "tmp" / "test-existing-plus-payment-interactions"
     commands = [

@@ -141,7 +141,7 @@ def build_json_payload(rows: list[dict[str, Any]], metadata: dict[str, Any]) -> 
 
 def _summary_table(rows: list[dict[str, Any]]) -> list[str]:
     lines = [
-        "| Example | Baseline Cost | Targeted Eligible People | Phase Multiplier | Gross Stack Cost | Double-Count Adjustment | Net Stack Cost | Residual Support Gap | Interaction Risk | Final Liability Modified |",
+        "| Example | Baseline Cost | Targeted Eligible People | Phase Multiplier | Phase-Adjusted Gross Stack Cost | Double-Count Adjustment | Net Stack Cost | Residual Support Gap | Interaction Risk | Final Liability Modified |",
         "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- | --- |",
     ]
     for row in rows:
@@ -211,15 +211,22 @@ def _phase_table(rows: list[dict[str, Any]]) -> list[str]:
 
 def _stack_detail(row: dict[str, Any]) -> list[str]:
     lines = [
-        "| Component | Type | Eligible People | Payment Per Person | Priority | Phase Multiplier | Mutually Exclusive With |",
-        "| --- | --- | ---: | ---: | ---: | ---: | --- |",
+        "| Component | Type | Eligible People | Payment Per Person | Priority | Component Multiplier | Year Phase Multiplier | Effective Multiplier | Phase-Adjusted Cost | Mutually Exclusive With |",
+        "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |",
     ]
+    year_phase_multiplier = float(row["interaction_result"].phase_multiplier)
     for component in row["interaction_input"]["stack_components"]:
+        eligible_people = float(component["eligible_people"])
+        payment_per_person = float(component["payment_per_person"])
+        component_multiplier = float(component.get("phase_multiplier", 1.0))
+        effective_multiplier = component_multiplier * year_phase_multiplier
+        phase_adjusted_cost = eligible_people * payment_per_person * effective_multiplier
         lines.append(
             "| "
-            f"{component['component_id']} | {component.get('component_type', '')} | {float(component['eligible_people']):,.2f} | "
-            f"{money(float(component['payment_per_person']))} | {int(component.get('stack_priority', 0))} | "
-            f"{float(component.get('phase_multiplier', 1.0)):.2f} | {', '.join(component.get('mutually_exclusive_with', [])) or 'None'} |"
+            f"{component['component_id']} | {component.get('component_type', '')} | {eligible_people:,.2f} | "
+            f"{money(payment_per_person)} | {int(component.get('stack_priority', 0))} | "
+            f"{component_multiplier:.2f} | {year_phase_multiplier:.2f} | {effective_multiplier:.2f} | "
+            f"{money(phase_adjusted_cost)} | {', '.join(component.get('mutually_exclusive_with', [])) or 'None'} |"
         )
     return lines
 
@@ -271,14 +278,22 @@ def build_markdown(rows: list[dict[str, Any]], metadata: dict[str, Any]) -> str:
     lines.extend(_targeting_table(rows))
     lines.extend(["", "## F. Phase-In / Phase-Out Summary", ""])
     lines.extend(_phase_table(rows))
-    lines.extend(["", "## G. Payment Stack and Double-Counting Review", ""])
+    lines.extend(
+        [
+            "",
+            "## G. Payment Stack and Double-Counting Review",
+            "",
+            "Component costs are phase-adjusted before double-counting adjustments. The effective multiplier equals component multiplier × year phase multiplier.",
+            "",
+        ]
+    )
     for row in rows:
         result = row["interaction_result"]
         lines.extend(
             [
                 f"### {row['example']['name']}",
                 "",
-                f"Gross stack cost before interactions: `{money(result.gross_stack_cost)}`",
+                f"Phase-adjusted gross stack cost before interactions: `{money(result.gross_stack_cost)}`",
                 "",
                 f"Double-count adjustment: `{money(result.double_count_adjustment)}`",
                 "",
