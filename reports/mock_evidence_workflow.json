@@ -1,11 +1,16 @@
 {
   "metadata": {
-    "generated_at": "2026-05-13T09:11:23+00:00",
+    "generated_at": "2026-05-13T09:38:46+00:00",
     "non_claims": [
       "These packets are synthetic mock evidence only. They do not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.",
       "This packet is synthetic mock evidence only and does not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.",
       "Mock evidence can support prototype workflow testing only; it cannot create real-world sufficiency."
     ],
+    "secure_ingestion_controls": {
+      "report_json": "reports/secure_ingestion_controls.json",
+      "report_markdown": "reports/secure_ingestion_controls.md",
+      "rule": "Only synthetic mock evidence is allowed in this repo; non-synthetic evidence requires external secure-system design."
+    },
     "status": "synthetic_mock_evidence_workflow_only",
     "version": "CARSF V1.5 prototype"
   },

@@ -1,0 +1,16 @@
+request_id: denied_non_synthetic_evidence_request
+evidence_mode: external_real
+source_description: Synthetic fixture representing a proposed non-synthetic evidence path with no payload attached.
+intended_use: Test default-deny path for any non-synthetic evidence.
+storage_zone: data/mock_evidence/
+synthetic_mock_evidence_only: false
+contains_personal_data: false
+contains_real_business_data: false
+contains_restricted_data: false
+contains_secrets: false
+declared_sensitivity: moderate
+requested_by: prototype_test
+metadata:
+  expected_allowed: false
+  synthetic_fixture_only: true
+  note: Fixture describes a blocked path and does not include real evidence.

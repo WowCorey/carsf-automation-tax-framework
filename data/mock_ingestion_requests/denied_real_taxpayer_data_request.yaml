@@ -1,0 +1,16 @@
+request_id: denied_real_taxpayer_data_request
+evidence_mode: synthetic_mock
+source_description: Synthetic blocked fixture containing FAKE_TFN_MARKER and real taxpayer marker text for scanner testing.
+intended_use: Test denial when taxpayer-like markers appear.
+storage_zone: data/mock_evidence/
+synthetic_mock_evidence_only: true
+contains_personal_data: true
+contains_real_business_data: false
+contains_restricted_data: false
+contains_secrets: false
+declared_sensitivity: restricted_placeholder
+requested_by: prototype_test
+metadata:
+  expected_allowed: false
+  synthetic_fixture_only: true
+  marker_is_fake: true

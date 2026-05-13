@@ -1,6 +1,6 @@
 # CARSF V1.5 Controlled Mock Evidence Workflow
 
-Generated at: `2026-05-13T09:11:23+00:00`
+Generated at: `2026-05-13T09:38:46+00:00`
 
 ## A. Purpose
 
@@ -153,3 +153,10 @@ This report tests how synthetic evidence packets can be submitted, summarised, c
 Status counts:
 
 - `partial`: 4
+
+## J. Secure Ingestion Controls
+
+- Mock evidence is allowed only because it is synthetic.
+- Non-synthetic evidence requires secure ingestion controls and external secure-system design.
+- Real evidence, personal data, taxpayer data, business records, restricted government data, secrets, credentials, invoices, contracts, and employment records must not be committed to this repo.
+- Run `python scripts/run_ingestion_controls.py` to generate `reports/secure_ingestion_controls.md` and `reports/secure_ingestion_controls.json`.

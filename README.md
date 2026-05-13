@@ -65,8 +65,20 @@ Generated mock workflow reports:
 - `reports/mock_evidence_workflow.md`
 - `reports/mock_evidence_workflow.json`
 
+Run secure ingestion-control reports:
+
+```powershell
+python scripts/run_ingestion_controls.py
+```
+
+Generated secure-ingestion reports:
+
+- `reports/secure_ingestion_controls.md`
+- `reports/secure_ingestion_controls.json`
+
 The reports are illustrative placeholder outputs only. They are not legal grouping findings, transfer-pricing adjustments, ATO findings, tax assessments, Treasury guidance, OECD/BEPS analysis, economic validation, or real liability calculations.
 Mock evidence reports use synthetic fixtures only and do not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.
+Secure-ingestion reports are prototype governance controls only. Only synthetic mock evidence is allowed in this repository; real evidence must not be committed.
 
 ## Run the Simulator
 
@@ -91,6 +103,7 @@ V1.5 is not just an examples update. It is V1.4 plus two prototype sector schedu
 - handle mixed canonical output units by prohibiting direct output/HLE aggregation and showing only standalone liability sums, schedule-level comparison, and a value-weighted exposure index;
 - record prototype evidence requirements and decision-log summaries without validating liability;
 - test controlled mock evidence packet submission, review states, and privacy/secrecy classification without real evidence;
+- enforce a default-deny prototype ingestion policy before any non-synthetic evidence could enter the repo;
 - define a calibration shell and data source registry without collecting real data;
 - identify open-source AI and R&D Tax Incentive interaction questions without overclaiming.
 
@@ -103,3 +116,4 @@ Grouped-entity and apportionment outputs are prototype modelling previews only. 
 Adjusted AAVA is preview-only and does not replace reported AAVA. The value-weighted exposure index is not a tax base and is not a replacement for calibrated sector schedules.
 Evidence assessments are prototype governance scaffolding only. No calibration has occurred and no real evidence or restricted datasets have been collected.
 Controlled mock evidence can upgrade only prototype workflow status, such as `partial` or `sufficient_for_prototype`; it never creates real-world sufficiency.
+Secure storage, real redaction, real access control, legal/privacy approval, and audit enforcement remain out of scope.

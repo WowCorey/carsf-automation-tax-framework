@@ -206,3 +206,38 @@ Limitations:
 - Mock evidence is workflow scaffolding only.
 - It does not validate real data, liability, tax positions, audit findings, legal conclusions, Treasury assessments, ATO assessments, or economic claims.
 - Future real evidence handling requires privacy, secrecy, legal, ATO/Treasury, data-owner, and governance controls.
+
+## V1.5 Secure Evidence Ingestion Controls
+
+Branch: `v1.5-secure-evidence-ingestion-controls`
+
+Baseline: PR #7 merged into `main`, including controlled synthetic mock evidence workflow, review-state workflow, privacy/secrecy classification, mock evidence reports, and Streamlit mock evidence page.
+
+Purpose of this build:
+
+- Add default-deny secure ingestion policy scaffolding.
+- Add heuristic sensitive-marker scanning.
+- Add redaction-plan metadata for external secure-system handling.
+- Add retention/access-control policy helpers.
+- Add immutable-style ingestion audit records.
+- Add mock ingestion request fixtures and secure-ingestion reports.
+
+Tests run:
+
+- `python -m pytest` - 272 passed, 1 pytest-asyncio deprecation warning under Python 3.14.
+- `python -m compileall -q model simulator scripts` - passed.
+- Recursive YAML parse check for schedules/examples/data - parsed 27 YAML files.
+- `python scripts/run_examples.py` - regenerated example, grouped, transfer-pricing, evidence, and calibration reports.
+- `python scripts/run_evidence_workflow.py` - regenerated mock evidence workflow reports.
+- `python scripts/run_ingestion_controls.py` - generated secure-ingestion control reports.
+- Streamlit bare import probe for `simulator/app.py`, mock evidence workflow page, and secure ingestion controls page - passed.
+
+Reports generated:
+
+- `reports/secure_ingestion_controls.json`
+- `reports/secure_ingestion_controls.md`
+
+Limitations:
+
+- Controls are prototype governance controls only.
+- They do not implement real secure storage, IAM, redaction, deletion, cybersecurity assurance, legal validation, privacy validation, tax validation, Treasury/ATO guidance, forensic validation, or audit enforcement.

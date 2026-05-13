@@ -1,0 +1,17 @@
+request_id: review_required_high_sensitivity_mock_request
+evidence_mode: synthetic_mock
+source_description: Synthetic high-sensitivity mock scenario description without prohibited source markers.
+intended_use: Test allowed synthetic mock path that still requires privacy review.
+storage_zone: data/mock_evidence/
+synthetic_mock_evidence_only: true
+contains_personal_data: false
+contains_real_business_data: false
+contains_restricted_data: false
+contains_secrets: false
+declared_sensitivity: high
+requested_by: prototype_test
+metadata:
+  expected_allowed: true
+  expected_review_required: true
+  synthetic_fixture_only: true
+  note: High-sensitivity synthetic scenario only.

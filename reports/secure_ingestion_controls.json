@@ -1,0 +1,991 @@
+{
+  "metadata": {
+    "generated_at": "2026-05-13T09:38:46+00:00",
+    "non_claims": [
+      "These controls are prototype governance controls only. They do not create legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit validation.",
+      "This is a prototype ingestion-control decision only. It is not a legal, privacy, cybersecurity, tax, ATO, Treasury, evidentiary, forensic, or audit determination.",
+      "These controls are governance scaffolding only and do not implement secure storage or real access control."
+    ],
+    "status": "prototype_secure_ingestion_controls_only",
+    "version": "CARSF V1.5 prototype"
+  },
+  "policy": {
+    "allowed_modes": [
+      "synthetic_mock"
+    ],
+    "allowed_storage_zones": [
+      "data/mock_evidence/"
+    ],
+    "approval_required_for": [
+      "high synthetic sensitivity",
+      "restricted-placeholder synthetic sensitivity",
+      "external secure system design",
+      "any future non-synthetic evidence path"
+    ],
+    "default_action": "DENY",
+    "non_claims": [
+      "This is a prototype ingestion-control decision only. It is not a legal, privacy, cybersecurity, tax, ATO, Treasury, evidentiary, forensic, or audit determination.",
+      "These controls are governance scaffolding only and do not implement secure storage or real access control."
+    ],
+    "policy_id": "carsf-v1.5-default-deny-ingestion",
+    "prohibited_content": [
+      "personal data",
+      "real taxpayer data",
+      "real business records",
+      "restricted government data",
+      "secrets, API keys, tokens, private keys, credentials",
+      "TFNs, ABNs, ACNs, Medicare numbers, bank details, payslips, invoices, contracts"
+    ],
+    "prohibited_storage_zones": [
+      "reports/",
+      "docs/",
+      "paper/",
+      "model/",
+      "simulator/",
+      "scripts/",
+      "./",
+      "data/incoming/",
+      "data/private/",
+      "data/restricted/",
+      "data/real_evidence/",
+      "evidence_inbox/",
+      "secure_drop/"
+    ],
+    "version": "CARSF V1.5 prototype secure ingestion controls"
+  },
+  "requests": [
+    {
+      "access_control_policy": {
+        "allowed_roles": [
+          "prototype_maintainer",
+          "policy_reviewer"
+        ],
+        "approval_required": false,
+        "denied_roles": [
+          "public_viewer"
+        ],
+        "non_claims": [
+          "This is prototype retention/access-control documentation only.",
+          "It is not real IAM, legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit enforcement."
+        ],
+        "notes": [
+          "Synthetic mock evidence only.",
+          "No real IAM enforcement is implemented."
+        ],
+        "policy_id": "synthetic-mock-repo-access"
+      },
+      "audit_record": {
+        "allowed": true,
+        "decision": "ALLOW_SYNTHETIC_MOCK_ONLY",
+        "generated_at": "2026-05-13T09:38:46+00:00",
+        "metadata_hash": "3b3939bf8eebc79f95a1159a2f4c69247b42ae145e3e4ccff79629d4962a2e80",
+        "non_claims": [
+          "This is immutable-style prototype logging only.",
+          "It is not blockchain, legal audit logging, cybersecurity assurance, evidentiary validation, Treasury guidance, ATO guidance, tax validation, or forensic validation."
+        ],
+        "previous_record_hash": null,
+        "reasons_hash": "74ea76435aec9e6ec3710f015cb919662e0374578bc83bba87d2e31aa4f8e86d",
+        "record_hash": "a98d8c465756cc49b55bd694b460874be01ebc850245549f43478d1e97a8e553",
+        "record_id": "ingestion-audit-a98d8c465756cc49",
+        "request_id": "allowed_mock_evidence_request"
+      },
+      "decision": {
+        "allowed": true,
+        "audit_required": true,
+        "decision": "ALLOW_SYNTHETIC_MOCK_ONLY",
+        "non_claims": [
+          "This is a prototype ingestion-control decision only. It is not a legal, privacy, cybersecurity, tax, ATO, Treasury, evidentiary, forensic, or audit determination.",
+          "These controls are governance scaffolding only and do not implement secure storage or real access control."
+        ],
+        "quarantine_required": false,
+        "reasons": [
+          "Default action is DENY; request must satisfy every allow condition."
+        ],
+        "redaction_required": false,
+        "request_id": "allowed_mock_evidence_request",
+        "required_approvals": [],
+        "retention_policy": "retain synthetic mock evidence in repo",
+        "warnings": [
+          "Real evidence must not be committed to this repository.",
+          "No configured sensitive markers detected by this heuristic scan."
+        ]
+      },
+      "fixture_path": "data\\mock_ingestion_requests\\allowed_mock_evidence_request.yaml",
+      "redaction_plan": {
+        "denied_fields": [],
+        "fields_to_generalise": [
+          "synthetic scenario descriptions"
+        ],
+        "fields_to_hash": [],
+        "fields_to_remove": [],
+        "non_claims": [
+          "This is a prototype redaction plan only.",
+          "It is not legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit validation.",
+          "Real sensitive evidence must not be redacted into this repository."
+        ],
+        "plan_id": "redaction-synthetic_mock",
+        "required": false,
+        "warnings": [
+          "No redaction required for clean synthetic mock metadata."
+        ]
+      },
+      "request": {
+        "contains_personal_data": false,
+        "contains_real_business_data": false,
+        "contains_restricted_data": false,
+        "contains_secrets": false,
+        "declared_sensitivity": "low",
+        "evidence_mode": "synthetic_mock",
+        "intended_use": "Test secure ingestion allow path for synthetic-only evidence.",
+        "metadata": {
+          "expected_allowed": true,
+          "note": "No real evidence or sensitive source values are included.",
+          "synthetic_fixture_only": true
+        },
+        "request_id": "allowed_mock_evidence_request",
+        "requested_by": "prototype_test",
+        "source_description": "Synthetic workflow fixture for a mock evidence packet.",
+        "storage_zone": "data/mock_evidence/",
+        "synthetic_mock_evidence_only": true
+      },
+      "retention_policy": {
+        "deletion_required": false,
+        "evidence_mode": "synthetic_mock",
+        "non_claims": [
+          "This is prototype retention/access-control documentation only.",
+          "It is not real IAM, legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit enforcement."
+        ],
+        "policy_id": "retain-synthetic-mock-evidence",
+        "reason": "Synthetic mock evidence is allowed in the repo for workflow tests.",
+        "retention_action": "retain_in_repo",
+        "retention_period": "repository lifecycle",
+        "storage_zone": "data/mock_evidence/",
+        "warnings": [
+          "Confirm fixtures remain synthetic and contain no real evidence before commit."
+        ]
+      },
+      "sensitive_scan": {
+        "clean": true,
+        "deny_ingestion": false,
+        "markers_found": [],
+        "non_claims": [
+          "This scanner is a prototype over-blocking guardrail only.",
+          "It is not a complete DLP, privacy, cybersecurity, evidentiary, forensic, tax, ATO, Treasury, or audit tool."
+        ],
+        "severity": "none",
+        "warnings": [
+          "No configured sensitive markers detected by this heuristic scan."
+        ]
+      }
+    },
+    {
+      "access_control_policy": {
+        "allowed_roles": [],
+        "approval_required": true,
+        "denied_roles": [
+          "repo_reader",
+          "repo_writer",
+          "public_viewer",
+          "prototype_user"
+        ],
+        "non_claims": [
+          "This is prototype retention/access-control documentation only.",
+          "It is not real IAM, legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit enforcement."
+        ],
+        "notes": [
+          "Non-synthetic evidence requires external secure access-control design."
+        ],
+        "policy_id": "external-secure-access-required"
+      },
+      "audit_record": {
+        "allowed": false,
+        "decision": "DENY",
+        "generated_at": "2026-05-13T09:38:46+00:00",
+        "metadata_hash": "a98ab221a686ce25805222932294434f4109e23ab49a604f9932035ed2f3cb2f",
+        "non_claims": [
+          "This is immutable-style prototype logging only.",
+          "It is not blockchain, legal audit logging, cybersecurity assurance, evidentiary validation, Treasury guidance, ATO guidance, tax validation, or forensic validation."
+        ],
+        "previous_record_hash": "a98d8c465756cc49b55bd694b460874be01ebc850245549f43478d1e97a8e553",
+        "reasons_hash": "52461189e484f71d81e5578fe4c5ebc2b327c28aab54814c13f96b4add66da9c",
+        "record_hash": "b0da21e1d7975a5bc77d8bb7405ebed93694d7b19831fe137c93f15e3deaf700",
+        "record_id": "ingestion-audit-b0da21e1d7975a5b",
+        "request_id": "denied_non_synthetic_evidence_request"
+      },
+      "decision": {
+        "allowed": false,
+        "audit_required": true,
+        "decision": "DENY",
+        "non_claims": [
+          "This is a prototype ingestion-control decision only. It is not a legal, privacy, cybersecurity, tax, ATO, Treasury, evidentiary, forensic, or audit determination.",
+          "These controls are governance scaffolding only and do not implement secure storage or real access control."
+        ],
+        "quarantine_required": true,
+        "reasons": [
+          "Default action is DENY; request must satisfy every allow condition.",
+          "evidence_mode `external_real` is not allowed in this repo.",
+          "non-synthetic evidence is denied and must be handled outside this repo."
+        ],
+        "redaction_required": true,
+        "request_id": "denied_non_synthetic_evidence_request",
+        "required_approvals": [
+          "external_secure_system_design"
+        ],
+        "retention_policy": "do not retain evidence in repo",
+        "warnings": [
+          "Real evidence must not be committed to this repository.",
+          "No configured sensitive markers detected by this heuristic scan."
+        ]
+      },
+      "fixture_path": "data\\mock_ingestion_requests\\denied_non_synthetic_evidence_request.yaml",
+      "redaction_plan": {
+        "denied_fields": [],
+        "fields_to_generalise": [],
+        "fields_to_hash": [
+          "stable external reference IDs"
+        ],
+        "fields_to_remove": [
+          "direct identifiers",
+          "raw source documents"
+        ],
+        "non_claims": [
+          "This is a prototype redaction plan only.",
+          "It is not legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit validation.",
+          "Real sensitive evidence must not be redacted into this repository."
+        ],
+        "plan_id": "redaction-external_real",
+        "required": true,
+        "warnings": [
+          "Non-synthetic evidence requires external secure-system design before any redaction workflow."
+        ]
+      },
+      "request": {
+        "contains_personal_data": false,
+        "contains_real_business_data": false,
+        "contains_restricted_data": false,
+        "contains_secrets": false,
+        "declared_sensitivity": "moderate",
+        "evidence_mode": "external_real",
+        "intended_use": "Test default-deny path for any non-synthetic evidence.",
+        "metadata": {
+          "expected_allowed": false,
+          "note": "Fixture describes a blocked path and does not include real evidence.",
+          "synthetic_fixture_only": true
+        },
+        "request_id": "denied_non_synthetic_evidence_request",
+        "requested_by": "prototype_test",
+        "source_description": "Synthetic fixture representing a proposed non-synthetic evidence path with no payload attached.",
+        "storage_zone": "data/mock_evidence/",
+        "synthetic_mock_evidence_only": false
+      },
+      "retention_policy": {
+        "deletion_required": true,
+        "evidence_mode": "denied_or_non_synthetic",
+        "non_claims": [
+          "This is prototype retention/access-control documentation only.",
+          "It is not real IAM, legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit enforcement."
+        ],
+        "policy_id": "deny-real-evidence-retention",
+        "reason": "Real or non-approved evidence must not be retained in this repository.",
+        "retention_action": "deny_repo_retention",
+        "retention_period": "none",
+        "storage_zone": "data/mock_evidence/",
+        "warnings": [
+          "Use an external secure system design for any non-synthetic evidence."
+        ]
+      },
+      "sensitive_scan": {
+        "clean": true,
+        "deny_ingestion": false,
+        "markers_found": [],
+        "non_claims": [
+          "This scanner is a prototype over-blocking guardrail only.",
+          "It is not a complete DLP, privacy, cybersecurity, evidentiary, forensic, tax, ATO, Treasury, or audit tool."
+        ],
+        "severity": "none",
+        "warnings": [
+          "No configured sensitive markers detected by this heuristic scan."
+        ]
+      }
+    },
+    {
+      "access_control_policy": {
+        "allowed_roles": [
+          "prototype_maintainer",
+          "policy_reviewer"
+        ],
+        "approval_required": true,
+        "denied_roles": [
+          "public_viewer"
+        ],
+        "non_claims": [
+          "This is prototype retention/access-control documentation only.",
+          "It is not real IAM, legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit enforcement."
+        ],
+        "notes": [
+          "Synthetic mock evidence only.",
+          "High-sensitivity mock scenarios require review before external sharing."
+        ],
+        "policy_id": "synthetic-mock-access-review"
+      },
+      "audit_record": {
+        "allowed": false,
+        "decision": "DENY",
+        "generated_at": "2026-05-13T09:38:46+00:00",
+        "metadata_hash": "29ac19c8816fb690398e4cf6cbb01df4558d18edc4b5abdd67481200a1498348",
+        "non_claims": [
+          "This is immutable-style prototype logging only.",
+          "It is not blockchain, legal audit logging, cybersecurity assurance, evidentiary validation, Treasury guidance, ATO guidance, tax validation, or forensic validation."
+        ],
+        "previous_record_hash": "b0da21e1d7975a5bc77d8bb7405ebed93694d7b19831fe137c93f15e3deaf700",
+        "reasons_hash": "486faa65ea284388a97bf4bc4add6d36947dd9b6f9504c619cca0e9284112230",
+        "record_hash": "1e6a58a2c91550d47edd4f2c597b45a4deb9396231f9214c8d1aac4ed4f7d099",
+        "record_id": "ingestion-audit-1e6a58a2c91550d4",
+        "request_id": "denied_real_business_record_request"
+      },
+      "decision": {
+        "allowed": false,
+        "audit_required": true,
+        "decision": "DENY",
+        "non_claims": [
+          "This is a prototype ingestion-control decision only. It is not a legal, privacy, cybersecurity, tax, ATO, Treasury, evidentiary, forensic, or audit determination.",
+          "These controls are governance scaffolding only and do not implement secure storage or real access control."
+        ],
+        "quarantine_required": true,
+        "reasons": [
+          "Default action is DENY; request must satisfy every allow condition.",
+          "declared real taxpayer/business data is denied.",
+          "sensitive scanner found prohibited markers: ABN."
+        ],
+        "redaction_required": true,
+        "request_id": "denied_real_business_record_request",
+        "required_approvals": [
+          "legal_tax_review",
+          "privacy_review"
+        ],
+        "retention_policy": "do not retain evidence in repo",
+        "warnings": [
+          "Real evidence must not be committed to this repository.",
+          "High-sensitivity mock evidence requires review before any external workflow use.",
+          "Sensitive marker detected; ingestion must fail closed or route to an external secure system."
+        ]
+      },
+      "fixture_path": "data\\mock_ingestion_requests\\denied_real_business_record_request.yaml",
+      "redaction_plan": {
+        "denied_fields": [
+          "ABN"
+        ],
+        "fields_to_generalise": [
+          "synthetic scenario descriptions"
+        ],
+        "fields_to_hash": [
+          "stable external reference IDs"
+        ],
+        "fields_to_remove": [
+          "direct identifiers",
+          "raw source documents"
+        ],
+        "non_claims": [
+          "This is a prototype redaction plan only.",
+          "It is not legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit validation.",
+          "Real sensitive evidence must not be redacted into this repository."
+        ],
+        "plan_id": "redaction-synthetic_mock",
+        "required": true,
+        "warnings": [
+          "Sensitive markers were found; repo ingestion must be denied rather than creating a redacted repo copy.",
+          "Use an external secure system for any real redaction workflow."
+        ]
+      },
+      "request": {
+        "contains_personal_data": false,
+        "contains_real_business_data": true,
+        "contains_restricted_data": false,
+        "contains_secrets": false,
+        "declared_sensitivity": "high",
+        "evidence_mode": "synthetic_mock",
+        "intended_use": "Test denial when business-record markers appear.",
+        "metadata": {
+          "expected_allowed": false,
+          "marker_is_fake": true,
+          "synthetic_fixture_only": true
+        },
+        "request_id": "denied_real_business_record_request",
+        "requested_by": "prototype_test",
+        "source_description": "Synthetic blocked fixture containing FAKE_REAL_BUSINESS_RECORD_MARKER and fake ABN marker text for scanner testing.",
+        "storage_zone": "data/mock_evidence/",
+        "synthetic_mock_evidence_only": true
+      },
+      "retention_policy": {
+        "deletion_required": true,
+        "evidence_mode": "denied_or_non_synthetic",
+        "non_claims": [
+          "This is prototype retention/access-control documentation only.",
+          "It is not real IAM, legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit enforcement."
+        ],
+        "policy_id": "deny-real-evidence-retention",
+        "reason": "Real or non-approved evidence must not be retained in this repository.",
+        "retention_action": "deny_repo_retention",
+        "retention_period": "none",
+        "storage_zone": "data/mock_evidence/",
+        "warnings": [
+          "Use an external secure system design for any non-synthetic evidence."
+        ]
+      },
+      "sensitive_scan": {
+        "clean": false,
+        "deny_ingestion": true,
+        "markers_found": [
+          "ABN"
+        ],
+        "non_claims": [
+          "This scanner is a prototype over-blocking guardrail only.",
+          "It is not a complete DLP, privacy, cybersecurity, evidentiary, forensic, tax, ATO, Treasury, or audit tool."
+        ],
+        "severity": "high",
+        "warnings": [
+          "Sensitive marker detected; ingestion must fail closed or route to an external secure system."
+        ]
+      }
+    },
+    {
+      "access_control_policy": {
+        "allowed_roles": [
+          "prototype_maintainer",
+          "policy_reviewer"
+        ],
+        "approval_required": true,
+        "denied_roles": [
+          "public_viewer"
+        ],
+        "non_claims": [
+          "This is prototype retention/access-control documentation only.",
+          "It is not real IAM, legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit enforcement."
+        ],
+        "notes": [
+          "Synthetic mock evidence only.",
+          "High-sensitivity mock scenarios require review before external sharing."
+        ],
+        "policy_id": "synthetic-mock-access-review"
+      },
+      "audit_record": {
+        "allowed": false,
+        "decision": "DENY",
+        "generated_at": "2026-05-13T09:38:46+00:00",
+        "metadata_hash": "bc56a6729fdbd9f622a0881ab83285da2758a2c35f811346189cb9abbf1064dc",
+        "non_claims": [
+          "This is immutable-style prototype logging only.",
+          "It is not blockchain, legal audit logging, cybersecurity assurance, evidentiary validation, Treasury guidance, ATO guidance, tax validation, or forensic validation."
+        ],
+        "previous_record_hash": "1e6a58a2c91550d47edd4f2c597b45a4deb9396231f9214c8d1aac4ed4f7d099",
+        "reasons_hash": "c56032a0b0dd70ddd27518ebd8052c123583feb72d3e8a030be87b17c69b4567",
+        "record_hash": "1b19c840166866c6803200dd25744f994aeb101feb0314b557da3138c41372e5",
+        "record_id": "ingestion-audit-1b19c840166866c6",
+        "request_id": "denied_real_taxpayer_data_request"
+      },
+      "decision": {
+        "allowed": false,
+        "audit_required": true,
+        "decision": "DENY",
+        "non_claims": [
+          "This is a prototype ingestion-control decision only. It is not a legal, privacy, cybersecurity, tax, ATO, Treasury, evidentiary, forensic, or audit determination.",
+          "These controls are governance scaffolding only and do not implement secure storage or real access control."
+        ],
+        "quarantine_required": true,
+        "reasons": [
+          "Default action is DENY; request must satisfy every allow condition.",
+          "declared personal data is denied.",
+          "sensitive scanner found prohibited markers: REAL_TAXPAYER, TFN."
+        ],
+        "redaction_required": true,
+        "request_id": "denied_real_taxpayer_data_request",
+        "required_approvals": [
+          "privacy_review"
+        ],
+        "retention_policy": "do not retain evidence in repo",
+        "warnings": [
+          "Real evidence must not be committed to this repository.",
+          "High-sensitivity mock evidence requires review before any external workflow use.",
+          "Sensitive marker detected; ingestion must fail closed or route to an external secure system."
+        ]
+      },
+      "fixture_path": "data\\mock_ingestion_requests\\denied_real_taxpayer_data_request.yaml",
+      "redaction_plan": {
+        "denied_fields": [
+          "REAL_TAXPAYER",
+          "TFN"
+        ],
+        "fields_to_generalise": [
+          "synthetic scenario descriptions"
+        ],
+        "fields_to_hash": [
+          "stable external reference IDs"
+        ],
+        "fields_to_remove": [
+          "direct identifiers",
+          "raw source documents"
+        ],
+        "non_claims": [
+          "This is a prototype redaction plan only.",
+          "It is not legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit validation.",
+          "Real sensitive evidence must not be redacted into this repository."
+        ],
+        "plan_id": "redaction-synthetic_mock",
+        "required": true,
+        "warnings": [
+          "Sensitive markers were found; repo ingestion must be denied rather than creating a redacted repo copy.",
+          "Use an external secure system for any real redaction workflow."
+        ]
+      },
+      "request": {
+        "contains_personal_data": true,
+        "contains_real_business_data": false,
+        "contains_restricted_data": false,
+        "contains_secrets": false,
+        "declared_sensitivity": "restricted_placeholder",
+        "evidence_mode": "synthetic_mock",
+        "intended_use": "Test denial when taxpayer-like markers appear.",
+        "metadata": {
+          "expected_allowed": false,
+          "marker_is_fake": true,
+          "synthetic_fixture_only": true
+        },
+        "request_id": "denied_real_taxpayer_data_request",
+        "requested_by": "prototype_test",
+        "source_description": "Synthetic blocked fixture containing FAKE_TFN_MARKER and real taxpayer marker text for scanner testing.",
+        "storage_zone": "data/mock_evidence/",
+        "synthetic_mock_evidence_only": true
+      },
+      "retention_policy": {
+        "deletion_required": true,
+        "evidence_mode": "denied_or_non_synthetic",
+        "non_claims": [
+          "This is prototype retention/access-control documentation only.",
+          "It is not real IAM, legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit enforcement."
+        ],
+        "policy_id": "deny-real-evidence-retention",
+        "reason": "Real or non-approved evidence must not be retained in this repository.",
+        "retention_action": "deny_repo_retention",
+        "retention_period": "none",
+        "storage_zone": "data/mock_evidence/",
+        "warnings": [
+          "Use an external secure system design for any non-synthetic evidence."
+        ]
+      },
+      "sensitive_scan": {
+        "clean": false,
+        "deny_ingestion": true,
+        "markers_found": [
+          "REAL_TAXPAYER",
+          "TFN"
+        ],
+        "non_claims": [
+          "This scanner is a prototype over-blocking guardrail only.",
+          "It is not a complete DLP, privacy, cybersecurity, evidentiary, forensic, tax, ATO, Treasury, or audit tool."
+        ],
+        "severity": "critical",
+        "warnings": [
+          "Sensitive marker detected; ingestion must fail closed or route to an external secure system."
+        ]
+      }
+    },
+    {
+      "access_control_policy": {
+        "allowed_roles": [
+          "prototype_maintainer",
+          "policy_reviewer"
+        ],
+        "approval_required": true,
+        "denied_roles": [
+          "public_viewer"
+        ],
+        "non_claims": [
+          "This is prototype retention/access-control documentation only.",
+          "It is not real IAM, legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit enforcement."
+        ],
+        "notes": [
+          "Synthetic mock evidence only.",
+          "High-sensitivity mock scenarios require review before external sharing."
+        ],
+        "policy_id": "synthetic-mock-access-review"
+      },
+      "audit_record": {
+        "allowed": false,
+        "decision": "DENY",
+        "generated_at": "2026-05-13T09:38:46+00:00",
+        "metadata_hash": "ef2620a5be4bb521eb24e26cb2b4e9c1dfe65a7c4a133c3eac9bafb742c2e1f7",
+        "non_claims": [
+          "This is immutable-style prototype logging only.",
+          "It is not blockchain, legal audit logging, cybersecurity assurance, evidentiary validation, Treasury guidance, ATO guidance, tax validation, or forensic validation."
+        ],
+        "previous_record_hash": "1b19c840166866c6803200dd25744f994aeb101feb0314b557da3138c41372e5",
+        "reasons_hash": "c78a960990bb290fdbeb6116864e56bb75619ae96f74b46206e3f7c6ad1537a1",
+        "record_hash": "5e0062a58f38241b4683afcb12070085dbd650d10e4b82bc6cbe24124687c6c4",
+        "record_id": "ingestion-audit-5e0062a58f38241b",
+        "request_id": "denied_secret_marker_request"
+      },
+      "decision": {
+        "allowed": false,
+        "audit_required": true,
+        "decision": "DENY",
+        "non_claims": [
+          "This is a prototype ingestion-control decision only. It is not a legal, privacy, cybersecurity, tax, ATO, Treasury, evidentiary, forensic, or audit determination.",
+          "These controls are governance scaffolding only and do not implement secure storage or real access control."
+        ],
+        "quarantine_required": true,
+        "reasons": [
+          "Default action is DENY; request must satisfy every allow condition.",
+          "declared secrets or credentials are denied.",
+          "sensitive scanner found prohibited markers: ACCESS_TOKEN, API_KEY, SECRET."
+        ],
+        "redaction_required": true,
+        "request_id": "denied_secret_marker_request",
+        "required_approvals": [
+          "privacy_review",
+          "security_review"
+        ],
+        "retention_policy": "do not retain evidence in repo",
+        "warnings": [
+          "Real evidence must not be committed to this repository.",
+          "High-sensitivity mock evidence requires review before any external workflow use.",
+          "Sensitive marker detected; ingestion must fail closed or route to an external secure system."
+        ]
+      },
+      "fixture_path": "data\\mock_ingestion_requests\\denied_secret_marker_request.yaml",
+      "redaction_plan": {
+        "denied_fields": [
+          "ACCESS_TOKEN",
+          "API_KEY",
+          "SECRET"
+        ],
+        "fields_to_generalise": [
+          "synthetic scenario descriptions"
+        ],
+        "fields_to_hash": [
+          "stable external reference IDs"
+        ],
+        "fields_to_remove": [
+          "direct identifiers",
+          "raw source documents"
+        ],
+        "non_claims": [
+          "This is a prototype redaction plan only.",
+          "It is not legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit validation.",
+          "Real sensitive evidence must not be redacted into this repository."
+        ],
+        "plan_id": "redaction-synthetic_mock",
+        "required": true,
+        "warnings": [
+          "Sensitive markers were found; repo ingestion must be denied rather than creating a redacted repo copy.",
+          "Use an external secure system for any real redaction workflow."
+        ]
+      },
+      "request": {
+        "contains_personal_data": false,
+        "contains_real_business_data": false,
+        "contains_restricted_data": false,
+        "contains_secrets": true,
+        "declared_sensitivity": "restricted_placeholder",
+        "evidence_mode": "synthetic_mock",
+        "intended_use": "Test denial when credential-like markers appear.",
+        "metadata": {
+          "expected_allowed": false,
+          "marker_is_fake": true,
+          "synthetic_fixture_only": true
+        },
+        "request_id": "denied_secret_marker_request",
+        "requested_by": "prototype_test",
+        "source_description": "Synthetic blocked fixture containing FAKE_API_KEY_MARKER and access token marker text for scanner testing.",
+        "storage_zone": "data/mock_evidence/",
+        "synthetic_mock_evidence_only": true
+      },
+      "retention_policy": {
+        "deletion_required": true,
+        "evidence_mode": "denied_or_non_synthetic",
+        "non_claims": [
+          "This is prototype retention/access-control documentation only.",
+          "It is not real IAM, legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit enforcement."
+        ],
+        "policy_id": "deny-real-evidence-retention",
+        "reason": "Real or non-approved evidence must not be retained in this repository.",
+        "retention_action": "deny_repo_retention",
+        "retention_period": "none",
+        "storage_zone": "data/mock_evidence/",
+        "warnings": [
+          "Use an external secure system design for any non-synthetic evidence."
+        ]
+      },
+      "sensitive_scan": {
+        "clean": false,
+        "deny_ingestion": true,
+        "markers_found": [
+          "ACCESS_TOKEN",
+          "API_KEY",
+          "SECRET"
+        ],
+        "non_claims": [
+          "This scanner is a prototype over-blocking guardrail only.",
+          "It is not a complete DLP, privacy, cybersecurity, evidentiary, forensic, tax, ATO, Treasury, or audit tool."
+        ],
+        "severity": "critical",
+        "warnings": [
+          "Sensitive marker detected; ingestion must fail closed or route to an external secure system."
+        ]
+      }
+    },
+    {
+      "access_control_policy": {
+        "allowed_roles": [
+          "prototype_maintainer",
+          "policy_reviewer"
+        ],
+        "approval_required": false,
+        "denied_roles": [
+          "public_viewer"
+        ],
+        "non_claims": [
+          "This is prototype retention/access-control documentation only.",
+          "It is not real IAM, legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit enforcement."
+        ],
+        "notes": [
+          "Synthetic mock evidence only.",
+          "No real IAM enforcement is implemented."
+        ],
+        "policy_id": "synthetic-mock-repo-access"
+      },
+      "audit_record": {
+        "allowed": false,
+        "decision": "DENY",
+        "generated_at": "2026-05-13T09:38:46+00:00",
+        "metadata_hash": "b9b51d5b6967d41390115383de2c9bdf15e0ed6152cc8215de54dbf2492b1df8",
+        "non_claims": [
+          "This is immutable-style prototype logging only.",
+          "It is not blockchain, legal audit logging, cybersecurity assurance, evidentiary validation, Treasury guidance, ATO guidance, tax validation, or forensic validation."
+        ],
+        "previous_record_hash": "5e0062a58f38241b4683afcb12070085dbd650d10e4b82bc6cbe24124687c6c4",
+        "reasons_hash": "f010d2571047de75aff88f3b1ae6204b9bf27795aeb02deb119d1d5eb83bb835",
+        "record_hash": "95b4021a0d3e36bbbf6bcc808d965a074c948f20f5a905bdb502c8d9ab46cc22",
+        "record_id": "ingestion-audit-95b4021a0d3e36bb",
+        "request_id": "denied_wrong_storage_zone_request"
+      },
+      "decision": {
+        "allowed": false,
+        "audit_required": true,
+        "decision": "DENY",
+        "non_claims": [
+          "This is a prototype ingestion-control decision only. It is not a legal, privacy, cybersecurity, tax, ATO, Treasury, evidentiary, forensic, or audit determination.",
+          "These controls are governance scaffolding only and do not implement secure storage or real access control."
+        ],
+        "quarantine_required": true,
+        "reasons": [
+          "Default action is DENY; request must satisfy every allow condition.",
+          "storage_zone `reports/` is not an allowed evidence storage zone.",
+          "storage_zone `reports/` is explicitly prohibited for evidence storage."
+        ],
+        "redaction_required": true,
+        "request_id": "denied_wrong_storage_zone_request",
+        "required_approvals": [],
+        "retention_policy": "do not retain evidence in repo",
+        "warnings": [
+          "Real evidence must not be committed to this repository.",
+          "No configured sensitive markers detected by this heuristic scan."
+        ]
+      },
+      "fixture_path": "data\\mock_ingestion_requests\\denied_wrong_storage_zone_request.yaml",
+      "redaction_plan": {
+        "denied_fields": [],
+        "fields_to_generalise": [
+          "synthetic scenario descriptions"
+        ],
+        "fields_to_hash": [],
+        "fields_to_remove": [],
+        "non_claims": [
+          "This is a prototype redaction plan only.",
+          "It is not legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit validation.",
+          "Real sensitive evidence must not be redacted into this repository."
+        ],
+        "plan_id": "redaction-synthetic_mock",
+        "required": false,
+        "warnings": [
+          "No redaction required for clean synthetic mock metadata."
+        ]
+      },
+      "request": {
+        "contains_personal_data": false,
+        "contains_real_business_data": false,
+        "contains_restricted_data": false,
+        "contains_secrets": false,
+        "declared_sensitivity": "low",
+        "evidence_mode": "synthetic_mock",
+        "intended_use": "Test denial when storage zone is not data/mock_evidence/.",
+        "metadata": {
+          "expected_allowed": false,
+          "note": "Reports may contain derived synthetic summaries only, not evidence payloads.",
+          "synthetic_fixture_only": true
+        },
+        "request_id": "denied_wrong_storage_zone_request",
+        "requested_by": "prototype_test",
+        "source_description": "Synthetic fixture attempting to store mock evidence in a prohibited report zone.",
+        "storage_zone": "reports/",
+        "synthetic_mock_evidence_only": true
+      },
+      "retention_policy": {
+        "deletion_required": true,
+        "evidence_mode": "denied_or_non_synthetic",
+        "non_claims": [
+          "This is prototype retention/access-control documentation only.",
+          "It is not real IAM, legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit enforcement."
+        ],
+        "policy_id": "deny-real-evidence-retention",
+        "reason": "Real or non-approved evidence must not be retained in this repository.",
+        "retention_action": "deny_repo_retention",
+        "retention_period": "none",
+        "storage_zone": "reports/",
+        "warnings": [
+          "Use an external secure system design for any non-synthetic evidence."
+        ]
+      },
+      "sensitive_scan": {
+        "clean": true,
+        "deny_ingestion": false,
+        "markers_found": [],
+        "non_claims": [
+          "This scanner is a prototype over-blocking guardrail only.",
+          "It is not a complete DLP, privacy, cybersecurity, evidentiary, forensic, tax, ATO, Treasury, or audit tool."
+        ],
+        "severity": "none",
+        "warnings": [
+          "No configured sensitive markers detected by this heuristic scan."
+        ]
+      }
+    },
+    {
+      "access_control_policy": {
+        "allowed_roles": [
+          "prototype_maintainer",
+          "policy_reviewer"
+        ],
+        "approval_required": true,
+        "denied_roles": [
+          "public_viewer"
+        ],
+        "non_claims": [
+          "This is prototype retention/access-control documentation only.",
+          "It is not real IAM, legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit enforcement."
+        ],
+        "notes": [
+          "Synthetic mock evidence only.",
+          "High-sensitivity mock scenarios require review before external sharing."
+        ],
+        "policy_id": "synthetic-mock-access-review"
+      },
+      "audit_record": {
+        "allowed": true,
+        "decision": "ALLOW_SYNTHETIC_MOCK_WITH_REVIEW",
+        "generated_at": "2026-05-13T09:38:46+00:00",
+        "metadata_hash": "574743514135cbdf7ab6eba5af42a8052b9512935b38b19426431d07ce3c01a8",
+        "non_claims": [
+          "This is immutable-style prototype logging only.",
+          "It is not blockchain, legal audit logging, cybersecurity assurance, evidentiary validation, Treasury guidance, ATO guidance, tax validation, or forensic validation."
+        ],
+        "previous_record_hash": "95b4021a0d3e36bbbf6bcc808d965a074c948f20f5a905bdb502c8d9ab46cc22",
+        "reasons_hash": "74ea76435aec9e6ec3710f015cb919662e0374578bc83bba87d2e31aa4f8e86d",
+        "record_hash": "10dec2619fbf08780bf98d5952deeab44b91edc894583d20dde00b66e0735ec9",
+        "record_id": "ingestion-audit-10dec2619fbf0878",
+        "request_id": "review_required_high_sensitivity_mock_request"
+      },
+      "decision": {
+        "allowed": true,
+        "audit_required": true,
+        "decision": "ALLOW_SYNTHETIC_MOCK_WITH_REVIEW",
+        "non_claims": [
+          "This is a prototype ingestion-control decision only. It is not a legal, privacy, cybersecurity, tax, ATO, Treasury, evidentiary, forensic, or audit determination.",
+          "These controls are governance scaffolding only and do not implement secure storage or real access control."
+        ],
+        "quarantine_required": false,
+        "reasons": [
+          "Default action is DENY; request must satisfy every allow condition."
+        ],
+        "redaction_required": false,
+        "request_id": "review_required_high_sensitivity_mock_request",
+        "required_approvals": [
+          "privacy_review"
+        ],
+        "retention_policy": "retain synthetic mock evidence in repo",
+        "warnings": [
+          "Real evidence must not be committed to this repository.",
+          "High-sensitivity mock evidence requires review before any external workflow use.",
+          "No configured sensitive markers detected by this heuristic scan."
+        ]
+      },
+      "fixture_path": "data\\mock_ingestion_requests\\review_required_high_sensitivity_mock_request.yaml",
+      "redaction_plan": {
+        "denied_fields": [],
+        "fields_to_generalise": [
+          "synthetic scenario descriptions"
+        ],
+        "fields_to_hash": [],
+        "fields_to_remove": [],
+        "non_claims": [
+          "This is a prototype redaction plan only.",
+          "It is not legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit validation.",
+          "Real sensitive evidence must not be redacted into this repository."
+        ],
+        "plan_id": "redaction-synthetic_mock",
+        "required": false,
+        "warnings": [
+          "No redaction required for clean synthetic mock metadata."
+        ]
+      },
+      "request": {
+        "contains_personal_data": false,
+        "contains_real_business_data": false,
+        "contains_restricted_data": false,
+        "contains_secrets": false,
+        "declared_sensitivity": "high",
+        "evidence_mode": "synthetic_mock",
+        "intended_use": "Test allowed synthetic mock path that still requires privacy review.",
+        "metadata": {
+          "expected_allowed": true,
+          "expected_review_required": true,
+          "note": "High-sensitivity synthetic scenario only.",
+          "synthetic_fixture_only": true
+        },
+        "request_id": "review_required_high_sensitivity_mock_request",
+        "requested_by": "prototype_test",
+        "source_description": "Synthetic high-sensitivity mock scenario description without prohibited source markers.",
+        "storage_zone": "data/mock_evidence/",
+        "synthetic_mock_evidence_only": true
+      },
+      "retention_policy": {
+        "deletion_required": false,
+        "evidence_mode": "synthetic_mock",
+        "non_claims": [
+          "This is prototype retention/access-control documentation only.",
+          "It is not real IAM, legal, privacy, cybersecurity, evidentiary, forensic, Treasury, ATO, tax, or audit enforcement."
+        ],
+        "policy_id": "retain-synthetic-mock-evidence",
+        "reason": "Synthetic mock evidence is allowed in the repo for workflow tests.",
+        "retention_action": "retain_in_repo",
+        "retention_period": "repository lifecycle",
+        "storage_zone": "data/mock_evidence/",
+        "warnings": [
+          "Confirm fixtures remain synthetic and contain no real evidence before commit."
+        ]
+      },
+      "sensitive_scan": {
+        "clean": true,
+        "deny_ingestion": false,
+        "markers_found": [],
+        "non_claims": [
+          "This scanner is a prototype over-blocking guardrail only.",
+          "It is not a complete DLP, privacy, cybersecurity, evidentiary, forensic, tax, ATO, Treasury, or audit tool."
+        ],
+        "severity": "none",
+        "warnings": [
+          "No configured sensitive markers detected by this heuristic scan."
+        ]
+      }
+    }
+  ]
+}

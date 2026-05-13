@@ -19,6 +19,10 @@
 - Synthetic mock evidence may create false comfort if `partial` or `sufficient_for_prototype` is mistaken for real evidence sufficiency.
 - Review-state workflow labels may be misread as approval states unless the non-claim warnings remain visible.
 - Privacy/secrecy classification is prototype-only and may be inadequate for actual protected, taxpayer, worker, commercially sensitive, or restricted government data.
+- Secure-ingestion controls are not real DLP, IAM, secure storage, malware scanning, deletion enforcement, or cybersecurity tooling.
+- Sensitive-marker scanning may miss forms of sensitive data not represented in the marker list.
+- Over-blocking synthetic fixtures is acceptable, but under-blocking real sensitive data would be unacceptable outside the prototype.
+- Redaction metadata may create false confidence if readers think real redaction is implemented in the repo.
 - Decision logs are compact model-flow summaries and may omit facts that a real audit trail would require.
 - Calibration source categories may be incomplete until Treasury/ATO-style, legal, privacy, data-owner, and economic review occurs.
 - Destination and activity attribution may create treaty, trade, and compliance disputes.
