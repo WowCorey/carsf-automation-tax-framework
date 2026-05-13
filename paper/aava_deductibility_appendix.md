@@ -51,6 +51,14 @@ Firms should retain, at minimum:
 - capital-base schedules for robotics, software, compute, recognised intangibles, and imputed intangibles;
 - credit evidence for training, transition, apprenticeships, and verified worker support.
 
+## Transfer-Pricing / Related-Party Preview Note
+
+V1.5 includes a prototype review layer for offshore AI service fees, IP or platform royalties, relabelled cloud/inference costs, robotics lease or service contracts, management or technical service fees, data/model licences, cost-sharing arrangements, and other automation-linked related-party costs.
+
+This layer can show an adjusted-AAVA preview, but it is non-operative. It does not implement OECD transfer-pricing rules, BEPS analysis, ATO practice, Treasury guidance, legal deductibility rules, GST treatment, treaty attribution, diverted-profits rules, or any actual tax-law addback.
+
+Reported AAVA remains the reported pathway in the existing examples. Adjusted AAVA is a review preview only.
+
 ## Explicit Non-Claims
 
 This appendix does not validate any real deduction, credit, liability, or tax position. It identifies measurement choices that require Treasury, ATO, legal, accounting, and economic review before external use.

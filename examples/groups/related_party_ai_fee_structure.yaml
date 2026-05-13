@@ -1,0 +1,73 @@
+group_id: related_party_ai_fee_structure
+status: illustrative_placeholder
+illustrative_placeholder_only: true
+title: Related-party offshore AI service fee structure
+placeholder_notice: Numbers are illustrative placeholders only and are not Australian tax, transfer-pricing, ATO, Treasury, OECD, BEPS, or economic data.
+purpose: Show a non-operative review preview where offshore AI service fees and platform licences may suppress reported AAVA.
+schedule_used: logistics_warehousing
+reported_revenue: 4200000.0
+reported_aava: 260000.0
+capital_base: 700000.0
+verified_credits: 25000.0
+existing_outputs:
+  nltg: 18.40
+  aava: 260000.0
+  liability: 70200.0
+  capital_base: 700000.0
+  verified_credits: 25000.0
+risk_metadata:
+  status: illustrative_placeholder_review_metadata
+  offshore_automation_service: true
+  related_party_ai_service_fees: true
+  cloud_cost_relabeling_risk: true
+  entity_splitting_risk: true
+related_party_transactions:
+  - transaction_id: offshore_ai_dispatch_fee
+    transaction_type: OFFSHORE_AI_SERVICE_FEE
+    counterparty_role: related offshore AI routing and dispatch provider
+    amount: 900000.0
+    australian_nexus: Australian customer-facing logistics decisions and warehouse allocation
+    automation_nexus_score: 0.90
+    review_share: 0.75
+    evidence_basis: illustrative intercompany service-fee ledger placeholder
+    placeholder_basis:
+      - illustrative_placeholder_only
+      - no arm's-length benchmark or legal transfer-pricing analysis supplied
+    flags:
+      - offshore
+      - related_party
+      - automation
+  - transaction_id: platform_ip_royalty
+    transaction_type: IP_ROYALTY_OR_PLATFORM_LICENSE
+    counterparty_role: related platform and IP owner
+    amount: 520000.0
+    australian_nexus: Platform licence tied to Australian logistics output
+    automation_nexus_score: 0.80
+    review_share: 0.60
+    evidence_basis: illustrative royalty schedule placeholder
+    placeholder_basis:
+      - illustrative_placeholder_only
+      - no OECD, BEPS, ATO, Treasury, tax, or legal validation
+    flags:
+      - related_party
+      - platform_license
+      - automation
+  - transaction_id: relabelled_cloud_inference_cost
+    transaction_type: CLOUD_INFERENCE_RELABELLED_AS_ORDINARY_COST
+    counterparty_role: related cloud procurement entity
+    amount: 240000.0
+    australian_nexus: Inference and optimisation calls supporting Australian dispatch
+    automation_nexus_score: 0.70
+    review_share: 0.50
+    evidence_basis: illustrative cloud-cost allocation placeholder
+    placeholder_basis:
+      - illustrative_placeholder_only
+      - cost category requires AAVA deductibility review
+    flags:
+      - cloud_cost_relabeling
+      - related_party
+expected_behaviour: The adjusted-AAVA preview should be higher than reported AAVA, but the original reported AAVA and liability remain unchanged.
+limitations:
+  - This is not a transfer-pricing adjustment.
+  - This is not an ATO, Treasury, OECD, BEPS, legal, tax, or economic finding.
+  - No arm's-length price or real deductibility conclusion is calculated.

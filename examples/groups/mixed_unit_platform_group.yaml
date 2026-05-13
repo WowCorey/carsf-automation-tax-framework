@@ -1,0 +1,40 @@
+group_id: mixed_unit_platform_group
+status: illustrative_placeholder
+illustrative_placeholder_only: true
+title: Mixed-unit platform group
+placeholder_notice: Numbers are illustrative placeholders only and are not calibrated Australian industry, tax, ATO, Treasury, OECD, BEPS, or economic data.
+purpose: Show that output and HLE cannot be directly aggregated when canonical output units differ.
+expected_behaviour: Direct output aggregation should be prohibited; standalone liability summation and value-weighted exposure preview may still be shown as non-tax-base indicators.
+entities:
+  - entity_id: logistics_operations
+    description: Australian logistics and warehousing operations.
+    schedule_id: logistics_warehousing
+    canonical_output_unit: tonne_kilometres_or_pallet_movements
+    revenue: 2600000.0
+    aava: 700000.0
+    liability: 85000.0
+    risk_level: medium
+    risk_score: 0.55
+  - entity_id: digital_dispatch_platform
+    description: Automated platform dispatch and allocation service.
+    schedule_id: digital_platform_services_placeholder
+    canonical_output_unit: automated_decisions_or_accounts_served
+    revenue: 1700000.0
+    aava: 950000.0
+    liability: 120000.0
+    risk_level: high
+    risk_score: 0.82
+    schedule_status: illustrative_placeholder_schedule_stub_required
+  - entity_id: repair_admin_support
+    description: Repair and customer-support activity tied to fleet operations.
+    schedule_id: automotive_repair
+    canonical_output_unit: book_hour_equivalent_jobs_completed
+    revenue: 500000.0
+    aava: 160000.0
+    liability: 0.0
+    risk_level: low
+    risk_score: 0.25
+limitations:
+  - Value-weighted exposure index is not a tax base.
+  - Direct output and HLE aggregation are prohibited until units are compatible or a reviewed conversion method exists.
+  - Digital platform services schedule is a placeholder need, not a calibrated schedule.

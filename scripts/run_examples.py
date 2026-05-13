@@ -29,6 +29,14 @@ from carsf.group_runner import (  # noqa: E402
     run_grouped_previews,
     standalone_max_risk,
 )
+from carsf.transfer_runner import (  # noqa: E402
+    TRANSFER_PRICING_NON_CLAIMS,
+    TRANSFER_PRICING_REPORT_STATUS,
+    TRANSFER_PRICING_REPORT_WARNING,
+    TransferPricingPreviewReport,
+    TransferPricingScenarioResult,
+    run_transfer_pricing_previews,
+)
 
 
 def money(value: float) -> str:
@@ -295,11 +303,13 @@ def write_reports(reports_dir: Path, results: list[ExampleResult]) -> tuple[Path
 def grouped_json_payload(grouped: GroupedPreviewResult, metadata: dict[str, Any]) -> dict[str, Any]:
     payload = grouped.to_jsonable()
     payload["apportionment_scope_note"] = APPORTIONMENT_SCOPE_NOTE
+    payload["transfer_pricing_preview_note"] = "Related-party and mixed-unit previews are generated in transfer_pricing_results.*."
     payload["metadata"] = {
         **metadata,
         "status": GROUPED_REPORT_STATUS,
         "non_claims": GROUPED_NON_CLAIMS,
         "apportionment_scope_note": APPORTIONMENT_SCOPE_NOTE,
+        "transfer_pricing_preview_note": "Related-party and mixed-unit previews are generated in transfer_pricing_results.*.",
     }
     return payload
 
@@ -334,6 +344,8 @@ def build_grouped_markdown(grouped: GroupedPreviewResult, metadata: dict[str, An
         "## A. Grouped-Entity Aggregation Overview",
         "",
         "This report shows non-operative modelling previews for related-entity aggregation, mixed-activity apportionment, and a hybrid logistics stress case. It does not alter any final liability calculation in the single-entity examples.",
+        "",
+        "Related-party and mixed-unit previews are generated in `reports/transfer_pricing_results.md` and `reports/transfer_pricing_results.json`.",
         "",
         "## B. Why Grouping Matters",
         "",
@@ -477,6 +489,246 @@ def write_grouped_reports(reports_dir: Path, grouped: GroupedPreviewResult) -> t
     return json_path, md_path
 
 
+def transfer_pricing_json_payload(
+    transfer_report: TransferPricingPreviewReport,
+    metadata: dict[str, Any],
+) -> dict[str, Any]:
+    return {
+        "metadata": {
+            **metadata,
+            "status": TRANSFER_PRICING_REPORT_STATUS,
+            "non_claims": TRANSFER_PRICING_NON_CLAIMS,
+            "warning": TRANSFER_PRICING_REPORT_WARNING,
+        },
+        **transfer_report.to_jsonable(),
+    }
+
+
+def _scenario_summary_rows(scenario: TransferPricingScenarioResult) -> list[tuple[str, str]]:
+    return [
+        ("Reported AAVA", money(scenario.reported_aava)),
+        ("Preview adjustments total", money(scenario.adjusted_aava_preview.preview_adjustments_total)),
+        ("Adjusted AAVA preview", money(scenario.adjusted_aava_preview.adjusted_aava_preview)),
+        ("Original final liability", money(scenario.liability_preview.original_final_liability)),
+        (
+            "Adjusted-AAVA liability preview",
+            "N/A"
+            if scenario.liability_preview.adjusted_aava_liability_preview is None
+            else money(scenario.liability_preview.adjusted_aava_liability_preview),
+        ),
+        (
+            "Liability preview difference",
+            "N/A" if scenario.liability_preview.difference is None else money(scenario.liability_preview.difference),
+        ),
+        ("Risk level", scenario.transfer_pricing_result.risk_level),
+        ("Review required", str(scenario.transfer_pricing_result.review_required).lower()),
+    ]
+
+
+def _append_scenario_markdown(lines: list[str], scenario: TransferPricingScenarioResult) -> None:
+    lines.extend(
+        [
+            f"### {scenario.title}",
+            "",
+            scenario.source["purpose"],
+            "",
+            "| Metric | Value |",
+            "| --- | ---: |",
+        ]
+    )
+    lines.extend(f"| {label} | {value} |" for label, value in _scenario_summary_rows(scenario))
+    lines.extend(
+        [
+            "",
+            "Adjustment candidates:",
+            "",
+            "| Transaction | Type | Amount | Review Share | Preview Addback | Confidence | Reason |",
+            "| --- | --- | ---: | ---: | ---: | --- | --- |",
+        ]
+    )
+    candidates = scenario.transfer_pricing_result.candidates
+    if not candidates:
+        lines.append("| none | none | 0.00 | 0.00 | 0.00 | low | No candidate supplied. |")
+    for candidate in candidates:
+        lines.append(
+            "| "
+            f"{candidate.transaction_id} | {candidate.transaction_type} | "
+            f"{candidate.amount:,.2f} | {candidate.review_share:.2f} | "
+            f"{candidate.preview_addback_amount:,.2f} | {candidate.confidence} | {candidate.reason} |"
+        )
+    lines.extend(
+        [
+            "",
+            "Warnings and non-claims:",
+            "",
+        ]
+    )
+    for warning in scenario.transfer_pricing_result.warnings + scenario.adjusted_aava_preview.warnings + scenario.liability_preview.warnings:
+        lines.append(f"- {warning}")
+    for non_claim in scenario.transfer_pricing_result.non_claims:
+        lines.append(f"- {non_claim}")
+    lines.extend(["", "Limitations:", ""])
+    for limitation in scenario.source.get("limitations", []):
+        lines.append(f"- {limitation}")
+    lines.append("")
+
+
+def build_transfer_pricing_markdown(
+    transfer_report: TransferPricingPreviewReport,
+    metadata: dict[str, Any],
+) -> str:
+    mixed = transfer_report.mixed_unit_group
+    compatibility = transfer_report.unit_compatibility
+    exposure = transfer_report.mixed_unit_exposure
+    lines = [
+        "# CARSF V1.5 Transfer-Pricing and Mixed-Unit Preview Results",
+        "",
+        f"Generated at: `{metadata['generated_at']}`",
+        "",
+        f"Version: {metadata['version']}",
+        "",
+        f"Status: `{TRANSFER_PRICING_REPORT_STATUS}`",
+        "",
+        TRANSFER_PRICING_REPORT_WARNING,
+        "",
+        "## A. Purpose and Non-Claims",
+        "",
+        "This report adds non-operative review previews for related-party automation charges, adjusted AAVA review candidates, and mixed-unit output handling. It does not change the reported-AAVA pathway or any existing final liability calculation.",
+        "",
+    ]
+    lines.extend(f"- {non_claim}" for non_claim in TRANSFER_PRICING_NON_CLAIMS)
+    lines.extend(
+        [
+            "",
+            "## B. Why Related-Party / Offshore Fees Matter",
+            "",
+            "AAVA can be suppressed in a prototype scenario where automated Australian-facing output is paired with offshore AI service fees, IP royalties, platform licences, cloud/inference relabelling, or robotics leasing charges. The preview only identifies review candidates and illustrative addback amounts.",
+            "",
+            "## C. Related-Party AI Fee Example",
+            "",
+        ]
+    )
+    _append_scenario_markdown(lines, transfer_report.related_party_ai_fee)
+    lines.extend(
+        [
+            "## D. Reported AAVA vs Adjusted AAVA Preview",
+            "",
+            "| Scenario | Reported AAVA | Preview Adjustments | Adjusted AAVA Preview | Original Liability | Adjusted-AAVA Liability Preview |",
+            "| --- | ---: | ---: | ---: | ---: | ---: |",
+        ]
+    )
+    for scenario in (transfer_report.related_party_ai_fee, transfer_report.robotics_leasing):
+        adjusted_liability = scenario.liability_preview.adjusted_aava_liability_preview
+        lines.append(
+            "| "
+            f"{scenario.title} | {scenario.reported_aava:,.2f} | "
+            f"{scenario.adjusted_aava_preview.preview_adjustments_total:,.2f} | "
+            f"{scenario.adjusted_aava_preview.adjusted_aava_preview:,.2f} | "
+            f"{scenario.liability_preview.original_final_liability:,.2f} | "
+            f"{'N/A' if adjusted_liability is None else f'{adjusted_liability:,.2f}'} |"
+        )
+    lines.extend(
+        [
+            "",
+            "## E. Adjustment Candidate Table",
+            "",
+            "| Scenario | Transaction | Type | Amount | Preview Addback | Confidence |",
+            "| --- | --- | --- | ---: | ---: | --- |",
+        ]
+    )
+    for scenario in (transfer_report.related_party_ai_fee, transfer_report.robotics_leasing):
+        for candidate in scenario.transfer_pricing_result.candidates:
+            lines.append(
+                "| "
+                f"{scenario.title} | {candidate.transaction_id} | {candidate.transaction_type} | "
+                f"{candidate.amount:,.2f} | {candidate.preview_addback_amount:,.2f} | {candidate.confidence} |"
+            )
+    lines.extend(
+        [
+            "",
+            "## F. Robotics Leasing Example",
+            "",
+        ]
+    )
+    _append_scenario_markdown(lines, transfer_report.robotics_leasing)
+    lines.extend(
+        [
+            "## G. Mixed-Unit Platform Group",
+            "",
+            mixed["purpose"],
+            "",
+            "| Entity | Schedule | Canonical Output Unit | Revenue | AAVA | Standalone Liability | Risk |",
+            "| --- | --- | --- | ---: | ---: | ---: | --- |",
+        ]
+    )
+    for entity in mixed["entities"]:
+        lines.append(
+            "| "
+            f"{entity['entity_id']} | {entity['schedule_id']} | {entity['canonical_output_unit']} | "
+            f"{entity['revenue']:,.2f} | {entity['aava']:,.2f} | {entity['liability']:,.2f} | "
+            f"{entity.get('risk_level', 'unknown')} |"
+        )
+    lines.extend(
+        [
+            "",
+            "## H. Mixed-Unit Compatibility Result",
+            "",
+            f"- Compatible: {str(compatibility.compatible).lower()}",
+            f"- Units: {', '.join(compatibility.unit_set)}",
+            f"- Comparable unit: {compatibility.comparable_unit or 'N/A'}",
+            f"- Reason: {compatibility.reason}",
+            f"- Review required: {str(compatibility.review_required).lower()}",
+            "",
+        ]
+    )
+    lines.extend(f"- {warning}" for warning in compatibility.warnings)
+    lines.extend(
+        [
+            "",
+            "## I. Value-Weighted Exposure Index Explanation",
+            "",
+            "Where units differ, the prototype prohibits direct output and HLE aggregation. It can still show standalone liability sum, schedule-level comparison, and a value-weighted exposure index. That index is not a tax base and is not a replacement for calibrated sector schedules.",
+            "",
+            "| Metric | Value |",
+            "| --- | ---: |",
+            f"| Method | {exposure.method} |",
+            f"| Standalone liability sum | {exposure.standalone_liability_sum:,.2f} |",
+            f"| Value-weighted exposure index | {number(exposure.value_weighted_exposure_index)} |",
+            f"| Review required | {str(exposure.review_required).lower()} |",
+            "",
+        ]
+    )
+    lines.extend(f"- {warning}" for warning in exposure.warnings)
+    lines.extend(f"- {non_claim}" for non_claim in exposure.non_claims)
+    lines.extend(
+        [
+            "",
+            "## J. Limitations and Required Legal/Tax Review",
+            "",
+        ]
+    )
+    for limitation in mixed.get("limitations", []):
+        lines.append(f"- {limitation}")
+    lines.append(f"- {TRANSFER_PRICING_REPORT_WARNING}")
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def write_transfer_pricing_reports(
+    reports_dir: Path,
+    transfer_report: TransferPricingPreviewReport,
+) -> tuple[Path, Path]:
+    reports_dir.mkdir(parents=True, exist_ok=True)
+    metadata = report_metadata()
+    json_path = reports_dir / "transfer_pricing_results.json"
+    md_path = reports_dir / "transfer_pricing_results.md"
+    json_path.write_text(
+        json.dumps(transfer_pricing_json_payload(transfer_report, metadata), indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    md_path.write_text(build_transfer_pricing_markdown(transfer_report, metadata), encoding="utf-8")
+    return json_path, md_path
+
+
 def main() -> int:
     parser = ArgumentParser(description="Run illustrative CARSF worked examples.")
     parser.add_argument(
@@ -494,6 +746,8 @@ def main() -> int:
         json_path, md_path = write_reports(args.reports_dir, results)
         grouped = run_grouped_previews(REPO_ROOT)
         grouped_json_path, grouped_md_path = write_grouped_reports(args.reports_dir, grouped)
+        transfer_report = run_transfer_pricing_previews(REPO_ROOT)
+        transfer_json_path, transfer_md_path = write_transfer_pricing_reports(args.reports_dir, transfer_report)
     except ExampleRunnerError as exc:
         print(f"example runner failed: {exc}", file=sys.stderr)
         return 1
@@ -501,6 +755,8 @@ def main() -> int:
     print(f"wrote {md_path}")
     print(f"wrote {grouped_json_path}")
     print(f"wrote {grouped_md_path}")
+    print(f"wrote {transfer_json_path}")
+    print(f"wrote {transfer_md_path}")
     return 0
 
 

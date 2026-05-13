@@ -11,6 +11,10 @@
 - Grouped-entity aggregation previews may create false confidence if readers mistake modelling aggregation for legal grouping.
 - Apportionment previews may hide classification disputes if activity shares are based on unsupported management estimates.
 - Output aggregation is unsafe where canonical output units differ; those cases require apportionment or policy review.
+- Transfer-pricing previews may be mistaken for actual legal addbacks if non-claim warnings are removed or ignored.
+- Adjusted AAVA is preview-only; using it as operative AAVA without legal, tax, ATO, Treasury, and international-tax review would overclaim the model.
+- Mixed-unit value-weighted exposure is not a tax base and may mislead if treated as a substitute for calibrated sector schedules.
+- Related-party service fees, offshore AI services, IP royalties, platform licences, cloud/inference relabelling, and robotics leasing require transfer-pricing, GST, treaty, and legal review before any operative use.
 - Destination and activity attribution may create treaty, trade, and compliance disputes.
 - Excessive liability may deter useful productivity-enhancing investment.
 - Under-calibrated caps may make the framework fiscally symbolic rather than stabilising.

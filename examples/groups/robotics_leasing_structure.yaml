@@ -1,0 +1,62 @@
+group_id: robotics_leasing_structure
+status: illustrative_placeholder
+illustrative_placeholder_only: true
+title: Related-party robotics leasing structure
+placeholder_notice: Numbers are illustrative placeholders only and are not Australian tax, transfer-pricing, ATO, Treasury, OECD, BEPS, or economic data.
+purpose: Show a non-operative review preview where a robotics-heavy firm leases automation assets from a related offshore or finance entity.
+schedule_used: automotive_repair
+reported_revenue: 1800000.0
+reported_aava: 140000.0
+capital_base: 120000.0
+verified_credits: 10000.0
+automation_profile:
+  compute_ratio: 0.60
+  auto_decision_ratio: 0.70
+  robotics_capital_ratio: 0.88
+  auto_process_share: 0.82
+existing_outputs:
+  nltg: 7.25
+  aava: 140000.0
+  liability: 35000.0
+  capital_base: 120000.0
+  verified_credits: 10000.0
+risk_metadata:
+  status: illustrative_placeholder_review_metadata
+  robotics_leasing_risk: true
+  related_party_ai_service_fees: true
+  artificial_low_profit_or_aava_risk: true
+related_party_transactions:
+  - transaction_id: robotics_lease_fee
+    transaction_type: ROBOTICS_LEASE_OR_SERVICE_CONTRACT
+    counterparty_role: related robotics leasing and finance entity
+    amount: 620000.0
+    australian_nexus: Robotic workshop output performed for Australian repair customers
+    automation_nexus_score: 0.92
+    review_share: 0.70
+    evidence_basis: illustrative robotics lease invoice placeholder
+    placeholder_basis:
+      - illustrative_placeholder_only
+      - no legal leasing, depreciation, GST, or transfer-pricing review supplied
+    flags:
+      - related_party
+      - robotics_leasing
+      - automation
+  - transaction_id: technical_support_fee
+    transaction_type: MANAGEMENT_OR_TECHNICAL_SERVICE_FEE
+    counterparty_role: related robotics operations support entity
+    amount: 180000.0
+    australian_nexus: Remote support for Australian robotic repair operations
+    automation_nexus_score: 0.55
+    review_share: 0.40
+    evidence_basis: illustrative management-service fee placeholder
+    placeholder_basis:
+      - illustrative_placeholder_only
+      - fee requires evidence before any AAVA deductibility treatment
+    flags:
+      - related_party
+      - automation
+expected_behaviour: Robotics leasing should produce an adjustment candidate and review warning without changing reported AAVA.
+limitations:
+  - This is not a lease classification finding.
+  - This is not a transfer-pricing adjustment or tax assessment.
+  - Capital allowance, depreciation, GST, and legal ownership rules are not modelled.

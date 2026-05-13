@@ -344,7 +344,7 @@
   },
   "metadata": {
     "apportionment_scope_note": "This example currently uses the combined logistics_warehousing prototype schedule for all activity slices. It tests apportionment plumbing and share-validation logic, not final cross-sector schedule blending. True multi-schedule blending requires additional calibrated sector schedules.",
-    "generated_at": "2026-05-13T07:14:14+00:00",
+    "generated_at": "2026-05-13T07:46:25+00:00",
     "non_claims": [
       "Not legal grouping analysis.",
       "Not tax-law attribution.",
@@ -354,6 +354,7 @@
       "All grouped and apportioned values use illustrative placeholder inputs."
     ],
     "status": "illustrative_grouped_entity_and_apportionment_previews_only",
+    "transfer_pricing_preview_note": "Related-party and mixed-unit previews are generated in transfer_pricing_results.*.",
     "version": "CARSF V1.5 prototype"
   },
   "mixed_apportionment": {
@@ -610,5 +611,6 @@
     "status": "illustrative_placeholder",
     "title": "Split AI logistics platform structure",
     "verified_credits": 50000.0
-  }
+  },
+  "transfer_pricing_preview_note": "Related-party and mixed-unit previews are generated in transfer_pricing_results.*."
 }

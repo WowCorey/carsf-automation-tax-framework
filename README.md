@@ -18,7 +18,7 @@ All sector values, schedule values, examples, caps, Fiscal Replacement Value val
 
 - `paper/` - Markdown policy paper, V1.5 working draft, formulas, glossary, references, and export notes.
 - `audits/` - review notes, responses, and red-team register.
-- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, and grouping review flags.
+- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, and mixed-unit handling.
 - `model/tests/` - pytest coverage for formula bounds, caps, examples, and avoidance flags.
 - `schedules/` - prototype sector schedules for automotive repair and logistics / warehousing.
 - `examples/` - illustrative placeholder firm cases.
@@ -45,8 +45,10 @@ Generated reports:
 - `reports/example_results.json`
 - `reports/grouped_entity_results.md`
 - `reports/grouped_entity_results.json`
+- `reports/transfer_pricing_results.md`
+- `reports/transfer_pricing_results.json`
 
-The reports are illustrative placeholder outputs only. They are not legal grouping findings, tax assessments, Treasury guidance, ATO guidance, economic validation, or real liability calculations.
+The reports are illustrative placeholder outputs only. They are not legal grouping findings, transfer-pricing adjustments, ATO findings, tax assessments, Treasury guidance, OECD/BEPS analysis, economic validation, or real liability calculations.
 
 ## Run the Simulator
 
@@ -67,6 +69,8 @@ V1.5 is not just an examples update. It is V1.4 plus two prototype sector schedu
 - handle automotive repair and logistics / warehousing as prototype schedules;
 - classify prototype safe-harbour, anti-avoidance, and grouped-entity review signals without changing liability;
 - preview grouped-entity aggregation and multi-schedule apportionment without implementing tax-law grouping or attribution;
+- preview related-party / transfer-pricing adjustment candidates without replacing reported AAVA or calculating any legal addback;
+- handle mixed canonical output units by prohibiting direct output/HLE aggregation and showing only standalone liability sums, schedule-level comparison, and a value-weighted exposure index;
 - identify open-source AI and R&D Tax Incentive interaction questions without overclaiming.
 
 ## Not Yet Solved
@@ -75,3 +79,4 @@ The model still needs real Treasury, ATO, ABS, DSS, HILDA, HELP, superannuation,
 
 Safe-harbour outputs are prototype classification only. They do not reduce, cap, or erase calculated liability in this build.
 Grouped-entity and apportionment outputs are prototype modelling previews only. They do not establish legal grouping, tax attribution, or actual liability.
+Adjusted AAVA is preview-only and does not replace reported AAVA. The value-weighted exposure index is not a tax base and is not a replacement for calibrated sector schedules.

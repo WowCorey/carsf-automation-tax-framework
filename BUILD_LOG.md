@@ -101,3 +101,37 @@ Limitations:
 - Apportionment is not tax-law attribution.
 - Transfer pricing, GST, international tax, and legal advice remain future work.
 - No legal, tax, Treasury, ATO, or economic validation is implied.
+
+## V1.5 Transfer-Pricing and Mixed-Unit Handling
+
+Branch: `v1.5-transfer-pricing-and-mixed-unit-handling`
+
+Baseline: PR #4 merged into `main`, including grouped-entity aggregation previews, mixed-activity apportionment plumbing, grouped reports, and the hybrid logistics stress variant.
+
+Purpose of this build:
+
+- Add non-operative transfer-pricing / related-party review previews.
+- Add adjusted-AAVA preview calculations that do not mutate reported AAVA.
+- Add optional adjusted-AAVA liability preview where existing inputs allow safe recomputation.
+- Add mixed-unit handling that prohibits direct output/HLE aggregation where canonical output units differ.
+- Generate transfer-pricing and mixed-unit JSON/Markdown reports.
+
+Tests run:
+
+- `python -m pytest` - 175 passed, 1 pytest-asyncio deprecation warning under Python 3.14.
+- `python -m compileall -q model simulator scripts` - passed.
+- Recursive YAML parse check for schedules/examples, including `examples/groups`, passed.
+- `python scripts/run_examples.py` - regenerated single-entity, grouped, transfer-pricing, and mixed-unit preview reports.
+- Streamlit probe - HTTP 200.
+
+Reports generated:
+
+- `reports/transfer_pricing_results.json`
+- `reports/transfer_pricing_results.md`
+
+Limitations:
+
+- No transfer-pricing law, OECD/BEPS analysis, ATO finding, Treasury guidance, legal finding, or tax assessment is implemented.
+- Adjusted AAVA is preview-only.
+- Mixed-unit value-weighted exposure is not a tax base.
+- Future work requires international tax, GST, transfer-pricing, legal, and calibrated sector-schedule review.

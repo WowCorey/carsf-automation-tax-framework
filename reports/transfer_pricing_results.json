@@ -1,0 +1,485 @@
+{
+  "metadata": {
+    "generated_at": "2026-05-13T07:46:25+00:00",
+    "non_claims": [
+      "Not transfer-pricing adjustments.",
+      "Not ATO findings.",
+      "Not legal findings.",
+      "Not Treasury guidance.",
+      "Not OECD/BEPS analysis.",
+      "Not economic validation.",
+      "Not real tax assessments.",
+      "Adjusted AAVA is preview-only and does not replace reported AAVA.",
+      "Value-weighted exposure index is not a tax base."
+    ],
+    "status": "illustrative_transfer_pricing_and_mixed_unit_previews_only",
+    "version": "CARSF V1.5 prototype",
+    "warning": "These outputs are prototype review previews only. They are not transfer-pricing adjustments, ATO findings, legal findings, Treasury guidance, OECD/BEPS analysis, or economic validation."
+  },
+  "mixed_unit_exposure": {
+    "method": "mixed_units_no_direct_output_or_hle_aggregation",
+    "non_claims": [
+      "Mixed-unit exposure outputs are prototype-only and are not a tax base.",
+      "Value-weighted exposure index is not a replacement for sector schedules.",
+      "No legal, tax, ATO, Treasury, OECD, BEPS, or economic validation is implied."
+    ],
+    "review_required": true,
+    "schedule_level_results": [
+      {
+        "aava": 700000.0,
+        "canonical_output_unit": "tonne_kilometres_or_pallet_movements",
+        "entity_id": "logistics_operations",
+        "liability": 85000.0,
+        "revenue": 2600000.0,
+        "risk_score": 0.55,
+        "schedule_id": "logistics_warehousing"
+      },
+      {
+        "aava": 950000.0,
+        "canonical_output_unit": "automated_decisions_or_accounts_served",
+        "entity_id": "digital_dispatch_platform",
+        "liability": 120000.0,
+        "revenue": 1700000.0,
+        "risk_score": 0.82,
+        "schedule_id": "digital_platform_services_placeholder"
+      },
+      {
+        "aava": 160000.0,
+        "canonical_output_unit": "book_hour_equivalent_jobs_completed",
+        "entity_id": "repair_admin_support",
+        "liability": 0.0,
+        "revenue": 500000.0,
+        "risk_score": 0.25,
+        "schedule_id": "automotive_repair"
+      }
+    ],
+    "standalone_liability_sum": 205000.0,
+    "value_weighted_exposure_index": 0.614375,
+    "warnings": [
+      "Mixed-unit compatibility is a prototype review check only.",
+      "Output and HLE aggregation are prohibited while canonical output units differ.",
+      "Value-weighted exposure index is prototype-only, not a tax base, and not a replacement for sector schedules.",
+      "Standalone liability summation and schedule-level comparison are allowed; direct output/HLE aggregation is not."
+    ]
+  },
+  "mixed_unit_group": {
+    "entities": [
+      {
+        "aava": 700000.0,
+        "canonical_output_unit": "tonne_kilometres_or_pallet_movements",
+        "description": "Australian logistics and warehousing operations.",
+        "entity_id": "logistics_operations",
+        "liability": 85000.0,
+        "revenue": 2600000.0,
+        "risk_level": "medium",
+        "risk_score": 0.55,
+        "schedule_id": "logistics_warehousing"
+      },
+      {
+        "aava": 950000.0,
+        "canonical_output_unit": "automated_decisions_or_accounts_served",
+        "description": "Automated platform dispatch and allocation service.",
+        "entity_id": "digital_dispatch_platform",
+        "liability": 120000.0,
+        "revenue": 1700000.0,
+        "risk_level": "high",
+        "risk_score": 0.82,
+        "schedule_id": "digital_platform_services_placeholder",
+        "schedule_status": "illustrative_placeholder_schedule_stub_required"
+      },
+      {
+        "aava": 160000.0,
+        "canonical_output_unit": "book_hour_equivalent_jobs_completed",
+        "description": "Repair and customer-support activity tied to fleet operations.",
+        "entity_id": "repair_admin_support",
+        "liability": 0.0,
+        "revenue": 500000.0,
+        "risk_level": "low",
+        "risk_score": 0.25,
+        "schedule_id": "automotive_repair"
+      }
+    ],
+    "expected_behaviour": "Direct output aggregation should be prohibited; standalone liability summation and value-weighted exposure preview may still be shown as non-tax-base indicators.",
+    "group_id": "mixed_unit_platform_group",
+    "illustrative_placeholder_only": true,
+    "limitations": [
+      "Value-weighted exposure index is not a tax base.",
+      "Direct output and HLE aggregation are prohibited until units are compatible or a reviewed conversion method exists.",
+      "Digital platform services schedule is a placeholder need, not a calibrated schedule."
+    ],
+    "placeholder_notice": "Numbers are illustrative placeholders only and are not calibrated Australian industry, tax, ATO, Treasury, OECD, BEPS, or economic data.",
+    "purpose": "Show that output and HLE cannot be directly aggregated when canonical output units differ.",
+    "status": "illustrative_placeholder",
+    "title": "Mixed-unit platform group"
+  },
+  "related_party_ai_fee": {
+    "adjusted_aava_preview": {
+      "adjusted_aava_preview": 1367000.0,
+      "difference": 1107000.0,
+      "non_claims": [
+        "This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.",
+        "Adjusted AAVA is preview-only and does not replace reported AAVA.",
+        "No arm's-length price, transfer-pricing adjustment, tax assessment, or legal conclusion is calculated."
+      ],
+      "preview_adjustments_total": 1107000.0,
+      "reported_aava": 260000.0,
+      "warnings": [
+        "This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.",
+        "Adjusted AAVA is preview-only and does not mutate reported AAVA."
+      ]
+    },
+    "liability_preview": {
+      "adjusted_aava_liability_preview": 369090.0,
+      "computable": true,
+      "difference": 298890.0,
+      "non_claims": [
+        "This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.",
+        "Adjusted AAVA is preview-only and does not replace reported AAVA.",
+        "No arm's-length price, transfer-pricing adjustment, tax assessment, or legal conclusion is calculated."
+      ],
+      "original_final_liability": 70200.0,
+      "warnings": [
+        "This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.",
+        "Adjusted-AAVA liability is non-operative preview only."
+      ]
+    },
+    "reported_aava": 260000.0,
+    "scenario_id": "related_party_ai_fee_structure",
+    "schedule_id": "logistics_warehousing",
+    "source": {
+      "capital_base": 700000.0,
+      "existing_outputs": {
+        "aava": 260000.0,
+        "capital_base": 700000.0,
+        "liability": 70200.0,
+        "nltg": 18.4,
+        "verified_credits": 25000.0
+      },
+      "expected_behaviour": "The adjusted-AAVA preview should be higher than reported AAVA, but the original reported AAVA and liability remain unchanged.",
+      "group_id": "related_party_ai_fee_structure",
+      "illustrative_placeholder_only": true,
+      "limitations": [
+        "This is not a transfer-pricing adjustment.",
+        "This is not an ATO, Treasury, OECD, BEPS, legal, tax, or economic finding.",
+        "No arm's-length price or real deductibility conclusion is calculated."
+      ],
+      "placeholder_notice": "Numbers are illustrative placeholders only and are not Australian tax, transfer-pricing, ATO, Treasury, OECD, BEPS, or economic data.",
+      "purpose": "Show a non-operative review preview where offshore AI service fees and platform licences may suppress reported AAVA.",
+      "related_party_transactions": [
+        {
+          "amount": 900000.0,
+          "australian_nexus": "Australian customer-facing logistics decisions and warehouse allocation",
+          "automation_nexus_score": 0.9,
+          "counterparty_role": "related offshore AI routing and dispatch provider",
+          "evidence_basis": "illustrative intercompany service-fee ledger placeholder",
+          "flags": [
+            "offshore",
+            "related_party",
+            "automation"
+          ],
+          "placeholder_basis": [
+            "illustrative_placeholder_only",
+            "no arm's-length benchmark or legal transfer-pricing analysis supplied"
+          ],
+          "review_share": 0.75,
+          "transaction_id": "offshore_ai_dispatch_fee",
+          "transaction_type": "OFFSHORE_AI_SERVICE_FEE"
+        },
+        {
+          "amount": 520000.0,
+          "australian_nexus": "Platform licence tied to Australian logistics output",
+          "automation_nexus_score": 0.8,
+          "counterparty_role": "related platform and IP owner",
+          "evidence_basis": "illustrative royalty schedule placeholder",
+          "flags": [
+            "related_party",
+            "platform_license",
+            "automation"
+          ],
+          "placeholder_basis": [
+            "illustrative_placeholder_only",
+            "no OECD, BEPS, ATO, Treasury, tax, or legal validation"
+          ],
+          "review_share": 0.6,
+          "transaction_id": "platform_ip_royalty",
+          "transaction_type": "IP_ROYALTY_OR_PLATFORM_LICENSE"
+        },
+        {
+          "amount": 240000.0,
+          "australian_nexus": "Inference and optimisation calls supporting Australian dispatch",
+          "automation_nexus_score": 0.7,
+          "counterparty_role": "related cloud procurement entity",
+          "evidence_basis": "illustrative cloud-cost allocation placeholder",
+          "flags": [
+            "cloud_cost_relabeling",
+            "related_party"
+          ],
+          "placeholder_basis": [
+            "illustrative_placeholder_only",
+            "cost category requires AAVA deductibility review"
+          ],
+          "review_share": 0.5,
+          "transaction_id": "relabelled_cloud_inference_cost",
+          "transaction_type": "CLOUD_INFERENCE_RELABELLED_AS_ORDINARY_COST"
+        }
+      ],
+      "reported_aava": 260000.0,
+      "reported_revenue": 4200000.0,
+      "risk_metadata": {
+        "cloud_cost_relabeling_risk": true,
+        "entity_splitting_risk": true,
+        "offshore_automation_service": true,
+        "related_party_ai_service_fees": true,
+        "status": "illustrative_placeholder_review_metadata"
+      },
+      "schedule_used": "logistics_warehousing",
+      "status": "illustrative_placeholder",
+      "title": "Related-party offshore AI service fee structure",
+      "verified_credits": 25000.0
+    },
+    "title": "Related-party offshore AI service fee structure",
+    "transfer_pricing_result": {
+      "adjusted_aava_preview": 1367000.0,
+      "candidates": [
+        {
+          "amount": 900000.0,
+          "confidence": "high",
+          "non_legal_status": "This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.",
+          "preview_addback_amount": 675000.0,
+          "reason": "Offshore AI service fee may suppress reported AAVA where automated capacity serves Australian output.",
+          "review_share": 0.75,
+          "transaction_id": "offshore_ai_dispatch_fee",
+          "transaction_type": "OFFSHORE_AI_SERVICE_FEE"
+        },
+        {
+          "amount": 520000.0,
+          "confidence": "medium",
+          "non_legal_status": "This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.",
+          "preview_addback_amount": 312000.0,
+          "reason": "IP or platform licence fee may extract automated value through a related counterparty.",
+          "review_share": 0.6,
+          "transaction_id": "platform_ip_royalty",
+          "transaction_type": "IP_ROYALTY_OR_PLATFORM_LICENSE"
+        },
+        {
+          "amount": 240000.0,
+          "confidence": "medium",
+          "non_legal_status": "This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.",
+          "preview_addback_amount": 120000.0,
+          "reason": "Cloud or inference costs may be relabelled as ordinary non-automation inputs.",
+          "review_share": 0.5,
+          "transaction_id": "relabelled_cloud_inference_cost",
+          "transaction_type": "CLOUD_INFERENCE_RELABELLED_AS_ORDINARY_COST"
+        }
+      ],
+      "flags": [
+        "RELATED_PARTY_AI_SERVICE_FEES",
+        "OFFSHORE_AUTOMATION_SERVICE",
+        "CLOUD_COST_RELABELING",
+        "offshore",
+        "related_party",
+        "automation",
+        "OFFSHORE_AI_SERVICE_FEE",
+        "platform_license",
+        "IP_ROYALTY_OR_PLATFORM_LICENSE",
+        "cloud_cost_relabeling",
+        "CLOUD_INFERENCE_RELABELLED_AS_ORDINARY_COST"
+      ],
+      "non_claims": [
+        "This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.",
+        "Adjusted AAVA is preview-only and does not replace reported AAVA.",
+        "No arm's-length price, transfer-pricing adjustment, tax assessment, or legal conclusion is calculated."
+      ],
+      "placeholder_basis": [
+        "Transfer-pricing preview values are illustrative placeholders only.",
+        "No OECD, BEPS, ATO, Treasury, legal, tax, or economic validation is implied.",
+        "Numbers are illustrative placeholders only and are not Australian tax, transfer-pricing, ATO, Treasury, OECD, BEPS, or economic data."
+      ],
+      "preview_adjustments_total": 1107000.0,
+      "reported_aava": 260000.0,
+      "review_required": true,
+      "risk_level": "high",
+      "warnings": [
+        "This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding."
+      ]
+    }
+  },
+  "robotics_leasing": {
+    "adjusted_aava_preview": {
+      "adjusted_aava_preview": 646000.0,
+      "difference": 506000.0,
+      "non_claims": [
+        "This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.",
+        "Adjusted AAVA is preview-only and does not replace reported AAVA.",
+        "No arm's-length price, transfer-pricing adjustment, tax assessment, or legal conclusion is calculated."
+      ],
+      "preview_adjustments_total": 506000.0,
+      "reported_aava": 140000.0,
+      "warnings": [
+        "This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.",
+        "Adjusted AAVA is preview-only and does not mutate reported AAVA."
+      ]
+    },
+    "liability_preview": {
+      "adjusted_aava_liability_preview": 161500.0,
+      "computable": true,
+      "difference": 126500.0,
+      "non_claims": [
+        "This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.",
+        "Adjusted AAVA is preview-only and does not replace reported AAVA.",
+        "No arm's-length price, transfer-pricing adjustment, tax assessment, or legal conclusion is calculated."
+      ],
+      "original_final_liability": 35000.0,
+      "warnings": [
+        "This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.",
+        "Adjusted-AAVA liability is non-operative preview only."
+      ]
+    },
+    "reported_aava": 140000.0,
+    "scenario_id": "robotics_leasing_structure",
+    "schedule_id": "automotive_repair",
+    "source": {
+      "automation_profile": {
+        "auto_decision_ratio": 0.7,
+        "auto_process_share": 0.82,
+        "compute_ratio": 0.6,
+        "robotics_capital_ratio": 0.88
+      },
+      "capital_base": 120000.0,
+      "existing_outputs": {
+        "aava": 140000.0,
+        "capital_base": 120000.0,
+        "liability": 35000.0,
+        "nltg": 7.25,
+        "verified_credits": 10000.0
+      },
+      "expected_behaviour": "Robotics leasing should produce an adjustment candidate and review warning without changing reported AAVA.",
+      "group_id": "robotics_leasing_structure",
+      "illustrative_placeholder_only": true,
+      "limitations": [
+        "This is not a lease classification finding.",
+        "This is not a transfer-pricing adjustment or tax assessment.",
+        "Capital allowance, depreciation, GST, and legal ownership rules are not modelled."
+      ],
+      "placeholder_notice": "Numbers are illustrative placeholders only and are not Australian tax, transfer-pricing, ATO, Treasury, OECD, BEPS, or economic data.",
+      "purpose": "Show a non-operative review preview where a robotics-heavy firm leases automation assets from a related offshore or finance entity.",
+      "related_party_transactions": [
+        {
+          "amount": 620000.0,
+          "australian_nexus": "Robotic workshop output performed for Australian repair customers",
+          "automation_nexus_score": 0.92,
+          "counterparty_role": "related robotics leasing and finance entity",
+          "evidence_basis": "illustrative robotics lease invoice placeholder",
+          "flags": [
+            "related_party",
+            "robotics_leasing",
+            "automation"
+          ],
+          "placeholder_basis": [
+            "illustrative_placeholder_only",
+            "no legal leasing, depreciation, GST, or transfer-pricing review supplied"
+          ],
+          "review_share": 0.7,
+          "transaction_id": "robotics_lease_fee",
+          "transaction_type": "ROBOTICS_LEASE_OR_SERVICE_CONTRACT"
+        },
+        {
+          "amount": 180000.0,
+          "australian_nexus": "Remote support for Australian robotic repair operations",
+          "automation_nexus_score": 0.55,
+          "counterparty_role": "related robotics operations support entity",
+          "evidence_basis": "illustrative management-service fee placeholder",
+          "flags": [
+            "related_party",
+            "automation"
+          ],
+          "placeholder_basis": [
+            "illustrative_placeholder_only",
+            "fee requires evidence before any AAVA deductibility treatment"
+          ],
+          "review_share": 0.4,
+          "transaction_id": "technical_support_fee",
+          "transaction_type": "MANAGEMENT_OR_TECHNICAL_SERVICE_FEE"
+        }
+      ],
+      "reported_aava": 140000.0,
+      "reported_revenue": 1800000.0,
+      "risk_metadata": {
+        "artificial_low_profit_or_aava_risk": true,
+        "related_party_ai_service_fees": true,
+        "robotics_leasing_risk": true,
+        "status": "illustrative_placeholder_review_metadata"
+      },
+      "schedule_used": "automotive_repair",
+      "status": "illustrative_placeholder",
+      "title": "Related-party robotics leasing structure",
+      "verified_credits": 10000.0
+    },
+    "title": "Related-party robotics leasing structure",
+    "transfer_pricing_result": {
+      "adjusted_aava_preview": 646000.0,
+      "candidates": [
+        {
+          "amount": 620000.0,
+          "confidence": "high",
+          "non_legal_status": "This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.",
+          "preview_addback_amount": 434000.0,
+          "reason": "Robotics lease or service contract may keep capital base low while shifting automation costs.",
+          "review_share": 0.7,
+          "transaction_id": "robotics_lease_fee",
+          "transaction_type": "ROBOTICS_LEASE_OR_SERVICE_CONTRACT"
+        },
+        {
+          "amount": 180000.0,
+          "confidence": "medium",
+          "non_legal_status": "This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.",
+          "preview_addback_amount": 72000.0,
+          "reason": "Related-party automation-linked charge requires AAVA deductibility and transfer-pricing review.",
+          "review_share": 0.4,
+          "transaction_id": "technical_support_fee",
+          "transaction_type": "MANAGEMENT_OR_TECHNICAL_SERVICE_FEE"
+        }
+      ],
+      "flags": [
+        "RELATED_PARTY_AI_SERVICE_FEES",
+        "ROBOTICS_LEASING_AVOIDANCE",
+        "related_party",
+        "robotics_leasing",
+        "automation",
+        "ROBOTICS_LEASE_OR_SERVICE_CONTRACT"
+      ],
+      "non_claims": [
+        "This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.",
+        "Adjusted AAVA is preview-only and does not replace reported AAVA.",
+        "No arm's-length price, transfer-pricing adjustment, tax assessment, or legal conclusion is calculated."
+      ],
+      "placeholder_basis": [
+        "Transfer-pricing preview values are illustrative placeholders only.",
+        "No OECD, BEPS, ATO, Treasury, legal, tax, or economic validation is implied.",
+        "Numbers are illustrative placeholders only and are not Australian tax, transfer-pricing, ATO, Treasury, OECD, BEPS, or economic data."
+      ],
+      "preview_adjustments_total": 506000.0,
+      "reported_aava": 140000.0,
+      "review_required": true,
+      "risk_level": "high",
+      "warnings": [
+        "This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding."
+      ]
+    }
+  },
+  "unit_compatibility": {
+    "comparable_unit": null,
+    "compatible": false,
+    "reason": "Canonical output units differ; direct output/HLE aggregation is prohibited.",
+    "review_required": true,
+    "unit_set": [
+      "automated_decisions_or_accounts_served",
+      "book_hour_equivalent_jobs_completed",
+      "tonne_kilometres_or_pallet_movements"
+    ],
+    "warnings": [
+      "Mixed-unit compatibility is a prototype review check only.",
+      "Output and HLE aggregation are prohibited while canonical output units differ."
+    ]
+  }
+}

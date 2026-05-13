@@ -25,6 +25,9 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Add executable prototype safe-harbour, anti-avoidance, and grouped-entity review flags without modifying liability.
 - Add prototype grouped-entity aggregation previews and mixed-activity / prototype apportionment previews without implementing legal grouping or tax-law attribution.
 - The current mixed-activity example uses the combined `logistics_warehousing` prototype schedule for all activity slices. It tests apportionment plumbing and share-validation logic, not final cross-sector schedule blending. True multi-schedule blending requires additional calibrated sector schedules.
+- Add non-operative transfer-pricing / related-party preview stubs for offshore AI services, IP/platform royalties, cloud/inference relabelling, robotics leasing, service fees, data/model licences, cost sharing, and other automation-linked related-party costs.
+- Add adjusted-AAVA preview calculations that do not mutate reported AAVA or replace existing final liability.
+- Add mixed-unit handling so output/HLE aggregation is prohibited where canonical output units differ unless reviewed conversion metadata exists.
 
 ## Data Separation
 
@@ -42,6 +45,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Tests prove AI-admin repair is not classified like robotic repair and AI logistics is riskier than human-heavy logistics.
 - Reports include safe-harbour, avoidance, and grouping review outputs.
 - Grouped reports can be generated with `python scripts/run_examples.py`.
+- Transfer-pricing and mixed-unit preview reports can be generated with `python scripts/run_examples.py`.
 - Hybrid logistics stress variant demonstrates non-zero but intermediate NLTG.
 - V1.5 working paper contains TODO markers where policy drafting remains open.
 - Limitations document clearly blocks actual tax-payable claims.
@@ -51,4 +55,5 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Add calibrated-threshold placeholders that can later be replaced by official data.
 - Replace preview apportionment shares with evidence-backed activity allocation once official data and legal review exist.
 - Extend grouped aggregation to recompute full group-level outputs only after legal grouping and attribution rules are drafted.
-- Add transfer-pricing, GST, and international tax review stubs.
+- Extend transfer-pricing, GST, and international tax review stubs into legally reviewed policy options.
+- Draft treatment for value-weighted exposure metrics so they cannot be mistaken for a tax base.
