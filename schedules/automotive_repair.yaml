@@ -4,6 +4,18 @@ status: placeholder_prototype_for_v1_5
 canonical_output_unit: book_hour_equivalent_jobs_completed
 calibration_status: illustrative_placeholder_values_only
 confirmed_baseline_figures: []
+measurement_scope:
+  placeholder_notice: This schedule is not calibrated and must not be used to estimate actual tax payable.
+  covered_activity_examples:
+    - mechanical repair
+    - scheduled servicing
+    - diagnostic work
+    - booking and workshop administration directly tied to repair output
+  excluded_or_separately_classified_activity_examples:
+    - vehicle sales
+    - parts wholesale
+    - insurance claims processing not tied to repair output
+  dominant_activity_test_placeholder: Classification should follow the activity producing the largest share of Australian-attributable repair output, subject to Schedules Authority determination.
 qlc:
   weights:
     alpha_wage_quality: 0.20
@@ -14,6 +26,7 @@ qlc:
   notes:
     - Scores are bounded in [0, 1].
     - The per-worker cap is a V1.5 measurement guardrail against token-worker inflation.
+    - Token oversight roles must not receive high QLC scoring without verified hours, wage quality, job security, skill development, and Australian nexus.
 aii:
   weights:
     compute_ratio: 0.15
@@ -49,6 +62,34 @@ safe_harbours:
   worker_assist_concession_notes:
     - Applies only where QLC-per-output is at or above the schedule percentile threshold.
     - AI used for admin, safety, accessibility, or compliance is not enough by self-description.
+measurement_controls:
+  output_measurement_placeholder:
+    canonical_unit_evidence: Job cards, invoices, workshop-management records, and audited conversion from repair jobs to book-hour-equivalent jobs.
+    anti_gaming_note: Output units should exclude artificial job splitting and related-party reclassification.
+  aava_deductibility_reference: paper/aava_deductibility_appendix.md
+  qlc_evidence_placeholder:
+    - payroll records
+    - timesheets or roster records
+    - apprenticeship or training records
+    - Australian work-location evidence
+  classification_arbitrage_controls:
+    - Dominant activity test should prevent a robotic repair facility from selecting a lower-intensity administrative schedule.
+    - Mixed businesses require schedule apportionment rather than choosing the most favourable schedule.
+avoidance_controls:
+  fake_qlc_inflation:
+    placeholder_response: Per-worker QLC cap plus evidence checks for hours, wages, security, skill development, and Australian nexus.
+  token_human_oversight_jobs:
+    placeholder_response: Oversight roles count only to verified QLC and do not by themselves reduce AII.
+  entity_splitting:
+    placeholder_response: Grouped-entity aggregation for turnover and output thresholds.
+  related_party_ai_service_fees:
+    placeholder_response: Enhanced verification against the AAVA deductibility appendix and transfer-pricing rules.
+  offshore_ai_services:
+    placeholder_response: Destination and activity attribution if offshore automation serves Australian repair output.
+placeholder_assumptions:
+  - OPFTE, FRV, lambda, LAMBDA, theta, uplift, and rent-tax-rate values are placeholders.
+  - Worker-assist percentile thresholds require real sector data.
+  - Robotics and AI diagnostic adoption rates require industry survey data.
 data_required_for_real_calibration:
   - ATO small-business and company tax data by automotive repair ANZSIC class.
   - ABS labour force and output measures for repair and maintenance.

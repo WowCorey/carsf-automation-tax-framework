@@ -17,6 +17,8 @@ from carsf import (  # noqa: E402
     automation_intensity_index,
     australian_automated_value_added,
     calculate_liability,
+    coverage_measures,
+    format_coverage_ratio,
     human_labour_equivalent,
     net_labour_tax_gap,
     qualified_labour_contribution_firm,
@@ -62,6 +64,18 @@ with right:
     qlc_wage_cost = st.number_input("Verified QLC wage cost", min_value=0.0, value=330000.0)
     capital_base = st.number_input("Capital base", min_value=0.0, value=220000.0)
     verified_credits = st.number_input("Verified credits", min_value=0.0, value=22000.0)
+    national_damage = st.number_input(
+        "National automation fiscal damage",
+        min_value=0.0,
+        value=0.0,
+        help="Prototype national-monitoring input. Placeholder only.",
+    )
+    revenue_captured = st.number_input(
+        "Automation revenue captured",
+        min_value=0.0,
+        value=0.0,
+        help="Prototype national-monitoring input. Placeholder only.",
+    )
 
 weights = QLCWeights(qlc_max_multiplier=qlc_max_multiplier)
 workers = [
@@ -100,6 +114,7 @@ result = calculate_liability(
         rent_tax_rate=rent_tax_rate,
     ),
 )
+coverage = coverage_measures(national_damage, revenue_captured)
 
 st.subheader("Outputs")
 metrics = {
@@ -114,7 +129,12 @@ metrics = {
     "Credits": result.credits,
     "Final liability": result.liability,
     "Shortfall": result.shortfall,
+    "CARS-I": coverage.cars_i,
 }
 cols = st.columns(4)
 for index, (label, value) in enumerate(metrics.items()):
     cols[index % 4].metric(label, f"{value:,.2f}")
+
+cols[len(metrics) % 4].metric("CoverageRatio", format_coverage_ratio(coverage.coverage_ratio))
+if coverage.notes:
+    st.caption(" ".join(coverage.notes))

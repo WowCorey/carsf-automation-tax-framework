@@ -4,6 +4,19 @@ status: placeholder_prototype_for_v1_5
 canonical_output_unit: tonne_kilometres_or_pallet_movements
 calibration_status: illustrative_placeholder_values_only
 confirmed_baseline_figures: []
+measurement_scope:
+  placeholder_notice: This schedule is not calibrated and must not be used to estimate actual tax payable.
+  covered_activity_examples:
+    - freight movement
+    - last-mile delivery
+    - dispatch and routing
+    - warehousing and pallet movement
+    - automated fulfilment linked to Australian customers
+  excluded_or_separately_classified_activity_examples:
+    - pure software licensing without Australian logistics output
+    - marketplace advertising
+    - unrelated retail sales
+  dominant_activity_test_placeholder: Classification should follow Australian-facing logistics or warehousing output, not the entity label selected by the firm.
 qlc:
   weights:
     alpha_wage_quality: 0.18
@@ -14,6 +27,7 @@ qlc:
   notes:
     - Scores are bounded in [0, 1].
     - Schedule must eventually split freight, last-mile delivery, warehousing, and platform dispatch if data supports it.
+    - Token oversight, nominal contractor supervision, and offshore control-room monitoring require separate verification before counting as Australian QLC.
 aii:
   weights:
     compute_ratio: 0.20
@@ -49,6 +63,36 @@ safe_harbours:
   cross_border_automation_notes:
     - Offshore dispatch, routing, optimisation, and warehouse-control services require related-party disclosure.
     - Australian-facing output is attributed by destination and activity, not server location or IP ownership alone.
+measurement_controls:
+  output_measurement_placeholder:
+    canonical_unit_evidence: Transport management systems, warehouse management systems, delivery records, pallet scans, GPS or telematics records, and audited conversion to the schedule unit.
+    anti_gaming_note: The schedule must prevent conversion choices from hiding automation-heavy output inside low-intensity units.
+  aava_deductibility_reference: paper/aava_deductibility_appendix.md
+  qlc_evidence_placeholder:
+    - payroll records
+    - contractor labour records where legally eligible for QLC treatment
+    - work-location and Australian nexus evidence
+    - training and transition records
+  classification_arbitrage_controls:
+    - Platform dispatch, warehouse robotics, and transport operations require apportionment where multiple activities are present.
+    - A firm cannot avoid the schedule by describing automated dispatch as software administration when it controls Australian logistics output.
+avoidance_controls:
+  fake_qlc_inflation:
+    placeholder_response: Per-worker QLC cap plus evidence checks for hours, wages, security, skill development, and Australian nexus.
+  token_human_oversight_jobs:
+    placeholder_response: Nominal monitoring roles do not offset automated dispatch or robotics output without verified substantive work.
+  entity_splitting:
+    placeholder_response: Grouped-entity aggregation for safe harbours and related logistics entities.
+  related_party_ai_service_fees:
+    placeholder_response: Enhanced verification and adjustment where related-party fees reduce AAVA without arm's-length evidence.
+  offshore_ai_services:
+    placeholder_response: Destination and activity attribution where offshore optimisation, dispatch, routing, or warehouse-control systems serve Australian output.
+  sector_classification_arbitrage:
+    placeholder_response: Binding Schedules Authority determination and dominant-activity apportionment.
+placeholder_assumptions:
+  - OPFTE, FRV, lambda, LAMBDA, theta, uplift, and rent-tax-rate values are placeholders.
+  - Freight, delivery, warehousing, and platform-dispatch split requires real data.
+  - Cross-border attribution requires international tax and trade review.
 data_required_for_real_calibration:
   - ATO, ABS, and industry data separating freight, last-mile delivery, warehousing, and platform dispatch.
   - State payroll tax exposure and regional employment concentration.

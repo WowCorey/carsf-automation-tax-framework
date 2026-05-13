@@ -81,5 +81,5 @@ class CoverageResult:
     """National-level fiscal coverage metrics."""
 
     cars_i: float
-    coverage_ratio: float
+    coverage_ratio: float | None
     notes: tuple[str, ...] = field(default_factory=tuple)

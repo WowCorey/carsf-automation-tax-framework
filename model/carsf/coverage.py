@@ -29,11 +29,12 @@ def cars_i(
 def coverage_ratio(
     automation_revenue_captured: float,
     national_automation_fiscal_damage: float,
-) -> float:
+) -> float | None:
     """CoverageRatio = AutomationRevenueCaptured / NationalAutomationFiscalDamage.
 
-    Zero-damage periods are treated as fully covered because there is no measured
-    damage to cover. This is a modelling convention, not a policy conclusion.
+    Zero-damage periods do not have a meaningful ratio. Returning None prevents
+    UI or reporting layers from implying "100% coverage" where there is no
+    measured damage to cover.
     """
 
     if national_automation_fiscal_damage < 0:
@@ -41,8 +42,16 @@ def coverage_ratio(
     if automation_revenue_captured < 0:
         raise ValueError("automation_revenue_captured cannot be negative")
     if national_automation_fiscal_damage == 0:
-        return 1.0
+        return None
     return automation_revenue_captured / national_automation_fiscal_damage
+
+
+def format_coverage_ratio(value: float | None) -> str:
+    """Format CoverageRatio for policy-facing UI."""
+
+    if value is None:
+        return "N/A - no measured damage"
+    return f"{value:.2%}"
 
 
 def coverage_measures(
@@ -54,7 +63,7 @@ def coverage_measures(
 
     notes: list[str] = []
     if national_automation_fiscal_damage == 0:
-        notes.append("CoverageRatio set to 1.0 because measured fiscal damage is zero.")
+        notes.append("CoverageRatio is N/A because measured fiscal damage is zero.")
     if automation_revenue_captured == 0:
         notes.append("CARS-I used epsilon because captured automation revenue is zero.")
     return CoverageResult(

@@ -54,6 +54,8 @@ AAVA = AustralianAttributableRevenue
 
 The AAVA deductibility schedule is not final.
 
+See `paper/aava_deductibility_appendix.md` for the V1.5 prototype taxonomy.
+
 ## Automation Equilibrium Levy
 
 ```text
@@ -86,3 +88,5 @@ CoverageRatio = AutomationRevenueCaptured / NationalAutomationFiscalDamage
 ```
 
 Zero-damage and zero-revenue periods require explicit safe handling.
+
+For policy-facing reporting, CoverageRatio is `N/A - no measured damage` when NationalAutomationFiscalDamage is zero. It must not be displayed as 100% coverage.

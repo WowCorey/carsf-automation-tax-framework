@@ -32,3 +32,23 @@ def test_entity_splitting_safe_harbour_avoidance_is_flagged() -> None:
 def test_offshore_automation_service_avoidance_is_flagged() -> None:
     flags = load_example("logistics_ai_platform")["red_team_notes"]["flags"]
     assert "offshore_automation_service" in flags
+
+
+def test_token_human_oversight_jobs_are_flagged() -> None:
+    flags = load_example("mechanic_robotic")["red_team_notes"]["flags"]
+    assert "token_human_oversight_jobs" in flags
+
+
+def test_fake_qlc_inflation_is_flagged() -> None:
+    flags = load_example("mechanic_robotic")["red_team_notes"]["flags"]
+    assert "fake_qlc_inflation" in flags
+
+
+def test_sector_classification_arbitrage_is_flagged() -> None:
+    flags = load_example("logistics_ai_platform")["red_team_notes"]["flags"]
+    assert "sector_classification_arbitrage" in flags
+
+
+def test_related_party_ai_service_fee_manipulation_is_flagged() -> None:
+    flags = load_example("logistics_ai_platform")["red_team_notes"]["flags"]
+    assert "related_party_ai_service_fees" in flags

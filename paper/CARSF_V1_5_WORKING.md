@@ -112,9 +112,9 @@ Refinement Acquisition on just terms (s 51(xxxi)) and trade-retaliation risks ex
 > Working status: V1.5 is a working copy of V1.4 for policy and modelling development. It is not legislation, tax advice, legal advice, or an official Commonwealth position.
 >
 > TODO(V1.5): Add QLC per-worker cap.
-> TODO(V1.5): Add AAVA deductibility appendix.
-> TODO(V1.5): Add CoverageRatio alongside CARS-I.
-> TODO(V1.5): Rename PRRT-style wording to PRRT-inspired uplift logic throughout.
+> TODO(V1.5): Finalise AAVA deductibility appendix from the initial prototype taxonomy.
+> TODO(V1.5): Validate CoverageRatio wording alongside CARS-I during policy review.
+> TODO(V1.5): Continue checking for legacy PRRT-style wording; use PRRT-inspired uplift logic.
 > TODO(V1.5): Clean up LIBC / labour-intensity terminology.
 > TODO(V1.5): Retitle the paper as a Pre-Consultation Concept Paper, not a Treasury Exposure Draft.
 > TODO(V1.5): Build Prototype Schedule A - Automotive Repair.
@@ -157,7 +157,7 @@ The framework is staged. Disclosure and shadow assessment precede activation. Li
 
 only. Safe harbours apply to small business and startups. A capacity-to-pay cap and a combined liability
 
-cap prevent confiscatory outcomes. The Automation Rent Levy follows PRRT-inspired uplift logic uplift logic, taxing only
+cap prevent confiscatory outcomes. The Automation Rent Levy follows PRRT-inspired uplift logic, taxing only
 
 above-normal automated returns.
 
@@ -308,7 +308,7 @@ price reductions, and quality-of-service gains.
 
 ## 5. Capture excess automation rent Where automated systems generate above-normal returns, a separate
 
-PRRT-inspired uplift logic rent levy applies, with a combined cap to prevent stacking.
+PRRT-inspired rent levy applies, with a combined cap to prevent stacking.
 
 ## 6. Protect small business and Simplified safe harbours exempt small and pre-revenue entities from full
 
@@ -407,7 +407,7 @@ Automation Equilibrium Levy Stabilisation liability attached to measured NLTG.
 
 (AEL)
 
-Automation Rent Levy (ARL) Separate PRRT-inspired uplift logic levy on above-normal automated returns, using an uplift rate above a
+Automation Rent Levy (ARL) Separate PRRT-inspired uplift logic for above-normal automated returns, using an uplift rate above a
 
 defined capital base.
 
@@ -502,7 +502,7 @@ cannot be negative).
 
 ### 5.6 Australian Automated Value Added
 
-> TODO(V1.5): Add a deductibility appendix separating confirmed deductions, illustrative assumptions, placeholder values, and open research requirements.
+> V1.5 note: an initial AAVA deductibility taxonomy has been added at `paper/aava_deductibility_appendix.md`. TODO(V1.5): convert that taxonomy into final policy drafting after Treasury, ATO, accounting, and legal review.
 
 
 AAVA_i = AustralianAttributableRevenue_i
@@ -986,12 +986,16 @@ avoid duplicate burden. The Schedules Authority is responsible for the alignment
 
 ### 14.3 CARS-I: Commonwealth Automation Revenue Stress Index
 
-> TODO(V1.5): Add CoverageRatio = AutomationRevenueCaptured / NationalAutomationFiscalDamage beside CARS-I and define zero-damage handling.
+> V1.5 note: CoverageRatio is added beside CARS-I. Zero-damage periods must display as `N/A - no measured damage`, not as 100% coverage.
 
 
 CARS-I_t = NationalAutomationFiscalDamage_t
 
 / (AutomationRevenueCaptured_t + epsilon)
+
+CoverageRatio_t = AutomationRevenueCaptured_t / NationalAutomationFiscalDamage_t
+
+where CoverageRatio_t is not applicable if NationalAutomationFiscalDamage_t = 0.
 
 where epsilon is a defined small constant preventing divide-by-zero.
 
