@@ -1,0 +1,30 @@
+example_id: ubi_lite_placeholder
+name: UBI-Lite Placeholder
+purpose: Small universal payment placeholder for broad social stabilisation testing.
+status: illustrative_placeholder_only
+illustrative_placeholder_only: true
+not_calibrated: true
+no_policy_claim: true
+no_welfare_advice: true
+placeholder_notice: All values are illustrative placeholders and are not real UBI policy, welfare advice, DSS modelling, Treasury costing, or PBO costing.
+fiscal_trajectory_example: baseline_placeholder_2026_2034
+portfolio_year: 2030
+population_base: 26000000
+payment_designs:
+  - design_id: ubi_lite
+    design_type: UBI_LITE
+    design_name: UBI-Lite Placeholder
+    eligible_population: population_base
+    annual_payment_per_person: 1200
+    participation_rate: 1.0
+    admin_cost_per_person: 120
+    retraining_component_per_person: 0
+    duration_years: 1.0
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - broad payment placeholder for cost comparison only
+sensitivity:
+  annual_payment_multiplier: [0.50, 1.0, 1.50]
+  population_base: [20000000, 26000000, 30000000]
+  automation_revenue_available: [1000000000, 2500000000, 5000000000]
+interpretation: UBI-lite creates broad coverage but much higher aggregate cost than targeted displacement support in this placeholder test.

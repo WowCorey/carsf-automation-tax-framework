@@ -1,0 +1,29 @@
+example_id: automation_dividend_placeholder
+name: Automation Dividend Placeholder
+purpose: Broad per-person automation-dividend style payment funded by captured automation revenue.
+status: illustrative_placeholder_only
+illustrative_placeholder_only: true
+not_calibrated: true
+no_policy_claim: true
+no_welfare_advice: true
+placeholder_notice: All values are illustrative placeholders and are not real dividend, welfare, Treasury, DSS, Services Australia, or PBO settings.
+fiscal_trajectory_example: stronger_automation_revenue_capture
+portfolio_year: 2030
+population_base: 26000000
+payment_designs:
+  - design_id: automation_dividend
+    design_type: AUTOMATION_DIVIDEND
+    design_name: Automation Dividend Placeholder
+    eligible_population: population_base
+    annual_payment_per_person: 700
+    participation_rate: 1.0
+    admin_cost_per_person: 100
+    retraining_component_per_person: 0
+    duration_years: 1.0
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - broad automation-dividend placeholder
+sensitivity:
+  annual_payment_multiplier: [0.50, 1.0, 1.50]
+  automation_revenue_available: [1000000000, 2500000000, 5000000000]
+interpretation: Automation dividend preview tests broad distribution against stronger placeholder automation capture, without claiming any final dividend design.

@@ -36,6 +36,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Add repository-level enforcement gates for prohibited evidence paths, secret-like file extensions, sensitive markers, generated-report non-claims, and raw evidence payload checks.
 - Add non-operative investment, tax-incidence, burden-balance, and sensitivity guardrails without modifying final liability.
 - Add a national fiscal trajectory engine for placeholder PAYG erosion, transfer pressure, automation revenue captured, and residual public-sector gaps without modifying firm-level liability.
+- Add a non-operative transition-payment funding module for displaced-worker supplements, UBI-lite placeholders, retraining grants, automation-dividend previews, and hybrid support packages.
 
 ## Data Separation
 
@@ -60,6 +61,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Repository guardrail reports can be generated with `python scripts/run_repo_guardrails.py` and CI fails on denied findings.
 - Investment and incidence guardrail reports can be generated with `python scripts/run_investment_guardrails.py`.
 - Fiscal trajectory reports can be generated with `python scripts/run_fiscal_trajectory.py`.
+- Transition funding reports can be generated with `python scripts/run_transition_funding.py`.
 - Hybrid logistics stress variant demonstrates non-zero but intermediate NLTG.
 - V1.5 working paper contains TODO markers where policy drafting remains open.
 - Limitations document clearly blocks actual tax-payable claims.
@@ -76,4 +78,4 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Tune repository guardrail allowlists and integrate external DLP/secret-scanning tooling before any evidence-adjacent external review.
 - Calibrate investment deterrence, pass-through, normal-return preservation, and public-revenue coverage using Treasury/economic/tax-incidence review.
 - Replace calibration shell placeholders with authorised datasets only after formal source review.
-- Add UBI / transition-payment funding module as a future non-operative prototype layer.
+- Add deeper welfare-program interaction and phase-out mechanics only after legal, DSS / Services Australia, Treasury, PBO, and labour-market review.

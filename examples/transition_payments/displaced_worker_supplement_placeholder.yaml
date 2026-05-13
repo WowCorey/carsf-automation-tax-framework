@@ -1,0 +1,30 @@
+example_id: displaced_worker_supplement_placeholder
+name: Displaced Worker Supplement Placeholder
+purpose: Targeted displaced-worker supplement funded against placeholder automation revenue.
+status: illustrative_placeholder_only
+illustrative_placeholder_only: true
+not_calibrated: true
+no_policy_claim: true
+no_welfare_advice: true
+placeholder_notice: All values are illustrative placeholders and are not real welfare payment rates, DSS modelling, Treasury costing, PBO costing, or Services Australia settings.
+fiscal_trajectory_example: baseline_placeholder_2026_2034
+portfolio_year: 2030
+population_base: 26000000
+payment_designs:
+  - design_id: displaced_worker_supplement
+    design_type: DISPLACED_WORKER_SUPPLEMENT
+    design_name: Displaced Worker Supplement
+    eligible_population: displaced_workers
+    annual_payment_per_person: 12000
+    participation_rate: 0.75
+    admin_cost_per_person: 900
+    retraining_component_per_person: 2500
+    duration_years: 1.0
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - targeted displaced-worker support placeholder
+sensitivity:
+  annual_payment_multiplier: [0.75, 1.0, 1.25]
+  participation_rate: [0.50, 0.75, 0.90]
+  automation_revenue_available: [700000000, 1300000000, 1800000000]
+interpretation: Targeted supplement focuses support on net displaced workers and is cheaper than universal designs under placeholder assumptions.

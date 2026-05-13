@@ -1,0 +1,41 @@
+example_id: transition_income_retraining_placeholder
+name: Transition Income and Retraining Placeholder
+purpose: Temporary retraining-linked support for displaced workers during transition.
+status: illustrative_placeholder_only
+illustrative_placeholder_only: true
+not_calibrated: true
+no_policy_claim: true
+no_welfare_advice: true
+placeholder_notice: All values are illustrative placeholders and are not real training, welfare, DSS, Treasury, or PBO settings.
+fiscal_trajectory_example: low_displacement_high_reabsorption
+portfolio_year: 2030
+population_base: 26000000
+payment_designs:
+  - design_id: transition_income
+    design_type: TRANSITION_INCOME
+    design_name: Transition Income Placeholder
+    eligible_population: displaced_workers
+    annual_payment_per_person: 15000
+    participation_rate: 0.60
+    admin_cost_per_person: 850
+    retraining_component_per_person: 3500
+    duration_years: 1.0
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - retraining-linked income support placeholder
+  - design_id: retraining_grant
+    design_type: RETRAINING_GRANT
+    design_name: Retraining Grant Placeholder
+    eligible_population: displaced_workers
+    annual_payment_per_person: 0
+    participation_rate: 0.45
+    admin_cost_per_person: 250
+    retraining_component_per_person: 5000
+    duration_years: 1.0
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - training grant placeholder
+sensitivity:
+  annual_payment_multiplier: [0.80, 1.0, 1.20]
+  participation_rate: [0.40, 0.60, 0.80]
+interpretation: Retraining-linked support remains targeted and shows lower cliff risk in the low-displacement/high-reabsorption fiscal trajectory.

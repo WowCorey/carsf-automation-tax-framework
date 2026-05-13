@@ -1,0 +1,53 @@
+example_id: hybrid_support_package_placeholder
+name: Hybrid Support Package Placeholder
+purpose: Mixed targeted supplement, retraining, and partial universal support package.
+status: illustrative_placeholder_only
+illustrative_placeholder_only: true
+not_calibrated: true
+no_policy_claim: true
+no_welfare_advice: true
+placeholder_notice: All values are illustrative placeholders and are not real welfare payment rates or government costing inputs.
+fiscal_trajectory_example: baseline_placeholder_2026_2034
+portfolio_year: 2030
+population_base: 26000000
+payment_designs:
+  - design_id: hybrid_displaced_supplement
+    design_type: DISPLACED_WORKER_SUPPLEMENT
+    design_name: Hybrid Displaced Supplement
+    eligible_population: displaced_workers
+    annual_payment_per_person: 9000
+    participation_rate: 0.70
+    admin_cost_per_person: 800
+    retraining_component_per_person: 2000
+    duration_years: 1.0
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - targeted supplement placeholder
+  - design_id: hybrid_retraining_grant
+    design_type: RETRAINING_GRANT
+    design_name: Hybrid Retraining Grant
+    eligible_population: displaced_workers
+    annual_payment_per_person: 0
+    participation_rate: 0.50
+    admin_cost_per_person: 250
+    retraining_component_per_person: 4500
+    duration_years: 1.0
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - retraining placeholder
+  - design_id: hybrid_automation_dividend
+    design_type: AUTOMATION_DIVIDEND
+    design_name: Partial Automation Dividend
+    eligible_population: population_base
+    annual_payment_per_person: 350
+    participation_rate: 1.0
+    admin_cost_per_person: 75
+    retraining_component_per_person: 0
+    duration_years: 1.0
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - partial broad payment placeholder
+sensitivity:
+  annual_payment_multiplier: [0.75, 1.0, 1.25]
+  automation_revenue_available: [1000000000, 1800000000, 3000000000]
+interpretation: Hybrid support balances targeted and broad support, but broad components can dominate cost even when displaced-worker components remain moderate.

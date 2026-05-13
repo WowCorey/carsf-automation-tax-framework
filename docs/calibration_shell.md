@@ -65,6 +65,25 @@ Required source categories include Treasury modelling, ATO aggregated tax data, 
 
 No such calibration has occurred in this repository, and fiscal trajectory outputs are not forecasts.
 
+## Transition Funding Calibration
+
+The transition funding module requires future calibration before any policy claim:
+
+- eligible population definitions
+- displaced-worker supplement rates
+- UBI-lite or automation-dividend payment levels
+- participation rates and take-up assumptions
+- retraining grant costs
+- administrative delivery costs
+- duration and phase-out settings
+- interaction with existing welfare, tax, and labour-market programs
+- automation revenue coverage assumptions
+- cliff-risk thresholds
+
+Required source categories include DSS / Services Australia program data, Treasury costing methods, PBO costing methods, ABS population and labour data, ATO aggregated tax data, labour-market transition datasets, and legal/privacy review.
+
+No such calibration has occurred in this repository, and transition-funding outputs are not UBI policy or welfare advice.
+
 ## Non-Claims
 
 The calibration shell is not legal, tax, Treasury, ATO, ABS, Fair Work, OECD, BEPS, audit, forensic, or economic validation. It does not prove any model setting is correct.
