@@ -1,0 +1,42 @@
+example_id: high_displacement_payment_stress
+name: High Displacement Payment Stress
+purpose: Shows cliff risk where displacement grows faster than automation revenue coverage.
+status: illustrative_placeholder_only
+illustrative_placeholder_only: true
+not_calibrated: true
+no_policy_claim: true
+no_welfare_advice: true
+placeholder_notice: All values are illustrative placeholders and are not real UBI, welfare, DSS, Services Australia, Treasury, or PBO values.
+fiscal_trajectory_example: high_displacement_low_reabsorption
+portfolio_year: 2030
+population_base: 26000000
+payment_designs:
+  - design_id: stress_transition_income
+    design_type: TRANSITION_INCOME
+    design_name: Stress Transition Income
+    eligible_population: displaced_workers
+    annual_payment_per_person: 18000
+    participation_rate: 0.85
+    admin_cost_per_person: 1200
+    retraining_component_per_person: 4500
+    duration_years: 1.0
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - high-displacement stress placeholder
+  - design_id: stress_retraining_grant
+    design_type: RETRAINING_GRANT
+    design_name: Stress Retraining Grant
+    eligible_population: displaced_workers
+    annual_payment_per_person: 0
+    participation_rate: 0.65
+    admin_cost_per_person: 300
+    retraining_component_per_person: 6500
+    duration_years: 1.0
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - high-displacement retraining placeholder
+sensitivity:
+  annual_payment_multiplier: [0.75, 1.0, 1.25]
+  automation_revenue_available: [500000000, 1000000000, 2000000000]
+  participation_rate: [0.60, 0.85, 1.0]
+interpretation: High displacement paired with low reabsorption generates cliff-risk warnings when payment costs grow faster than placeholder automation revenue coverage.

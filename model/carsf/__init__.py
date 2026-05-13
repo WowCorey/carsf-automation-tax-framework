@@ -60,6 +60,8 @@ from .mixed_units import (
     evaluate_mixed_unit_exposure,
     evaluate_unit_compatibility,
 )
+from .payment_portfolio import PaymentPortfolioInput, PaymentPortfolioResult, evaluate_payment_portfolio
+from .payment_sensitivity import PaymentSensitivityPoint, PaymentSensitivityResult, run_payment_sensitivity
 from .public_revenue import PublicRevenueInput, PublicRevenueResult, evaluate_public_revenue
 from .qlc import qualified_labour_contribution_firm, qualified_labour_contribution_worker
 from .redaction import RedactionPlan, create_redaction_plan
@@ -99,6 +101,13 @@ from .transfer_pricing import (
     evaluate_transfer_pricing_preview,
     preview_adjusted_aava,
     preview_liability_with_adjusted_aava,
+)
+from .transition_funding import TransitionFundingInput, TransitionFundingResult, TransitionFundingYearResult, run_transition_funding
+from .transition_payments import (
+    TransitionPaymentDesign,
+    TransitionPaymentInput,
+    TransitionPaymentResult,
+    evaluate_transition_payment,
 )
 from .transfer_runner import (
     TransferPricingPreviewReport,
@@ -157,6 +166,10 @@ __all__ = [
     "LevyResult",
     "LiabilityAdjustmentPreview",
     "MixedUnitExposureResult",
+    "PaymentPortfolioInput",
+    "PaymentPortfolioResult",
+    "PaymentSensitivityPoint",
+    "PaymentSensitivityResult",
     "PublicRevenueInput",
     "PublicRevenueResult",
     "QLCWeights",
@@ -175,6 +188,12 @@ __all__ = [
     "TransferPricingPreviewResult",
     "TransferPricingPreviewReport",
     "TransferPricingScenarioResult",
+    "TransitionFundingInput",
+    "TransitionFundingResult",
+    "TransitionFundingYearResult",
+    "TransitionPaymentDesign",
+    "TransitionPaymentInput",
+    "TransitionPaymentResult",
     "TransferPressureInput",
     "TransferPressureResult",
     "UnitCompatibilityResult",
@@ -205,10 +224,12 @@ __all__ = [
     "evaluate_ingestion_request",
     "evaluate_investment_guardrail",
     "evaluate_mixed_unit_exposure",
+    "evaluate_payment_portfolio",
     "evaluate_public_revenue",
     "evaluate_review_transition",
     "evaluate_safe_harbour",
     "evaluate_tax_incidence",
+    "evaluate_transition_payment",
     "evaluate_transfer_pressure",
     "evaluate_transfer_pricing_preview",
     "evaluate_unit_compatibility",
@@ -232,7 +253,9 @@ __all__ = [
     "run_fiscal_sensitivity",
     "run_fiscal_trajectory",
     "run_grouped_previews",
+    "run_payment_sensitivity",
     "run_example",
+    "run_transition_funding",
     "run_transfer_pricing_previews",
     "run_workforce_trajectory",
     "scan_mapping_for_sensitive_markers",

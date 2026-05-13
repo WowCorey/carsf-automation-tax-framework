@@ -39,4 +39,7 @@
 - Workforce displacement, reabsorption, PAYG loss, transfer pressure, GST effects, superannuation, HELP/HECS, and state payroll-tax effects remain uncalibrated.
 - Superannuation contribution pressure is broader labour-linked pressure, not ordinary Commonwealth revenue loss; reports may mislead if that distinction is removed.
 - National fiscal trajectory results do not determine firm-level liability and may mislead if used as operative CARSF settings.
+- Transition-payment funding previews may be mistaken for UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, or PBO costing if non-claim warnings are removed.
+- Payment participation rates, population bases, retraining costs, administrative costs, and cliff-risk bands remain uncalibrated.
+- Automation revenue captured may be insufficient for transition-payment obligations if displacement rises faster than funding coverage.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.

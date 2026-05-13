@@ -1,0 +1,2133 @@
+{
+  "examples": [
+    {
+      "example_id": "automation_dividend_placeholder",
+      "firm_level_liability_modified": false,
+      "fiscal_trajectory_id": "stronger_automation_revenue_capture",
+      "fixture_path": "examples\\transition_payments\\automation_dividend_placeholder.yaml",
+      "funding_result": {
+        "cumulative_automation_revenue_available": 15300000000.0,
+        "cumulative_combined_gap": 363094734641.71356,
+        "cumulative_payment_cost": 187200000000.0,
+        "cumulative_residual_payment_gap": 171900000000.0,
+        "first_critical_cliff_risk_year": 2026,
+        "first_high_cliff_risk_year": 2026,
+        "funding_id": "automation_dividend_placeholder",
+        "non_claims": [
+          "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Transition-payment outputs are illustrative placeholders only.",
+          "Transition-payment outputs do not modify firm-level CARSF liability."
+        ],
+        "warnings": [
+          "Transition funding consumes fiscal trajectory outputs as placeholders only.",
+          "This is not a real UBI, welfare, DSS, Services Australia, Treasury, or PBO model."
+        ],
+        "years": [
+          {
+            "automation_revenue_captured": 1100000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 26405345400.0,
+            "commonwealth_gap_after_carsf": 6705345400.0,
+            "funding_coverage_ratio": 0.052884615384615384,
+            "net_displaced_workers": 192660.0,
+            "residual_payment_gap": 19700000000.0,
+            "total_payment_cost": 20800000000.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2026
+          },
+          {
+            "automation_revenue_captured": 1250000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 32064816193.6,
+            "commonwealth_gap_after_carsf": 12514816193.6,
+            "funding_coverage_ratio": 0.06009615384615385,
+            "net_displaced_workers": 343705.44,
+            "residual_payment_gap": 19550000000.0,
+            "total_payment_cost": 20800000000.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2027
+          },
+          {
+            "automation_revenue_captured": 1400000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 36452325599.7344,
+            "commonwealth_gap_after_carsf": 17052325599.7344,
+            "funding_coverage_ratio": 0.0673076923076923,
+            "net_displaced_workers": 462294.60576,
+            "residual_payment_gap": 19400000000.0,
+            "total_payment_cost": 20800000000.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2028
+          },
+          {
+            "automation_revenue_captured": 1550000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 39847826412.39414,
+            "commonwealth_gap_after_carsf": 20597826412.394142,
+            "funding_coverage_ratio": 0.07451923076923077,
+            "net_displaced_workers": 555570.9725030401,
+            "residual_payment_gap": 19250000000.0,
+            "total_payment_cost": 20800000000.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2029
+          },
+          {
+            "automation_revenue_captured": 1700000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 42469682296.04715,
+            "commonwealth_gap_after_carsf": 23369682296.047146,
+            "funding_coverage_ratio": 0.08173076923076923,
+            "net_displaced_workers": 629106.4632826523,
+            "residual_payment_gap": 19100000000.0,
+            "total_payment_cost": 20800000000.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2030
+          },
+          {
+            "automation_revenue_captured": 1850000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 44488217396.074005,
+            "commonwealth_gap_after_carsf": 25538217396.074,
+            "funding_coverage_ratio": 0.0889423076923077,
+            "net_displaced_workers": 687247.1905096709,
+            "residual_payment_gap": 18950000000.0,
+            "total_payment_cost": 20800000000.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2031
+          },
+          {
+            "automation_revenue_captured": 2000000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 46036285034.91558,
+            "commonwealth_gap_after_carsf": 27236285034.91558,
+            "funding_coverage_ratio": 0.09615384615384616,
+            "net_displaced_workers": 733383.1343433422,
+            "residual_payment_gap": 18800000000.0,
+            "total_payment_cost": 20800000000.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2032
+          },
+          {
+            "automation_revenue_captured": 2150000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 47217511295.07593,
+            "commonwealth_gap_after_carsf": 28567511295.075924,
+            "funding_coverage_ratio": 0.10336538461538461,
+            "net_displaced_workers": 770158.4918365891,
+            "residual_payment_gap": 18650000000.0,
+            "total_payment_cost": 20800000000.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2033
+          },
+          {
+            "automation_revenue_captured": 2300000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 48112725013.87236,
+            "commonwealth_gap_after_carsf": 29612725013.87236,
+            "funding_coverage_ratio": 0.11057692307692307,
+            "net_displaced_workers": 799635.7492695168,
+            "residual_payment_gap": 18500000000.0,
+            "total_payment_cost": 20800000000.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2034
+          }
+        ]
+      },
+      "interpretation": "Automation dividend preview tests broad distribution against stronger placeholder automation capture, without claiming any final dividend design.",
+      "name": "Automation Dividend Placeholder",
+      "portfolio_input": {
+        "automation_revenue_available": 1700000000.0,
+        "commonwealth_gap_after_carsf": 23369682296.047146,
+        "designs": [
+          {
+            "admin_cost_per_person": 100,
+            "annual_payment_per_person": 700,
+            "design_id": "automation_dividend",
+            "design_name": "Automation Dividend Placeholder",
+            "design_type": "AUTOMATION_DIVIDEND",
+            "duration_years": 1.0,
+            "eligible_population": "population_base",
+            "illustrative_placeholder_only": true,
+            "participation_rate": 1.0,
+            "placeholder_basis": [
+              "broad automation-dividend placeholder"
+            ],
+            "retraining_component_per_person": 0
+          }
+        ],
+        "displaced_workers": 629106.4632826523,
+        "placeholder_basis": [
+          "transition funding example: automation_dividend_placeholder"
+        ],
+        "population_base": 26000000,
+        "portfolio_id": "automation_dividend_placeholder",
+        "year": 2030
+      },
+      "portfolio_result": {
+        "affordability_band": "critical_pressure",
+        "automation_revenue_available": 1700000000.0,
+        "design_results": [
+          {
+            "administrative_cost": 2600000000.0,
+            "base_payment_cost": 18200000000.0,
+            "covered_people": 26000000.0,
+            "design_id": "automation_dividend",
+            "eligible_people": 26000000.0,
+            "non_claims": [
+              "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+              "Transition-payment outputs are illustrative placeholders only.",
+              "Transition-payment outputs do not modify firm-level CARSF liability."
+            ],
+            "retraining_component_cost": 0.0,
+            "total_program_cost": 20800000000.0,
+            "warnings": [
+              "Transition-payment design is illustrative placeholder only.",
+              "This result is not a real UBI, welfare, DSS, Services Australia, Treasury, or PBO costing."
+            ],
+            "year": 2030
+          }
+        ],
+        "funding_coverage_ratio": 0.08173076923076923,
+        "non_claims": [
+          "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Transition-payment outputs are illustrative placeholders only.",
+          "Transition-payment outputs do not modify firm-level CARSF liability."
+        ],
+        "portfolio_id": "automation_dividend_placeholder",
+        "residual_commonwealth_gap_plus_payment_gap": 42469682296.04715,
+        "residual_funding_gap": 19100000000.0,
+        "total_program_cost": 20800000000.0,
+        "warnings": [
+          "Payment portfolio is a placeholder affordability preview, not a real policy costing.",
+          "Firm-level CARSF liability is not modified by payment portfolio results."
+        ],
+        "year": 2030
+      },
+      "purpose": "Broad per-person automation-dividend style payment funded by captured automation revenue.",
+      "sensitivity_result": {
+        "max_residual_gap": 28200000000.0,
+        "min_residual_gap": 10000000000.0,
+        "non_claims": [
+          "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Transition-payment outputs are illustrative placeholders only.",
+          "Transition-payment outputs do not modify firm-level CARSF liability."
+        ],
+        "points": [
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.1452991452991453,
+            "parameter_name": "annual_payment_multiplier",
+            "parameter_value": 0.5,
+            "residual_funding_gap": 10000000000.0,
+            "total_program_cost": 11700000000.0,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.08173076923076923,
+            "parameter_name": "annual_payment_multiplier",
+            "parameter_value": 1.0,
+            "residual_funding_gap": 19100000000.0,
+            "total_program_cost": 20800000000.0,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.056856187290969896,
+            "parameter_name": "annual_payment_multiplier",
+            "parameter_value": 1.5,
+            "residual_funding_gap": 28200000000.0,
+            "total_program_cost": 29900000000.0,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.04807692307692308,
+            "parameter_name": "automation_revenue_available",
+            "parameter_value": 1000000000.0,
+            "residual_funding_gap": 19800000000.0,
+            "total_program_cost": 20800000000.0,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.1201923076923077,
+            "parameter_name": "automation_revenue_available",
+            "parameter_value": 2500000000.0,
+            "residual_funding_gap": 18300000000.0,
+            "total_program_cost": 20800000000.0,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.2403846153846154,
+            "parameter_name": "automation_revenue_available",
+            "parameter_value": 5000000000.0,
+            "residual_funding_gap": 15800000000.0,
+            "total_program_cost": 20800000000.0,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          }
+        ],
+        "sensitivity_id": "automation_dividend_placeholder",
+        "warnings": [
+          "Payment sensitivity does not modify firm-level CARSF liability."
+        ]
+      },
+      "status": "illustrative_placeholder_only"
+    },
+    {
+      "example_id": "displaced_worker_supplement_placeholder",
+      "firm_level_liability_modified": false,
+      "fiscal_trajectory_id": "baseline_placeholder_2026_2034",
+      "fixture_path": "examples\\transition_payments\\displaced_worker_supplement_placeholder.yaml",
+      "funding_result": {
+        "cumulative_automation_revenue_available": 11700000000.0,
+        "cumulative_combined_gap": 100903031238.91307,
+        "cumulative_payment_cost": 28204572221.741104,
+        "cumulative_residual_payment_gap": 16504572221.741106,
+        "first_critical_cliff_risk_year": 2027,
+        "first_high_cliff_risk_year": 2026,
+        "funding_id": "displaced_worker_supplement_placeholder",
+        "non_claims": [
+          "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Transition-payment outputs are illustrative placeholders only.",
+          "Transition-payment outputs do not modify firm-level CARSF liability."
+        ],
+        "warnings": [
+          "Transition funding consumes fiscal trajectory outputs as placeholders only.",
+          "This is not a real UBI, welfare, DSS, Services Australia, Treasury, or PBO model."
+        ],
+        "years": [
+          {
+            "automation_revenue_captured": 900000000.0,
+            "cliff_risk_band": "high",
+            "combined_gap": 4229050000.0,
+            "commonwealth_gap_after_carsf": 3777700000.0,
+            "funding_coverage_ratio": 0.666000666000666,
+            "net_displaced_workers": 117000.0,
+            "residual_payment_gap": 451350000.0,
+            "total_payment_cost": 1351350000.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2026
+          },
+          {
+            "automation_revenue_captured": 1000000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 7863977749.999998,
+            "commonwealth_gap_after_carsf": 6627493499.999999,
+            "funding_coverage_ratio": 0.4471303564959155,
+            "net_displaced_workers": 193634.99999999997,
+            "residual_payment_gap": 1236484249.9999995,
+            "total_payment_cost": 2236484249.9999995,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2027
+          },
+          {
+            "automation_revenue_captured": 1100000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 10196371263.749996,
+            "commonwealth_gap_after_carsf": 8477759217.499998,
+            "funding_coverage_ratio": 0.39026300248148255,
+            "net_displaced_workers": 244035.67499999993,
+            "residual_payment_gap": 1718612046.249999,
+            "total_payment_cost": 2818612046.249999,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2028
+          },
+          {
+            "automation_revenue_captured": 1200000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 11682263476.31874,
+            "commonwealth_gap_after_carsf": 9678443876.087494,
+            "funding_coverage_ratio": 0.3745529242387385,
+            "net_displaced_workers": 277386.97837499983,
+            "residual_payment_gap": 2003819600.231248,
+            "total_payment_cost": 3203819600.231248,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2029
+          },
+          {
+            "automation_revenue_captured": 1300000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 12618076525.262833,
+            "commonwealth_gap_after_carsf": 10457013406.09293,
+            "funding_coverage_ratio": 0.37560713435119036,
+            "net_displaced_workers": 299659.1445168748,
+            "residual_payment_gap": 2161063119.1699038,
+            "total_payment_cost": 3461063119.1699038,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2030
+          },
+          {
+            "automation_revenue_captured": 1400000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 13196485533.404774,
+            "commonwealth_gap_after_carsf": 10961321225.029644,
+            "funding_coverage_ratio": 0.385127020744155,
+            "net_displaced_workers": 314732.8405519592,
+            "residual_payment_gap": 2235164308.3751287,
+            "total_payment_cost": 3635164308.3751287,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2031
+          },
+          {
+            "automation_revenue_captured": 1500000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 13542730067.656954,
+            "commonwealth_gap_after_carsf": 11287472619.893856,
+            "funding_coverage_ratio": 0.399439990697178,
+            "net_displaced_workers": 325130.51495784393,
+            "residual_payment_gap": 2255257447.7630973,
+            "total_payment_cost": 3755257447.7630973,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2032
+          },
+          {
+            "automation_revenue_captured": 1600000000.0,
+            "cliff_risk_band": "high",
+            "combined_gap": 13738216587.275583,
+            "commonwealth_gap_after_carsf": 11497936595.67371,
+            "funding_coverage_ratio": 0.41663628784853307,
+            "net_displaced_workers": 332491.7741646643,
+            "residual_payment_gap": 2240279991.601873,
+            "total_payment_cost": 3840279991.601873,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2033
+          },
+          {
+            "automation_revenue_captured": 1700000000.0,
+            "cliff_risk_band": "high",
+            "combined_gap": 13835860035.24419,
+            "commonwealth_gap_after_carsf": 11633318576.894333,
+            "funding_coverage_ratio": 0.4356135657092609,
+            "net_displaced_workers": 337882.3773463079,
+            "residual_payment_gap": 2202541458.3498564,
+            "total_payment_cost": 3902541458.3498564,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2034
+          }
+        ]
+      },
+      "interpretation": "Targeted supplement focuses support on net displaced workers and is cheaper than universal designs under placeholder assumptions.",
+      "name": "Displaced Worker Supplement Placeholder",
+      "portfolio_input": {
+        "automation_revenue_available": 1300000000.0,
+        "commonwealth_gap_after_carsf": 10457013406.09293,
+        "designs": [
+          {
+            "admin_cost_per_person": 900,
+            "annual_payment_per_person": 12000,
+            "design_id": "displaced_worker_supplement",
+            "design_name": "Displaced Worker Supplement",
+            "design_type": "DISPLACED_WORKER_SUPPLEMENT",
+            "duration_years": 1.0,
+            "eligible_population": "displaced_workers",
+            "illustrative_placeholder_only": true,
+            "participation_rate": 0.75,
+            "placeholder_basis": [
+              "targeted displaced-worker support placeholder"
+            ],
+            "retraining_component_per_person": 2500
+          }
+        ],
+        "displaced_workers": 299659.1445168748,
+        "placeholder_basis": [
+          "transition funding example: displaced_worker_supplement_placeholder"
+        ],
+        "population_base": 26000000,
+        "portfolio_id": "displaced_worker_supplement_placeholder",
+        "year": 2030
+      },
+      "portfolio_result": {
+        "affordability_band": "critical_pressure",
+        "automation_revenue_available": 1300000000.0,
+        "design_results": [
+          {
+            "administrative_cost": 202269922.5488905,
+            "base_payment_cost": 2696932300.651873,
+            "covered_people": 224744.3583876561,
+            "design_id": "displaced_worker_supplement",
+            "eligible_people": 299659.1445168748,
+            "non_claims": [
+              "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+              "Transition-payment outputs are illustrative placeholders only.",
+              "Transition-payment outputs do not modify firm-level CARSF liability."
+            ],
+            "retraining_component_cost": 561860895.9691403,
+            "total_program_cost": 3461063119.1699038,
+            "warnings": [
+              "Transition-payment design is illustrative placeholder only.",
+              "This result is not a real UBI, welfare, DSS, Services Australia, Treasury, or PBO costing."
+            ],
+            "year": 2030
+          }
+        ],
+        "funding_coverage_ratio": 0.37560713435119036,
+        "non_claims": [
+          "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Transition-payment outputs are illustrative placeholders only.",
+          "Transition-payment outputs do not modify firm-level CARSF liability."
+        ],
+        "portfolio_id": "displaced_worker_supplement_placeholder",
+        "residual_commonwealth_gap_plus_payment_gap": 12618076525.262833,
+        "residual_funding_gap": 2161063119.1699038,
+        "total_program_cost": 3461063119.1699038,
+        "warnings": [
+          "Payment portfolio is a placeholder affordability preview, not a real policy costing.",
+          "Firm-level CARSF liability is not modified by payment portfolio results."
+        ],
+        "year": 2030
+      },
+      "purpose": "Targeted displaced-worker supplement funded against placeholder automation revenue.",
+      "sensitivity_result": {
+        "max_residual_gap": 2853275743.003885,
+        "min_residual_gap": 1007375412.7799358,
+        "non_claims": [
+          "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Transition-payment outputs are illustrative placeholders only.",
+          "Transition-payment outputs do not modify firm-level CARSF liability."
+        ],
+        "points": [
+          {
+            "affordability_band": "high_pressure",
+            "funding_coverage_ratio": 0.46647982814583316,
+            "parameter_name": "annual_payment_multiplier",
+            "parameter_value": 0.75,
+            "residual_funding_gap": 1486830044.0069356,
+            "total_program_cost": 2786830044.0069356,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.37560713435119036,
+            "parameter_name": "annual_payment_multiplier",
+            "parameter_value": 1.0,
+            "residual_funding_gap": 2161063119.1699038,
+            "total_program_cost": 3461063119.1699038,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.3143668407069745,
+            "parameter_name": "annual_payment_multiplier",
+            "parameter_value": 1.25,
+            "residual_funding_gap": 2835296194.3328724,
+            "total_program_cost": 4135296194.3328724,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.20224999541987174,
+            "parameter_name": "automation_revenue_available",
+            "parameter_value": 700000000.0,
+            "residual_funding_gap": 2761063119.1699038,
+            "total_program_cost": 3461063119.1699038,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.37560713435119036,
+            "parameter_name": "automation_revenue_available",
+            "parameter_value": 1300000000.0,
+            "residual_funding_gap": 2161063119.1699038,
+            "total_program_cost": 3461063119.1699038,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "high_pressure",
+            "funding_coverage_ratio": 0.5200714167939559,
+            "parameter_name": "automation_revenue_available",
+            "parameter_value": 1800000000.0,
+            "residual_funding_gap": 1661063119.1699038,
+            "total_program_cost": 3461063119.1699038,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "high_pressure",
+            "funding_coverage_ratio": 0.5634107015267855,
+            "parameter_name": "participation_rate",
+            "parameter_value": 0.5,
+            "residual_funding_gap": 1007375412.7799358,
+            "total_program_cost": 2307375412.779936,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.37560713435119036,
+            "parameter_name": "participation_rate",
+            "parameter_value": 0.75,
+            "residual_funding_gap": 2161063119.1699038,
+            "total_program_cost": 3461063119.1699038,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.3130059452926586,
+            "parameter_name": "participation_rate",
+            "parameter_value": 0.9,
+            "residual_funding_gap": 2853275743.003885,
+            "total_program_cost": 4153275743.003885,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          }
+        ],
+        "sensitivity_id": "displaced_worker_supplement_placeholder",
+        "warnings": [
+          "Payment sensitivity does not modify firm-level CARSF liability."
+        ]
+      },
+      "status": "illustrative_placeholder_only"
+    },
+    {
+      "example_id": "high_displacement_payment_stress",
+      "firm_level_liability_modified": false,
+      "fiscal_trajectory_id": "high_displacement_low_reabsorption",
+      "fixture_path": "examples\\transition_payments\\high_displacement_payment_stress.yaml",
+      "funding_result": {
+        "cumulative_automation_revenue_available": 13050000000.0,
+        "cumulative_combined_gap": 689457526654.4114,
+        "cumulative_payment_cost": 255158549217.6642,
+        "cumulative_residual_payment_gap": 242108549217.6642,
+        "first_critical_cliff_risk_year": 2026,
+        "first_high_cliff_risk_year": 2026,
+        "funding_id": "high_displacement_payment_stress",
+        "non_claims": [
+          "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Transition-payment outputs are illustrative placeholders only.",
+          "Transition-payment outputs do not modify firm-level CARSF liability."
+        ],
+        "warnings": [
+          "Transition funding consumes fiscal trajectory outputs as placeholders only.",
+          "This is not a real UBI, welfare, DSS, Services Australia, Treasury, or PBO model."
+        ],
+        "years": [
+          {
+            "automation_revenue_captured": 1050000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 19301420000.000008,
+            "commonwealth_gap_after_carsf": 12785400000.000004,
+            "funding_coverage_ratio": 0.13877838017874652,
+            "net_displaced_workers": 308000.00000000006,
+            "residual_payment_gap": 6516020000.000002,
+            "total_payment_cost": 7566020000.000002,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2026
+          },
+          {
+            "automation_revenue_captured": 1150000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 37801351700.0,
+            "commonwealth_gap_after_carsf": 24689404000.0,
+            "funding_coverage_ratio": 0.08063414788710802,
+            "net_displaced_workers": 580580.0,
+            "residual_payment_gap": 13111947700.0,
+            "total_payment_cost": 14261947700.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2027
+          },
+          {
+            "automation_revenue_captured": 1250000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 54170900106.499985,
+            "commonwealth_gap_after_carsf": 35228516779.99999,
+            "funding_coverage_ratio": 0.06190453002937648,
+            "net_displaced_workers": 821998.0999999999,
+            "residual_payment_gap": 18942383326.499996,
+            "total_payment_cost": 20192383326.499996,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2028
+          },
+          {
+            "automation_revenue_captured": 1350000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 68666240257.27249,
+            "commonwealth_gap_after_carsf": 44566864232.7,
+            "funding_coverage_ratio": 0.05304648721825302,
+            "net_displaced_workers": 1036001.4664999999,
+            "residual_payment_gap": 24099376024.5725,
+            "total_payment_cost": 25449376024.5725,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2029
+          },
+          {
+            "automation_revenue_captured": 1450000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 81512808830.77005,
+            "commonwealth_gap_after_carsf": 52848878838.407486,
+            "funding_coverage_ratio": 0.04815047389589291,
+            "net_displaced_workers": 1225887.6447124998,
+            "residual_payment_gap": 28663929992.36256,
+            "total_payment_cost": 30113929992.36256,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2030
+          },
+          {
+            "automation_revenue_captured": 1550000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 92908992762.46976,
+            "commonwealth_gap_after_carsf": 60201662882.998245,
+            "funding_coverage_ratio": 0.045245791351906504,
+            "net_displaced_workers": 1394558.5133104622,
+            "residual_payment_gap": 32707329879.471504,
+            "total_payment_cost": 34257329879.471504,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2031
+          },
+          {
+            "automation_revenue_captured": 1650000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 103029375227.32243,
+            "commonwealth_gap_after_carsf": 66737068089.7641,
+            "funding_coverage_ratio": 0.0434870761553321,
+            "net_displaced_workers": 1544567.7646064863,
+            "residual_payment_gap": 36292307137.558334,
+            "total_payment_cost": 37942307137.558334,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2032
+          },
+          {
+            "automation_revenue_captured": 1750000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 112027592104.37454,
+            "commonwealth_gap_after_carsf": 72553525695.48167,
+            "funding_coverage_ratio": 0.04245093103242453,
+            "net_displaced_workers": 1678162.6871114539,
+            "residual_payment_gap": 39474066408.89287,
+            "total_payment_cost": 41224066408.89287,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2033
+          },
+          {
+            "automation_revenue_captured": 1850000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 120038845665.70206,
+            "commonwealth_gap_after_carsf": 77737656917.3956,
+            "funding_coverage_ratio": 0.04190147655018603,
+            "net_displaced_workers": 1797320.9341871138,
+            "residual_payment_gap": 42301188748.30645,
+            "total_payment_cost": 44151188748.30645,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2034
+          }
+        ]
+      },
+      "interpretation": "High displacement paired with low reabsorption generates cliff-risk warnings when payment costs grow faster than placeholder automation revenue coverage.",
+      "name": "High Displacement Payment Stress",
+      "portfolio_input": {
+        "automation_revenue_available": 1450000000.0,
+        "commonwealth_gap_after_carsf": 52848878838.407486,
+        "designs": [
+          {
+            "admin_cost_per_person": 1200,
+            "annual_payment_per_person": 18000,
+            "design_id": "stress_transition_income",
+            "design_name": "Stress Transition Income",
+            "design_type": "TRANSITION_INCOME",
+            "duration_years": 1.0,
+            "eligible_population": "displaced_workers",
+            "illustrative_placeholder_only": true,
+            "participation_rate": 0.85,
+            "placeholder_basis": [
+              "high-displacement stress placeholder"
+            ],
+            "retraining_component_per_person": 4500
+          },
+          {
+            "admin_cost_per_person": 300,
+            "annual_payment_per_person": 0,
+            "design_id": "stress_retraining_grant",
+            "design_name": "Stress Retraining Grant",
+            "design_type": "RETRAINING_GRANT",
+            "duration_years": 1.0,
+            "eligible_population": "displaced_workers",
+            "illustrative_placeholder_only": true,
+            "participation_rate": 0.65,
+            "placeholder_basis": [
+              "high-displacement retraining placeholder"
+            ],
+            "retraining_component_per_person": 6500
+          }
+        ],
+        "displaced_workers": 1225887.6447124998,
+        "placeholder_basis": [
+          "transition funding example: high_displacement_payment_stress"
+        ],
+        "population_base": 26000000,
+        "portfolio_id": "high_displacement_payment_stress",
+        "year": 2030
+      },
+      "portfolio_result": {
+        "affordability_band": "critical_pressure",
+        "automation_revenue_available": 1450000000.0,
+        "design_results": [
+          {
+            "administrative_cost": 1250405397.6067498,
+            "base_payment_cost": 18756080964.101246,
+            "covered_people": 1042004.4980056249,
+            "design_id": "stress_transition_income",
+            "eligible_people": 1225887.6447124998,
+            "non_claims": [
+              "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+              "Transition-payment outputs are illustrative placeholders only.",
+              "Transition-payment outputs do not modify firm-level CARSF liability."
+            ],
+            "retraining_component_cost": 4689020241.025311,
+            "total_program_cost": 24695506602.73331,
+            "warnings": [
+              "Transition-payment design is illustrative placeholder only.",
+              "This result is not a real UBI, welfare, DSS, Services Australia, Treasury, or PBO costing."
+            ],
+            "year": 2030
+          },
+          {
+            "administrative_cost": 239048090.71893746,
+            "base_payment_cost": 0.0,
+            "covered_people": 796826.9690631249,
+            "design_id": "stress_retraining_grant",
+            "eligible_people": 1225887.6447124998,
+            "non_claims": [
+              "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+              "Transition-payment outputs are illustrative placeholders only.",
+              "Transition-payment outputs do not modify firm-level CARSF liability."
+            ],
+            "retraining_component_cost": 5179375298.910312,
+            "total_program_cost": 5418423389.629249,
+            "warnings": [
+              "Transition-payment design is illustrative placeholder only.",
+              "This result is not a real UBI, welfare, DSS, Services Australia, Treasury, or PBO costing."
+            ],
+            "year": 2030
+          }
+        ],
+        "funding_coverage_ratio": 0.04815047389589291,
+        "non_claims": [
+          "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Transition-payment outputs are illustrative placeholders only.",
+          "Transition-payment outputs do not modify firm-level CARSF liability."
+        ],
+        "portfolio_id": "high_displacement_payment_stress",
+        "residual_commonwealth_gap_plus_payment_gap": 81512808830.77005,
+        "residual_funding_gap": 28663929992.36256,
+        "total_program_cost": 30113929992.36256,
+        "warnings": [
+          "Payment portfolio is a placeholder affordability preview, not a real policy costing.",
+          "Firm-level CARSF liability is not modified by payment portfolio results."
+        ],
+        "year": 2030
+      },
+      "purpose": "Shows cliff risk where displacement grows faster than automation revenue coverage.",
+      "sensitivity_result": {
+        "max_residual_gap": 35939573163.73125,
+        "min_residual_gap": 20983743898.238747,
+        "non_claims": [
+          "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Transition-payment outputs are illustrative placeholders only.",
+          "Transition-payment outputs do not modify firm-level CARSF liability."
+        ],
+        "points": [
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.0570306842455453,
+            "parameter_name": "annual_payment_multiplier",
+            "parameter_value": 0.75,
+            "residual_funding_gap": 23974909751.337246,
+            "total_program_cost": 25424909751.337246,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.04815047389589291,
+            "parameter_name": "annual_payment_multiplier",
+            "parameter_value": 1.0,
+            "residual_funding_gap": 28663929992.36256,
+            "total_program_cost": 30113929992.36256,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.04166313459854207,
+            "parameter_name": "annual_payment_multiplier",
+            "parameter_value": 1.25,
+            "residual_funding_gap": 33352950233.38787,
+            "total_program_cost": 34802950233.38787,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.016603611688238935,
+            "parameter_name": "automation_revenue_available",
+            "parameter_value": 500000000.0,
+            "residual_funding_gap": 29613929992.36256,
+            "total_program_cost": 30113929992.36256,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.03320722337647787,
+            "parameter_name": "automation_revenue_available",
+            "parameter_value": 1000000000.0,
+            "residual_funding_gap": 29113929992.36256,
+            "total_program_cost": 30113929992.36256,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.06641444675295574,
+            "parameter_name": "automation_revenue_available",
+            "parameter_value": 2000000000.0,
+            "residual_funding_gap": 28113929992.36256,
+            "total_program_cost": 30113929992.36256,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.06463477547828467,
+            "parameter_name": "participation_rate",
+            "parameter_value": 0.6,
+            "residual_funding_gap": 20983743898.238747,
+            "total_program_cost": 22433743898.238747,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.04562454739643623,
+            "parameter_name": "participation_rate",
+            "parameter_value": 0.85,
+            "residual_funding_gap": 30331137189.17156,
+            "total_program_cost": 31781137189.17156,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.0387808652869708,
+            "parameter_name": "participation_rate",
+            "parameter_value": 1.0,
+            "residual_funding_gap": 35939573163.73125,
+            "total_program_cost": 37389573163.73125,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          }
+        ],
+        "sensitivity_id": "high_displacement_payment_stress",
+        "warnings": [
+          "Payment sensitivity does not modify firm-level CARSF liability."
+        ]
+      },
+      "status": "illustrative_placeholder_only"
+    },
+    {
+      "example_id": "hybrid_support_package_placeholder",
+      "firm_level_liability_modified": false,
+      "fiscal_trajectory_id": "baseline_placeholder_2026_2034",
+      "fixture_path": "examples\\transition_payments\\hybrid_support_package_placeholder.yaml",
+      "funding_result": {
+        "cumulative_automation_revenue_available": 11700000000.0,
+        "cumulative_combined_gap": 198118643049.918,
+        "cumulative_payment_cost": 125420184032.74603,
+        "cumulative_residual_payment_gap": 113720184032.74603,
+        "first_critical_cliff_risk_year": 2026,
+        "first_high_cliff_risk_year": 2026,
+        "funding_id": "hybrid_support_package_placeholder",
+        "non_claims": [
+          "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Transition-payment outputs are illustrative placeholders only.",
+          "Transition-payment outputs do not modify firm-level CARSF liability."
+        ],
+        "warnings": [
+          "Transition funding consumes fiscal trajectory outputs as placeholders only.",
+          "This is not a real UBI, welfare, DSS, Services Australia, Treasury, or PBO model."
+        ],
+        "years": [
+          {
+            "automation_revenue_captured": 900000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 15171995000.0,
+            "commonwealth_gap_after_carsf": 3777700000.0,
+            "funding_coverage_ratio": 0.07320468558790887,
+            "net_displaced_workers": 117000.0,
+            "residual_payment_gap": 11394295000.0,
+            "total_payment_cost": 12294295000.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2026
+          },
+          {
+            "automation_revenue_captured": 1000000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 18736801725.0,
+            "commonwealth_gap_after_carsf": 6627493499.999999,
+            "funding_coverage_ratio": 0.07628167580139417,
+            "net_displaced_workers": 193634.99999999997,
+            "residual_payment_gap": 12109308225.0,
+            "total_payment_cost": 13109308225.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2027
+          },
+          {
+            "automation_revenue_captured": 1100000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 21023078621.125,
+            "commonwealth_gap_after_carsf": 8477759217.499998,
+            "funding_coverage_ratio": 0.08061372309890931,
+            "net_displaced_workers": 244035.67499999993,
+            "residual_payment_gap": 12545319403.625,
+            "total_payment_cost": 13645319403.625,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2028
+          },
+          {
+            "automation_revenue_captured": 1200000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 22478454391.105618,
+            "commonwealth_gap_after_carsf": 9678443876.087494,
+            "funding_coverage_ratio": 0.08571422133667209,
+            "net_displaced_workers": 277386.97837499983,
+            "residual_payment_gap": 12800010515.018124,
+            "total_payment_cost": 14000010515.018124,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2029
+          },
+          {
+            "automation_revenue_captured": 1300000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 23393888408.029892,
+            "commonwealth_gap_after_carsf": 10457013406.09293,
+            "funding_coverage_ratio": 0.09131217348070637,
+            "net_displaced_workers": 299659.1445168748,
+            "residual_payment_gap": 12936875001.936964,
+            "total_payment_cost": 14236875001.936964,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2030
+          },
+          {
+            "automation_revenue_captured": 1400000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 23958504984.29973,
+            "commonwealth_gap_after_carsf": 10961321225.029644,
+            "funding_coverage_ratio": 0.09724123991253257,
+            "net_displaced_workers": 314732.8405519592,
+            "residual_payment_gap": 12997183759.270086,
+            "total_payment_cost": 14397183759.270086,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2031
+          },
+          {
+            "automation_revenue_captured": 1500000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 24295235646.470528,
+            "commonwealth_gap_after_carsf": 11287472619.893856,
+            "funding_coverage_ratio": 0.10339292124169387,
+            "net_displaced_workers": 325130.51495784393,
+            "residual_payment_gap": 13007763026.57667,
+            "total_payment_cost": 14507763026.57667,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2032
+          },
+          {
+            "automation_revenue_captured": 1600000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 24483986613.914917,
+            "commonwealth_gap_after_carsf": 11497936595.67371,
+            "funding_coverage_ratio": 0.10969385117965809,
+            "net_displaced_workers": 332491.7741646643,
+            "residual_payment_gap": 12986050018.241205,
+            "total_payment_cost": 14586050018.241205,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2033
+          },
+          {
+            "automation_revenue_captured": 1700000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 24576697659.972317,
+            "commonwealth_gap_after_carsf": 11633318576.894333,
+            "funding_coverage_ratio": 0.1160934228606111,
+            "net_displaced_workers": 337882.3773463079,
+            "residual_payment_gap": 12943379083.077984,
+            "total_payment_cost": 14643379083.077984,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2034
+          }
+        ]
+      },
+      "interpretation": "Hybrid support balances targeted and broad support, but broad components can dominate cost even when displaced-worker components remain moderate.",
+      "name": "Hybrid Support Package Placeholder",
+      "portfolio_input": {
+        "automation_revenue_available": 1300000000.0,
+        "commonwealth_gap_after_carsf": 10457013406.09293,
+        "designs": [
+          {
+            "admin_cost_per_person": 800,
+            "annual_payment_per_person": 9000,
+            "design_id": "hybrid_displaced_supplement",
+            "design_name": "Hybrid Displaced Supplement",
+            "design_type": "DISPLACED_WORKER_SUPPLEMENT",
+            "duration_years": 1.0,
+            "eligible_population": "displaced_workers",
+            "illustrative_placeholder_only": true,
+            "participation_rate": 0.7,
+            "placeholder_basis": [
+              "targeted supplement placeholder"
+            ],
+            "retraining_component_per_person": 2000
+          },
+          {
+            "admin_cost_per_person": 250,
+            "annual_payment_per_person": 0,
+            "design_id": "hybrid_retraining_grant",
+            "design_name": "Hybrid Retraining Grant",
+            "design_type": "RETRAINING_GRANT",
+            "duration_years": 1.0,
+            "eligible_population": "displaced_workers",
+            "illustrative_placeholder_only": true,
+            "participation_rate": 0.5,
+            "placeholder_basis": [
+              "retraining placeholder"
+            ],
+            "retraining_component_per_person": 4500
+          },
+          {
+            "admin_cost_per_person": 75,
+            "annual_payment_per_person": 350,
+            "design_id": "hybrid_automation_dividend",
+            "design_name": "Partial Automation Dividend",
+            "design_type": "AUTOMATION_DIVIDEND",
+            "duration_years": 1.0,
+            "eligible_population": "population_base",
+            "illustrative_placeholder_only": true,
+            "participation_rate": 1.0,
+            "placeholder_basis": [
+              "partial broad payment placeholder"
+            ],
+            "retraining_component_per_person": 0
+          }
+        ],
+        "displaced_workers": 299659.1445168748,
+        "placeholder_basis": [
+          "transition funding example: hybrid_support_package_placeholder"
+        ],
+        "population_base": 26000000,
+        "portfolio_id": "hybrid_support_package_placeholder",
+        "year": 2030
+      },
+      "portfolio_result": {
+        "affordability_band": "critical_pressure",
+        "automation_revenue_available": 1300000000.0,
+        "design_results": [
+          {
+            "administrative_cost": 167809120.9294499,
+            "base_payment_cost": 1887852610.4563112,
+            "covered_people": 209761.40116181236,
+            "design_id": "hybrid_displaced_supplement",
+            "eligible_people": 299659.1445168748,
+            "non_claims": [
+              "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+              "Transition-payment outputs are illustrative placeholders only.",
+              "Transition-payment outputs do not modify firm-level CARSF liability."
+            ],
+            "retraining_component_cost": 419522802.32362473,
+            "total_program_cost": 2475184533.709386,
+            "warnings": [
+              "Transition-payment design is illustrative placeholder only.",
+              "This result is not a real UBI, welfare, DSS, Services Australia, Treasury, or PBO costing."
+            ],
+            "year": 2030
+          },
+          {
+            "administrative_cost": 37457393.06460935,
+            "base_payment_cost": 0.0,
+            "covered_people": 149829.5722584374,
+            "design_id": "hybrid_retraining_grant",
+            "eligible_people": 299659.1445168748,
+            "non_claims": [
+              "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+              "Transition-payment outputs are illustrative placeholders only.",
+              "Transition-payment outputs do not modify firm-level CARSF liability."
+            ],
+            "retraining_component_cost": 674233075.1629683,
+            "total_program_cost": 711690468.2275777,
+            "warnings": [
+              "Transition-payment design is illustrative placeholder only.",
+              "This result is not a real UBI, welfare, DSS, Services Australia, Treasury, or PBO costing."
+            ],
+            "year": 2030
+          },
+          {
+            "administrative_cost": 1950000000.0,
+            "base_payment_cost": 9100000000.0,
+            "covered_people": 26000000.0,
+            "design_id": "hybrid_automation_dividend",
+            "eligible_people": 26000000.0,
+            "non_claims": [
+              "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+              "Transition-payment outputs are illustrative placeholders only.",
+              "Transition-payment outputs do not modify firm-level CARSF liability."
+            ],
+            "retraining_component_cost": 0.0,
+            "total_program_cost": 11050000000.0,
+            "warnings": [
+              "Transition-payment design is illustrative placeholder only.",
+              "This result is not a real UBI, welfare, DSS, Services Australia, Treasury, or PBO costing."
+            ],
+            "year": 2030
+          }
+        ],
+        "funding_coverage_ratio": 0.09131217348070637,
+        "non_claims": [
+          "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Transition-payment outputs are illustrative placeholders only.",
+          "Transition-payment outputs do not modify firm-level CARSF liability."
+        ],
+        "portfolio_id": "hybrid_support_package_placeholder",
+        "residual_commonwealth_gap_plus_payment_gap": 23393888408.029892,
+        "residual_funding_gap": 12936875001.936964,
+        "total_program_cost": 14236875001.936964,
+        "warnings": [
+          "Payment portfolio is a placeholder affordability preview, not a real policy costing.",
+          "Firm-level CARSF liability is not modified by payment portfolio results."
+        ],
+        "year": 2030
+      },
+      "purpose": "Mixed targeted supplement, retraining, and partial universal support package.",
+      "sensitivity_result": {
+        "max_residual_gap": 15683838154.55104,
+        "min_residual_gap": 10189911849.322886,
+        "non_claims": [
+          "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Transition-payment outputs are illustrative placeholders only.",
+          "Transition-payment outputs do not modify firm-level CARSF liability."
+        ],
+        "points": [
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.11314273051421284,
+            "parameter_name": "annual_payment_multiplier",
+            "parameter_value": 0.75,
+            "residual_funding_gap": 10189911849.322886,
+            "total_program_cost": 11489911849.322886,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.09131217348070637,
+            "parameter_name": "annual_payment_multiplier",
+            "parameter_value": 1.0,
+            "residual_funding_gap": 12936875001.936964,
+            "total_program_cost": 14236875001.936964,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.07654335775989764,
+            "parameter_name": "annual_payment_multiplier",
+            "parameter_value": 1.25,
+            "residual_funding_gap": 15683838154.55104,
+            "total_program_cost": 16983838154.55104,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.07024013344669722,
+            "parameter_name": "automation_revenue_available",
+            "parameter_value": 1000000000.0,
+            "residual_funding_gap": 13236875001.936964,
+            "total_program_cost": 14236875001.936964,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.126432240204055,
+            "parameter_name": "automation_revenue_available",
+            "parameter_value": 1800000000.0,
+            "residual_funding_gap": 12436875001.936964,
+            "total_program_cost": 14236875001.936964,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.21072040034009165,
+            "parameter_name": "automation_revenue_available",
+            "parameter_value": 3000000000.0,
+            "residual_funding_gap": 11236875001.936964,
+            "total_program_cost": 14236875001.936964,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          }
+        ],
+        "sensitivity_id": "hybrid_support_package_placeholder",
+        "warnings": [
+          "Payment sensitivity does not modify firm-level CARSF liability."
+        ]
+      },
+      "status": "illustrative_placeholder_only"
+    },
+    {
+      "example_id": "transition_income_retraining_placeholder",
+      "firm_level_liability_modified": false,
+      "fiscal_trajectory_id": "low_displacement_high_reabsorption",
+      "fixture_path": "examples\\transition_payments\\transition_income_retraining_placeholder.yaml",
+      "funding_result": {
+        "cumulative_automation_revenue_available": 7930000000.0,
+        "cumulative_combined_gap": 6649683761.990157,
+        "cumulative_payment_cost": 5190282545.733923,
+        "cumulative_residual_payment_gap": 0.0,
+        "first_critical_cliff_risk_year": null,
+        "first_high_cliff_risk_year": null,
+        "funding_id": "transition_income_retraining_placeholder",
+        "non_claims": [
+          "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Transition-payment outputs are illustrative placeholders only.",
+          "Transition-payment outputs do not modify firm-level CARSF liability."
+        ],
+        "warnings": [
+          "Transition funding consumes fiscal trajectory outputs as placeholders only.",
+          "This is not a real UBI, welfare, DSS, Services Australia, Treasury, or PBO model."
+        ],
+        "years": [
+          {
+            "automation_revenue_captured": 650000000.0,
+            "cliff_risk_band": "low",
+            "combined_gap": 453400000.0,
+            "commonwealth_gap_after_carsf": 453400000.0,
+            "funding_coverage_ratio": 1.661426782199729,
+            "net_displaced_workers": 28000.0,
+            "residual_payment_gap": 0.0,
+            "total_payment_cost": 391230000.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2026
+          },
+          {
+            "automation_revenue_captured": 700000000.0,
+            "cliff_risk_band": "low",
+            "combined_gap": 766281999.9999995,
+            "commonwealth_gap_after_carsf": 766281999.9999995,
+            "funding_coverage_ratio": 1.3204640903091809,
+            "net_displaced_workers": 37939.999999999985,
+            "residual_payment_gap": 0.0,
+            "total_payment_cost": 530116649.9999997,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2027
+          },
+          {
+            "automation_revenue_captured": 760000000.0,
+            "cliff_risk_band": "low",
+            "combined_gap": 846057409.9999994,
+            "commonwealth_gap_after_carsf": 846057409.9999994,
+            "funding_coverage_ratio": 1.3087812666601484,
+            "net_displaced_workers": 41559.69999999998,
+            "residual_payment_gap": 0.0,
+            "total_payment_cost": 580692908.2499998,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2028
+          },
+          {
+            "automation_revenue_captured": 820000000.0,
+            "cliff_risk_band": "low",
+            "combined_gap": 847770347.0499991,
+            "commonwealth_gap_after_carsf": 847770347.0499991,
+            "funding_coverage_ratio": 1.3658235914735761,
+            "net_displaced_workers": 42967.99849999997,
+            "residual_payment_gap": 0.0,
+            "total_payment_cost": 600370359.0412496,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2029
+          },
+          {
+            "automation_revenue_captured": 880000000.0,
+            "cliff_risk_band": "low",
+            "combined_gap": 822186376.2852491,
+            "commonwealth_gap_after_carsf": 822186376.2852491,
+            "funding_coverage_ratio": 1.4444151953446935,
+            "net_displaced_workers": 43603.01349249997,
+            "residual_payment_gap": 0.0,
+            "total_payment_cost": 609243106.0239558,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2030
+          },
+          {
+            "automation_revenue_captured": 940000000.0,
+            "cliff_risk_band": "low",
+            "combined_gap": 787073570.291675,
+            "commonwealth_gap_after_carsf": 787073570.291675,
+            "funding_coverage_ratio": 1.5300870418488974,
+            "net_displaced_workers": 43968.08980996246,
+            "residual_payment_gap": 0.0,
+            "total_payment_cost": 614344134.8697004,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2031
+          },
+          {
+            "automation_revenue_captured": 1000000000.0,
+            "cliff_risk_band": "low",
+            "combined_gap": 748650879.8868831,
+            "commonwealth_gap_after_carsf": 748650879.8868831,
+            "funding_coverage_ratio": 1.6177694758561778,
+            "net_displaced_workers": 44239.40169651227,
+            "residual_payment_gap": 0.0,
+            "total_payment_cost": 618135040.2045177,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2032
+          },
+          {
+            "automation_revenue_captured": 1060000000.0,
+            "cliff_risk_band": "low",
+            "combined_gap": 709095063.8966298,
+            "commonwealth_gap_after_carsf": 709095063.8966298,
+            "funding_coverage_ratio": 1.7056130259427067,
+            "net_displaced_workers": 44478.613708119825,
+            "residual_payment_gap": 0.0,
+            "total_payment_cost": 621477430.0367043,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2033
+          },
+          {
+            "automation_revenue_captured": 1120000000.0,
+            "cliff_risk_band": "low",
+            "combined_gap": 669168114.5797224,
+            "commonwealth_gap_after_carsf": 669168114.5797224,
+            "funding_coverage_ratio": 1.7929383025391226,
+            "net_displaced_workers": 44707.312027754175,
+            "residual_payment_gap": 0.0,
+            "total_payment_cost": 624672917.3077952,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2034
+          }
+        ]
+      },
+      "interpretation": "Retraining-linked support remains targeted and shows lower cliff risk in the low-displacement/high-reabsorption fiscal trajectory.",
+      "name": "Transition Income and Retraining Placeholder",
+      "portfolio_input": {
+        "automation_revenue_available": 880000000.0,
+        "commonwealth_gap_after_carsf": 822186376.2852491,
+        "designs": [
+          {
+            "admin_cost_per_person": 850,
+            "annual_payment_per_person": 15000,
+            "design_id": "transition_income",
+            "design_name": "Transition Income Placeholder",
+            "design_type": "TRANSITION_INCOME",
+            "duration_years": 1.0,
+            "eligible_population": "displaced_workers",
+            "illustrative_placeholder_only": true,
+            "participation_rate": 0.6,
+            "placeholder_basis": [
+              "retraining-linked income support placeholder"
+            ],
+            "retraining_component_per_person": 3500
+          },
+          {
+            "admin_cost_per_person": 250,
+            "annual_payment_per_person": 0,
+            "design_id": "retraining_grant",
+            "design_name": "Retraining Grant Placeholder",
+            "design_type": "RETRAINING_GRANT",
+            "duration_years": 1.0,
+            "eligible_population": "displaced_workers",
+            "illustrative_placeholder_only": true,
+            "participation_rate": 0.45,
+            "placeholder_basis": [
+              "training grant placeholder"
+            ],
+            "retraining_component_per_person": 5000
+          }
+        ],
+        "displaced_workers": 43603.01349249997,
+        "placeholder_basis": [
+          "transition funding example: transition_income_retraining_placeholder"
+        ],
+        "population_base": 26000000,
+        "portfolio_id": "transition_income_retraining_placeholder",
+        "year": 2030
+      },
+      "portfolio_result": {
+        "affordability_band": "low_pressure",
+        "automation_revenue_available": 880000000.0,
+        "design_results": [
+          {
+            "administrative_cost": 22237536.881174985,
+            "base_payment_cost": 392427121.4324997,
+            "covered_people": 26161.808095499982,
+            "design_id": "transition_income",
+            "eligible_people": 43603.01349249997,
+            "non_claims": [
+              "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+              "Transition-payment outputs are illustrative placeholders only.",
+              "Transition-payment outputs do not modify firm-level CARSF liability."
+            ],
+            "retraining_component_cost": 91566328.33424994,
+            "total_program_cost": 506230986.64792466,
+            "warnings": [
+              "Transition-payment design is illustrative placeholder only.",
+              "This result is not a real UBI, welfare, DSS, Services Australia, Treasury, or PBO costing."
+            ],
+            "year": 2030
+          },
+          {
+            "administrative_cost": 4905339.017906247,
+            "base_payment_cost": 0.0,
+            "covered_people": 19621.35607162499,
+            "design_id": "retraining_grant",
+            "eligible_people": 43603.01349249997,
+            "non_claims": [
+              "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+              "Transition-payment outputs are illustrative placeholders only.",
+              "Transition-payment outputs do not modify firm-level CARSF liability."
+            ],
+            "retraining_component_cost": 98106780.35812494,
+            "total_program_cost": 103012119.37603119,
+            "warnings": [
+              "Transition-payment design is illustrative placeholder only.",
+              "This result is not a real UBI, welfare, DSS, Services Australia, Treasury, or PBO costing."
+            ],
+            "year": 2030
+          }
+        ],
+        "funding_coverage_ratio": 1.4444151953446935,
+        "non_claims": [
+          "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Transition-payment outputs are illustrative placeholders only.",
+          "Transition-payment outputs do not modify firm-level CARSF liability."
+        ],
+        "portfolio_id": "transition_income_retraining_placeholder",
+        "residual_commonwealth_gap_plus_payment_gap": 822186376.2852491,
+        "residual_funding_gap": 0.0,
+        "total_program_cost": 609243106.0239558,
+        "warnings": [
+          "Payment portfolio is a placeholder affordability preview, not a real policy costing.",
+          "Firm-level CARSF liability is not modified by payment portfolio results."
+        ],
+        "year": 2030
+      },
+      "purpose": "Temporary retraining-linked support for displaced workers during transition.",
+      "sensitivity_result": {
+        "max_residual_gap": 0.0,
+        "min_residual_gap": 0.0,
+        "non_claims": [
+          "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Transition-payment outputs are illustrative placeholders only.",
+          "Transition-payment outputs do not modify firm-level CARSF liability."
+        ],
+        "points": [
+          {
+            "affordability_band": "low_pressure",
+            "funding_coverage_ratio": 1.6580070911442786,
+            "parameter_name": "annual_payment_multiplier",
+            "parameter_value": 0.8,
+            "residual_funding_gap": 0.0,
+            "total_program_cost": 530757681.73745584,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "low_pressure",
+            "funding_coverage_ratio": 1.4444151953446935,
+            "parameter_name": "annual_payment_multiplier",
+            "parameter_value": 1.0,
+            "residual_funding_gap": 0.0,
+            "total_program_cost": 609243106.0239558,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "low_pressure",
+            "funding_coverage_ratio": 1.2795746594993647,
+            "parameter_name": "annual_payment_multiplier",
+            "parameter_value": 1.2,
+            "residual_funding_gap": 0.0,
+            "total_program_cost": 687728530.3104558,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "low_pressure",
+            "funding_coverage_ratio": 2.0510255403408264,
+            "parameter_name": "participation_rate",
+            "parameter_value": 0.4,
+            "residual_funding_gap": 0.0,
+            "total_program_cost": 429053652.7661997,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "low_pressure",
+            "funding_coverage_ratio": 1.3673503602272175,
+            "parameter_name": "participation_rate",
+            "parameter_value": 0.6,
+            "residual_funding_gap": 0.0,
+            "total_program_cost": 643580479.1492996,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "low_pressure",
+            "funding_coverage_ratio": 1.0255127701704132,
+            "parameter_name": "participation_rate",
+            "parameter_value": 0.8,
+            "residual_funding_gap": 0.0,
+            "total_program_cost": 858107305.5323994,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          }
+        ],
+        "sensitivity_id": "transition_income_retraining_placeholder",
+        "warnings": [
+          "Payment sensitivity does not modify firm-level CARSF liability."
+        ]
+      },
+      "status": "illustrative_placeholder_only"
+    },
+    {
+      "example_id": "ubi_lite_placeholder",
+      "firm_level_liability_modified": false,
+      "fiscal_trajectory_id": "baseline_placeholder_2026_2034",
+      "fixture_path": "examples\\transition_payments\\ubi_lite_placeholder.yaml",
+      "funding_result": {
+        "cumulative_automation_revenue_available": 11700000000.0,
+        "cumulative_combined_gap": 381578459017.172,
+        "cumulative_payment_cost": 308880000000.0,
+        "cumulative_residual_payment_gap": 297180000000.0,
+        "first_critical_cliff_risk_year": 2026,
+        "first_high_cliff_risk_year": 2026,
+        "funding_id": "ubi_lite_placeholder",
+        "non_claims": [
+          "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Transition-payment outputs are illustrative placeholders only.",
+          "Transition-payment outputs do not modify firm-level CARSF liability."
+        ],
+        "warnings": [
+          "Transition funding consumes fiscal trajectory outputs as placeholders only.",
+          "This is not a real UBI, welfare, DSS, Services Australia, Treasury, or PBO model."
+        ],
+        "years": [
+          {
+            "automation_revenue_captured": 900000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 37197700000.0,
+            "commonwealth_gap_after_carsf": 3777700000.0,
+            "funding_coverage_ratio": 0.026223776223776224,
+            "net_displaced_workers": 117000.0,
+            "residual_payment_gap": 33420000000.0,
+            "total_payment_cost": 34320000000.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2026
+          },
+          {
+            "automation_revenue_captured": 1000000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 39947493500.0,
+            "commonwealth_gap_after_carsf": 6627493499.999999,
+            "funding_coverage_ratio": 0.029137529137529136,
+            "net_displaced_workers": 193634.99999999997,
+            "residual_payment_gap": 33320000000.0,
+            "total_payment_cost": 34320000000.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2027
+          },
+          {
+            "automation_revenue_captured": 1100000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 41697759217.5,
+            "commonwealth_gap_after_carsf": 8477759217.499998,
+            "funding_coverage_ratio": 0.03205128205128205,
+            "net_displaced_workers": 244035.67499999993,
+            "residual_payment_gap": 33220000000.0,
+            "total_payment_cost": 34320000000.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2028
+          },
+          {
+            "automation_revenue_captured": 1200000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 42798443876.087494,
+            "commonwealth_gap_after_carsf": 9678443876.087494,
+            "funding_coverage_ratio": 0.03496503496503497,
+            "net_displaced_workers": 277386.97837499983,
+            "residual_payment_gap": 33120000000.0,
+            "total_payment_cost": 34320000000.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2029
+          },
+          {
+            "automation_revenue_captured": 1300000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 43477013406.092926,
+            "commonwealth_gap_after_carsf": 10457013406.09293,
+            "funding_coverage_ratio": 0.03787878787878788,
+            "net_displaced_workers": 299659.1445168748,
+            "residual_payment_gap": 33020000000.0,
+            "total_payment_cost": 34320000000.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2030
+          },
+          {
+            "automation_revenue_captured": 1400000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 43881321225.02965,
+            "commonwealth_gap_after_carsf": 10961321225.029644,
+            "funding_coverage_ratio": 0.04079254079254079,
+            "net_displaced_workers": 314732.8405519592,
+            "residual_payment_gap": 32920000000.0,
+            "total_payment_cost": 34320000000.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2031
+          },
+          {
+            "automation_revenue_captured": 1500000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 44107472619.89386,
+            "commonwealth_gap_after_carsf": 11287472619.893856,
+            "funding_coverage_ratio": 0.043706293706293704,
+            "net_displaced_workers": 325130.51495784393,
+            "residual_payment_gap": 32820000000.0,
+            "total_payment_cost": 34320000000.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2032
+          },
+          {
+            "automation_revenue_captured": 1600000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 44217936595.673706,
+            "commonwealth_gap_after_carsf": 11497936595.67371,
+            "funding_coverage_ratio": 0.046620046620046623,
+            "net_displaced_workers": 332491.7741646643,
+            "residual_payment_gap": 32720000000.0,
+            "total_payment_cost": 34320000000.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2033
+          },
+          {
+            "automation_revenue_captured": 1700000000.0,
+            "cliff_risk_band": "critical",
+            "combined_gap": 44253318576.89433,
+            "commonwealth_gap_after_carsf": 11633318576.894333,
+            "funding_coverage_ratio": 0.049533799533799536,
+            "net_displaced_workers": 337882.3773463079,
+            "residual_payment_gap": 32620000000.0,
+            "total_payment_cost": 34320000000.0,
+            "warnings": [
+              "Cliff-risk band is placeholder-only and not a welfare-system stress test.",
+              "Transition funding output does not modify firm-level CARSF liability."
+            ],
+            "year": 2034
+          }
+        ]
+      },
+      "interpretation": "UBI-lite creates broad coverage but much higher aggregate cost than targeted displacement support in this placeholder test.",
+      "name": "UBI-Lite Placeholder",
+      "portfolio_input": {
+        "automation_revenue_available": 1300000000.0,
+        "commonwealth_gap_after_carsf": 10457013406.09293,
+        "designs": [
+          {
+            "admin_cost_per_person": 120,
+            "annual_payment_per_person": 1200,
+            "design_id": "ubi_lite",
+            "design_name": "UBI-Lite Placeholder",
+            "design_type": "UBI_LITE",
+            "duration_years": 1.0,
+            "eligible_population": "population_base",
+            "illustrative_placeholder_only": true,
+            "participation_rate": 1.0,
+            "placeholder_basis": [
+              "broad payment placeholder for cost comparison only"
+            ],
+            "retraining_component_per_person": 0
+          }
+        ],
+        "displaced_workers": 299659.1445168748,
+        "placeholder_basis": [
+          "transition funding example: ubi_lite_placeholder"
+        ],
+        "population_base": 26000000,
+        "portfolio_id": "ubi_lite_placeholder",
+        "year": 2030
+      },
+      "portfolio_result": {
+        "affordability_band": "critical_pressure",
+        "automation_revenue_available": 1300000000.0,
+        "design_results": [
+          {
+            "administrative_cost": 3120000000.0,
+            "base_payment_cost": 31200000000.0,
+            "covered_people": 26000000.0,
+            "design_id": "ubi_lite",
+            "eligible_people": 26000000.0,
+            "non_claims": [
+              "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+              "Transition-payment outputs are illustrative placeholders only.",
+              "Transition-payment outputs do not modify firm-level CARSF liability."
+            ],
+            "retraining_component_cost": 0.0,
+            "total_program_cost": 34320000000.0,
+            "warnings": [
+              "Transition-payment design is illustrative placeholder only.",
+              "This result is not a real UBI, welfare, DSS, Services Australia, Treasury, or PBO costing."
+            ],
+            "year": 2030
+          }
+        ],
+        "funding_coverage_ratio": 0.03787878787878788,
+        "non_claims": [
+          "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Transition-payment outputs are illustrative placeholders only.",
+          "Transition-payment outputs do not modify firm-level CARSF liability."
+        ],
+        "portfolio_id": "ubi_lite_placeholder",
+        "residual_commonwealth_gap_plus_payment_gap": 43477013406.092926,
+        "residual_funding_gap": 33020000000.0,
+        "total_program_cost": 34320000000.0,
+        "warnings": [
+          "Payment portfolio is a placeholder affordability preview, not a real policy costing.",
+          "Firm-level CARSF liability is not modified by payment portfolio results."
+        ],
+        "year": 2030
+      },
+      "purpose": "Small universal payment placeholder for broad social stabilisation testing.",
+      "sensitivity_result": {
+        "max_residual_gap": 48620000000.0,
+        "min_residual_gap": 17420000000.0,
+        "non_claims": [
+          "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+          "Transition-payment outputs are illustrative placeholders only.",
+          "Transition-payment outputs do not modify firm-level CARSF liability."
+        ],
+        "points": [
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.06944444444444445,
+            "parameter_name": "annual_payment_multiplier",
+            "parameter_value": 0.5,
+            "residual_funding_gap": 17420000000.0,
+            "total_program_cost": 18720000000.0,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.03787878787878788,
+            "parameter_name": "annual_payment_multiplier",
+            "parameter_value": 1.0,
+            "residual_funding_gap": 33020000000.0,
+            "total_program_cost": 34320000000.0,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.026041666666666668,
+            "parameter_name": "annual_payment_multiplier",
+            "parameter_value": 1.5,
+            "residual_funding_gap": 48620000000.0,
+            "total_program_cost": 49920000000.0,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.029137529137529136,
+            "parameter_name": "automation_revenue_available",
+            "parameter_value": 1000000000.0,
+            "residual_funding_gap": 33320000000.0,
+            "total_program_cost": 34320000000.0,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.07284382284382285,
+            "parameter_name": "automation_revenue_available",
+            "parameter_value": 2500000000.0,
+            "residual_funding_gap": 31820000000.0,
+            "total_program_cost": 34320000000.0,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.1456876456876457,
+            "parameter_name": "automation_revenue_available",
+            "parameter_value": 5000000000.0,
+            "residual_funding_gap": 29320000000.0,
+            "total_program_cost": 34320000000.0,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.04924242424242424,
+            "parameter_name": "population_base",
+            "parameter_value": 20000000.0,
+            "residual_funding_gap": 25100000000.0,
+            "total_program_cost": 26400000000.0,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.03787878787878788,
+            "parameter_name": "population_base",
+            "parameter_value": 26000000.0,
+            "residual_funding_gap": 33020000000.0,
+            "total_program_cost": 34320000000.0,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          },
+          {
+            "affordability_band": "critical_pressure",
+            "funding_coverage_ratio": 0.03282828282828283,
+            "parameter_name": "population_base",
+            "parameter_value": 30000000.0,
+            "residual_funding_gap": 38300000000.0,
+            "total_program_cost": 39600000000.0,
+            "warnings": [
+              "Payment sensitivity point is placeholder-only and not a welfare-policy claim."
+            ]
+          }
+        ],
+        "sensitivity_id": "ubi_lite_placeholder",
+        "warnings": [
+          "Payment sensitivity does not modify firm-level CARSF liability."
+        ]
+      },
+      "status": "illustrative_placeholder_only"
+    }
+  ],
+  "metadata": {
+    "generated_at": "2026-05-13T16:40:21+00:00",
+    "non_claims": [
+      "These are prototype transition-payment funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.",
+      "All payment designs and population values are illustrative placeholders and are not calibrated welfare settings.",
+      "Transition-payment funding outputs do not modify firm-level CARSF liability."
+    ],
+    "status": "prototype_transition_payment_funding_outputs_only",
+    "version": "CARSF V1.5 prototype"
+  }
+}

@@ -349,13 +349,41 @@ Fiscal-accounting hardening added before merge:
 - Broader labour-linked pressure reports superannuation contribution pressure separately.
 - Offsetting company tax, GST, and other Commonwealth revenue gains are allowed only when `allow_revenue_gains: true`.
 
+## V1.5 Transition-Payment Funding Module
+
+Branch: `v1.5-transition-payment-funding-module`
+
+Baseline: PR #11 merged into `main`, including national fiscal trajectory, workforce displacement, public revenue, transfer pressure, and fiscal sensitivity sweeps.
+
+Purpose of this build:
+
+- Add non-operative transition-payment design calculations.
+- Add placeholder payment portfolio comparisons.
+- Link fiscal trajectory outputs to year-by-year transition funding status.
+- Add payment sensitivity sweeps.
+- Add transition-payment examples, reports, tests, CI step, and Streamlit page.
+
+Tests run:
+
+- `python -m pytest` - 390 passed, 1 pytest-asyncio deprecation warning under Python 3.14.
+- `python -m compileall -q model simulator scripts` - passed.
+- Recursive YAML parse check for schedules/examples/data - parsed 43 YAML files.
+- `python scripts/run_examples.py` - regenerated existing example report outputs successfully.
+- `python scripts/run_evidence_workflow.py` - regenerated mock evidence workflow reports successfully.
+- `python scripts/run_ingestion_controls.py` - regenerated secure-ingestion control reports successfully.
+- `python scripts/run_repo_guardrails.py` - passed with zero denied findings and 48 warning findings.
+- `python scripts/run_investment_guardrails.py` - regenerated investment guardrail reports successfully.
+- `python scripts/run_fiscal_trajectory.py` - regenerated fiscal trajectory reports successfully.
+- `python scripts/run_transition_funding.py` - generated transition funding reports successfully.
+- Streamlit bare import probe for `simulator/pages/14_Transition_Funding.py` - passed.
+
 Reports generated:
 
-- `reports/fiscal_trajectory.json`
-- `reports/fiscal_trajectory.md`
+- `reports/transition_funding.json`
+- `reports/transition_funding.md`
 
 Limitations:
 
-- Fiscal trajectory outputs are prototype placeholders only.
-- They are not forecasts, Treasury modelling, ATO estimates, ABS analysis, DSS estimates, PBO costing, legal advice, tax advice, or economic validation.
-- The national fiscal trajectory layer does not modify firm-level CARSF liability.
+- Transition-payment outputs are illustrative placeholders only.
+- They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.
+- The transition funding layer does not modify firm-level CARSF liability.
