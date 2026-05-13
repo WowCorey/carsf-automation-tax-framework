@@ -22,6 +22,7 @@ from carsf.example_runner import (  # noqa: E402
     run_all_examples,
 )
 from carsf.group_runner import (  # noqa: E402
+    APPORTIONMENT_SCOPE_NOTE,
     GROUPED_NON_CLAIMS,
     GROUPED_REPORT_STATUS,
     GroupedPreviewResult,
@@ -293,10 +294,12 @@ def write_reports(reports_dir: Path, results: list[ExampleResult]) -> tuple[Path
 
 def grouped_json_payload(grouped: GroupedPreviewResult, metadata: dict[str, Any]) -> dict[str, Any]:
     payload = grouped.to_jsonable()
+    payload["apportionment_scope_note"] = APPORTIONMENT_SCOPE_NOTE
     payload["metadata"] = {
         **metadata,
         "status": GROUPED_REPORT_STATUS,
         "non_claims": GROUPED_NON_CLAIMS,
+        "apportionment_scope_note": APPORTIONMENT_SCOPE_NOTE,
     }
     return payload
 
@@ -394,9 +397,11 @@ def build_grouped_markdown(grouped: GroupedPreviewResult, metadata: dict[str, An
             f"- Difference: {_grouped_number(liability_difference)}",
             f"- Aggregation flags: {risk_flags(aggregation.flags)}",
             "",
-            "## G. Multi-Schedule Apportionment Example",
+            "## G. Mixed-Activity / Prototype Apportionment Example",
             "",
             mixed["purpose"],
+            "",
+            APPORTIONMENT_SCOPE_NOTE,
             "",
             f"- Valid: {str(apportionment.valid).lower()}",
             f"- Review required: {str(apportionment.review_required).lower()}",

@@ -23,7 +23,8 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Add schedule-specific canonical output units and AII component mappings.
 - Add anti-avoidance examples for entity splitting, offshore automation services, sector arbitrage, token oversight jobs, and related-party AI service fees.
 - Add executable prototype safe-harbour, anti-avoidance, and grouped-entity review flags without modifying liability.
-- Add prototype grouped-entity aggregation previews and multi-schedule apportionment previews without implementing legal grouping or tax-law attribution.
+- Add prototype grouped-entity aggregation previews and mixed-activity / prototype apportionment previews without implementing legal grouping or tax-law attribution.
+- The current mixed-activity example uses the combined `logistics_warehousing` prototype schedule for all activity slices. It tests apportionment plumbing and share-validation logic, not final cross-sector schedule blending. True multi-schedule blending requires additional calibrated sector schedules.
 
 ## Data Separation
 

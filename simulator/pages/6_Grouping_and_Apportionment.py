@@ -9,7 +9,7 @@ import streamlit as st
 REPO_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO_ROOT / "model"))
 
-from carsf.group_runner import run_grouped_previews, standalone_max_risk  # noqa: E402
+from carsf.group_runner import APPORTIONMENT_SCOPE_NOTE, run_grouped_previews, standalone_max_risk  # noqa: E402
 
 
 def fmt(value: float | None) -> str:
@@ -82,8 +82,9 @@ st.table(
     ]
 )
 
-st.markdown("### Multi-Schedule Apportionment")
+st.markdown("### Mixed-Activity / Prototype Apportionment Example")
 st.write(preview.mixed_apportionment["purpose"])
+st.info(APPORTIONMENT_SCOPE_NOTE)
 st.write(
     {
         "valid": apportionment.valid,

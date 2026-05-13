@@ -17,7 +17,7 @@ Status: private research prototype.
 - Executable prototype anti-avoidance heuristics for token oversight, fake QLC inflation, offshore automation services, related-party AI fees, entity splitting, sector classification arbitrage, cloud-cost relabelling, robotics leasing, and artificial low AAVA.
 - Prototype grouped-entity review flags for entity splitting, related operating entities, separated IP/platform/employer structures, and thin Australian employing entities.
 - Prototype grouped-entity aggregation preview for illustrative related-entity structures.
-- Prototype multi-schedule apportionment preview for mixed activity examples.
+- Mixed-activity / prototype apportionment preview for activity-share validation.
 - Hybrid logistics stress variant with non-zero but intermediate NLTG.
 
 ## What Is Still Placeholder
@@ -33,6 +33,7 @@ Status: private research prototype.
 - Anti-avoidance and grouping thresholds.
 - Grouped-entity aggregation preview inputs.
 - Apportionment activity shares and bases.
+- The current mixed-activity example uses the combined `logistics_warehousing` prototype schedule for all activity slices; it tests apportionment plumbing and share-validation logic, not final cross-sector schedule blending. True multi-schedule blending requires additional calibrated sector schedules.
 
 ## What Is Not Yet Solved
 

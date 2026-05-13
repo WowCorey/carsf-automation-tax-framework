@@ -23,6 +23,11 @@ GROUPED_NON_CLAIMS = [
     "Not a real tax assessment.",
     "All grouped and apportioned values use illustrative placeholder inputs.",
 ]
+APPORTIONMENT_SCOPE_NOTE = (
+    "This example currently uses the combined logistics_warehousing prototype schedule for all activity slices. "
+    "It tests apportionment plumbing and share-validation logic, not final cross-sector schedule blending. "
+    "True multi-schedule blending requires additional calibrated sector schedules."
+)
 
 
 @dataclass(frozen=True)

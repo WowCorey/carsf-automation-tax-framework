@@ -1,6 +1,6 @@
 # CARSF V1.5 Grouped-Entity and Apportionment Results
 
-Generated at: `2026-05-13T07:06:27+00:00`
+Generated at: `2026-05-13T07:14:14+00:00`
 
 Version: CARSF V1.5 prototype
 
@@ -58,9 +58,11 @@ Show that standalone fragments may appear lower risk while the grouped preview r
 - Difference: 863,360.00
 - Aggregation flags: OFFSHORE_AUTOMATION_SERVICE, RELATED_PARTY_AI_SERVICE_FEES, ENTITY_SPLITTING_PREVIEW, SECTOR_CLASSIFICATION_ARBITRAGE
 
-## G. Multi-Schedule Apportionment Example
+## G. Mixed-Activity / Prototype Apportionment Example
 
 Show prototype apportionment by activity rather than forcing a mixed firm into a single unreviewed classification.
+
+This example currently uses the combined logistics_warehousing prototype schedule for all activity slices. It tests apportionment plumbing and share-validation logic, not final cross-sector schedule blending. True multi-schedule blending requires additional calibrated sector schedules.
 
 - Valid: true
 - Review required: false

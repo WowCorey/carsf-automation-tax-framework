@@ -74,9 +74,23 @@ def test_grouped_markdown_report_contains_required_sections(repo_root) -> None:
     markdown = (reports_dir / "grouped_entity_results.md").read_text(encoding="utf-8")
 
     assert "## A. Grouped-Entity Aggregation Overview" in markdown
-    assert "## G. Multi-Schedule Apportionment Example" in markdown
+    assert "## G. Mixed-Activity / Prototype Apportionment Example" in markdown
     assert "## I. Hybrid Logistics Stress Variant" in markdown
     assert "| Example | Standalone Risk | Group Risk | Aggregation Needed | Apportionment Needed | Main Reason |" in markdown
+    assert "not final cross-sector schedule blending" in markdown
+
+
+def test_grouped_json_report_contains_apportionment_scope_note(repo_root) -> None:
+    reports_dir = repo_root / "tmp" / "test-grouped-json-note"
+    subprocess.run(
+        [sys.executable, "scripts/run_examples.py", "--reports-dir", str(reports_dir)],
+        cwd=repo_root,
+        check=True,
+    )
+    payload = json.loads((reports_dir / "grouped_entity_results.json").read_text(encoding="utf-8"))
+    combined = json.dumps(payload).lower()
+
+    assert "not final cross-sector schedule blending" in combined
 
 
 def test_grouped_report_does_not_claim_legal_grouping_or_tax_validation(repo_root) -> None:
