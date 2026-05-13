@@ -18,7 +18,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 ## Measurement Appendix Work
 
 - Define worker-level QLC cap in policy text and code.
-- Define AAVA deductions as confirmed, illustrative, placeholder, or unresolved.
+- Define AAVA deductions as confirmed, illustrative, placeholder, or unresolved. Initial taxonomy lives in `paper/aava_deductibility_appendix.md`.
 - Define zero-damage and zero-revenue handling for CARS-I and CoverageRatio.
 - Add schedule-specific canonical output units and AII component mappings.
 - Add anti-avoidance examples for entity splitting, offshore automation services, sector arbitrage, token oversight jobs, and related-party AI service fees.

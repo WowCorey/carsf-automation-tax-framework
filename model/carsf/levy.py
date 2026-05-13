@@ -36,8 +36,8 @@ def automation_rent_levy(
         raise ValueError("uplift_rate cannot be negative")
     if capital_base < 0:
         raise ValueError("capital_base cannot be negative")
-    if rent_tax_rate < 0:
-        raise ValueError("rent_tax_rate cannot be negative")
+    if not 0 <= rent_tax_rate <= 1:
+        raise ValueError("rent_tax_rate must be in [0, 1]")
     return max(0.0, aava - (uplift_rate * capital_base)) * rent_tax_rate
 
 

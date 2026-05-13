@@ -6,7 +6,7 @@ not a tax calculator and does not contain calibrated Australian policy settings.
 
 from .aii import automation_intensity_index
 from .aava import australian_automated_value_added
-from .coverage import coverage_measures, cars_i, coverage_ratio
+from .coverage import coverage_measures, cars_i, coverage_ratio, format_coverage_ratio
 from .frv import net_labour_tax_gap
 from .libc import human_labour_equivalent, output_per_fte_benchmark
 from .levy import (
@@ -32,6 +32,7 @@ __all__ = [
     "cars_i",
     "coverage_measures",
     "coverage_ratio",
+    "format_coverage_ratio",
     "human_labour_equivalent",
     "net_labour_tax_gap",
     "output_per_fte_benchmark",

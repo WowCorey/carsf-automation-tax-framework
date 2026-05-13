@@ -35,5 +35,6 @@ expected_behaviour: Robotic substitution case should produce materially higher N
 red_team_notes:
   flags:
     - token_human_oversight_jobs
+    - fake_qlc_inflation
   notes:
     - Tests whether nominal supervision roles are enough to suppress NLTG.
