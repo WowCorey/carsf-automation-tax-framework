@@ -40,3 +40,15 @@ Generated reports:
 These packets are synthetic mock evidence only. They do not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.
 
 Future real evidence handling would require strict privacy, secrecy, legal, ATO/Treasury, data-owner, and governance controls before any external use.
+
+## Secure Ingestion Controls
+
+Mock evidence is allowed only because it is synthetic. Non-synthetic evidence requires secure-ingestion controls and external secure-system design.
+
+Run:
+
+```powershell
+python scripts/run_ingestion_controls.py
+```
+
+Real evidence, personal data, taxpayer data, business records, restricted government data, secrets, credentials, invoices, contracts, employment records, payslips, and transfer-pricing documents must not be committed to this repository.

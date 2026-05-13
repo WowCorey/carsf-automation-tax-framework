@@ -14,5 +14,16 @@ build/
 .streamlit/secrets.toml
 *.log
 tmp/
+data/incoming/
+data/private/
+data/restricted/
+data/real_evidence/
+evidence_inbox/
+secure_drop/
+*.secret
+*.key
+*.pem
+*.p12
+*.pfx
 .DS_Store
 Thumbs.db

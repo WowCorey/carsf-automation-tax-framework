@@ -110,6 +110,11 @@ def build_json_payload(rows: list[dict[str, Any]], metadata: dict[str, Any]) -> 
                 MOCK_PACKET_NON_CLAIM,
                 "Mock evidence can support prototype workflow testing only; it cannot create real-world sufficiency.",
             ],
+            "secure_ingestion_controls": {
+                "report_markdown": "reports/secure_ingestion_controls.md",
+                "report_json": "reports/secure_ingestion_controls.json",
+                "rule": "Only synthetic mock evidence is allowed in this repo; non-synthetic evidence requires external secure-system design.",
+            },
         },
         "packets": rows,
     }
@@ -253,6 +258,17 @@ def build_markdown(rows: list[dict[str, Any]], metadata: dict[str, Any]) -> str:
     )
     for status, count in sorted(_count_by_status(rows).items()):
         lines.append(f"- `{status}`: {count}")
+    lines.extend(
+        [
+            "",
+            "## J. Secure Ingestion Controls",
+            "",
+            "- Mock evidence is allowed only because it is synthetic.",
+            "- Non-synthetic evidence requires secure ingestion controls and external secure-system design.",
+            "- Real evidence, personal data, taxpayer data, business records, restricted government data, secrets, credentials, invoices, contracts, and employment records must not be committed to this repo.",
+            "- Run `python scripts/run_ingestion_controls.py` to generate `reports/secure_ingestion_controls.md` and `reports/secure_ingestion_controls.json`.",
+        ]
+    )
     return "\n".join(lines).rstrip() + "\n"
 
 

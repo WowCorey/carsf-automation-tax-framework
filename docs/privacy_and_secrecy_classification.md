@@ -40,3 +40,9 @@ Mock packets are rejected if they contain markers such as TFN, tax file number, 
 This is prototype classification only. It is not legal, tax, Treasury, ATO, ABS, Fair Work, audit, forensic, privacy, secrecy, or economic validation.
 
 Future real evidence handling requires a separate data-governance design, privacy impact review, legal review, secure storage model, access controls, retention controls, and source-authorisation process.
+
+## Link to Ingestion Controls
+
+Classification is advisory only. The secure-ingestion layer remains default-deny and only permits synthetic mock evidence in `data/mock_evidence/`.
+
+High or restricted-placeholder mock classifications may require review, but that review is not real IAM enforcement or official privacy/secrecy approval.

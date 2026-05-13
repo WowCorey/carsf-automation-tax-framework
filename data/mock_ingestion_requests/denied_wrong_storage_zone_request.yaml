@@ -1,0 +1,16 @@
+request_id: denied_wrong_storage_zone_request
+evidence_mode: synthetic_mock
+source_description: Synthetic fixture attempting to store mock evidence in a prohibited report zone.
+intended_use: Test denial when storage zone is not data/mock_evidence/.
+storage_zone: reports/
+synthetic_mock_evidence_only: true
+contains_personal_data: false
+contains_real_business_data: false
+contains_restricted_data: false
+contains_secrets: false
+declared_sensitivity: low
+requested_by: prototype_test
+metadata:
+  expected_allowed: false
+  synthetic_fixture_only: true
+  note: Reports may contain derived synthetic summaries only, not evidence payloads.

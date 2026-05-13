@@ -1,0 +1,16 @@
+request_id: allowed_mock_evidence_request
+evidence_mode: synthetic_mock
+source_description: Synthetic workflow fixture for a mock evidence packet.
+intended_use: Test secure ingestion allow path for synthetic-only evidence.
+storage_zone: data/mock_evidence/
+synthetic_mock_evidence_only: true
+contains_personal_data: false
+contains_real_business_data: false
+contains_restricted_data: false
+contains_secrets: false
+declared_sensitivity: low
+requested_by: prototype_test
+metadata:
+  expected_allowed: true
+  synthetic_fixture_only: true
+  note: No real evidence or sensitive source values are included.

@@ -48,7 +48,7 @@
           "safe_harbour": "placeholder_only"
         },
         "example_id": "mechanic_traditional",
-        "generated_at": "2026-05-13T09:11:15+00:00",
+        "generated_at": "2026-05-13T09:38:45+00:00",
         "limitations": [
           "Inputs are illustrative placeholders unless separately verified.",
           "Decision entries record model flow and review signals only."
@@ -376,7 +376,7 @@
           "safe_harbour": "placeholder_only"
         },
         "example_id": "mechanic_ai_admin",
-        "generated_at": "2026-05-13T09:11:15+00:00",
+        "generated_at": "2026-05-13T09:38:45+00:00",
         "limitations": [
           "Inputs are illustrative placeholders unless separately verified.",
           "Decision entries record model flow and review signals only."
@@ -709,7 +709,7 @@
           "safe_harbour": "placeholder_only"
         },
         "example_id": "mechanic_robotic",
-        "generated_at": "2026-05-13T09:11:15+00:00",
+        "generated_at": "2026-05-13T09:38:45+00:00",
         "limitations": [
           "Inputs are illustrative placeholders unless separately verified.",
           "Decision entries record model flow and review signals only."
@@ -1014,7 +1014,7 @@
           "safe_harbour": "placeholder_only"
         },
         "example_id": "logistics_human_heavy",
-        "generated_at": "2026-05-13T09:11:15+00:00",
+        "generated_at": "2026-05-13T09:38:45+00:00",
         "limitations": [
           "Inputs are illustrative placeholders unless separately verified.",
           "Decision entries record model flow and review signals only."
@@ -1374,7 +1374,7 @@
           "safe_harbour": "placeholder_only"
         },
         "example_id": "logistics_hybrid",
-        "generated_at": "2026-05-13T09:11:15+00:00",
+        "generated_at": "2026-05-13T09:38:45+00:00",
         "limitations": [
           "Inputs are illustrative placeholders unless separately verified.",
           "Decision entries record model flow and review signals only."
@@ -1755,7 +1755,7 @@
           "safe_harbour": "placeholder_only"
         },
         "example_id": "logistics_ai_platform",
-        "generated_at": "2026-05-13T09:11:15+00:00",
+        "generated_at": "2026-05-13T09:38:45+00:00",
         "limitations": [
           "Inputs are illustrative placeholders unless separately verified.",
           "Decision entries record model flow and review signals only."
@@ -2046,7 +2046,7 @@
     }
   ],
   "metadata": {
-    "generated_at": "2026-05-13T09:11:15+00:00",
+    "generated_at": "2026-05-13T09:38:45+00:00",
     "non_claims": [
       "Not legal advice.",
       "Not tax advice.",
