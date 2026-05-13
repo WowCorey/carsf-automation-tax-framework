@@ -32,6 +32,19 @@ python -m pip install -r requirements.txt
 python -m pytest
 ```
 
+## Run Worked Examples
+
+```powershell
+python scripts/run_examples.py
+```
+
+Generated reports:
+
+- `reports/example_results.md`
+- `reports/example_results.json`
+
+The reports are illustrative placeholder outputs only. They are not legal, tax, Treasury, ATO, economic, or real liability calculations.
+
 ## Run the Simulator
 
 ```powershell
