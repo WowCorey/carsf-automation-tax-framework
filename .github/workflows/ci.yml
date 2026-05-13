@@ -59,5 +59,8 @@ jobs:
       - name: Run transition funding
         run: python scripts/run_transition_funding.py
 
+      - name: Run payment interactions
+        run: python scripts/run_payment_interactions.py
+
       - name: Run repository guardrails
         run: python scripts/run_repo_guardrails.py

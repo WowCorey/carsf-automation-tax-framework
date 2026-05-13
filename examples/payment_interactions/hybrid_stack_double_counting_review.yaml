@@ -1,0 +1,86 @@
+example_id: hybrid_stack_double_counting_review
+name: Hybrid Stack Double-Counting Review
+purpose: Shows supplement plus retraining plus UBI-lite overlap and double-count prevention.
+status: prototype_only
+illustrative_placeholder_only: true
+not_calibrated: true
+no_policy_claim: true
+no_welfare_advice: true
+synthetic_placeholder_only: true
+placeholder_notice: All values are illustrative placeholders only and are not real welfare, DSS, Services Australia, Treasury, PBO, or budget calibration values.
+year: 2028
+automation_revenue_available: 7000000
+commonwealth_gap_after_carsf: 2500000
+baseline:
+  baseline_id: existing_transfer_baseline_hybrid_stack
+  eligible_population: 1200
+  average_existing_support_per_person: 2500
+  existing_admin_cost_per_person: 150
+  baseline_program_type: existing_support_placeholder
+  illustrative_placeholder_only: true
+target_population:
+  total_population: 12000
+  displaced_workers: 1400
+  reabsorbed_workers: 300
+  retraining_participants: 600
+  existing_support_recipients: 1200
+  counts_may_overlap: true
+  criteria:
+    criteria_id: hybrid_support_placeholder
+    target_group: displaced workers with partial universal component
+    displaced_worker_required: true
+    retraining_required: false
+    income_test_placeholder: true
+    household_test_placeholder: true
+    recent_employment_link_required: true
+    automation_displacement_link_required: true
+    exclusion_rules: []
+    illustrative_placeholder_only: true
+phase_rule:
+  rule_id: hybrid_full_placeholder
+  phase_in_start_year: 2026
+  phase_in_end_year: 2026
+  phase_out_start_year:
+  phase_out_end_year:
+  minimum_payment_multiplier: 1.0
+  maximum_payment_multiplier: 1.0
+  taper_rate_placeholder: 0.0
+  illustrative_placeholder_only: true
+stack_components:
+  - component_id: ubi_lite
+    component_type: UBI_LITE
+    eligible_people: 12000
+    payment_per_person: 500
+    stack_priority: 1
+    mutually_exclusive_with: []
+    can_stack_with:
+      - displaced_worker_supplement
+      - retraining_grant
+    phase_multiplier: 1.0
+  - component_id: displaced_worker_supplement
+    component_type: DISPLACED_WORKER_SUPPLEMENT
+    eligible_people: 1100
+    payment_per_person: 4000
+    stack_priority: 2
+    mutually_exclusive_with:
+      - retraining_grant
+    can_stack_with:
+      - ubi_lite
+    phase_multiplier: 1.0
+  - component_id: retraining_grant
+    component_type: RETRAINING_GRANT
+    eligible_people: 600
+    payment_per_person: 3000
+    stack_priority: 3
+    mutually_exclusive_with:
+      - displaced_worker_supplement
+    can_stack_with:
+      - ubi_lite
+    phase_multiplier: 1.0
+support_incidence_assumption:
+  household_spend_share: 0.7
+  gst_recovery_rate_placeholder: 0.04
+  hardship_offset_rate_placeholder: 0.08
+  savings_or_debt_repayment_share: 0.2
+  illustrative_placeholder_only: true
+interpretation: The hybrid package shows a gross stack cost, then a prototype double-count adjustment where retraining grants and supplements are mutually exclusive.

@@ -84,6 +84,24 @@ Required source categories include DSS / Services Australia program data, Treasu
 
 No such calibration has occurred in this repository, and transition-funding outputs are not UBI policy or welfare advice.
 
+## Payment Interaction Calibration
+
+Payment interaction and targeting mechanics require future calibration and legal review before any policy claim:
+
+- existing transfer baseline definitions
+- displaced-worker and retraining eligibility rules
+- income and household test thresholds
+- overlap rules between universal and targeted payments
+- phase-in, taper, and phase-out mechanics
+- person-level double-counting prevention rules
+- support-payment consumption flow and GST recovery assumptions
+- hardship-offset assumptions
+- inclusion, exclusion, leakage, and cliff-risk thresholds
+
+Required source categories include DSS / Services Australia program data, Treasury costing methods, PBO costing methods, ABS household and labour data, ATO aggregated tax data, privacy/legal review, and welfare-administration design review.
+
+No such calibration has occurred in this repository, and payment-interaction outputs are not eligibility law, welfare advice, Centrelink/DSS/Services Australia modelling, or validated fiscal savings.
+
 ## Non-Claims
 
 The calibration shell is not legal, tax, Treasury, ATO, ABS, Fair Work, OECD, BEPS, audit, forensic, or economic validation. It does not prove any model setting is correct.

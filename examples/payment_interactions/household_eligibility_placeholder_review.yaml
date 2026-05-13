@@ -1,0 +1,64 @@
+example_id: household_eligibility_placeholder_review
+name: Household Eligibility Placeholder Review
+purpose: Shows household and income test placeholders requiring review.
+status: prototype_only
+illustrative_placeholder_only: true
+not_calibrated: true
+no_policy_claim: true
+no_welfare_advice: true
+synthetic_placeholder_only: true
+placeholder_notice: All values are illustrative placeholders only and are not real welfare, DSS, Services Australia, Treasury, PBO, or budget calibration values.
+year: 2028
+automation_revenue_available: 2500000
+commonwealth_gap_after_carsf: 2200000
+baseline:
+  baseline_id: existing_transfer_baseline_household_review
+  eligible_population: 700
+  average_existing_support_per_person: 3000
+  existing_admin_cost_per_person: 200
+  baseline_program_type: existing_support_placeholder
+  illustrative_placeholder_only: true
+target_population:
+  total_population: 8000
+  displaced_workers: 900
+  reabsorbed_workers: 150
+  retraining_participants: 300
+  existing_support_recipients: 700
+  counts_may_overlap: true
+  criteria:
+    criteria_id: household_income_placeholder
+    target_group: displaced workers subject to unresolved household and income tests
+    displaced_worker_required: true
+    retraining_required: false
+    income_test_placeholder: true
+    household_test_placeholder: true
+    recent_employment_link_required: true
+    automation_displacement_link_required: true
+    exclusion_rules: []
+    illustrative_placeholder_only: true
+phase_rule:
+  rule_id: household_review_phase_placeholder
+  phase_in_start_year: 2026
+  phase_in_end_year: 2026
+  phase_out_start_year: 2032
+  phase_out_end_year: 2034
+  minimum_payment_multiplier: 0.25
+  maximum_payment_multiplier: 1.0
+  taper_rate_placeholder: 0.25
+  illustrative_placeholder_only: true
+stack_components:
+  - component_id: household_review_supplement
+    component_type: DISPLACED_WORKER_SUPPLEMENT
+    eligible_people: 750
+    payment_per_person: 4500
+    stack_priority: 1
+    mutually_exclusive_with: []
+    can_stack_with: []
+    phase_multiplier: 1.0
+support_incidence_assumption:
+  household_spend_share: 0.68
+  gst_recovery_rate_placeholder: 0.04
+  hardship_offset_rate_placeholder: 0.1
+  savings_or_debt_repayment_share: 0.22
+  illustrative_placeholder_only: true
+interpretation: This case keeps household and income eligibility unresolved. It should require review rather than implying a final welfare eligibility rule.

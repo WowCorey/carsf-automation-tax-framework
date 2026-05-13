@@ -1,0 +1,74 @@
+example_id: high_cliff_risk_interaction_case
+name: High Cliff-Risk Interaction Case
+purpose: Shows high displacement, weak automation revenue, and high residual support gap.
+status: prototype_only
+illustrative_placeholder_only: true
+not_calibrated: true
+no_policy_claim: true
+no_welfare_advice: true
+synthetic_placeholder_only: true
+placeholder_notice: All values are illustrative placeholders only and are not real welfare, DSS, Services Australia, Treasury, PBO, or budget calibration values.
+year: 2029
+automation_revenue_available: 1000000
+commonwealth_gap_after_carsf: 12000000
+baseline:
+  baseline_id: existing_transfer_baseline_high_cliff
+  eligible_population: 2500
+  average_existing_support_per_person: 3500
+  existing_admin_cost_per_person: 250
+  baseline_program_type: existing_support_placeholder
+  illustrative_placeholder_only: true
+target_population:
+  total_population: 20000
+  displaced_workers: 5000
+  reabsorbed_workers: 200
+  retraining_participants: 500
+  existing_support_recipients: 2500
+  counts_may_overlap: true
+  criteria:
+    criteria_id: weak_link_high_cliff_placeholder
+    target_group: broad automation-transition support with weak displacement linkage
+    displaced_worker_required: false
+    retraining_required: true
+    income_test_placeholder: true
+    household_test_placeholder: true
+    recent_employment_link_required: false
+    automation_displacement_link_required: false
+    exclusion_rules: []
+    illustrative_placeholder_only: true
+phase_rule:
+  rule_id: high_cliff_full_placeholder
+  phase_in_start_year: 2026
+  phase_in_end_year: 2026
+  phase_out_start_year:
+  phase_out_end_year:
+  minimum_payment_multiplier: 1.0
+  maximum_payment_multiplier: 1.0
+  taper_rate_placeholder: 0.0
+  illustrative_placeholder_only: true
+stack_components:
+  - component_id: broad_transition_income
+    component_type: TRANSITION_INCOME
+    eligible_people: 5000
+    payment_per_person: 9000
+    stack_priority: 1
+    mutually_exclusive_with: []
+    can_stack_with:
+      - retraining_grant
+    phase_multiplier: 1.0
+  - component_id: retraining_grant
+    component_type: RETRAINING_GRANT
+    eligible_people: 500
+    payment_per_person: 4000
+    stack_priority: 2
+    mutually_exclusive_with: []
+    can_stack_with:
+      - broad_transition_income
+    phase_multiplier: 1.0
+support_incidence_assumption:
+  household_spend_share: 0.75
+  gst_recovery_rate_placeholder: 0.04
+  hardship_offset_rate_placeholder: 0.12
+  savings_or_debt_repayment_share: 0.15
+  illustrative_placeholder_only: true
+interpretation: High displacement and weak automation revenue create a large residual support gap. The weak targeting link and unresolved household/income tests push this into a high or critical review band under placeholders.

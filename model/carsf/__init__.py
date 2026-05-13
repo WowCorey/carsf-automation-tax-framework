@@ -60,8 +60,11 @@ from .mixed_units import (
     evaluate_mixed_unit_exposure,
     evaluate_unit_compatibility,
 )
+from .payment_interactions import PaymentInteractionInput, PaymentInteractionResult, evaluate_payment_interactions
 from .payment_portfolio import PaymentPortfolioInput, PaymentPortfolioResult, evaluate_payment_portfolio
 from .payment_sensitivity import PaymentSensitivityPoint, PaymentSensitivityResult, run_payment_sensitivity
+from .payment_stack import PaymentStackComponent, PaymentStackResult, evaluate_payment_stack
+from .phase_rules import PhaseRule, PhaseRuleYearResult, evaluate_phase_rule
 from .public_revenue import PublicRevenueInput, PublicRevenueResult, evaluate_public_revenue
 from .qlc import qualified_labour_contribution_firm, qualified_labour_contribution_worker
 from .redaction import RedactionPlan, create_redaction_plan
@@ -91,6 +94,8 @@ from .sensitivity import (
     sweep_liability_cap,
     sweep_pass_through,
 )
+from .support_incidence import SupportIncidenceAssumption, SupportIncidenceResult, evaluate_support_incidence
+from .targeting import TargetPopulationInput, TargetPopulationResult, TargetingCriteria, evaluate_target_population
 from .ingestion_audit import IngestionAuditRecord, create_ingestion_audit_record
 from .transfer_pricing import (
     AdjustedAAVAPreview,
@@ -109,6 +114,7 @@ from .transition_payments import (
     TransitionPaymentResult,
     evaluate_transition_payment,
 )
+from .transfer_baseline import ExistingTransferBaseline, TransferBaselineResult, evaluate_existing_transfer_baseline
 from .transfer_runner import (
     TransferPricingPreviewReport,
     TransferPricingScenarioResult,
@@ -166,10 +172,16 @@ __all__ = [
     "LevyResult",
     "LiabilityAdjustmentPreview",
     "MixedUnitExposureResult",
+    "PaymentInteractionInput",
+    "PaymentInteractionResult",
     "PaymentPortfolioInput",
     "PaymentPortfolioResult",
     "PaymentSensitivityPoint",
     "PaymentSensitivityResult",
+    "PaymentStackComponent",
+    "PaymentStackResult",
+    "PhaseRule",
+    "PhaseRuleYearResult",
     "PublicRevenueInput",
     "PublicRevenueResult",
     "QLCWeights",
@@ -185,6 +197,11 @@ __all__ = [
     "SensitiveScanResult",
     "SensitivityPoint",
     "SensitivitySweepResult",
+    "SupportIncidenceAssumption",
+    "SupportIncidenceResult",
+    "TargetPopulationInput",
+    "TargetPopulationResult",
+    "TargetingCriteria",
     "TransferPricingPreviewResult",
     "TransferPricingPreviewReport",
     "TransferPricingScenarioResult",
@@ -194,6 +211,8 @@ __all__ = [
     "TransitionPaymentDesign",
     "TransitionPaymentInput",
     "TransitionPaymentResult",
+    "ExistingTransferBaseline",
+    "TransferBaselineResult",
     "TransferPressureInput",
     "TransferPressureResult",
     "UnitCompatibilityResult",
@@ -224,12 +243,18 @@ __all__ = [
     "evaluate_ingestion_request",
     "evaluate_investment_guardrail",
     "evaluate_mixed_unit_exposure",
+    "evaluate_payment_interactions",
     "evaluate_payment_portfolio",
+    "evaluate_payment_stack",
+    "evaluate_phase_rule",
     "evaluate_public_revenue",
     "evaluate_review_transition",
     "evaluate_safe_harbour",
     "evaluate_tax_incidence",
+    "evaluate_target_population",
     "evaluate_transition_payment",
+    "evaluate_existing_transfer_baseline",
+    "evaluate_support_incidence",
     "evaluate_transfer_pressure",
     "evaluate_transfer_pricing_preview",
     "evaluate_unit_compatibility",
