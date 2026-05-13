@@ -28,6 +28,9 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Add non-operative transfer-pricing / related-party preview stubs for offshore AI services, IP/platform royalties, cloud/inference relabelling, robotics leasing, service fees, data/model licences, cost sharing, and other automation-linked related-party costs.
 - Add adjusted-AAVA preview calculations that do not mutate reported AAVA or replace existing final liability.
 - Add mixed-unit handling so output/HLE aggregation is prohibited where canonical output units differ unless reviewed conversion metadata exists.
+- Add prototype evidence requirements for formula inputs, review flags, transfer-pricing, mixed units, and calibration fields.
+- Add decision-log summaries for example, grouped, and transfer-pricing runs.
+- Add a calibration shell and data source registry without collecting real data.
 
 ## Data Separation
 
@@ -46,6 +49,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Reports include safe-harbour, avoidance, and grouping review outputs.
 - Grouped reports can be generated with `python scripts/run_examples.py`.
 - Transfer-pricing and mixed-unit preview reports can be generated with `python scripts/run_examples.py`.
+- Evidence and calibration reports can be generated with `python scripts/run_examples.py`.
 - Hybrid logistics stress variant demonstrates non-zero but intermediate NLTG.
 - V1.5 working paper contains TODO markers where policy drafting remains open.
 - Limitations document clearly blocks actual tax-payable claims.
@@ -57,3 +61,5 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Extend grouped aggregation to recompute full group-level outputs only after legal grouping and attribution rules are drafted.
 - Extend transfer-pricing, GST, and international tax review stubs into legally reviewed policy options.
 - Draft treatment for value-weighted exposure metrics so they cannot be mistaken for a tax base.
+- Add evidence ingestion schemas and review workflows once legal/privacy constraints are known.
+- Replace calibration shell placeholders with authorised datasets only after formal source review.

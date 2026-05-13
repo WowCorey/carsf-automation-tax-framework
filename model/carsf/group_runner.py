@@ -8,6 +8,8 @@ from typing import Any
 
 from .aggregation import AggregationResult, EntityInput, evaluate_group_aggregation, risk_rank
 from .apportionment import ApportionmentResult, evaluate_apportionment
+from .decision_log import build_standard_decision_log, summarise_decision_log
+from .evidence import EvidenceAssessment, assess_evidence
 from .example_runner import ExampleResult, load_yaml_file, run_example
 
 
@@ -40,6 +42,8 @@ class GroupedPreviewResult:
     mixed_apportionment: dict[str, Any]
     apportionment_result: ApportionmentResult
     hybrid_stress_result: ExampleResult
+    evidence_assessment: EvidenceAssessment
+    decision_log_summary: dict[str, Any]
 
     def to_jsonable(self) -> dict[str, Any]:
         return {
@@ -49,6 +53,8 @@ class GroupedPreviewResult:
             "mixed_apportionment": self.mixed_apportionment,
             "apportionment_result": asdict(self.apportionment_result),
             "hybrid_stress_result": self.hybrid_stress_result.to_jsonable(),
+            "evidence_assessment": asdict(self.evidence_assessment),
+            "decision_log_summary": self.decision_log_summary,
         }
 
 
@@ -80,6 +86,35 @@ def run_grouped_previews(repo_root: Path) -> GroupedPreviewResult:
     split_entities = [EntityInput(**entity) for entity in split_structure["entities"]]
     apportionment_result = evaluate_apportionment(mixed_apportionment, schedules_by_id)
     hybrid_stress_result = _load_hybrid_stress(repo_root, schedules_by_id)
+    evidence_assessment = assess_evidence(split_structure, ["grouping", "mixed_units", "core_formula"])
+    decision_log = build_standard_decision_log(
+        SPLIT_STRUCTURE_ID,
+        evidence_assessment.status,
+        {},
+        extra_steps=[
+            (
+                "group_aggregation",
+                "Grouped-entity aggregation preview",
+                {"entity_count": len(split_structure["entities"])},
+                {"risk_level": aggregation_result.risk_level, "review_required": aggregation_result.review_required},
+                "Recorded non-operative grouped-entity aggregation preview.",
+            ),
+            (
+                "apportionment",
+                "Mixed-activity apportionment preview",
+                {"activity_count": len(mixed_apportionment["apportionment"]["activities"])},
+                {"valid": apportionment_result.valid, "review_required": apportionment_result.review_required},
+                "Recorded prototype apportionment share validation.",
+            ),
+            (
+                "mixed_unit_handling",
+                "Mixed-unit handling",
+                {"scope": "grouped preview"},
+                {"status": "review_required"},
+                "Mixed-unit handling remains a review-only modelling path.",
+            ),
+        ],
+    )
     return GroupedPreviewResult(
         split_structure=split_structure,
         split_entities=split_entities,
@@ -87,6 +122,8 @@ def run_grouped_previews(repo_root: Path) -> GroupedPreviewResult:
         mixed_apportionment=mixed_apportionment,
         apportionment_result=apportionment_result,
         hybrid_stress_result=hybrid_stress_result,
+        evidence_assessment=evidence_assessment,
+        decision_log_summary=summarise_decision_log(decision_log),
     )
 
 

@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import sys
 from argparse import ArgumentParser
+from dataclasses import asdict
 from pathlib import Path
 from typing import Any
 
@@ -14,6 +15,14 @@ MODEL_ROOT = REPO_ROOT / "model"
 if str(MODEL_ROOT) not in sys.path:
     sys.path.insert(0, str(MODEL_ROOT))
 
+from carsf.calibration import (  # noqa: E402
+    get_calibration_registry,
+    validate_no_fake_calibration_values,
+)
+from carsf.evidence import (  # noqa: E402
+    get_default_evidence_requirements,
+    requirements_by_category,
+)
 from carsf.example_runner import (  # noqa: E402
     EXAMPLE_IDS,
     ExampleResult,
@@ -123,6 +132,17 @@ def risk_flags(flags: list[str]) -> str:
     return ", ".join(flags) if flags else "none"
 
 
+def evidence_summary_row(name: str, result: Any) -> dict[str, Any]:
+    assessment = result.evidence_assessment
+    return {
+        "name": name,
+        "status": assessment.status,
+        "missing_count": len(assessment.missing_requirements),
+        "low_confidence_count": len(assessment.low_confidence_items),
+        "review_required": assessment.review_required,
+    }
+
+
 def build_json_payload(results: list[ExampleResult], metadata: dict[str, Any]) -> dict[str, Any]:
     return {
         "metadata": metadata,
@@ -175,6 +195,25 @@ def build_markdown(results: list[ExampleResult], metadata: dict[str, Any]) -> st
             f"{result.name} | {result.safe_harbour_result.category} | "
             f"{result.avoidance_result.risk_level} | {result.grouping_risk_result.risk_level} | "
             f"{'yes' if risk_review_required(result) else 'no'} | {main_risk_reason(result)} |"
+        )
+    lines.extend(
+        [
+            "",
+            "## Evidence and Decision-Log Summary",
+            "",
+            "Evidence assessments are prototype-only and do not validate liability, legal positions, tax positions, or audit findings.",
+            "",
+            "| Example | Evidence Status | Missing Requirements | Decision-Log Entries | Review Required |",
+            "| --- | --- | ---: | ---: | --- |",
+        ]
+    )
+    for result in results:
+        lines.append(
+            "| "
+            f"{result.name} | {result.evidence_assessment.status} | "
+            f"{len(result.evidence_assessment.missing_requirements)} | "
+            f"{result.decision_log_summary['entry_count']} | "
+            f"{str(result.evidence_assessment.review_required).lower()} |"
         )
     lines.extend(
         [
@@ -283,6 +322,19 @@ def build_markdown(results: list[ExampleResult], metadata: dict[str, Any]) -> st
         lines.extend(f"  - {review}" for review in result.grouping_risk_result.recommended_review)
         lines.extend(["- Placeholder basis:"])
         lines.extend(f"  - {basis}" for basis in result.grouping_risk_result.placeholder_basis)
+        lines.extend(
+            [
+                "",
+                "### J. Evidence and Decision Log",
+                "",
+                f"- Evidence status: {result.evidence_assessment.status}",
+                f"- Missing evidence requirements: {len(result.evidence_assessment.missing_requirements)}",
+                f"- Decision-log entries: {result.decision_log_summary['entry_count']}",
+                f"- Decision-log steps: {', '.join(result.decision_log_summary['steps'])}",
+            ]
+        )
+        for warning in result.evidence_assessment.warnings:
+            lines.append(f"- {warning}")
         lines.append("")
     return "\n".join(lines).rstrip() + "\n"
 
@@ -344,6 +396,8 @@ def build_grouped_markdown(grouped: GroupedPreviewResult, metadata: dict[str, An
         "## A. Grouped-Entity Aggregation Overview",
         "",
         "This report shows non-operative modelling previews for related-entity aggregation, mixed-activity apportionment, and a hybrid logistics stress case. It does not alter any final liability calculation in the single-entity examples.",
+        "",
+        f"Evidence status: `{grouped.evidence_assessment.status}`. Decision-log entries: `{grouped.decision_log_summary['entry_count']}`.",
         "",
         "Related-party and mixed-unit previews are generated in `reports/transfer_pricing_results.md` and `reports/transfer_pricing_results.json`.",
         "",
@@ -468,7 +522,19 @@ def build_grouped_markdown(grouped: GroupedPreviewResult, metadata: dict[str, An
             "",
         ]
     )
+    lines.extend(
+        [
+            "Evidence and decision-log summary:",
+            "",
+            f"- Evidence status: {grouped.evidence_assessment.status}",
+            f"- Missing evidence requirements: {len(grouped.evidence_assessment.missing_requirements)}",
+            f"- Decision-log steps: {', '.join(grouped.decision_log_summary['steps'])}",
+            "",
+        ]
+    )
     for warning in aggregation.warnings + apportionment.warnings + stress.warnings:
+        lines.append(f"- {warning}")
+    for warning in grouped.evidence_assessment.warnings:
         lines.append(f"- {warning}")
     for basis in aggregation.placeholder_basis + apportionment.placeholder_basis + stress.limitation_notes:
         lines.append(f"- {basis}")
@@ -604,6 +670,8 @@ def build_transfer_pricing_markdown(
         "",
         TRANSFER_PRICING_REPORT_WARNING,
         "",
+        f"Evidence status: `{transfer_report.evidence_assessment.status}`. Decision-log entries: `{transfer_report.decision_log_summary['entry_count']}`.",
+        "",
         "## A. Purpose and Non-Claims",
         "",
         "This report adds non-operative review previews for related-party automation charges, adjusted AAVA review candidates, and mixed-unit output handling. It does not change the reported-AAVA pathway or any existing final liability calculation.",
@@ -718,6 +786,12 @@ def build_transfer_pricing_markdown(
             "",
             "## J. Limitations and Required Legal/Tax Review",
             "",
+            "Evidence and decision-log summary:",
+            "",
+            f"- Evidence status: {transfer_report.evidence_assessment.status}",
+            f"- Missing evidence requirements: {len(transfer_report.evidence_assessment.missing_requirements)}",
+            f"- Decision-log steps: {', '.join(transfer_report.decision_log_summary['steps'])}",
+            "",
         ]
     )
     for limitation in mixed.get("limitations", []):
@@ -742,6 +816,236 @@ def write_transfer_pricing_reports(
     return json_path, md_path
 
 
+def evidence_json_payload(
+    results: list[ExampleResult],
+    grouped: GroupedPreviewResult,
+    transfer_report: TransferPricingPreviewReport,
+    metadata: dict[str, Any],
+) -> dict[str, Any]:
+    requirements = get_default_evidence_requirements()
+    return {
+        "metadata": {
+            **metadata,
+            "status": "prototype_evidence_requirements_only",
+            "non_claims": [
+                "This is a prototype evidence assessment only. It is not legal, tax, Treasury, ATO, evidentiary, forensic, or audit validation.",
+                "Evidence reports do not validate liability or calibration.",
+            ],
+        },
+        "requirements": [asdict(requirement) for requirement in requirements],
+        "requirements_by_category": requirements_by_category(),
+        "example_evidence_summary": [evidence_summary_row(result.name, result) for result in results],
+        "grouped_evidence_summary": evidence_summary_row("Grouped-entity preview", grouped),
+        "transfer_pricing_evidence_summary": evidence_summary_row("Transfer-pricing preview", transfer_report),
+        "high_sensitivity_categories": sorted(
+            {
+                requirement.category
+                for requirement in requirements
+                if requirement.legal_sensitivity == "high" or requirement.privacy_sensitivity == "high"
+            }
+        ),
+    }
+
+
+def build_evidence_markdown(
+    results: list[ExampleResult],
+    grouped: GroupedPreviewResult,
+    transfer_report: TransferPricingPreviewReport,
+    metadata: dict[str, Any],
+) -> str:
+    requirements = get_default_evidence_requirements()
+    component_missing: dict[str, int] = {}
+    for result in results:
+        component_missing[result.name] = len(result.evidence_assessment.missing_requirements)
+    component_missing["Grouped-entity preview"] = len(grouped.evidence_assessment.missing_requirements)
+    component_missing["Transfer-pricing preview"] = len(transfer_report.evidence_assessment.missing_requirements)
+
+    lines = [
+        "# CARSF V1.5 Evidence Requirements Report",
+        "",
+        f"Generated at: `{metadata['generated_at']}`",
+        "",
+        "## A. Purpose",
+        "",
+        "This report defines prototype evidence requirements for model inputs, review flags, transfer-pricing previews, mixed-unit handling, and future calibration.",
+        "",
+        "## B. Non-Claims",
+        "",
+        "- This is a prototype evidence assessment only. It is not legal, tax, Treasury, ATO, evidentiary, forensic, or audit validation.",
+        "- It does not validate liability, evidence sufficiency for real enforcement, or calibration.",
+        "",
+        "## C. Evidence Requirement Table",
+        "",
+        "| Requirement | Category | Field | Minimum Confidence | Required For | Legal Sensitivity | Privacy Sensitivity |",
+        "| --- | --- | --- | --- | --- | --- | --- |",
+    ]
+    for requirement in requirements:
+        lines.append(
+            "| "
+            f"{requirement.requirement_id} | {requirement.category} | {requirement.field} | "
+            f"{requirement.minimum_confidence} | {', '.join(requirement.required_for)} | "
+            f"{requirement.legal_sensitivity} | {requirement.privacy_sensitivity} |"
+        )
+    lines.extend(
+        [
+            "",
+            "## D. Missing Evidence by Model Component",
+            "",
+            "| Component | Missing Requirements |",
+            "| --- | ---: |",
+        ]
+    )
+    for component, count in component_missing.items():
+        lines.append(f"| {component} | {count} |")
+    lines.extend(
+        [
+            "",
+            "## E. Example-Level Evidence Status Summary",
+            "",
+            "| Example | Status | Missing Requirements | Review Required |",
+            "| --- | --- | ---: | --- |",
+        ]
+    )
+    for result in results:
+        lines.append(
+            f"| {result.name} | {result.evidence_assessment.status} | "
+            f"{len(result.evidence_assessment.missing_requirements)} | "
+            f"{str(result.evidence_assessment.review_required).lower()} |"
+        )
+    lines.extend(
+        [
+            "",
+            "## F. Group/Transfer-Pricing Evidence Status Summary",
+            "",
+            "| Report | Status | Missing Requirements | Decision-Log Entries |",
+            "| --- | --- | ---: | ---: |",
+            f"| Grouped entity preview | {grouped.evidence_assessment.status} | {len(grouped.evidence_assessment.missing_requirements)} | {grouped.decision_log_summary['entry_count']} |",
+            f"| Transfer-pricing preview | {transfer_report.evidence_assessment.status} | {len(transfer_report.evidence_assessment.missing_requirements)} | {transfer_report.decision_log_summary['entry_count']} |",
+            "",
+            "## G. High-Sensitivity Evidence Categories",
+            "",
+        ]
+    )
+    for category in sorted({requirement.category for requirement in requirements if requirement.legal_sensitivity == "high" or requirement.privacy_sensitivity == "high"}):
+        lines.append(f"- {category}")
+    lines.extend(
+        [
+            "",
+            "## H. Calibration Dependencies",
+            "",
+            "- OPFTE_LIBC, FRV, QLC weights, AII weights, AAVA deductibility, caps, safe-harbour thresholds, avoidance thresholds, transfer-pricing review shares, mixed-unit weighting, and labour-market modules remain uncalibrated.",
+            "- Required source categories include ABS, ATO, PBO, DSS, Fair Work, HILDA, HELP/HECS, superannuation, state payroll tax, industry productivity, business survey, Treasury modelling, and independent legal/tax review.",
+            "",
+            "## I. Future Review Needs",
+            "",
+            "- Legal, tax, privacy, economic, Treasury/ATO-style, and sector-specific review before any external use.",
+        ]
+    )
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def write_evidence_reports(
+    reports_dir: Path,
+    results: list[ExampleResult],
+    grouped: GroupedPreviewResult,
+    transfer_report: TransferPricingPreviewReport,
+) -> tuple[Path, Path]:
+    reports_dir.mkdir(parents=True, exist_ok=True)
+    metadata = report_metadata()
+    json_path = reports_dir / "evidence_requirements.json"
+    md_path = reports_dir / "evidence_requirements.md"
+    json_path.write_text(
+        json.dumps(evidence_json_payload(results, grouped, transfer_report, metadata), indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    md_path.write_text(build_evidence_markdown(results, grouped, transfer_report, metadata), encoding="utf-8")
+    return json_path, md_path
+
+
+def calibration_json_payload(metadata: dict[str, Any]) -> dict[str, Any]:
+    registry = get_calibration_registry()
+    return {
+        "metadata": {
+            **metadata,
+            "status": "prototype_calibration_shell_only",
+            "no_fake_calibration_values": validate_no_fake_calibration_values(registry),
+        },
+        "registry": registry.to_jsonable(),
+    }
+
+
+def build_calibration_markdown(metadata: dict[str, Any]) -> str:
+    registry = get_calibration_registry()
+    lines = [
+        "# CARSF V1.5 Calibration Requirements Report",
+        "",
+        f"Generated at: `{metadata['generated_at']}`",
+        "",
+        "## A. Purpose",
+        "",
+        "This report defines the calibration shell for future CARSF modelling. It does not include real calibration values.",
+        "",
+        "## B. Calibration Registry",
+        "",
+        f"- Version: {registry.version}",
+        f"- Requirement count: {len(registry.requirements)}",
+        f"- No fake calibration values detected: {str(validate_no_fake_calibration_values(registry)).lower()}",
+        "",
+        "## C. Required Datasets",
+        "",
+        "| Component | Required Dataset | Preferred Source | Fallback Source | Status |",
+        "| --- | --- | --- | --- | --- |",
+    ]
+    for requirement in registry.requirements:
+        lines.append(
+            "| "
+            f"{requirement.model_component} | {requirement.required_dataset} | "
+            f"{requirement.preferred_source} | {requirement.fallback_source} | {requirement.calibration_status} |"
+        )
+    lines.extend(
+        [
+            "",
+            "## D. Placeholder-Only Fields",
+            "",
+        ]
+    )
+    lines.extend(f"- {field}" for field in registry.placeholder_fields)
+    lines.extend(
+        [
+            "",
+            "## E. Unresolved Dependencies",
+            "",
+        ]
+    )
+    lines.extend(f"- {dependency}" for dependency in registry.unresolved_dependencies)
+    lines.extend(
+        [
+            "",
+            "## F. Components That Cannot Be Validated Yet",
+            "",
+            "All listed calibration components remain `not_collected` and cannot be validated until authorised source data, privacy review, legal/tax review, and policy methodology are supplied.",
+            "",
+            "## G. Non-Claims",
+            "",
+        ]
+    )
+    lines.extend(f"- {non_claim}" for non_claim in registry.non_claims)
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def write_calibration_reports(reports_dir: Path) -> tuple[Path, Path]:
+    reports_dir.mkdir(parents=True, exist_ok=True)
+    metadata = report_metadata()
+    json_path = reports_dir / "calibration_requirements.json"
+    md_path = reports_dir / "calibration_requirements.md"
+    json_path.write_text(
+        json.dumps(calibration_json_payload(metadata), indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    md_path.write_text(build_calibration_markdown(metadata), encoding="utf-8")
+    return json_path, md_path
+
+
 def main() -> int:
     parser = ArgumentParser(description="Run illustrative CARSF worked examples.")
     parser.add_argument(
@@ -761,6 +1065,8 @@ def main() -> int:
         grouped_json_path, grouped_md_path = write_grouped_reports(args.reports_dir, grouped)
         transfer_report = run_transfer_pricing_previews(REPO_ROOT)
         transfer_json_path, transfer_md_path = write_transfer_pricing_reports(args.reports_dir, transfer_report)
+        evidence_json_path, evidence_md_path = write_evidence_reports(args.reports_dir, results, grouped, transfer_report)
+        calibration_json_path, calibration_md_path = write_calibration_reports(args.reports_dir)
     except ExampleRunnerError as exc:
         print(f"example runner failed: {exc}", file=sys.stderr)
         return 1
@@ -770,6 +1076,10 @@ def main() -> int:
     print(f"wrote {grouped_md_path}")
     print(f"wrote {transfer_json_path}")
     print(f"wrote {transfer_md_path}")
+    print(f"wrote {evidence_json_path}")
+    print(f"wrote {evidence_md_path}")
+    print(f"wrote {calibration_json_path}")
+    print(f"wrote {calibration_md_path}")
     return 0
 
 

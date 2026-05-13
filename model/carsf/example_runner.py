@@ -13,6 +13,8 @@ from .aii import automation_intensity_index
 from .aava import australian_automated_value_added
 from .avoidance import AvoidanceResult, evaluate_avoidance_risk
 from .coverage import coverage_measures, format_coverage_ratio
+from .decision_log import build_standard_decision_log, summarise_decision_log
+from .evidence import EvidenceAssessment, assess_evidence
 from .frv import net_labour_tax_gap
 from .grouping import GroupingRiskResult, evaluate_grouping_risk
 from .levy import calculate_liability
@@ -79,6 +81,8 @@ class ExampleResult:
     safe_harbour_result: SafeHarbourResult
     avoidance_result: AvoidanceResult
     grouping_risk_result: GroupingRiskResult
+    evidence_assessment: EvidenceAssessment
+    decision_log_summary: dict[str, Any]
     warnings: list[str] = field(default_factory=list)
     evidence_labels: list[str] = field(default_factory=list)
     limitation_notes: list[str] = field(default_factory=list)
@@ -331,6 +335,24 @@ def run_example(example: dict[str, Any], schedule: dict[str, Any]) -> ExampleRes
         safe_harbour_result = evaluate_safe_harbour(example, schedule, outputs)
         avoidance_result = evaluate_avoidance_risk(example, schedule, outputs)
         grouping_risk_result = evaluate_grouping_risk(example, outputs)
+        evidence_assessment = assess_evidence(example, ["core_formula", "safe_harbour", "avoidance", "grouping"])
+        decision_log = build_standard_decision_log(
+            example_id,
+            evidence_assessment.status,
+            {
+                "qlc": outputs.qlc,
+                "hle": outputs.hle,
+                "aii": outputs.aii,
+                "nltg": outputs.nltg,
+                "aava": outputs.aava,
+                "ael": outputs.ael_payable,
+                "arl": outputs.arl,
+                "caps": outputs.liability,
+                "safe_harbour": safe_harbour_result.category,
+                "avoidance": avoidance_result.risk_level,
+                "grouping": grouping_risk_result.risk_level,
+            },
+        )
         warnings = [
             "Illustrative placeholder output only.",
             "Do not use this result to estimate real tax payable.",
@@ -377,6 +399,8 @@ def run_example(example: dict[str, Any], schedule: dict[str, Any]) -> ExampleRes
             safe_harbour_result=safe_harbour_result,
             avoidance_result=avoidance_result,
             grouping_risk_result=grouping_risk_result,
+            evidence_assessment=evidence_assessment,
+            decision_log_summary=summarise_decision_log(decision_log),
             warnings=warnings,
             evidence_labels=evidence_labels,
             limitation_notes=limitation_notes,

@@ -1,0 +1,115 @@
+status: prototype_source_registry_only
+version: CARSF V1.5
+non_claims:
+  - No datasets have been collected.
+  - No real calibration values are included.
+  - This registry is not legal, tax, Treasury, ATO, ABS, Fair Work, OECD, BEPS, audit, forensic, or economic validation.
+sources:
+  - source_id: abs_labour_force_industry
+    source_category: labour_force_and_industry
+    preferred_institution: ABS
+    purpose: Labour force, occupation, sector output, and productivity calibration.
+    model_component: OPFTE_LIBC benchmarks; QLC weights; labour-market absorption rates
+    public_availability: mixed_public_and_restricted
+    privacy_sensitivity: medium
+    calibration_status: not_collected
+    notes: Requires official data access and methodology review before use.
+  - source_id: ato_aggregated_tax
+    source_category: tax_base_and_revenue
+    preferred_institution: ATO
+    purpose: Aggregated income tax, company tax, payroll, deductions, and industry tax-base calibration.
+    model_component: FRV; AAVA; cap rates; theta credit cap
+    public_availability: restricted_or_aggregated_only
+    privacy_sensitivity: high
+    calibration_status: not_collected
+    notes: Must not include taxpayer-identifiable data.
+  - source_id: pbo_fiscal_projections
+    source_category: fiscal_projection
+    preferred_institution: Parliamentary Budget Office
+    purpose: Fiscal baseline and long-run revenue projection comparison.
+    model_component: FRV; public-sector automation; investment deterrence / tax incidence parameters
+    public_availability: public_or_request_based
+    privacy_sensitivity: low
+    calibration_status: not_collected
+    notes: Requires methodology reconciliation with Treasury assumptions.
+  - source_id: dss_services_australia
+    source_category: transfer_payments
+    preferred_institution: DSS / Services Australia
+    purpose: Displacement, income-support, and welfare-system fiscal exposure modelling.
+    model_component: labour-market absorption rates; wage compression / underemployment modules
+    public_availability: restricted_or_aggregated_only
+    privacy_sensitivity: high
+    calibration_status: not_collected
+    notes: Requires privacy, secrecy, and aggregation review.
+  - source_id: fair_work_awards
+    source_category: wages_and_awards
+    preferred_institution: Fair Work
+    purpose: Award wages, classifications, job security indicators, and wage-quality benchmark design.
+    model_component: QLC weights and QLCMaxMultiplier; wage compression / underemployment modules
+    public_availability: public
+    privacy_sensitivity: low
+    calibration_status: not_collected
+    notes: Requires mapping to occupation and sector schedules.
+  - source_id: hilda_longitudinal
+    source_category: longitudinal_labour_data
+    preferred_institution: HILDA
+    purpose: Wage scarring, re-employment, underemployment, and household impacts.
+    model_component: labour-market absorption rates; wage compression / underemployment modules
+    public_availability: restricted_research_access
+    privacy_sensitivity: high
+    calibration_status: not_collected
+    notes: Requires approved research access and de-identification controls.
+  - source_id: superannuation_guarantee
+    source_category: retirement_income
+    preferred_institution: ATO / APRA / Treasury
+    purpose: Superannuation contribution impacts from automation-displaced labour income.
+    model_component: superannuation and HELP/HECS effects
+    public_availability: restricted_or_aggregated_only
+    privacy_sensitivity: high
+    calibration_status: not_collected
+    notes: Requires alignment with retirement-income modelling.
+  - source_id: help_hecs_repayment
+    source_category: education_debt_repayments
+    preferred_institution: Department of Education / ATO
+    purpose: HELP/HECS repayment loss and income-threshold effect modelling.
+    model_component: superannuation and HELP/HECS effects
+    public_availability: restricted_or_aggregated_only
+    privacy_sensitivity: high
+    calibration_status: not_collected
+    notes: Requires secrecy and aggregation controls.
+  - source_id: state_payroll_tax
+    source_category: state_revenue
+    preferred_institution: State and territory revenue offices
+    purpose: State payroll tax impacts from labour-base erosion.
+    model_component: state payroll tax effects; regional weighting
+    public_availability: mixed_public_and_restricted
+    privacy_sensitivity: medium
+    calibration_status: not_collected
+    notes: Requires state-level policy coordination.
+  - source_id: industry_productivity
+    source_category: industry_productivity
+    preferred_institution: Industry bodies / ABS / business surveys
+    purpose: Sector OPFTE, automation adoption, and productivity estimates.
+    model_component: OPFTE_LIBC benchmarks; AII component weights; mixed-unit exposure weighting
+    public_availability: mixed_public_private_survey
+    privacy_sensitivity: medium
+    calibration_status: not_collected
+    notes: Requires survey design and sample-bias review.
+  - source_id: treasury_modelling
+    source_category: central_policy_modelling
+    preferred_institution: Treasury
+    purpose: Policy parameter calibration, incidence, behavioural response, and fiscal-system integration.
+    model_component: cap rates lambda_sector / LAMBDA_sector; uplift rate and rent tax rate; investment deterrence / tax incidence parameters
+    public_availability: restricted_or_internal
+    privacy_sensitivity: medium
+    calibration_status: not_collected
+    notes: Requires formal policy process before external claims.
+  - source_id: independent_legal_tax_review
+    source_category: legal_tax_review
+    preferred_institution: Independent legal and tax reviewers
+    purpose: Review AAVA deductibility, transfer-pricing, grouping, GST, international tax, and administrative-law settings.
+    model_component: AAVA deductibility categories; transfer-pricing review shares; safe-harbour thresholds; avoidance risk thresholds
+    public_availability: engagement_required
+    privacy_sensitivity: medium
+    calibration_status: not_collected
+    notes: Review outputs must not be inferred from prototype code.

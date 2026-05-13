@@ -1,6 +1,6 @@
 # CARSF V1.5 Worked Example Results
 
-Generated at: `2026-05-13T08:00:58+00:00`
+Generated at: `2026-05-13T08:32:02+00:00`
 
 Version: CARSF V1.5 prototype
 
@@ -33,6 +33,19 @@ These are prototype review flags, not legal findings. Safe harbour classificatio
 | Logistics Human Heavy | SMALL_BUSINESS_PLACEHOLDER | low | low | no | Revenue is below the schedule placeholder small-business threshold. |
 | Logistics Hybrid | SMALL_BUSINESS_PLACEHOLDER | low | low | no | Revenue is below the schedule placeholder small-business threshold. |
 | Logistics Ai Platform | NO_SAFE_HARBOUR_REVIEW | high | high | yes | High-risk avoidance metadata or red-team flags require review before any safe harbour. |
+
+## Evidence and Decision-Log Summary
+
+Evidence assessments are prototype-only and do not validate liability, legal positions, tax positions, or audit findings.
+
+| Example | Evidence Status | Missing Requirements | Decision-Log Entries | Review Required |
+| --- | --- | ---: | ---: | --- |
+| Mechanic Traditional | placeholder_only | 33 | 12 | true |
+| Mechanic Ai Admin | placeholder_only | 33 | 12 | true |
+| Mechanic Robotic | placeholder_only | 33 | 12 | true |
+| Logistics Human Heavy | placeholder_only | 33 | 12 | true |
+| Logistics Hybrid | placeholder_only | 33 | 12 | true |
+| Logistics Ai Platform | placeholder_only | 33 | 12 | true |
 
 ## Mechanic Traditional
 
@@ -165,6 +178,15 @@ Traditional mechanic shop: high human labour contribution and low automation int
   - Grouping checks are prototype review flags only.
   - No full legal grouping, transfer-pricing, or attribution rule is implemented.
 
+### J. Evidence and Decision Log
+
+- Evidence status: placeholder_only
+- Missing evidence requirements: 33
+- Decision-log entries: 12
+- Decision-log steps: evidence_assessment, qlc, hle, aii, nltg, aava, ael, arl, caps, safe_harbour, avoidance, grouping
+- Evidence assessment is prototype-only and does not validate any liability, legal position, tax position, or audit finding.
+- Evidence remains insufficient for real calibration, legal use, or actual tax-payable claims.
+
 ## Mechanic Ai Admin
 
 ### A. Business Description
@@ -295,6 +317,15 @@ AI-admin mechanic shop: AI is mainly supporting booking, compliance, customer su
 - Placeholder basis:
   - Grouping checks are prototype review flags only.
   - No full legal grouping, transfer-pricing, or attribution rule is implemented.
+
+### J. Evidence and Decision Log
+
+- Evidence status: placeholder_only
+- Missing evidence requirements: 33
+- Decision-log entries: 12
+- Decision-log steps: evidence_assessment, qlc, hle, aii, nltg, aava, ael, arl, caps, safe_harbour, avoidance, grouping
+- Evidence assessment is prototype-only and does not validate any liability, legal position, tax position, or audit finding.
+- Evidence remains insufficient for real calibration, legal use, or actual tax-payable claims.
 
 ## Mechanic Robotic
 
@@ -428,6 +459,15 @@ Fully robotic mechanic shop: high automation intensity and low QLC relative to o
   - Grouping checks are prototype review flags only.
   - No full legal grouping, transfer-pricing, or attribution rule is implemented.
 
+### J. Evidence and Decision Log
+
+- Evidence status: placeholder_only
+- Missing evidence requirements: 33
+- Decision-log entries: 12
+- Decision-log steps: evidence_assessment, qlc, hle, aii, nltg, aava, ael, arl, caps, safe_harbour, avoidance, grouping
+- Evidence assessment is prototype-only and does not validate any liability, legal position, tax position, or audit finding.
+- Evidence remains insufficient for real calibration, legal use, or actual tax-payable claims.
+
 ## Logistics Human Heavy
 
 ### A. Business Description
@@ -559,6 +599,15 @@ Human-heavy logistics company: a larger human workforce and lower automation int
   - Grouping checks are prototype review flags only.
   - No full legal grouping, transfer-pricing, or attribution rule is implemented.
 
+### J. Evidence and Decision Log
+
+- Evidence status: placeholder_only
+- Missing evidence requirements: 33
+- Decision-log entries: 12
+- Decision-log steps: evidence_assessment, qlc, hle, aii, nltg, aava, ael, arl, caps, safe_harbour, avoidance, grouping
+- Evidence assessment is prototype-only and does not validate any liability, legal position, tax position, or audit finding.
+- Evidence remains insufficient for real calibration, legal use, or actual tax-payable claims.
+
 ## Logistics Hybrid
 
 ### A. Business Description
@@ -689,6 +738,15 @@ Hybrid logistics company: AII is intermediate, but NLTG and liability remain zer
 - Placeholder basis:
   - Grouping checks are prototype review flags only.
   - No full legal grouping, transfer-pricing, or attribution rule is implemented.
+
+### J. Evidence and Decision Log
+
+- Evidence status: placeholder_only
+- Missing evidence requirements: 33
+- Decision-log entries: 12
+- Decision-log steps: evidence_assessment, qlc, hle, aii, nltg, aava, ael, arl, caps, safe_harbour, avoidance, grouping
+- Evidence assessment is prototype-only and does not validate any liability, legal position, tax position, or audit finding.
+- Evidence remains insufficient for real calibration, legal use, or actual tax-payable claims.
 
 ## Logistics Ai Platform
 
@@ -839,3 +897,12 @@ AI logistics platform: high automated productive capacity and low QLC relative t
 - Placeholder basis:
   - Grouping checks are prototype review flags only.
   - No full legal grouping, transfer-pricing, or attribution rule is implemented.
+
+### J. Evidence and Decision Log
+
+- Evidence status: placeholder_only
+- Missing evidence requirements: 33
+- Decision-log entries: 12
+- Decision-log steps: evidence_assessment, qlc, hle, aii, nltg, aava, ael, arl, caps, safe_harbour, avoidance, grouping
+- Evidence assessment is prototype-only and does not validate any liability, legal position, tax position, or audit finding.
+- Evidence remains insufficient for real calibration, legal use, or actual tax-payable claims.

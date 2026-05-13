@@ -1,0 +1,2442 @@
+{
+  "example_evidence_summary": [
+    {
+      "low_confidence_count": 0,
+      "missing_count": 33,
+      "name": "Mechanic Traditional",
+      "review_required": true,
+      "status": "placeholder_only"
+    },
+    {
+      "low_confidence_count": 0,
+      "missing_count": 33,
+      "name": "Mechanic Ai Admin",
+      "review_required": true,
+      "status": "placeholder_only"
+    },
+    {
+      "low_confidence_count": 0,
+      "missing_count": 33,
+      "name": "Mechanic Robotic",
+      "review_required": true,
+      "status": "placeholder_only"
+    },
+    {
+      "low_confidence_count": 0,
+      "missing_count": 33,
+      "name": "Logistics Human Heavy",
+      "review_required": true,
+      "status": "placeholder_only"
+    },
+    {
+      "low_confidence_count": 0,
+      "missing_count": 33,
+      "name": "Logistics Hybrid",
+      "review_required": true,
+      "status": "placeholder_only"
+    },
+    {
+      "low_confidence_count": 0,
+      "missing_count": 33,
+      "name": "Logistics Ai Platform",
+      "review_required": true,
+      "status": "placeholder_only"
+    }
+  ],
+  "grouped_evidence_summary": {
+    "low_confidence_count": 0,
+    "missing_count": 28,
+    "name": "Grouped-entity preview",
+    "review_required": true,
+    "status": "placeholder_only"
+  },
+  "high_sensitivity_categories": [
+    "avoidance",
+    "core_formula",
+    "grouping",
+    "mixed_units",
+    "transfer_pricing"
+  ],
+  "metadata": {
+    "generated_at": "2026-05-13T08:32:02+00:00",
+    "non_claims": [
+      "This is a prototype evidence assessment only. It is not legal, tax, Treasury, ATO, evidentiary, forensic, or audit validation.",
+      "Evidence reports do not validate liability or calibration."
+    ],
+    "status": "prototype_evidence_requirements_only",
+    "version": "CARSF V1.5 prototype"
+  },
+  "requirements": [
+    {
+      "acceptable_sources": [
+        "system logs",
+        "workflow records",
+        "platform records",
+        "warehouse or transport-management records",
+        "audited accounts",
+        "management accounts",
+        "invoices",
+        "contracts",
+        "tax workpapers"
+      ],
+      "category": "core_formula",
+      "description": "Canonical output quantity and measurement period.",
+      "field": "output.value",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "core_formula",
+        "mixed_units"
+      ],
+      "requirement_id": "core_output_value"
+    },
+    {
+      "acceptable_sources": [
+        "system logs",
+        "workflow records",
+        "platform records",
+        "warehouse or transport-management records",
+        "schedule determination"
+      ],
+      "category": "core_formula",
+      "description": "Canonical output unit mapped to a prototype schedule.",
+      "field": "output.unit",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "core_formula",
+        "mixed_units"
+      ],
+      "requirement_id": "core_output_unit"
+    },
+    {
+      "acceptable_sources": [
+        "ATO aggregated tax data",
+        "ABS industry data",
+        "DSS / Services Australia data",
+        "Treasury modelling",
+        "state payroll tax datasets",
+        "industry productivity datasets"
+      ],
+      "category": "core_formula",
+      "description": "LIBC output-per-FTE benchmark.",
+      "field": "schedule.opfte_libc_placeholder",
+      "legal_sensitivity": "high",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "low",
+      "required_for": [
+        "core_formula",
+        "calibration"
+      ],
+      "requirement_id": "core_opfte_libc"
+    },
+    {
+      "acceptable_sources": [
+        "payroll records",
+        "timesheets",
+        "employment contracts",
+        "Fair Work / award mapping",
+        "audited workforce records"
+      ],
+      "category": "core_formula",
+      "description": "Verified hours for QLC workers.",
+      "field": "workers.annual_hours",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "high",
+      "required_for": [
+        "core_formula",
+        "safe_harbour"
+      ],
+      "requirement_id": "core_worker_hours"
+    },
+    {
+      "acceptable_sources": [
+        "payroll records",
+        "timesheets",
+        "employment contracts",
+        "Fair Work / award mapping",
+        "audited workforce records"
+      ],
+      "category": "core_formula",
+      "description": "Evidence supporting wage quality score.",
+      "field": "workers.wage_quality",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "high",
+      "required_for": [
+        "core_formula",
+        "safe_harbour"
+      ],
+      "requirement_id": "core_wage_quality"
+    },
+    {
+      "acceptable_sources": [
+        "payroll records",
+        "timesheets",
+        "employment contracts",
+        "Fair Work / award mapping",
+        "audited workforce records"
+      ],
+      "category": "core_formula",
+      "description": "Evidence supporting job security score.",
+      "field": "workers.job_security",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "high",
+      "required_for": [
+        "core_formula",
+        "safe_harbour"
+      ],
+      "requirement_id": "core_job_security"
+    },
+    {
+      "acceptable_sources": [
+        "payroll records",
+        "timesheets",
+        "employment contracts",
+        "Fair Work / award mapping",
+        "audited workforce records",
+        "training records"
+      ],
+      "category": "core_formula",
+      "description": "Training, apprenticeship, or transition evidence.",
+      "field": "workers.skill_development",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "high",
+      "required_for": [
+        "core_formula",
+        "safe_harbour"
+      ],
+      "requirement_id": "core_skill_development"
+    },
+    {
+      "acceptable_sources": [
+        "payroll records",
+        "timesheets",
+        "employment contracts",
+        "Fair Work / award mapping",
+        "audited workforce records",
+        "work-location evidence"
+      ],
+      "category": "core_formula",
+      "description": "Australian nexus evidence for QLC.",
+      "field": "workers.australian_nexus",
+      "legal_sensitivity": "high",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "high",
+      "required_for": [
+        "core_formula",
+        "grouping"
+      ],
+      "requirement_id": "core_australian_nexus"
+    },
+    {
+      "acceptable_sources": [
+        "system logs",
+        "workflow records",
+        "platform records",
+        "warehouse or transport-management records",
+        "audited accounts",
+        "management accounts",
+        "invoices",
+        "contracts",
+        "tax workpapers"
+      ],
+      "category": "core_formula",
+      "description": "Bounded AII component evidence.",
+      "field": "automation_components",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "core_formula",
+        "avoidance"
+      ],
+      "requirement_id": "core_aii_components"
+    },
+    {
+      "acceptable_sources": [
+        "audited accounts",
+        "management accounts",
+        "invoices",
+        "contracts",
+        "tax workpapers",
+        "legal review",
+        "tax counsel review",
+        "related-party agreements",
+        "transfer-pricing workpapers"
+      ],
+      "category": "core_formula",
+      "description": "Australian-attributable revenue and verified cost evidence.",
+      "field": "aava_inputs",
+      "legal_sensitivity": "high",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "core_formula",
+        "transfer_pricing"
+      ],
+      "requirement_id": "core_aava_revenue_costs"
+    },
+    {
+      "acceptable_sources": [
+        "ATO aggregated tax data",
+        "ABS industry data",
+        "DSS / Services Australia data",
+        "Treasury modelling",
+        "state payroll tax datasets"
+      ],
+      "category": "core_formula",
+      "description": "Fiscal replacement value floor, standard, and full settings.",
+      "field": "schedule.frv",
+      "legal_sensitivity": "high",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "core_formula",
+        "calibration"
+      ],
+      "requirement_id": "core_frv"
+    },
+    {
+      "acceptable_sources": [
+        "audited accounts",
+        "management accounts",
+        "invoices",
+        "contracts",
+        "tax workpapers",
+        "legal review",
+        "tax counsel review",
+        "related-party agreements",
+        "transfer-pricing workpapers"
+      ],
+      "category": "core_formula",
+      "description": "Capital base evidence for PRRT-inspired uplift logic.",
+      "field": "capital_base",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "core_formula",
+        "transfer_pricing"
+      ],
+      "requirement_id": "core_capital_base"
+    },
+    {
+      "acceptable_sources": [
+        "ATO aggregated tax data",
+        "ABS industry data",
+        "DSS / Services Australia data",
+        "Treasury modelling",
+        "state payroll tax datasets",
+        "Treasury modelling"
+      ],
+      "category": "core_formula",
+      "description": "Uplift and rent-tax-rate settings.",
+      "field": "caps.uplift_rate/rent_tax_rate",
+      "legal_sensitivity": "high",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "low",
+      "required_for": [
+        "core_formula",
+        "calibration"
+      ],
+      "requirement_id": "core_rates"
+    },
+    {
+      "acceptable_sources": [
+        "audited accounts",
+        "management accounts",
+        "invoices",
+        "contracts",
+        "tax workpapers",
+        "training records",
+        "program records"
+      ],
+      "category": "core_formula",
+      "description": "Verified credit evidence.",
+      "field": "credits",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "core_formula",
+        "safe_harbour"
+      ],
+      "requirement_id": "core_credits"
+    },
+    {
+      "acceptable_sources": [
+        "audited accounts",
+        "management accounts",
+        "invoices",
+        "contracts",
+        "tax workpapers",
+        "ATO aggregated tax data"
+      ],
+      "category": "safe_harbour",
+      "description": "Revenue threshold evidence.",
+      "field": "safe_harbours.revenue_threshold",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "safe_harbour"
+      ],
+      "requirement_id": "safe_harbour_revenue"
+    },
+    {
+      "acceptable_sources": [
+        "system logs",
+        "workflow records",
+        "platform records",
+        "warehouse or transport-management records",
+        "payroll records",
+        "timesheets",
+        "employment contracts",
+        "Fair Work / award mapping",
+        "audited workforce records"
+      ],
+      "category": "safe_harbour",
+      "description": "Evidence that AI is worker-assist/admin rather than labour-substituting.",
+      "field": "risk_metadata.worker_assist_admin_ai",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "safe_harbour",
+        "avoidance"
+      ],
+      "requirement_id": "safe_harbour_worker_assist"
+    },
+    {
+      "acceptable_sources": [
+        "audited accounts",
+        "management accounts",
+        "invoices",
+        "contracts",
+        "tax workpapers",
+        "system logs",
+        "workflow records",
+        "platform records",
+        "warehouse or transport-management records"
+      ],
+      "category": "safe_harbour",
+      "description": "Evidence supporting low-NLTG treatment.",
+      "field": "outputs.nltg",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "safe_harbour"
+      ],
+      "requirement_id": "safe_harbour_low_nltg"
+    },
+    {
+      "acceptable_sources": [
+        "audited accounts",
+        "management accounts",
+        "invoices",
+        "contracts",
+        "tax workpapers",
+        "legal review",
+        "tax counsel review",
+        "related-party agreements",
+        "transfer-pricing workpapers"
+      ],
+      "category": "safe_harbour",
+      "description": "Startup status and grouping review evidence.",
+      "field": "risk_metadata.startup_placeholder",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "safe_harbour",
+        "grouping"
+      ],
+      "requirement_id": "safe_harbour_startup"
+    },
+    {
+      "acceptable_sources": [
+        "regulatory classification",
+        "policy review"
+      ],
+      "category": "safe_harbour",
+      "description": "Essential-service review evidence.",
+      "field": "risk_metadata.essential_service_review",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "safe_harbour"
+      ],
+      "requirement_id": "safe_harbour_essential_service"
+    },
+    {
+      "acceptable_sources": [
+        "payroll records",
+        "timesheets",
+        "employment contracts",
+        "Fair Work / award mapping",
+        "audited workforce records",
+        "system logs",
+        "workflow records",
+        "platform records",
+        "warehouse or transport-management records"
+      ],
+      "category": "avoidance",
+      "description": "Token human oversight role evidence.",
+      "field": "risk_metadata.token_human_oversight_risk",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "avoidance"
+      ],
+      "requirement_id": "avoid_token_oversight"
+    },
+    {
+      "acceptable_sources": [
+        "payroll records",
+        "timesheets",
+        "employment contracts",
+        "Fair Work / award mapping",
+        "audited workforce records",
+        "audited accounts",
+        "management accounts",
+        "invoices",
+        "contracts",
+        "tax workpapers"
+      ],
+      "category": "avoidance",
+      "description": "Fake QLC inflation evidence.",
+      "field": "risk_metadata.fake_qlc_inflation_risk",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "avoidance"
+      ],
+      "requirement_id": "avoid_fake_qlc"
+    },
+    {
+      "acceptable_sources": [
+        "legal review",
+        "tax counsel review",
+        "related-party agreements",
+        "transfer-pricing workpapers",
+        "system logs",
+        "workflow records",
+        "platform records",
+        "warehouse or transport-management records"
+      ],
+      "category": "avoidance",
+      "description": "Offshore automation service evidence.",
+      "field": "risk_metadata.offshore_automation_service",
+      "legal_sensitivity": "high",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "avoidance",
+        "transfer_pricing"
+      ],
+      "requirement_id": "avoid_offshore_ai"
+    },
+    {
+      "acceptable_sources": [
+        "legal review",
+        "tax counsel review",
+        "related-party agreements",
+        "transfer-pricing workpapers",
+        "audited accounts",
+        "management accounts",
+        "invoices",
+        "contracts",
+        "tax workpapers"
+      ],
+      "category": "avoidance",
+      "description": "Related-party service fee evidence.",
+      "field": "risk_metadata.related_party_ai_service_fees",
+      "legal_sensitivity": "high",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "avoidance",
+        "transfer_pricing"
+      ],
+      "requirement_id": "avoid_related_party_fees"
+    },
+    {
+      "acceptable_sources": [
+        "audited accounts",
+        "management accounts",
+        "invoices",
+        "contracts",
+        "tax workpapers",
+        "cloud invoices"
+      ],
+      "category": "avoidance",
+      "description": "Cloud/inference relabelling evidence.",
+      "field": "risk_metadata.cloud_cost_relabeling_risk",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "avoidance",
+        "transfer_pricing"
+      ],
+      "requirement_id": "avoid_cloud_relabelling"
+    },
+    {
+      "acceptable_sources": [
+        "legal review",
+        "tax counsel review",
+        "related-party agreements",
+        "transfer-pricing workpapers",
+        "audited accounts",
+        "management accounts",
+        "invoices",
+        "contracts",
+        "tax workpapers"
+      ],
+      "category": "avoidance",
+      "description": "Robotics leasing evidence.",
+      "field": "risk_metadata.robotics_leasing_risk",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "avoidance",
+        "transfer_pricing"
+      ],
+      "requirement_id": "avoid_robotics_leasing"
+    },
+    {
+      "acceptable_sources": [
+        "legal review",
+        "tax counsel review",
+        "related-party agreements",
+        "transfer-pricing workpapers",
+        "audited accounts",
+        "management accounts",
+        "invoices",
+        "contracts",
+        "tax workpapers"
+      ],
+      "category": "avoidance",
+      "description": "Entity-splitting evidence.",
+      "field": "risk_metadata.entity_splitting_risk",
+      "legal_sensitivity": "high",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "avoidance",
+        "grouping"
+      ],
+      "requirement_id": "avoid_entity_splitting"
+    },
+    {
+      "acceptable_sources": [
+        "system logs",
+        "workflow records",
+        "platform records",
+        "warehouse or transport-management records",
+        "schedule determination"
+      ],
+      "category": "avoidance",
+      "description": "Sector classification arbitrage evidence.",
+      "field": "risk_metadata.sector_classification_risk",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "avoidance",
+        "mixed_units"
+      ],
+      "requirement_id": "avoid_sector_classification"
+    },
+    {
+      "acceptable_sources": [
+        "legal review",
+        "tax counsel review",
+        "related-party agreements",
+        "transfer-pricing workpapers",
+        "audited accounts",
+        "management accounts",
+        "invoices",
+        "contracts",
+        "tax workpapers"
+      ],
+      "category": "grouping",
+      "description": "Common ownership or control evidence.",
+      "field": "group.common_ownership_control",
+      "legal_sensitivity": "high",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "grouping"
+      ],
+      "requirement_id": "group_common_control"
+    },
+    {
+      "acceptable_sources": [
+        "legal review",
+        "tax counsel review",
+        "related-party agreements",
+        "transfer-pricing workpapers"
+      ],
+      "category": "grouping",
+      "description": "IP/platform ownership relationship evidence.",
+      "field": "entities.role.platform_ip_owner",
+      "legal_sensitivity": "high",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "grouping",
+        "transfer_pricing"
+      ],
+      "requirement_id": "group_ip_owner"
+    },
+    {
+      "acceptable_sources": [
+        "legal review",
+        "tax counsel review",
+        "related-party agreements",
+        "transfer-pricing workpapers",
+        "system logs",
+        "workflow records",
+        "platform records",
+        "warehouse or transport-management records"
+      ],
+      "category": "grouping",
+      "description": "Platform/service-provider relationship evidence.",
+      "field": "entities.role.service_provider",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "grouping"
+      ],
+      "requirement_id": "group_service_provider"
+    },
+    {
+      "acceptable_sources": [
+        "audited accounts",
+        "management accounts",
+        "invoices",
+        "contracts",
+        "tax workpapers",
+        "system logs",
+        "workflow records",
+        "platform records",
+        "warehouse or transport-management records"
+      ],
+      "category": "grouping",
+      "description": "Australian customer-facing entity evidence.",
+      "field": "entities.role.customer_facing",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "grouping"
+      ],
+      "requirement_id": "group_customer_facing"
+    },
+    {
+      "acceptable_sources": [
+        "payroll records",
+        "timesheets",
+        "employment contracts",
+        "Fair Work / award mapping",
+        "audited workforce records",
+        "legal review",
+        "tax counsel review",
+        "related-party agreements",
+        "transfer-pricing workpapers"
+      ],
+      "category": "grouping",
+      "description": "Australian employer entity evidence.",
+      "field": "entities.role.australian_employer",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "high",
+      "required_for": [
+        "grouping"
+      ],
+      "requirement_id": "group_employer"
+    },
+    {
+      "acceptable_sources": [
+        "legal review",
+        "tax counsel review",
+        "related-party agreements",
+        "transfer-pricing workpapers",
+        "system logs",
+        "workflow records",
+        "platform records",
+        "warehouse or transport-management records"
+      ],
+      "category": "grouping",
+      "description": "Offshore service provider evidence.",
+      "field": "entities.role.offshore_service_provider",
+      "legal_sensitivity": "high",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "grouping",
+        "transfer_pricing"
+      ],
+      "requirement_id": "group_offshore_provider"
+    },
+    {
+      "acceptable_sources": [
+        "legal review",
+        "tax counsel review",
+        "related-party agreements",
+        "transfer-pricing workpapers"
+      ],
+      "category": "transfer_pricing",
+      "description": "Related-party agreement evidence.",
+      "field": "related_party_transactions.agreements",
+      "legal_sensitivity": "high",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "transfer_pricing"
+      ],
+      "requirement_id": "tp_related_party_agreements"
+    },
+    {
+      "acceptable_sources": [
+        "audited accounts",
+        "management accounts",
+        "invoices",
+        "contracts",
+        "tax workpapers",
+        "legal review",
+        "tax counsel review",
+        "related-party agreements",
+        "transfer-pricing workpapers"
+      ],
+      "category": "transfer_pricing",
+      "description": "Service fee invoice evidence.",
+      "field": "related_party_transactions.service_fees",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "transfer_pricing"
+      ],
+      "requirement_id": "tp_service_fee_invoices"
+    },
+    {
+      "acceptable_sources": [
+        "legal review",
+        "tax counsel review",
+        "related-party agreements",
+        "transfer-pricing workpapers"
+      ],
+      "category": "transfer_pricing",
+      "description": "Royalty or licence agreement evidence.",
+      "field": "related_party_transactions.royalties",
+      "legal_sensitivity": "high",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "transfer_pricing"
+      ],
+      "requirement_id": "tp_royalty_licence"
+    },
+    {
+      "acceptable_sources": [
+        "legal review",
+        "tax counsel review",
+        "related-party agreements",
+        "transfer-pricing workpapers",
+        "audited accounts",
+        "management accounts",
+        "invoices",
+        "contracts",
+        "tax workpapers"
+      ],
+      "category": "transfer_pricing",
+      "description": "Cost-sharing or group recharge evidence.",
+      "field": "related_party_transactions.cost_sharing",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "transfer_pricing"
+      ],
+      "requirement_id": "tp_cost_sharing"
+    },
+    {
+      "acceptable_sources": [
+        "audited accounts",
+        "management accounts",
+        "invoices",
+        "contracts",
+        "tax workpapers",
+        "cloud invoices"
+      ],
+      "category": "transfer_pricing",
+      "description": "Cloud/inference bill evidence.",
+      "field": "related_party_transactions.cloud_inference",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "transfer_pricing"
+      ],
+      "requirement_id": "tp_cloud_inference"
+    },
+    {
+      "acceptable_sources": [
+        "legal review",
+        "tax counsel review",
+        "related-party agreements",
+        "transfer-pricing workpapers",
+        "audited accounts",
+        "management accounts",
+        "invoices",
+        "contracts",
+        "tax workpapers"
+      ],
+      "category": "transfer_pricing",
+      "description": "Robotics leasing contract evidence.",
+      "field": "related_party_transactions.robotics_leasing",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "transfer_pricing"
+      ],
+      "requirement_id": "tp_robotics_leasing"
+    },
+    {
+      "acceptable_sources": [
+        "legal review",
+        "tax counsel review",
+        "related-party agreements",
+        "transfer-pricing workpapers",
+        "system logs",
+        "workflow records",
+        "platform records",
+        "warehouse or transport-management records"
+      ],
+      "category": "transfer_pricing",
+      "description": "Data/model access fee evidence.",
+      "field": "related_party_transactions.data_model_access",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "transfer_pricing"
+      ],
+      "requirement_id": "tp_data_model_access"
+    },
+    {
+      "acceptable_sources": [
+        "legal review",
+        "tax counsel review",
+        "related-party agreements",
+        "transfer-pricing workpapers",
+        "audited accounts",
+        "management accounts",
+        "invoices",
+        "contracts",
+        "tax workpapers"
+      ],
+      "category": "transfer_pricing",
+      "description": "Management or technical service fee evidence.",
+      "field": "related_party_transactions.management_service",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "transfer_pricing"
+      ],
+      "requirement_id": "tp_management_technical"
+    },
+    {
+      "acceptable_sources": [
+        "system logs",
+        "workflow records",
+        "platform records",
+        "warehouse or transport-management records",
+        "schedule determination"
+      ],
+      "category": "mixed_units",
+      "description": "Canonical output unit evidence.",
+      "field": "canonical_output_unit",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "mixed_units"
+      ],
+      "requirement_id": "mixed_unit_evidence"
+    },
+    {
+      "acceptable_sources": [
+        "system logs",
+        "workflow records",
+        "platform records",
+        "warehouse or transport-management records",
+        "policy review"
+      ],
+      "category": "mixed_units",
+      "description": "Reviewed conversion metadata where units differ.",
+      "field": "conversion_metadata",
+      "legal_sensitivity": "high",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "mixed_units"
+      ],
+      "requirement_id": "mixed_conversion_metadata"
+    },
+    {
+      "acceptable_sources": [
+        "audited accounts",
+        "management accounts",
+        "invoices",
+        "contracts",
+        "tax workpapers",
+        "system logs",
+        "workflow records",
+        "platform records",
+        "warehouse or transport-management records"
+      ],
+      "category": "mixed_units",
+      "description": "Activity-share evidence.",
+      "field": "apportionment.activities.share",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "mixed_units"
+      ],
+      "requirement_id": "mixed_activity_shares"
+    },
+    {
+      "acceptable_sources": [
+        "audited accounts",
+        "management accounts",
+        "invoices",
+        "contracts",
+        "tax workpapers"
+      ],
+      "category": "mixed_units",
+      "description": "Revenue/AAVA share basis evidence.",
+      "field": "revenue_or_aava_share_basis",
+      "legal_sensitivity": "medium",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "mixed_units"
+      ],
+      "requirement_id": "mixed_revenue_aava_basis"
+    },
+    {
+      "acceptable_sources": [
+        "schedule determination",
+        "policy review"
+      ],
+      "category": "mixed_units",
+      "description": "Schedule classification evidence.",
+      "field": "schedule_id",
+      "legal_sensitivity": "high",
+      "minimum_confidence": "medium",
+      "notes": [
+        "Prototype evidence requirement; final source rules require policy and legal review."
+      ],
+      "placeholder_only": true,
+      "privacy_sensitivity": "medium",
+      "required_for": [
+        "mixed_units"
+      ],
+      "requirement_id": "mixed_schedule_classification"
+    }
+  ],
+  "requirements_by_category": {
+    "avoidance": [
+      {
+        "acceptable_sources": [
+          "payroll records",
+          "timesheets",
+          "employment contracts",
+          "Fair Work / award mapping",
+          "audited workforce records",
+          "system logs",
+          "workflow records",
+          "platform records",
+          "warehouse or transport-management records"
+        ],
+        "category": "avoidance",
+        "description": "Token human oversight role evidence.",
+        "field": "risk_metadata.token_human_oversight_risk",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "avoidance"
+        ],
+        "requirement_id": "avoid_token_oversight"
+      },
+      {
+        "acceptable_sources": [
+          "payroll records",
+          "timesheets",
+          "employment contracts",
+          "Fair Work / award mapping",
+          "audited workforce records",
+          "audited accounts",
+          "management accounts",
+          "invoices",
+          "contracts",
+          "tax workpapers"
+        ],
+        "category": "avoidance",
+        "description": "Fake QLC inflation evidence.",
+        "field": "risk_metadata.fake_qlc_inflation_risk",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "avoidance"
+        ],
+        "requirement_id": "avoid_fake_qlc"
+      },
+      {
+        "acceptable_sources": [
+          "legal review",
+          "tax counsel review",
+          "related-party agreements",
+          "transfer-pricing workpapers",
+          "system logs",
+          "workflow records",
+          "platform records",
+          "warehouse or transport-management records"
+        ],
+        "category": "avoidance",
+        "description": "Offshore automation service evidence.",
+        "field": "risk_metadata.offshore_automation_service",
+        "legal_sensitivity": "high",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "avoidance",
+          "transfer_pricing"
+        ],
+        "requirement_id": "avoid_offshore_ai"
+      },
+      {
+        "acceptable_sources": [
+          "legal review",
+          "tax counsel review",
+          "related-party agreements",
+          "transfer-pricing workpapers",
+          "audited accounts",
+          "management accounts",
+          "invoices",
+          "contracts",
+          "tax workpapers"
+        ],
+        "category": "avoidance",
+        "description": "Related-party service fee evidence.",
+        "field": "risk_metadata.related_party_ai_service_fees",
+        "legal_sensitivity": "high",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "avoidance",
+          "transfer_pricing"
+        ],
+        "requirement_id": "avoid_related_party_fees"
+      },
+      {
+        "acceptable_sources": [
+          "audited accounts",
+          "management accounts",
+          "invoices",
+          "contracts",
+          "tax workpapers",
+          "cloud invoices"
+        ],
+        "category": "avoidance",
+        "description": "Cloud/inference relabelling evidence.",
+        "field": "risk_metadata.cloud_cost_relabeling_risk",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "avoidance",
+          "transfer_pricing"
+        ],
+        "requirement_id": "avoid_cloud_relabelling"
+      },
+      {
+        "acceptable_sources": [
+          "legal review",
+          "tax counsel review",
+          "related-party agreements",
+          "transfer-pricing workpapers",
+          "audited accounts",
+          "management accounts",
+          "invoices",
+          "contracts",
+          "tax workpapers"
+        ],
+        "category": "avoidance",
+        "description": "Robotics leasing evidence.",
+        "field": "risk_metadata.robotics_leasing_risk",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "avoidance",
+          "transfer_pricing"
+        ],
+        "requirement_id": "avoid_robotics_leasing"
+      },
+      {
+        "acceptable_sources": [
+          "legal review",
+          "tax counsel review",
+          "related-party agreements",
+          "transfer-pricing workpapers",
+          "audited accounts",
+          "management accounts",
+          "invoices",
+          "contracts",
+          "tax workpapers"
+        ],
+        "category": "avoidance",
+        "description": "Entity-splitting evidence.",
+        "field": "risk_metadata.entity_splitting_risk",
+        "legal_sensitivity": "high",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "avoidance",
+          "grouping"
+        ],
+        "requirement_id": "avoid_entity_splitting"
+      },
+      {
+        "acceptable_sources": [
+          "system logs",
+          "workflow records",
+          "platform records",
+          "warehouse or transport-management records",
+          "schedule determination"
+        ],
+        "category": "avoidance",
+        "description": "Sector classification arbitrage evidence.",
+        "field": "risk_metadata.sector_classification_risk",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "avoidance",
+          "mixed_units"
+        ],
+        "requirement_id": "avoid_sector_classification"
+      }
+    ],
+    "core_formula": [
+      {
+        "acceptable_sources": [
+          "system logs",
+          "workflow records",
+          "platform records",
+          "warehouse or transport-management records",
+          "audited accounts",
+          "management accounts",
+          "invoices",
+          "contracts",
+          "tax workpapers"
+        ],
+        "category": "core_formula",
+        "description": "Canonical output quantity and measurement period.",
+        "field": "output.value",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "core_formula",
+          "mixed_units"
+        ],
+        "requirement_id": "core_output_value"
+      },
+      {
+        "acceptable_sources": [
+          "system logs",
+          "workflow records",
+          "platform records",
+          "warehouse or transport-management records",
+          "schedule determination"
+        ],
+        "category": "core_formula",
+        "description": "Canonical output unit mapped to a prototype schedule.",
+        "field": "output.unit",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "core_formula",
+          "mixed_units"
+        ],
+        "requirement_id": "core_output_unit"
+      },
+      {
+        "acceptable_sources": [
+          "ATO aggregated tax data",
+          "ABS industry data",
+          "DSS / Services Australia data",
+          "Treasury modelling",
+          "state payroll tax datasets",
+          "industry productivity datasets"
+        ],
+        "category": "core_formula",
+        "description": "LIBC output-per-FTE benchmark.",
+        "field": "schedule.opfte_libc_placeholder",
+        "legal_sensitivity": "high",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "low",
+        "required_for": [
+          "core_formula",
+          "calibration"
+        ],
+        "requirement_id": "core_opfte_libc"
+      },
+      {
+        "acceptable_sources": [
+          "payroll records",
+          "timesheets",
+          "employment contracts",
+          "Fair Work / award mapping",
+          "audited workforce records"
+        ],
+        "category": "core_formula",
+        "description": "Verified hours for QLC workers.",
+        "field": "workers.annual_hours",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "high",
+        "required_for": [
+          "core_formula",
+          "safe_harbour"
+        ],
+        "requirement_id": "core_worker_hours"
+      },
+      {
+        "acceptable_sources": [
+          "payroll records",
+          "timesheets",
+          "employment contracts",
+          "Fair Work / award mapping",
+          "audited workforce records"
+        ],
+        "category": "core_formula",
+        "description": "Evidence supporting wage quality score.",
+        "field": "workers.wage_quality",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "high",
+        "required_for": [
+          "core_formula",
+          "safe_harbour"
+        ],
+        "requirement_id": "core_wage_quality"
+      },
+      {
+        "acceptable_sources": [
+          "payroll records",
+          "timesheets",
+          "employment contracts",
+          "Fair Work / award mapping",
+          "audited workforce records"
+        ],
+        "category": "core_formula",
+        "description": "Evidence supporting job security score.",
+        "field": "workers.job_security",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "high",
+        "required_for": [
+          "core_formula",
+          "safe_harbour"
+        ],
+        "requirement_id": "core_job_security"
+      },
+      {
+        "acceptable_sources": [
+          "payroll records",
+          "timesheets",
+          "employment contracts",
+          "Fair Work / award mapping",
+          "audited workforce records",
+          "training records"
+        ],
+        "category": "core_formula",
+        "description": "Training, apprenticeship, or transition evidence.",
+        "field": "workers.skill_development",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "high",
+        "required_for": [
+          "core_formula",
+          "safe_harbour"
+        ],
+        "requirement_id": "core_skill_development"
+      },
+      {
+        "acceptable_sources": [
+          "payroll records",
+          "timesheets",
+          "employment contracts",
+          "Fair Work / award mapping",
+          "audited workforce records",
+          "work-location evidence"
+        ],
+        "category": "core_formula",
+        "description": "Australian nexus evidence for QLC.",
+        "field": "workers.australian_nexus",
+        "legal_sensitivity": "high",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "high",
+        "required_for": [
+          "core_formula",
+          "grouping"
+        ],
+        "requirement_id": "core_australian_nexus"
+      },
+      {
+        "acceptable_sources": [
+          "system logs",
+          "workflow records",
+          "platform records",
+          "warehouse or transport-management records",
+          "audited accounts",
+          "management accounts",
+          "invoices",
+          "contracts",
+          "tax workpapers"
+        ],
+        "category": "core_formula",
+        "description": "Bounded AII component evidence.",
+        "field": "automation_components",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "core_formula",
+          "avoidance"
+        ],
+        "requirement_id": "core_aii_components"
+      },
+      {
+        "acceptable_sources": [
+          "audited accounts",
+          "management accounts",
+          "invoices",
+          "contracts",
+          "tax workpapers",
+          "legal review",
+          "tax counsel review",
+          "related-party agreements",
+          "transfer-pricing workpapers"
+        ],
+        "category": "core_formula",
+        "description": "Australian-attributable revenue and verified cost evidence.",
+        "field": "aava_inputs",
+        "legal_sensitivity": "high",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "core_formula",
+          "transfer_pricing"
+        ],
+        "requirement_id": "core_aava_revenue_costs"
+      },
+      {
+        "acceptable_sources": [
+          "ATO aggregated tax data",
+          "ABS industry data",
+          "DSS / Services Australia data",
+          "Treasury modelling",
+          "state payroll tax datasets"
+        ],
+        "category": "core_formula",
+        "description": "Fiscal replacement value floor, standard, and full settings.",
+        "field": "schedule.frv",
+        "legal_sensitivity": "high",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "core_formula",
+          "calibration"
+        ],
+        "requirement_id": "core_frv"
+      },
+      {
+        "acceptable_sources": [
+          "audited accounts",
+          "management accounts",
+          "invoices",
+          "contracts",
+          "tax workpapers",
+          "legal review",
+          "tax counsel review",
+          "related-party agreements",
+          "transfer-pricing workpapers"
+        ],
+        "category": "core_formula",
+        "description": "Capital base evidence for PRRT-inspired uplift logic.",
+        "field": "capital_base",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "core_formula",
+          "transfer_pricing"
+        ],
+        "requirement_id": "core_capital_base"
+      },
+      {
+        "acceptable_sources": [
+          "ATO aggregated tax data",
+          "ABS industry data",
+          "DSS / Services Australia data",
+          "Treasury modelling",
+          "state payroll tax datasets",
+          "Treasury modelling"
+        ],
+        "category": "core_formula",
+        "description": "Uplift and rent-tax-rate settings.",
+        "field": "caps.uplift_rate/rent_tax_rate",
+        "legal_sensitivity": "high",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "low",
+        "required_for": [
+          "core_formula",
+          "calibration"
+        ],
+        "requirement_id": "core_rates"
+      },
+      {
+        "acceptable_sources": [
+          "audited accounts",
+          "management accounts",
+          "invoices",
+          "contracts",
+          "tax workpapers",
+          "training records",
+          "program records"
+        ],
+        "category": "core_formula",
+        "description": "Verified credit evidence.",
+        "field": "credits",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "core_formula",
+          "safe_harbour"
+        ],
+        "requirement_id": "core_credits"
+      }
+    ],
+    "grouping": [
+      {
+        "acceptable_sources": [
+          "legal review",
+          "tax counsel review",
+          "related-party agreements",
+          "transfer-pricing workpapers",
+          "audited accounts",
+          "management accounts",
+          "invoices",
+          "contracts",
+          "tax workpapers"
+        ],
+        "category": "grouping",
+        "description": "Common ownership or control evidence.",
+        "field": "group.common_ownership_control",
+        "legal_sensitivity": "high",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "grouping"
+        ],
+        "requirement_id": "group_common_control"
+      },
+      {
+        "acceptable_sources": [
+          "legal review",
+          "tax counsel review",
+          "related-party agreements",
+          "transfer-pricing workpapers"
+        ],
+        "category": "grouping",
+        "description": "IP/platform ownership relationship evidence.",
+        "field": "entities.role.platform_ip_owner",
+        "legal_sensitivity": "high",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "grouping",
+          "transfer_pricing"
+        ],
+        "requirement_id": "group_ip_owner"
+      },
+      {
+        "acceptable_sources": [
+          "legal review",
+          "tax counsel review",
+          "related-party agreements",
+          "transfer-pricing workpapers",
+          "system logs",
+          "workflow records",
+          "platform records",
+          "warehouse or transport-management records"
+        ],
+        "category": "grouping",
+        "description": "Platform/service-provider relationship evidence.",
+        "field": "entities.role.service_provider",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "grouping"
+        ],
+        "requirement_id": "group_service_provider"
+      },
+      {
+        "acceptable_sources": [
+          "audited accounts",
+          "management accounts",
+          "invoices",
+          "contracts",
+          "tax workpapers",
+          "system logs",
+          "workflow records",
+          "platform records",
+          "warehouse or transport-management records"
+        ],
+        "category": "grouping",
+        "description": "Australian customer-facing entity evidence.",
+        "field": "entities.role.customer_facing",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "grouping"
+        ],
+        "requirement_id": "group_customer_facing"
+      },
+      {
+        "acceptable_sources": [
+          "payroll records",
+          "timesheets",
+          "employment contracts",
+          "Fair Work / award mapping",
+          "audited workforce records",
+          "legal review",
+          "tax counsel review",
+          "related-party agreements",
+          "transfer-pricing workpapers"
+        ],
+        "category": "grouping",
+        "description": "Australian employer entity evidence.",
+        "field": "entities.role.australian_employer",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "high",
+        "required_for": [
+          "grouping"
+        ],
+        "requirement_id": "group_employer"
+      },
+      {
+        "acceptable_sources": [
+          "legal review",
+          "tax counsel review",
+          "related-party agreements",
+          "transfer-pricing workpapers",
+          "system logs",
+          "workflow records",
+          "platform records",
+          "warehouse or transport-management records"
+        ],
+        "category": "grouping",
+        "description": "Offshore service provider evidence.",
+        "field": "entities.role.offshore_service_provider",
+        "legal_sensitivity": "high",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "grouping",
+          "transfer_pricing"
+        ],
+        "requirement_id": "group_offshore_provider"
+      }
+    ],
+    "mixed_units": [
+      {
+        "acceptable_sources": [
+          "system logs",
+          "workflow records",
+          "platform records",
+          "warehouse or transport-management records",
+          "schedule determination"
+        ],
+        "category": "mixed_units",
+        "description": "Canonical output unit evidence.",
+        "field": "canonical_output_unit",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "mixed_units"
+        ],
+        "requirement_id": "mixed_unit_evidence"
+      },
+      {
+        "acceptable_sources": [
+          "system logs",
+          "workflow records",
+          "platform records",
+          "warehouse or transport-management records",
+          "policy review"
+        ],
+        "category": "mixed_units",
+        "description": "Reviewed conversion metadata where units differ.",
+        "field": "conversion_metadata",
+        "legal_sensitivity": "high",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "mixed_units"
+        ],
+        "requirement_id": "mixed_conversion_metadata"
+      },
+      {
+        "acceptable_sources": [
+          "audited accounts",
+          "management accounts",
+          "invoices",
+          "contracts",
+          "tax workpapers",
+          "system logs",
+          "workflow records",
+          "platform records",
+          "warehouse or transport-management records"
+        ],
+        "category": "mixed_units",
+        "description": "Activity-share evidence.",
+        "field": "apportionment.activities.share",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "mixed_units"
+        ],
+        "requirement_id": "mixed_activity_shares"
+      },
+      {
+        "acceptable_sources": [
+          "audited accounts",
+          "management accounts",
+          "invoices",
+          "contracts",
+          "tax workpapers"
+        ],
+        "category": "mixed_units",
+        "description": "Revenue/AAVA share basis evidence.",
+        "field": "revenue_or_aava_share_basis",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "mixed_units"
+        ],
+        "requirement_id": "mixed_revenue_aava_basis"
+      },
+      {
+        "acceptable_sources": [
+          "schedule determination",
+          "policy review"
+        ],
+        "category": "mixed_units",
+        "description": "Schedule classification evidence.",
+        "field": "schedule_id",
+        "legal_sensitivity": "high",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "mixed_units"
+        ],
+        "requirement_id": "mixed_schedule_classification"
+      }
+    ],
+    "safe_harbour": [
+      {
+        "acceptable_sources": [
+          "audited accounts",
+          "management accounts",
+          "invoices",
+          "contracts",
+          "tax workpapers",
+          "ATO aggregated tax data"
+        ],
+        "category": "safe_harbour",
+        "description": "Revenue threshold evidence.",
+        "field": "safe_harbours.revenue_threshold",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "safe_harbour"
+        ],
+        "requirement_id": "safe_harbour_revenue"
+      },
+      {
+        "acceptable_sources": [
+          "system logs",
+          "workflow records",
+          "platform records",
+          "warehouse or transport-management records",
+          "payroll records",
+          "timesheets",
+          "employment contracts",
+          "Fair Work / award mapping",
+          "audited workforce records"
+        ],
+        "category": "safe_harbour",
+        "description": "Evidence that AI is worker-assist/admin rather than labour-substituting.",
+        "field": "risk_metadata.worker_assist_admin_ai",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "safe_harbour",
+          "avoidance"
+        ],
+        "requirement_id": "safe_harbour_worker_assist"
+      },
+      {
+        "acceptable_sources": [
+          "audited accounts",
+          "management accounts",
+          "invoices",
+          "contracts",
+          "tax workpapers",
+          "system logs",
+          "workflow records",
+          "platform records",
+          "warehouse or transport-management records"
+        ],
+        "category": "safe_harbour",
+        "description": "Evidence supporting low-NLTG treatment.",
+        "field": "outputs.nltg",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "safe_harbour"
+        ],
+        "requirement_id": "safe_harbour_low_nltg"
+      },
+      {
+        "acceptable_sources": [
+          "audited accounts",
+          "management accounts",
+          "invoices",
+          "contracts",
+          "tax workpapers",
+          "legal review",
+          "tax counsel review",
+          "related-party agreements",
+          "transfer-pricing workpapers"
+        ],
+        "category": "safe_harbour",
+        "description": "Startup status and grouping review evidence.",
+        "field": "risk_metadata.startup_placeholder",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "safe_harbour",
+          "grouping"
+        ],
+        "requirement_id": "safe_harbour_startup"
+      },
+      {
+        "acceptable_sources": [
+          "regulatory classification",
+          "policy review"
+        ],
+        "category": "safe_harbour",
+        "description": "Essential-service review evidence.",
+        "field": "risk_metadata.essential_service_review",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "safe_harbour"
+        ],
+        "requirement_id": "safe_harbour_essential_service"
+      }
+    ],
+    "transfer_pricing": [
+      {
+        "acceptable_sources": [
+          "legal review",
+          "tax counsel review",
+          "related-party agreements",
+          "transfer-pricing workpapers"
+        ],
+        "category": "transfer_pricing",
+        "description": "Related-party agreement evidence.",
+        "field": "related_party_transactions.agreements",
+        "legal_sensitivity": "high",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "transfer_pricing"
+        ],
+        "requirement_id": "tp_related_party_agreements"
+      },
+      {
+        "acceptable_sources": [
+          "audited accounts",
+          "management accounts",
+          "invoices",
+          "contracts",
+          "tax workpapers",
+          "legal review",
+          "tax counsel review",
+          "related-party agreements",
+          "transfer-pricing workpapers"
+        ],
+        "category": "transfer_pricing",
+        "description": "Service fee invoice evidence.",
+        "field": "related_party_transactions.service_fees",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "transfer_pricing"
+        ],
+        "requirement_id": "tp_service_fee_invoices"
+      },
+      {
+        "acceptable_sources": [
+          "legal review",
+          "tax counsel review",
+          "related-party agreements",
+          "transfer-pricing workpapers"
+        ],
+        "category": "transfer_pricing",
+        "description": "Royalty or licence agreement evidence.",
+        "field": "related_party_transactions.royalties",
+        "legal_sensitivity": "high",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "transfer_pricing"
+        ],
+        "requirement_id": "tp_royalty_licence"
+      },
+      {
+        "acceptable_sources": [
+          "legal review",
+          "tax counsel review",
+          "related-party agreements",
+          "transfer-pricing workpapers",
+          "audited accounts",
+          "management accounts",
+          "invoices",
+          "contracts",
+          "tax workpapers"
+        ],
+        "category": "transfer_pricing",
+        "description": "Cost-sharing or group recharge evidence.",
+        "field": "related_party_transactions.cost_sharing",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "transfer_pricing"
+        ],
+        "requirement_id": "tp_cost_sharing"
+      },
+      {
+        "acceptable_sources": [
+          "audited accounts",
+          "management accounts",
+          "invoices",
+          "contracts",
+          "tax workpapers",
+          "cloud invoices"
+        ],
+        "category": "transfer_pricing",
+        "description": "Cloud/inference bill evidence.",
+        "field": "related_party_transactions.cloud_inference",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "transfer_pricing"
+        ],
+        "requirement_id": "tp_cloud_inference"
+      },
+      {
+        "acceptable_sources": [
+          "legal review",
+          "tax counsel review",
+          "related-party agreements",
+          "transfer-pricing workpapers",
+          "audited accounts",
+          "management accounts",
+          "invoices",
+          "contracts",
+          "tax workpapers"
+        ],
+        "category": "transfer_pricing",
+        "description": "Robotics leasing contract evidence.",
+        "field": "related_party_transactions.robotics_leasing",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "transfer_pricing"
+        ],
+        "requirement_id": "tp_robotics_leasing"
+      },
+      {
+        "acceptable_sources": [
+          "legal review",
+          "tax counsel review",
+          "related-party agreements",
+          "transfer-pricing workpapers",
+          "system logs",
+          "workflow records",
+          "platform records",
+          "warehouse or transport-management records"
+        ],
+        "category": "transfer_pricing",
+        "description": "Data/model access fee evidence.",
+        "field": "related_party_transactions.data_model_access",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "transfer_pricing"
+        ],
+        "requirement_id": "tp_data_model_access"
+      },
+      {
+        "acceptable_sources": [
+          "legal review",
+          "tax counsel review",
+          "related-party agreements",
+          "transfer-pricing workpapers",
+          "audited accounts",
+          "management accounts",
+          "invoices",
+          "contracts",
+          "tax workpapers"
+        ],
+        "category": "transfer_pricing",
+        "description": "Management or technical service fee evidence.",
+        "field": "related_party_transactions.management_service",
+        "legal_sensitivity": "medium",
+        "minimum_confidence": "medium",
+        "notes": [
+          "Prototype evidence requirement; final source rules require policy and legal review."
+        ],
+        "placeholder_only": true,
+        "privacy_sensitivity": "medium",
+        "required_for": [
+          "transfer_pricing"
+        ],
+        "requirement_id": "tp_management_technical"
+      }
+    ]
+  },
+  "transfer_pricing_evidence_summary": {
+    "low_confidence_count": 0,
+    "missing_count": 24,
+    "name": "Transfer-pricing preview",
+    "review_required": true,
+    "status": "placeholder_only"
+  }
+}

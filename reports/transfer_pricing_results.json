@@ -1,6 +1,80 @@
 {
+  "decision_log_summary": {
+    "decisions": {
+      "evidence_assessment": "Evidence reviewed as prototype-only input governance.",
+      "mixed_unit_handling": "Recorded mixed-unit compatibility and exposure preview.",
+      "transfer_pricing_preview": "Recorded transfer-pricing report preview."
+    },
+    "entry_count": 3,
+    "evidence_status_by_step": {
+      "evidence_assessment": "placeholder_only",
+      "mixed_unit_handling": "placeholder_only",
+      "transfer_pricing_preview": "placeholder_only"
+    },
+    "example_id": "mixed_unit_platform_group",
+    "generated_at": "2026-05-13T08:32:02+00:00",
+    "limitations": [
+      "Inputs are illustrative placeholders unless separately verified.",
+      "Decision entries record model flow and review signals only."
+    ],
+    "non_claims": [
+      "Decision logs are prototype audit trails only.",
+      "Decision logs do not create legal findings, tax findings, Treasury guidance, ATO guidance, or economic validation.",
+      "Decision logs must not contain raw sensitive identifiers or personal records."
+    ],
+    "run_id": "carsf-v1.5-mixed_unit_platform_group",
+    "steps": [
+      "evidence_assessment",
+      "transfer_pricing_preview",
+      "mixed_unit_handling"
+    ],
+    "warnings": [
+      "Prototype decision log only.",
+      "No legal, tax, Treasury, ATO, audit, forensic, or economic validation is implied."
+    ]
+  },
+  "evidence_assessment": {
+    "low_confidence_items": [],
+    "missing_requirements": [
+      "core_output_value",
+      "core_output_unit",
+      "core_aava_revenue_costs",
+      "core_capital_base",
+      "avoid_offshore_ai",
+      "avoid_related_party_fees",
+      "avoid_cloud_relabelling",
+      "avoid_robotics_leasing",
+      "avoid_sector_classification",
+      "group_ip_owner",
+      "group_offshore_provider",
+      "tp_related_party_agreements",
+      "tp_service_fee_invoices",
+      "tp_royalty_licence",
+      "tp_cost_sharing",
+      "tp_cloud_inference",
+      "tp_robotics_leasing",
+      "tp_data_model_access",
+      "tp_management_technical",
+      "mixed_unit_evidence",
+      "mixed_conversion_metadata",
+      "mixed_activity_shares",
+      "mixed_revenue_aava_basis",
+      "mixed_schedule_classification"
+    ],
+    "non_claims": [
+      "This is a prototype evidence assessment only. It is not legal, tax, Treasury, ATO, evidentiary, forensic, or audit validation.",
+      "Evidence requirements are draft scaffolding and are not final policy, law, guidance, or audit procedure.",
+      "Placeholder examples remain insufficient for real liability, calibration, or policy claims."
+    ],
+    "review_required": true,
+    "status": "placeholder_only",
+    "warnings": [
+      "Evidence assessment is prototype-only and does not validate any liability, legal position, tax position, or audit finding.",
+      "Evidence remains insufficient for real calibration, legal use, or actual tax-payable claims."
+    ]
+  },
   "metadata": {
-    "generated_at": "2026-05-13T08:00:58+00:00",
+    "generated_at": "2026-05-13T08:32:02+00:00",
     "non_claims": [
       "Not transfer-pricing adjustments.",
       "Not ATO findings.",
@@ -126,6 +200,86 @@
       "warnings": [
         "This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.",
         "Adjusted AAVA is preview-only and does not mutate reported AAVA."
+      ]
+    },
+    "decision_log_summary": {
+      "decisions": {
+        "evidence_assessment": "Evidence reviewed as prototype-only input governance.",
+        "transfer_pricing_preview": "Recorded non-operative adjusted-AAVA review preview."
+      },
+      "entry_count": 2,
+      "evidence_status_by_step": {
+        "evidence_assessment": "placeholder_only",
+        "transfer_pricing_preview": "placeholder_only"
+      },
+      "example_id": "related_party_ai_fee_structure",
+      "generated_at": "2026-05-13T08:32:02+00:00",
+      "limitations": [
+        "Inputs are illustrative placeholders unless separately verified.",
+        "Decision entries record model flow and review signals only."
+      ],
+      "non_claims": [
+        "Decision logs are prototype audit trails only.",
+        "Decision logs do not create legal findings, tax findings, Treasury guidance, ATO guidance, or economic validation.",
+        "Decision logs must not contain raw sensitive identifiers or personal records."
+      ],
+      "run_id": "carsf-v1.5-related_party_ai_fee_structure",
+      "steps": [
+        "evidence_assessment",
+        "transfer_pricing_preview"
+      ],
+      "warnings": [
+        "Prototype decision log only.",
+        "No legal, tax, Treasury, ATO, audit, forensic, or economic validation is implied."
+      ]
+    },
+    "evidence_assessment": {
+      "low_confidence_items": [],
+      "missing_requirements": [
+        "core_output_value",
+        "core_output_unit",
+        "core_opfte_libc",
+        "core_worker_hours",
+        "core_wage_quality",
+        "core_job_security",
+        "core_skill_development",
+        "core_australian_nexus",
+        "core_aii_components",
+        "core_aava_revenue_costs",
+        "core_frv",
+        "core_capital_base",
+        "core_rates",
+        "core_credits",
+        "safe_harbour_worker_assist",
+        "avoid_token_oversight",
+        "avoid_fake_qlc",
+        "avoid_offshore_ai",
+        "avoid_related_party_fees",
+        "avoid_cloud_relabelling",
+        "avoid_robotics_leasing",
+        "avoid_entity_splitting",
+        "avoid_sector_classification",
+        "group_ip_owner",
+        "group_offshore_provider",
+        "tp_related_party_agreements",
+        "tp_service_fee_invoices",
+        "tp_royalty_licence",
+        "tp_cost_sharing",
+        "tp_cloud_inference",
+        "tp_robotics_leasing",
+        "tp_data_model_access",
+        "tp_management_technical"
+      ],
+      "non_claims": [
+        "This is a prototype evidence assessment only. It is not legal, tax, Treasury, ATO, evidentiary, forensic, or audit validation.",
+        "Evidence requirements are draft scaffolding and are not final policy, law, guidance, or audit procedure.",
+        "Placeholder examples remain insufficient for real liability, calibration, or policy claims."
+      ],
+      "review_required": true,
+      "status": "placeholder_only",
+      "warnings": [
+        "Evidence assessment is prototype-only and does not validate any liability, legal position, tax position, or audit finding.",
+        "Evidence remains insufficient for real calibration, legal use, or actual tax-payable claims."
       ]
     },
     "liability_preview": {
@@ -318,6 +472,86 @@
       "warnings": [
         "This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.",
         "Adjusted AAVA is preview-only and does not mutate reported AAVA."
+      ]
+    },
+    "decision_log_summary": {
+      "decisions": {
+        "evidence_assessment": "Evidence reviewed as prototype-only input governance.",
+        "transfer_pricing_preview": "Recorded non-operative adjusted-AAVA review preview."
+      },
+      "entry_count": 2,
+      "evidence_status_by_step": {
+        "evidence_assessment": "placeholder_only",
+        "transfer_pricing_preview": "placeholder_only"
+      },
+      "example_id": "robotics_leasing_structure",
+      "generated_at": "2026-05-13T08:32:02+00:00",
+      "limitations": [
+        "Inputs are illustrative placeholders unless separately verified.",
+        "Decision entries record model flow and review signals only."
+      ],
+      "non_claims": [
+        "Decision logs are prototype audit trails only.",
+        "Decision logs do not create legal findings, tax findings, Treasury guidance, ATO guidance, or economic validation.",
+        "Decision logs must not contain raw sensitive identifiers or personal records."
+      ],
+      "run_id": "carsf-v1.5-robotics_leasing_structure",
+      "steps": [
+        "evidence_assessment",
+        "transfer_pricing_preview"
+      ],
+      "warnings": [
+        "Prototype decision log only.",
+        "No legal, tax, Treasury, ATO, audit, forensic, or economic validation is implied."
+      ]
+    },
+    "evidence_assessment": {
+      "low_confidence_items": [],
+      "missing_requirements": [
+        "core_output_value",
+        "core_output_unit",
+        "core_opfte_libc",
+        "core_worker_hours",
+        "core_wage_quality",
+        "core_job_security",
+        "core_skill_development",
+        "core_australian_nexus",
+        "core_aii_components",
+        "core_aava_revenue_costs",
+        "core_frv",
+        "core_capital_base",
+        "core_rates",
+        "core_credits",
+        "safe_harbour_worker_assist",
+        "avoid_token_oversight",
+        "avoid_fake_qlc",
+        "avoid_offshore_ai",
+        "avoid_related_party_fees",
+        "avoid_cloud_relabelling",
+        "avoid_robotics_leasing",
+        "avoid_entity_splitting",
+        "avoid_sector_classification",
+        "group_ip_owner",
+        "group_offshore_provider",
+        "tp_related_party_agreements",
+        "tp_service_fee_invoices",
+        "tp_royalty_licence",
+        "tp_cost_sharing",
+        "tp_cloud_inference",
+        "tp_robotics_leasing",
+        "tp_data_model_access",
+        "tp_management_technical"
+      ],
+      "non_claims": [
+        "This is a prototype evidence assessment only. It is not legal, tax, Treasury, ATO, evidentiary, forensic, or audit validation.",
+        "Evidence requirements are draft scaffolding and are not final policy, law, guidance, or audit procedure.",
+        "Placeholder examples remain insufficient for real liability, calibration, or policy claims."
+      ],
+      "review_required": true,
+      "status": "placeholder_only",
+      "warnings": [
+        "Evidence assessment is prototype-only and does not validate any liability, legal position, tax position, or audit finding.",
+        "Evidence remains insufficient for real calibration, legal use, or actual tax-payable claims."
       ]
     },
     "liability_preview": {
