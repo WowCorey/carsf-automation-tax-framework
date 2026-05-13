@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from math import isfinite
 from typing import Any
 
 
@@ -52,45 +53,81 @@ def _conversion_metadata(row: dict[str, Any]) -> Any:
     return row.get("conversion_metadata") or row.get("unit_conversion_metadata")
 
 
+def _finite_number(value: Any, field_name: str) -> float:
+    numeric = float(value)
+    if not isfinite(numeric):
+        raise ValueError(f"{field_name} must be finite")
+    return numeric
+
+
+def _non_negative_number(value: Any, field_name: str) -> float:
+    numeric = _finite_number(value, field_name)
+    if numeric < 0:
+        raise ValueError(f"{field_name} cannot be negative")
+    return numeric
+
+
+def _bounded_score(value: Any, field_name: str) -> float:
+    numeric = _finite_number(value, field_name)
+    if not 0 <= numeric <= 1:
+        raise ValueError(f"{field_name} must be between 0 and 1")
+    return numeric
+
+
+def _negative_aava_allowed(row: dict[str, Any]) -> bool:
+    if row.get("allow_negative_aava") is True:
+        return True
+    metadata = row.get("metadata", row.get("risk_metadata", {}))
+    return isinstance(metadata, dict) and metadata.get("allow_negative_aava") is True
+
+
 def _liability(row: dict[str, Any]) -> float:
     if "liability" in row:
-        return float(row["liability"])
+        return _non_negative_number(row["liability"], "liability")
     outputs = row.get("outputs", {})
     if isinstance(outputs, dict):
-        return float(outputs.get("liability", 0.0))
+        return _non_negative_number(outputs.get("liability", 0.0), "outputs.liability")
     return 0.0
 
 
 def _revenue(row: dict[str, Any]) -> float:
-    for key in ("revenue", "reported_revenue"):
-        if key in row:
-            return float(row[key])
+    if "revenue" in row:
+        return _non_negative_number(row["revenue"], "revenue")
+    if "reported_revenue" in row:
+        return _non_negative_number(row["reported_revenue"], "reported_revenue")
     aava_inputs = row.get("aava_inputs", {})
     if isinstance(aava_inputs, dict):
-        return float(aava_inputs.get("australian_attributable_revenue", 0.0))
+        return _non_negative_number(aava_inputs.get("australian_attributable_revenue", 0.0), "aava_inputs.australian_attributable_revenue")
     return 0.0
 
 
 def _aava(row: dict[str, Any]) -> float:
     if "aava" in row:
-        return float(row["aava"])
+        value = _finite_number(row["aava"], "aava")
+        if value < 0 and not _negative_aava_allowed(row):
+            raise ValueError("aava cannot be negative unless allow_negative_aava metadata is true")
+        return value
     outputs = row.get("outputs", {})
     if isinstance(outputs, dict):
-        return float(outputs.get("aava", 0.0))
+        value = _finite_number(outputs.get("aava", 0.0), "outputs.aava")
+        if value < 0 and not _negative_aava_allowed(row):
+            raise ValueError("outputs.aava cannot be negative unless allow_negative_aava metadata is true")
+        return value
     return 0.0
 
 
 def _risk_value(row: dict[str, Any]) -> float:
     if "risk_score" in row:
-        return float(row["risk_score"])
-    risk_level = str(row.get("risk_level", row.get("standalone_risk", "low"))).lower()
-    if risk_level in RISK_SCORE:
-        return RISK_SCORE[risk_level]
+        return _bounded_score(row["risk_score"], "risk_score")
+    if "risk_level" in row or "standalone_risk" in row:
+        risk_level = str(row.get("risk_level", row.get("standalone_risk"))).lower()
+        if risk_level in RISK_SCORE:
+            return RISK_SCORE[risk_level]
     if "aii" in row:
-        return min(1.0, max(0.0, float(row["aii"])))
+        return _bounded_score(row["aii"], "aii")
     outputs = row.get("outputs", {})
     if isinstance(outputs, dict) and "aii" in outputs:
-        return min(1.0, max(0.0, float(outputs["aii"])))
+        return _bounded_score(outputs["aii"], "outputs.aii")
     return RISK_SCORE["low"]
 
 
@@ -157,7 +194,8 @@ def _value_weighted_exposure(rows: list[dict[str, Any]]) -> float | None:
     total = sum(weights)
     if total <= 0:
         return None
-    return sum((weight / total) * _risk_value(row) for row, weight in zip(rows, weights, strict=True))
+    exposure_index = sum((weight / total) * _risk_value(row) for row, weight in zip(rows, weights, strict=True))
+    return _bounded_score(exposure_index, "value_weighted_exposure_index")
 
 
 def evaluate_mixed_unit_exposure(entities_or_activities: list[dict[str, Any]]) -> MixedUnitExposureResult:
@@ -170,6 +208,8 @@ def evaluate_mixed_unit_exposure(entities_or_activities: list[dict[str, Any]]) -
         *compatibility.warnings,
         "Value-weighted exposure index is prototype-only, not a tax base, and not a replacement for sector schedules.",
     ]
+    if any(_aava(row) < 0 for row in entities_or_activities):
+        warnings.append("Negative AAVA was explicitly allowed by metadata and excluded from positive weighting.")
     if compatibility.compatible:
         method = "compatible_units_normal_aggregation_available"
         exposure_index = _value_weighted_exposure(entities_or_activities)

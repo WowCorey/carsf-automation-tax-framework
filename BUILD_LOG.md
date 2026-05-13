@@ -118,7 +118,7 @@ Purpose of this build:
 
 Tests run:
 
-- `python -m pytest` - 175 passed, 1 pytest-asyncio deprecation warning under Python 3.14.
+- `python -m pytest` - 208 passed, 1 pytest-asyncio deprecation warning under Python 3.14.
 - `python -m compileall -q model simulator scripts` - passed.
 - Recursive YAML parse check for schedules/examples, including `examples/groups`, passed.
 - `python scripts/run_examples.py` - regenerated single-entity, grouped, transfer-pricing, and mixed-unit preview reports.

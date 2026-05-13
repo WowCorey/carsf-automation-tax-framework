@@ -1,6 +1,6 @@
 # CARSF V1.5 Transfer-Pricing and Mixed-Unit Preview Results
 
-Generated at: `2026-05-13T07:46:25+00:00`
+Generated at: `2026-05-13T08:00:58+00:00`
 
 Version: CARSF V1.5 prototype
 
@@ -54,11 +54,8 @@ Adjustment candidates:
 Warnings and non-claims:
 
 - This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.
-- This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.
 - Adjusted AAVA is preview-only and does not mutate reported AAVA.
-- This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.
 - Adjusted-AAVA liability is non-operative preview only.
-- This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.
 - Adjusted AAVA is preview-only and does not replace reported AAVA.
 - No arm's-length price, transfer-pricing adjustment, tax assessment, or legal conclusion is calculated.
 
@@ -112,11 +109,8 @@ Adjustment candidates:
 Warnings and non-claims:
 
 - This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.
-- This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.
 - Adjusted AAVA is preview-only and does not mutate reported AAVA.
-- This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.
 - Adjusted-AAVA liability is non-operative preview only.
-- This is a non-operative transfer-pricing / related-party review preview only. It is not a legal, tax, ATO, Treasury, OECD, BEPS, or economic finding.
 - Adjusted AAVA is preview-only and does not replace reported AAVA.
 - No arm's-length price, transfer-pricing adjustment, tax assessment, or legal conclusion is calculated.
 

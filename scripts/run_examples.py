@@ -525,6 +525,16 @@ def _scenario_summary_rows(scenario: TransferPricingScenarioResult) -> list[tupl
     ]
 
 
+def _unique_text(items: list[str]) -> list[str]:
+    seen: set[str] = set()
+    unique: list[str] = []
+    for item in items:
+        if item not in seen:
+            seen.add(item)
+            unique.append(item)
+    return unique
+
+
 def _append_scenario_markdown(lines: list[str], scenario: TransferPricingScenarioResult) -> None:
     lines.extend(
         [
@@ -563,10 +573,13 @@ def _append_scenario_markdown(lines: list[str], scenario: TransferPricingScenari
             "",
         ]
     )
-    for warning in scenario.transfer_pricing_result.warnings + scenario.adjusted_aava_preview.warnings + scenario.liability_preview.warnings:
-        lines.append(f"- {warning}")
-    for non_claim in scenario.transfer_pricing_result.non_claims:
-        lines.append(f"- {non_claim}")
+    messages = _unique_text(
+        scenario.transfer_pricing_result.warnings
+        + scenario.adjusted_aava_preview.warnings
+        + scenario.liability_preview.warnings
+        + scenario.transfer_pricing_result.non_claims
+    )
+    lines.extend(f"- {message}" for message in messages)
     lines.extend(["", "Limitations:", ""])
     for limitation in scenario.source.get("limitations", []):
         lines.append(f"- {limitation}")
