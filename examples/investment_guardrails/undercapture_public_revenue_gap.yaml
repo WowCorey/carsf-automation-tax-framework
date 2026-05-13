@@ -1,0 +1,44 @@
+example_id: undercapture_public_revenue_gap
+name: Under-Capture Public Revenue Gap Case
+status: illustrative_placeholder_only
+placeholder_notice: All values are illustrative placeholders for public revenue coverage sensitivity only.
+sector: national_placeholder
+scenario: Placeholder national fiscal damage exceeds captured automation revenue, showing under-capture review plumbing.
+investment_inputs:
+  aava: 15000000.0
+  final_liability: 500000.0
+  capital_base: 25000000.0
+  uplift_rate: 0.10
+  revenue: 60000000.0
+  normal_return_proxy: 2500000.0
+  sector: national_placeholder
+  placeholder_basis:
+    - illustrative under-capture public revenue gap
+    - no official national damage estimate
+incidence_assumption:
+  pass_through_rate: 0.20
+  worker_pressure_rate: 0.05
+  supplier_pressure_rate: 0.05
+  capital_absorption_rate: 0.20
+  assumption_basis: illustrative national sensitivity placeholder
+  illustrative_placeholder_only: true
+burden_balance:
+  automation_fiscal_damage: 4000000.0
+  automation_revenue_captured: 500000.0
+  final_liability: 500000.0
+  aava: 15000000.0
+  nltg: 18.0
+  safe_harbour_category: NONE
+  avoidance_risk: medium
+  placeholder_basis:
+    - illustrative public revenue coverage gap
+sensitivity:
+  pass_through_rates: [0.0, 0.20, 0.40]
+  cap_rates: [0.02, 0.05, 0.10]
+  aava_values: [10000000.0, 15000000.0, 20000000.0]
+  raw_liability: 900000.0
+interpretation: Captured revenue is below placeholder fiscal damage, showing under-capture review rather than calibrated coverage.
+non_claims:
+  - not economic validation
+  - not Treasury modelling
+  - not tax advice

@@ -32,6 +32,19 @@ The calibration registry marks OPFTE_LIBC, FRV, QLC weights, AII weights, AAVA d
 
 Synthetic mock evidence can test workflow states and confidence handling, but it cannot calibrate model values. A mock packet may demonstrate that a prototype requirement can be marked `partial` or `sufficient_for_prototype`; it does not provide a real OPFTE, FRV, cap rate, transfer-pricing share, or schedule setting.
 
+## Investment and Incidence Calibration
+
+The investment and incidence guardrails require future calibration before any policy claim:
+
+- pass-through elasticities by sector and market structure
+- worker wage or underemployment pressure estimates
+- supplier pressure and capital absorption assumptions
+- normal-return proxies by capital intensity and sector risk
+- public-revenue coverage sensitivity and national automation fiscal damage
+- over-capture and under-capture tolerances
+
+No such calibration has occurred in this repository.
+
 ## Non-Claims
 
 The calibration shell is not legal, tax, Treasury, ATO, ABS, Fair Work, OECD, BEPS, audit, forensic, or economic validation. It does not prove any model setting is correct.

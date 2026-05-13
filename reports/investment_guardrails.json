@@ -1,0 +1,2026 @@
+{
+  "examples": [
+    {
+      "burden_balance_result": {
+        "burden_balance_band": "not_assessable",
+        "capture_gap": null,
+        "coverage_ratio": null,
+        "non_claims": [
+          "Burden-balance outputs are prototype-only and do not alter liability.",
+          "National automation fiscal damage and captured revenue are not calibrated.",
+          "No economic, Treasury, ATO, legal, tax, investment, or market validation is implied."
+        ],
+        "reasons": [
+          "National automation fiscal damage or captured revenue input is missing."
+        ],
+        "review_required": true,
+        "warnings": [
+          "National damage/capture inputs are illustrative placeholders and not calibrated.",
+          "Burden-balance output does not alter final liability."
+        ]
+      },
+      "example_id": "ai_logistics_pass_through_risk",
+      "final_liability_modified": false,
+      "fixture_path": "examples\\investment_guardrails\\ai_logistics_pass_through_risk.yaml",
+      "incidence_assumption": {
+        "assumption_basis": "illustrative consumer pass-through stress placeholder",
+        "capital_absorption_rate": 0.2,
+        "illustrative_placeholder_only": true,
+        "pass_through_rate": 0.45,
+        "supplier_pressure_rate": 0.05,
+        "worker_pressure_rate": 0.1
+      },
+      "incidence_result": {
+        "allocation_gap": 360000.0,
+        "capital_absorption_amount": 360000.0,
+        "consumer_pass_through_amount": 810000.0,
+        "incidence_risk_band": "medium",
+        "non_claims": [
+          "These incidence outputs are illustrative placeholders only.",
+          "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+          "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+        ],
+        "supplier_pressure_amount": 90000.0,
+        "total_allocated_amount": 1440000.0,
+        "warnings": [
+          "Pass-through and incidence rates are illustrative placeholders only.",
+          "This incidence preview does not alter liability."
+        ],
+        "worker_pressure_amount": 180000.0
+      },
+      "interpretation": "Pass-through risk is material under placeholders and requires incidence calibration before external use.",
+      "investment_inputs": {
+        "aava": 9000000.0,
+        "capital_base": 12000000.0,
+        "final_liability": 1800000.0,
+        "normal_return_proxy": 1200000.0,
+        "placeholder_basis": [
+          "illustrative pass-through risk case",
+          "no real elasticity values"
+        ],
+        "revenue": 30000000.0,
+        "sector": "logistics_warehousing",
+        "uplift_rate": 0.1
+      },
+      "investment_result": {
+        "effective_burden_rate": 0.2,
+        "investment_risk_band": "medium",
+        "liability_to_aava_rate": 0.2,
+        "liability_to_revenue_rate": 0.06,
+        "non_claims": [
+          "These are prototype investment and tax-incidence guardrails only.",
+          "They are not economic validation, investment advice, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice.",
+          "Guardrail outputs do not automatically modify final liability."
+        ],
+        "normal_return_preserved": true,
+        "over_capture_warning": false,
+        "preserved_return_amount": 7200000.0,
+        "reasons": [
+          "Placeholder burden is material but below high-review thresholds."
+        ],
+        "under_capture_warning": false,
+        "warnings": [
+          "Investment guardrail thresholds are illustrative placeholders only.",
+          "This guardrail does not change final liability."
+        ]
+      },
+      "name": "AI Logistics Pass-Through Risk Case",
+      "non_claims": [
+        "not economic validation",
+        "not market forecasting",
+        "not tax advice"
+      ],
+      "sector": "logistics_warehousing",
+      "sensitivity_sweeps": [
+        {
+          "example_id": "ai_logistics_pass_through_risk",
+          "max_liability": 1800000.0,
+          "min_liability": 1800000.0,
+          "non_claims": [
+            "Sensitivity sweeps are placeholder-only and do not claim real elasticity or market behaviour.",
+            "No economic, investment, Treasury, ATO, legal, or tax validation is implied.",
+            "Sensitivity sweeps do not automatically modify final liability."
+          ],
+          "points": [
+            {
+              "effective_burden_rate": null,
+              "incidence_result": {
+                "allocation_gap": 1530000.0,
+                "capital_absorption_amount": 0.0,
+                "consumer_pass_through_amount": 270000.0,
+                "incidence_risk_band": "low",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 0.0,
+                "total_allocated_amount": 270000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 0.0
+              },
+              "liability_preview": 1800000.0,
+              "parameter_name": "pass_through_rate",
+              "parameter_value": 0.15,
+              "warnings": [
+                "No real pass-through elasticity is claimed."
+              ]
+            },
+            {
+              "effective_burden_rate": null,
+              "incidence_result": {
+                "allocation_gap": 1260000.0,
+                "capital_absorption_amount": 0.0,
+                "consumer_pass_through_amount": 540000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 0.0,
+                "total_allocated_amount": 540000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 0.0
+              },
+              "liability_preview": 1800000.0,
+              "parameter_name": "pass_through_rate",
+              "parameter_value": 0.3,
+              "warnings": [
+                "No real pass-through elasticity is claimed."
+              ]
+            },
+            {
+              "effective_burden_rate": null,
+              "incidence_result": {
+                "allocation_gap": 990000.0,
+                "capital_absorption_amount": 0.0,
+                "consumer_pass_through_amount": 810000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 0.0,
+                "total_allocated_amount": 810000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 0.0
+              },
+              "liability_preview": 1800000.0,
+              "parameter_name": "pass_through_rate",
+              "parameter_value": 0.45,
+              "warnings": [
+                "No real pass-through elasticity is claimed."
+              ]
+            },
+            {
+              "effective_burden_rate": null,
+              "incidence_result": {
+                "allocation_gap": 720000.0,
+                "capital_absorption_amount": 0.0,
+                "consumer_pass_through_amount": 1080000.0,
+                "incidence_risk_band": "high",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 0.0,
+                "total_allocated_amount": 1080000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 0.0
+              },
+              "liability_preview": 1800000.0,
+              "parameter_name": "pass_through_rate",
+              "parameter_value": 0.6,
+              "warnings": [
+                "No real pass-through elasticity is claimed."
+              ]
+            }
+          ],
+          "sweep_name": "pass_through_rate_sweep",
+          "warnings": [
+            "Sensitivity values are illustrative placeholders only."
+          ]
+        },
+        {
+          "example_id": "ai_logistics_pass_through_risk",
+          "max_liability": 2400000.0,
+          "min_liability": 900000.0,
+          "non_claims": [
+            "Sensitivity sweeps are placeholder-only and do not claim real elasticity or market behaviour.",
+            "No economic, investment, Treasury, ATO, legal, or tax validation is implied.",
+            "Sensitivity sweeps do not automatically modify final liability."
+          ],
+          "points": [
+            {
+              "effective_burden_rate": 0.1,
+              "incidence_result": {
+                "allocation_gap": 360000.0,
+                "capital_absorption_amount": 180000.0,
+                "consumer_pass_through_amount": 225000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 45000.0,
+                "total_allocated_amount": 540000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 90000.0
+              },
+              "liability_preview": 900000.0,
+              "parameter_name": "liability_cap_rate",
+              "parameter_value": 0.1,
+              "warnings": [
+                "Cap-rate sweep is non-operative and does not modify final liability."
+              ]
+            },
+            {
+              "effective_burden_rate": 0.2,
+              "incidence_result": {
+                "allocation_gap": 720000.0,
+                "capital_absorption_amount": 360000.0,
+                "consumer_pass_through_amount": 450000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 90000.0,
+                "total_allocated_amount": 1080000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 180000.0
+              },
+              "liability_preview": 1800000.0,
+              "parameter_name": "liability_cap_rate",
+              "parameter_value": 0.2,
+              "warnings": [
+                "Cap-rate sweep is non-operative and does not modify final liability."
+              ]
+            },
+            {
+              "effective_burden_rate": 0.26666666666666666,
+              "incidence_result": {
+                "allocation_gap": 960000.0,
+                "capital_absorption_amount": 480000.0,
+                "consumer_pass_through_amount": 600000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 120000.0,
+                "total_allocated_amount": 1440000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 240000.0
+              },
+              "liability_preview": 2400000.0,
+              "parameter_name": "liability_cap_rate",
+              "parameter_value": 0.3,
+              "warnings": [
+                "Cap-rate sweep is non-operative and does not modify final liability."
+              ]
+            }
+          ],
+          "sweep_name": "liability_cap_rate_sweep",
+          "warnings": [
+            "Sensitivity values are illustrative placeholders only."
+          ]
+        },
+        {
+          "example_id": "ai_logistics_pass_through_risk",
+          "max_liability": 1800000.0,
+          "min_liability": 1800000.0,
+          "non_claims": [
+            "Sensitivity sweeps are placeholder-only and do not claim real elasticity or market behaviour.",
+            "No economic, investment, Treasury, ATO, legal, or tax validation is implied.",
+            "Sensitivity sweeps do not automatically modify final liability."
+          ],
+          "points": [
+            {
+              "effective_burden_rate": 0.2571428571428571,
+              "incidence_result": {
+                "allocation_gap": 720000.0,
+                "capital_absorption_amount": 360000.0,
+                "consumer_pass_through_amount": 450000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 90000.0,
+                "total_allocated_amount": 1080000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 180000.0
+              },
+              "liability_preview": 1800000.0,
+              "parameter_name": "aava",
+              "parameter_value": 7000000.0,
+              "warnings": [
+                "AAVA sweep is non-operative and does not modify final liability."
+              ]
+            },
+            {
+              "effective_burden_rate": 0.2,
+              "incidence_result": {
+                "allocation_gap": 720000.0,
+                "capital_absorption_amount": 360000.0,
+                "consumer_pass_through_amount": 450000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 90000.0,
+                "total_allocated_amount": 1080000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 180000.0
+              },
+              "liability_preview": 1800000.0,
+              "parameter_name": "aava",
+              "parameter_value": 9000000.0,
+              "warnings": [
+                "AAVA sweep is non-operative and does not modify final liability."
+              ]
+            },
+            {
+              "effective_burden_rate": 0.15,
+              "incidence_result": {
+                "allocation_gap": 720000.0,
+                "capital_absorption_amount": 360000.0,
+                "consumer_pass_through_amount": 450000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 90000.0,
+                "total_allocated_amount": 1080000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 180000.0
+              },
+              "liability_preview": 1800000.0,
+              "parameter_name": "aava",
+              "parameter_value": 12000000.0,
+              "warnings": [
+                "AAVA sweep is non-operative and does not modify final liability."
+              ]
+            }
+          ],
+          "sweep_name": "aava_sweep",
+          "warnings": [
+            "Sensitivity values are illustrative placeholders only."
+          ]
+        }
+      ],
+      "status": "illustrative_placeholder_only"
+    },
+    {
+      "burden_balance_result": {
+        "burden_balance_band": "over_capture",
+        "capture_gap": -100000.0,
+        "coverage_ratio": 1.6666666666666667,
+        "non_claims": [
+          "Burden-balance outputs are prototype-only and do not alter liability.",
+          "National automation fiscal damage and captured revenue are not calibrated.",
+          "No economic, Treasury, ATO, legal, tax, investment, or market validation is implied."
+        ],
+        "reasons": [
+          "Captured automation revenue exceeds placeholder fiscal damage beyond tolerance."
+        ],
+        "review_required": true,
+        "warnings": [
+          "National damage/capture inputs are illustrative placeholders and not calibrated.",
+          "Burden-balance output does not alter final liability."
+        ]
+      },
+      "example_id": "low_aava_high_liability_warning",
+      "final_liability_modified": false,
+      "fixture_path": "examples\\investment_guardrails\\low_aava_high_liability_warning.yaml",
+      "incidence_assumption": {
+        "assumption_basis": "illustrative stress placeholder",
+        "capital_absorption_rate": 0.2,
+        "illustrative_placeholder_only": true,
+        "pass_through_rate": 0.35,
+        "supplier_pressure_rate": 0.1,
+        "worker_pressure_rate": 0.15
+      },
+      "incidence_result": {
+        "allocation_gap": 50000.0,
+        "capital_absorption_amount": 50000.0,
+        "consumer_pass_through_amount": 87500.0,
+        "incidence_risk_band": "medium",
+        "non_claims": [
+          "These incidence outputs are illustrative placeholders only.",
+          "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+          "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+        ],
+        "supplier_pressure_amount": 25000.0,
+        "total_allocated_amount": 200000.0,
+        "warnings": [
+          "Pass-through and incidence rates are illustrative placeholders only.",
+          "This incidence preview does not alter liability."
+        ],
+        "worker_pressure_amount": 37500.0
+      },
+      "interpretation": "Positive liability with zero AAVA is a critical prototype warning, not a validated policy outcome.",
+      "investment_inputs": {
+        "aava": 0.0,
+        "capital_base": 2000000.0,
+        "final_liability": 250000.0,
+        "normal_return_proxy": 200000.0,
+        "placeholder_basis": [
+          "illustrative over-capture warning case",
+          "no real AAVA calibration"
+        ],
+        "revenue": 5000000.0,
+        "sector": "automotive_repair",
+        "uplift_rate": 0.1
+      },
+      "investment_result": {
+        "effective_burden_rate": null,
+        "investment_risk_band": "critical",
+        "liability_to_aava_rate": null,
+        "liability_to_revenue_rate": 0.05,
+        "non_claims": [
+          "These are prototype investment and tax-incidence guardrails only.",
+          "They are not economic validation, investment advice, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice.",
+          "Guardrail outputs do not automatically modify final liability."
+        ],
+        "normal_return_preserved": false,
+        "over_capture_warning": true,
+        "preserved_return_amount": null,
+        "reasons": [
+          "Positive liability with zero AAVA suggests possible over-capture or cap failure."
+        ],
+        "under_capture_warning": false,
+        "warnings": [
+          "Investment guardrail thresholds are illustrative placeholders only.",
+          "This guardrail does not change final liability."
+        ]
+      },
+      "name": "Low-AAVA High-Liability Warning Case",
+      "non_claims": [
+        "not economic validation",
+        "not investment advice",
+        "not tax advice"
+      ],
+      "sector": "automotive_repair",
+      "sensitivity_sweeps": [
+        {
+          "example_id": "low_aava_high_liability_warning",
+          "max_liability": 250000.0,
+          "min_liability": 250000.0,
+          "non_claims": [
+            "Sensitivity sweeps are placeholder-only and do not claim real elasticity or market behaviour.",
+            "No economic, investment, Treasury, ATO, legal, or tax validation is implied.",
+            "Sensitivity sweeps do not automatically modify final liability."
+          ],
+          "points": [
+            {
+              "effective_burden_rate": null,
+              "incidence_result": {
+                "allocation_gap": 250000.0,
+                "capital_absorption_amount": 0.0,
+                "consumer_pass_through_amount": 0.0,
+                "incidence_risk_band": "low",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 0.0,
+                "total_allocated_amount": 0.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 0.0
+              },
+              "liability_preview": 250000.0,
+              "parameter_name": "pass_through_rate",
+              "parameter_value": 0.0,
+              "warnings": [
+                "No real pass-through elasticity is claimed."
+              ]
+            },
+            {
+              "effective_burden_rate": null,
+              "incidence_result": {
+                "allocation_gap": 187500.0,
+                "capital_absorption_amount": 0.0,
+                "consumer_pass_through_amount": 62500.0,
+                "incidence_risk_band": "low",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 0.0,
+                "total_allocated_amount": 62500.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 0.0
+              },
+              "liability_preview": 250000.0,
+              "parameter_name": "pass_through_rate",
+              "parameter_value": 0.25,
+              "warnings": [
+                "No real pass-through elasticity is claimed."
+              ]
+            },
+            {
+              "effective_burden_rate": null,
+              "incidence_result": {
+                "allocation_gap": 125000.0,
+                "capital_absorption_amount": 0.0,
+                "consumer_pass_through_amount": 125000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 0.0,
+                "total_allocated_amount": 125000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 0.0
+              },
+              "liability_preview": 250000.0,
+              "parameter_name": "pass_through_rate",
+              "parameter_value": 0.5,
+              "warnings": [
+                "No real pass-through elasticity is claimed."
+              ]
+            }
+          ],
+          "sweep_name": "pass_through_rate_sweep",
+          "warnings": [
+            "Sensitivity values are illustrative placeholders only."
+          ]
+        },
+        {
+          "example_id": "low_aava_high_liability_warning",
+          "max_liability": 0.0,
+          "min_liability": 0.0,
+          "non_claims": [
+            "Sensitivity sweeps are placeholder-only and do not claim real elasticity or market behaviour.",
+            "No economic, investment, Treasury, ATO, legal, or tax validation is implied.",
+            "Sensitivity sweeps do not automatically modify final liability."
+          ],
+          "points": [
+            {
+              "effective_burden_rate": null,
+              "incidence_result": {
+                "allocation_gap": 0.0,
+                "capital_absorption_amount": 0.0,
+                "consumer_pass_through_amount": 0.0,
+                "incidence_risk_band": "low",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 0.0,
+                "total_allocated_amount": 0.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 0.0
+              },
+              "liability_preview": 0.0,
+              "parameter_name": "liability_cap_rate",
+              "parameter_value": 0.05,
+              "warnings": [
+                "Cap-rate sweep is non-operative and does not modify final liability."
+              ]
+            },
+            {
+              "effective_burden_rate": null,
+              "incidence_result": {
+                "allocation_gap": 0.0,
+                "capital_absorption_amount": 0.0,
+                "consumer_pass_through_amount": 0.0,
+                "incidence_risk_band": "low",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 0.0,
+                "total_allocated_amount": 0.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 0.0
+              },
+              "liability_preview": 0.0,
+              "parameter_name": "liability_cap_rate",
+              "parameter_value": 0.1,
+              "warnings": [
+                "Cap-rate sweep is non-operative and does not modify final liability."
+              ]
+            },
+            {
+              "effective_burden_rate": null,
+              "incidence_result": {
+                "allocation_gap": 0.0,
+                "capital_absorption_amount": 0.0,
+                "consumer_pass_through_amount": 0.0,
+                "incidence_risk_band": "low",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 0.0,
+                "total_allocated_amount": 0.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 0.0
+              },
+              "liability_preview": 0.0,
+              "parameter_name": "liability_cap_rate",
+              "parameter_value": 0.2,
+              "warnings": [
+                "Cap-rate sweep is non-operative and does not modify final liability."
+              ]
+            }
+          ],
+          "sweep_name": "liability_cap_rate_sweep",
+          "warnings": [
+            "Sensitivity values are illustrative placeholders only."
+          ]
+        },
+        {
+          "example_id": "low_aava_high_liability_warning",
+          "max_liability": 250000.0,
+          "min_liability": 250000.0,
+          "non_claims": [
+            "Sensitivity sweeps are placeholder-only and do not claim real elasticity or market behaviour.",
+            "No economic, investment, Treasury, ATO, legal, or tax validation is implied.",
+            "Sensitivity sweeps do not automatically modify final liability."
+          ],
+          "points": [
+            {
+              "effective_burden_rate": null,
+              "incidence_result": {
+                "allocation_gap": 100000.0,
+                "capital_absorption_amount": 50000.0,
+                "consumer_pass_through_amount": 62500.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 12500.0,
+                "total_allocated_amount": 150000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 25000.0
+              },
+              "liability_preview": 250000.0,
+              "parameter_name": "aava",
+              "parameter_value": 0.0,
+              "warnings": [
+                "AAVA sweep is non-operative and does not modify final liability."
+              ]
+            },
+            {
+              "effective_burden_rate": 0.5,
+              "incidence_result": {
+                "allocation_gap": 100000.0,
+                "capital_absorption_amount": 50000.0,
+                "consumer_pass_through_amount": 62500.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 12500.0,
+                "total_allocated_amount": 150000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 25000.0
+              },
+              "liability_preview": 250000.0,
+              "parameter_name": "aava",
+              "parameter_value": 500000.0,
+              "warnings": [
+                "AAVA sweep is non-operative and does not modify final liability."
+              ]
+            },
+            {
+              "effective_burden_rate": 0.25,
+              "incidence_result": {
+                "allocation_gap": 100000.0,
+                "capital_absorption_amount": 50000.0,
+                "consumer_pass_through_amount": 62500.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 12500.0,
+                "total_allocated_amount": 150000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 25000.0
+              },
+              "liability_preview": 250000.0,
+              "parameter_name": "aava",
+              "parameter_value": 1000000.0,
+              "warnings": [
+                "AAVA sweep is non-operative and does not modify final liability."
+              ]
+            }
+          ],
+          "sweep_name": "aava_sweep",
+          "warnings": [
+            "Sensitivity values are illustrative placeholders only."
+          ]
+        }
+      ],
+      "status": "illustrative_placeholder_only"
+    },
+    {
+      "burden_balance_result": {
+        "burden_balance_band": "not_assessable",
+        "capture_gap": null,
+        "coverage_ratio": null,
+        "non_claims": [
+          "Burden-balance outputs are prototype-only and do not alter liability.",
+          "National automation fiscal damage and captured revenue are not calibrated.",
+          "No economic, Treasury, ATO, legal, tax, investment, or market validation is implied."
+        ],
+        "reasons": [
+          "National automation fiscal damage or captured revenue input is missing."
+        ],
+        "review_required": true,
+        "warnings": [
+          "National damage/capture inputs are illustrative placeholders and not calibrated.",
+          "Burden-balance output does not alter final liability."
+        ]
+      },
+      "example_id": "productive_hybrid_low_burden",
+      "final_liability_modified": false,
+      "fixture_path": "examples\\investment_guardrails\\productive_hybrid_low_burden.yaml",
+      "incidence_assumption": {
+        "assumption_basis": "illustrative low pass-through placeholder",
+        "capital_absorption_rate": 0.3,
+        "illustrative_placeholder_only": true,
+        "pass_through_rate": 0.1,
+        "supplier_pressure_rate": 0.05,
+        "worker_pressure_rate": 0.05
+      },
+      "incidence_result": {
+        "allocation_gap": 90000.0,
+        "capital_absorption_amount": 54000.0,
+        "consumer_pass_through_amount": 18000.0,
+        "incidence_risk_band": "low",
+        "non_claims": [
+          "These incidence outputs are illustrative placeholders only.",
+          "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+          "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+        ],
+        "supplier_pressure_amount": 9000.0,
+        "total_allocated_amount": 90000.0,
+        "warnings": [
+          "Pass-through and incidence rates are illustrative placeholders only.",
+          "This incidence preview does not alter liability."
+        ],
+        "worker_pressure_amount": 9000.0
+      },
+      "interpretation": "Low placeholder burden suggests ordinary hybrid investment is not automatically treated as punitive.",
+      "investment_inputs": {
+        "aava": 3200000.0,
+        "capital_base": 6000000.0,
+        "final_liability": 180000.0,
+        "normal_return_proxy": 600000.0,
+        "placeholder_basis": [
+          "illustrative placeholder burden case",
+          "no real calibration values"
+        ],
+        "revenue": 14000000.0,
+        "sector": "logistics_warehousing",
+        "uplift_rate": 0.1
+      },
+      "investment_result": {
+        "effective_burden_rate": 0.05625,
+        "investment_risk_band": "low",
+        "liability_to_aava_rate": 0.05625,
+        "liability_to_revenue_rate": 0.012857142857142857,
+        "non_claims": [
+          "These are prototype investment and tax-incidence guardrails only.",
+          "They are not economic validation, investment advice, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice.",
+          "Guardrail outputs do not automatically modify final liability."
+        ],
+        "normal_return_preserved": true,
+        "over_capture_warning": false,
+        "preserved_return_amount": 3020000.0,
+        "reasons": [
+          "Placeholder burden is low under illustrative thresholds."
+        ],
+        "under_capture_warning": false,
+        "warnings": [
+          "Investment guardrail thresholds are illustrative placeholders only.",
+          "This guardrail does not change final liability."
+        ]
+      },
+      "name": "Productive Hybrid Low-Burden Case",
+      "non_claims": [
+        "not economic validation",
+        "not investment advice",
+        "not tax advice"
+      ],
+      "sector": "logistics_warehousing",
+      "sensitivity_sweeps": [
+        {
+          "example_id": "productive_hybrid_low_burden",
+          "max_liability": 180000.0,
+          "min_liability": 180000.0,
+          "non_claims": [
+            "Sensitivity sweeps are placeholder-only and do not claim real elasticity or market behaviour.",
+            "No economic, investment, Treasury, ATO, legal, or tax validation is implied.",
+            "Sensitivity sweeps do not automatically modify final liability."
+          ],
+          "points": [
+            {
+              "effective_burden_rate": null,
+              "incidence_result": {
+                "allocation_gap": 180000.0,
+                "capital_absorption_amount": 0.0,
+                "consumer_pass_through_amount": 0.0,
+                "incidence_risk_band": "low",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 0.0,
+                "total_allocated_amount": 0.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 0.0
+              },
+              "liability_preview": 180000.0,
+              "parameter_name": "pass_through_rate",
+              "parameter_value": 0.0,
+              "warnings": [
+                "No real pass-through elasticity is claimed."
+              ]
+            },
+            {
+              "effective_burden_rate": null,
+              "incidence_result": {
+                "allocation_gap": 162000.0,
+                "capital_absorption_amount": 0.0,
+                "consumer_pass_through_amount": 18000.0,
+                "incidence_risk_band": "low",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 0.0,
+                "total_allocated_amount": 18000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 0.0
+              },
+              "liability_preview": 180000.0,
+              "parameter_name": "pass_through_rate",
+              "parameter_value": 0.1,
+              "warnings": [
+                "No real pass-through elasticity is claimed."
+              ]
+            },
+            {
+              "effective_burden_rate": null,
+              "incidence_result": {
+                "allocation_gap": 135000.0,
+                "capital_absorption_amount": 0.0,
+                "consumer_pass_through_amount": 45000.0,
+                "incidence_risk_band": "low",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 0.0,
+                "total_allocated_amount": 45000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 0.0
+              },
+              "liability_preview": 180000.0,
+              "parameter_name": "pass_through_rate",
+              "parameter_value": 0.25,
+              "warnings": [
+                "No real pass-through elasticity is claimed."
+              ]
+            },
+            {
+              "effective_burden_rate": null,
+              "incidence_result": {
+                "allocation_gap": 108000.0,
+                "capital_absorption_amount": 0.0,
+                "consumer_pass_through_amount": 72000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 0.0,
+                "total_allocated_amount": 72000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 0.0
+              },
+              "liability_preview": 180000.0,
+              "parameter_name": "pass_through_rate",
+              "parameter_value": 0.4,
+              "warnings": [
+                "No real pass-through elasticity is claimed."
+              ]
+            }
+          ],
+          "sweep_name": "pass_through_rate_sweep",
+          "warnings": [
+            "Sensitivity values are illustrative placeholders only."
+          ]
+        },
+        {
+          "example_id": "productive_hybrid_low_burden",
+          "max_liability": 240000.0,
+          "min_liability": 160000.0,
+          "non_claims": [
+            "Sensitivity sweeps are placeholder-only and do not claim real elasticity or market behaviour.",
+            "No economic, investment, Treasury, ATO, legal, or tax validation is implied.",
+            "Sensitivity sweeps do not automatically modify final liability."
+          ],
+          "points": [
+            {
+              "effective_burden_rate": 0.05,
+              "incidence_result": {
+                "allocation_gap": 64000.0,
+                "capital_absorption_amount": 32000.0,
+                "consumer_pass_through_amount": 40000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 8000.0,
+                "total_allocated_amount": 96000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 16000.0
+              },
+              "liability_preview": 160000.0,
+              "parameter_name": "liability_cap_rate",
+              "parameter_value": 0.05,
+              "warnings": [
+                "Cap-rate sweep is non-operative and does not modify final liability."
+              ]
+            },
+            {
+              "effective_burden_rate": 0.075,
+              "incidence_result": {
+                "allocation_gap": 96000.0,
+                "capital_absorption_amount": 48000.0,
+                "consumer_pass_through_amount": 60000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 12000.0,
+                "total_allocated_amount": 144000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 24000.0
+              },
+              "liability_preview": 240000.0,
+              "parameter_name": "liability_cap_rate",
+              "parameter_value": 0.1,
+              "warnings": [
+                "Cap-rate sweep is non-operative and does not modify final liability."
+              ]
+            },
+            {
+              "effective_burden_rate": 0.075,
+              "incidence_result": {
+                "allocation_gap": 96000.0,
+                "capital_absorption_amount": 48000.0,
+                "consumer_pass_through_amount": 60000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 12000.0,
+                "total_allocated_amount": 144000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 24000.0
+              },
+              "liability_preview": 240000.0,
+              "parameter_name": "liability_cap_rate",
+              "parameter_value": 0.2,
+              "warnings": [
+                "Cap-rate sweep is non-operative and does not modify final liability."
+              ]
+            }
+          ],
+          "sweep_name": "liability_cap_rate_sweep",
+          "warnings": [
+            "Sensitivity values are illustrative placeholders only."
+          ]
+        },
+        {
+          "example_id": "productive_hybrid_low_burden",
+          "max_liability": 180000.0,
+          "min_liability": 180000.0,
+          "non_claims": [
+            "Sensitivity sweeps are placeholder-only and do not claim real elasticity or market behaviour.",
+            "No economic, investment, Treasury, ATO, legal, or tax validation is implied.",
+            "Sensitivity sweeps do not automatically modify final liability."
+          ],
+          "points": [
+            {
+              "effective_burden_rate": 0.075,
+              "incidence_result": {
+                "allocation_gap": 72000.0,
+                "capital_absorption_amount": 36000.0,
+                "consumer_pass_through_amount": 45000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 9000.0,
+                "total_allocated_amount": 108000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 18000.0
+              },
+              "liability_preview": 180000.0,
+              "parameter_name": "aava",
+              "parameter_value": 2400000.0,
+              "warnings": [
+                "AAVA sweep is non-operative and does not modify final liability."
+              ]
+            },
+            {
+              "effective_burden_rate": 0.05625,
+              "incidence_result": {
+                "allocation_gap": 72000.0,
+                "capital_absorption_amount": 36000.0,
+                "consumer_pass_through_amount": 45000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 9000.0,
+                "total_allocated_amount": 108000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 18000.0
+              },
+              "liability_preview": 180000.0,
+              "parameter_name": "aava",
+              "parameter_value": 3200000.0,
+              "warnings": [
+                "AAVA sweep is non-operative and does not modify final liability."
+              ]
+            },
+            {
+              "effective_burden_rate": 0.04285714285714286,
+              "incidence_result": {
+                "allocation_gap": 72000.0,
+                "capital_absorption_amount": 36000.0,
+                "consumer_pass_through_amount": 45000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 9000.0,
+                "total_allocated_amount": 108000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 18000.0
+              },
+              "liability_preview": 180000.0,
+              "parameter_name": "aava",
+              "parameter_value": 4200000.0,
+              "warnings": [
+                "AAVA sweep is non-operative and does not modify final liability."
+              ]
+            }
+          ],
+          "sweep_name": "aava_sweep",
+          "warnings": [
+            "Sensitivity values are illustrative placeholders only."
+          ]
+        }
+      ],
+      "status": "illustrative_placeholder_only"
+    },
+    {
+      "burden_balance_result": {
+        "burden_balance_band": "not_assessable",
+        "capture_gap": null,
+        "coverage_ratio": null,
+        "non_claims": [
+          "Burden-balance outputs are prototype-only and do not alter liability.",
+          "National automation fiscal damage and captured revenue are not calibrated.",
+          "No economic, Treasury, ATO, legal, tax, investment, or market validation is implied."
+        ],
+        "reasons": [
+          "National automation fiscal damage or captured revenue input is missing."
+        ],
+        "review_required": true,
+        "warnings": [
+          "National damage/capture inputs are illustrative placeholders and not calibrated.",
+          "Burden-balance output does not alter final liability."
+        ]
+      },
+      "example_id": "robotic_high_burden_review",
+      "final_liability_modified": false,
+      "fixture_path": "examples\\investment_guardrails\\robotic_high_burden_review.yaml",
+      "incidence_assumption": {
+        "assumption_basis": "illustrative high-burden pass-through placeholder",
+        "capital_absorption_rate": 0.25,
+        "illustrative_placeholder_only": true,
+        "pass_through_rate": 0.25,
+        "supplier_pressure_rate": 0.05,
+        "worker_pressure_rate": 0.1
+      },
+      "incidence_result": {
+        "allocation_gap": 332500.0,
+        "capital_absorption_amount": 237500.0,
+        "consumer_pass_through_amount": 237500.0,
+        "incidence_risk_band": "medium",
+        "non_claims": [
+          "These incidence outputs are illustrative placeholders only.",
+          "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+          "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+        ],
+        "supplier_pressure_amount": 47500.0,
+        "total_allocated_amount": 617500.0,
+        "warnings": [
+          "Pass-through and incidence rates are illustrative placeholders only.",
+          "This incidence preview does not alter liability."
+        ],
+        "worker_pressure_amount": 95000.0
+      },
+      "interpretation": "High placeholder burden does not prove deterrence, but it should trigger review before any operative design.",
+      "investment_inputs": {
+        "aava": 1800000.0,
+        "capital_base": 4500000.0,
+        "final_liability": 950000.0,
+        "normal_return_proxy": 450000.0,
+        "placeholder_basis": [
+          "illustrative high-burden review case",
+          "no real calibration values"
+        ],
+        "revenue": 7000000.0,
+        "sector": "automotive_repair",
+        "uplift_rate": 0.1
+      },
+      "investment_result": {
+        "effective_burden_rate": 0.5277777777777778,
+        "investment_risk_band": "high",
+        "liability_to_aava_rate": 0.5277777777777778,
+        "liability_to_revenue_rate": 0.1357142857142857,
+        "non_claims": [
+          "These are prototype investment and tax-incidence guardrails only.",
+          "They are not economic validation, investment advice, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice.",
+          "Guardrail outputs do not automatically modify final liability."
+        ],
+        "normal_return_preserved": true,
+        "over_capture_warning": true,
+        "preserved_return_amount": 850000.0,
+        "reasons": [
+          "Placeholder effective burden may warrant investment-deterrence review."
+        ],
+        "under_capture_warning": false,
+        "warnings": [
+          "Investment guardrail thresholds are illustrative placeholders only.",
+          "This guardrail does not change final liability."
+        ]
+      },
+      "name": "Robotic High-Burden Review Case",
+      "non_claims": [
+        "not economic validation",
+        "not investment advice",
+        "not tax advice"
+      ],
+      "sector": "automotive_repair",
+      "sensitivity_sweeps": [
+        {
+          "example_id": "robotic_high_burden_review",
+          "max_liability": 950000.0,
+          "min_liability": 950000.0,
+          "non_claims": [
+            "Sensitivity sweeps are placeholder-only and do not claim real elasticity or market behaviour.",
+            "No economic, investment, Treasury, ATO, legal, or tax validation is implied.",
+            "Sensitivity sweeps do not automatically modify final liability."
+          ],
+          "points": [
+            {
+              "effective_burden_rate": null,
+              "incidence_result": {
+                "allocation_gap": 950000.0,
+                "capital_absorption_amount": 0.0,
+                "consumer_pass_through_amount": 0.0,
+                "incidence_risk_band": "low",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 0.0,
+                "total_allocated_amount": 0.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 0.0
+              },
+              "liability_preview": 950000.0,
+              "parameter_name": "pass_through_rate",
+              "parameter_value": 0.0,
+              "warnings": [
+                "No real pass-through elasticity is claimed."
+              ]
+            },
+            {
+              "effective_burden_rate": null,
+              "incidence_result": {
+                "allocation_gap": 712500.0,
+                "capital_absorption_amount": 0.0,
+                "consumer_pass_through_amount": 237500.0,
+                "incidence_risk_band": "low",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 0.0,
+                "total_allocated_amount": 237500.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 0.0
+              },
+              "liability_preview": 950000.0,
+              "parameter_name": "pass_through_rate",
+              "parameter_value": 0.25,
+              "warnings": [
+                "No real pass-through elasticity is claimed."
+              ]
+            },
+            {
+              "effective_burden_rate": null,
+              "incidence_result": {
+                "allocation_gap": 522500.0,
+                "capital_absorption_amount": 0.0,
+                "consumer_pass_through_amount": 427500.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 0.0,
+                "total_allocated_amount": 427500.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 0.0
+              },
+              "liability_preview": 950000.0,
+              "parameter_name": "pass_through_rate",
+              "parameter_value": 0.45,
+              "warnings": [
+                "No real pass-through elasticity is claimed."
+              ]
+            },
+            {
+              "effective_burden_rate": null,
+              "incidence_result": {
+                "allocation_gap": 380000.0,
+                "capital_absorption_amount": 0.0,
+                "consumer_pass_through_amount": 570000.0,
+                "incidence_risk_band": "high",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 0.0,
+                "total_allocated_amount": 570000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 0.0
+              },
+              "liability_preview": 950000.0,
+              "parameter_name": "pass_through_rate",
+              "parameter_value": 0.6,
+              "warnings": [
+                "No real pass-through elasticity is claimed."
+              ]
+            }
+          ],
+          "sweep_name": "pass_through_rate_sweep",
+          "warnings": [
+            "Sensitivity values are illustrative placeholders only."
+          ]
+        },
+        {
+          "example_id": "robotic_high_burden_review",
+          "max_liability": 900000.0,
+          "min_liability": 270000.0,
+          "non_claims": [
+            "Sensitivity sweeps are placeholder-only and do not claim real elasticity or market behaviour.",
+            "No economic, investment, Treasury, ATO, legal, or tax validation is implied.",
+            "Sensitivity sweeps do not automatically modify final liability."
+          ],
+          "points": [
+            {
+              "effective_burden_rate": 0.15,
+              "incidence_result": {
+                "allocation_gap": 108000.0,
+                "capital_absorption_amount": 54000.0,
+                "consumer_pass_through_amount": 67500.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 13500.0,
+                "total_allocated_amount": 162000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 27000.0
+              },
+              "liability_preview": 270000.0,
+              "parameter_name": "liability_cap_rate",
+              "parameter_value": 0.15,
+              "warnings": [
+                "Cap-rate sweep is non-operative and does not modify final liability."
+              ]
+            },
+            {
+              "effective_burden_rate": 0.3,
+              "incidence_result": {
+                "allocation_gap": 216000.0,
+                "capital_absorption_amount": 108000.0,
+                "consumer_pass_through_amount": 135000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 27000.0,
+                "total_allocated_amount": 324000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 54000.0
+              },
+              "liability_preview": 540000.0,
+              "parameter_name": "liability_cap_rate",
+              "parameter_value": 0.3,
+              "warnings": [
+                "Cap-rate sweep is non-operative and does not modify final liability."
+              ]
+            },
+            {
+              "effective_burden_rate": 0.5,
+              "incidence_result": {
+                "allocation_gap": 360000.0,
+                "capital_absorption_amount": 180000.0,
+                "consumer_pass_through_amount": 225000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 45000.0,
+                "total_allocated_amount": 540000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 90000.0
+              },
+              "liability_preview": 900000.0,
+              "parameter_name": "liability_cap_rate",
+              "parameter_value": 0.5,
+              "warnings": [
+                "Cap-rate sweep is non-operative and does not modify final liability."
+              ]
+            }
+          ],
+          "sweep_name": "liability_cap_rate_sweep",
+          "warnings": [
+            "Sensitivity values are illustrative placeholders only."
+          ]
+        },
+        {
+          "example_id": "robotic_high_burden_review",
+          "max_liability": 950000.0,
+          "min_liability": 950000.0,
+          "non_claims": [
+            "Sensitivity sweeps are placeholder-only and do not claim real elasticity or market behaviour.",
+            "No economic, investment, Treasury, ATO, legal, or tax validation is implied.",
+            "Sensitivity sweeps do not automatically modify final liability."
+          ],
+          "points": [
+            {
+              "effective_burden_rate": 0.7916666666666666,
+              "incidence_result": {
+                "allocation_gap": 380000.0,
+                "capital_absorption_amount": 190000.0,
+                "consumer_pass_through_amount": 237500.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 47500.0,
+                "total_allocated_amount": 570000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 95000.0
+              },
+              "liability_preview": 950000.0,
+              "parameter_name": "aava",
+              "parameter_value": 1200000.0,
+              "warnings": [
+                "AAVA sweep is non-operative and does not modify final liability."
+              ]
+            },
+            {
+              "effective_burden_rate": 0.5277777777777778,
+              "incidence_result": {
+                "allocation_gap": 380000.0,
+                "capital_absorption_amount": 190000.0,
+                "consumer_pass_through_amount": 237500.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 47500.0,
+                "total_allocated_amount": 570000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 95000.0
+              },
+              "liability_preview": 950000.0,
+              "parameter_name": "aava",
+              "parameter_value": 1800000.0,
+              "warnings": [
+                "AAVA sweep is non-operative and does not modify final liability."
+              ]
+            },
+            {
+              "effective_burden_rate": 0.36538461538461536,
+              "incidence_result": {
+                "allocation_gap": 380000.0,
+                "capital_absorption_amount": 190000.0,
+                "consumer_pass_through_amount": 237500.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 47500.0,
+                "total_allocated_amount": 570000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 95000.0
+              },
+              "liability_preview": 950000.0,
+              "parameter_name": "aava",
+              "parameter_value": 2600000.0,
+              "warnings": [
+                "AAVA sweep is non-operative and does not modify final liability."
+              ]
+            }
+          ],
+          "sweep_name": "aava_sweep",
+          "warnings": [
+            "Sensitivity values are illustrative placeholders only."
+          ]
+        }
+      ],
+      "status": "illustrative_placeholder_only"
+    },
+    {
+      "burden_balance_result": {
+        "burden_balance_band": "under_capture",
+        "capture_gap": 3500000.0,
+        "coverage_ratio": 0.125,
+        "non_claims": [
+          "Burden-balance outputs are prototype-only and do not alter liability.",
+          "National automation fiscal damage and captured revenue are not calibrated.",
+          "No economic, Treasury, ATO, legal, tax, investment, or market validation is implied."
+        ],
+        "reasons": [
+          "Captured automation revenue is materially below placeholder fiscal damage."
+        ],
+        "review_required": true,
+        "warnings": [
+          "National damage/capture inputs are illustrative placeholders and not calibrated.",
+          "Burden-balance output does not alter final liability."
+        ]
+      },
+      "example_id": "undercapture_public_revenue_gap",
+      "final_liability_modified": false,
+      "fixture_path": "examples\\investment_guardrails\\undercapture_public_revenue_gap.yaml",
+      "incidence_assumption": {
+        "assumption_basis": "illustrative national sensitivity placeholder",
+        "capital_absorption_rate": 0.2,
+        "illustrative_placeholder_only": true,
+        "pass_through_rate": 0.2,
+        "supplier_pressure_rate": 0.05,
+        "worker_pressure_rate": 0.05
+      },
+      "incidence_result": {
+        "allocation_gap": 250000.0,
+        "capital_absorption_amount": 100000.0,
+        "consumer_pass_through_amount": 100000.0,
+        "incidence_risk_band": "medium",
+        "non_claims": [
+          "These incidence outputs are illustrative placeholders only.",
+          "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+          "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+        ],
+        "supplier_pressure_amount": 25000.0,
+        "total_allocated_amount": 250000.0,
+        "warnings": [
+          "Pass-through and incidence rates are illustrative placeholders only.",
+          "This incidence preview does not alter liability."
+        ],
+        "worker_pressure_amount": 25000.0
+      },
+      "interpretation": "Captured revenue is below placeholder fiscal damage, showing under-capture review rather than calibrated coverage.",
+      "investment_inputs": {
+        "aava": 15000000.0,
+        "capital_base": 25000000.0,
+        "final_liability": 500000.0,
+        "normal_return_proxy": 2500000.0,
+        "placeholder_basis": [
+          "illustrative under-capture public revenue gap",
+          "no official national damage estimate"
+        ],
+        "revenue": 60000000.0,
+        "sector": "national_placeholder",
+        "uplift_rate": 0.1
+      },
+      "investment_result": {
+        "effective_burden_rate": 0.03333333333333333,
+        "investment_risk_band": "low",
+        "liability_to_aava_rate": 0.03333333333333333,
+        "liability_to_revenue_rate": 0.008333333333333333,
+        "non_claims": [
+          "These are prototype investment and tax-incidence guardrails only.",
+          "They are not economic validation, investment advice, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice.",
+          "Guardrail outputs do not automatically modify final liability."
+        ],
+        "normal_return_preserved": true,
+        "over_capture_warning": false,
+        "preserved_return_amount": 14500000.0,
+        "reasons": [
+          "Placeholder burden is low under illustrative thresholds."
+        ],
+        "under_capture_warning": false,
+        "warnings": [
+          "Investment guardrail thresholds are illustrative placeholders only.",
+          "This guardrail does not change final liability."
+        ]
+      },
+      "name": "Under-Capture Public Revenue Gap Case",
+      "non_claims": [
+        "not economic validation",
+        "not Treasury modelling",
+        "not tax advice"
+      ],
+      "sector": "national_placeholder",
+      "sensitivity_sweeps": [
+        {
+          "example_id": "undercapture_public_revenue_gap",
+          "max_liability": 500000.0,
+          "min_liability": 500000.0,
+          "non_claims": [
+            "Sensitivity sweeps are placeholder-only and do not claim real elasticity or market behaviour.",
+            "No economic, investment, Treasury, ATO, legal, or tax validation is implied.",
+            "Sensitivity sweeps do not automatically modify final liability."
+          ],
+          "points": [
+            {
+              "effective_burden_rate": null,
+              "incidence_result": {
+                "allocation_gap": 500000.0,
+                "capital_absorption_amount": 0.0,
+                "consumer_pass_through_amount": 0.0,
+                "incidence_risk_band": "low",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 0.0,
+                "total_allocated_amount": 0.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 0.0
+              },
+              "liability_preview": 500000.0,
+              "parameter_name": "pass_through_rate",
+              "parameter_value": 0.0,
+              "warnings": [
+                "No real pass-through elasticity is claimed."
+              ]
+            },
+            {
+              "effective_burden_rate": null,
+              "incidence_result": {
+                "allocation_gap": 400000.0,
+                "capital_absorption_amount": 0.0,
+                "consumer_pass_through_amount": 100000.0,
+                "incidence_risk_band": "low",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 0.0,
+                "total_allocated_amount": 100000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 0.0
+              },
+              "liability_preview": 500000.0,
+              "parameter_name": "pass_through_rate",
+              "parameter_value": 0.2,
+              "warnings": [
+                "No real pass-through elasticity is claimed."
+              ]
+            },
+            {
+              "effective_burden_rate": null,
+              "incidence_result": {
+                "allocation_gap": 300000.0,
+                "capital_absorption_amount": 0.0,
+                "consumer_pass_through_amount": 200000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 0.0,
+                "total_allocated_amount": 200000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 0.0
+              },
+              "liability_preview": 500000.0,
+              "parameter_name": "pass_through_rate",
+              "parameter_value": 0.4,
+              "warnings": [
+                "No real pass-through elasticity is claimed."
+              ]
+            }
+          ],
+          "sweep_name": "pass_through_rate_sweep",
+          "warnings": [
+            "Sensitivity values are illustrative placeholders only."
+          ]
+        },
+        {
+          "example_id": "undercapture_public_revenue_gap",
+          "max_liability": 900000.0,
+          "min_liability": 300000.0,
+          "non_claims": [
+            "Sensitivity sweeps are placeholder-only and do not claim real elasticity or market behaviour.",
+            "No economic, investment, Treasury, ATO, legal, or tax validation is implied.",
+            "Sensitivity sweeps do not automatically modify final liability."
+          ],
+          "points": [
+            {
+              "effective_burden_rate": 0.02,
+              "incidence_result": {
+                "allocation_gap": 120000.0,
+                "capital_absorption_amount": 60000.0,
+                "consumer_pass_through_amount": 75000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 15000.0,
+                "total_allocated_amount": 180000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 30000.0
+              },
+              "liability_preview": 300000.0,
+              "parameter_name": "liability_cap_rate",
+              "parameter_value": 0.02,
+              "warnings": [
+                "Cap-rate sweep is non-operative and does not modify final liability."
+              ]
+            },
+            {
+              "effective_burden_rate": 0.05,
+              "incidence_result": {
+                "allocation_gap": 300000.0,
+                "capital_absorption_amount": 150000.0,
+                "consumer_pass_through_amount": 187500.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 37500.0,
+                "total_allocated_amount": 450000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 75000.0
+              },
+              "liability_preview": 750000.0,
+              "parameter_name": "liability_cap_rate",
+              "parameter_value": 0.05,
+              "warnings": [
+                "Cap-rate sweep is non-operative and does not modify final liability."
+              ]
+            },
+            {
+              "effective_burden_rate": 0.06,
+              "incidence_result": {
+                "allocation_gap": 360000.0,
+                "capital_absorption_amount": 180000.0,
+                "consumer_pass_through_amount": 225000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 45000.0,
+                "total_allocated_amount": 540000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 90000.0
+              },
+              "liability_preview": 900000.0,
+              "parameter_name": "liability_cap_rate",
+              "parameter_value": 0.1,
+              "warnings": [
+                "Cap-rate sweep is non-operative and does not modify final liability."
+              ]
+            }
+          ],
+          "sweep_name": "liability_cap_rate_sweep",
+          "warnings": [
+            "Sensitivity values are illustrative placeholders only."
+          ]
+        },
+        {
+          "example_id": "undercapture_public_revenue_gap",
+          "max_liability": 500000.0,
+          "min_liability": 500000.0,
+          "non_claims": [
+            "Sensitivity sweeps are placeholder-only and do not claim real elasticity or market behaviour.",
+            "No economic, investment, Treasury, ATO, legal, or tax validation is implied.",
+            "Sensitivity sweeps do not automatically modify final liability."
+          ],
+          "points": [
+            {
+              "effective_burden_rate": 0.05,
+              "incidence_result": {
+                "allocation_gap": 200000.0,
+                "capital_absorption_amount": 100000.0,
+                "consumer_pass_through_amount": 125000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 25000.0,
+                "total_allocated_amount": 300000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 50000.0
+              },
+              "liability_preview": 500000.0,
+              "parameter_name": "aava",
+              "parameter_value": 10000000.0,
+              "warnings": [
+                "AAVA sweep is non-operative and does not modify final liability."
+              ]
+            },
+            {
+              "effective_burden_rate": 0.03333333333333333,
+              "incidence_result": {
+                "allocation_gap": 200000.0,
+                "capital_absorption_amount": 100000.0,
+                "consumer_pass_through_amount": 125000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 25000.0,
+                "total_allocated_amount": 300000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 50000.0
+              },
+              "liability_preview": 500000.0,
+              "parameter_name": "aava",
+              "parameter_value": 15000000.0,
+              "warnings": [
+                "AAVA sweep is non-operative and does not modify final liability."
+              ]
+            },
+            {
+              "effective_burden_rate": 0.025,
+              "incidence_result": {
+                "allocation_gap": 200000.0,
+                "capital_absorption_amount": 100000.0,
+                "consumer_pass_through_amount": 125000.0,
+                "incidence_risk_band": "medium",
+                "non_claims": [
+                  "These incidence outputs are illustrative placeholders only.",
+                  "They do not claim actual consumer, worker, supplier, or capital pass-through behaviour.",
+                  "They are not economic validation, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice."
+                ],
+                "supplier_pressure_amount": 25000.0,
+                "total_allocated_amount": 300000.0,
+                "warnings": [
+                  "Pass-through and incidence rates are illustrative placeholders only.",
+                  "This incidence preview does not alter liability."
+                ],
+                "worker_pressure_amount": 50000.0
+              },
+              "liability_preview": 500000.0,
+              "parameter_name": "aava",
+              "parameter_value": 20000000.0,
+              "warnings": [
+                "AAVA sweep is non-operative and does not modify final liability."
+              ]
+            }
+          ],
+          "sweep_name": "aava_sweep",
+          "warnings": [
+            "Sensitivity values are illustrative placeholders only."
+          ]
+        }
+      ],
+      "status": "illustrative_placeholder_only"
+    }
+  ],
+  "metadata": {
+    "generated_at": "2026-05-13T11:37:38+00:00",
+    "non_claims": [
+      "These are prototype investment and tax-incidence guardrails only. They are not economic validation, investment advice, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice.",
+      "These are prototype investment and tax-incidence guardrails only.",
+      "They are not economic validation, investment advice, Treasury modelling, ATO guidance, legal advice, market forecasting, or tax advice.",
+      "Guardrail outputs do not automatically modify final liability."
+    ],
+    "status": "prototype_investment_incidence_guardrails_only",
+    "version": "CARSF V1.5 prototype"
+  }
+}

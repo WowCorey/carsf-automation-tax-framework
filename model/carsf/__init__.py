@@ -9,6 +9,7 @@ from .aava import australian_automated_value_added
 from .aggregation import AggregationResult, EntityInput, evaluate_group_aggregation
 from .apportionment import ApportionmentActivity, ApportionmentResult, evaluate_apportionment
 from .avoidance import AvoidanceResult, evaluate_avoidance_risk
+from .burden_balance import BurdenBalanceInput, BurdenBalanceResult, evaluate_burden_balance
 from .calibration import (
     CalibrationRegistry,
     CalibrationRequirement,
@@ -43,6 +44,8 @@ from .example_runner import ExampleResult, ExampleRunnerError, run_all_examples,
 from .frv import net_labour_tax_gap
 from .group_runner import GroupedPreviewResult, run_grouped_previews
 from .grouping import GroupingRiskResult, evaluate_grouping_risk
+from .incidence import IncidenceAssumption, IncidenceResult, evaluate_tax_incidence
+from .investment import InvestmentGuardrailInput, InvestmentGuardrailResult, evaluate_investment_guardrail
 from .libc import human_labour_equivalent, output_per_fte_benchmark
 from .levy import (
     automation_equilibrium_levy,
@@ -76,6 +79,13 @@ from .secure_ingestion import (
     get_default_ingestion_policy,
 )
 from .sensitive_scan import SensitiveScanResult, scan_mapping_for_sensitive_markers, scan_text_for_sensitive_markers
+from .sensitivity import (
+    SensitivityPoint,
+    SensitivitySweepResult,
+    sweep_aava,
+    sweep_liability_cap,
+    sweep_pass_through,
+)
 from .ingestion_audit import IngestionAuditRecord, create_ingestion_audit_record
 from .transfer_pricing import (
     AdjustedAAVAPreview,
@@ -103,6 +113,8 @@ __all__ = [
     "ApportionmentActivity",
     "ApportionmentResult",
     "AvoidanceResult",
+    "BurdenBalanceInput",
+    "BurdenBalanceResult",
     "CalibrationRegistry",
     "CalibrationRequirement",
     "CoverageResult",
@@ -118,10 +130,14 @@ __all__ = [
     "ExampleRunnerError",
     "GroupedPreviewResult",
     "GroupingRiskResult",
+    "IncidenceAssumption",
+    "IncidenceResult",
     "IngestionAuditRecord",
     "IngestionDecision",
     "IngestionPolicy",
     "IngestionRequest",
+    "InvestmentGuardrailInput",
+    "InvestmentGuardrailResult",
     "LevyParameters",
     "LevyResult",
     "LiabilityAdjustmentPreview",
@@ -137,6 +153,8 @@ __all__ = [
     "RetentionPolicy",
     "SafeHarbourResult",
     "SensitiveScanResult",
+    "SensitivityPoint",
+    "SensitivitySweepResult",
     "TransferPricingPreviewResult",
     "TransferPricingPreviewReport",
     "TransferPricingScenarioResult",
@@ -159,12 +177,15 @@ __all__ = [
     "create_redaction_plan",
     "evaluate_apportionment",
     "evaluate_avoidance_risk",
+    "evaluate_burden_balance",
     "evaluate_group_aggregation",
     "evaluate_grouping_risk",
     "evaluate_ingestion_request",
+    "evaluate_investment_guardrail",
     "evaluate_mixed_unit_exposure",
     "evaluate_review_transition",
     "evaluate_safe_harbour",
+    "evaluate_tax_incidence",
     "evaluate_transfer_pricing_preview",
     "evaluate_unit_compatibility",
     "format_coverage_ratio",
@@ -193,6 +214,9 @@ __all__ = [
     "scan_text_for_sensitive_markers",
     "summarise_decision_log",
     "summarise_evidence_packet",
+    "sweep_aava",
+    "sweep_liability_cap",
+    "sweep_pass_through",
     "validate_no_fake_calibration_values",
     "validate_evidence_packet",
 ]

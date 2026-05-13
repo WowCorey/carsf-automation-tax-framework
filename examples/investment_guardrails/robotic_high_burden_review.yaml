@@ -1,0 +1,44 @@
+example_id: robotic_high_burden_review
+name: Robotic High-Burden Review Case
+status: illustrative_placeholder_only
+placeholder_notice: All values are illustrative placeholders for investment guardrail testing only.
+sector: automotive_repair
+scenario: Robotics-heavy operator where prototype liability is material relative to AAVA and normal-return preservation requires review.
+investment_inputs:
+  aava: 1800000.0
+  final_liability: 950000.0
+  capital_base: 4500000.0
+  uplift_rate: 0.10
+  revenue: 7000000.0
+  normal_return_proxy: 450000.0
+  sector: automotive_repair
+  placeholder_basis:
+    - illustrative high-burden review case
+    - no real calibration values
+incidence_assumption:
+  pass_through_rate: 0.25
+  worker_pressure_rate: 0.10
+  supplier_pressure_rate: 0.05
+  capital_absorption_rate: 0.25
+  assumption_basis: illustrative high-burden pass-through placeholder
+  illustrative_placeholder_only: true
+burden_balance:
+  automation_fiscal_damage:
+  automation_revenue_captured:
+  final_liability: 950000.0
+  aava: 1800000.0
+  nltg: 11.0
+  safe_harbour_category: NONE
+  avoidance_risk: medium
+  placeholder_basis:
+    - national damage data not supplied
+sensitivity:
+  pass_through_rates: [0.0, 0.25, 0.45, 0.60]
+  cap_rates: [0.15, 0.30, 0.50]
+  aava_values: [1200000.0, 1800000.0, 2600000.0]
+  raw_liability: 1200000.0
+interpretation: High placeholder burden does not prove deterrence, but it should trigger review before any operative design.
+non_claims:
+  - not economic validation
+  - not investment advice
+  - not tax advice

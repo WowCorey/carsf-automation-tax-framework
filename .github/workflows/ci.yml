@@ -50,5 +50,8 @@ jobs:
       - name: Run secure ingestion controls
         run: python scripts/run_ingestion_controls.py
 
+      - name: Run investment guardrails
+        run: python scripts/run_investment_guardrails.py
+
       - name: Run repository guardrails
         run: python scripts/run_repo_guardrails.py

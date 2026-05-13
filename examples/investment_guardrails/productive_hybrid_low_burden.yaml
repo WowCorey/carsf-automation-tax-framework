@@ -1,0 +1,44 @@
+example_id: productive_hybrid_low_burden
+name: Productive Hybrid Low-Burden Case
+status: illustrative_placeholder_only
+placeholder_notice: All values are illustrative placeholders for investment guardrail testing only.
+sector: logistics_warehousing
+scenario: Productive hybrid operator with meaningful human labour, moderate automation, and low placeholder liability.
+investment_inputs:
+  aava: 3200000.0
+  final_liability: 180000.0
+  capital_base: 6000000.0
+  uplift_rate: 0.10
+  revenue: 14000000.0
+  normal_return_proxy: 600000.0
+  sector: logistics_warehousing
+  placeholder_basis:
+    - illustrative placeholder burden case
+    - no real calibration values
+incidence_assumption:
+  pass_through_rate: 0.10
+  worker_pressure_rate: 0.05
+  supplier_pressure_rate: 0.05
+  capital_absorption_rate: 0.30
+  assumption_basis: illustrative low pass-through placeholder
+  illustrative_placeholder_only: true
+burden_balance:
+  automation_fiscal_damage:
+  automation_revenue_captured:
+  final_liability: 180000.0
+  aava: 3200000.0
+  nltg: 4.0
+  safe_harbour_category: WORKER_ASSIST_OR_ADMIN_AI
+  avoidance_risk: low
+  placeholder_basis:
+    - national damage data not supplied
+sensitivity:
+  pass_through_rates: [0.0, 0.10, 0.25, 0.40]
+  cap_rates: [0.05, 0.10, 0.20]
+  aava_values: [2400000.0, 3200000.0, 4200000.0]
+  raw_liability: 240000.0
+interpretation: Low placeholder burden suggests ordinary hybrid investment is not automatically treated as punitive.
+non_claims:
+  - not economic validation
+  - not investment advice
+  - not tax advice
