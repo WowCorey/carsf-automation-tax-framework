@@ -99,6 +99,31 @@ def test_weighted_high_critical_share_is_calculated_correctly() -> None:
     assert result.overall_weighted_high_or_critical_share == pytest.approx(0.5)
 
 
+def test_duplicate_scenario_weight_records_are_detected_without_failure() -> None:
+    result = _run(
+        [
+            _scenario("scenario_a", "high", 100.0),
+            _scenario("scenario_b", "low", 0.0),
+        ],
+        [
+            _weight("scenario_a", 1.0, "all_synthetic"),
+            _weight("scenario_a", 2.0, "high_stress"),
+            _weight("scenario_b", 1.0, "all_synthetic"),
+        ],
+        [
+            _definition("all_synthetic"),
+            _definition("high_stress", household_type_filter="single_adult"),
+        ],
+    )
+
+    assert result.aggregation_basis == "synthetic_weight_record_aggregate_not_unique_population_weight"
+    assert result.duplicate_scenario_weight_records == ["scenario_a"]
+    assert result.total_synthetic_weight == pytest.approx(4.0)
+    assert result.overall_weighted_average_residual_gap == pytest.approx(75.0)
+    assert result.representative_of_real_population is False
+    assert any("weight-record aggregates" in warning for warning in result.warnings)
+
+
 def test_highest_risk_subgroups_are_deterministic() -> None:
     result = _run(
         [

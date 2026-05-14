@@ -208,8 +208,10 @@ def _aggregation_table(row: dict[str, Any]) -> list[str]:
         "| Metric | Value |",
         "| --- | ---: |",
         f"| Total synthetic weight | {result.total_synthetic_weight:,.4f} |",
-        f"| Overall weighted average residual gap | {money(result.overall_weighted_average_residual_gap)} |",
-        f"| Overall weighted high/critical share | {rate(result.overall_weighted_high_or_critical_share)} |",
+        f"| Aggregation basis | {result.aggregation_basis} |",
+        f"| Duplicate scenario weight records | {', '.join(result.duplicate_scenario_weight_records) or 'None'} |",
+        f"| Overall synthetic weight-record average residual gap | {money(result.overall_weighted_average_residual_gap)} |",
+        f"| Overall synthetic weight-record high/critical share | {rate(result.overall_weighted_high_or_critical_share)} |",
         f"| Representative of real population | {str(result.representative_of_real_population).lower()} |",
     ]
     return lines
@@ -280,6 +282,10 @@ def build_markdown(rows: list[dict[str, Any]], calibration_shell: Any, metadata:
         lines.extend(_subgroup_definition_table(row))
         lines.append("")
     lines.extend(["## F. Weighted Aggregation Results", ""])
+    lines.append(
+        "Overall metrics aggregate synthetic weight records. If the same scenario appears in multiple subgroup weights, it may contribute more than once. These outputs are stress-test summaries, not unique-household or population-weighted estimates."
+    )
+    lines.append("")
     for row in rows:
         lines.extend([f"### {row['example']['name']}", ""])
         lines.extend(_aggregation_table(row))

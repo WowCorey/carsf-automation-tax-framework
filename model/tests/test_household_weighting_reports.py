@@ -60,6 +60,34 @@ def test_household_weighting_report_marks_outputs_not_representative(repo_root) 
     assert all(example["firm_level_liability_modified"] is False for example in payload["examples"])
 
 
+def test_household_weighting_report_clarifies_weight_record_aggregation(repo_root) -> None:
+    reports_dir = repo_root / "tmp" / "test-household-weighting-aggregation-basis"
+    subprocess.run(
+        [sys.executable, "scripts/run_household_weighting.py", "--reports-dir", str(reports_dir)],
+        cwd=repo_root,
+        check=True,
+    )
+    markdown = (reports_dir / "household_weighting.md").read_text(encoding="utf-8")
+    payload = json.loads((reports_dir / "household_weighting.json").read_text(encoding="utf-8"))
+
+    assert "Overall synthetic weight-record average residual gap" in markdown
+    assert "Overall synthetic weight-record high/critical share" in markdown
+    assert (
+        "Overall metrics aggregate synthetic weight records. If the same scenario appears in multiple subgroup weights, "
+        "it may contribute more than once. These outputs are stress-test summaries, not unique-household or "
+        "population-weighted estimates."
+    ) in markdown
+    assert any(
+        example["aggregation_result"]["aggregation_basis"]
+        == "synthetic_weight_record_aggregate_not_unique_population_weight"
+        for example in payload["examples"]
+    )
+    assert any(
+        example["aggregation_result"]["duplicate_scenario_weight_records"]
+        for example in payload["examples"]
+    )
+
+
 def test_existing_reports_repo_guardrails_and_household_weighting_still_generate(repo_root) -> None:
     reports_dir = repo_root / "tmp" / "test-existing-plus-household-weighting"
     commands = [

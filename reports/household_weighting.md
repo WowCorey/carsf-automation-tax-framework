@@ -1,6 +1,6 @@
 # CARSF V1.5 Household Weighting and Subgroup Aggregation Shell
 
-Generated at: `2026-05-14T05:45:23+00:00`
+Generated at: `2026-05-14T05:57:00+00:00`
 
 ## A. Purpose
 
@@ -103,13 +103,17 @@ Individual synthetic scenarios can show household mechanics, but policy review a
 
 ## F. Weighted Aggregation Results
 
+Overall metrics aggregate synthetic weight records. If the same scenario appears in multiple subgroup weights, it may contribute more than once. These outputs are stress-test summaries, not unique-household or population-weighted estimates.
+
 ### Low-Income Household Weighting
 
 | Metric | Value |
 | --- | ---: |
 | Total synthetic weight | 6.5000 |
-| Overall weighted average residual gap | 10,923.08 |
-| Overall weighted high/critical share | 100.00% |
+| Aggregation basis | synthetic_weight_record_aggregate_not_unique_population_weight |
+| Duplicate scenario weight records | single_parent_retraining_gap |
+| Overall synthetic weight-record average residual gap | 10,923.08 |
+| Overall synthetic weight-record high/critical share | 100.00% |
 | Representative of real population | false |
 
 | Subgroup | Scenarios | Weight | Weighted Avg Residual Gap | High/Critical Share | Highest-Risk Scenarios | Representativeness Warning |
@@ -122,8 +126,10 @@ Individual synthetic scenarios can show household mechanics, but policy review a
 | Metric | Value |
 | --- | ---: |
 | Total synthetic weight | 5.0000 |
-| Overall weighted average residual gap | 12,200.00 |
-| Overall weighted high/critical share | 100.00% |
+| Aggregation basis | synthetic_weight_record_aggregate_not_unique_population_weight |
+| Duplicate scenario weight records | None |
+| Overall synthetic weight-record average residual gap | 12,200.00 |
+| Overall synthetic weight-record high/critical share | 100.00% |
 | Representative of real population | false |
 
 | Subgroup | Scenarios | Weight | Weighted Avg Residual Gap | High/Critical Share | Highest-Risk Scenarios | Representativeness Warning |
@@ -137,8 +143,10 @@ Individual synthetic scenarios can show household mechanics, but policy review a
 | Metric | Value |
 | --- | ---: |
 | Total synthetic weight | 9.0000 |
-| Overall weighted average residual gap | 15,833.33 |
-| Overall weighted high/critical share | 100.00% |
+| Aggregation basis | synthetic_weight_record_aggregate_not_unique_population_weight |
+| Duplicate scenario weight records | None |
+| Overall synthetic weight-record average residual gap | 15,833.33 |
+| Overall synthetic weight-record high/critical share | 100.00% |
 | Representative of real population | false |
 
 | Subgroup | Scenarios | Weight | Weighted Avg Residual Gap | High/Critical Share | Highest-Risk Scenarios | Representativeness Warning |
@@ -151,8 +159,10 @@ Individual synthetic scenarios can show household mechanics, but policy review a
 | Metric | Value |
 | --- | ---: |
 | Total synthetic weight | 8.5000 |
-| Overall weighted average residual gap | 12,705.88 |
-| Overall weighted high/critical share | 94.12% |
+| Aggregation basis | synthetic_weight_record_aggregate_not_unique_population_weight |
+| Duplicate scenario weight records | None |
+| Overall synthetic weight-record average residual gap | 12,705.88 |
+| Overall synthetic weight-record high/critical share | 94.12% |
 | Representative of real population | false |
 
 | Subgroup | Scenarios | Weight | Weighted Avg Residual Gap | High/Critical Share | Highest-Risk Scenarios | Representativeness Warning |
@@ -166,8 +176,10 @@ Individual synthetic scenarios can show household mechanics, but policy review a
 | Metric | Value |
 | --- | ---: |
 | Total synthetic weight | 0.0000 |
-| Overall weighted average residual gap | N/A |
-| Overall weighted high/critical share | N/A |
+| Aggregation basis | synthetic_weight_record_aggregate_not_unique_population_weight |
+| Duplicate scenario weight records | None |
+| Overall synthetic weight-record average residual gap | N/A |
+| Overall synthetic weight-record high/critical share | N/A |
 | Representative of real population | false |
 
 | Subgroup | Scenarios | Weight | Weighted Avg Residual Gap | High/Critical Share | Highest-Risk Scenarios | Representativeness Warning |
@@ -191,6 +203,7 @@ Individual synthetic scenarios can show household mechanics, but policy review a
 - Weighted distributional aggregation uses synthetic placeholder weights only.
 - Results are not representative of real Australian households.
 - Firm-level CARSF liability is not modified by weighted distributional outputs.
+- One or more synthetic scenarios appear in multiple weight records. Overall weighted outputs are weight-record aggregates, not unique-household or population estimates.
 - Calibration status does not support real-world representativeness claims.
 - representative_of_real_population: false
 

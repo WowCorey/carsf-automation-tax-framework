@@ -54,6 +54,8 @@ class WeightedDistributionalResult:
     overall_weighted_average_residual_gap: float | None
     overall_weighted_high_or_critical_share: float | None
     subgroup_results: list[WeightedSubgroupResult]
+    aggregation_basis: str = "synthetic_weight_record_aggregate_not_unique_population_weight"
+    duplicate_scenario_weight_records: list[str] = field(default_factory=list)
     highest_risk_subgroups: list[str] = field(default_factory=list)
     calibration_status: str = "not_calibrated"
     representative_of_real_population: bool = False
@@ -138,6 +140,16 @@ def run_weighted_distributional_aggregation(
             raise ValueError(f"household weight references unknown scenario_id: {weight.scenario_id}")
         if weight.subgroup_id not in definition_by_id:
             raise ValueError(f"household weight references unknown subgroup_id: {weight.subgroup_id}")
+    scenario_weight_counts: dict[str, int] = {}
+    for weight in evaluated_weights:
+        scenario_weight_counts[weight.scenario_id] = scenario_weight_counts.get(weight.scenario_id, 0) + 1
+    duplicate_scenario_weight_records = sorted(
+        scenario_id for scenario_id, count in scenario_weight_counts.items() if count > 1
+    )
+    if duplicate_scenario_weight_records:
+        warnings.append(
+            "One or more synthetic scenarios appear in multiple weight records. Overall weighted outputs are weight-record aggregates, not unique-household or population estimates."
+        )
 
     assignments = {
         scenario_id: assign_subgroups(row, definitions)
@@ -196,6 +208,8 @@ def run_weighted_distributional_aggregation(
         overall_weighted_average_residual_gap=_weighted_average(weighted_rows),
         overall_weighted_high_or_critical_share=_weighted_high_critical_share(weighted_rows),
         subgroup_results=subgroup_results,
+        aggregation_basis="synthetic_weight_record_aggregate_not_unique_population_weight",
+        duplicate_scenario_weight_records=duplicate_scenario_weight_records,
         highest_risk_subgroups=[item.subgroup_id for item in highest_subgroups[:3]],
         calibration_status=input_obj.calibration_status,
         representative_of_real_population=False,

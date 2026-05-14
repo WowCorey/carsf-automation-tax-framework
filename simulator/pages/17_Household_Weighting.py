@@ -96,12 +96,19 @@ st.table(
 st.markdown("### Weighted Summary")
 st.table(
     [
-        {"Metric": "Overall weighted average residual gap", "Value": fmt_money(aggregation["overall_weighted_average_residual_gap"])},
-        {"Metric": "Overall weighted high/critical share", "Value": fmt_rate(aggregation["overall_weighted_high_or_critical_share"])},
+        {"Metric": "Aggregation basis", "Value": aggregation.get("aggregation_basis", "synthetic_weight_record_aggregate_not_unique_population_weight")},
+        {"Metric": "Duplicate scenario weight records", "Value": ", ".join(aggregation.get("duplicate_scenario_weight_records", [])) or "None"},
+        {"Metric": "Overall synthetic weight-record average residual gap", "Value": fmt_money(aggregation["overall_weighted_average_residual_gap"])},
+        {"Metric": "Overall synthetic weight-record high/critical share", "Value": fmt_rate(aggregation["overall_weighted_high_or_critical_share"])},
         {"Metric": "Highest-risk synthetic subgroups", "Value": ", ".join(aggregation.get("highest_risk_subgroups", [])) or "None"},
         {"Metric": "Representative of real population", "Value": str(aggregation["representative_of_real_population"]).lower()},
         {"Metric": "Calibration status", "Value": aggregation["calibration_status"]},
     ]
+)
+st.caption(
+    "Overall metrics aggregate synthetic weight records. If the same scenario appears in multiple subgroup weights, "
+    "it may contribute more than once. These outputs are stress-test summaries, not unique-household or "
+    "population-weighted estimates."
 )
 
 st.markdown("### Calibration Readiness")
