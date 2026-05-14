@@ -1,0 +1,57 @@
+scenario_id: high_automation_region_cluster
+name: High Automation Region Cluster
+purpose: Multiple stress drivers in a region with high automation exposure.
+status: prototype_only
+illustrative_placeholder_only: true
+synthetic_household_only: true
+not_calibrated: true
+no_policy_claim: true
+no_welfare_advice: true
+no_real_household_data: true
+placeholder_notice: All values are synthetic illustrative placeholders only and are not real household, welfare, ABS, DSS, Services Australia, Treasury, PBO, ATO, HILDA, Census, or survey data.
+household:
+  household_id: hh_high_automation_region
+  household_type: displaced_worker_high_exposure_region
+  adults: 2
+  children: 2
+  region_type: high_automation_regional_cluster_placeholder
+  income_band: middle_placeholder
+  pre_displacement_income: 90000
+  post_displacement_income: 20000
+  existing_support_baseline: 10000
+  housing_cost_placeholder: 30000
+  essential_cost_placeholder: 30000
+  debt_pressure_placeholder: 5000
+  savings_buffer_placeholder: 1000
+  illustrative_placeholder_only: true
+  synthetic_household_only: true
+reemployment_path:
+  path_id: reemployment_high_automation_region
+  household_id: hh_high_automation_region
+  displacement_year: 2028
+  expected_reemployment_months: 24
+  retraining_months: 12
+  partial_income_recovery_rate: 0.2
+  full_income_recovery_rate: 0.6
+  probability_band_placeholder: low
+  illustrative_placeholder_only: true
+regional_stress:
+  region_id: high_automation_regional_cluster_placeholder
+  region_type: concentrated_high_automation_region
+  automation_exposure_placeholder: 0.90
+  labour_market_depth_placeholder: 0.20
+  retraining_access_placeholder: 0.25
+  housing_cost_pressure_placeholder: 0.80
+  transport_access_placeholder: 0.25
+  illustrative_placeholder_only: true
+payment_cliff:
+  cliff_id: high_automation_region_cliff
+  household_id: hh_high_automation_region
+  support_before_change: 16000
+  support_after_change: 4000
+  income_before_change: 20000
+  income_after_change: 24000
+  trigger_type: weak_reemployment_phase_down_placeholder
+  trigger_description: Placeholder support loss materially exceeds low income recovery.
+transition_support_amount: 15000
+interpretation: This synthetic cluster case combines high automation exposure, weak labour-market depth, limited retraining access, a support cliff, and a residual household gap.

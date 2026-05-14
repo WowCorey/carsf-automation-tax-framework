@@ -428,3 +428,43 @@ Limitations:
 - Payment-interaction outputs are illustrative placeholders only.
 - They are not UBI policy, welfare advice, eligibility law, Centrelink/DSS/Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.
 - The payment interaction layer does not modify firm-level CARSF liability.
+
+## V1.5 Synthetic Household Distributional Scenarios
+
+Branch: `v1.5-synthetic-household-distributional-scenarios`
+
+Baseline: PR #13 merged into `main`, including payment interaction and targeting mechanics, existing transfer baseline separation, phase-in / phase-out mechanics, payment-stack double-counting review, and support fiscal-incidence preview.
+
+Purpose of this build:
+
+- Add synthetic household archetype budget-stress previews.
+- Add re-employment timing, payment cliff, and regional stress modules.
+- Add distributional scenario and summary orchestration.
+- Add synthetic household examples, reports, tests, CI step, and Streamlit page.
+
+Tests run:
+
+- `python -m pytest` - 448 passed, 1 pytest-asyncio deprecation warning under Python 3.14.
+- `python -m compileall -q model simulator scripts` - passed.
+- Recursive YAML parse check for schedules/examples/data - parsed 56 YAML files.
+- `python scripts/run_examples.py` - regenerated existing example report outputs successfully.
+- `python scripts/run_evidence_workflow.py` - regenerated mock evidence workflow reports successfully.
+- `python scripts/run_ingestion_controls.py` - regenerated secure-ingestion control reports successfully.
+- `python scripts/run_repo_guardrails.py` - passed with zero denied findings and 48 warning findings.
+- `python scripts/run_investment_guardrails.py` - regenerated investment guardrail reports successfully.
+- `python scripts/run_fiscal_trajectory.py` - regenerated fiscal trajectory reports successfully.
+- `python scripts/run_transition_funding.py` - regenerated transition funding reports successfully.
+- `python scripts/run_payment_interactions.py` - regenerated payment interaction reports successfully.
+- `python scripts/run_distributional_scenarios.py` - generated distributional scenario reports successfully.
+- Streamlit bare import probe for `simulator/pages/16_Distributional_Scenarios.py` - passed.
+
+Reports generated:
+
+- `reports/distributional_scenarios.json`
+- `reports/distributional_scenarios.md`
+
+Limitations:
+
+- Distributional scenario outputs are synthetic placeholders only.
+- They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.
+- The distributional scenario layer does not modify firm-level CARSF liability.

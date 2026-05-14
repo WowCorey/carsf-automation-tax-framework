@@ -25,6 +25,12 @@ from .decision_log import (
     create_decision_log,
     summarise_decision_log,
 )
+from .distributional_scenarios import (
+    DistributionalScenarioInput,
+    DistributionalScenarioResult,
+    evaluate_distributional_scenario,
+)
+from .distributional_summary import DistributionalSummaryResult, summarise_distributional_scenarios
 from .classification import classify_evidence_item, classify_packet
 from .evidence import (
     EvidenceAssessment,
@@ -46,6 +52,7 @@ from .fiscal_trajectory import FiscalTrajectoryInput, FiscalTrajectoryResult, Fi
 from .frv import net_labour_tax_gap
 from .group_runner import GroupedPreviewResult, run_grouped_previews
 from .grouping import GroupingRiskResult, evaluate_grouping_risk
+from .households import HouseholdBudgetResult, SyntheticHousehold, evaluate_household_budget
 from .incidence import IncidenceAssumption, IncidenceResult, evaluate_tax_incidence
 from .investment import InvestmentGuardrailInput, InvestmentGuardrailResult, evaluate_investment_guardrail
 from .libc import human_labour_equivalent, output_per_fte_benchmark
@@ -64,10 +71,13 @@ from .payment_interactions import PaymentInteractionInput, PaymentInteractionRes
 from .payment_portfolio import PaymentPortfolioInput, PaymentPortfolioResult, evaluate_payment_portfolio
 from .payment_sensitivity import PaymentSensitivityPoint, PaymentSensitivityResult, run_payment_sensitivity
 from .payment_stack import PaymentStackComponent, PaymentStackResult, evaluate_payment_stack
+from .payment_cliffs import PaymentCliffInput, PaymentCliffResult, evaluate_payment_cliff
 from .phase_rules import PhaseRule, PhaseRuleYearResult, evaluate_phase_rule
 from .public_revenue import PublicRevenueInput, PublicRevenueResult, evaluate_public_revenue
 from .qlc import qualified_labour_contribution_firm, qualified_labour_contribution_worker
 from .redaction import RedactionPlan, create_redaction_plan
+from .reemployment import ReemploymentPath, ReemploymentResult, evaluate_reemployment_path
+from .regional_stress import RegionalStressInput, RegionalStressResult, evaluate_regional_stress
 from .repo_guardrails import (
     RepoGuardrailPolicy,
     RepoScanFinding,
@@ -145,6 +155,9 @@ __all__ = [
     "CoverageResult",
     "DecisionLog",
     "DecisionLogEntry",
+    "DistributionalScenarioInput",
+    "DistributionalScenarioResult",
+    "DistributionalSummaryResult",
     "EntityInput",
     "EvidenceAssessment",
     "EvidenceItem",
@@ -160,6 +173,7 @@ __all__ = [
     "FiscalYearResult",
     "GroupedPreviewResult",
     "GroupingRiskResult",
+    "HouseholdBudgetResult",
     "IncidenceAssumption",
     "IncidenceResult",
     "IngestionAuditRecord",
@@ -178,6 +192,8 @@ __all__ = [
     "PaymentPortfolioResult",
     "PaymentSensitivityPoint",
     "PaymentSensitivityResult",
+    "PaymentCliffInput",
+    "PaymentCliffResult",
     "PaymentStackComponent",
     "PaymentStackResult",
     "PhaseRule",
@@ -187,6 +203,10 @@ __all__ = [
     "QLCWeights",
     "RelatedPartyTransaction",
     "RedactionPlan",
+    "ReemploymentPath",
+    "ReemploymentResult",
+    "RegionalStressInput",
+    "RegionalStressResult",
     "RepoGuardrailPolicy",
     "RepoScanFinding",
     "RepoScanResult",
@@ -199,6 +219,7 @@ __all__ = [
     "SensitivitySweepResult",
     "SupportIncidenceAssumption",
     "SupportIncidenceResult",
+    "SyntheticHousehold",
     "TargetPopulationInput",
     "TargetPopulationResult",
     "TargetingCriteria",
@@ -238,16 +259,21 @@ __all__ = [
     "evaluate_apportionment",
     "evaluate_avoidance_risk",
     "evaluate_burden_balance",
+    "evaluate_distributional_scenario",
     "evaluate_group_aggregation",
     "evaluate_grouping_risk",
+    "evaluate_household_budget",
     "evaluate_ingestion_request",
     "evaluate_investment_guardrail",
     "evaluate_mixed_unit_exposure",
     "evaluate_payment_interactions",
+    "evaluate_payment_cliff",
     "evaluate_payment_portfolio",
     "evaluate_payment_stack",
     "evaluate_phase_rule",
     "evaluate_public_revenue",
+    "evaluate_reemployment_path",
+    "evaluate_regional_stress",
     "evaluate_review_transition",
     "evaluate_safe_harbour",
     "evaluate_tax_incidence",
@@ -288,6 +314,7 @@ __all__ = [
     "scan_repo",
     "scan_text_for_sensitive_markers",
     "summarise_decision_log",
+    "summarise_distributional_scenarios",
     "summarise_evidence_packet",
     "sweep_aava",
     "sweep_liability_cap",

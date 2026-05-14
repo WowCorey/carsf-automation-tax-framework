@@ -18,7 +18,7 @@ All sector values, schedule values, examples, caps, Fiscal Replacement Value val
 
 - `paper/` - Markdown policy paper, V1.5 working draft, formulas, glossary, references, and export notes.
 - `audits/` - review notes, responses, and red-team register.
-- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, repository guardrails, investment/incidence guardrails, and national fiscal trajectory modelling.
+- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, repository guardrails, investment/incidence guardrails, national fiscal trajectory modelling, transition funding, payment interactions, and synthetic distributional scenarios.
 - `model/tests/` - pytest coverage for formula bounds, caps, examples, and avoidance flags.
 - `data/` - source-category registry and placeholder policy; no datasets are committed.
 - `data/mock_evidence/` - synthetic mock evidence packets for workflow testing only; no real evidence or personal data is committed.
@@ -29,6 +29,7 @@ All sector values, schedule values, examples, caps, Fiscal Replacement Value val
 - `examples/fiscal_trajectory/` - illustrative placeholder national fiscal trajectory cases.
 - `examples/transition_payments/` - illustrative placeholder transition-payment, UBI-lite, retraining, and automation-dividend funding cases.
 - `examples/payment_interactions/` - illustrative placeholder payment targeting, phase, stack, and support-incidence cases.
+- `examples/distributional_scenarios/` - synthetic household distributional cases with no real household data.
 - `simulator/` - Streamlit interface for policy review, tax model inputs, worked examples, red-team tests, and audit log.
 - `docs/` - data requirements, limitations, implementation notes, known risks, and V1.5 plan.
 
@@ -135,6 +136,17 @@ Generated payment-interaction reports:
 - `reports/payment_interactions.md`
 - `reports/payment_interactions.json`
 
+Run synthetic household distributional scenarios:
+
+```powershell
+python scripts/run_distributional_scenarios.py
+```
+
+Generated distributional reports:
+
+- `reports/distributional_scenarios.md`
+- `reports/distributional_scenarios.json`
+
 The reports are illustrative placeholder outputs only. They are not legal grouping findings, transfer-pricing adjustments, ATO findings, tax assessments, Treasury guidance, OECD/BEPS analysis, economic validation, or real liability calculations.
 Mock evidence reports use synthetic fixtures only and do not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.
 Secure-ingestion reports are prototype governance controls only. Only synthetic mock evidence is allowed in this repository; real evidence must not be committed.
@@ -143,6 +155,7 @@ Investment and incidence guardrail reports are prototype review outputs only. Th
 Fiscal trajectory reports are prototype national-level outputs only. They are not forecasts, Treasury modelling, ATO estimates, ABS analysis, DSS estimates, PBO costing, legal advice, tax advice, or economic validation.
 Transition-funding reports are prototype payment-funding outputs only. They are not UBI policy, welfare advice, DSS modelling, Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.
 Payment-interaction reports are prototype targeting, phase-rule, baseline-separation, double-counting, and support-incidence outputs only. They are not UBI policy, welfare advice, eligibility law, Centrelink/DSS/Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.
+Distributional scenario reports are synthetic household outputs only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.
 
 ## Run the Simulator
 
@@ -173,6 +186,7 @@ V1.5 is not just an examples update. It is V1.4 plus two prototype sector schedu
 - model placeholder national fiscal trajectories for PAYG erosion, transfer pressure, automation revenue captured, and residual fiscal gaps without changing firm-level liability;
 - preview transition-payment, UBI-lite, retraining, automation-dividend, and hybrid funding options without changing firm-level liability;
 - preview existing transfer baseline separation, targeting, phase-in / phase-out, payment-stack double-counting, and support-payment fiscal incidence without changing firm-level liability;
+- preview synthetic household budget stress, re-employment timing, payment cliffs, regional stress, and residual household gaps without using real household data or changing firm-level liability;
 - define a calibration shell and data source registry without collecting real data;
 - identify open-source AI and R&D Tax Incentive interaction questions without overclaiming.
 
@@ -191,3 +205,4 @@ Investment, incidence, pass-through, and burden-balance outputs are uncalibrated
 National fiscal trajectory outputs are uncalibrated placeholders. They are not forecasts, do not validate public revenue impacts, and do not modify firm-level CARSF liability.
 Transition-payment funding outputs are uncalibrated placeholders. They are not UBI or welfare policy, do not validate social-policy effects, and do not modify firm-level CARSF liability.
 Payment-interaction outputs are uncalibrated placeholders. They do not implement welfare eligibility law, Centrelink/DSS/Services Australia administration, household means testing, or validated support-payment fiscal incidence.
+Distributional scenario outputs are synthetic placeholders. They do not model real Australian households, real household hardship, real welfare eligibility, or validated regional/labour-market outcomes.

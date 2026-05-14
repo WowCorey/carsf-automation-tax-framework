@@ -1,0 +1,57 @@
+scenario_id: dual_income_one_displaced_regional
+name: Dual Income One Displaced Regional
+purpose: Dual-income household where one worker is displaced in a regional labour market.
+status: prototype_only
+illustrative_placeholder_only: true
+synthetic_household_only: true
+not_calibrated: true
+no_policy_claim: true
+no_welfare_advice: true
+no_real_household_data: true
+placeholder_notice: All values are synthetic illustrative placeholders only and are not real household, welfare, ABS, DSS, Services Australia, Treasury, PBO, ATO, HILDA, Census, or survey data.
+household:
+  household_id: hh_dual_income_regional
+  household_type: dual_income_one_worker_displaced
+  adults: 2
+  children: 1
+  region_type: regional_labour_market_placeholder
+  income_band: middle_placeholder
+  pre_displacement_income: 120000
+  post_displacement_income: 78000
+  existing_support_baseline: 5000
+  housing_cost_placeholder: 32000
+  essential_cost_placeholder: 42000
+  debt_pressure_placeholder: 6000
+  savings_buffer_placeholder: 15000
+  illustrative_placeholder_only: true
+  synthetic_household_only: true
+reemployment_path:
+  path_id: reemployment_dual_income_regional
+  household_id: hh_dual_income_regional
+  displacement_year: 2028
+  expected_reemployment_months: 8
+  retraining_months: 4
+  partial_income_recovery_rate: 0.35
+  full_income_recovery_rate: 0.85
+  probability_band_placeholder: medium
+  illustrative_placeholder_only: true
+regional_stress:
+  region_id: regional_labour_market_placeholder
+  region_type: regional_limited_labour_depth
+  automation_exposure_placeholder: 0.65
+  labour_market_depth_placeholder: 0.30
+  retraining_access_placeholder: 0.45
+  housing_cost_pressure_placeholder: 0.45
+  transport_access_placeholder: 0.40
+  illustrative_placeholder_only: true
+payment_cliff:
+  cliff_id: regional_dual_income_no_cliff
+  household_id: hh_dual_income_regional
+  support_before_change: 5000
+  support_after_change: 4000
+  income_before_change: 78000
+  income_after_change: 84000
+  trigger_type: partial_reemployment_placeholder
+  trigger_description: Placeholder support reduction is offset by income recovery.
+transition_support_amount: 8000
+interpretation: Household income cushion reduces immediate budget gap, but regional labour-market depth still creates a transition risk.

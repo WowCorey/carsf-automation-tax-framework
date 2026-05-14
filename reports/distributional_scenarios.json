@@ -1,0 +1,1024 @@
+{
+  "examples": [
+    {
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\distributional_scenarios\\dual_income_one_displaced_regional.yaml",
+      "household": {
+        "adults": 2,
+        "children": 1,
+        "debt_pressure_placeholder": 6000,
+        "essential_cost_placeholder": 42000,
+        "existing_support_baseline": 5000,
+        "household_id": "hh_dual_income_regional",
+        "household_type": "dual_income_one_worker_displaced",
+        "housing_cost_placeholder": 32000,
+        "illustrative_placeholder_only": true,
+        "income_band": "middle_placeholder",
+        "post_displacement_income": 78000,
+        "pre_displacement_income": 120000,
+        "region_type": "regional_labour_market_placeholder",
+        "savings_buffer_placeholder": 15000,
+        "synthetic_household_only": true
+      },
+      "household_budget_result": {
+        "budget_stress_band": "medium",
+        "disposable_after_basic_costs": 3000.0,
+        "existing_support_baseline": 5000.0,
+        "household_id": "hh_dual_income_regional",
+        "household_type": "dual_income_one_worker_displaced",
+        "immediate_budget_gap": 0.0,
+        "income_loss": 42000.0,
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "post_displacement_income": 78000.0,
+        "pre_displacement_income": 120000.0,
+        "savings_buffer_placeholder": 15000.0,
+        "total_basic_costs": 80000.0,
+        "warnings": [
+          "Household budget result is synthetic and placeholder-only.",
+          "No real household, income, welfare, ABS, DSS, Services Australia, ATO, Treasury, PBO, or survey data is used."
+        ]
+      },
+      "interpretation": "Household income cushion reduces immediate budget gap, but regional labour-market depth still creates a transition risk.",
+      "name": "Dual Income One Displaced Regional",
+      "payment_cliff_result": {
+        "cliff_detected": false,
+        "cliff_id": "regional_dual_income_no_cliff",
+        "cliff_severity_band": "none",
+        "household_id": "hh_dual_income_regional",
+        "income_gain": 6000.0,
+        "net_position_change": 5000.0,
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "support_loss": 1000.0,
+        "warnings": [
+          "Payment cliff result is a prototype warning only and not eligibility law.",
+          "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used."
+        ]
+      },
+      "purpose": "Dual-income household where one worker is displaced in a regional labour market.",
+      "reemployment_result": {
+        "full_income_recovery_amount": 35700.0,
+        "household_id": "hh_dual_income_regional",
+        "interim_income_recovery_amount": 14699.999999999998,
+        "months_without_full_income": 8,
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "path_id": "reemployment_dual_income_regional",
+        "reemployment_risk_band": "medium",
+        "warnings": [
+          "Re-employment timing is a synthetic placeholder and not a labour-market forecast.",
+          "No ABS, HILDA, DSS, Services Australia, Treasury, PBO, or employer records are used."
+        ]
+      },
+      "regional_stress_result": {
+        "drivers": [
+          "limited labour-market depth"
+        ],
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "region_id": "regional_labour_market_placeholder",
+        "regional_stress_band": "high",
+        "regional_stress_score": 0.5924999999999999,
+        "warnings": [
+          "Regional stress score is placeholder-only and not real regional modelling.",
+          "No ABS, Census, DSS, Services Australia, Treasury, PBO, labour-market, or geographic data is used."
+        ]
+      },
+      "scenario_id": "dual_income_one_displaced_regional",
+      "scenario_result": {
+        "budget_stress_band": "medium",
+        "cliff_severity_band": "none",
+        "household_id": "hh_dual_income_regional",
+        "household_shock_band": "high",
+        "household_type": "dual_income_one_worker_displaced",
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "payment_interaction_combined_gap": null,
+        "payment_interaction_residual_support_gap": null,
+        "payment_interaction_risk_band": null,
+        "payment_interaction_used": false,
+        "primary_risk_drivers": [
+          "regional stress: high"
+        ],
+        "reemployment_risk_band": "medium",
+        "regional_stress_band": "high",
+        "residual_household_gap_after_support": 0.0,
+        "scenario_id": "dual_income_one_displaced_regional",
+        "transition_support_amount": 8000.0,
+        "warnings": [
+          "Household budget result is synthetic and placeholder-only.",
+          "No real household, income, welfare, ABS, DSS, Services Australia, ATO, Treasury, PBO, or survey data is used.",
+          "Re-employment timing is a synthetic placeholder and not a labour-market forecast.",
+          "No ABS, HILDA, DSS, Services Australia, Treasury, PBO, or employer records are used.",
+          "Regional stress score is placeholder-only and not real regional modelling.",
+          "No ABS, Census, DSS, Services Australia, Treasury, PBO, labour-market, or geographic data is used.",
+          "Payment cliff result is a prototype warning only and not eligibility law.",
+          "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used.",
+          "Distributional scenario is synthetic-only and does not use or represent real households.",
+          "Payment interaction outputs do not modify firm-level CARSF liability.",
+          "Firm-level CARSF liability is not modified by distributional scenario outputs."
+        ]
+      },
+      "status": "prototype_only"
+    },
+    {
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\distributional_scenarios\\high_automation_region_cluster.yaml",
+      "household": {
+        "adults": 2,
+        "children": 2,
+        "debt_pressure_placeholder": 5000,
+        "essential_cost_placeholder": 30000,
+        "existing_support_baseline": 10000,
+        "household_id": "hh_high_automation_region",
+        "household_type": "displaced_worker_high_exposure_region",
+        "housing_cost_placeholder": 30000,
+        "illustrative_placeholder_only": true,
+        "income_band": "middle_placeholder",
+        "post_displacement_income": 20000,
+        "pre_displacement_income": 90000,
+        "region_type": "high_automation_regional_cluster_placeholder",
+        "savings_buffer_placeholder": 1000,
+        "synthetic_household_only": true
+      },
+      "household_budget_result": {
+        "budget_stress_band": "critical",
+        "disposable_after_basic_costs": -35000.0,
+        "existing_support_baseline": 10000.0,
+        "household_id": "hh_high_automation_region",
+        "household_type": "displaced_worker_high_exposure_region",
+        "immediate_budget_gap": 35000.0,
+        "income_loss": 70000.0,
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "post_displacement_income": 20000.0,
+        "pre_displacement_income": 90000.0,
+        "savings_buffer_placeholder": 1000.0,
+        "total_basic_costs": 65000.0,
+        "warnings": [
+          "Household budget result is synthetic and placeholder-only.",
+          "No real household, income, welfare, ABS, DSS, Services Australia, ATO, Treasury, PBO, or survey data is used."
+        ]
+      },
+      "interpretation": "This synthetic cluster case combines high automation exposure, weak labour-market depth, limited retraining access, a support cliff, and a residual household gap.",
+      "name": "High Automation Region Cluster",
+      "payment_cliff_result": {
+        "cliff_detected": true,
+        "cliff_id": "high_automation_region_cliff",
+        "cliff_severity_band": "high",
+        "household_id": "hh_high_automation_region",
+        "income_gain": 4000.0,
+        "net_position_change": -8000.0,
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "support_loss": 12000.0,
+        "warnings": [
+          "Payment cliff result is a prototype warning only and not eligibility law.",
+          "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used."
+        ]
+      },
+      "purpose": "Multiple stress drivers in a region with high automation exposure.",
+      "reemployment_result": {
+        "full_income_recovery_amount": 42000.0,
+        "household_id": "hh_high_automation_region",
+        "interim_income_recovery_amount": 14000.0,
+        "months_without_full_income": 24,
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "path_id": "reemployment_high_automation_region",
+        "reemployment_risk_band": "critical",
+        "warnings": [
+          "Re-employment timing is a synthetic placeholder and not a labour-market forecast.",
+          "No ABS, HILDA, DSS, Services Australia, Treasury, PBO, or employer records are used."
+        ]
+      },
+      "regional_stress_result": {
+        "drivers": [
+          "high automation exposure",
+          "limited labour-market depth",
+          "limited retraining access",
+          "high housing cost pressure",
+          "limited transport access"
+        ],
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "region_id": "high_automation_regional_cluster_placeholder",
+        "regional_stress_band": "critical",
+        "regional_stress_score": 0.8075000000000001,
+        "warnings": [
+          "Regional stress score is placeholder-only and not real regional modelling.",
+          "No ABS, Census, DSS, Services Australia, Treasury, PBO, labour-market, or geographic data is used."
+        ]
+      },
+      "scenario_id": "high_automation_region_cluster",
+      "scenario_result": {
+        "budget_stress_band": "critical",
+        "cliff_severity_band": "high",
+        "household_id": "hh_high_automation_region",
+        "household_shock_band": "critical",
+        "household_type": "displaced_worker_high_exposure_region",
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "payment_interaction_combined_gap": null,
+        "payment_interaction_residual_support_gap": null,
+        "payment_interaction_risk_band": null,
+        "payment_interaction_used": false,
+        "primary_risk_drivers": [
+          "budget stress: critical",
+          "re-employment risk: critical",
+          "regional stress: critical",
+          "payment cliff: high",
+          "residual household gap after support"
+        ],
+        "reemployment_risk_band": "critical",
+        "regional_stress_band": "critical",
+        "residual_household_gap_after_support": 20000.0,
+        "scenario_id": "high_automation_region_cluster",
+        "transition_support_amount": 15000.0,
+        "warnings": [
+          "Household budget result is synthetic and placeholder-only.",
+          "No real household, income, welfare, ABS, DSS, Services Australia, ATO, Treasury, PBO, or survey data is used.",
+          "Re-employment timing is a synthetic placeholder and not a labour-market forecast.",
+          "No ABS, HILDA, DSS, Services Australia, Treasury, PBO, or employer records are used.",
+          "Regional stress score is placeholder-only and not real regional modelling.",
+          "No ABS, Census, DSS, Services Australia, Treasury, PBO, labour-market, or geographic data is used.",
+          "Payment cliff result is a prototype warning only and not eligibility law.",
+          "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used.",
+          "Distributional scenario is synthetic-only and does not use or represent real households.",
+          "Payment interaction outputs do not modify firm-level CARSF liability.",
+          "Firm-level CARSF liability is not modified by distributional scenario outputs."
+        ]
+      },
+      "status": "prototype_only"
+    },
+    {
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\distributional_scenarios\\older_worker_low_reemployment.yaml",
+      "household": {
+        "adults": 1,
+        "children": 0,
+        "debt_pressure_placeholder": 5000,
+        "essential_cost_placeholder": 22000,
+        "existing_support_baseline": 10000,
+        "household_id": "hh_older_worker_low_reemployment",
+        "household_type": "older_worker_single_adult",
+        "housing_cost_placeholder": 24000,
+        "illustrative_placeholder_only": true,
+        "income_band": "middle_placeholder",
+        "post_displacement_income": 15000,
+        "pre_displacement_income": 80000,
+        "region_type": "mature_industrial_region_placeholder",
+        "savings_buffer_placeholder": 2000,
+        "synthetic_household_only": true
+      },
+      "household_budget_result": {
+        "budget_stress_band": "critical",
+        "disposable_after_basic_costs": -26000.0,
+        "existing_support_baseline": 10000.0,
+        "household_id": "hh_older_worker_low_reemployment",
+        "household_type": "older_worker_single_adult",
+        "immediate_budget_gap": 26000.0,
+        "income_loss": 65000.0,
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "post_displacement_income": 15000.0,
+        "pre_displacement_income": 80000.0,
+        "savings_buffer_placeholder": 2000.0,
+        "total_basic_costs": 51000.0,
+        "warnings": [
+          "Household budget result is synthetic and placeholder-only.",
+          "No real household, income, welfare, ABS, DSS, Services Australia, ATO, Treasury, PBO, or survey data is used."
+        ]
+      },
+      "interpretation": "Low re-employment recovery creates a high residual shock even where immediate support offsets some annual budget gap.",
+      "name": "Older Worker Low Re-Employment",
+      "payment_cliff_result": {
+        "cliff_detected": true,
+        "cliff_id": "older_worker_support_cliff",
+        "cliff_severity_band": "high",
+        "household_id": "hh_older_worker_low_reemployment",
+        "income_gain": 2000.0,
+        "net_position_change": -4000.0,
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "support_loss": 6000.0,
+        "warnings": [
+          "Payment cliff result is a prototype warning only and not eligibility law.",
+          "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used."
+        ]
+      },
+      "purpose": "Older worker with long re-employment timing and low recovery.",
+      "reemployment_result": {
+        "full_income_recovery_amount": 19500.0,
+        "household_id": "hh_older_worker_low_reemployment",
+        "interim_income_recovery_amount": 6500.0,
+        "months_without_full_income": null,
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "path_id": "reemployment_older_worker_low",
+        "reemployment_risk_band": "critical",
+        "warnings": [
+          "Re-employment timing is a synthetic placeholder and not a labour-market forecast.",
+          "No ABS, HILDA, DSS, Services Australia, Treasury, PBO, or employer records are used."
+        ]
+      },
+      "regional_stress_result": {
+        "drivers": [
+          "high automation exposure",
+          "limited labour-market depth",
+          "limited retraining access"
+        ],
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "region_id": "mature_industrial_region_placeholder",
+        "regional_stress_band": "high",
+        "regional_stress_score": 0.6,
+        "warnings": [
+          "Regional stress score is placeholder-only and not real regional modelling.",
+          "No ABS, Census, DSS, Services Australia, Treasury, PBO, labour-market, or geographic data is used."
+        ]
+      },
+      "scenario_id": "older_worker_low_reemployment",
+      "scenario_result": {
+        "budget_stress_band": "critical",
+        "cliff_severity_band": "high",
+        "household_id": "hh_older_worker_low_reemployment",
+        "household_shock_band": "critical",
+        "household_type": "older_worker_single_adult",
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "payment_interaction_combined_gap": null,
+        "payment_interaction_residual_support_gap": null,
+        "payment_interaction_risk_band": null,
+        "payment_interaction_used": false,
+        "primary_risk_drivers": [
+          "budget stress: critical",
+          "re-employment risk: critical",
+          "regional stress: high",
+          "payment cliff: high",
+          "residual household gap after support"
+        ],
+        "reemployment_risk_band": "critical",
+        "regional_stress_band": "high",
+        "residual_household_gap_after_support": 14000.0,
+        "scenario_id": "older_worker_low_reemployment",
+        "transition_support_amount": 12000.0,
+        "warnings": [
+          "Household budget result is synthetic and placeholder-only.",
+          "No real household, income, welfare, ABS, DSS, Services Australia, ATO, Treasury, PBO, or survey data is used.",
+          "Re-employment timing is a synthetic placeholder and not a labour-market forecast.",
+          "No ABS, HILDA, DSS, Services Australia, Treasury, PBO, or employer records are used.",
+          "Regional stress score is placeholder-only and not real regional modelling.",
+          "No ABS, Census, DSS, Services Australia, Treasury, PBO, labour-market, or geographic data is used.",
+          "Payment cliff result is a prototype warning only and not eligibility law.",
+          "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used.",
+          "Distributional scenario is synthetic-only and does not use or represent real households.",
+          "Payment interaction outputs do not modify firm-level CARSF liability.",
+          "Firm-level CARSF liability is not modified by distributional scenario outputs."
+        ]
+      },
+      "status": "prototype_only"
+    },
+    {
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\distributional_scenarios\\single_adult_displaced_worker_high_rent.yaml",
+      "household": {
+        "adults": 1,
+        "children": 0,
+        "debt_pressure_placeholder": 3000,
+        "essential_cost_placeholder": 22000,
+        "existing_support_baseline": 12000,
+        "household_id": "hh_single_high_rent",
+        "household_type": "single_adult_displaced_worker",
+        "housing_cost_placeholder": 30000,
+        "illustrative_placeholder_only": true,
+        "income_band": "lower_middle_placeholder",
+        "placeholder_basis": [
+          "synthetic high-rent household placeholder"
+        ],
+        "post_displacement_income": 10000,
+        "pre_displacement_income": 65000,
+        "region_type": "high_rent_metro_placeholder",
+        "savings_buffer_placeholder": 1000,
+        "synthetic_household_only": true
+      },
+      "household_budget_result": {
+        "budget_stress_band": "critical",
+        "disposable_after_basic_costs": -33000.0,
+        "existing_support_baseline": 12000.0,
+        "household_id": "hh_single_high_rent",
+        "household_type": "single_adult_displaced_worker",
+        "immediate_budget_gap": 33000.0,
+        "income_loss": 55000.0,
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "post_displacement_income": 10000.0,
+        "pre_displacement_income": 65000.0,
+        "savings_buffer_placeholder": 1000.0,
+        "total_basic_costs": 55000.0,
+        "warnings": [
+          "Household budget result is synthetic and placeholder-only.",
+          "No real household, income, welfare, ABS, DSS, Services Australia, ATO, Treasury, PBO, or survey data is used."
+        ]
+      },
+      "interpretation": "High rent and low savings create acute budget stress even with placeholder transition support. Re-employment delay remains the main risk driver.",
+      "name": "Single Adult Displaced Worker High Rent",
+      "payment_cliff_result": {
+        "cliff_detected": false,
+        "cliff_id": "rent_case_no_cliff",
+        "cliff_severity_band": "none",
+        "household_id": "hh_single_high_rent",
+        "income_gain": 8000.0,
+        "net_position_change": 2000.0,
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "support_loss": 6000.0,
+        "warnings": [
+          "Payment cliff result is a prototype warning only and not eligibility law.",
+          "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used."
+        ]
+      },
+      "purpose": "Single adult, high housing costs, limited savings.",
+      "reemployment_result": {
+        "full_income_recovery_amount": 38500.0,
+        "household_id": "hh_single_high_rent",
+        "interim_income_recovery_amount": 11000.0,
+        "months_without_full_income": 14,
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "path_id": "reemployment_single_high_rent",
+        "reemployment_risk_band": "high",
+        "warnings": [
+          "Re-employment timing is a synthetic placeholder and not a labour-market forecast.",
+          "No ABS, HILDA, DSS, Services Australia, Treasury, PBO, or employer records are used."
+        ]
+      },
+      "regional_stress_result": {
+        "drivers": [
+          "high housing cost pressure"
+        ],
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "region_id": "high_rent_metro_placeholder",
+        "regional_stress_band": "high",
+        "regional_stress_score": 0.5325000000000001,
+        "warnings": [
+          "Regional stress score is placeholder-only and not real regional modelling.",
+          "No ABS, Census, DSS, Services Australia, Treasury, PBO, labour-market, or geographic data is used."
+        ]
+      },
+      "scenario_id": "single_adult_displaced_worker_high_rent",
+      "scenario_result": {
+        "budget_stress_band": "critical",
+        "cliff_severity_band": "none",
+        "household_id": "hh_single_high_rent",
+        "household_shock_band": "critical",
+        "household_type": "single_adult_displaced_worker",
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "payment_interaction_combined_gap": null,
+        "payment_interaction_residual_support_gap": null,
+        "payment_interaction_risk_band": null,
+        "payment_interaction_used": false,
+        "primary_risk_drivers": [
+          "budget stress: critical",
+          "re-employment risk: high",
+          "regional stress: high",
+          "residual household gap after support"
+        ],
+        "reemployment_risk_band": "high",
+        "regional_stress_band": "high",
+        "residual_household_gap_after_support": 13000.0,
+        "scenario_id": "single_adult_displaced_worker_high_rent",
+        "transition_support_amount": 20000.0,
+        "warnings": [
+          "Household budget result is synthetic and placeholder-only.",
+          "No real household, income, welfare, ABS, DSS, Services Australia, ATO, Treasury, PBO, or survey data is used.",
+          "Re-employment timing is a synthetic placeholder and not a labour-market forecast.",
+          "No ABS, HILDA, DSS, Services Australia, Treasury, PBO, or employer records are used.",
+          "Regional stress score is placeholder-only and not real regional modelling.",
+          "No ABS, Census, DSS, Services Australia, Treasury, PBO, labour-market, or geographic data is used.",
+          "Payment cliff result is a prototype warning only and not eligibility law.",
+          "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used.",
+          "Distributional scenario is synthetic-only and does not use or represent real households.",
+          "Payment interaction outputs do not modify firm-level CARSF liability.",
+          "Firm-level CARSF liability is not modified by distributional scenario outputs."
+        ]
+      },
+      "status": "prototype_only"
+    },
+    {
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\distributional_scenarios\\single_parent_retraining_gap.yaml",
+      "household": {
+        "adults": 1,
+        "children": 2,
+        "debt_pressure_placeholder": 4000,
+        "essential_cost_placeholder": 30000,
+        "existing_support_baseline": 18000,
+        "household_id": "hh_single_parent_retraining",
+        "household_type": "single_parent_retraining_delay",
+        "housing_cost_placeholder": 28000,
+        "illustrative_placeholder_only": true,
+        "income_band": "lower_middle_placeholder",
+        "post_displacement_income": 12000,
+        "pre_displacement_income": 70000,
+        "region_type": "outer_suburban_placeholder",
+        "savings_buffer_placeholder": 500,
+        "synthetic_household_only": true
+      },
+      "household_budget_result": {
+        "budget_stress_band": "critical",
+        "disposable_after_basic_costs": -32000.0,
+        "existing_support_baseline": 18000.0,
+        "household_id": "hh_single_parent_retraining",
+        "household_type": "single_parent_retraining_delay",
+        "immediate_budget_gap": 32000.0,
+        "income_loss": 58000.0,
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "post_displacement_income": 12000.0,
+        "pre_displacement_income": 70000.0,
+        "savings_buffer_placeholder": 500.0,
+        "total_basic_costs": 62000.0,
+        "warnings": [
+          "Household budget result is synthetic and placeholder-only.",
+          "No real household, income, welfare, ABS, DSS, Services Australia, ATO, Treasury, PBO, or survey data is used."
+        ]
+      },
+      "interpretation": "Children, low savings, retraining delay, and a support cliff leave a residual gap after support under these placeholders.",
+      "name": "Single Parent Retraining Gap",
+      "payment_cliff_result": {
+        "cliff_detected": true,
+        "cliff_id": "retraining_gap_cliff",
+        "cliff_severity_band": "high",
+        "household_id": "hh_single_parent_retraining",
+        "income_gain": 5000.0,
+        "net_position_change": -5000.0,
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "support_loss": 10000.0,
+        "warnings": [
+          "Payment cliff result is a prototype warning only and not eligibility law.",
+          "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used."
+        ]
+      },
+      "purpose": "Single parent with retraining delay and childcare/basic cost pressure.",
+      "reemployment_result": {
+        "full_income_recovery_amount": 43500.0,
+        "household_id": "hh_single_parent_retraining",
+        "interim_income_recovery_amount": 14500.0,
+        "months_without_full_income": 18,
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "path_id": "reemployment_single_parent_retraining",
+        "reemployment_risk_band": "high",
+        "warnings": [
+          "Re-employment timing is a synthetic placeholder and not a labour-market forecast.",
+          "No ABS, HILDA, DSS, Services Australia, Treasury, PBO, or employer records are used."
+        ]
+      },
+      "regional_stress_result": {
+        "drivers": [
+          "high housing cost pressure"
+        ],
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "region_id": "outer_suburban_placeholder",
+        "regional_stress_band": "high",
+        "regional_stress_score": 0.5775,
+        "warnings": [
+          "Regional stress score is placeholder-only and not real regional modelling.",
+          "No ABS, Census, DSS, Services Australia, Treasury, PBO, labour-market, or geographic data is used."
+        ]
+      },
+      "scenario_id": "single_parent_retraining_gap",
+      "scenario_result": {
+        "budget_stress_band": "critical",
+        "cliff_severity_band": "high",
+        "household_id": "hh_single_parent_retraining",
+        "household_shock_band": "critical",
+        "household_type": "single_parent_retraining_delay",
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "payment_interaction_combined_gap": null,
+        "payment_interaction_residual_support_gap": null,
+        "payment_interaction_risk_band": null,
+        "payment_interaction_used": false,
+        "primary_risk_drivers": [
+          "budget stress: critical",
+          "re-employment risk: high",
+          "regional stress: high",
+          "payment cliff: high",
+          "residual household gap after support"
+        ],
+        "reemployment_risk_band": "high",
+        "regional_stress_band": "high",
+        "residual_household_gap_after_support": 14000.0,
+        "scenario_id": "single_parent_retraining_gap",
+        "transition_support_amount": 18000.0,
+        "warnings": [
+          "Household budget result is synthetic and placeholder-only.",
+          "No real household, income, welfare, ABS, DSS, Services Australia, ATO, Treasury, PBO, or survey data is used.",
+          "Re-employment timing is a synthetic placeholder and not a labour-market forecast.",
+          "No ABS, HILDA, DSS, Services Australia, Treasury, PBO, or employer records are used.",
+          "Regional stress score is placeholder-only and not real regional modelling.",
+          "No ABS, Census, DSS, Services Australia, Treasury, PBO, labour-market, or geographic data is used.",
+          "Payment cliff result is a prototype warning only and not eligibility law.",
+          "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used.",
+          "Distributional scenario is synthetic-only and does not use or represent real households.",
+          "Payment interaction outputs do not modify firm-level CARSF liability.",
+          "Firm-level CARSF liability is not modified by distributional scenario outputs."
+        ]
+      },
+      "status": "prototype_only"
+    },
+    {
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\distributional_scenarios\\ubi_lite_payment_cliff_case.yaml",
+      "household": {
+        "adults": 1,
+        "children": 0,
+        "debt_pressure_placeholder": 2000,
+        "essential_cost_placeholder": 23000,
+        "existing_support_baseline": 8000,
+        "household_id": "hh_ubi_lite_cliff",
+        "household_type": "single_adult_phase_out_review",
+        "housing_cost_placeholder": 22000,
+        "illustrative_placeholder_only": true,
+        "income_band": "lower_middle_placeholder",
+        "post_displacement_income": 30000,
+        "pre_displacement_income": 60000,
+        "region_type": "mixed_metro_placeholder",
+        "savings_buffer_placeholder": 3000,
+        "synthetic_household_only": true
+      },
+      "household_budget_result": {
+        "budget_stress_band": "critical",
+        "disposable_after_basic_costs": -9000.0,
+        "existing_support_baseline": 8000.0,
+        "household_id": "hh_ubi_lite_cliff",
+        "household_type": "single_adult_phase_out_review",
+        "immediate_budget_gap": 9000.0,
+        "income_loss": 30000.0,
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "post_displacement_income": 30000.0,
+        "pre_displacement_income": 60000.0,
+        "savings_buffer_placeholder": 3000.0,
+        "total_basic_costs": 47000.0,
+        "warnings": [
+          "Household budget result is synthetic and placeholder-only.",
+          "No real household, income, welfare, ABS, DSS, Services Australia, ATO, Treasury, PBO, or survey data is used."
+        ]
+      },
+      "interpretation": "This synthetic case shows how a support phase-out can leave a household worse off even as income recovers under placeholder settings.",
+      "name": "UBI-Lite Payment Cliff Case",
+      "payment_cliff_result": {
+        "cliff_detected": true,
+        "cliff_id": "ubi_lite_phase_out_cliff",
+        "cliff_severity_band": "high",
+        "household_id": "hh_ubi_lite_cliff",
+        "income_gain": 4000.0,
+        "net_position_change": -4000.0,
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "support_loss": 8000.0,
+        "warnings": [
+          "Payment cliff result is a prototype warning only and not eligibility law.",
+          "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used."
+        ]
+      },
+      "purpose": "Shows support cliff or phase-out interaction.",
+      "reemployment_result": {
+        "full_income_recovery_amount": 27000.0,
+        "household_id": "hh_ubi_lite_cliff",
+        "interim_income_recovery_amount": 15000.0,
+        "months_without_full_income": 6,
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "path_id": "reemployment_ubi_lite_cliff",
+        "reemployment_risk_band": "medium",
+        "warnings": [
+          "Re-employment timing is a synthetic placeholder and not a labour-market forecast.",
+          "No ABS, HILDA, DSS, Services Australia, Treasury, PBO, or employer records are used."
+        ]
+      },
+      "regional_stress_result": {
+        "drivers": [],
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "region_id": "mixed_metro_placeholder",
+        "regional_stress_band": "medium",
+        "regional_stress_score": 0.4425,
+        "warnings": [
+          "Regional stress score is placeholder-only and not real regional modelling.",
+          "No ABS, Census, DSS, Services Australia, Treasury, PBO, labour-market, or geographic data is used."
+        ]
+      },
+      "scenario_id": "ubi_lite_payment_cliff_case",
+      "scenario_result": {
+        "budget_stress_band": "critical",
+        "cliff_severity_band": "high",
+        "household_id": "hh_ubi_lite_cliff",
+        "household_shock_band": "critical",
+        "household_type": "single_adult_phase_out_review",
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "payment_interaction_combined_gap": null,
+        "payment_interaction_residual_support_gap": null,
+        "payment_interaction_risk_band": null,
+        "payment_interaction_used": false,
+        "primary_risk_drivers": [
+          "budget stress: critical",
+          "payment cliff: high",
+          "residual household gap after support"
+        ],
+        "reemployment_risk_band": "medium",
+        "regional_stress_band": "medium",
+        "residual_household_gap_after_support": 2000.0,
+        "scenario_id": "ubi_lite_payment_cliff_case",
+        "transition_support_amount": 7000.0,
+        "warnings": [
+          "Household budget result is synthetic and placeholder-only.",
+          "No real household, income, welfare, ABS, DSS, Services Australia, ATO, Treasury, PBO, or survey data is used.",
+          "Re-employment timing is a synthetic placeholder and not a labour-market forecast.",
+          "No ABS, HILDA, DSS, Services Australia, Treasury, PBO, or employer records are used.",
+          "Regional stress score is placeholder-only and not real regional modelling.",
+          "No ABS, Census, DSS, Services Australia, Treasury, PBO, labour-market, or geographic data is used.",
+          "Payment cliff result is a prototype warning only and not eligibility law.",
+          "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used.",
+          "Distributional scenario is synthetic-only and does not use or represent real households.",
+          "Payment interaction outputs do not modify firm-level CARSF liability.",
+          "Firm-level CARSF liability is not modified by distributional scenario outputs."
+        ]
+      },
+      "status": "prototype_only"
+    },
+    {
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\distributional_scenarios\\young_worker_retraining_rebound.yaml",
+      "household": {
+        "adults": 1,
+        "children": 0,
+        "debt_pressure_placeholder": 1000,
+        "essential_cost_placeholder": 16000,
+        "existing_support_baseline": 6000,
+        "household_id": "hh_young_worker_rebound",
+        "household_type": "young_single_worker_retraining",
+        "housing_cost_placeholder": 18000,
+        "illustrative_placeholder_only": true,
+        "income_band": "lower_middle_placeholder",
+        "post_displacement_income": 20000,
+        "pre_displacement_income": 55000,
+        "region_type": "diversified_metro_placeholder",
+        "savings_buffer_placeholder": 8000,
+        "synthetic_household_only": true
+      },
+      "household_budget_result": {
+        "budget_stress_band": "high",
+        "disposable_after_basic_costs": -9000.0,
+        "existing_support_baseline": 6000.0,
+        "household_id": "hh_young_worker_rebound",
+        "household_type": "young_single_worker_retraining",
+        "immediate_budget_gap": 9000.0,
+        "income_loss": 35000.0,
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "post_displacement_income": 20000.0,
+        "pre_displacement_income": 55000.0,
+        "savings_buffer_placeholder": 8000.0,
+        "total_basic_costs": 35000.0,
+        "warnings": [
+          "Household budget result is synthetic and placeholder-only.",
+          "No real household, income, welfare, ABS, DSS, Services Australia, ATO, Treasury, PBO, or survey data is used."
+        ]
+      },
+      "interpretation": "Faster retraining and deeper labour-market access reduce residual shock under these placeholder settings.",
+      "name": "Young Worker Retraining Rebound",
+      "payment_cliff_result": {
+        "cliff_detected": false,
+        "cliff_id": "young_worker_no_cliff",
+        "cliff_severity_band": "none",
+        "household_id": "hh_young_worker_rebound",
+        "income_gain": 8000.0,
+        "net_position_change": 5000.0,
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "support_loss": 3000.0,
+        "warnings": [
+          "Payment cliff result is a prototype warning only and not eligibility law.",
+          "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used."
+        ]
+      },
+      "purpose": "Young worker with faster retraining and lower long-term stress.",
+      "reemployment_result": {
+        "full_income_recovery_amount": 35000.0,
+        "household_id": "hh_young_worker_rebound",
+        "interim_income_recovery_amount": 17500.0,
+        "months_without_full_income": 3,
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "path_id": "reemployment_young_rebound",
+        "reemployment_risk_band": "low",
+        "warnings": [
+          "Re-employment timing is a synthetic placeholder and not a labour-market forecast.",
+          "No ABS, HILDA, DSS, Services Australia, Treasury, PBO, or employer records are used."
+        ]
+      },
+      "regional_stress_result": {
+        "drivers": [],
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "region_id": "diversified_metro_placeholder",
+        "regional_stress_band": "medium",
+        "regional_stress_score": 0.3025,
+        "warnings": [
+          "Regional stress score is placeholder-only and not real regional modelling.",
+          "No ABS, Census, DSS, Services Australia, Treasury, PBO, labour-market, or geographic data is used."
+        ]
+      },
+      "scenario_id": "young_worker_retraining_rebound",
+      "scenario_result": {
+        "budget_stress_band": "high",
+        "cliff_severity_band": "none",
+        "household_id": "hh_young_worker_rebound",
+        "household_shock_band": "medium",
+        "household_type": "young_single_worker_retraining",
+        "non_claims": [
+          "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+          "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+          "Distributional scenario outputs do not modify firm-level CARSF liability."
+        ],
+        "payment_interaction_combined_gap": null,
+        "payment_interaction_residual_support_gap": null,
+        "payment_interaction_risk_band": null,
+        "payment_interaction_used": false,
+        "primary_risk_drivers": [
+          "budget stress: high"
+        ],
+        "reemployment_risk_band": "low",
+        "regional_stress_band": "medium",
+        "residual_household_gap_after_support": 0.0,
+        "scenario_id": "young_worker_retraining_rebound",
+        "transition_support_amount": 9000.0,
+        "warnings": [
+          "Household budget result is synthetic and placeholder-only.",
+          "No real household, income, welfare, ABS, DSS, Services Australia, ATO, Treasury, PBO, or survey data is used.",
+          "Re-employment timing is a synthetic placeholder and not a labour-market forecast.",
+          "No ABS, HILDA, DSS, Services Australia, Treasury, PBO, or employer records are used.",
+          "Regional stress score is placeholder-only and not real regional modelling.",
+          "No ABS, Census, DSS, Services Australia, Treasury, PBO, labour-market, or geographic data is used.",
+          "Payment cliff result is a prototype warning only and not eligibility law.",
+          "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used.",
+          "Distributional scenario is synthetic-only and does not use or represent real households.",
+          "Payment interaction outputs do not modify firm-level CARSF liability.",
+          "Firm-level CARSF liability is not modified by distributional scenario outputs."
+        ]
+      },
+      "status": "prototype_only"
+    }
+  ],
+  "metadata": {
+    "generated_at": "2026-05-14T01:03:53+00:00",
+    "non_claims": [
+      "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+      "All household, regional, re-employment, payment cliff, and support values are illustrative placeholders.",
+      "Synthetic distributional scenario outputs do not modify firm-level CARSF liability."
+    ],
+    "status": "synthetic_household_distributional_outputs_only",
+    "version": "CARSF V1.5 prototype"
+  },
+  "summary": {
+    "average_residual_gap_placeholder": 9000.0,
+    "critical_shock_count": 5,
+    "high_shock_count": 1,
+    "highest_risk_households": [
+      "hh_high_automation_region",
+      "hh_older_worker_low_reemployment",
+      "hh_single_parent_retraining"
+    ],
+    "low_shock_count": 0,
+    "medium_shock_count": 1,
+    "non_claims": [
+      "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+      "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+      "Distributional scenario outputs do not modify firm-level CARSF liability."
+    ],
+    "primary_systemic_risks": [
+      "budget stress: critical",
+      "residual household gap after support",
+      "payment cliff: high",
+      "regional stress: high",
+      "re-employment risk: critical"
+    ],
+    "scenario_count": 7,
+    "warnings": [
+      "Distributional summary is deterministic but not population-representative.",
+      "Synthetic household scenarios are not calibrated household modelling."
+    ]
+  }
+}

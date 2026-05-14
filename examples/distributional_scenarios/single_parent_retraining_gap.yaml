@@ -1,0 +1,57 @@
+scenario_id: single_parent_retraining_gap
+name: Single Parent Retraining Gap
+purpose: Single parent with retraining delay and childcare/basic cost pressure.
+status: prototype_only
+illustrative_placeholder_only: true
+synthetic_household_only: true
+not_calibrated: true
+no_policy_claim: true
+no_welfare_advice: true
+no_real_household_data: true
+placeholder_notice: All values are synthetic illustrative placeholders only and are not real household, welfare, ABS, DSS, Services Australia, Treasury, PBO, ATO, HILDA, Census, or survey data.
+household:
+  household_id: hh_single_parent_retraining
+  household_type: single_parent_retraining_delay
+  adults: 1
+  children: 2
+  region_type: outer_suburban_placeholder
+  income_band: lower_middle_placeholder
+  pre_displacement_income: 70000
+  post_displacement_income: 12000
+  existing_support_baseline: 18000
+  housing_cost_placeholder: 28000
+  essential_cost_placeholder: 30000
+  debt_pressure_placeholder: 4000
+  savings_buffer_placeholder: 500
+  illustrative_placeholder_only: true
+  synthetic_household_only: true
+reemployment_path:
+  path_id: reemployment_single_parent_retraining
+  household_id: hh_single_parent_retraining
+  displacement_year: 2028
+  expected_reemployment_months: 18
+  retraining_months: 12
+  partial_income_recovery_rate: 0.25
+  full_income_recovery_rate: 0.75
+  probability_band_placeholder: medium
+  illustrative_placeholder_only: true
+regional_stress:
+  region_id: outer_suburban_placeholder
+  region_type: outer_suburban_childcare_transport_pressure
+  automation_exposure_placeholder: 0.50
+  labour_market_depth_placeholder: 0.45
+  retraining_access_placeholder: 0.45
+  housing_cost_pressure_placeholder: 0.75
+  transport_access_placeholder: 0.45
+  illustrative_placeholder_only: true
+payment_cliff:
+  cliff_id: retraining_gap_cliff
+  household_id: hh_single_parent_retraining
+  support_before_change: 18000
+  support_after_change: 8000
+  income_before_change: 12000
+  income_after_change: 17000
+  trigger_type: retraining_participation_or_income_test_placeholder
+  trigger_description: Placeholder support reduction exceeds early retraining income gain.
+transition_support_amount: 18000
+interpretation: Children, low savings, retraining delay, and a support cliff leave a residual gap after support under these placeholders.
