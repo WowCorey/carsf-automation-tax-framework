@@ -58,4 +58,7 @@
 - Deterministic low/base/high uncertainty ranges may be mistaken for confidence intervals, forecasts, Monte Carlo outputs, or calibrated sensitivity analysis.
 - Stable high-risk uncertainty signals may still be wrong without external household, labour-market, welfare, regional, and weighting calibration.
 - Fragile uncertainty outputs may be over-interpreted if point estimates remain visible beside range results.
+- Reviewed scenario categories may create false comfort if readers treat display-control labels as validation rather than presentation discipline.
+- Prototype discussion signals still require external calibration and methods review; they are not population estimates or real household modelling.
+- Hidden, suppressed, missing-range, and non-interpretable outputs may be ignored too aggressively unless reviewers inspect the blocker reasons.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.

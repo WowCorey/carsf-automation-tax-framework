@@ -99,6 +99,13 @@ from .repo_guardrails import (
 )
 from .retention import AccessControlPolicy, RetentionPolicy, get_access_control_policy, get_retention_policy
 from .review_workflow import ReviewTransition, ReviewWorkflowResult, evaluate_review_transition
+from .scenario_review import (
+    ReviewedScenarioInput,
+    ReviewedScenarioResult,
+    ReviewedScenarioSummary,
+    review_scenario,
+    summarise_reviewed_scenarios,
+)
 from .safe_harbour import SafeHarbourResult, evaluate_safe_harbour
 from .secure_ingestion import (
     IngestionDecision,
@@ -243,6 +250,9 @@ __all__ = [
     "RepoScanResult",
     "ReviewTransition",
     "ReviewWorkflowResult",
+    "ReviewedScenarioInput",
+    "ReviewedScenarioResult",
+    "ReviewedScenarioSummary",
     "RetentionPolicy",
     "SafeHarbourResult",
     "SensitiveScanResult",
@@ -319,6 +329,7 @@ __all__ = [
     "evaluate_reemployment_path",
     "evaluate_regional_stress",
     "evaluate_review_transition",
+    "review_scenario",
     "evaluate_safe_harbour",
     "evaluate_tax_incidence",
     "evaluate_target_population",
@@ -364,6 +375,7 @@ __all__ = [
     "summarise_decision_log",
     "summarise_distributional_scenarios",
     "summarise_evidence_packet",
+    "summarise_reviewed_scenarios",
     "summarise_uncertainty_results",
     "sweep_aava",
     "sweep_liability_cap",

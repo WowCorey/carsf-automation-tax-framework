@@ -553,3 +553,31 @@ Limitations:
 - Uncertainty ranges are deterministic placeholders only.
 - They are not Monte Carlo, statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.
 - The uncertainty range layer does not modify firm-level CARSF liability.
+
+## V1.5 Reviewed Scenario Comparison Layer
+
+Branch: `v1.5-reviewed-scenario-comparison-layer`
+
+Baseline: PR #16 merged into `main`, including deterministic uncertainty range mechanics for synthetic household and weighted subgroup outputs.
+
+Purpose of this build:
+
+- Add a reviewed scenario display-control layer.
+- Classify household uncertainty outputs into discussion, strong-warning, hidden, non-interpretable, and external-review-only categories.
+- Classify weighted subgroup uncertainty outputs while preserving non-representativeness warnings.
+- Add reviewed scenario reports, tests, CI step, documentation, and Streamlit page.
+
+Tests run:
+
+- Pending for this branch.
+
+Reports generated:
+
+- `reports/reviewed_scenarios.json`
+- `reports/reviewed_scenarios.md`
+
+Limitations:
+
+- Reviewed scenario outputs are prototype display-control signals only.
+- They are not statistical validation, population estimates, real household modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, ATO analysis, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.
+- The reviewed scenario layer does not modify firm-level CARSF liability.

@@ -71,5 +71,8 @@ jobs:
       - name: Run uncertainty ranges
         run: python scripts/run_uncertainty_ranges.py
 
+      - name: Run reviewed scenarios
+        run: python scripts/run_reviewed_scenarios.py
+
       - name: Run repository guardrails
         run: python scripts/run_repo_guardrails.py
