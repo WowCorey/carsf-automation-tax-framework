@@ -510,3 +510,46 @@ Limitations:
 - Household weighting outputs are synthetic placeholders only.
 - They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.
 - The household weighting layer does not modify firm-level CARSF liability.
+
+## V1.5 Uncertainty Range Mechanics
+
+Branch: `v1.5-uncertainty-range-mechanics`
+
+Baseline: PR #15 merged into `main`, including household weighting and subgroup aggregation, calibration readiness, and real-data exclusion guardrails.
+
+Purpose of this build:
+
+- Add deterministic low/base/high uncertainty range validation.
+- Add household uncertainty wrappers for synthetic distributional scenario outputs.
+- Add weighted subgroup uncertainty wrappers.
+- Add uncertainty summary counts for stable, sensitive, and fragile outputs.
+- Add uncertainty examples, reports, tests, CI step, documentation, and Streamlit page.
+
+Tests run:
+
+- `python -m pytest` - 508 passed, 1 pytest-asyncio deprecation warning under Python 3.14.
+- `python -m compileall -q model simulator scripts` - passed.
+- Recursive YAML parse check for schedules/examples/data - parsed 67 YAML files.
+- `python scripts/run_examples.py` - regenerated existing example report outputs successfully.
+- `python scripts/run_evidence_workflow.py` - regenerated mock evidence workflow reports successfully.
+- `python scripts/run_ingestion_controls.py` - regenerated secure-ingestion control reports successfully.
+- `python scripts/run_repo_guardrails.py` - passed with zero denied findings and 48 warning findings.
+- `python scripts/run_investment_guardrails.py` - regenerated investment guardrail reports successfully.
+- `python scripts/run_fiscal_trajectory.py` - regenerated fiscal trajectory reports successfully.
+- `python scripts/run_transition_funding.py` - regenerated transition funding reports successfully.
+- `python scripts/run_payment_interactions.py` - regenerated payment interaction reports successfully.
+- `python scripts/run_distributional_scenarios.py` - regenerated distributional scenario reports successfully.
+- `python scripts/run_household_weighting.py` - regenerated household weighting reports successfully.
+- `python scripts/run_uncertainty_ranges.py` - generated uncertainty range reports successfully.
+- Streamlit bare import probe for `simulator/app.py` and `simulator/pages/18_Uncertainty_Ranges.py` - passed.
+
+Reports generated:
+
+- `reports/uncertainty_ranges.json`
+- `reports/uncertainty_ranges.md`
+
+Limitations:
+
+- Uncertainty ranges are deterministic placeholders only.
+- They are not Monte Carlo, statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.
+- The uncertainty range layer does not modify firm-level CARSF liability.

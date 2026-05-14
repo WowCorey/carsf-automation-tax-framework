@@ -1,0 +1,69 @@
+example_id: weighted_subgroup_uncertainty_range
+name: Weighted Subgroup Uncertainty Range
+purpose: Range around weighted subgroup residual gaps and high/critical shock shares.
+status: prototype_only
+uncertainty_type: weighted
+weighting_example_id: placeholder_weights_basic
+illustrative_placeholder_only: true
+synthetic_uncertainty_only: true
+not_calibrated: true
+not_representative: true
+no_real_household_data: true
+no_statistical_confidence_claim: true
+no_distributional_claim: true
+placeholder_notice: All ranges are deterministic synthetic placeholders only and are not real household, ABS, HILDA, Census, DSS, Services Australia, Treasury, PBO, welfare, income, survey, or statistical confidence data.
+subgroup_residual_gap_ranges:
+  all_synthetic_households:
+    range_id: all_synthetic_residual_gap
+    metric_name: weighted_average_residual_gap
+    low: 7000
+    base: 9000
+    high: 12000
+    confidence_placeholder: low_placeholder_confidence_not_statistical
+    calibration_status: not_calibrated
+    uncertainty_drivers:
+      - residual gap weighting placeholder
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - synthetic subgroup residual gap range
+  critical_budget_stress:
+    range_id: critical_budget_residual_gap
+    metric_name: weighted_average_residual_gap
+    low: 9000
+    base: 14000
+    high: 26000
+    confidence_placeholder: low_placeholder_confidence_not_statistical
+    calibration_status: not_calibrated
+    uncertainty_drivers:
+      - critical budget stress placeholder
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - synthetic subgroup residual gap range
+subgroup_high_critical_share_ranges:
+  all_synthetic_households:
+    range_id: all_synthetic_high_critical_share
+    metric_name: weighted_high_or_critical_share
+    low: 0.80
+    base: 1.00
+    high: 1.00
+    confidence_placeholder: low_placeholder_confidence_not_statistical
+    calibration_status: not_calibrated
+    uncertainty_drivers:
+      - shock-band weighting placeholder
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - synthetic subgroup share range
+  critical_budget_stress:
+    range_id: critical_budget_high_critical_share
+    metric_name: weighted_high_or_critical_share
+    low: 0.75
+    base: 1.00
+    high: 1.00
+    confidence_placeholder: low_placeholder_confidence_not_statistical
+    calibration_status: not_calibrated
+    uncertainty_drivers:
+      - critical budget stress placeholder
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - synthetic subgroup share range
+interpretation: Weighted subgroup uncertainty checks whether stress-test subgroup signals remain visible across deterministic placeholder ranges.

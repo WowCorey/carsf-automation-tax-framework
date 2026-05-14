@@ -1,0 +1,70 @@
+example_id: regional_reemployment_delay_range
+name: Regional Re-Employment Delay Range
+purpose: Range around re-employment timing and regional stress.
+status: prototype_only
+uncertainty_type: household
+scenario_id: older_worker_low_reemployment
+illustrative_placeholder_only: true
+synthetic_uncertainty_only: true
+not_calibrated: true
+not_representative: true
+no_real_household_data: true
+no_statistical_confidence_claim: true
+no_distributional_claim: true
+placeholder_notice: All ranges are deterministic synthetic placeholders only and are not real household, ABS, HILDA, Census, DSS, Services Australia, Treasury, PBO, welfare, income, survey, or statistical confidence data.
+ranges:
+  residual_gap:
+    range_id: older_worker_residual_gap
+    metric_name: residual_household_gap_after_support
+    low: 8000
+    base: 14000
+    high: 26000
+    confidence_placeholder: low_placeholder_confidence_not_statistical
+    calibration_status: not_calibrated
+    uncertainty_drivers:
+      - re-employment delay
+      - regional labour-market depth
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - synthetic regional residual gap range
+  transition_support:
+    range_id: older_worker_transition_support
+    metric_name: transition_support_amount
+    low: 12000
+    base: 18000
+    high: 24000
+    confidence_placeholder: low_placeholder_confidence_not_statistical
+    calibration_status: not_calibrated
+    uncertainty_drivers:
+      - support duration placeholder
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - synthetic support range
+  reemployment_months:
+    range_id: older_worker_reemployment_months
+    metric_name: expected_reemployment_months
+    low: 24
+    base: 36
+    high: 48
+    confidence_placeholder: low_placeholder_confidence_not_statistical
+    calibration_status: not_calibrated
+    uncertainty_drivers:
+      - older-worker re-employment delay placeholder
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - synthetic months range
+  regional_stress:
+    range_id: older_worker_regional_stress
+    metric_name: regional_stress_score
+    low: 0.55
+    base: 0.70
+    high: 0.86
+    confidence_placeholder: low_placeholder_confidence_not_statistical
+    calibration_status: not_calibrated
+    uncertainty_drivers:
+      - regional labour-market depth
+      - transport access
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - synthetic regional stress range
+interpretation: The regional older-worker case tests whether risk remains visible when re-employment timing and regional stress are varied.

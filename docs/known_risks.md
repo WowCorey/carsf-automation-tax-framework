@@ -55,4 +55,7 @@
 - Placeholder subgroup weights do not use survey weights, ABS/HILDA/Census microdata, DSS / Services Australia data, ATO data, Treasury modelling, PBO costing, or household survey data.
 - Highest-risk subgroup tables are deterministic stress summaries only and do not prove real subgroup incidence, prevalence, or representativeness.
 - Zero-weight or unmatched subgroup cases may be useful plumbing tests but are not assessable as population outcomes.
+- Deterministic low/base/high uncertainty ranges may be mistaken for confidence intervals, forecasts, Monte Carlo outputs, or calibrated sensitivity analysis.
+- Stable high-risk uncertainty signals may still be wrong without external household, labour-market, welfare, regional, and weighting calibration.
+- Fragile uncertainty outputs may be over-interpreted if point estimates remain visible beside range results.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.

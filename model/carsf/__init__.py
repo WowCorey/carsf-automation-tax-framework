@@ -31,6 +31,11 @@ from .distributional_scenarios import (
     evaluate_distributional_scenario,
 )
 from .distributional_summary import DistributionalSummaryResult, summarise_distributional_scenarios
+from .distributional_uncertainty import (
+    HouseholdUncertaintyInput,
+    HouseholdUncertaintyResult,
+    evaluate_household_uncertainty,
+)
 from .classification import classify_evidence_item, classify_packet
 from .evidence import (
     EvidenceAssessment,
@@ -139,11 +144,18 @@ from .transfer_runner import (
 )
 from .transfer_pressure import TransferPressureInput, TransferPressureResult, evaluate_transfer_pressure
 from .types import AIIWeights, CoverageResult, LevyParameters, LevyResult, QLCWeights, Worker
+from .uncertainty_ranges import UncertaintyRange, UncertaintyRangeResult, evaluate_uncertainty_range
+from .uncertainty_summary import UncertaintySummaryResult, summarise_uncertainty_results
 from .weighted_distributional import (
     WeightedDistributionalInput,
     WeightedDistributionalResult,
     WeightedSubgroupResult,
     run_weighted_distributional_aggregation,
+)
+from .weighted_uncertainty import (
+    WeightedSubgroupUncertaintyInput,
+    WeightedSubgroupUncertaintyResult,
+    evaluate_weighted_uncertainty,
 )
 from .workforce_displacement import (
     WorkforceTrajectoryInput,
@@ -189,6 +201,8 @@ __all__ = [
     "HouseholdBudgetResult",
     "HouseholdCalibrationRequirement",
     "HouseholdCalibrationShellResult",
+    "HouseholdUncertaintyInput",
+    "HouseholdUncertaintyResult",
     "HouseholdWeight",
     "HouseholdWeightResult",
     "IncidenceAssumption",
@@ -256,8 +270,13 @@ __all__ = [
     "TransferPressureInput",
     "TransferPressureResult",
     "UnitCompatibilityResult",
+    "UncertaintyRange",
+    "UncertaintyRangeResult",
+    "UncertaintySummaryResult",
     "WeightedDistributionalInput",
     "WeightedDistributionalResult",
+    "WeightedSubgroupUncertaintyInput",
+    "WeightedSubgroupUncertaintyResult",
     "WeightedSubgroupResult",
     "Worker",
     "WorkforceTrajectoryInput",
@@ -286,6 +305,7 @@ __all__ = [
     "evaluate_group_aggregation",
     "evaluate_grouping_risk",
     "evaluate_household_budget",
+    "evaluate_household_uncertainty",
     "evaluate_household_weight",
     "evaluate_ingestion_request",
     "evaluate_investment_guardrail",
@@ -307,7 +327,9 @@ __all__ = [
     "evaluate_support_incidence",
     "evaluate_transfer_pressure",
     "evaluate_transfer_pricing_preview",
+    "evaluate_uncertainty_range",
     "evaluate_unit_compatibility",
+    "evaluate_weighted_uncertainty",
     "format_coverage_ratio",
     "get_access_control_policy",
     "get_calibration_registry",
@@ -342,6 +364,7 @@ __all__ = [
     "summarise_decision_log",
     "summarise_distributional_scenarios",
     "summarise_evidence_packet",
+    "summarise_uncertainty_results",
     "sweep_aava",
     "sweep_liability_cap",
     "sweep_pass_through",

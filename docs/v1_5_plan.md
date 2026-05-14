@@ -40,6 +40,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Add prototype payment-interaction mechanics for existing transfer baseline separation, targeting, phase-in / phase-out, payment-stack double-counting, support incidence, and residual support gaps without modifying firm-level liability.
 - Add synthetic household distributional scenarios for household composition, income bands, regional stress, re-employment timing, payment cliffs, residual household gaps, and shock-band summaries without using real household data or modifying firm-level liability.
 - Add a synthetic household weighting and subgroup aggregation shell without claiming representativeness or modifying firm-level liability.
+- Add deterministic low/base/high uncertainty range mechanics without claiming Monte Carlo, confidence intervals, forecasts, representativeness, or calibration.
 
 ## Data Separation
 
@@ -68,6 +69,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Payment interaction reports can be generated with `python scripts/run_payment_interactions.py`.
 - Synthetic household distributional scenario reports can be generated with `python scripts/run_distributional_scenarios.py`.
 - Synthetic household weighting reports can be generated with `python scripts/run_household_weighting.py`.
+- Uncertainty range reports can be generated with `python scripts/run_uncertainty_ranges.py`.
 - Hybrid logistics stress variant demonstrates non-zero but intermediate NLTG.
 - V1.5 working paper contains TODO markers where policy drafting remains open.
 - Limitations document clearly blocks actual tax-payable claims.
@@ -87,3 +89,4 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Add deeper welfare-program interaction, household eligibility, phase-out mechanics, and support-incidence calibration only after legal, DSS / Services Australia, Treasury, PBO, and labour-market review.
 - Add calibrated household distributional analysis only after ABS/HILDA/DSS/Services Australia, privacy, legal, Treasury, PBO, and labour-market review.
 - Replace synthetic household weights and subgroup filters only after authorised survey weighting, representativeness, uncertainty, and data-governance review.
+- Replace deterministic placeholder uncertainty ranges only after external statistical methods, calibration, and data-governance review.

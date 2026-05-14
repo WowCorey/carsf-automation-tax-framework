@@ -68,5 +68,8 @@ jobs:
       - name: Run household weighting
         run: python scripts/run_household_weighting.py
 
+      - name: Run uncertainty ranges
+        run: python scripts/run_uncertainty_ranges.py
+
       - name: Run repository guardrails
         run: python scripts/run_repo_guardrails.py

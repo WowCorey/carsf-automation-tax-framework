@@ -1,0 +1,57 @@
+example_id: high_rent_low_savings_range
+name: High Rent Low Savings Range
+purpose: Range around housing/basic costs and residual household gap.
+status: prototype_only
+uncertainty_type: household
+scenario_id: single_adult_displaced_worker_high_rent
+illustrative_placeholder_only: true
+synthetic_uncertainty_only: true
+not_calibrated: true
+not_representative: true
+no_real_household_data: true
+no_statistical_confidence_claim: true
+no_distributional_claim: true
+placeholder_notice: All ranges are deterministic synthetic placeholders only and are not real household, ABS, HILDA, Census, DSS, Services Australia, Treasury, PBO, welfare, income, survey, or statistical confidence data.
+ranges:
+  residual_gap:
+    range_id: single_adult_residual_gap
+    metric_name: residual_household_gap_after_support
+    low: 6000
+    base: 13000
+    high: 24000
+    confidence_placeholder: low_placeholder_confidence_not_statistical
+    calibration_status: not_calibrated
+    uncertainty_drivers:
+      - high rent
+      - low savings buffer
+      - essential cost pressure
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - synthetic high-rent residual gap range
+  transition_support:
+    range_id: single_adult_transition_support
+    metric_name: transition_support_amount
+    low: 10000
+    base: 16000
+    high: 20000
+    confidence_placeholder: low_placeholder_confidence_not_statistical
+    calibration_status: not_calibrated
+    uncertainty_drivers:
+      - support level placeholder
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - synthetic support range
+  payment_cliff_loss:
+    range_id: single_adult_payment_cliff_loss
+    metric_name: support_loss
+    low: 0
+    base: 3000
+    high: 8000
+    confidence_placeholder: low_placeholder_confidence_not_statistical
+    calibration_status: not_calibrated
+    uncertainty_drivers:
+      - support phase-out placeholder
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - synthetic cliff-loss range
+interpretation: The high-rent case checks whether residual hardship remains visible when support and cliff assumptions vary.
