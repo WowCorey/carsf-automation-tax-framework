@@ -1,0 +1,1379 @@
+{
+  "examples": [
+    {
+      "example_id": "fragile_result_requires_calibration",
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\uncertainty_ranges\\fragile_result_requires_calibration.yaml",
+      "interpretation": "This case is intentionally fragile; the signal changes across low/base/high and should not be treated as a point estimate.",
+      "name": "Fragile Result Requires Calibration",
+      "purpose": "Shows an output that changes risk band across low/base/high and should be treated as fragile.",
+      "range_results": [
+        {
+          "absolute_range_width": 22000.0,
+          "base": 4500.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 22000.0,
+          "low": 0.0,
+          "metric_name": "residual_household_gap_after_support",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "ubi_lite_fragile_residual_gap",
+          "relative_range_width": 4.888888888888889,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "payment cliff",
+            "support phase-out",
+            "household cost pressure"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        {
+          "absolute_range_width": 14000.0,
+          "base": 12000.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 20000.0,
+          "low": 6000.0,
+          "metric_name": "transition_support_amount",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "ubi_lite_fragile_support",
+          "relative_range_width": 1.1666666666666667,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "universal-lite support placeholder"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        {
+          "absolute_range_width": 18000.0,
+          "base": 6000.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 18000.0,
+          "low": 0.0,
+          "metric_name": "support_loss",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "ubi_lite_fragile_cliff_loss",
+          "relative_range_width": 3.0,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "phase-out cliff placeholder"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        }
+      ],
+      "status": "prototype_only",
+      "uncertainty_result": {
+        "base_case_shock_band": "high",
+        "high_case_shock_band": "critical",
+        "household_id": "hh_ubi_lite_cliff",
+        "low_case_shock_band": "low",
+        "non_claims": [
+          "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+          "Uncertainty range outputs do not modify firm-level CARSF liability."
+        ],
+        "payment_cliff_loss_range": {
+          "absolute_range_width": 18000.0,
+          "base": 6000.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 18000.0,
+          "low": 0.0,
+          "metric_name": "support_loss",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "ubi_lite_fragile_cliff_loss",
+          "relative_range_width": 3.0,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "phase-out cliff placeholder"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        "primary_uncertainty_drivers": [
+          "household cost pressure",
+          "payment cliff",
+          "phase-out cliff placeholder",
+          "support phase-out",
+          "universal-lite support placeholder"
+        ],
+        "reemployment_months_range": null,
+        "regional_stress_range": null,
+        "residual_gap_range": {
+          "absolute_range_width": 22000.0,
+          "base": 4500.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 22000.0,
+          "low": 0.0,
+          "metric_name": "residual_household_gap_after_support",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "ubi_lite_fragile_residual_gap",
+          "relative_range_width": 4.888888888888889,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "payment cliff",
+            "support phase-out",
+            "household cost pressure"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        "risk_signal_stability": "range_sensitive",
+        "scenario_id": "ubi_lite_payment_cliff_case",
+        "transition_support_range": {
+          "absolute_range_width": 14000.0,
+          "base": 12000.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 20000.0,
+          "low": 6000.0,
+          "metric_name": "transition_support_amount",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "ubi_lite_fragile_support",
+          "relative_range_width": 1.1666666666666667,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "universal-lite support placeholder"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        "uncertainty_id": "fragile_result_requires_calibration",
+        "warnings": [
+          "Household uncertainty is deterministic placeholder-only and not a confidence interval.",
+          "Firm-level CARSF liability is not modified by household uncertainty outputs.",
+          "One or more supplied household ranges is fragile and requires external calibration before interpretation.",
+          "Household risk signal changes across low/base/high cases and is too fragile for point interpretation."
+        ]
+      },
+      "uncertainty_type": "household"
+    },
+    {
+      "example_id": "high_rent_low_savings_range",
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\uncertainty_ranges\\high_rent_low_savings_range.yaml",
+      "interpretation": "The high-rent case checks whether residual hardship remains visible when support and cliff assumptions vary.",
+      "name": "High Rent Low Savings Range",
+      "purpose": "Range around housing/basic costs and residual household gap.",
+      "range_results": [
+        {
+          "absolute_range_width": 18000.0,
+          "base": 13000.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 24000.0,
+          "low": 6000.0,
+          "metric_name": "residual_household_gap_after_support",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "single_adult_residual_gap",
+          "relative_range_width": 1.3846153846153846,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "high rent",
+            "low savings buffer",
+            "essential cost pressure"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        {
+          "absolute_range_width": 10000.0,
+          "base": 16000.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 20000.0,
+          "low": 10000.0,
+          "metric_name": "transition_support_amount",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "single_adult_transition_support",
+          "relative_range_width": 0.625,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "support level placeholder"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        {
+          "absolute_range_width": 8000.0,
+          "base": 3000.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 8000.0,
+          "low": 0.0,
+          "metric_name": "support_loss",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "single_adult_payment_cliff_loss",
+          "relative_range_width": 2.6666666666666665,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "support phase-out placeholder"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        }
+      ],
+      "status": "prototype_only",
+      "uncertainty_result": {
+        "base_case_shock_band": "high",
+        "high_case_shock_band": "critical",
+        "household_id": "hh_single_high_rent",
+        "low_case_shock_band": "high",
+        "non_claims": [
+          "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+          "Uncertainty range outputs do not modify firm-level CARSF liability."
+        ],
+        "payment_cliff_loss_range": {
+          "absolute_range_width": 8000.0,
+          "base": 3000.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 8000.0,
+          "low": 0.0,
+          "metric_name": "support_loss",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "single_adult_payment_cliff_loss",
+          "relative_range_width": 2.6666666666666665,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "support phase-out placeholder"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        "primary_uncertainty_drivers": [
+          "essential cost pressure",
+          "high rent",
+          "low savings buffer",
+          "support level placeholder",
+          "support phase-out placeholder"
+        ],
+        "reemployment_months_range": null,
+        "regional_stress_range": null,
+        "residual_gap_range": {
+          "absolute_range_width": 18000.0,
+          "base": 13000.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 24000.0,
+          "low": 6000.0,
+          "metric_name": "residual_household_gap_after_support",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "single_adult_residual_gap",
+          "relative_range_width": 1.3846153846153846,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "high rent",
+            "low savings buffer",
+            "essential cost pressure"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        "risk_signal_stability": "stable_high_risk",
+        "scenario_id": "single_adult_displaced_worker_high_rent",
+        "transition_support_range": {
+          "absolute_range_width": 10000.0,
+          "base": 16000.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 20000.0,
+          "low": 10000.0,
+          "metric_name": "transition_support_amount",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "single_adult_transition_support",
+          "relative_range_width": 0.625,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "support level placeholder"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        "uncertainty_id": "high_rent_low_savings_range",
+        "warnings": [
+          "Household uncertainty is deterministic placeholder-only and not a confidence interval.",
+          "Firm-level CARSF liability is not modified by household uncertainty outputs.",
+          "One or more supplied household ranges is fragile and requires external calibration before interpretation."
+        ]
+      },
+      "uncertainty_type": "household"
+    },
+    {
+      "example_id": "payment_support_low_mid_high_range",
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\uncertainty_ranges\\payment_support_low_mid_high_range.yaml",
+      "interpretation": "The young-worker case tests whether a lower-stress scenario remains low or medium under deterministic support ranges.",
+      "name": "Payment Support Low Mid High Range",
+      "purpose": "Range around transition support amount.",
+      "range_results": [
+        {
+          "absolute_range_width": 3000.0,
+          "base": 0.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 3000.0,
+          "low": 0.0,
+          "metric_name": "residual_household_gap_after_support",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "young_worker_residual_gap",
+          "relative_range_width": null,
+          "stability_band": "not_assessable",
+          "uncertainty_drivers": [
+            "payment support adequacy"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Range stability is not assessable because the base value is zero or the range cannot be interpreted.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        {
+          "absolute_range_width": 10000.0,
+          "base": 12000.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 18000.0,
+          "low": 8000.0,
+          "metric_name": "transition_support_amount",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "young_worker_transition_support",
+          "relative_range_width": 0.8333333333333334,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "support amount placeholder"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        {
+          "absolute_range_width": 8.0,
+          "base": 6.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 10.0,
+          "low": 2.0,
+          "metric_name": "expected_reemployment_months",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "young_worker_reemployment_months",
+          "relative_range_width": 1.3333333333333333,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "retraining rebound placeholder"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        }
+      ],
+      "status": "prototype_only",
+      "uncertainty_result": {
+        "base_case_shock_band": "low",
+        "high_case_shock_band": "medium",
+        "household_id": "hh_young_worker_rebound",
+        "low_case_shock_band": "low",
+        "non_claims": [
+          "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+          "Uncertainty range outputs do not modify firm-level CARSF liability."
+        ],
+        "payment_cliff_loss_range": null,
+        "primary_uncertainty_drivers": [
+          "payment support adequacy",
+          "retraining rebound placeholder",
+          "support amount placeholder"
+        ],
+        "reemployment_months_range": {
+          "absolute_range_width": 8.0,
+          "base": 6.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 10.0,
+          "low": 2.0,
+          "metric_name": "expected_reemployment_months",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "young_worker_reemployment_months",
+          "relative_range_width": 1.3333333333333333,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "retraining rebound placeholder"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        "regional_stress_range": null,
+        "residual_gap_range": {
+          "absolute_range_width": 3000.0,
+          "base": 0.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 3000.0,
+          "low": 0.0,
+          "metric_name": "residual_household_gap_after_support",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "young_worker_residual_gap",
+          "relative_range_width": null,
+          "stability_band": "not_assessable",
+          "uncertainty_drivers": [
+            "payment support adequacy"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Range stability is not assessable because the base value is zero or the range cannot be interpreted.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        "risk_signal_stability": "stable_low_risk",
+        "scenario_id": "young_worker_retraining_rebound",
+        "transition_support_range": {
+          "absolute_range_width": 10000.0,
+          "base": 12000.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 18000.0,
+          "low": 8000.0,
+          "metric_name": "transition_support_amount",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "young_worker_transition_support",
+          "relative_range_width": 0.8333333333333334,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "support amount placeholder"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        "uncertainty_id": "payment_support_low_mid_high_range",
+        "warnings": [
+          "Household uncertainty is deterministic placeholder-only and not a confidence interval.",
+          "Firm-level CARSF liability is not modified by household uncertainty outputs.",
+          "One or more supplied household ranges is fragile and requires external calibration before interpretation."
+        ]
+      },
+      "uncertainty_type": "household"
+    },
+    {
+      "example_id": "regional_reemployment_delay_range",
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\uncertainty_ranges\\regional_reemployment_delay_range.yaml",
+      "interpretation": "The regional older-worker case tests whether risk remains visible when re-employment timing and regional stress are varied.",
+      "name": "Regional Re-Employment Delay Range",
+      "purpose": "Range around re-employment timing and regional stress.",
+      "range_results": [
+        {
+          "absolute_range_width": 18000.0,
+          "base": 14000.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 26000.0,
+          "low": 8000.0,
+          "metric_name": "residual_household_gap_after_support",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "older_worker_residual_gap",
+          "relative_range_width": 1.2857142857142858,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "re-employment delay",
+            "regional labour-market depth"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        {
+          "absolute_range_width": 12000.0,
+          "base": 18000.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 24000.0,
+          "low": 12000.0,
+          "metric_name": "transition_support_amount",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "older_worker_transition_support",
+          "relative_range_width": 0.6666666666666666,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "support duration placeholder"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        {
+          "absolute_range_width": 24.0,
+          "base": 36.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 48.0,
+          "low": 24.0,
+          "metric_name": "expected_reemployment_months",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "older_worker_reemployment_months",
+          "relative_range_width": 0.6666666666666666,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "older-worker re-employment delay placeholder"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        {
+          "absolute_range_width": 0.30999999999999994,
+          "base": 0.7,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 0.86,
+          "low": 0.55,
+          "metric_name": "regional_stress_score",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "older_worker_regional_stress",
+          "relative_range_width": 0.4428571428571428,
+          "stability_band": "moderately_sensitive",
+          "uncertainty_drivers": [
+            "regional labour-market depth",
+            "transport access"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        }
+      ],
+      "status": "prototype_only",
+      "uncertainty_result": {
+        "base_case_shock_band": "high",
+        "high_case_shock_band": "critical",
+        "household_id": "hh_older_worker_low_reemployment",
+        "low_case_shock_band": "high",
+        "non_claims": [
+          "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+          "Uncertainty range outputs do not modify firm-level CARSF liability."
+        ],
+        "payment_cliff_loss_range": null,
+        "primary_uncertainty_drivers": [
+          "older-worker re-employment delay placeholder",
+          "re-employment delay",
+          "regional labour-market depth",
+          "support duration placeholder",
+          "transport access"
+        ],
+        "reemployment_months_range": {
+          "absolute_range_width": 24.0,
+          "base": 36.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 48.0,
+          "low": 24.0,
+          "metric_name": "expected_reemployment_months",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "older_worker_reemployment_months",
+          "relative_range_width": 0.6666666666666666,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "older-worker re-employment delay placeholder"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        "regional_stress_range": {
+          "absolute_range_width": 0.30999999999999994,
+          "base": 0.7,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 0.86,
+          "low": 0.55,
+          "metric_name": "regional_stress_score",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "older_worker_regional_stress",
+          "relative_range_width": 0.4428571428571428,
+          "stability_band": "moderately_sensitive",
+          "uncertainty_drivers": [
+            "regional labour-market depth",
+            "transport access"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        "residual_gap_range": {
+          "absolute_range_width": 18000.0,
+          "base": 14000.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 26000.0,
+          "low": 8000.0,
+          "metric_name": "residual_household_gap_after_support",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "older_worker_residual_gap",
+          "relative_range_width": 1.2857142857142858,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "re-employment delay",
+            "regional labour-market depth"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        "risk_signal_stability": "stable_high_risk",
+        "scenario_id": "older_worker_low_reemployment",
+        "transition_support_range": {
+          "absolute_range_width": 12000.0,
+          "base": 18000.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 24000.0,
+          "low": 12000.0,
+          "metric_name": "transition_support_amount",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "older_worker_transition_support",
+          "relative_range_width": 0.6666666666666666,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "support duration placeholder"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        "uncertainty_id": "regional_reemployment_delay_range",
+        "warnings": [
+          "Household uncertainty is deterministic placeholder-only and not a confidence interval.",
+          "Firm-level CARSF liability is not modified by household uncertainty outputs.",
+          "One or more supplied household ranges is fragile and requires external calibration before interpretation."
+        ]
+      },
+      "uncertainty_type": "household"
+    },
+    {
+      "example_id": "single_parent_cost_pressure_range",
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\uncertainty_ranges\\single_parent_cost_pressure_range.yaml",
+      "interpretation": "The single-parent case remains high risk across the placeholder residual-gap range, but the range is still not calibrated.",
+      "name": "Single Parent Cost Pressure Range",
+      "purpose": "Low/base/high range around synthetic single-parent support gap and cost pressure.",
+      "range_results": [
+        {
+          "absolute_range_width": 13000.0,
+          "base": 14000.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 22000.0,
+          "low": 9000.0,
+          "metric_name": "residual_household_gap_after_support",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "single_parent_residual_gap",
+          "relative_range_width": 0.9285714285714286,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "housing cost pressure",
+            "retraining delay",
+            "childcare and basic costs"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        {
+          "absolute_range_width": 7000.0,
+          "base": 18000.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 22000.0,
+          "low": 15000.0,
+          "metric_name": "transition_support_amount",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "single_parent_transition_support",
+          "relative_range_width": 0.3888888888888889,
+          "stability_band": "moderately_sensitive",
+          "uncertainty_drivers": [
+            "support adequacy placeholder"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        {
+          "absolute_range_width": 12.0,
+          "base": 18.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 24.0,
+          "low": 12.0,
+          "metric_name": "expected_reemployment_months",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "single_parent_reemployment_months",
+          "relative_range_width": 0.6666666666666666,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "retraining duration"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        }
+      ],
+      "status": "prototype_only",
+      "uncertainty_result": {
+        "base_case_shock_band": "high",
+        "high_case_shock_band": "critical",
+        "household_id": "hh_single_parent_retraining",
+        "low_case_shock_band": "high",
+        "non_claims": [
+          "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+          "Uncertainty range outputs do not modify firm-level CARSF liability."
+        ],
+        "payment_cliff_loss_range": null,
+        "primary_uncertainty_drivers": [
+          "childcare and basic costs",
+          "housing cost pressure",
+          "retraining delay",
+          "retraining duration",
+          "support adequacy placeholder"
+        ],
+        "reemployment_months_range": {
+          "absolute_range_width": 12.0,
+          "base": 18.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 24.0,
+          "low": 12.0,
+          "metric_name": "expected_reemployment_months",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "single_parent_reemployment_months",
+          "relative_range_width": 0.6666666666666666,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "retraining duration"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        "regional_stress_range": null,
+        "residual_gap_range": {
+          "absolute_range_width": 13000.0,
+          "base": 14000.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 22000.0,
+          "low": 9000.0,
+          "metric_name": "residual_household_gap_after_support",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "single_parent_residual_gap",
+          "relative_range_width": 0.9285714285714286,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "housing cost pressure",
+            "retraining delay",
+            "childcare and basic costs"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        "risk_signal_stability": "stable_high_risk",
+        "scenario_id": "single_parent_retraining_gap",
+        "transition_support_range": {
+          "absolute_range_width": 7000.0,
+          "base": 18000.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 22000.0,
+          "low": 15000.0,
+          "metric_name": "transition_support_amount",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "single_parent_transition_support",
+          "relative_range_width": 0.3888888888888889,
+          "stability_band": "moderately_sensitive",
+          "uncertainty_drivers": [
+            "support adequacy placeholder"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        "uncertainty_id": "single_parent_cost_pressure_range",
+        "warnings": [
+          "Household uncertainty is deterministic placeholder-only and not a confidence interval.",
+          "Firm-level CARSF liability is not modified by household uncertainty outputs.",
+          "One or more supplied household ranges is fragile and requires external calibration before interpretation."
+        ]
+      },
+      "uncertainty_type": "household"
+    },
+    {
+      "example_id": "weighted_subgroup_uncertainty_range",
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\uncertainty_ranges\\weighted_subgroup_uncertainty_range.yaml",
+      "interpretation": "Weighted subgroup uncertainty checks whether stress-test subgroup signals remain visible across deterministic placeholder ranges.",
+      "name": "Weighted Subgroup Uncertainty Range",
+      "purpose": "Range around weighted subgroup residual gaps and high/critical shock shares.",
+      "range_results": [
+        {
+          "absolute_range_width": 5000.0,
+          "base": 9000.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 12000.0,
+          "low": 7000.0,
+          "metric_name": "weighted_average_residual_gap",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "all_synthetic_residual_gap",
+          "relative_range_width": 0.5555555555555556,
+          "stability_band": "moderately_sensitive",
+          "uncertainty_drivers": [
+            "residual gap weighting placeholder"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        {
+          "absolute_range_width": 17000.0,
+          "base": 14000.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 26000.0,
+          "low": 9000.0,
+          "metric_name": "weighted_average_residual_gap",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "critical_budget_residual_gap",
+          "relative_range_width": 1.2142857142857142,
+          "stability_band": "fragile",
+          "uncertainty_drivers": [
+            "critical budget stress placeholder"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        {
+          "absolute_range_width": 0.19999999999999996,
+          "base": 1.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 1.0,
+          "low": 0.8,
+          "metric_name": "weighted_high_or_critical_share",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "all_synthetic_high_critical_share",
+          "relative_range_width": 0.19999999999999996,
+          "stability_band": "stable",
+          "uncertainty_drivers": [
+            "shock-band weighting placeholder"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        },
+        {
+          "absolute_range_width": 0.25,
+          "base": 1.0,
+          "calibration_status": "not_calibrated",
+          "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+          "high": 1.0,
+          "low": 0.75,
+          "metric_name": "weighted_high_or_critical_share",
+          "non_claims": [
+            "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+            "Uncertainty range outputs do not modify firm-level CARSF liability."
+          ],
+          "ordered_correctly": true,
+          "range_id": "critical_budget_high_critical_share",
+          "relative_range_width": 0.25,
+          "stability_band": "moderately_sensitive",
+          "uncertainty_drivers": [
+            "critical budget stress placeholder"
+          ],
+          "warnings": [
+            "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+            "Confidence placeholder is descriptive only and is not statistical confidence.",
+            "Calibration status does not support real uncertainty quantification."
+          ]
+        }
+      ],
+      "status": "prototype_only",
+      "uncertainty_result": {
+        "highest_uncertainty_subgroups": [
+          "critical_budget_stress",
+          "regional_high_stress"
+        ],
+        "non_claims": [
+          "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+          "Uncertainty range outputs do not modify firm-level CARSF liability."
+        ],
+        "overall_range_sensitivity": "fragile",
+        "stable_high_risk_subgroups": [
+          "all_synthetic_households",
+          "critical_budget_stress"
+        ],
+        "subgroup_results": [
+          {
+            "high_critical_share_range": {
+              "absolute_range_width": 0.19999999999999996,
+              "base": 1.0,
+              "calibration_status": "not_calibrated",
+              "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+              "high": 1.0,
+              "low": 0.8,
+              "metric_name": "weighted_high_or_critical_share",
+              "non_claims": [
+                "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+                "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+                "Uncertainty range outputs do not modify firm-level CARSF liability."
+              ],
+              "ordered_correctly": true,
+              "range_id": "all_synthetic_high_critical_share",
+              "relative_range_width": 0.19999999999999996,
+              "stability_band": "stable",
+              "uncertainty_drivers": [
+                "shock-band weighting placeholder"
+              ],
+              "warnings": [
+                "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+                "Confidence placeholder is descriptive only and is not statistical confidence.",
+                "Calibration status does not support real uncertainty quantification."
+              ]
+            },
+            "representative_of_real_population": false,
+            "residual_gap_range": {
+              "absolute_range_width": 5000.0,
+              "base": 9000.0,
+              "calibration_status": "not_calibrated",
+              "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+              "high": 12000.0,
+              "low": 7000.0,
+              "metric_name": "weighted_average_residual_gap",
+              "non_claims": [
+                "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+                "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+                "Uncertainty range outputs do not modify firm-level CARSF liability."
+              ],
+              "ordered_correctly": true,
+              "range_id": "all_synthetic_residual_gap",
+              "relative_range_width": 0.5555555555555556,
+              "stability_band": "moderately_sensitive",
+              "uncertainty_drivers": [
+                "residual gap weighting placeholder"
+              ],
+              "warnings": [
+                "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+                "Confidence placeholder is descriptive only and is not statistical confidence.",
+                "Calibration status does not support real uncertainty quantification."
+              ]
+            },
+            "subgroup_id": "all_synthetic_households",
+            "subgroup_name": "All Synthetic Households",
+            "subgroup_range_sensitivity": "moderately_sensitive",
+            "warnings": []
+          },
+          {
+            "high_critical_share_range": {
+              "absolute_range_width": 0.25,
+              "base": 1.0,
+              "calibration_status": "not_calibrated",
+              "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+              "high": 1.0,
+              "low": 0.75,
+              "metric_name": "weighted_high_or_critical_share",
+              "non_claims": [
+                "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+                "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+                "Uncertainty range outputs do not modify firm-level CARSF liability."
+              ],
+              "ordered_correctly": true,
+              "range_id": "critical_budget_high_critical_share",
+              "relative_range_width": 0.25,
+              "stability_band": "moderately_sensitive",
+              "uncertainty_drivers": [
+                "critical budget stress placeholder"
+              ],
+              "warnings": [
+                "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+                "Confidence placeholder is descriptive only and is not statistical confidence.",
+                "Calibration status does not support real uncertainty quantification."
+              ]
+            },
+            "representative_of_real_population": false,
+            "residual_gap_range": {
+              "absolute_range_width": 17000.0,
+              "base": 14000.0,
+              "calibration_status": "not_calibrated",
+              "confidence_placeholder": "low_placeholder_confidence_not_statistical",
+              "high": 26000.0,
+              "low": 9000.0,
+              "metric_name": "weighted_average_residual_gap",
+              "non_claims": [
+                "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+                "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+                "Uncertainty range outputs do not modify firm-level CARSF liability."
+              ],
+              "ordered_correctly": true,
+              "range_id": "critical_budget_residual_gap",
+              "relative_range_width": 1.2142857142857142,
+              "stability_band": "fragile",
+              "uncertainty_drivers": [
+                "critical budget stress placeholder"
+              ],
+              "warnings": [
+                "Range thresholds are illustrative placeholders and not calibrated uncertainty bands.",
+                "Confidence placeholder is descriptive only and is not statistical confidence.",
+                "Calibration status does not support real uncertainty quantification."
+              ]
+            },
+            "subgroup_id": "critical_budget_stress",
+            "subgroup_name": "Critical Budget Stress",
+            "subgroup_range_sensitivity": "fragile",
+            "warnings": []
+          },
+          {
+            "high_critical_share_range": null,
+            "representative_of_real_population": false,
+            "residual_gap_range": null,
+            "subgroup_id": "regional_high_stress",
+            "subgroup_name": "High Regional Stress",
+            "subgroup_range_sensitivity": "not_assessable",
+            "warnings": [
+              "missing residual gap range for subgroup: regional_high_stress",
+              "missing high/critical share range for subgroup: regional_high_stress"
+            ]
+          }
+        ],
+        "uncertainty_id": "weighted_subgroup_uncertainty_range",
+        "warnings": [
+          "Weighted subgroup uncertainty is deterministic placeholder-only and not population uncertainty.",
+          "Firm-level CARSF liability is not modified by weighted uncertainty outputs.",
+          "missing residual gap range for subgroup: regional_high_stress",
+          "missing high/critical share range for subgroup: regional_high_stress"
+        ]
+      },
+      "uncertainty_type": "weighted"
+    }
+  ],
+  "metadata": {
+    "generated_at": "2026-05-14T06:39:50+00:00",
+    "non_claims": [
+      "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+      "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+      "Uncertainty range outputs do not modify firm-level CARSF liability."
+    ],
+    "status": "deterministic_placeholder_uncertainty_outputs_only",
+    "version": "CARSF V1.5 prototype"
+  },
+  "summary": {
+    "calibration_blockers": [
+      "household ranges are not calibrated",
+      "weighted subgroup ranges are not representative",
+      "no real ABS/HILDA/Census/DSS/Services Australia/Treasury/PBO data is used",
+      "no statistical confidence intervals or forecasts are produced"
+    ],
+    "fragile_metric_count": 14,
+    "highest_uncertainty_items": [
+      "critical_budget_stress:residual_gap_range",
+      "older_worker_low_reemployment:reemployment_months_range",
+      "older_worker_low_reemployment:residual_gap_range",
+      "older_worker_low_reemployment:transition_support_range",
+      "single_adult_displaced_worker_high_rent:payment_cliff_loss_range",
+      "single_adult_displaced_worker_high_rent:residual_gap_range",
+      "single_adult_displaced_worker_high_rent:transition_support_range",
+      "single_parent_retraining_gap:reemployment_months_range",
+      "single_parent_retraining_gap:residual_gap_range",
+      "ubi_lite_payment_cliff_case",
+      "ubi_lite_payment_cliff_case:payment_cliff_loss_range",
+      "ubi_lite_payment_cliff_case:residual_gap_range",
+      "ubi_lite_payment_cliff_case:transition_support_range",
+      "young_worker_retraining_rebound:reemployment_months_range",
+      "young_worker_retraining_rebound:transition_support_range"
+    ],
+    "household_uncertainty_count": 5,
+    "non_claims": [
+      "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+      "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",
+      "Uncertainty range outputs do not modify firm-level CARSF liability."
+    ],
+    "range_sensitive_count": 1,
+    "stable_high_risk_count": 3,
+    "stable_low_risk_count": 1,
+    "strongest_stable_risk_signals": [
+      "all_synthetic_households",
+      "critical_budget_stress",
+      "older_worker_low_reemployment",
+      "single_adult_displaced_worker_high_rent",
+      "single_parent_retraining_gap"
+    ],
+    "warnings": [
+      "Uncertainty summary is deterministic placeholder-only and not real uncertainty quantification.",
+      "Firm-level CARSF liability is not modified by uncertainty summary outputs."
+    ]
+  }
+}

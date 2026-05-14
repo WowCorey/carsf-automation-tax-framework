@@ -1,0 +1,55 @@
+example_id: payment_support_low_mid_high_range
+name: Payment Support Low Mid High Range
+purpose: Range around transition support amount.
+status: prototype_only
+uncertainty_type: household
+scenario_id: young_worker_retraining_rebound
+illustrative_placeholder_only: true
+synthetic_uncertainty_only: true
+not_calibrated: true
+not_representative: true
+no_real_household_data: true
+no_statistical_confidence_claim: true
+no_distributional_claim: true
+placeholder_notice: All ranges are deterministic synthetic placeholders only and are not real household, ABS, HILDA, Census, DSS, Services Australia, Treasury, PBO, welfare, income, survey, or statistical confidence data.
+ranges:
+  residual_gap:
+    range_id: young_worker_residual_gap
+    metric_name: residual_household_gap_after_support
+    low: 0
+    base: 0
+    high: 3000
+    confidence_placeholder: low_placeholder_confidence_not_statistical
+    calibration_status: not_calibrated
+    uncertainty_drivers:
+      - payment support adequacy
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - synthetic low-stress residual gap range
+  transition_support:
+    range_id: young_worker_transition_support
+    metric_name: transition_support_amount
+    low: 8000
+    base: 12000
+    high: 18000
+    confidence_placeholder: low_placeholder_confidence_not_statistical
+    calibration_status: not_calibrated
+    uncertainty_drivers:
+      - support amount placeholder
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - synthetic support range
+  reemployment_months:
+    range_id: young_worker_reemployment_months
+    metric_name: expected_reemployment_months
+    low: 2
+    base: 6
+    high: 10
+    confidence_placeholder: low_placeholder_confidence_not_statistical
+    calibration_status: not_calibrated
+    uncertainty_drivers:
+      - retraining rebound placeholder
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - synthetic timing range
+interpretation: The young-worker case tests whether a lower-stress scenario remains low or medium under deterministic support ranges.

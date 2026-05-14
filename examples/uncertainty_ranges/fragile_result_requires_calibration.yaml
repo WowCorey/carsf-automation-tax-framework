@@ -1,0 +1,57 @@
+example_id: fragile_result_requires_calibration
+name: Fragile Result Requires Calibration
+purpose: Shows an output that changes risk band across low/base/high and should be treated as fragile.
+status: prototype_only
+uncertainty_type: household
+scenario_id: ubi_lite_payment_cliff_case
+illustrative_placeholder_only: true
+synthetic_uncertainty_only: true
+not_calibrated: true
+not_representative: true
+no_real_household_data: true
+no_statistical_confidence_claim: true
+no_distributional_claim: true
+placeholder_notice: All ranges are deterministic synthetic placeholders only and are not real household, ABS, HILDA, Census, DSS, Services Australia, Treasury, PBO, welfare, income, survey, or statistical confidence data.
+ranges:
+  residual_gap:
+    range_id: ubi_lite_fragile_residual_gap
+    metric_name: residual_household_gap_after_support
+    low: 0
+    base: 4500
+    high: 22000
+    confidence_placeholder: low_placeholder_confidence_not_statistical
+    calibration_status: not_calibrated
+    uncertainty_drivers:
+      - payment cliff
+      - support phase-out
+      - household cost pressure
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - synthetic fragile residual gap range
+  transition_support:
+    range_id: ubi_lite_fragile_support
+    metric_name: transition_support_amount
+    low: 6000
+    base: 12000
+    high: 20000
+    confidence_placeholder: low_placeholder_confidence_not_statistical
+    calibration_status: not_calibrated
+    uncertainty_drivers:
+      - universal-lite support placeholder
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - synthetic fragile support range
+  payment_cliff_loss:
+    range_id: ubi_lite_fragile_cliff_loss
+    metric_name: support_loss
+    low: 0
+    base: 6000
+    high: 18000
+    confidence_placeholder: low_placeholder_confidence_not_statistical
+    calibration_status: not_calibrated
+    uncertainty_drivers:
+      - phase-out cliff placeholder
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - synthetic fragile cliff range
+interpretation: This case is intentionally fragile; the signal changes across low/base/high and should not be treated as a point estimate.

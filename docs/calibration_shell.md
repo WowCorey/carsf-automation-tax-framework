@@ -137,6 +137,25 @@ Required source categories include ABS, HILDA, Census, DSS / Services Australia,
 
 No such calibration has occurred in this repository, real household data is not allowed in the repo, and household weighting outputs are not population estimates or real distributional modelling.
 
+## Uncertainty Range Calibration
+
+The uncertainty range mechanics require future calibration and methods review before any uncertainty claim:
+
+- household residual gap ranges
+- transition support ranges
+- re-employment timing ranges
+- regional stress ranges
+- payment cliff ranges
+- weighted subgroup residual gap ranges
+- weighted high/critical shock-share ranges
+- stability thresholds
+- fragile-output thresholds
+- confidence or uncertainty methods
+
+Required source categories include ABS, HILDA, Census, DSS / Services Australia, ATO aggregated income/tax data, regional labour-market data, household survey data, Treasury modelling, PBO costing methods, privacy/legal review, and statistical methods review.
+
+No such calibration has occurred in this repository. Low/base/high values are deterministic placeholders, not Monte Carlo, confidence intervals, forecasts, or real uncertainty quantification.
+
 ## Non-Claims
 
 The calibration shell is not legal, tax, Treasury, ATO, ABS, Fair Work, OECD, BEPS, audit, forensic, or economic validation. It does not prove any model setting is correct.

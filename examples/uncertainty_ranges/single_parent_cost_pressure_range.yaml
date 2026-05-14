@@ -1,0 +1,57 @@
+example_id: single_parent_cost_pressure_range
+name: Single Parent Cost Pressure Range
+purpose: Low/base/high range around synthetic single-parent support gap and cost pressure.
+status: prototype_only
+uncertainty_type: household
+scenario_id: single_parent_retraining_gap
+illustrative_placeholder_only: true
+synthetic_uncertainty_only: true
+not_calibrated: true
+not_representative: true
+no_real_household_data: true
+no_statistical_confidence_claim: true
+no_distributional_claim: true
+placeholder_notice: All ranges are deterministic synthetic placeholders only and are not real household, ABS, HILDA, Census, DSS, Services Australia, Treasury, PBO, welfare, income, survey, or statistical confidence data.
+ranges:
+  residual_gap:
+    range_id: single_parent_residual_gap
+    metric_name: residual_household_gap_after_support
+    low: 9000
+    base: 14000
+    high: 22000
+    confidence_placeholder: low_placeholder_confidence_not_statistical
+    calibration_status: not_calibrated
+    uncertainty_drivers:
+      - housing cost pressure
+      - retraining delay
+      - childcare and basic costs
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - synthetic low/base/high residual gap range
+  transition_support:
+    range_id: single_parent_transition_support
+    metric_name: transition_support_amount
+    low: 15000
+    base: 18000
+    high: 22000
+    confidence_placeholder: low_placeholder_confidence_not_statistical
+    calibration_status: not_calibrated
+    uncertainty_drivers:
+      - support adequacy placeholder
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - synthetic transition support range
+  reemployment_months:
+    range_id: single_parent_reemployment_months
+    metric_name: expected_reemployment_months
+    low: 12
+    base: 18
+    high: 24
+    confidence_placeholder: low_placeholder_confidence_not_statistical
+    calibration_status: not_calibrated
+    uncertainty_drivers:
+      - retraining duration
+    illustrative_placeholder_only: true
+    placeholder_basis:
+      - synthetic re-employment timing range
+interpretation: The single-parent case remains high risk across the placeholder residual-gap range, but the range is still not calibrated.

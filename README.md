@@ -18,7 +18,7 @@ All sector values, schedule values, examples, caps, Fiscal Replacement Value val
 
 - `paper/` - Markdown policy paper, V1.5 working draft, formulas, glossary, references, and export notes.
 - `audits/` - review notes, responses, and red-team register.
-- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, repository guardrails, investment/incidence guardrails, national fiscal trajectory modelling, transition funding, payment interactions, synthetic distributional scenarios, and synthetic household weighting.
+- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, repository guardrails, investment/incidence guardrails, national fiscal trajectory modelling, transition funding, payment interactions, synthetic distributional scenarios, synthetic household weighting, and deterministic uncertainty ranges.
 - `model/tests/` - pytest coverage for formula bounds, caps, examples, and avoidance flags.
 - `data/` - source-category registry and placeholder policy; no datasets are committed.
 - `data/mock_evidence/` - synthetic mock evidence packets for workflow testing only; no real evidence or personal data is committed.
@@ -31,6 +31,7 @@ All sector values, schedule values, examples, caps, Fiscal Replacement Value val
 - `examples/payment_interactions/` - illustrative placeholder payment targeting, phase, stack, and support-incidence cases.
 - `examples/distributional_scenarios/` - synthetic household distributional cases with no real household data.
 - `examples/household_weighting/` - synthetic household weighting and subgroup aggregation cases with no real household data.
+- `examples/uncertainty_ranges/` - deterministic placeholder uncertainty range cases with no real household data or statistical confidence claims.
 - `simulator/` - Streamlit interface for policy review, tax model inputs, worked examples, red-team tests, and audit log.
 - `docs/` - data requirements, limitations, implementation notes, known risks, and V1.5 plan.
 
@@ -159,6 +160,17 @@ Generated household-weighting reports:
 - `reports/household_weighting.md`
 - `reports/household_weighting.json`
 
+Run deterministic uncertainty range mechanics:
+
+```powershell
+python scripts/run_uncertainty_ranges.py
+```
+
+Generated uncertainty reports:
+
+- `reports/uncertainty_ranges.md`
+- `reports/uncertainty_ranges.json`
+
 The reports are illustrative placeholder outputs only. They are not legal grouping findings, transfer-pricing adjustments, ATO findings, tax assessments, Treasury guidance, OECD/BEPS analysis, economic validation, or real liability calculations.
 Mock evidence reports use synthetic fixtures only and do not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.
 Secure-ingestion reports are prototype governance controls only. Only synthetic mock evidence is allowed in this repository; real evidence must not be committed.
@@ -169,6 +181,7 @@ Transition-funding reports are prototype payment-funding outputs only. They are 
 Payment-interaction reports are prototype targeting, phase-rule, baseline-separation, double-counting, and support-incidence outputs only. They are not UBI policy, welfare advice, eligibility law, Centrelink/DSS/Services Australia modelling, Treasury costing, PBO costing, legal advice, tax advice, or economic validation.
 Distributional scenario reports are synthetic household outputs only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.
 Household-weighting reports are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.
+Uncertainty range reports are deterministic placeholder outputs only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.
 
 ## Run the Simulator
 
@@ -201,6 +214,7 @@ V1.5 is not just an examples update. It is V1.4 plus two prototype sector schedu
 - preview existing transfer baseline separation, targeting, phase-in / phase-out, payment-stack double-counting, and support-payment fiscal incidence without changing firm-level liability;
 - preview synthetic household budget stress, re-employment timing, payment cliffs, regional stress, and residual household gaps without using real household data or changing firm-level liability;
 - aggregate synthetic household scenarios by placeholder weights and subgroups without claiming representativeness or changing firm-level liability;
+- wrap synthetic household and weighted subgroup outputs with deterministic low/base/high uncertainty ranges without claiming confidence intervals, forecasts, or calibration;
 - define a calibration shell and data source registry without collecting real data;
 - identify open-source AI and R&D Tax Incentive interaction questions without overclaiming.
 
@@ -221,3 +235,4 @@ Transition-payment funding outputs are uncalibrated placeholders. They are not U
 Payment-interaction outputs are uncalibrated placeholders. They do not implement welfare eligibility law, Centrelink/DSS/Services Australia administration, household means testing, or validated support-payment fiscal incidence.
 Distributional scenario outputs are synthetic placeholders. They do not model real Australian households, real household hardship, real welfare eligibility, or validated regional/labour-market outcomes.
 Household weighting and subgroup aggregation outputs are synthetic placeholders. They are not population estimates, survey weights, ABS/HILDA/Census analysis, DSS / Services Australia modelling, or real distributional modelling.
+Uncertainty range outputs are deterministic placeholders. They are not Monte Carlo, statistical confidence intervals, forecasts, real uncertainty quantification, or validated sensitivity analysis.
