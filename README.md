@@ -18,7 +18,7 @@ All sector values, schedule values, examples, caps, Fiscal Replacement Value val
 
 - `paper/` - Markdown policy paper, V1.5 working draft, formulas, glossary, references, and export notes.
 - `audits/` - review notes, responses, and red-team register.
-- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, repository guardrails, investment/incidence guardrails, national fiscal trajectory modelling, transition funding, payment interactions, synthetic distributional scenarios, synthetic household weighting, and deterministic uncertainty ranges.
+- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, repository guardrails, investment/incidence guardrails, national fiscal trajectory modelling, transition funding, payment interactions, synthetic distributional scenarios, synthetic household weighting, deterministic uncertainty ranges, and reviewed scenario display-control classifications.
 - `model/tests/` - pytest coverage for formula bounds, caps, examples, and avoidance flags.
 - `data/` - source-category registry and placeholder policy; no datasets are committed.
 - `data/mock_evidence/` - synthetic mock evidence packets for workflow testing only; no real evidence or personal data is committed.
@@ -171,6 +171,17 @@ Generated uncertainty reports:
 - `reports/uncertainty_ranges.md`
 - `reports/uncertainty_ranges.json`
 
+Run reviewed scenario comparison classifications:
+
+```powershell
+python scripts/run_reviewed_scenarios.py
+```
+
+Generated reviewed-scenario reports:
+
+- `reports/reviewed_scenarios.md`
+- `reports/reviewed_scenarios.json`
+
 The reports are illustrative placeholder outputs only. They are not legal grouping findings, transfer-pricing adjustments, ATO findings, tax assessments, Treasury guidance, OECD/BEPS analysis, economic validation, or real liability calculations.
 Mock evidence reports use synthetic fixtures only and do not validate any real liability, tax position, audit finding, legal conclusion, Treasury assessment, ATO assessment, or economic claim.
 Secure-ingestion reports are prototype governance controls only. Only synthetic mock evidence is allowed in this repository; real evidence must not be committed.
@@ -182,6 +193,7 @@ Payment-interaction reports are prototype targeting, phase-rule, baseline-separa
 Distributional scenario reports are synthetic household outputs only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.
 Household-weighting reports are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.
 Uncertainty range reports are deterministic placeholder outputs only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.
+Reviewed scenario reports are prototype display-control outputs only. They are not statistical validation, population estimates, real household modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, ATO analysis, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.
 
 ## Run the Simulator
 
@@ -215,6 +227,7 @@ V1.5 is not just an examples update. It is V1.4 plus two prototype sector schedu
 - preview synthetic household budget stress, re-employment timing, payment cliffs, regional stress, and residual household gaps without using real household data or changing firm-level liability;
 - aggregate synthetic household scenarios by placeholder weights and subgroups without claiming representativeness or changing firm-level liability;
 - wrap synthetic household and weighted subgroup outputs with deterministic low/base/high uncertainty ranges without claiming confidence intervals, forecasts, or calibration;
+- classify reviewed scenario outputs into show, warning, hidden, non-interpretable, and external-review-only display categories without validating them or changing firm-level liability;
 - define a calibration shell and data source registry without collecting real data;
 - identify open-source AI and R&D Tax Incentive interaction questions without overclaiming.
 

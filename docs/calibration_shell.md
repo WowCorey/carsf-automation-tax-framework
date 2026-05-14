@@ -156,6 +156,21 @@ Required source categories include ABS, HILDA, Census, DSS / Services Australia,
 
 No such calibration has occurred in this repository. Low/base/high values are deterministic placeholders, not Monte Carlo, confidence intervals, forecasts, or real uncertainty quantification.
 
+## Reviewed Scenario Calibration and Methods Review
+
+The reviewed scenario comparison layer requires future calibration and methods review before any scenario can be treated as a real policy signal:
+
+- which household uncertainty ranges are required for interpretation
+- stability thresholds for discussion, warning, and suppression categories
+- rules for hiding fragile or range-sensitive point estimates
+- treatment of missing uncertainty ranges
+- representativeness review for any future subgroup or household weights
+- external review criteria for sector-specific distributional outputs
+
+Required source categories include ABS, HILDA, Census, DSS / Services Australia, ATO aggregated income/tax data, regional labour-market data, household survey data, Treasury modelling, PBO costing methods, privacy/legal review, and statistical methods review.
+
+No such calibration has occurred in this repository. Reviewed scenario outputs are prototype display-control signals only; they are not statistical validation, population estimates, real household modelling, forecasts, confidence intervals, welfare advice, eligibility law, legal advice, tax advice, or economic validation.
+
 ## Non-Claims
 
 The calibration shell is not legal, tax, Treasury, ATO, ABS, Fair Work, OECD, BEPS, audit, forensic, or economic validation. It does not prove any model setting is correct.
