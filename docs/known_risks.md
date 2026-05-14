@@ -51,4 +51,8 @@
 - Household shock bands, regional stress scores, re-employment timing, and payment cliff severity are uncalibrated placeholders and may overstate precision.
 - Synthetic household examples are not population-representative and do not use ABS, HILDA, Census, DSS / Services Australia, ATO, Treasury, PBO, or household survey data.
 - Distributional scenario outputs do not validate household hardship, welfare eligibility, payment adequacy, regional impacts, or fiscal incidence.
+- Synthetic household weighting outputs may be mistaken for population estimates if representativeness warnings are removed or ignored.
+- Placeholder subgroup weights do not use survey weights, ABS/HILDA/Census microdata, DSS / Services Australia data, ATO data, Treasury modelling, PBO costing, or household survey data.
+- Highest-risk subgroup tables are deterministic stress summaries only and do not prove real subgroup incidence, prevalence, or representativeness.
+- Zero-weight or unmatched subgroup cases may be useful plumbing tests but are not assessable as population outcomes.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.

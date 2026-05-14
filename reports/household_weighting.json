@@ -1,0 +1,1748 @@
+{
+  "calibration_shell": {
+    "non_claims": [
+      "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+      "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+      "Household weighting outputs do not modify firm-level CARSF liability."
+    ],
+    "ready_for_real_distributional_claims": false,
+    "requirement_count": 12,
+    "requirements": [
+      {
+        "category": "household composition",
+        "description": "Household type and dependency composition distributions.",
+        "non_claims": [
+          "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+          "Household weighting outputs do not modify firm-level CARSF liability."
+        ],
+        "possible_source_type": "ABS/Census/HILDA category only",
+        "real_data_in_repo_allowed": false,
+        "required_for": [
+          "subgroup weighting"
+        ],
+        "requirement_id": "hh_comp",
+        "status": "unmet",
+        "warnings": [
+          "Requirement is unmet; no real household calibration data is stored in this repository."
+        ]
+      },
+      {
+        "category": "income distribution",
+        "description": "Income-band and post-displacement income distributions.",
+        "non_claims": [
+          "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+          "Household weighting outputs do not modify firm-level CARSF liability."
+        ],
+        "possible_source_type": "ATO/ABS/HILDA category only",
+        "real_data_in_repo_allowed": false,
+        "required_for": [
+          "budget stress",
+          "subgroup weighting"
+        ],
+        "requirement_id": "income_dist",
+        "status": "unmet",
+        "warnings": [
+          "Requirement is unmet; no real household calibration data is stored in this repository."
+        ]
+      },
+      {
+        "category": "employment displacement",
+        "description": "Displacement incidence by sector, role, and household type.",
+        "non_claims": [
+          "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+          "Household weighting outputs do not modify firm-level CARSF liability."
+        ],
+        "possible_source_type": "Treasury/ABS/labour-market category only",
+        "real_data_in_repo_allowed": false,
+        "required_for": [
+          "shock weighting"
+        ],
+        "requirement_id": "employment_disp",
+        "status": "unmet",
+        "warnings": [
+          "Requirement is unmet; no real household calibration data is stored in this repository."
+        ]
+      },
+      {
+        "category": "regional labour-market depth",
+        "description": "Regional employment depth and transition capacity.",
+        "non_claims": [
+          "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+          "Household weighting outputs do not modify firm-level CARSF liability."
+        ],
+        "possible_source_type": "ABS/regional labour-market category only",
+        "real_data_in_repo_allowed": false,
+        "required_for": [
+          "regional stress"
+        ],
+        "requirement_id": "regional_depth",
+        "status": "unmet",
+        "warnings": [
+          "Requirement is unmet; no real household calibration data is stored in this repository."
+        ]
+      },
+      {
+        "category": "housing costs",
+        "description": "Housing cost pressure by household type and region.",
+        "non_claims": [
+          "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+          "Household weighting outputs do not modify firm-level CARSF liability."
+        ],
+        "possible_source_type": "ABS/housing survey category only",
+        "real_data_in_repo_allowed": false,
+        "required_for": [
+          "budget stress"
+        ],
+        "requirement_id": "housing_costs",
+        "status": "unmet",
+        "warnings": [
+          "Requirement is unmet; no real household calibration data is stored in this repository."
+        ]
+      },
+      {
+        "category": "essential costs",
+        "description": "Essential living cost pressure by household type.",
+        "non_claims": [
+          "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+          "Household weighting outputs do not modify firm-level CARSF liability."
+        ],
+        "possible_source_type": "household expenditure survey category only",
+        "real_data_in_repo_allowed": false,
+        "required_for": [
+          "budget stress"
+        ],
+        "requirement_id": "essential_costs",
+        "status": "unmet",
+        "warnings": [
+          "Requirement is unmet; no real household calibration data is stored in this repository."
+        ]
+      },
+      {
+        "category": "savings/debt buffers",
+        "description": "Savings and debt buffer distributions.",
+        "non_claims": [
+          "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+          "Household weighting outputs do not modify firm-level CARSF liability."
+        ],
+        "possible_source_type": "HILDA/household survey category only",
+        "real_data_in_repo_allowed": false,
+        "required_for": [
+          "shock severity"
+        ],
+        "requirement_id": "buffers",
+        "status": "unmet",
+        "warnings": [
+          "Requirement is unmet; no real household calibration data is stored in this repository."
+        ]
+      },
+      {
+        "category": "welfare/transfer baseline",
+        "description": "Existing support baseline interaction by household type.",
+        "non_claims": [
+          "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+          "Household weighting outputs do not modify firm-level CARSF liability."
+        ],
+        "possible_source_type": "DSS/Services Australia category only",
+        "real_data_in_repo_allowed": false,
+        "required_for": [
+          "support adequacy"
+        ],
+        "requirement_id": "welfare_baseline",
+        "status": "unmet",
+        "warnings": [
+          "Requirement is unmet; no real household calibration data is stored in this repository."
+        ]
+      },
+      {
+        "category": "re-employment timing",
+        "description": "Re-employment timing and income recovery distributions.",
+        "non_claims": [
+          "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+          "Household weighting outputs do not modify firm-level CARSF liability."
+        ],
+        "possible_source_type": "HILDA/labour-market transition category only",
+        "real_data_in_repo_allowed": false,
+        "required_for": [
+          "reemployment risk"
+        ],
+        "requirement_id": "reemployment",
+        "status": "unmet",
+        "warnings": [
+          "Requirement is unmet; no real household calibration data is stored in this repository."
+        ]
+      },
+      {
+        "category": "payment eligibility",
+        "description": "Eligibility, phase-out, exclusion, and leakage parameters.",
+        "non_claims": [
+          "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+          "Household weighting outputs do not modify firm-level CARSF liability."
+        ],
+        "possible_source_type": "DSS/legal policy category only",
+        "real_data_in_repo_allowed": false,
+        "required_for": [
+          "payment cliff",
+          "support targeting"
+        ],
+        "requirement_id": "eligibility",
+        "status": "unmet",
+        "warnings": [
+          "Requirement is unmet; no real household calibration data is stored in this repository."
+        ]
+      },
+      {
+        "category": "survey weighting",
+        "description": "Survey weights or population weights for representativeness.",
+        "non_claims": [
+          "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+          "Household weighting outputs do not modify firm-level CARSF liability."
+        ],
+        "possible_source_type": "ABS/HILDA/Census category only",
+        "real_data_in_repo_allowed": false,
+        "required_for": [
+          "weighted aggregation"
+        ],
+        "requirement_id": "survey_weights",
+        "status": "unmet",
+        "warnings": [
+          "Requirement is unmet; no real household calibration data is stored in this repository."
+        ]
+      },
+      {
+        "category": "uncertainty/confidence intervals",
+        "description": "Uncertainty ranges and confidence methods for weighted outputs.",
+        "non_claims": [
+          "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+          "Household weighting outputs do not modify firm-level CARSF liability."
+        ],
+        "possible_source_type": "Treasury/PBO/statistical review category only",
+        "real_data_in_repo_allowed": false,
+        "required_for": [
+          "reporting"
+        ],
+        "requirement_id": "uncertainty",
+        "status": "unmet",
+        "warnings": [
+          "Requirement is unmet; no real household calibration data is stored in this repository."
+        ]
+      }
+    ],
+    "unmet_requirement_count": 12,
+    "warnings": [
+      "All household weighting calibration requirements are unmet.",
+      "Real household data is not allowed in this repository.",
+      "A controlled external data environment would be required before any real distributional claim."
+    ]
+  },
+  "examples": [
+    {
+      "aggregation_result": {
+        "aggregation_basis": "synthetic_weight_record_aggregate_not_unique_population_weight",
+        "aggregation_id": "low_income_household_weighting",
+        "calibration_status": "not_calibrated",
+        "duplicate_scenario_weight_records": [
+          "single_parent_retraining_gap"
+        ],
+        "highest_risk_subgroups": [
+          "critical_budget_stress",
+          "lower_middle_income"
+        ],
+        "non_claims": [
+          "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+          "Household weighting outputs do not modify firm-level CARSF liability."
+        ],
+        "overall_weighted_average_residual_gap": 10923.076923076924,
+        "overall_weighted_high_or_critical_share": 1.0,
+        "representative_of_real_population": false,
+        "scenario_count": 7,
+        "subgroup_results": [
+          {
+            "highest_risk_scenarios": [
+              "single_parent_retraining_gap"
+            ],
+            "representativeness_warning": true,
+            "scenario_count": 1,
+            "subgroup_id": "critical_budget_stress",
+            "subgroup_name": "Critical Budget Stress",
+            "total_synthetic_weight": 1.0,
+            "warnings": [
+              "Subgroup result is synthetic placeholder-only and not representative."
+            ],
+            "weighted_average_residual_gap": 14000.0,
+            "weighted_high_or_critical_share": 1.0
+          },
+          {
+            "highest_risk_scenarios": [
+              "single_parent_retraining_gap",
+              "single_adult_displaced_worker_high_rent",
+              "ubi_lite_payment_cliff_case"
+            ],
+            "representativeness_warning": true,
+            "scenario_count": 3,
+            "subgroup_id": "lower_middle_income",
+            "subgroup_name": "Lower-Middle Placeholder Income Band",
+            "total_synthetic_weight": 5.5,
+            "warnings": [
+              "Subgroup result is synthetic placeholder-only and not representative."
+            ],
+            "weighted_average_residual_gap": 10363.636363636364,
+            "weighted_high_or_critical_share": 1.0
+          }
+        ],
+        "total_synthetic_weight": 6.5,
+        "warnings": [
+          "Weighted distributional aggregation uses synthetic placeholder weights only.",
+          "Results are not representative of real Australian households.",
+          "Firm-level CARSF liability is not modified by weighted distributional outputs.",
+          "One or more synthetic scenarios appear in multiple weight records. Overall weighted outputs are weight-record aggregates, not unique-household or population estimates.",
+          "Calibration status does not support real-world representativeness claims."
+        ]
+      },
+      "example_id": "low_income_household_weighting",
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\household_weighting\\low_income_household_weighting.yaml",
+      "interpretation": "Lower-income placeholder weighting highlights support adequacy risks without claiming real income distribution effects.",
+      "name": "Low-Income Household Weighting",
+      "purpose": "Weights lower-income synthetic households.",
+      "status": "prototype_only",
+      "subgroup_assignments": [
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "dual_income_one_displaced_regional",
+          "subgroup_ids": [],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "high_automation_region_cluster",
+          "subgroup_ids": [
+            "critical_budget_stress"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "older_worker_low_reemployment",
+          "subgroup_ids": [
+            "critical_budget_stress"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "single_adult_displaced_worker_high_rent",
+          "subgroup_ids": [
+            "critical_budget_stress",
+            "lower_middle_income"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "single_parent_retraining_gap",
+          "subgroup_ids": [
+            "critical_budget_stress",
+            "lower_middle_income"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "ubi_lite_payment_cliff_case",
+          "subgroup_ids": [
+            "critical_budget_stress",
+            "lower_middle_income"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "young_worker_retraining_rebound",
+          "subgroup_ids": [
+            "lower_middle_income"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        }
+      ],
+      "weight_results": [
+        {
+          "calibrated": false,
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "single_adult_displaced_worker_high_rent",
+          "subgroup_id": "lower_middle_income",
+          "usable_for_real_world_claims": false,
+          "warnings": [
+            "Household weight is synthetic placeholder-only and not population representative.",
+            "No real household, ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data is embedded."
+          ],
+          "weight_value": 2.0
+        },
+        {
+          "calibrated": false,
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "single_parent_retraining_gap",
+          "subgroup_id": "lower_middle_income",
+          "usable_for_real_world_claims": false,
+          "warnings": [
+            "Household weight is synthetic placeholder-only and not population representative.",
+            "No real household, ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data is embedded."
+          ],
+          "weight_value": 2.0
+        },
+        {
+          "calibrated": false,
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "ubi_lite_payment_cliff_case",
+          "subgroup_id": "lower_middle_income",
+          "usable_for_real_world_claims": false,
+          "warnings": [
+            "Household weight is synthetic placeholder-only and not population representative.",
+            "No real household, ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data is embedded."
+          ],
+          "weight_value": 1.5
+        },
+        {
+          "calibrated": false,
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "single_parent_retraining_gap",
+          "subgroup_id": "critical_budget_stress",
+          "usable_for_real_world_claims": false,
+          "warnings": [
+            "Household weight is synthetic placeholder-only and not population representative.",
+            "No real household, ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data is embedded."
+          ],
+          "weight_value": 1.0
+        }
+      ]
+    },
+    {
+      "aggregation_result": {
+        "aggregation_basis": "synthetic_weight_record_aggregate_not_unique_population_weight",
+        "aggregation_id": "placeholder_weights_basic",
+        "calibration_status": "not_calibrated",
+        "duplicate_scenario_weight_records": [],
+        "highest_risk_subgroups": [
+          "regional_high_stress",
+          "critical_budget_stress",
+          "all_synthetic_households"
+        ],
+        "non_claims": [
+          "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+          "Household weighting outputs do not modify firm-level CARSF liability."
+        ],
+        "overall_weighted_average_residual_gap": 12200.0,
+        "overall_weighted_high_or_critical_share": 1.0,
+        "representative_of_real_population": false,
+        "scenario_count": 7,
+        "subgroup_results": [
+          {
+            "highest_risk_scenarios": [
+              "single_parent_retraining_gap",
+              "single_adult_displaced_worker_high_rent",
+              "dual_income_one_displaced_regional"
+            ],
+            "representativeness_warning": true,
+            "scenario_count": 3,
+            "subgroup_id": "all_synthetic_households",
+            "subgroup_name": "All Synthetic Households",
+            "total_synthetic_weight": 3.0,
+            "warnings": [
+              "Subgroup result is synthetic placeholder-only and not representative."
+            ],
+            "weighted_average_residual_gap": 9000.0,
+            "weighted_high_or_critical_share": 1.0
+          },
+          {
+            "highest_risk_scenarios": [
+              "older_worker_low_reemployment"
+            ],
+            "representativeness_warning": true,
+            "scenario_count": 1,
+            "subgroup_id": "critical_budget_stress",
+            "subgroup_name": "Critical Budget Stress",
+            "total_synthetic_weight": 1.0,
+            "warnings": [
+              "Subgroup result is synthetic placeholder-only and not representative."
+            ],
+            "weighted_average_residual_gap": 14000.0,
+            "weighted_high_or_critical_share": 1.0
+          },
+          {
+            "highest_risk_scenarios": [
+              "high_automation_region_cluster"
+            ],
+            "representativeness_warning": true,
+            "scenario_count": 1,
+            "subgroup_id": "regional_high_stress",
+            "subgroup_name": "High Regional Stress",
+            "total_synthetic_weight": 1.0,
+            "warnings": [
+              "Subgroup result is synthetic placeholder-only and not representative.",
+              "weight for high_automation_region_cluster is assigned to regional_high_stress but does not match subgroup filters"
+            ],
+            "weighted_average_residual_gap": 20000.0,
+            "weighted_high_or_critical_share": 1.0
+          }
+        ],
+        "total_synthetic_weight": 5.0,
+        "warnings": [
+          "Weighted distributional aggregation uses synthetic placeholder weights only.",
+          "Results are not representative of real Australian households.",
+          "Firm-level CARSF liability is not modified by weighted distributional outputs.",
+          "Calibration status does not support real-world representativeness claims."
+        ]
+      },
+      "example_id": "placeholder_weights_basic",
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\household_weighting\\placeholder_weights_basic.yaml",
+      "interpretation": "Basic placeholder weighting checks the aggregation plumbing without claiming any population representativeness.",
+      "name": "Placeholder Weights Basic",
+      "purpose": "Basic synthetic weighting across existing distributional scenarios.",
+      "status": "prototype_only",
+      "subgroup_assignments": [
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "dual_income_one_displaced_regional",
+          "subgroup_ids": [
+            "all_synthetic_households",
+            "regional_high_stress"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "high_automation_region_cluster",
+          "subgroup_ids": [
+            "all_synthetic_households",
+            "critical_budget_stress"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "older_worker_low_reemployment",
+          "subgroup_ids": [
+            "all_synthetic_households",
+            "critical_budget_stress",
+            "regional_high_stress"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "single_adult_displaced_worker_high_rent",
+          "subgroup_ids": [
+            "all_synthetic_households",
+            "critical_budget_stress",
+            "regional_high_stress"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "single_parent_retraining_gap",
+          "subgroup_ids": [
+            "all_synthetic_households",
+            "critical_budget_stress",
+            "regional_high_stress"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "ubi_lite_payment_cliff_case",
+          "subgroup_ids": [
+            "all_synthetic_households",
+            "critical_budget_stress"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "young_worker_retraining_rebound",
+          "subgroup_ids": [
+            "all_synthetic_households"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        }
+      ],
+      "weight_results": [
+        {
+          "calibrated": false,
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "single_adult_displaced_worker_high_rent",
+          "subgroup_id": "all_synthetic_households",
+          "usable_for_real_world_claims": false,
+          "warnings": [
+            "Household weight is synthetic placeholder-only and not population representative.",
+            "No real household, ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data is embedded."
+          ],
+          "weight_value": 1.0
+        },
+        {
+          "calibrated": false,
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "single_parent_retraining_gap",
+          "subgroup_id": "all_synthetic_households",
+          "usable_for_real_world_claims": false,
+          "warnings": [
+            "Household weight is synthetic placeholder-only and not population representative.",
+            "No real household, ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data is embedded."
+          ],
+          "weight_value": 1.0
+        },
+        {
+          "calibrated": false,
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "dual_income_one_displaced_regional",
+          "subgroup_id": "all_synthetic_households",
+          "usable_for_real_world_claims": false,
+          "warnings": [
+            "Household weight is synthetic placeholder-only and not population representative.",
+            "No real household, ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data is embedded."
+          ],
+          "weight_value": 1.0
+        },
+        {
+          "calibrated": false,
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "older_worker_low_reemployment",
+          "subgroup_id": "critical_budget_stress",
+          "usable_for_real_world_claims": false,
+          "warnings": [
+            "Household weight is synthetic placeholder-only and not population representative.",
+            "No real household, ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data is embedded."
+          ],
+          "weight_value": 1.0
+        },
+        {
+          "calibrated": false,
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "high_automation_region_cluster",
+          "subgroup_id": "regional_high_stress",
+          "usable_for_real_world_claims": false,
+          "warnings": [
+            "Household weight is synthetic placeholder-only and not population representative.",
+            "No real household, ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data is embedded."
+          ],
+          "weight_value": 1.0
+        }
+      ]
+    },
+    {
+      "aggregation_result": {
+        "aggregation_basis": "synthetic_weight_record_aggregate_not_unique_population_weight",
+        "aggregation_id": "reemployment_delay_weighting",
+        "calibration_status": "not_calibrated",
+        "duplicate_scenario_weight_records": [],
+        "highest_risk_subgroups": [
+          "critical_reemployment_risk",
+          "high_reemployment_risk"
+        ],
+        "non_claims": [
+          "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+          "Household weighting outputs do not modify firm-level CARSF liability."
+        ],
+        "overall_weighted_average_residual_gap": 15833.333333333334,
+        "overall_weighted_high_or_critical_share": 1.0,
+        "representative_of_real_population": false,
+        "scenario_count": 7,
+        "subgroup_results": [
+          {
+            "highest_risk_scenarios": [
+              "high_automation_region_cluster",
+              "older_worker_low_reemployment"
+            ],
+            "representativeness_warning": true,
+            "scenario_count": 2,
+            "subgroup_id": "critical_reemployment_risk",
+            "subgroup_name": "Critical Re-Employment Risk",
+            "total_synthetic_weight": 6.0,
+            "warnings": [
+              "Subgroup result is synthetic placeholder-only and not representative."
+            ],
+            "weighted_average_residual_gap": 17000.0,
+            "weighted_high_or_critical_share": 1.0
+          },
+          {
+            "highest_risk_scenarios": [
+              "single_parent_retraining_gap",
+              "single_adult_displaced_worker_high_rent"
+            ],
+            "representativeness_warning": true,
+            "scenario_count": 2,
+            "subgroup_id": "high_reemployment_risk",
+            "subgroup_name": "High Re-Employment Risk",
+            "total_synthetic_weight": 3.0,
+            "warnings": [
+              "Subgroup result is synthetic placeholder-only and not representative."
+            ],
+            "weighted_average_residual_gap": 13500.0,
+            "weighted_high_or_critical_share": 1.0
+          }
+        ],
+        "total_synthetic_weight": 9.0,
+        "warnings": [
+          "Weighted distributional aggregation uses synthetic placeholder weights only.",
+          "Results are not representative of real Australian households.",
+          "Firm-level CARSF liability is not modified by weighted distributional outputs.",
+          "Calibration status does not support real-world representativeness claims."
+        ]
+      },
+      "example_id": "reemployment_delay_weighting",
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\household_weighting\\reemployment_delay_weighting.yaml",
+      "interpretation": "Re-employment delay weighting tests whether longer displacement timing dominates synthetic residual hardship.",
+      "name": "Re-Employment Delay Weighting",
+      "purpose": "Weights long re-employment scenarios.",
+      "status": "prototype_only",
+      "subgroup_assignments": [
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "dual_income_one_displaced_regional",
+          "subgroup_ids": [],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "high_automation_region_cluster",
+          "subgroup_ids": [
+            "critical_reemployment_risk"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "older_worker_low_reemployment",
+          "subgroup_ids": [
+            "critical_reemployment_risk"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "single_adult_displaced_worker_high_rent",
+          "subgroup_ids": [
+            "high_reemployment_risk"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "single_parent_retraining_gap",
+          "subgroup_ids": [
+            "high_reemployment_risk"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "ubi_lite_payment_cliff_case",
+          "subgroup_ids": [],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "young_worker_retraining_rebound",
+          "subgroup_ids": [],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        }
+      ],
+      "weight_results": [
+        {
+          "calibrated": false,
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "single_adult_displaced_worker_high_rent",
+          "subgroup_id": "high_reemployment_risk",
+          "usable_for_real_world_claims": false,
+          "warnings": [
+            "Household weight is synthetic placeholder-only and not population representative.",
+            "No real household, ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data is embedded."
+          ],
+          "weight_value": 1.5
+        },
+        {
+          "calibrated": false,
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "single_parent_retraining_gap",
+          "subgroup_id": "high_reemployment_risk",
+          "usable_for_real_world_claims": false,
+          "warnings": [
+            "Household weight is synthetic placeholder-only and not population representative.",
+            "No real household, ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data is embedded."
+          ],
+          "weight_value": 1.5
+        },
+        {
+          "calibrated": false,
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "older_worker_low_reemployment",
+          "subgroup_id": "critical_reemployment_risk",
+          "usable_for_real_world_claims": false,
+          "warnings": [
+            "Household weight is synthetic placeholder-only and not population representative.",
+            "No real household, ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data is embedded."
+          ],
+          "weight_value": 3.0
+        },
+        {
+          "calibrated": false,
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "high_automation_region_cluster",
+          "subgroup_id": "critical_reemployment_risk",
+          "usable_for_real_world_claims": false,
+          "warnings": [
+            "Household weight is synthetic placeholder-only and not population representative.",
+            "No real household, ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data is embedded."
+          ],
+          "weight_value": 3.0
+        }
+      ]
+    },
+    {
+      "aggregation_result": {
+        "aggregation_basis": "synthetic_weight_record_aggregate_not_unique_population_weight",
+        "aggregation_id": "regional_high_stress_weighting",
+        "calibration_status": "stress_placeholder_not_calibrated",
+        "duplicate_scenario_weight_records": [],
+        "highest_risk_subgroups": [
+          "regional_critical_stress",
+          "regional_high_stress",
+          "all_synthetic_households"
+        ],
+        "non_claims": [
+          "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+          "Household weighting outputs do not modify firm-level CARSF liability."
+        ],
+        "overall_weighted_average_residual_gap": 12705.882352941177,
+        "overall_weighted_high_or_critical_share": 0.9411764705882353,
+        "representative_of_real_population": false,
+        "scenario_count": 7,
+        "subgroup_results": [
+          {
+            "highest_risk_scenarios": [
+              "young_worker_retraining_rebound"
+            ],
+            "representativeness_warning": true,
+            "scenario_count": 1,
+            "subgroup_id": "all_synthetic_households",
+            "subgroup_name": "All Synthetic Households",
+            "total_synthetic_weight": 0.5,
+            "warnings": [
+              "Subgroup result is synthetic placeholder-only and not representative."
+            ],
+            "weighted_average_residual_gap": 0.0,
+            "weighted_high_or_critical_share": 0.0
+          },
+          {
+            "highest_risk_scenarios": [
+              "high_automation_region_cluster"
+            ],
+            "representativeness_warning": true,
+            "scenario_count": 1,
+            "subgroup_id": "regional_critical_stress",
+            "subgroup_name": "Critical Regional Stress",
+            "total_synthetic_weight": 4.0,
+            "warnings": [
+              "Subgroup result is synthetic placeholder-only and not representative."
+            ],
+            "weighted_average_residual_gap": 20000.0,
+            "weighted_high_or_critical_share": 1.0
+          },
+          {
+            "highest_risk_scenarios": [
+              "older_worker_low_reemployment",
+              "dual_income_one_displaced_regional"
+            ],
+            "representativeness_warning": true,
+            "scenario_count": 2,
+            "subgroup_id": "regional_high_stress",
+            "subgroup_name": "High Regional Stress",
+            "total_synthetic_weight": 4.0,
+            "warnings": [
+              "Subgroup result is synthetic placeholder-only and not representative."
+            ],
+            "weighted_average_residual_gap": 7000.0,
+            "weighted_high_or_critical_share": 1.0
+          }
+        ],
+        "total_synthetic_weight": 8.5,
+        "warnings": [
+          "Weighted distributional aggregation uses synthetic placeholder weights only.",
+          "Results are not representative of real Australian households.",
+          "Firm-level CARSF liability is not modified by weighted distributional outputs.",
+          "Calibration status does not support real-world representativeness claims."
+        ]
+      },
+      "example_id": "regional_high_stress_weighting",
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\household_weighting\\regional_high_stress_weighting.yaml",
+      "interpretation": "This stress case makes regional and high-automation synthetic scenarios more visible, but it is not representative weighting.",
+      "name": "Regional High-Stress Weighting",
+      "purpose": "Weights high automation regional scenarios more heavily as a placeholder stress test.",
+      "status": "prototype_only",
+      "subgroup_assignments": [
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "dual_income_one_displaced_regional",
+          "subgroup_ids": [
+            "all_synthetic_households",
+            "regional_high_stress"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "high_automation_region_cluster",
+          "subgroup_ids": [
+            "all_synthetic_households",
+            "regional_critical_stress"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "older_worker_low_reemployment",
+          "subgroup_ids": [
+            "all_synthetic_households",
+            "regional_high_stress"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "single_adult_displaced_worker_high_rent",
+          "subgroup_ids": [
+            "all_synthetic_households",
+            "regional_high_stress"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "single_parent_retraining_gap",
+          "subgroup_ids": [
+            "all_synthetic_households",
+            "regional_high_stress"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "ubi_lite_payment_cliff_case",
+          "subgroup_ids": [
+            "all_synthetic_households"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "young_worker_retraining_rebound",
+          "subgroup_ids": [
+            "all_synthetic_households"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        }
+      ],
+      "weight_results": [
+        {
+          "calibrated": false,
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "high_automation_region_cluster",
+          "subgroup_id": "regional_critical_stress",
+          "usable_for_real_world_claims": false,
+          "warnings": [
+            "Household weight is synthetic placeholder-only and not population representative.",
+            "No real household, ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data is embedded."
+          ],
+          "weight_value": 4.0
+        },
+        {
+          "calibrated": false,
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "dual_income_one_displaced_regional",
+          "subgroup_id": "regional_high_stress",
+          "usable_for_real_world_claims": false,
+          "warnings": [
+            "Household weight is synthetic placeholder-only and not population representative.",
+            "No real household, ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data is embedded."
+          ],
+          "weight_value": 2.0
+        },
+        {
+          "calibrated": false,
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "older_worker_low_reemployment",
+          "subgroup_id": "regional_high_stress",
+          "usable_for_real_world_claims": false,
+          "warnings": [
+            "Household weight is synthetic placeholder-only and not population representative.",
+            "No real household, ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data is embedded."
+          ],
+          "weight_value": 2.0
+        },
+        {
+          "calibrated": false,
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "young_worker_retraining_rebound",
+          "subgroup_id": "all_synthetic_households",
+          "usable_for_real_world_claims": false,
+          "warnings": [
+            "Household weight is synthetic placeholder-only and not population representative.",
+            "No real household, ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data is embedded."
+          ],
+          "weight_value": 0.5
+        }
+      ]
+    },
+    {
+      "aggregation_result": {
+        "aggregation_basis": "synthetic_weight_record_aggregate_not_unique_population_weight",
+        "aggregation_id": "zero_weight_not_representative",
+        "calibration_status": "zero_weight_placeholder",
+        "duplicate_scenario_weight_records": [],
+        "highest_risk_subgroups": [
+          "all_synthetic_households"
+        ],
+        "non_claims": [
+          "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+          "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+          "Household weighting outputs do not modify firm-level CARSF liability."
+        ],
+        "overall_weighted_average_residual_gap": null,
+        "overall_weighted_high_or_critical_share": null,
+        "representative_of_real_population": false,
+        "scenario_count": 7,
+        "subgroup_results": [
+          {
+            "highest_risk_scenarios": [
+              "single_adult_displaced_worker_high_rent",
+              "young_worker_retraining_rebound"
+            ],
+            "representativeness_warning": true,
+            "scenario_count": 2,
+            "subgroup_id": "all_synthetic_households",
+            "subgroup_name": "All Synthetic Households",
+            "total_synthetic_weight": 0.0,
+            "warnings": [
+              "Subgroup result is synthetic placeholder-only and not representative."
+            ],
+            "weighted_average_residual_gap": null,
+            "weighted_high_or_critical_share": null
+          }
+        ],
+        "total_synthetic_weight": 0.0,
+        "warnings": [
+          "Weighted distributional aggregation uses synthetic placeholder weights only.",
+          "Results are not representative of real Australian households.",
+          "Firm-level CARSF liability is not modified by weighted distributional outputs.",
+          "Total synthetic weight is zero; weighted averages are not assessable.",
+          "Calibration status does not support real-world representativeness claims."
+        ]
+      },
+      "example_id": "zero_weight_not_representative",
+      "firm_level_liability_modified": false,
+      "fixture_path": "examples\\household_weighting\\zero_weight_not_representative.yaml",
+      "interpretation": "Zero total synthetic weight deliberately produces not-assessable weighted averages and no representativeness claim.",
+      "name": "Zero Weight Not Representative",
+      "purpose": "Shows that zero total weights produce not-assessable weighted averages.",
+      "status": "prototype_only",
+      "subgroup_assignments": [
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "dual_income_one_displaced_regional",
+          "subgroup_ids": [
+            "all_synthetic_households"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "high_automation_region_cluster",
+          "subgroup_ids": [
+            "all_synthetic_households"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "older_worker_low_reemployment",
+          "subgroup_ids": [
+            "all_synthetic_households"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "single_adult_displaced_worker_high_rent",
+          "subgroup_ids": [
+            "all_synthetic_households"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "single_parent_retraining_gap",
+          "subgroup_ids": [
+            "all_synthetic_households"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "ubi_lite_payment_cliff_case",
+          "subgroup_ids": [
+            "all_synthetic_households"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        },
+        {
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "young_worker_retraining_rebound",
+          "subgroup_ids": [
+            "all_synthetic_households"
+          ],
+          "warnings": [
+            "Subgroup assignment is synthetic placeholder-only and not real demographic classification."
+          ]
+        }
+      ],
+      "weight_results": [
+        {
+          "calibrated": false,
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "single_adult_displaced_worker_high_rent",
+          "subgroup_id": "all_synthetic_households",
+          "usable_for_real_world_claims": false,
+          "warnings": [
+            "Household weight is synthetic placeholder-only and not population representative.",
+            "No real household, ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data is embedded."
+          ],
+          "weight_value": 0.0
+        },
+        {
+          "calibrated": false,
+          "non_claims": [
+            "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+            "Synthetic household weights are illustrative placeholders and are not representative of real households.",
+            "Household weighting outputs do not modify firm-level CARSF liability."
+          ],
+          "scenario_id": "young_worker_retraining_rebound",
+          "subgroup_id": "all_synthetic_households",
+          "usable_for_real_world_claims": false,
+          "warnings": [
+            "Household weight is synthetic placeholder-only and not population representative.",
+            "No real household, ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data is embedded."
+          ],
+          "weight_value": 0.0
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "generated_at": "2026-05-14T05:57:00+00:00",
+    "non_claims": [
+      "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
+      "This is a prototype weighting and subgroup aggregation shell only; it is not a validated distributional model.",
+      "All household weights and subgroup aggregations are illustrative placeholders and are not representative.",
+      "Household weighting outputs do not modify firm-level CARSF liability."
+    ],
+    "status": "synthetic_household_weighting_outputs_only",
+    "version": "CARSF V1.5 prototype"
+  },
+  "source_scenarios": [
+    {
+      "budget_stress_band": "medium",
+      "cliff_severity_band": "none",
+      "household_id": "hh_dual_income_regional",
+      "household_shock_band": "high",
+      "household_type": "dual_income_one_worker_displaced",
+      "income_band": "middle_placeholder",
+      "name": "Dual Income One Displaced Regional",
+      "non_claims": [
+        "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+        "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+        "Distributional scenario outputs do not modify firm-level CARSF liability."
+      ],
+      "payment_interaction_combined_gap": null,
+      "payment_interaction_residual_support_gap": null,
+      "payment_interaction_risk_band": null,
+      "payment_interaction_used": false,
+      "primary_risk_drivers": [
+        "regional stress: high"
+      ],
+      "reemployment_risk_band": "medium",
+      "region_type": "regional_labour_market_placeholder",
+      "regional_stress_band": "high",
+      "residual_household_gap_after_support": 0.0,
+      "scenario_id": "dual_income_one_displaced_regional",
+      "transition_support_amount": 8000.0,
+      "warnings": [
+        "Household budget result is synthetic and placeholder-only.",
+        "No real household, income, welfare, ABS, DSS, Services Australia, ATO, Treasury, PBO, or survey data is used.",
+        "Re-employment timing is a synthetic placeholder and not a labour-market forecast.",
+        "No ABS, HILDA, DSS, Services Australia, Treasury, PBO, or employer records are used.",
+        "Regional stress score is placeholder-only and not real regional modelling.",
+        "No ABS, Census, DSS, Services Australia, Treasury, PBO, labour-market, or geographic data is used.",
+        "Payment cliff result is a prototype warning only and not eligibility law.",
+        "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used.",
+        "Distributional scenario is synthetic-only and does not use or represent real households.",
+        "Payment interaction outputs do not modify firm-level CARSF liability.",
+        "Firm-level CARSF liability is not modified by distributional scenario outputs."
+      ]
+    },
+    {
+      "budget_stress_band": "critical",
+      "cliff_severity_band": "high",
+      "household_id": "hh_high_automation_region",
+      "household_shock_band": "critical",
+      "household_type": "displaced_worker_high_exposure_region",
+      "income_band": "middle_placeholder",
+      "name": "High Automation Region Cluster",
+      "non_claims": [
+        "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+        "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+        "Distributional scenario outputs do not modify firm-level CARSF liability."
+      ],
+      "payment_interaction_combined_gap": null,
+      "payment_interaction_residual_support_gap": null,
+      "payment_interaction_risk_band": null,
+      "payment_interaction_used": false,
+      "primary_risk_drivers": [
+        "budget stress: critical",
+        "re-employment risk: critical",
+        "regional stress: critical",
+        "payment cliff: high",
+        "residual household gap after support"
+      ],
+      "reemployment_risk_band": "critical",
+      "region_type": "high_automation_regional_cluster_placeholder",
+      "regional_stress_band": "critical",
+      "residual_household_gap_after_support": 20000.0,
+      "scenario_id": "high_automation_region_cluster",
+      "transition_support_amount": 15000.0,
+      "warnings": [
+        "Household budget result is synthetic and placeholder-only.",
+        "No real household, income, welfare, ABS, DSS, Services Australia, ATO, Treasury, PBO, or survey data is used.",
+        "Re-employment timing is a synthetic placeholder and not a labour-market forecast.",
+        "No ABS, HILDA, DSS, Services Australia, Treasury, PBO, or employer records are used.",
+        "Regional stress score is placeholder-only and not real regional modelling.",
+        "No ABS, Census, DSS, Services Australia, Treasury, PBO, labour-market, or geographic data is used.",
+        "Payment cliff result is a prototype warning only and not eligibility law.",
+        "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used.",
+        "Distributional scenario is synthetic-only and does not use or represent real households.",
+        "Payment interaction outputs do not modify firm-level CARSF liability.",
+        "Firm-level CARSF liability is not modified by distributional scenario outputs."
+      ]
+    },
+    {
+      "budget_stress_band": "critical",
+      "cliff_severity_band": "high",
+      "household_id": "hh_older_worker_low_reemployment",
+      "household_shock_band": "critical",
+      "household_type": "older_worker_single_adult",
+      "income_band": "middle_placeholder",
+      "name": "Older Worker Low Re-Employment",
+      "non_claims": [
+        "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+        "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+        "Distributional scenario outputs do not modify firm-level CARSF liability."
+      ],
+      "payment_interaction_combined_gap": null,
+      "payment_interaction_residual_support_gap": null,
+      "payment_interaction_risk_band": null,
+      "payment_interaction_used": false,
+      "primary_risk_drivers": [
+        "budget stress: critical",
+        "re-employment risk: critical",
+        "regional stress: high",
+        "payment cliff: high",
+        "residual household gap after support"
+      ],
+      "reemployment_risk_band": "critical",
+      "region_type": "mature_industrial_region_placeholder",
+      "regional_stress_band": "high",
+      "residual_household_gap_after_support": 14000.0,
+      "scenario_id": "older_worker_low_reemployment",
+      "transition_support_amount": 12000.0,
+      "warnings": [
+        "Household budget result is synthetic and placeholder-only.",
+        "No real household, income, welfare, ABS, DSS, Services Australia, ATO, Treasury, PBO, or survey data is used.",
+        "Re-employment timing is a synthetic placeholder and not a labour-market forecast.",
+        "No ABS, HILDA, DSS, Services Australia, Treasury, PBO, or employer records are used.",
+        "Regional stress score is placeholder-only and not real regional modelling.",
+        "No ABS, Census, DSS, Services Australia, Treasury, PBO, labour-market, or geographic data is used.",
+        "Payment cliff result is a prototype warning only and not eligibility law.",
+        "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used.",
+        "Distributional scenario is synthetic-only and does not use or represent real households.",
+        "Payment interaction outputs do not modify firm-level CARSF liability.",
+        "Firm-level CARSF liability is not modified by distributional scenario outputs."
+      ]
+    },
+    {
+      "budget_stress_band": "critical",
+      "cliff_severity_band": "none",
+      "household_id": "hh_single_high_rent",
+      "household_shock_band": "critical",
+      "household_type": "single_adult_displaced_worker",
+      "income_band": "lower_middle_placeholder",
+      "name": "Single Adult Displaced Worker High Rent",
+      "non_claims": [
+        "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+        "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+        "Distributional scenario outputs do not modify firm-level CARSF liability."
+      ],
+      "payment_interaction_combined_gap": null,
+      "payment_interaction_residual_support_gap": null,
+      "payment_interaction_risk_band": null,
+      "payment_interaction_used": false,
+      "primary_risk_drivers": [
+        "budget stress: critical",
+        "re-employment risk: high",
+        "regional stress: high",
+        "residual household gap after support"
+      ],
+      "reemployment_risk_band": "high",
+      "region_type": "high_rent_metro_placeholder",
+      "regional_stress_band": "high",
+      "residual_household_gap_after_support": 13000.0,
+      "scenario_id": "single_adult_displaced_worker_high_rent",
+      "transition_support_amount": 20000.0,
+      "warnings": [
+        "Household budget result is synthetic and placeholder-only.",
+        "No real household, income, welfare, ABS, DSS, Services Australia, ATO, Treasury, PBO, or survey data is used.",
+        "Re-employment timing is a synthetic placeholder and not a labour-market forecast.",
+        "No ABS, HILDA, DSS, Services Australia, Treasury, PBO, or employer records are used.",
+        "Regional stress score is placeholder-only and not real regional modelling.",
+        "No ABS, Census, DSS, Services Australia, Treasury, PBO, labour-market, or geographic data is used.",
+        "Payment cliff result is a prototype warning only and not eligibility law.",
+        "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used.",
+        "Distributional scenario is synthetic-only and does not use or represent real households.",
+        "Payment interaction outputs do not modify firm-level CARSF liability.",
+        "Firm-level CARSF liability is not modified by distributional scenario outputs."
+      ]
+    },
+    {
+      "budget_stress_band": "critical",
+      "cliff_severity_band": "high",
+      "household_id": "hh_single_parent_retraining",
+      "household_shock_band": "critical",
+      "household_type": "single_parent_retraining_delay",
+      "income_band": "lower_middle_placeholder",
+      "name": "Single Parent Retraining Gap",
+      "non_claims": [
+        "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+        "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+        "Distributional scenario outputs do not modify firm-level CARSF liability."
+      ],
+      "payment_interaction_combined_gap": null,
+      "payment_interaction_residual_support_gap": null,
+      "payment_interaction_risk_band": null,
+      "payment_interaction_used": false,
+      "primary_risk_drivers": [
+        "budget stress: critical",
+        "re-employment risk: high",
+        "regional stress: high",
+        "payment cliff: high",
+        "residual household gap after support"
+      ],
+      "reemployment_risk_band": "high",
+      "region_type": "outer_suburban_placeholder",
+      "regional_stress_band": "high",
+      "residual_household_gap_after_support": 14000.0,
+      "scenario_id": "single_parent_retraining_gap",
+      "transition_support_amount": 18000.0,
+      "warnings": [
+        "Household budget result is synthetic and placeholder-only.",
+        "No real household, income, welfare, ABS, DSS, Services Australia, ATO, Treasury, PBO, or survey data is used.",
+        "Re-employment timing is a synthetic placeholder and not a labour-market forecast.",
+        "No ABS, HILDA, DSS, Services Australia, Treasury, PBO, or employer records are used.",
+        "Regional stress score is placeholder-only and not real regional modelling.",
+        "No ABS, Census, DSS, Services Australia, Treasury, PBO, labour-market, or geographic data is used.",
+        "Payment cliff result is a prototype warning only and not eligibility law.",
+        "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used.",
+        "Distributional scenario is synthetic-only and does not use or represent real households.",
+        "Payment interaction outputs do not modify firm-level CARSF liability.",
+        "Firm-level CARSF liability is not modified by distributional scenario outputs."
+      ]
+    },
+    {
+      "budget_stress_band": "critical",
+      "cliff_severity_band": "high",
+      "household_id": "hh_ubi_lite_cliff",
+      "household_shock_band": "critical",
+      "household_type": "single_adult_phase_out_review",
+      "income_band": "lower_middle_placeholder",
+      "name": "UBI-Lite Payment Cliff Case",
+      "non_claims": [
+        "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+        "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+        "Distributional scenario outputs do not modify firm-level CARSF liability."
+      ],
+      "payment_interaction_combined_gap": null,
+      "payment_interaction_residual_support_gap": null,
+      "payment_interaction_risk_band": null,
+      "payment_interaction_used": false,
+      "primary_risk_drivers": [
+        "budget stress: critical",
+        "payment cliff: high",
+        "residual household gap after support"
+      ],
+      "reemployment_risk_band": "medium",
+      "region_type": "mixed_metro_placeholder",
+      "regional_stress_band": "medium",
+      "residual_household_gap_after_support": 2000.0,
+      "scenario_id": "ubi_lite_payment_cliff_case",
+      "transition_support_amount": 7000.0,
+      "warnings": [
+        "Household budget result is synthetic and placeholder-only.",
+        "No real household, income, welfare, ABS, DSS, Services Australia, ATO, Treasury, PBO, or survey data is used.",
+        "Re-employment timing is a synthetic placeholder and not a labour-market forecast.",
+        "No ABS, HILDA, DSS, Services Australia, Treasury, PBO, or employer records are used.",
+        "Regional stress score is placeholder-only and not real regional modelling.",
+        "No ABS, Census, DSS, Services Australia, Treasury, PBO, labour-market, or geographic data is used.",
+        "Payment cliff result is a prototype warning only and not eligibility law.",
+        "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used.",
+        "Distributional scenario is synthetic-only and does not use or represent real households.",
+        "Payment interaction outputs do not modify firm-level CARSF liability.",
+        "Firm-level CARSF liability is not modified by distributional scenario outputs."
+      ]
+    },
+    {
+      "budget_stress_band": "high",
+      "cliff_severity_band": "none",
+      "household_id": "hh_young_worker_rebound",
+      "household_shock_band": "medium",
+      "household_type": "young_single_worker_retraining",
+      "income_band": "lower_middle_placeholder",
+      "name": "Young Worker Retraining Rebound",
+      "non_claims": [
+        "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
+        "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
+        "Distributional scenario outputs do not modify firm-level CARSF liability."
+      ],
+      "payment_interaction_combined_gap": null,
+      "payment_interaction_residual_support_gap": null,
+      "payment_interaction_risk_band": null,
+      "payment_interaction_used": false,
+      "primary_risk_drivers": [
+        "budget stress: high"
+      ],
+      "reemployment_risk_band": "low",
+      "region_type": "diversified_metro_placeholder",
+      "regional_stress_band": "medium",
+      "residual_household_gap_after_support": 0.0,
+      "scenario_id": "young_worker_retraining_rebound",
+      "transition_support_amount": 9000.0,
+      "warnings": [
+        "Household budget result is synthetic and placeholder-only.",
+        "No real household, income, welfare, ABS, DSS, Services Australia, ATO, Treasury, PBO, or survey data is used.",
+        "Re-employment timing is a synthetic placeholder and not a labour-market forecast.",
+        "No ABS, HILDA, DSS, Services Australia, Treasury, PBO, or employer records are used.",
+        "Regional stress score is placeholder-only and not real regional modelling.",
+        "No ABS, Census, DSS, Services Australia, Treasury, PBO, labour-market, or geographic data is used.",
+        "Payment cliff result is a prototype warning only and not eligibility law.",
+        "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used.",
+        "Distributional scenario is synthetic-only and does not use or represent real households.",
+        "Payment interaction outputs do not modify firm-level CARSF liability.",
+        "Firm-level CARSF liability is not modified by distributional scenario outputs."
+      ]
+    }
+  ]
+}

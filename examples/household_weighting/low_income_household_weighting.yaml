@@ -1,0 +1,55 @@
+example_id: low_income_household_weighting
+name: Low-Income Household Weighting
+purpose: Weights lower-income synthetic households.
+status: prototype_only
+illustrative_placeholder_only: true
+synthetic_weight_only: true
+not_calibrated: true
+not_representative: true
+no_real_household_data: true
+no_distributional_claim: true
+placeholder_notice: All weights and subgroups are synthetic illustrative placeholders only and are not ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data.
+calibration_status: not_calibrated
+subgroup_definitions:
+  - subgroup_id: lower_middle_income
+    subgroup_name: Lower-Middle Placeholder Income Band
+    income_band_filter: lower_middle_placeholder
+    illustrative_placeholder_only: true
+  - subgroup_id: critical_budget_stress
+    subgroup_name: Critical Budget Stress
+    budget_stress_filter: critical
+    illustrative_placeholder_only: true
+household_weights:
+  - scenario_id: single_adult_displaced_worker_high_rent
+    subgroup_id: lower_middle_income
+    weight_value: 2.0
+    weight_basis: lower-income synthetic placeholder stress weight
+    calibrated: false
+    calibration_source:
+    illustrative_placeholder_only: true
+    synthetic_weight_only: true
+  - scenario_id: single_parent_retraining_gap
+    subgroup_id: lower_middle_income
+    weight_value: 2.0
+    weight_basis: lower-income synthetic placeholder stress weight
+    calibrated: false
+    calibration_source:
+    illustrative_placeholder_only: true
+    synthetic_weight_only: true
+  - scenario_id: ubi_lite_payment_cliff_case
+    subgroup_id: lower_middle_income
+    weight_value: 1.5
+    weight_basis: lower-income synthetic placeholder stress weight
+    calibrated: false
+    calibration_source:
+    illustrative_placeholder_only: true
+    synthetic_weight_only: true
+  - scenario_id: single_parent_retraining_gap
+    subgroup_id: critical_budget_stress
+    weight_value: 1.0
+    weight_basis: critical-stress placeholder comparison
+    calibrated: false
+    calibration_source:
+    illustrative_placeholder_only: true
+    synthetic_weight_only: true
+interpretation: Lower-income placeholder weighting highlights support adequacy risks without claiming real income distribution effects.

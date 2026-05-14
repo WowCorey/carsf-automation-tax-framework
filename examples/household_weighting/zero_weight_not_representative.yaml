@@ -1,0 +1,34 @@
+example_id: zero_weight_not_representative
+name: Zero Weight Not Representative
+purpose: Shows that zero total weights produce not-assessable weighted averages.
+status: prototype_only
+illustrative_placeholder_only: true
+synthetic_weight_only: true
+not_calibrated: true
+not_representative: true
+no_real_household_data: true
+no_distributional_claim: true
+placeholder_notice: All weights and subgroups are synthetic illustrative placeholders only and are not ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data.
+calibration_status: zero_weight_placeholder
+subgroup_definitions:
+  - subgroup_id: all_synthetic_households
+    subgroup_name: All Synthetic Households
+    illustrative_placeholder_only: true
+household_weights:
+  - scenario_id: single_adult_displaced_worker_high_rent
+    subgroup_id: all_synthetic_households
+    weight_value: 0.0
+    weight_basis: zero-weight not-assessable placeholder
+    calibrated: false
+    calibration_source:
+    illustrative_placeholder_only: true
+    synthetic_weight_only: true
+  - scenario_id: young_worker_retraining_rebound
+    subgroup_id: all_synthetic_households
+    weight_value: 0.0
+    weight_basis: zero-weight not-assessable placeholder
+    calibrated: false
+    calibration_source:
+    illustrative_placeholder_only: true
+    synthetic_weight_only: true
+interpretation: Zero total synthetic weight deliberately produces not-assessable weighted averages and no representativeness claim.

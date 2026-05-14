@@ -118,6 +118,25 @@ Required source categories include ABS household and labour data, HILDA longitud
 
 No such calibration has occurred in this repository, and distributional scenario outputs are not real household modelling, welfare advice, eligibility law, DSS / Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.
 
+## Household Weighting Calibration
+
+Synthetic household weighting and subgroup aggregation require future calibration and privacy/legal review before any representativeness claim:
+
+- household composition distributions
+- income-band distributions
+- displacement incidence by household type, sector, and region
+- regional labour-market depth and transition capacity
+- housing, essential cost, savings, and debt-buffer distributions
+- existing transfer baseline interactions
+- re-employment timing and income recovery distributions
+- payment eligibility, inclusion, exclusion, leakage, and cliff-risk parameters
+- survey weights or population weights
+- uncertainty and confidence interval methods
+
+Required source categories include ABS, HILDA, Census, DSS / Services Australia, ATO aggregated income/tax data, regional labour-market data, household survey data, Treasury modelling, PBO costing methods, privacy/legal review, and welfare-administration review.
+
+No such calibration has occurred in this repository, real household data is not allowed in the repo, and household weighting outputs are not population estimates or real distributional modelling.
+
 ## Non-Claims
 
 The calibration shell is not legal, tax, Treasury, ATO, ABS, Fair Work, OECD, BEPS, audit, forensic, or economic validation. It does not prove any model setting is correct.

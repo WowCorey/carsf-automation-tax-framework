@@ -1,0 +1,58 @@
+example_id: regional_high_stress_weighting
+name: Regional High-Stress Weighting
+purpose: Weights high automation regional scenarios more heavily as a placeholder stress test.
+status: prototype_only
+illustrative_placeholder_only: true
+synthetic_weight_only: true
+not_calibrated: true
+not_representative: true
+no_real_household_data: true
+no_distributional_claim: true
+placeholder_notice: All weights and subgroups are synthetic illustrative placeholders only and are not ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data.
+calibration_status: stress_placeholder_not_calibrated
+subgroup_definitions:
+  - subgroup_id: regional_high_stress
+    subgroup_name: High Regional Stress
+    regional_stress_filter: high
+    illustrative_placeholder_only: true
+  - subgroup_id: regional_critical_stress
+    subgroup_name: Critical Regional Stress
+    regional_stress_filter: critical
+    illustrative_placeholder_only: true
+  - subgroup_id: all_synthetic_households
+    subgroup_name: All Synthetic Households
+    illustrative_placeholder_only: true
+household_weights:
+  - scenario_id: high_automation_region_cluster
+    subgroup_id: regional_critical_stress
+    weight_value: 4.0
+    weight_basis: stress-test placeholder overweighting
+    calibrated: false
+    calibration_source:
+    illustrative_placeholder_only: true
+    synthetic_weight_only: true
+  - scenario_id: dual_income_one_displaced_regional
+    subgroup_id: regional_high_stress
+    weight_value: 2.0
+    weight_basis: stress-test placeholder overweighting
+    calibrated: false
+    calibration_source:
+    illustrative_placeholder_only: true
+    synthetic_weight_only: true
+  - scenario_id: older_worker_low_reemployment
+    subgroup_id: regional_high_stress
+    weight_value: 2.0
+    weight_basis: stress-test placeholder overweighting
+    calibrated: false
+    calibration_source:
+    illustrative_placeholder_only: true
+    synthetic_weight_only: true
+  - scenario_id: young_worker_retraining_rebound
+    subgroup_id: all_synthetic_households
+    weight_value: 0.5
+    weight_basis: stress-test placeholder comparison
+    calibrated: false
+    calibration_source:
+    illustrative_placeholder_only: true
+    synthetic_weight_only: true
+interpretation: This stress case makes regional and high-automation synthetic scenarios more visible, but it is not representative weighting.

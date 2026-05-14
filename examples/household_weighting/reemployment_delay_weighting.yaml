@@ -1,0 +1,55 @@
+example_id: reemployment_delay_weighting
+name: Re-Employment Delay Weighting
+purpose: Weights long re-employment scenarios.
+status: prototype_only
+illustrative_placeholder_only: true
+synthetic_weight_only: true
+not_calibrated: true
+not_representative: true
+no_real_household_data: true
+no_distributional_claim: true
+placeholder_notice: All weights and subgroups are synthetic illustrative placeholders only and are not ABS, HILDA, Census, DSS, Services Australia, ATO, Treasury, PBO, welfare, income, or survey data.
+calibration_status: not_calibrated
+subgroup_definitions:
+  - subgroup_id: high_reemployment_risk
+    subgroup_name: High Re-Employment Risk
+    reemployment_risk_filter: high
+    illustrative_placeholder_only: true
+  - subgroup_id: critical_reemployment_risk
+    subgroup_name: Critical Re-Employment Risk
+    reemployment_risk_filter: critical
+    illustrative_placeholder_only: true
+household_weights:
+  - scenario_id: single_adult_displaced_worker_high_rent
+    subgroup_id: high_reemployment_risk
+    weight_value: 1.5
+    weight_basis: re-employment delay placeholder stress weight
+    calibrated: false
+    calibration_source:
+    illustrative_placeholder_only: true
+    synthetic_weight_only: true
+  - scenario_id: single_parent_retraining_gap
+    subgroup_id: high_reemployment_risk
+    weight_value: 1.5
+    weight_basis: re-employment delay placeholder stress weight
+    calibrated: false
+    calibration_source:
+    illustrative_placeholder_only: true
+    synthetic_weight_only: true
+  - scenario_id: older_worker_low_reemployment
+    subgroup_id: critical_reemployment_risk
+    weight_value: 3.0
+    weight_basis: re-employment delay placeholder stress weight
+    calibrated: false
+    calibration_source:
+    illustrative_placeholder_only: true
+    synthetic_weight_only: true
+  - scenario_id: high_automation_region_cluster
+    subgroup_id: critical_reemployment_risk
+    weight_value: 3.0
+    weight_basis: re-employment delay placeholder stress weight
+    calibrated: false
+    calibration_source:
+    illustrative_placeholder_only: true
+    synthetic_weight_only: true
+interpretation: Re-employment delay weighting tests whether longer displacement timing dominates synthetic residual hardship.
