@@ -52,6 +52,12 @@ from .fiscal_trajectory import FiscalTrajectoryInput, FiscalTrajectoryResult, Fi
 from .frv import net_labour_tax_gap
 from .group_runner import GroupedPreviewResult, run_grouped_previews
 from .grouping import GroupingRiskResult, evaluate_grouping_risk
+from .household_calibration_shell import (
+    HouseholdCalibrationRequirement,
+    HouseholdCalibrationShellResult,
+    get_household_calibration_requirements,
+)
+from .household_weights import HouseholdWeight, HouseholdWeightResult, evaluate_household_weight
 from .households import HouseholdBudgetResult, SyntheticHousehold, evaluate_household_budget
 from .incidence import IncidenceAssumption, IncidenceResult, evaluate_tax_incidence
 from .investment import InvestmentGuardrailInput, InvestmentGuardrailResult, evaluate_investment_guardrail
@@ -105,6 +111,7 @@ from .sensitivity import (
     sweep_pass_through,
 )
 from .support_incidence import SupportIncidenceAssumption, SupportIncidenceResult, evaluate_support_incidence
+from .subgroups import SubgroupAssignment, SubgroupDefinition, assign_subgroups
 from .targeting import TargetPopulationInput, TargetPopulationResult, TargetingCriteria, evaluate_target_population
 from .ingestion_audit import IngestionAuditRecord, create_ingestion_audit_record
 from .transfer_pricing import (
@@ -132,6 +139,12 @@ from .transfer_runner import (
 )
 from .transfer_pressure import TransferPressureInput, TransferPressureResult, evaluate_transfer_pressure
 from .types import AIIWeights, CoverageResult, LevyParameters, LevyResult, QLCWeights, Worker
+from .weighted_distributional import (
+    WeightedDistributionalInput,
+    WeightedDistributionalResult,
+    WeightedSubgroupResult,
+    run_weighted_distributional_aggregation,
+)
 from .workforce_displacement import (
     WorkforceTrajectoryInput,
     WorkforceTrajectoryResult,
@@ -174,6 +187,10 @@ __all__ = [
     "GroupedPreviewResult",
     "GroupingRiskResult",
     "HouseholdBudgetResult",
+    "HouseholdCalibrationRequirement",
+    "HouseholdCalibrationShellResult",
+    "HouseholdWeight",
+    "HouseholdWeightResult",
     "IncidenceAssumption",
     "IncidenceResult",
     "IngestionAuditRecord",
@@ -220,6 +237,8 @@ __all__ = [
     "SupportIncidenceAssumption",
     "SupportIncidenceResult",
     "SyntheticHousehold",
+    "SubgroupAssignment",
+    "SubgroupDefinition",
     "TargetPopulationInput",
     "TargetPopulationResult",
     "TargetingCriteria",
@@ -237,6 +256,9 @@ __all__ = [
     "TransferPressureInput",
     "TransferPressureResult",
     "UnitCompatibilityResult",
+    "WeightedDistributionalInput",
+    "WeightedDistributionalResult",
+    "WeightedSubgroupResult",
     "Worker",
     "WorkforceTrajectoryInput",
     "WorkforceTrajectoryResult",
@@ -256,6 +278,7 @@ __all__ = [
     "create_decision_log",
     "create_ingestion_audit_record",
     "create_redaction_plan",
+    "assign_subgroups",
     "evaluate_apportionment",
     "evaluate_avoidance_risk",
     "evaluate_burden_balance",
@@ -263,6 +286,7 @@ __all__ = [
     "evaluate_group_aggregation",
     "evaluate_grouping_risk",
     "evaluate_household_budget",
+    "evaluate_household_weight",
     "evaluate_ingestion_request",
     "evaluate_investment_guardrail",
     "evaluate_mixed_unit_exposure",
@@ -288,6 +312,7 @@ __all__ = [
     "get_access_control_policy",
     "get_calibration_registry",
     "get_default_evidence_requirements",
+    "get_household_calibration_requirements",
     "get_default_ingestion_policy",
     "get_default_repo_guardrail_policy",
     "get_retention_policy",
@@ -304,6 +329,7 @@ __all__ = [
     "run_fiscal_sensitivity",
     "run_fiscal_trajectory",
     "run_grouped_previews",
+    "run_weighted_distributional_aggregation",
     "run_payment_sensitivity",
     "run_example",
     "run_transition_funding",

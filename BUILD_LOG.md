@@ -468,3 +468,45 @@ Limitations:
 - Distributional scenario outputs are synthetic placeholders only.
 - They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.
 - The distributional scenario layer does not modify firm-level CARSF liability.
+
+## V1.5 Household Weighting and Subgroup Aggregation Shell
+
+Branch: `v1.5-household-weighting-subgroup-aggregation`
+
+Baseline: PR #14 merged into `main`, including synthetic household distributional scenarios and payment-interaction linkage.
+
+Purpose of this build:
+
+- Add synthetic household weight validation.
+- Add synthetic subgroup definitions and deterministic subgroup assignment.
+- Add weighted distributional aggregation for residual household gaps and high/critical shock shares.
+- Add household calibration-readiness requirements.
+- Add household weighting examples, reports, tests, CI step, documentation, and Streamlit page.
+
+Tests run:
+
+- `python -m pytest` - 478 passed, 1 pytest-asyncio deprecation warning under Python 3.14.
+- `python -m compileall -q model simulator scripts` - passed.
+- Recursive YAML parse check for schedules/examples/data - parsed 61 YAML files.
+- `python scripts/run_examples.py` - regenerated existing example report outputs successfully.
+- `python scripts/run_evidence_workflow.py` - regenerated mock evidence workflow reports successfully.
+- `python scripts/run_ingestion_controls.py` - regenerated secure-ingestion control reports successfully.
+- `python scripts/run_repo_guardrails.py` - passed with zero denied findings and 48 warning findings.
+- `python scripts/run_investment_guardrails.py` - regenerated investment guardrail reports successfully.
+- `python scripts/run_fiscal_trajectory.py` - regenerated fiscal trajectory reports successfully.
+- `python scripts/run_transition_funding.py` - regenerated transition funding reports successfully.
+- `python scripts/run_payment_interactions.py` - regenerated payment interaction reports successfully.
+- `python scripts/run_distributional_scenarios.py` - regenerated distributional scenario reports successfully.
+- `python scripts/run_household_weighting.py` - generated household weighting reports successfully.
+- Streamlit bare import probe for `simulator/app.py` and `simulator/pages/17_Household_Weighting.py` - passed.
+
+Reports generated:
+
+- `reports/household_weighting.json`
+- `reports/household_weighting.md`
+
+Limitations:
+
+- Household weighting outputs are synthetic placeholders only.
+- They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.
+- The household weighting layer does not modify firm-level CARSF liability.
