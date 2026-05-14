@@ -1,0 +1,353 @@
+{
+  "metadata": {
+    "firm_level_liability_logic_modified": false,
+    "generated_at": "2026-05-14T11:39:54+00:00",
+    "non_claims": [
+      "Sector schedules are prototype placeholders only. They are not calibrated. They are not legal schedules. They are not Treasury schedules. They are not ATO guidance. They are not ABS/ATO/DSS/PBO analysis. They do not contain real industry data. They must not be used to estimate actual tax payable.",
+      "Sector schedules do not modify firm-level CARSF liability logic.",
+      "Sector schedules do not implement real multi-schedule attribution.",
+      "Sector schedules do not validate OPFTE, FRV, caps, or safe-harbour thresholds."
+    ],
+    "real_industry_data_added": false,
+    "status": "prototype_sector_schedule_expansion_placeholders_only",
+    "version": "CARSF V1.5 prototype"
+  },
+  "raw_schedule_status": [
+    {
+      "calibration_status": "illustrative_placeholder_values_only",
+      "confirmed_baseline_figures_count": 0,
+      "schedule_id": "accounting_administration",
+      "status": "placeholder_prototype_for_v1_5"
+    },
+    {
+      "calibration_status": "illustrative_placeholder_values_only",
+      "confirmed_baseline_figures_count": 0,
+      "schedule_id": "automotive_repair",
+      "status": "placeholder_prototype_for_v1_5"
+    },
+    {
+      "calibration_status": "illustrative_placeholder_values_only",
+      "confirmed_baseline_figures_count": 0,
+      "schedule_id": "call_centres_customer_support",
+      "status": "placeholder_prototype_for_v1_5"
+    },
+    {
+      "calibration_status": "illustrative_placeholder_values_only",
+      "confirmed_baseline_figures_count": 0,
+      "schedule_id": "logistics_warehousing",
+      "status": "placeholder_prototype_for_v1_5"
+    },
+    {
+      "calibration_status": "illustrative_placeholder_values_only",
+      "confirmed_baseline_figures_count": 0,
+      "schedule_id": "retail_self_checkout_fulfilment",
+      "status": "placeholder_prototype_for_v1_5"
+    },
+    {
+      "calibration_status": "illustrative_placeholder_values_only",
+      "confirmed_baseline_figures_count": 0,
+      "schedule_id": "software_digital_platforms",
+      "status": "placeholder_prototype_for_v1_5"
+    }
+  ],
+  "schedules": [
+    {
+      "aii_weight_total": 1.0,
+      "avoidance_risks": [
+        "offshore_document_processing_services",
+        "ordinary_admin_relabelling",
+        "related_party_software_fees",
+        "token_reviewer_qlc_inflation"
+      ],
+      "calibration_status": "illustrative_placeholder_values_only",
+      "canonical_output_unit": "standardised_transactions_or_filings_processed",
+      "caps": {
+        "LAMBDA_sector": 0.25,
+        "lambda_sector": 0.18,
+        "rent_tax_rate": 0.2,
+        "theta": 0.6,
+        "uplift_rate": 1.12
+      },
+      "data_required_for_real_calibration": [
+        "ABS and ATO data separating accounting, bookkeeping, payroll, administration, and professional-services activities.",
+        "Professional-services and administration workforce wage and output data.",
+        "Fair Work award, classification, and job-security data for clerical and accounting-support roles.",
+        "Accounting platform transaction volumes, workflow automation adoption, and document-processing data.",
+        "HILDA, DSS, and labour-market transition data for displaced administrative and accounting-support workers.",
+        "Legal and tax review of professional judgement, advice, audit, and lodgement boundaries."
+      ],
+      "frv": {
+        "floor": 26000.0,
+        "full": 92000.0,
+        "standard": 48000.0
+      },
+      "is_new_v1_5_expansion_schedule": true,
+      "measurement_risks": [
+        "Automated accounting workflows should not be routed into a low-intensity generic administration label.",
+        "Related software, offshore processing, and employer entities require grouped review where Australian output is served."
+      ],
+      "opfte_placeholder": 12000.0,
+      "path": "schedules\\accounting_administration.yaml",
+      "placeholder_assumptions": [
+        "OPFTE, FRV, lambda, LAMBDA, theta, uplift, and rent-tax-rate values are placeholders.",
+        "AI document processing share, automated reconciliation share, lodgement-support automation, and compute spend ratios require real sector data.",
+        "This schedule is not calibrated, not official, and must not be used to estimate actual tax payable."
+      ],
+      "qlc_weight_total": 0.72,
+      "schedule_id": "accounting_administration",
+      "schedule_name": "Prototype Schedule D - Accounting / Administration",
+      "status": "placeholder_prototype_for_v1_5"
+    },
+    {
+      "aii_weight_total": 1.0,
+      "avoidance_risks": [
+        "entity_splitting",
+        "fake_qlc_inflation",
+        "offshore_ai_services",
+        "related_party_ai_service_fees",
+        "token_human_oversight_jobs"
+      ],
+      "calibration_status": "illustrative_placeholder_values_only",
+      "canonical_output_unit": "book_hour_equivalent_jobs_completed",
+      "caps": {
+        "LAMBDA_sector": 0.25,
+        "lambda_sector": 0.18,
+        "rent_tax_rate": 0.2,
+        "theta": 0.6,
+        "uplift_rate": 1.12
+      },
+      "data_required_for_real_calibration": [
+        "ATO small-business and company tax data by automotive repair ANZSIC class.",
+        "ABS labour force and output measures for repair and maintenance.",
+        "Fair Work occupational classifications, wage distributions, and casualisation measures.",
+        "HILDA income-transition and wage-scarring data for displaced mechanics and apprentices.",
+        "DSS transfer-system data and HELP repayment loss assumptions.",
+        "Workshop robotics and AI diagnostic adoption data from industry surveys."
+      ],
+      "frv": {
+        "floor": 25000.0,
+        "full": 85000.0,
+        "standard": 45000.0
+      },
+      "is_new_v1_5_expansion_schedule": false,
+      "measurement_risks": [
+        "Dominant activity test should prevent a robotic repair facility from selecting a lower-intensity administrative schedule.",
+        "Mixed businesses require schedule apportionment rather than choosing the most favourable schedule."
+      ],
+      "opfte_placeholder": 900.0,
+      "path": "schedules\\automotive_repair.yaml",
+      "placeholder_assumptions": [
+        "OPFTE, FRV, lambda, LAMBDA, theta, uplift, and rent-tax-rate values are placeholders.",
+        "Worker-assist percentile thresholds require real sector data.",
+        "Robotics and AI diagnostic adoption rates require industry survey data."
+      ],
+      "qlc_weight_total": 0.7,
+      "schedule_id": "automotive_repair",
+      "schedule_name": "Prototype Schedule A - Automotive Repair",
+      "status": "placeholder_prototype_for_v1_5"
+    },
+    {
+      "aii_weight_total": 1.0,
+      "avoidance_risks": [
+        "offshore_chatbot_service_fees",
+        "outsourced_support_entity_splitting",
+        "relabelled_ai_resolution",
+        "token_human_escalation_roles"
+      ],
+      "calibration_status": "illustrative_placeholder_values_only",
+      "canonical_output_unit": "resolved_customer_support_cases",
+      "caps": {
+        "LAMBDA_sector": 0.26,
+        "lambda_sector": 0.19,
+        "rent_tax_rate": 0.21,
+        "theta": 0.6,
+        "uplift_rate": 1.12
+      },
+      "data_required_for_real_calibration": [
+        "ABS and industry customer-service workforce and output data.",
+        "ATO aggregated tax data for customer support and contact-centre entities.",
+        "CRM/ticketing benchmark data for resolved support cases per qualified FTE.",
+        "Fair Work wage, award, casualisation, and job-security data for support workers.",
+        "AI agent, chatbot, and automated triage adoption data from industry surveys.",
+        "DSS, HILDA, and labour-market transition data for displaced customer support workers."
+      ],
+      "frv": {
+        "floor": 24000.0,
+        "full": 82000.0,
+        "standard": 43000.0
+      },
+      "is_new_v1_5_expansion_schedule": true,
+      "measurement_risks": [
+        "Support entities should not avoid this schedule by describing chatbot case resolution as ordinary software administration.",
+        "Outsourced or offshore support structures require grouped-entity and related-party review."
+      ],
+      "opfte_placeholder": 8500.0,
+      "path": "schedules\\call_centres_customer_support.yaml",
+      "placeholder_assumptions": [
+        "OPFTE, FRV, lambda, LAMBDA, theta, uplift, and rent-tax-rate values are placeholders.",
+        "AI agent resolution share, automated triage share, escalation ratios, and compute spend ratios require real sector data.",
+        "This schedule is not calibrated, not official, and must not be used to estimate actual tax payable."
+      ],
+      "qlc_weight_total": 0.7,
+      "schedule_id": "call_centres_customer_support",
+      "schedule_name": "Prototype Schedule C - Call Centres / Customer Support",
+      "status": "placeholder_prototype_for_v1_5"
+    },
+    {
+      "aii_weight_total": 1.0,
+      "avoidance_risks": [
+        "entity_splitting",
+        "fake_qlc_inflation",
+        "offshore_ai_services",
+        "related_party_ai_service_fees",
+        "sector_classification_arbitrage",
+        "token_human_oversight_jobs"
+      ],
+      "calibration_status": "illustrative_placeholder_values_only",
+      "canonical_output_unit": "tonne_kilometres_or_pallet_movements",
+      "caps": {
+        "LAMBDA_sector": 0.27,
+        "lambda_sector": 0.2,
+        "rent_tax_rate": 0.22,
+        "theta": 0.6,
+        "uplift_rate": 1.12
+      },
+      "data_required_for_real_calibration": [
+        "ATO, ABS, and industry data separating freight, last-mile delivery, warehousing, and platform dispatch.",
+        "State payroll tax exposure and regional employment concentration.",
+        "HILDA and DSS data on driver, picker, packer, dispatcher, and warehouse transition outcomes.",
+        "Autonomous vehicle kilometres, automated dispatch share, and warehouse robotics adoption data.",
+        "Transfer pricing, diverted profits tax, and significant global entity interaction analysis."
+      ],
+      "frv": {
+        "floor": 26000.0,
+        "full": 90000.0,
+        "standard": 47000.0
+      },
+      "is_new_v1_5_expansion_schedule": false,
+      "measurement_risks": [
+        "Platform dispatch, warehouse robotics, and transport operations require apportionment where multiple activities are present.",
+        "A firm cannot avoid the schedule by describing automated dispatch as software administration when it controls Australian logistics output."
+      ],
+      "opfte_placeholder": 100000.0,
+      "path": "schedules\\logistics_warehousing.yaml",
+      "placeholder_assumptions": [
+        "OPFTE, FRV, lambda, LAMBDA, theta, uplift, and rent-tax-rate values are placeholders.",
+        "Freight, delivery, warehousing, and platform-dispatch split requires real data.",
+        "Cross-border attribution requires international tax and trade review."
+      ],
+      "qlc_weight_total": 0.7,
+      "schedule_id": "logistics_warehousing",
+      "schedule_name": "Prototype Schedule B - Logistics / Warehousing",
+      "status": "placeholder_prototype_for_v1_5"
+    },
+    {
+      "aii_weight_total": 1.0,
+      "avoidance_risks": [
+        "customer_labour_relabelling",
+        "fulfilment_entity_splitting",
+        "robotics_leasing_relabelling",
+        "underreported_automated_transaction_share"
+      ],
+      "calibration_status": "illustrative_placeholder_values_only",
+      "canonical_output_unit": "customer_transactions_or_order_fulfilments",
+      "caps": {
+        "LAMBDA_sector": 0.27,
+        "lambda_sector": 0.19,
+        "rent_tax_rate": 0.21,
+        "theta": 0.6,
+        "uplift_rate": 1.12
+      },
+      "data_required_for_real_calibration": [
+        "ABS, ATO, and industry data separating store retail, online retail, fulfilment, and marketplace activities.",
+        "POS, self-checkout, fulfilment, and inventory automation benchmark data.",
+        "Fair Work retail, warehouse, and fulfilment wage and employment data.",
+        "State payroll tax and regional employment data for retail and fulfilment sites.",
+        "HILDA, DSS, and labour-market transition data for displaced retail and fulfilment workers.",
+        "Legal review of customer self-service, contractor labour, platform retail, and fulfilment attribution."
+      ],
+      "frv": {
+        "floor": 23000.0,
+        "full": 80000.0,
+        "standard": 42000.0
+      },
+      "is_new_v1_5_expansion_schedule": true,
+      "measurement_risks": [
+        "Retail, online fulfilment, and logistics outputs require apportionment where multiple activities are present.",
+        "Automated fulfilment cannot avoid this schedule by moving into a separate low-labour related entity without grouped review."
+      ],
+      "opfte_placeholder": 18000.0,
+      "path": "schedules\\retail_self_checkout_fulfilment.yaml",
+      "placeholder_assumptions": [
+        "OPFTE, FRV, lambda, LAMBDA, theta, uplift, and rent-tax-rate values are placeholders.",
+        "Self-checkout transaction share, automated fulfilment share, robotics capital ratio, and inventory automation share require real sector data.",
+        "This schedule is not calibrated, not official, and must not be used to estimate actual tax payable."
+      ],
+      "qlc_weight_total": 0.7,
+      "schedule_id": "retail_self_checkout_fulfilment",
+      "schedule_name": "Prototype Schedule E - Retail Self-Checkout / Fulfilment",
+      "status": "placeholder_prototype_for_v1_5"
+    },
+    {
+      "aii_weight_total": 1.0,
+      "avoidance_risks": [
+        "cloud_inference_relabelling",
+        "low_declared_australian_profit",
+        "offshore_ip_platform_royalties",
+        "open_source_ai_unresolved",
+        "related_party_model_access_fees"
+      ],
+      "calibration_status": "illustrative_placeholder_values_only",
+      "canonical_output_unit": "australian_served_platform_transactions_or_workflows",
+      "caps": {
+        "LAMBDA_sector": 0.3,
+        "lambda_sector": 0.21,
+        "rent_tax_rate": 0.24,
+        "theta": 0.6,
+        "uplift_rate": 1.12
+      },
+      "data_required_for_real_calibration": [
+        "ABS, ATO, and industry data separating software, platform, marketplace, digital services, and AI workflow activities.",
+        "Platform transaction, workflow, recommendation, matching, and automated decision volume data.",
+        "Cloud, inference, model, and data-access cost data with Australian-facing attribution.",
+        "Fair Work and labour-market data for Australian software, moderation, support, and operations workforces.",
+        "HILDA, DSS, and labour-market transition data for displaced administrative, platform, support, and digital-service workers.",
+        "AASB 138, tax counsel, Treasury, and ATO review of intangible assets, capital base, IP royalties, and Australian value attribution."
+      ],
+      "frv": {
+        "floor": 30000.0,
+        "full": 120000.0,
+        "standard": 60000.0
+      },
+      "is_new_v1_5_expansion_schedule": true,
+      "measurement_risks": [
+        "Platform matching, ranking, pricing, workflow allocation, and recommendation systems require apportionment where mixed with retail, logistics, or support output.",
+        "Offshore IP ownership, model access, or cloud infrastructure should not determine schedule classification alone."
+      ],
+      "opfte_placeholder": 25000.0,
+      "path": "schedules\\software_digital_platforms.yaml",
+      "placeholder_assumptions": [
+        "OPFTE, FRV, lambda, LAMBDA, theta, uplift, and rent-tax-rate values are placeholders.",
+        "Compute spend ratio, automated decision volume, AI-generated workflow share, and platform transaction automation share require real sector data.",
+        "Capital-base treatment for software firms remains unresolved and subject to AASB 138, tax counsel, and Treasury review.",
+        "This schedule is not calibrated, not official, and must not be used to estimate actual tax payable."
+      ],
+      "qlc_weight_total": 0.72,
+      "schedule_id": "software_digital_platforms",
+      "schedule_name": "Prototype Schedule F - Software / Digital Platforms",
+      "status": "placeholder_prototype_for_v1_5"
+    }
+  ],
+  "summary": {
+    "all_aii_weights_valid": true,
+    "all_schedules_placeholder_only": true,
+    "new_schedule_count": 4,
+    "new_schedule_ids": [
+      "accounting_administration",
+      "call_centres_customer_support",
+      "retail_self_checkout_fulfilment",
+      "software_digital_platforms"
+    ],
+    "schedule_count": 6
+  }
+}

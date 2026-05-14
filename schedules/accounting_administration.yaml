@@ -1,0 +1,104 @@
+schedule_id: accounting_administration
+schedule_name: Prototype Schedule D - Accounting / Administration
+status: placeholder_prototype_for_v1_5
+canonical_output_unit: standardised_transactions_or_filings_processed
+calibration_status: illustrative_placeholder_values_only
+confirmed_baseline_figures: []
+measurement_scope:
+  placeholder_notice: This schedule is not calibrated and must not be used to estimate actual tax payable.
+  covered_activity_examples:
+    - bookkeeping
+    - payroll processing
+    - BAS preparation support
+    - invoice reconciliation
+    - accounts payable / receivable
+    - document classification
+    - administrative workflow automation
+  excluded_or_separately_classified_activity_examples:
+    - legal advice
+    - audit opinion work
+    - strategic tax advice
+    - pure software licensing without Australian administrative output
+  dominant_activity_test_placeholder: Classification should follow Australian-attributable transaction, filing, or administrative workflow output, not professional-services branding alone.
+qlc:
+  weights:
+    alpha_wage_quality: 0.20
+    beta_job_security: 0.18
+    gamma_skill_development: 0.18
+    delta_australian_nexus: 0.16
+  qlc_max_multiplier: 1.25
+  notes:
+    - Scores are bounded in [0, 1].
+    - Token reviewer roles require verified review hours, responsibility, training, and Australian nexus.
+    - Skilled human judgement should be evidenced separately from automated document handling.
+aii:
+  weights:
+    compute_ratio: 0.25
+    auto_decision_ratio: 0.25
+    robotics_capital_ratio: 0.05
+    auto_process_share: 0.45
+  component_notes:
+    compute_ratio: Accounting workflow, document AI, reconciliation, lodgement-support, and administration automation compute spend as a share of operating expenditure.
+    auto_decision_ratio: Automated classification, reconciliation, approval, filing-support, or exception-routing decisions without substantive human review.
+    robotics_capital_ratio: Physical robotics is normally low but remains available for automated document or mailroom infrastructure where relevant.
+    auto_process_share: Share of standardised transactions or filings processed through automated workflows.
+opfte_libc_placeholder:
+  value: 12000.0
+  unit: standardised_transactions_or_filings_processed_per_qualified_fte
+  evidence_label: illustrative_placeholder
+frv:
+  floor_placeholder: 26000.0
+  standard_placeholder: 48000.0
+  full_placeholder: 92000.0
+  evidence_label: illustrative_placeholder
+caps:
+  lambda_sector: 0.18
+  LAMBDA_sector: 0.25
+  theta: 0.60
+  uplift_rate: 1.12
+  rent_tax_rate: 0.20
+safe_harbours:
+  threshold_status: illustrative_placeholder_values_only
+  small_business_revenue_threshold_placeholder: 10000000.0
+  low_nltg_threshold_placeholder: 0.25
+  substantial_human_labour_qlc_hle_ratio_placeholder: 0.35
+  low_qlc_review_ratio_placeholder: 0.30
+  worker_assist_concession_notes:
+    - Human-supervised accounting tools may qualify for worker-assist review only where substantive human judgement remains verified.
+    - Automated transaction classification, reconciliation, and lodgement-support shares require separate measurement.
+  professional_services_review_notes:
+    - Professional judgement, audit, legal, and tax-advice boundaries require specialist review before operative use.
+measurement_controls:
+  output_measurement_placeholder:
+    canonical_unit_evidence: Practice-management systems, payroll platforms, accounts payable / receivable logs, document-processing records, BAS preparation workflow records, and audited conversion to standardised transactions or filings.
+    anti_gaming_note: Output counts should prevent splitting small tasks into inflated transaction units or relabelling automated processing as manual review.
+  aava_deductibility_reference: paper/aava_deductibility_appendix.md
+  qlc_evidence_placeholder:
+    - payroll records
+    - timesheets or workflow records
+    - reviewer notes and exception-handling evidence
+    - training records
+    - Australian work-location evidence
+  classification_arbitrage_controls:
+    - Automated accounting workflows should not be routed into a low-intensity generic administration label.
+    - Related software, offshore processing, and employer entities require grouped review where Australian output is served.
+avoidance_controls:
+  ordinary_admin_relabelling:
+    placeholder_response: Require evidence separating ordinary human administration from automated accounting or document-processing output.
+  offshore_document_processing_services:
+    placeholder_response: Review offshore service fees and destination attribution where Australian accounting output is served.
+  related_party_software_fees:
+    placeholder_response: Apply transfer-pricing preview and AAVA deductibility review to related-party platform or software charges.
+  token_reviewer_qlc_inflation:
+    placeholder_response: Apply per-worker QLC cap and evidence checks for substantive review, wages, security, skill development, and Australian nexus.
+placeholder_assumptions:
+  - OPFTE, FRV, lambda, LAMBDA, theta, uplift, and rent-tax-rate values are placeholders.
+  - AI document processing share, automated reconciliation share, lodgement-support automation, and compute spend ratios require real sector data.
+  - This schedule is not calibrated, not official, and must not be used to estimate actual tax payable.
+data_required_for_real_calibration:
+  - ABS and ATO data separating accounting, bookkeeping, payroll, administration, and professional-services activities.
+  - Professional-services and administration workforce wage and output data.
+  - Fair Work award, classification, and job-security data for clerical and accounting-support roles.
+  - Accounting platform transaction volumes, workflow automation adoption, and document-processing data.
+  - HILDA, DSS, and labour-market transition data for displaced administrative and accounting-support workers.
+  - Legal and tax review of professional judgement, advice, audit, and lodgement boundaries.

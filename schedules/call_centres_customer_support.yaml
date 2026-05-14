@@ -1,0 +1,102 @@
+schedule_id: call_centres_customer_support
+schedule_name: Prototype Schedule C - Call Centres / Customer Support
+status: placeholder_prototype_for_v1_5
+canonical_output_unit: resolved_customer_support_cases
+calibration_status: illustrative_placeholder_values_only
+confirmed_baseline_figures: []
+measurement_scope:
+  placeholder_notice: This schedule is not calibrated and must not be used to estimate actual tax payable.
+  covered_activity_examples:
+    - inbound customer support
+    - outbound customer support
+    - complaint triage
+    - helpdesk tickets
+    - chatbot-supported case resolution
+    - human escalation workflows
+  excluded_or_separately_classified_activity_examples:
+    - sales commissions not tied to support case resolution
+    - marketing campaign management
+    - pure software licensing without Australian support output
+  dominant_activity_test_placeholder: Classification should follow the activity producing Australian-attributable customer support cases, not the channel label used by the entity.
+qlc:
+  weights:
+    alpha_wage_quality: 0.18
+    beta_job_security: 0.18
+    gamma_skill_development: 0.14
+    delta_australian_nexus: 0.20
+  qlc_max_multiplier: 1.25
+  notes:
+    - Scores are bounded in [0, 1].
+    - Human escalation roles require verified substantive work, not nominal review labels.
+    - Australian nexus requires evidence of Australian workers, location, and customer-facing support activity.
+aii:
+  weights:
+    compute_ratio: 0.25
+    auto_decision_ratio: 0.30
+    robotics_capital_ratio: 0.05
+    auto_process_share: 0.40
+  component_notes:
+    compute_ratio: Support AI, chatbot, speech analytics, routing, and inference compute spend as a share of operating expenditure.
+    auto_decision_ratio: Automated triage, resolution, refund, escalation, or prioritisation decisions without substantive human review.
+    robotics_capital_ratio: Physical robotics is normally low for this schedule but remains available for contact-centre automation infrastructure where relevant.
+    auto_process_share: Share of resolved support cases completed by automated or chatbot-supported processes.
+opfte_libc_placeholder:
+  value: 8500.0
+  unit: resolved_customer_support_cases_per_qualified_fte
+  evidence_label: illustrative_placeholder
+frv:
+  floor_placeholder: 24000.0
+  standard_placeholder: 43000.0
+  full_placeholder: 82000.0
+  evidence_label: illustrative_placeholder
+caps:
+  lambda_sector: 0.19
+  LAMBDA_sector: 0.26
+  theta: 0.60
+  uplift_rate: 1.12
+  rent_tax_rate: 0.21
+safe_harbours:
+  threshold_status: illustrative_placeholder_values_only
+  small_business_revenue_threshold_placeholder: 10000000.0
+  low_nltg_threshold_placeholder: 0.25
+  substantial_human_labour_qlc_hle_ratio_placeholder: 0.35
+  low_qlc_review_ratio_placeholder: 0.30
+  worker_assist_concession_notes:
+    - AI-assisted search, transcription, translation, or summarisation does not by itself prove labour substitution.
+    - Automated case closure, refund approval, complaint triage, or escalation suppression requires review.
+  essential_service_review_notes:
+    - Critical support functions for banking, utilities, health, safety, or emergency services require additional policy review.
+measurement_controls:
+  output_measurement_placeholder:
+    canonical_unit_evidence: CRM records, ticketing systems, call-centre logs, chatbot transcripts, escalation records, and audited conversion to resolved customer support cases.
+    anti_gaming_note: Output counts should prevent artificial case splitting, unverified bot deflection, and relabelling AI resolutions as human-supervised work.
+  aava_deductibility_reference: paper/aava_deductibility_appendix.md
+  qlc_evidence_placeholder:
+    - payroll records
+    - roster or shift records
+    - training records
+    - Australian work-location evidence
+    - evidence of substantive escalation work
+  classification_arbitrage_controls:
+    - Support entities should not avoid this schedule by describing chatbot case resolution as ordinary software administration.
+    - Outsourced or offshore support structures require grouped-entity and related-party review.
+avoidance_controls:
+  relabelled_ai_resolution:
+    placeholder_response: Require evidence distinguishing human-resolved cases from bot-resolved or AI-triaged cases.
+  offshore_chatbot_service_fees:
+    placeholder_response: Review offshore or related-party chatbot fees against Australian-facing support output and AAVA treatment.
+  token_human_escalation_roles:
+    placeholder_response: Count only verified substantive worker contribution in QLC and do not let token escalation labels reduce AII.
+  outsourced_support_entity_splitting:
+    placeholder_response: Apply grouped-entity review for separated platform, support, employer, and offshore service entities.
+placeholder_assumptions:
+  - OPFTE, FRV, lambda, LAMBDA, theta, uplift, and rent-tax-rate values are placeholders.
+  - AI agent resolution share, automated triage share, escalation ratios, and compute spend ratios require real sector data.
+  - This schedule is not calibrated, not official, and must not be used to estimate actual tax payable.
+data_required_for_real_calibration:
+  - ABS and industry customer-service workforce and output data.
+  - ATO aggregated tax data for customer support and contact-centre entities.
+  - CRM/ticketing benchmark data for resolved support cases per qualified FTE.
+  - Fair Work wage, award, casualisation, and job-security data for support workers.
+  - AI agent, chatbot, and automated triage adoption data from industry surveys.
+  - DSS, HILDA, and labour-market transition data for displaced customer support workers.

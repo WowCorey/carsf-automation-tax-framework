@@ -1,0 +1,101 @@
+schedule_id: retail_self_checkout_fulfilment
+schedule_name: Prototype Schedule E - Retail Self-Checkout / Fulfilment
+status: placeholder_prototype_for_v1_5
+canonical_output_unit: customer_transactions_or_order_fulfilments
+calibration_status: illustrative_placeholder_values_only
+confirmed_baseline_figures: []
+measurement_scope:
+  placeholder_notice: This schedule is not calibrated and must not be used to estimate actual tax payable.
+  covered_activity_examples:
+    - self-checkout transactions
+    - automated inventory management
+    - automated online order fulfilment
+    - robotic picking / packing
+    - automated customer service tied to retail transactions
+  excluded_or_separately_classified_activity_examples:
+    - wholesale distribution not tied to retail transactions
+    - pure marketplace advertising
+    - unrelated logistics output that should be apportioned to logistics / warehousing
+  dominant_activity_test_placeholder: Classification should follow Australian customer transactions or order fulfilments where automation substitutes retail or fulfilment labour.
+qlc:
+  weights:
+    alpha_wage_quality: 0.18
+    beta_job_security: 0.20
+    gamma_skill_development: 0.12
+    delta_australian_nexus: 0.20
+  qlc_max_multiplier: 1.25
+  notes:
+    - Scores are bounded in [0, 1].
+    - Customer self-service does not count as QLC.
+    - Store supervision of self-checkout requires verified substantive worker contribution before QLC scoring.
+aii:
+  weights:
+    compute_ratio: 0.15
+    auto_decision_ratio: 0.25
+    robotics_capital_ratio: 0.25
+    auto_process_share: 0.35
+  component_notes:
+    compute_ratio: Self-checkout, inventory, fulfilment, fraud detection, and retail automation compute spend as a share of operating expenditure.
+    auto_decision_ratio: Automated inventory, substitution, pricing, fraud, fulfilment, or customer-service decisions without substantive human review.
+    robotics_capital_ratio: Self-checkout systems, automated handling, robotic picking, packing, and fulfilment capital share.
+    auto_process_share: Share of customer transactions or order fulfilments completed through automated retail or fulfilment processes.
+opfte_libc_placeholder:
+  value: 18000.0
+  unit: customer_transactions_or_order_fulfilments_per_qualified_fte
+  evidence_label: illustrative_placeholder
+frv:
+  floor_placeholder: 23000.0
+  standard_placeholder: 42000.0
+  full_placeholder: 80000.0
+  evidence_label: illustrative_placeholder
+caps:
+  lambda_sector: 0.19
+  LAMBDA_sector: 0.27
+  theta: 0.60
+  uplift_rate: 1.12
+  rent_tax_rate: 0.21
+safe_harbours:
+  threshold_status: illustrative_placeholder_values_only
+  small_business_revenue_threshold_placeholder: 10000000.0
+  low_nltg_threshold_placeholder: 0.25
+  substantial_human_labour_qlc_hle_ratio_placeholder: 0.35
+  low_qlc_review_ratio_placeholder: 0.30
+  worker_assist_concession_notes:
+    - Staff-assisted retail technology requires verified worker contribution and cannot count customer self-service as labour.
+    - Accessibility, safety, and loss-prevention tooling require separate worker-assist review.
+  small_business:
+    placeholder_rule: Simplified exemption below AUD 10m turnover unless grouped, automated fulfilment-heavy, or high-scale self-checkout output applies.
+measurement_controls:
+  output_measurement_placeholder:
+    canonical_unit_evidence: POS systems, self-checkout logs, online order systems, warehouse picking records, inventory systems, fulfilment scans, and audited conversion to customer transactions or order fulfilments.
+    anti_gaming_note: Output counts should prevent treating customer self-checkout labour as worker labour or splitting online fulfilment away from automated retail output.
+  aava_deductibility_reference: paper/aava_deductibility_appendix.md
+  qlc_evidence_placeholder:
+    - payroll records
+    - roster records
+    - store or fulfilment work-location evidence
+    - training records
+    - evidence of substantive self-checkout or fulfilment supervision work
+  classification_arbitrage_controls:
+    - Retail, online fulfilment, and logistics outputs require apportionment where multiple activities are present.
+    - Automated fulfilment cannot avoid this schedule by moving into a separate low-labour related entity without grouped review.
+avoidance_controls:
+  fulfilment_entity_splitting:
+    placeholder_response: Apply grouped-entity review where online fulfilment, retail stores, platform, and employer entities are separated.
+  customer_labour_relabelling:
+    placeholder_response: Treat customer self-checkout activity as automation-enabled output, not qualified labour contribution.
+  robotics_leasing_relabelling:
+    placeholder_response: Review robotics leases, service contracts, and related-party finance structures against AAVA and transfer-pricing previews.
+  underreported_automated_transaction_share:
+    placeholder_response: Require POS, fulfilment, inventory, and self-checkout system evidence for automation share.
+placeholder_assumptions:
+  - OPFTE, FRV, lambda, LAMBDA, theta, uplift, and rent-tax-rate values are placeholders.
+  - Self-checkout transaction share, automated fulfilment share, robotics capital ratio, and inventory automation share require real sector data.
+  - This schedule is not calibrated, not official, and must not be used to estimate actual tax payable.
+data_required_for_real_calibration:
+  - ABS, ATO, and industry data separating store retail, online retail, fulfilment, and marketplace activities.
+  - POS, self-checkout, fulfilment, and inventory automation benchmark data.
+  - Fair Work retail, warehouse, and fulfilment wage and employment data.
+  - State payroll tax and regional employment data for retail and fulfilment sites.
+  - HILDA, DSS, and labour-market transition data for displaced retail and fulfilment workers.
+  - Legal review of customer self-service, contractor labour, platform retail, and fulfilment attribution.
