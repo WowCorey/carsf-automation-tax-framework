@@ -47,4 +47,8 @@
 - Household eligibility, income-test placeholders, and phase-in / phase-out rules are unresolved policy mechanics and may create exclusion, leakage, or cliff risks.
 - Payment-stack double-counting adjustments use synthetic aggregate assumptions and do not prove actual person-level entitlement interactions.
 - Support fiscal incidence offsets are not validated savings and may mislead if treated as budget offsets.
+- Synthetic household distributional scenarios may be mistaken for real household modelling if synthetic-only labels are removed or ignored.
+- Household shock bands, regional stress scores, re-employment timing, and payment cliff severity are uncalibrated placeholders and may overstate precision.
+- Synthetic household examples are not population-representative and do not use ABS, HILDA, Census, DSS / Services Australia, ATO, Treasury, PBO, or household survey data.
+- Distributional scenario outputs do not validate household hardship, welfare eligibility, payment adequacy, regional impacts, or fiscal incidence.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.

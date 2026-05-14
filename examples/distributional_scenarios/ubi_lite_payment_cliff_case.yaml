@@ -1,0 +1,57 @@
+scenario_id: ubi_lite_payment_cliff_case
+name: UBI-Lite Payment Cliff Case
+purpose: Shows support cliff or phase-out interaction.
+status: prototype_only
+illustrative_placeholder_only: true
+synthetic_household_only: true
+not_calibrated: true
+no_policy_claim: true
+no_welfare_advice: true
+no_real_household_data: true
+placeholder_notice: All values are synthetic illustrative placeholders only and are not real household, welfare, ABS, DSS, Services Australia, Treasury, PBO, ATO, HILDA, Census, or survey data.
+household:
+  household_id: hh_ubi_lite_cliff
+  household_type: single_adult_phase_out_review
+  adults: 1
+  children: 0
+  region_type: mixed_metro_placeholder
+  income_band: lower_middle_placeholder
+  pre_displacement_income: 60000
+  post_displacement_income: 30000
+  existing_support_baseline: 8000
+  housing_cost_placeholder: 22000
+  essential_cost_placeholder: 23000
+  debt_pressure_placeholder: 2000
+  savings_buffer_placeholder: 3000
+  illustrative_placeholder_only: true
+  synthetic_household_only: true
+reemployment_path:
+  path_id: reemployment_ubi_lite_cliff
+  household_id: hh_ubi_lite_cliff
+  displacement_year: 2028
+  expected_reemployment_months: 6
+  retraining_months: 4
+  partial_income_recovery_rate: 0.5
+  full_income_recovery_rate: 0.9
+  probability_band_placeholder: medium
+  illustrative_placeholder_only: true
+regional_stress:
+  region_id: mixed_metro_placeholder
+  region_type: mixed_metropolitan_labour_market
+  automation_exposure_placeholder: 0.55
+  labour_market_depth_placeholder: 0.65
+  retraining_access_placeholder: 0.65
+  housing_cost_pressure_placeholder: 0.60
+  transport_access_placeholder: 0.70
+  illustrative_placeholder_only: true
+payment_cliff:
+  cliff_id: ubi_lite_phase_out_cliff
+  household_id: hh_ubi_lite_cliff
+  support_before_change: 10000
+  support_after_change: 2000
+  income_before_change: 30000
+  income_after_change: 34000
+  trigger_type: ubi_lite_phase_out_placeholder
+  trigger_description: Placeholder UBI-lite support phase-out exceeds partial income gain.
+transition_support_amount: 7000
+interpretation: This synthetic case shows how a support phase-out can leave a household worse off even as income recovers under placeholder settings.

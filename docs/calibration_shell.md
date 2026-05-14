@@ -102,6 +102,22 @@ Required source categories include DSS / Services Australia program data, Treasu
 
 No such calibration has occurred in this repository, and payment-interaction outputs are not eligibility law, welfare advice, Centrelink/DSS/Services Australia modelling, or validated fiscal savings.
 
+## Synthetic Household Distributional Calibration
+
+Synthetic household distributional scenarios require future calibration and privacy/legal review before any policy claim:
+
+- household composition and income-band distributions
+- housing, essential cost, debt-pressure, and savings-buffer distributions
+- existing transfer baseline interactions by household type
+- re-employment timing and income recovery by sector, age, region, skill profile, and retraining access
+- payment cliff, inclusion, exclusion, leakage, and support adequacy thresholds
+- regional labour-market depth, retraining access, transport access, and housing-cost pressure
+- household shock-band thresholds and residual hardship measures
+
+Required source categories include ABS household and labour data, HILDA longitudinal data, Census and regional datasets, DSS / Services Australia program data, ATO aggregated income/tax data, labour-market transition datasets, privacy/legal review, Treasury modelling, PBO costing methods, and welfare-administration design review.
+
+No such calibration has occurred in this repository, and distributional scenario outputs are not real household modelling, welfare advice, eligibility law, DSS / Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.
+
 ## Non-Claims
 
 The calibration shell is not legal, tax, Treasury, ATO, ABS, Fair Work, OECD, BEPS, audit, forensic, or economic validation. It does not prove any model setting is correct.

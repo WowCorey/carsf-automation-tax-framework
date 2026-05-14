@@ -1,0 +1,57 @@
+scenario_id: young_worker_retraining_rebound
+name: Young Worker Retraining Rebound
+purpose: Young worker with faster retraining and lower long-term stress.
+status: prototype_only
+illustrative_placeholder_only: true
+synthetic_household_only: true
+not_calibrated: true
+no_policy_claim: true
+no_welfare_advice: true
+no_real_household_data: true
+placeholder_notice: All values are synthetic illustrative placeholders only and are not real household, welfare, ABS, DSS, Services Australia, Treasury, PBO, ATO, HILDA, Census, or survey data.
+household:
+  household_id: hh_young_worker_rebound
+  household_type: young_single_worker_retraining
+  adults: 1
+  children: 0
+  region_type: diversified_metro_placeholder
+  income_band: lower_middle_placeholder
+  pre_displacement_income: 55000
+  post_displacement_income: 20000
+  existing_support_baseline: 6000
+  housing_cost_placeholder: 18000
+  essential_cost_placeholder: 16000
+  debt_pressure_placeholder: 1000
+  savings_buffer_placeholder: 8000
+  illustrative_placeholder_only: true
+  synthetic_household_only: true
+reemployment_path:
+  path_id: reemployment_young_rebound
+  household_id: hh_young_worker_rebound
+  displacement_year: 2028
+  expected_reemployment_months: 3
+  retraining_months: 3
+  partial_income_recovery_rate: 0.5
+  full_income_recovery_rate: 1.0
+  probability_band_placeholder: medium_high
+  illustrative_placeholder_only: true
+regional_stress:
+  region_id: diversified_metro_placeholder
+  region_type: diversified_metropolitan_labour_market
+  automation_exposure_placeholder: 0.45
+  labour_market_depth_placeholder: 0.80
+  retraining_access_placeholder: 0.85
+  housing_cost_pressure_placeholder: 0.45
+  transport_access_placeholder: 0.80
+  illustrative_placeholder_only: true
+payment_cliff:
+  cliff_id: young_worker_no_cliff
+  household_id: hh_young_worker_rebound
+  support_before_change: 6000
+  support_after_change: 3000
+  income_before_change: 20000
+  income_after_change: 28000
+  trigger_type: fast_reemployment_placeholder
+  trigger_description: Placeholder income recovery offsets support reduction.
+transition_support_amount: 9000
+interpretation: Faster retraining and deeper labour-market access reduce residual shock under these placeholder settings.

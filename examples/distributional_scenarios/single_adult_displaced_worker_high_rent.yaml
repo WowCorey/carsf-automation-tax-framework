@@ -1,0 +1,59 @@
+scenario_id: single_adult_displaced_worker_high_rent
+name: Single Adult Displaced Worker High Rent
+purpose: Single adult, high housing costs, limited savings.
+status: prototype_only
+illustrative_placeholder_only: true
+synthetic_household_only: true
+not_calibrated: true
+no_policy_claim: true
+no_welfare_advice: true
+no_real_household_data: true
+placeholder_notice: All values are synthetic illustrative placeholders only and are not real household, welfare, ABS, DSS, Services Australia, Treasury, PBO, ATO, HILDA, Census, or survey data.
+household:
+  household_id: hh_single_high_rent
+  household_type: single_adult_displaced_worker
+  adults: 1
+  children: 0
+  region_type: high_rent_metro_placeholder
+  income_band: lower_middle_placeholder
+  pre_displacement_income: 65000
+  post_displacement_income: 10000
+  existing_support_baseline: 12000
+  housing_cost_placeholder: 30000
+  essential_cost_placeholder: 22000
+  debt_pressure_placeholder: 3000
+  savings_buffer_placeholder: 1000
+  illustrative_placeholder_only: true
+  synthetic_household_only: true
+  placeholder_basis:
+    - synthetic high-rent household placeholder
+reemployment_path:
+  path_id: reemployment_single_high_rent
+  household_id: hh_single_high_rent
+  displacement_year: 2028
+  expected_reemployment_months: 14
+  retraining_months: 6
+  partial_income_recovery_rate: 0.2
+  full_income_recovery_rate: 0.7
+  probability_band_placeholder: medium_low
+  illustrative_placeholder_only: true
+regional_stress:
+  region_id: high_rent_metro_placeholder
+  region_type: metropolitan_high_housing_pressure
+  automation_exposure_placeholder: 0.55
+  labour_market_depth_placeholder: 0.55
+  retraining_access_placeholder: 0.60
+  housing_cost_pressure_placeholder: 0.90
+  transport_access_placeholder: 0.70
+  illustrative_placeholder_only: true
+payment_cliff:
+  cliff_id: rent_case_no_cliff
+  household_id: hh_single_high_rent
+  support_before_change: 12000
+  support_after_change: 6000
+  income_before_change: 10000
+  income_after_change: 18000
+  trigger_type: reemployment_income_test_placeholder
+  trigger_description: Support reduction offset by placeholder re-employment income.
+transition_support_amount: 20000
+interpretation: High rent and low savings create acute budget stress even with placeholder transition support. Re-employment delay remains the main risk driver.
