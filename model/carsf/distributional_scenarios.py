@@ -49,6 +49,10 @@ class DistributionalScenarioResult:
     transition_support_amount: float
     residual_household_gap_after_support: float
     household_shock_band: str
+    payment_interaction_used: bool = False
+    payment_interaction_risk_band: str | None = None
+    payment_interaction_residual_support_gap: float | None = None
+    payment_interaction_combined_gap: float | None = None
     primary_risk_drivers: list[str] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
     non_claims: list[str] = field(default_factory=lambda: list(DISTRIBUTIONAL_NON_CLAIMS))
@@ -108,6 +112,31 @@ def _shock_band(score: int) -> str:
     return "critical"
 
 
+def _payment_interaction_linkage(source: dict[str, Any] | None) -> dict[str, Any]:
+    if source is None:
+        return {
+            "used": False,
+            "risk_band": None,
+            "residual_support_gap": None,
+            "combined_gap": None,
+        }
+    if not isinstance(source, dict):
+        raise ValueError("payment_interaction_result must be a mapping when supplied")
+    residual_support_gap = None
+    if source.get("residual_support_gap") is not None:
+        residual_support_gap = _non_negative_number(source["residual_support_gap"], "payment_interaction_result.residual_support_gap")
+    combined_gap = None
+    if source.get("combined_commonwealth_gap") is not None:
+        combined_gap = _non_negative_number(source["combined_commonwealth_gap"], "payment_interaction_result.combined_commonwealth_gap")
+    risk_band = source.get("interaction_risk_band")
+    return {
+        "used": True,
+        "risk_band": None if risk_band is None else str(risk_band),
+        "residual_support_gap": residual_support_gap,
+        "combined_gap": combined_gap,
+    }
+
+
 def evaluate_distributional_scenario(inputs: DistributionalScenarioInput | dict[str, Any]) -> DistributionalScenarioResult:
     """Combine synthetic household, re-employment, cliff, and regional stress outputs."""
 
@@ -118,11 +147,14 @@ def evaluate_distributional_scenario(inputs: DistributionalScenarioInput | dict[
     reemployment = evaluate_reemployment_path(inputs.reemployment_path, inputs.household)
     regional = evaluate_regional_stress(inputs.regional_stress)
     cliff = evaluate_payment_cliff(inputs.payment_cliff) if inputs.payment_cliff is not None else None
+    payment_linkage = _payment_interaction_linkage(inputs.payment_interaction_result)
     residual_gap = max(0.0, budget.immediate_budget_gap - support)
 
     score = _band_score(budget.budget_stress_band) + _band_score(reemployment.reemployment_risk_band) + _band_score(regional.regional_stress_band)
     if cliff is not None:
         score += _band_score(cliff.cliff_severity_band)
+    if payment_linkage["risk_band"] in {"high", "critical"}:
+        score += _band_score(payment_linkage["risk_band"])
     if budget.immediate_budget_gap > 0:
         support_coverage = support / budget.immediate_budget_gap
         if support_coverage < 0.25:
@@ -143,6 +175,10 @@ def evaluate_distributional_scenario(inputs: DistributionalScenarioInput | dict[
         drivers.append(f"payment cliff: {cliff.cliff_severity_band}")
     if residual_gap > 0:
         drivers.append("residual household gap after support")
+    if payment_linkage["risk_band"] in {"high", "critical"}:
+        drivers.append(f"payment interaction risk: {payment_linkage['risk_band']}")
+    if payment_linkage["residual_support_gap"] is not None and payment_linkage["residual_support_gap"] > 0:
+        drivers.append("payment interaction residual support gap")
 
     return DistributionalScenarioResult(
         scenario_id=inputs.scenario_id,
@@ -155,6 +191,10 @@ def evaluate_distributional_scenario(inputs: DistributionalScenarioInput | dict[
         transition_support_amount=support,
         residual_household_gap_after_support=residual_gap,
         household_shock_band=_shock_band(score),
+        payment_interaction_used=bool(payment_linkage["used"]),
+        payment_interaction_risk_band=payment_linkage["risk_band"],
+        payment_interaction_residual_support_gap=payment_linkage["residual_support_gap"],
+        payment_interaction_combined_gap=payment_linkage["combined_gap"],
         primary_risk_drivers=drivers,
         warnings=[
             *budget.warnings,
@@ -162,6 +202,7 @@ def evaluate_distributional_scenario(inputs: DistributionalScenarioInput | dict[
             *regional.warnings,
             *(cliff.warnings if cliff is not None else []),
             "Distributional scenario is synthetic-only and does not use or represent real households.",
+            "Payment interaction outputs do not modify firm-level CARSF liability.",
             "Firm-level CARSF liability is not modified by distributional scenario outputs.",
         ],
     )

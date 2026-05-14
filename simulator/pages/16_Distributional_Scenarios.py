@@ -118,6 +118,19 @@ st.table(
     ]
 )
 
+st.markdown("### Payment Interaction Linkage")
+if scenario.get("payment_interaction_used"):
+    st.table(
+        [
+            {"Metric": "Payment interaction risk band", "Value": scenario.get("payment_interaction_risk_band") or "N/A"},
+            {"Metric": "Residual support gap", "Value": fmt_money(scenario.get("payment_interaction_residual_support_gap"))},
+            {"Metric": "Combined Commonwealth/support gap", "Value": fmt_money(scenario.get("payment_interaction_combined_gap"))},
+            {"Metric": "Firm-level liability modified", "Value": "false"},
+        ]
+    )
+else:
+    st.write("Not supplied for this synthetic scenario.")
+
 st.markdown("### Distributional Summary")
 summary = report.get("summary", {})
 st.table(

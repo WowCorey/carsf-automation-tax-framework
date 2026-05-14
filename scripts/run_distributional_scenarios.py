@@ -236,6 +236,48 @@ def _support_table(rows: list[dict[str, Any]]) -> list[str]:
     return lines
 
 
+def _payment_interaction_table(rows: list[dict[str, Any]]) -> list[str]:
+    lines = [
+        "| Scenario | Payment Interaction Supplied | Interaction Risk Band | Residual Support Gap | Combined Commonwealth/Support Gap |",
+        "| --- | --- | --- | ---: | ---: |",
+    ]
+    for row in rows:
+        result = row["scenario_result"]
+        if not result.payment_interaction_used:
+            lines.append(
+                "| "
+                f"{row['example']['name']} | false | Not supplied for this synthetic scenario | "
+                "Not supplied for this synthetic scenario | Not supplied for this synthetic scenario |"
+            )
+            continue
+        lines.append(
+            "| "
+            f"{row['example']['name']} | true | {result.payment_interaction_risk_band or 'N/A'} | "
+            f"{money(result.payment_interaction_residual_support_gap)} | {money(result.payment_interaction_combined_gap)} |"
+        )
+    return lines
+
+
+def _shock_component_table(rows: list[dict[str, Any]]) -> list[str]:
+    lines = [
+        "| Scenario | Budget Stress | Re-Employment Risk | Regional Stress | Cliff Severity | Payment Interaction Risk | Household Shock Band |",
+        "| --- | --- | --- | --- | --- | --- | --- |",
+    ]
+    for row in rows:
+        budget = row["household_budget_result"]
+        reemployment = row["reemployment_result"]
+        regional = row["regional_stress_result"]
+        cliff = row["payment_cliff_result"]
+        result = row["scenario_result"]
+        lines.append(
+            "| "
+            f"{row['example']['name']} | {budget.budget_stress_band} | {reemployment.reemployment_risk_band} | "
+            f"{regional.regional_stress_band} | {cliff.cliff_severity_band if cliff is not None else 'none'} | "
+            f"{result.payment_interaction_risk_band or 'not supplied'} | {result.household_shock_band} |"
+        )
+    return lines
+
+
 def _summary_table(summary: DistributionalSummaryResult) -> list[str]:
     return [
         "| Scenario Count | Low | Medium | High | Critical | Average Residual Gap | Highest-Risk Synthetic Households |",
@@ -284,16 +326,20 @@ def build_markdown(rows: list[dict[str, Any]], summary: DistributionalSummaryRes
     lines.extend(_cliff_table(rows))
     lines.extend(["", "## I. Transition Support and Residual Household Gap", ""])
     lines.extend(_support_table(rows))
-    lines.extend(["", "## J. Household Shock Band", ""])
-    lines.append("Household shock bands are prototype-only labels that combine budget stress, re-employment timing, regional stress, payment cliff severity, and residual gap after support.")
+    lines.extend(["", "## J. Payment Interaction Linkage", ""])
+    lines.append("Payment interaction linkage is optional. Where supplied, payment-interaction risk and residual support gaps are used as additional prototype household shock drivers. They do not modify firm-level CARSF liability.")
     lines.append("")
-    lines.extend(_support_table(rows))
-    lines.extend(["", "## K. Distributional Summary", ""])
+    lines.extend(_payment_interaction_table(rows))
+    lines.extend(["", "## K. Household Shock Band", ""])
+    lines.append("Household shock bands are prototype-only labels that combine budget stress, re-employment timing, regional stress, payment cliff severity, residual gap after support, and any supplied payment-interaction risk.")
+    lines.append("")
+    lines.extend(_shock_component_table(rows))
+    lines.extend(["", "## L. Distributional Summary", ""])
     lines.extend(_summary_table(summary))
-    lines.extend(["", "## L. Highest-Risk Synthetic Households", ""])
+    lines.extend(["", "## M. Highest-Risk Synthetic Households", ""])
     lines.append(", ".join(summary.highest_risk_households) if summary.highest_risk_households else "None")
     lines.extend(["", "Primary systemic risks: " + (", ".join(summary.primary_systemic_risks) if summary.primary_systemic_risks else "None"), ""])
-    lines.extend(["## M. Plain-English Interpretation", ""])
+    lines.extend(["## N. Plain-English Interpretation", ""])
     for row in rows:
         lines.extend(
             [
@@ -307,7 +353,7 @@ def build_markdown(rows: list[dict[str, Any]], summary: DistributionalSummaryRes
         )
     lines.extend(
         [
-            "## N. Limitations and Calibration Needs",
+            "## O. Limitations and Calibration Needs",
             "",
             "- All household, income, cost, support, regional, and re-employment values are synthetic illustrative placeholders.",
             "- No real household data, welfare records, income records, ABS, DSS, Services Australia, ATO, Treasury, PBO, HILDA, Census, or household survey data is used.",

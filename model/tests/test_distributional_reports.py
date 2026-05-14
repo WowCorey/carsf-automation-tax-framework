@@ -41,6 +41,23 @@ def test_distributional_report_includes_required_non_claims(repo_root) -> None:
     assert payload["summary"]["scenario_count"] == 7
 
 
+def test_distributional_report_includes_payment_interaction_linkage_without_duplicate_shock_table(repo_root) -> None:
+    reports_dir = repo_root / "tmp" / "test-distributional-linkage-section"
+    subprocess.run(
+        [sys.executable, "scripts/run_distributional_scenarios.py", "--reports-dir", str(reports_dir)],
+        cwd=repo_root,
+        check=True,
+    )
+    markdown = (reports_dir / "distributional_scenarios.md").read_text(encoding="utf-8")
+
+    assert "## J. Payment Interaction Linkage" in markdown
+    assert "Not supplied for this synthetic scenario" in markdown
+    assert "## K. Household Shock Band" in markdown
+    assert "Payment Interaction Risk" in markdown
+    assert markdown.count("| Scenario | Transition Support | Residual Household Gap After Support | Household Shock Band | Primary Risk Drivers |") == 1
+    assert "| Scenario | Budget Stress | Re-Employment Risk | Regional Stress | Cliff Severity | Payment Interaction Risk | Household Shock Band |" in markdown
+
+
 def test_existing_reports_and_repo_guardrails_still_generate_with_distributional_scenarios(repo_root) -> None:
     reports_dir = repo_root / "tmp" / "test-existing-plus-distributional"
     commands = [

@@ -109,6 +109,10 @@
           "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
           "Distributional scenario outputs do not modify firm-level CARSF liability."
         ],
+        "payment_interaction_combined_gap": null,
+        "payment_interaction_residual_support_gap": null,
+        "payment_interaction_risk_band": null,
+        "payment_interaction_used": false,
         "primary_risk_drivers": [
           "regional stress: high"
         ],
@@ -127,6 +131,7 @@
           "Payment cliff result is a prototype warning only and not eligibility law.",
           "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used.",
           "Distributional scenario is synthetic-only and does not use or represent real households.",
+          "Payment interaction outputs do not modify firm-level CARSF liability.",
           "Firm-level CARSF liability is not modified by distributional scenario outputs."
         ]
       },
@@ -245,6 +250,10 @@
           "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
           "Distributional scenario outputs do not modify firm-level CARSF liability."
         ],
+        "payment_interaction_combined_gap": null,
+        "payment_interaction_residual_support_gap": null,
+        "payment_interaction_risk_band": null,
+        "payment_interaction_used": false,
         "primary_risk_drivers": [
           "budget stress: critical",
           "re-employment risk: critical",
@@ -267,6 +276,7 @@
           "Payment cliff result is a prototype warning only and not eligibility law.",
           "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used.",
           "Distributional scenario is synthetic-only and does not use or represent real households.",
+          "Payment interaction outputs do not modify firm-level CARSF liability.",
           "Firm-level CARSF liability is not modified by distributional scenario outputs."
         ]
       },
@@ -383,6 +393,10 @@
           "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
           "Distributional scenario outputs do not modify firm-level CARSF liability."
         ],
+        "payment_interaction_combined_gap": null,
+        "payment_interaction_residual_support_gap": null,
+        "payment_interaction_risk_band": null,
+        "payment_interaction_used": false,
         "primary_risk_drivers": [
           "budget stress: critical",
           "re-employment risk: critical",
@@ -405,6 +419,7 @@
           "Payment cliff result is a prototype warning only and not eligibility law.",
           "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used.",
           "Distributional scenario is synthetic-only and does not use or represent real households.",
+          "Payment interaction outputs do not modify firm-level CARSF liability.",
           "Firm-level CARSF liability is not modified by distributional scenario outputs."
         ]
       },
@@ -522,6 +537,10 @@
           "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
           "Distributional scenario outputs do not modify firm-level CARSF liability."
         ],
+        "payment_interaction_combined_gap": null,
+        "payment_interaction_residual_support_gap": null,
+        "payment_interaction_risk_band": null,
+        "payment_interaction_used": false,
         "primary_risk_drivers": [
           "budget stress: critical",
           "re-employment risk: high",
@@ -543,6 +562,7 @@
           "Payment cliff result is a prototype warning only and not eligibility law.",
           "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used.",
           "Distributional scenario is synthetic-only and does not use or represent real households.",
+          "Payment interaction outputs do not modify firm-level CARSF liability.",
           "Firm-level CARSF liability is not modified by distributional scenario outputs."
         ]
       },
@@ -657,6 +677,10 @@
           "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
           "Distributional scenario outputs do not modify firm-level CARSF liability."
         ],
+        "payment_interaction_combined_gap": null,
+        "payment_interaction_residual_support_gap": null,
+        "payment_interaction_risk_band": null,
+        "payment_interaction_used": false,
         "primary_risk_drivers": [
           "budget stress: critical",
           "re-employment risk: high",
@@ -679,6 +703,7 @@
           "Payment cliff result is a prototype warning only and not eligibility law.",
           "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used.",
           "Distributional scenario is synthetic-only and does not use or represent real households.",
+          "Payment interaction outputs do not modify firm-level CARSF liability.",
           "Firm-level CARSF liability is not modified by distributional scenario outputs."
         ]
       },
@@ -791,6 +816,10 @@
           "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
           "Distributional scenario outputs do not modify firm-level CARSF liability."
         ],
+        "payment_interaction_combined_gap": null,
+        "payment_interaction_residual_support_gap": null,
+        "payment_interaction_risk_band": null,
+        "payment_interaction_used": false,
         "primary_risk_drivers": [
           "budget stress: critical",
           "payment cliff: high",
@@ -811,6 +840,7 @@
           "Payment cliff result is a prototype warning only and not eligibility law.",
           "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used.",
           "Distributional scenario is synthetic-only and does not use or represent real households.",
+          "Payment interaction outputs do not modify firm-level CARSF liability.",
           "Firm-level CARSF liability is not modified by distributional scenario outputs."
         ]
       },
@@ -923,6 +953,10 @@
           "Synthetic household outputs use illustrative placeholders only and no real household or personal data.",
           "Distributional scenario outputs do not modify firm-level CARSF liability."
         ],
+        "payment_interaction_combined_gap": null,
+        "payment_interaction_residual_support_gap": null,
+        "payment_interaction_risk_band": null,
+        "payment_interaction_used": false,
         "primary_risk_drivers": [
           "budget stress: high"
         ],
@@ -941,6 +975,7 @@
           "Payment cliff result is a prototype warning only and not eligibility law.",
           "No real welfare, household, DSS, Services Australia, Treasury, PBO, ABS, or ATO data is used.",
           "Distributional scenario is synthetic-only and does not use or represent real households.",
+          "Payment interaction outputs do not modify firm-level CARSF liability.",
           "Firm-level CARSF liability is not modified by distributional scenario outputs."
         ]
       },
@@ -948,7 +983,7 @@
     }
   ],
   "metadata": {
-    "generated_at": "2026-05-14T00:54:46+00:00",
+    "generated_at": "2026-05-14T01:03:53+00:00",
     "non_claims": [
       "These are synthetic household distributional scenarios only. They are not real household modelling, welfare advice, eligibility law, DSS/Services Australia modelling, ABS analysis, Treasury modelling, PBO costing, legal advice, tax advice, or economic validation.",
       "All household, regional, re-employment, payment cliff, and support values are illustrative placeholders.",

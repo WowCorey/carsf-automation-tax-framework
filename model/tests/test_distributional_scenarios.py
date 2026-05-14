@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import math
+
 from carsf.distributional_scenarios import evaluate_distributional_scenario
 
 
@@ -58,6 +60,8 @@ def test_distributional_scenario_calculates_residual_household_gap_after_support
 
     assert result.residual_household_gap_after_support == 8000
     assert result.transition_support_amount == 7000
+    assert result.payment_interaction_used is False
+    assert result.payment_interaction_risk_band is None
 
 
 def test_distributional_shock_band_rises_with_critical_budget_and_long_reemployment() -> None:
@@ -131,3 +135,57 @@ def test_distributional_shock_band_rises_with_critical_budget_and_long_reemploym
 
     assert SEVERITY[high.household_shock_band] > SEVERITY[low.household_shock_band]
     assert "residual household gap after support" in high.primary_risk_drivers
+
+
+def test_payment_interaction_result_is_recorded_when_supplied() -> None:
+    result = evaluate_distributional_scenario(
+        _scenario(
+            payment_interaction_result={
+                "interaction_risk_band": "high",
+                "residual_support_gap": 12000,
+                "combined_commonwealth_gap": 34000,
+            }
+        )
+    )
+
+    assert result.payment_interaction_used is True
+    assert result.payment_interaction_risk_band == "high"
+    assert result.payment_interaction_residual_support_gap == 12000
+    assert result.payment_interaction_combined_gap == 34000
+    assert "payment interaction risk: high" in result.primary_risk_drivers
+    assert "payment interaction residual support gap" in result.primary_risk_drivers
+    assert "Payment interaction outputs do not modify firm-level CARSF liability." in result.warnings
+
+
+def test_missing_payment_interaction_result_preserves_existing_behavior() -> None:
+    without_linkage = evaluate_distributional_scenario(_scenario())
+    with_empty_linkage = evaluate_distributional_scenario(_scenario(payment_interaction_result=None))
+
+    assert without_linkage.payment_interaction_used is False
+    assert with_empty_linkage.payment_interaction_used is False
+    assert without_linkage.household_shock_band == with_empty_linkage.household_shock_band
+    assert without_linkage.primary_risk_drivers == with_empty_linkage.primary_risk_drivers
+
+
+def test_payment_interaction_result_rejects_invalid_numeric_values() -> None:
+    for field in ["residual_support_gap", "combined_commonwealth_gap"]:
+        bad = {"interaction_risk_band": "high", "residual_support_gap": 0, "combined_commonwealth_gap": 0}
+        bad[field] = -1
+        try:
+            evaluate_distributional_scenario(_scenario(payment_interaction_result=bad))
+        except ValueError as exc:
+            assert "cannot be negative" in str(exc)
+        else:
+            raise AssertionError(f"{field} should reject negative values")
+
+
+def test_payment_interaction_result_rejects_non_finite_numeric_values() -> None:
+    for field in ["residual_support_gap", "combined_commonwealth_gap"]:
+        bad = {"interaction_risk_band": "critical", "residual_support_gap": 0, "combined_commonwealth_gap": 0}
+        bad[field] = math.inf
+        try:
+            evaluate_distributional_scenario(_scenario(payment_interaction_result=bad))
+        except ValueError as exc:
+            assert "finite" in str(exc)
+        else:
+            raise AssertionError(f"{field} should reject non-finite values")

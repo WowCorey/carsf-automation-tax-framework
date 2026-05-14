@@ -1,6 +1,6 @@
 # CARSF V1.5 Synthetic Household Distributional Scenarios
 
-Generated at: `2026-05-14T00:54:46+00:00`
+Generated at: `2026-05-14T01:03:53+00:00`
 
 ## A. Purpose
 
@@ -88,33 +88,47 @@ National fiscal and transition-payment outputs can hide differences between hous
 | UBI-Lite Payment Cliff Case | 7,000.00 | 2,000.00 | critical | budget stress: critical, payment cliff: high, residual household gap after support |
 | Young Worker Retraining Rebound | 9,000.00 | 0.00 | medium | budget stress: high |
 
-## J. Household Shock Band
+## J. Payment Interaction Linkage
 
-Household shock bands are prototype-only labels that combine budget stress, re-employment timing, regional stress, payment cliff severity, and residual gap after support.
+Payment interaction linkage is optional. Where supplied, payment-interaction risk and residual support gaps are used as additional prototype household shock drivers. They do not modify firm-level CARSF liability.
 
-| Scenario | Transition Support | Residual Household Gap After Support | Household Shock Band | Primary Risk Drivers |
-| --- | ---: | ---: | --- | --- |
-| Dual Income One Displaced Regional | 8,000.00 | 0.00 | high | regional stress: high |
-| High Automation Region Cluster | 15,000.00 | 20,000.00 | critical | budget stress: critical, re-employment risk: critical, regional stress: critical, payment cliff: high, residual household gap after support |
-| Older Worker Low Re-Employment | 12,000.00 | 14,000.00 | critical | budget stress: critical, re-employment risk: critical, regional stress: high, payment cliff: high, residual household gap after support |
-| Single Adult Displaced Worker High Rent | 20,000.00 | 13,000.00 | critical | budget stress: critical, re-employment risk: high, regional stress: high, residual household gap after support |
-| Single Parent Retraining Gap | 18,000.00 | 14,000.00 | critical | budget stress: critical, re-employment risk: high, regional stress: high, payment cliff: high, residual household gap after support |
-| UBI-Lite Payment Cliff Case | 7,000.00 | 2,000.00 | critical | budget stress: critical, payment cliff: high, residual household gap after support |
-| Young Worker Retraining Rebound | 9,000.00 | 0.00 | medium | budget stress: high |
+| Scenario | Payment Interaction Supplied | Interaction Risk Band | Residual Support Gap | Combined Commonwealth/Support Gap |
+| --- | --- | --- | ---: | ---: |
+| Dual Income One Displaced Regional | false | Not supplied for this synthetic scenario | Not supplied for this synthetic scenario | Not supplied for this synthetic scenario |
+| High Automation Region Cluster | false | Not supplied for this synthetic scenario | Not supplied for this synthetic scenario | Not supplied for this synthetic scenario |
+| Older Worker Low Re-Employment | false | Not supplied for this synthetic scenario | Not supplied for this synthetic scenario | Not supplied for this synthetic scenario |
+| Single Adult Displaced Worker High Rent | false | Not supplied for this synthetic scenario | Not supplied for this synthetic scenario | Not supplied for this synthetic scenario |
+| Single Parent Retraining Gap | false | Not supplied for this synthetic scenario | Not supplied for this synthetic scenario | Not supplied for this synthetic scenario |
+| UBI-Lite Payment Cliff Case | false | Not supplied for this synthetic scenario | Not supplied for this synthetic scenario | Not supplied for this synthetic scenario |
+| Young Worker Retraining Rebound | false | Not supplied for this synthetic scenario | Not supplied for this synthetic scenario | Not supplied for this synthetic scenario |
 
-## K. Distributional Summary
+## K. Household Shock Band
+
+Household shock bands are prototype-only labels that combine budget stress, re-employment timing, regional stress, payment cliff severity, residual gap after support, and any supplied payment-interaction risk.
+
+| Scenario | Budget Stress | Re-Employment Risk | Regional Stress | Cliff Severity | Payment Interaction Risk | Household Shock Band |
+| --- | --- | --- | --- | --- | --- | --- |
+| Dual Income One Displaced Regional | medium | medium | high | none | not supplied | high |
+| High Automation Region Cluster | critical | critical | critical | high | not supplied | critical |
+| Older Worker Low Re-Employment | critical | critical | high | high | not supplied | critical |
+| Single Adult Displaced Worker High Rent | critical | high | high | none | not supplied | critical |
+| Single Parent Retraining Gap | critical | high | high | high | not supplied | critical |
+| UBI-Lite Payment Cliff Case | critical | medium | medium | high | not supplied | critical |
+| Young Worker Retraining Rebound | high | low | medium | none | not supplied | medium |
+
+## L. Distributional Summary
 
 | Scenario Count | Low | Medium | High | Critical | Average Residual Gap | Highest-Risk Synthetic Households |
 | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | 7 | 0 | 1 | 1 | 5 | 9,000.00 | hh_high_automation_region, hh_older_worker_low_reemployment, hh_single_parent_retraining |
 
-## L. Highest-Risk Synthetic Households
+## M. Highest-Risk Synthetic Households
 
 hh_high_automation_region, hh_older_worker_low_reemployment, hh_single_parent_retraining
 
 Primary systemic risks: budget stress: critical, residual household gap after support, payment cliff: high, regional stress: high, re-employment risk: critical
 
-## M. Plain-English Interpretation
+## N. Plain-English Interpretation
 
 ### Dual Income One Displaced Regional
 
@@ -158,7 +172,7 @@ Faster retraining and deeper labour-market access reduce residual shock under th
 
 - Firm-level CARSF liability is not automatically modified by this synthetic distributional scenario.
 
-## N. Limitations and Calibration Needs
+## O. Limitations and Calibration Needs
 
 - All household, income, cost, support, regional, and re-employment values are synthetic illustrative placeholders.
 - No real household data, welfare records, income records, ABS, DSS, Services Australia, ATO, Treasury, PBO, HILDA, Census, or household survey data is used.
