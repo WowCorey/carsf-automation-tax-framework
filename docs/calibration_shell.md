@@ -171,6 +171,25 @@ Required source categories include ABS, HILDA, Census, DSS / Services Australia,
 
 No such calibration has occurred in this repository. Reviewed scenario outputs are prototype display-control signals only; they are not statistical validation, population estimates, real household modelling, forecasts, confidence intervals, welfare advice, eligibility law, legal advice, tax advice, or economic validation.
 
+## Expanded Sector Schedule Calibration
+
+The expanded prototype sector schedules require future calibration before any operative schedule or sector comparison could be claimed:
+
+- call centre and customer support output per qualified FTE
+- accounting, payroll, document-processing, and administration output units
+- retail self-checkout, fulfilment, inventory, and robotic picking measures
+- software and digital platform Australian-served transaction or workflow measures
+- sector-specific QLC weighting and worker-quality evidence
+- sector-specific AII component weights
+- OPFTE, FRV, cap, uplift, and rent-tax-rate values
+- safe-harbour thresholds and worker-assist treatment
+- avoidance and classification-arbitrage rules
+- software and digital platform capital-base treatment under AASB 138, tax counsel, and Treasury review
+
+Required source categories include ABS labour and output data, ATO aggregated tax data, DSS / Services Australia transition data, PBO costing methods, Fair Work wage and classification data, industry automation surveys, platform/transaction benchmark data, accounting and support workflow benchmarks, Treasury modelling, ATO review, legal review, and specialist software/intangible-asset accounting review.
+
+No such calibration has occurred in this repository. Expanded sector schedules are prototype placeholders only. They are not calibrated, not legal schedules, not Treasury schedules, not ATO guidance, not ABS/ATO/DSS/PBO analysis, do not contain real industry data, and must not be used to estimate actual tax payable.
+
 ## Non-Claims
 
 The calibration shell is not legal, tax, Treasury, ATO, ABS, Fair Work, OECD, BEPS, audit, forensic, or economic validation. It does not prove any model setting is correct.

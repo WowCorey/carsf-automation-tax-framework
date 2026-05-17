@@ -1,0 +1,106 @@
+schedule_id: software_digital_platforms
+schedule_name: Prototype Schedule F - Software / Digital Platforms
+status: placeholder_prototype_for_v1_5
+canonical_output_unit: australian_served_platform_transactions_or_workflows
+calibration_status: illustrative_placeholder_values_only
+confirmed_baseline_figures: []
+measurement_scope:
+  placeholder_notice: This schedule is not calibrated and must not be used to estimate actual tax payable.
+  covered_activity_examples:
+    - Australian-served digital transactions
+    - platform-mediated work
+    - AI-generated workflows
+    - automated recommendations that materially affect transaction flow
+    - automated matching, pricing, ranking, or workflow allocation
+  excluded_or_separately_classified_activity_examples:
+    - passive software licensing not tied to Australian-served automated workflows
+    - hardware sales
+    - unrelated logistics or retail fulfilment outputs that should be apportioned to another schedule
+  dominant_activity_test_placeholder: Classification should follow Australian-served platform transactions, workflows, or automated allocation activity, not server location or IP ownership alone.
+  capital_base_treatment_warning: Capital-base treatment for software firms remains unresolved and subject to AASB 138, tax counsel, and Treasury review.
+qlc:
+  weights:
+    alpha_wage_quality: 0.22
+    beta_job_security: 0.16
+    gamma_skill_development: 0.20
+    delta_australian_nexus: 0.14
+  qlc_max_multiplier: 1.25
+  notes:
+    - Scores are bounded in [0, 1].
+    - Australian engineering, moderation, support, operations, and compliance work require verified Australian nexus before QLC scoring.
+    - Offshore engineering or model operations cannot be counted as Australian QLC without legal and policy review.
+aii:
+  weights:
+    compute_ratio: 0.30
+    auto_decision_ratio: 0.30
+    robotics_capital_ratio: 0.05
+    auto_process_share: 0.35
+  component_notes:
+    compute_ratio: Cloud, inference, model, recommendation, ranking, matching, and workflow automation compute spend as a share of operating expenditure.
+    auto_decision_ratio: Automated ranking, pricing, matching, allocation, moderation, recommendation, or workflow decisions that materially affect Australian users or transactions.
+    robotics_capital_ratio: Physical robotics is normally low but remains available for platform-integrated automated hardware where relevant.
+    auto_process_share: Share of Australian-served platform transactions or workflows materially generated, allocated, or completed by automated processes.
+opfte_libc_placeholder:
+  value: 25000.0
+  unit: australian_served_platform_transactions_or_workflows_per_qualified_fte
+  evidence_label: illustrative_placeholder
+frv:
+  floor_placeholder: 30000.0
+  standard_placeholder: 60000.0
+  full_placeholder: 120000.0
+  evidence_label: illustrative_placeholder
+caps:
+  lambda_sector: 0.21
+  LAMBDA_sector: 0.30
+  theta: 0.60
+  uplift_rate: 1.12
+  rent_tax_rate: 0.24
+safe_harbours:
+  threshold_status: illustrative_placeholder_values_only
+  small_business_revenue_threshold_placeholder: 10000000.0
+  low_nltg_threshold_placeholder: 0.25
+  substantial_human_labour_qlc_hle_ratio_placeholder: 0.35
+  low_qlc_review_ratio_placeholder: 0.30
+  startup:
+    placeholder_rule: Startup treatment is unresolved for platform firms with rapid scale, low declared Australian profit, or significant offshore IP.
+    anti_avoidance_note: Subject to aggregation, related-party, offshore IP, and Australian-facing value review.
+  worker_assist_concession_notes:
+    - Developer productivity tooling is not enough to classify a platform as worker-assist if Australian-facing transactions are automated.
+    - Human moderation, support, or compliance work requires verified QLC evidence and cannot by itself neutralise automated matching or ranking.
+measurement_controls:
+  output_measurement_placeholder:
+    canonical_unit_evidence: Platform event logs, workflow records, transaction records, recommendation/ranking logs, automated matching records, Australian user attribution, and audited conversion to Australian-served platform transactions or workflows.
+    anti_gaming_note: Output units should prevent offshore IP, cloud location, or platform entity labels from hiding Australian-facing automated value.
+  aava_deductibility_reference: paper/aava_deductibility_appendix.md
+  qlc_evidence_placeholder:
+    - payroll records
+    - engineering, support, moderation, operations, and compliance work records
+    - Australian work-location evidence
+    - training and skill-development records
+    - evidence separating Australian and offshore workforces
+  classification_arbitrage_controls:
+    - Platform matching, ranking, pricing, workflow allocation, and recommendation systems require apportionment where mixed with retail, logistics, or support output.
+    - Offshore IP ownership, model access, or cloud infrastructure should not determine schedule classification alone.
+avoidance_controls:
+  offshore_ip_platform_royalties:
+    placeholder_response: Review offshore IP royalties and platform licences through transfer-pricing, AAVA, and Australian-facing value attribution previews.
+  cloud_inference_relabelling:
+    placeholder_response: Review cloud and inference charges that are relabelled as ordinary costs without automation nexus disclosure.
+  related_party_model_access_fees:
+    placeholder_response: Apply related-party transaction preview to model access, data access, and platform service charges.
+  low_declared_australian_profit:
+    placeholder_response: Flag low declared Australian profit where Australian-facing automated value, users, transactions, or workflows are material.
+  open_source_ai_unresolved:
+    placeholder_response: Open-source AI treatment remains unresolved and requires legal, tax, Treasury, and technical review.
+placeholder_assumptions:
+  - OPFTE, FRV, lambda, LAMBDA, theta, uplift, and rent-tax-rate values are placeholders.
+  - Compute spend ratio, automated decision volume, AI-generated workflow share, and platform transaction automation share require real sector data.
+  - Capital-base treatment for software firms remains unresolved and subject to AASB 138, tax counsel, and Treasury review.
+  - This schedule is not calibrated, not official, and must not be used to estimate actual tax payable.
+data_required_for_real_calibration:
+  - ABS, ATO, and industry data separating software, platform, marketplace, digital services, and AI workflow activities.
+  - Platform transaction, workflow, recommendation, matching, and automated decision volume data.
+  - Cloud, inference, model, and data-access cost data with Australian-facing attribution.
+  - Fair Work and labour-market data for Australian software, moderation, support, and operations workforces.
+  - HILDA, DSS, and labour-market transition data for displaced administrative, platform, support, and digital-service workers.
+  - AASB 138, tax counsel, Treasury, and ATO review of intangible assets, capital base, IP royalties, and Australian value attribution.

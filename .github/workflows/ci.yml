@@ -44,6 +44,9 @@ jobs:
       - name: Run worked examples
         run: python scripts/run_examples.py
 
+      - name: Run sector schedule expansion
+        run: python scripts/run_sector_schedule_expansion.py
+
       - name: Run mock evidence workflow
         run: python scripts/run_evidence_workflow.py
 

@@ -22,7 +22,7 @@ All sector values, schedule values, examples, caps, Fiscal Replacement Value val
 - `model/tests/` - pytest coverage for formula bounds, caps, examples, and avoidance flags.
 - `data/` - source-category registry and placeholder policy; no datasets are committed.
 - `data/mock_evidence/` - synthetic mock evidence packets for workflow testing only; no real evidence or personal data is committed.
-- `schedules/` - prototype sector schedules for automotive repair and logistics / warehousing.
+- `schedules/` - prototype sector schedules for automotive repair, logistics / warehousing, call centres / customer support, accounting / administration, retail self-checkout / fulfilment, and software / digital platforms.
 - `examples/` - illustrative placeholder firm cases.
 - `examples/groups/` - illustrative grouped-entity and apportionment preview cases.
 - `examples/investment_guardrails/` - illustrative placeholder stress cases for burden, investment, incidence, and coverage-sensitivity guardrails.
@@ -60,6 +60,17 @@ Generated reports:
 - `reports/evidence_requirements.json`
 - `reports/calibration_requirements.md`
 - `reports/calibration_requirements.json`
+
+Run sector schedule expansion validation:
+
+```powershell
+python scripts/run_sector_schedule_expansion.py
+```
+
+Generated sector-schedule reports:
+
+- `reports/sector_schedule_expansion.md`
+- `reports/sector_schedule_expansion.json`
 
 Run controlled mock evidence workflow reports separately:
 
@@ -194,6 +205,7 @@ Distributional scenario reports are synthetic household outputs only. They are n
 Household-weighting reports are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.
 Uncertainty range reports are deterministic placeholder outputs only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.
 Reviewed scenario reports are prototype display-control outputs only. They are not statistical validation, population estimates, real household modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, ATO analysis, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.
+Sector schedule expansion reports are prototype placeholder outputs only. They are not calibrated. They are not legal schedules. They are not Treasury schedules. They are not ATO guidance. They are not ABS/ATO/DSS/PBO analysis. They do not contain real industry data. They must not be used to estimate actual tax payable.
 
 ## Run the Simulator
 
@@ -212,6 +224,7 @@ V1.5 is not just an examples update. It is V1.4 plus two prototype sector schedu
 - report CoverageRatio alongside CARS-I;
 - distinguish worker-assist AI from labour-substituting automation;
 - handle automotive repair and logistics / warehousing as prototype schedules;
+- expand prototype schedule coverage to call centres / customer support, accounting / administration, retail self-checkout / fulfilment, and software / digital platforms without calibration or real tax usability claims;
 - classify prototype safe-harbour, anti-avoidance, and grouped-entity review signals without changing liability;
 - preview grouped-entity aggregation and multi-schedule apportionment without implementing tax-law grouping or attribution;
 - preview related-party / transfer-pricing adjustment candidates without replacing reported AAVA or calculating any legal addback;

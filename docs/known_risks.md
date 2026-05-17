@@ -61,4 +61,8 @@
 - Reviewed scenario categories may create false comfort if readers treat display-control labels as validation rather than presentation discipline.
 - Prototype discussion signals still require external calibration and methods review; they are not population estimates or real household modelling.
 - Hidden, suppressed, missing-range, and non-interpretable outputs may be ignored too aggressively unless reviewers inspect the blocker reasons.
+- New sector schedules may be mistaken for calibrated or official schedules if placeholder and non-claim language is removed.
+- Canonical output units for call centres, accounting / administration, retail fulfilment, and software / digital platforms may be too broad, too narrow, or unsuitable after external review.
+- Software / digital platform capital-base treatment remains unresolved and could materially affect any future schedule design.
+- Additional schedules do not solve legal multi-schedule attribution, grouping, apportionment, or transfer-pricing issues.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.

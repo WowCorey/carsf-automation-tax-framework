@@ -569,7 +569,23 @@ Purpose of this build:
 
 Tests run:
 
-- Pending for this branch.
+- `python -m pytest` - 541 passed, 1 pytest-asyncio deprecation warning under Python 3.14.
+- `python -m compileall -q model simulator scripts` - passed.
+- Recursive YAML parse check for schedules/examples/data - parsed 71 YAML files.
+- `python scripts/run_examples.py` - regenerated existing example report outputs successfully.
+- `python scripts/run_sector_schedule_expansion.py` - generated sector schedule expansion reports successfully.
+- `python scripts/run_evidence_workflow.py` - regenerated mock evidence workflow reports successfully.
+- `python scripts/run_ingestion_controls.py` - regenerated secure-ingestion control reports successfully.
+- `python scripts/run_investment_guardrails.py` - regenerated investment guardrail reports successfully.
+- `python scripts/run_fiscal_trajectory.py` - regenerated fiscal trajectory reports successfully.
+- `python scripts/run_transition_funding.py` - regenerated transition funding reports successfully.
+- `python scripts/run_payment_interactions.py` - regenerated payment interaction reports successfully.
+- `python scripts/run_distributional_scenarios.py` - regenerated distributional scenario reports successfully.
+- `python scripts/run_household_weighting.py` - regenerated household weighting reports successfully.
+- `python scripts/run_uncertainty_ranges.py` - regenerated uncertainty range reports successfully.
+- `python scripts/run_reviewed_scenarios.py` - regenerated reviewed scenario reports successfully.
+- `python scripts/run_repo_guardrails.py` - passed with zero denied findings and 49 warning findings.
+- Streamlit bare import probe for `simulator/app.py` and `simulator/pages/20_Sector_Schedules.py` - passed.
 
 Reports generated:
 
@@ -581,3 +597,38 @@ Limitations:
 - Reviewed scenario outputs are prototype display-control signals only.
 - They are not statistical validation, population estimates, real household modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, ATO analysis, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.
 - The reviewed scenario layer does not modify firm-level CARSF liability.
+
+## V1.5 Sector Schedule Expansion
+
+Branch: `v1.5-sector-schedule-expansion`
+
+Baseline: PR #17 merged into `main`, including reviewed scenario comparison and display-control rules.
+
+Purpose of this build:
+
+- Add four new placeholder prototype sector schedules.
+- Add schedule validation for required fields, AII weights, QLC weights, OPFTE, FRV, caps, placeholder labels, and calibration requirements.
+- Add sector schedule expansion reports, tests, CI step, documentation, and Streamlit page.
+
+New schedules:
+
+- `call_centres_customer_support`
+- `accounting_administration`
+- `retail_self_checkout_fulfilment`
+- `software_digital_platforms`
+
+Tests run:
+
+- Pending for this branch.
+
+Reports generated:
+
+- `reports/sector_schedule_expansion.json`
+- `reports/sector_schedule_expansion.md`
+
+Limitations:
+
+- Sector schedules are prototype placeholders only.
+- They are not calibrated, not legal schedules, not Treasury schedules, not ATO guidance, not ABS/ATO/DSS/PBO analysis, do not contain real industry data, and must not be used to estimate actual tax payable.
+- They do not modify firm-level CARSF liability logic and do not implement real multi-schedule attribution.
+- Software / digital platform capital-base treatment remains unresolved and subject to AASB 138, tax counsel, and Treasury review.
