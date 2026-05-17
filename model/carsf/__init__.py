@@ -9,6 +9,17 @@ from .aava import australian_automated_value_added
 from .aggregation import AggregationResult, EntityInput, evaluate_group_aggregation
 from .apportionment import ApportionmentActivity, ApportionmentResult, evaluate_apportionment
 from .avoidance import AvoidanceResult, evaluate_avoidance_risk
+from .behavioural_response import (
+    BehaviouralCountermeasure,
+    BehaviouralResponseResult,
+    BehaviouralResponseScenario,
+    BehaviouralResponseSummary,
+    evaluate_behavioural_response,
+    evaluate_behavioural_responses,
+    summarise_behavioural_responses,
+    validate_behavioural_response_scenario,
+    validate_behavioural_response_scenarios,
+)
 from .burden_balance import BurdenBalanceInput, BurdenBalanceResult, evaluate_burden_balance
 from .calibration import (
     CalibrationRegistry,
@@ -188,6 +199,10 @@ __all__ = [
     "ApportionmentActivity",
     "ApportionmentResult",
     "AvoidanceResult",
+    "BehaviouralCountermeasure",
+    "BehaviouralResponseResult",
+    "BehaviouralResponseScenario",
+    "BehaviouralResponseSummary",
     "BurdenBalanceInput",
     "BurdenBalanceResult",
     "CalibrationRegistry",
@@ -322,6 +337,8 @@ __all__ = [
     "assign_subgroups",
     "evaluate_apportionment",
     "evaluate_avoidance_risk",
+    "evaluate_behavioural_response",
+    "evaluate_behavioural_responses",
     "evaluate_burden_balance",
     "evaluate_distributional_scenario",
     "evaluate_group_aggregation",
@@ -389,11 +406,14 @@ __all__ = [
     "summarise_distributional_scenarios",
     "summarise_evidence_packet",
     "summarise_reviewed_scenarios",
+    "summarise_behavioural_responses",
     "summarise_sector_stress",
     "summarise_uncertainty_results",
     "sweep_aava",
     "sweep_liability_cap",
     "sweep_pass_through",
     "validate_no_fake_calibration_values",
+    "validate_behavioural_response_scenario",
+    "validate_behavioural_response_scenarios",
     "validate_evidence_packet",
 ]

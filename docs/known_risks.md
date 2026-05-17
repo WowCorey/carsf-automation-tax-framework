@@ -67,4 +67,7 @@
 - Additional schedules do not solve legal multi-schedule attribution, grouping, apportionment, or transfer-pricing issues.
 - Sector stress matrix bands may be mistaken for real sector scores or comparative rankings if do-not-rank and metadata-only warnings are removed.
 - Cross-sector stress observations are not calibrated and may overstate or understate governance difficulty without external sector, legal, Treasury, ATO, ABS, PBO, and methods review.
+- Behavioural response scenarios may be mistaken for behavioural predictions, compliance-risk scores, or enforcement logic if synthetic-only and do-not-predict warnings are removed.
+- Response pressure bands may overstate or understate gaming pathway review pressure without behavioural research, legal review, ATO/Treasury methods review, and external calibration.
+- Countermeasure categories are review pathways only and do not implement evidence powers, penalties, audit logic, enforcement, or operational compliance workflows.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.
