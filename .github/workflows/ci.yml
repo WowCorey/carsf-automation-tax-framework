@@ -53,6 +53,9 @@ jobs:
       - name: Run behavioural response simulation
         run: python scripts/run_behavioural_response_simulation.py
 
+      - name: Run administrative compliance workflow
+        run: python scripts/run_administrative_compliance_workflow.py
+
       - name: Run mock evidence workflow
         run: python scripts/run_evidence_workflow.py
 
