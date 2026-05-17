@@ -1,0 +1,271 @@
+illustrative_placeholder_only: true
+synthetic_scenarios_only: true
+not_calibrated: true
+no_behavioural_prediction: true
+no_real_firm_data: true
+no_real_taxpayer_level_data: true
+no_compliance_scoring: true
+scenarios:
+  - scenario_id: token_oversight_workforce_wrapper
+    scenario_name: Token oversight workforce wrapper
+    sector_schedule_id: call_centres_customer_support
+    response_type: token_human_oversight
+    description: Synthetic pathway where nominal human escalation roles are wrapped around automated case resolution for review testing only.
+    synthetic_triggers:
+      - high automated resolution share with low substantive human case handling
+      - escalation roles described as oversight rather than direct support work
+    linked_avoidance_flags:
+      - TOKEN_HUMAN_OVERSIGHT
+      - FAKE_QLC_INFLATION
+    linked_countermeasures:
+      - evidence_requirement
+      - grouped_entity_review
+      - legal_policy_review
+    placeholder_response_pressure: high
+    requires_external_review: true
+    non_claims:
+      - This synthetic scenario does not predict taxpayer behaviour and does not modify firm-level CARSF liability.
+    placeholder_basis:
+      - synthetic call-centre support pathway
+
+  - scenario_id: related_party_ai_service_fee_routing
+    scenario_name: Related-party AI service fee routing
+    sector_schedule_id: accounting_administration
+    response_type: related_party_ai_service_fees
+    description: Synthetic pathway where automation-linked service fees are routed through a related-party provider for review testing only.
+    synthetic_triggers:
+      - related-party automation service fee
+      - AAVA cost loading review
+    linked_avoidance_flags:
+      - RELATED_PARTY_AI_SERVICE_FEES
+      - ARTIFICIAL_LOW_PROFIT_OR_AAVA
+    linked_countermeasures:
+      - transfer_pricing_review
+      - aava_deductibility_review
+      - evidence_requirement
+    placeholder_response_pressure: high
+    requires_external_review: true
+    non_claims:
+      - This synthetic scenario does not predict taxpayer behaviour and does not modify firm-level CARSF liability.
+    placeholder_basis:
+      - synthetic accounting administration pathway
+
+  - scenario_id: offshore_automation_service_routing
+    scenario_name: Offshore automation-as-a-service routing
+    sector_schedule_id: logistics_warehousing
+    response_type: offshore_automation_service_routing
+    description: Synthetic pathway where Australian-facing automated dispatch or routing support is supplied by an offshore automation service for review testing only.
+    synthetic_triggers:
+      - offshore automation-as-a-service
+      - Australian-facing output attribution unresolved
+    linked_avoidance_flags:
+      - OFFSHORE_AUTOMATION_SERVICE
+      - RELATED_PARTY_AI_SERVICE_FEES
+    linked_countermeasures:
+      - offshore_attribution_review
+      - transfer_pricing_review
+      - legal_policy_review
+    placeholder_response_pressure: high
+    requires_external_review: true
+    non_claims:
+      - This synthetic scenario does not predict taxpayer behaviour and does not modify firm-level CARSF liability.
+    placeholder_basis:
+      - synthetic logistics pathway
+
+  - scenario_id: customer_self_checkout_labour_relabelling
+    scenario_name: Customer self-checkout labour relabelling
+    sector_schedule_id: retail_self_checkout_fulfilment
+    response_type: customer_self_service_shift
+    description: Synthetic pathway where automated transaction handling is framed as customer self-service rather than retail automation for review testing only.
+    synthetic_triggers:
+      - self-checkout transaction share
+      - customer self-service classification review
+    linked_avoidance_flags:
+      - SECTOR_CLASSIFICATION_ARBITRAGE
+    linked_countermeasures:
+      - customer_self_service_review
+      - schedule_authority_review
+      - legal_policy_review
+    placeholder_response_pressure: moderate
+    requires_external_review: true
+    non_claims:
+      - This synthetic scenario does not predict taxpayer behaviour and does not modify firm-level CARSF liability.
+    placeholder_basis:
+      - synthetic retail pathway
+
+  - scenario_id: robotics_lease_substitution
+    scenario_name: Robotics lease substitution for capital ownership
+    sector_schedule_id: automotive_repair
+    response_type: robotics_leasing_shift
+    description: Synthetic pathway where robotics capacity is leased or bundled through service arrangements rather than owned directly for review testing only.
+    synthetic_triggers:
+      - robotics leasing
+      - capital-base review
+    linked_avoidance_flags:
+      - ROBOTICS_LEASING_AVOIDANCE
+    linked_countermeasures:
+      - capital_base_review
+      - aava_deductibility_review
+      - evidence_requirement
+    placeholder_response_pressure: moderate
+    requires_external_review: true
+    non_claims:
+      - This synthetic scenario does not predict taxpayer behaviour and does not modify firm-level CARSF liability.
+    placeholder_basis:
+      - synthetic automotive repair pathway
+
+  - scenario_id: platform_ip_royalty_routing
+    scenario_name: Platform IP royalty routing
+    sector_schedule_id: software_digital_platforms
+    response_type: platform_ip_royalty_routing
+    description: Synthetic pathway where Australian-served platform value is affected by offshore IP royalty or model access arrangements for review testing only.
+    synthetic_triggers:
+      - offshore IP royalty routing
+      - platform model access fee
+      - AASB 138 and intangible treatment unresolved
+    linked_avoidance_flags:
+      - OFFSHORE_AUTOMATION_SERVICE
+      - RELATED_PARTY_AI_SERVICE_FEES
+      - ARTIFICIAL_LOW_PROFIT_OR_AAVA
+    linked_countermeasures:
+      - transfer_pricing_review
+      - offshore_attribution_review
+      - capital_base_review
+      - legal_policy_review
+    placeholder_response_pressure: critical
+    requires_external_review: true
+    non_claims:
+      - This synthetic scenario does not predict taxpayer behaviour and does not modify firm-level CARSF liability.
+    placeholder_basis:
+      - synthetic software platform pathway
+
+  - scenario_id: schedule_classification_arbitrage
+    scenario_name: Schedule classification arbitrage
+    sector_schedule_id: retail_self_checkout_fulfilment
+    response_type: schedule_classification_arbitrage
+    description: Synthetic pathway where mixed retail, fulfilment, and platform activity is classified into a schedule with lower placeholder pressure for review testing only.
+    synthetic_triggers:
+      - schedule classification arbitrage
+      - mixed activity attribution unresolved
+    linked_avoidance_flags:
+      - SECTOR_CLASSIFICATION_ARBITRAGE
+    linked_countermeasures:
+      - schedule_authority_review
+      - legal_policy_review
+    placeholder_response_pressure: high
+    requires_external_review: true
+    non_claims:
+      - This synthetic scenario does not predict taxpayer behaviour and does not modify firm-level CARSF liability.
+    placeholder_basis:
+      - synthetic schedule boundary pathway
+
+  - scenario_id: artificial_low_aava_cost_loading
+    scenario_name: Artificial low AAVA through cost loading
+    sector_schedule_id: accounting_administration
+    response_type: artificial_low_profit_or_aava
+    description: Synthetic pathway where automation-linked input costs reduce reported AAVA in a way that requires deductibility review.
+    synthetic_triggers:
+      - AAVA cost loading
+      - low declared profit placeholder
+    linked_avoidance_flags:
+      - ARTIFICIAL_LOW_PROFIT_OR_AAVA
+      - RELATED_PARTY_AI_SERVICE_FEES
+    linked_countermeasures:
+      - aava_deductibility_review
+      - transfer_pricing_review
+      - grouped_entity_review
+    placeholder_response_pressure: high
+    requires_external_review: true
+    non_claims:
+      - This synthetic scenario does not predict taxpayer behaviour and does not modify firm-level CARSF liability.
+    placeholder_basis:
+      - synthetic AAVA deductibility pathway
+
+  - scenario_id: cloud_inference_operating_cost_relabelling
+    scenario_name: Cloud / inference relabelling as ordinary operating cost
+    sector_schedule_id: software_digital_platforms
+    response_type: cloud_inference_relabelling
+    description: Synthetic pathway where cloud or inference costs are treated as ordinary operating costs rather than automation-linked inputs for review testing only.
+    synthetic_triggers:
+      - cloud inference relabelling
+      - automation input-cost classification review
+    linked_avoidance_flags:
+      - CLOUD_COST_RELABELING
+      - ARTIFICIAL_LOW_PROFIT_OR_AAVA
+    linked_countermeasures:
+      - aava_deductibility_review
+      - evidence_requirement
+      - transfer_pricing_review
+    placeholder_response_pressure: high
+    requires_external_review: true
+    non_claims:
+      - This synthetic scenario does not predict taxpayer behaviour and does not modify firm-level CARSF liability.
+    placeholder_basis:
+      - synthetic software cost-classification pathway
+
+  - scenario_id: mixed_unit_apportionment_gaming
+    scenario_name: Mixed-unit apportionment gaming
+    sector_schedule_id: logistics_warehousing
+    response_type: mixed_unit_apportionment_gaming
+    description: Synthetic pathway where activity is shifted between incompatible output units or apportionment shares for review testing only.
+    synthetic_triggers:
+      - mixed-unit apportionment gaming
+      - conversion metadata unresolved
+    linked_avoidance_flags:
+      - SECTOR_CLASSIFICATION_ARBITRAGE
+    linked_countermeasures:
+      - schedule_authority_review
+      - evidence_requirement
+      - legal_policy_review
+    placeholder_response_pressure: moderate
+    requires_external_review: true
+    non_claims:
+      - This synthetic scenario does not predict taxpayer behaviour and does not modify firm-level CARSF liability.
+    placeholder_basis:
+      - synthetic mixed-unit pathway
+
+  - scenario_id: fake_qlc_concentrated_roles
+    scenario_name: Fake QLC inflation through concentrated high-scored roles
+    sector_schedule_id: call_centres_customer_support
+    response_type: fake_qlc_inflation
+    description: Synthetic pathway where a small number of high-scored roles are used to inflate QLC relative to automated output for review testing only.
+    synthetic_triggers:
+      - concentrated high-scored roles
+      - QLC evidence review
+    linked_avoidance_flags:
+      - FAKE_QLC_INFLATION
+      - TOKEN_HUMAN_OVERSIGHT
+    linked_countermeasures:
+      - evidence_requirement
+      - grouped_entity_review
+    placeholder_response_pressure: high
+    requires_external_review: true
+    non_claims:
+      - This synthetic scenario does not predict taxpayer behaviour and does not modify firm-level CARSF liability.
+    placeholder_basis:
+      - synthetic QLC pathway
+
+  - scenario_id: open_source_ai_treatment_gap
+    scenario_name: Open-source AI treatment gap
+    sector_schedule_id: software_digital_platforms
+    response_type: open_source_ai_treatment_gap
+    description: Synthetic pathway where open-source model use creates unresolved capital-base, AAVA, and schedule treatment questions for review testing only.
+    synthetic_triggers:
+      - open-source AI treatment gap
+      - intangible and AASB 138 treatment unresolved
+    linked_avoidance_flags:
+      - OPEN_SOURCE_AI_TREATMENT_GAP
+    unresolved_new_flag: true
+    linked_countermeasures:
+      - legal_policy_review
+      - capital_base_review
+      - external_calibration_required
+    placeholder_response_pressure: moderate
+    requires_external_review: true
+    suppress_until_calibrated: true
+    suppression_calibration_dependencies:
+      - open-source AI treatment requires legal, tax, accounting, Treasury, and Schedules Authority review
+    non_claims:
+      - This synthetic scenario does not predict taxpayer behaviour and does not modify firm-level CARSF liability.
+    placeholder_basis:
+      - synthetic unresolved open-source AI pathway

@@ -665,7 +665,12 @@ Purpose of this build:
 
 Tests run:
 
-- Pending for this branch.
+- `python -m pytest` - 579 passed, 1 pytest-asyncio deprecation warning.
+- `python -m compileall -q model simulator scripts` - passed.
+- Recursive YAML parse for `schedules/`, `examples/`, and `data/` - parsed 72 YAML files.
+- Report runners passed: examples, sector schedule expansion, sector stress matrix, behavioural response simulation, evidence workflow, ingestion controls, investment guardrails, fiscal trajectory, transition funding, payment interactions, distributional scenarios, household weighting, uncertainty ranges, reviewed scenarios, and repo guardrails.
+- Repo guardrails passed with zero denied findings.
+- Bare Streamlit import probes passed for `simulator/app.py` and `simulator/pages/22_Behavioural_Response.py`.
 
 Reports generated:
 
@@ -677,3 +682,31 @@ Limitations:
 - Sector stress matrix outputs are prototype metadata review outputs only.
 - They are not calibrated, not official sector scores, not Treasury modelling, not ATO guidance, not ABS/ATO/DSS/PBO analysis, not economic validation, not investment advice, not legal advice, and not tax advice.
 - They do not use real industry data, do not estimate actual tax payable, do not modify firm-level CARSF liability logic, do not implement legal sector attribution, and do not implement real multi-schedule blending.
+
+## V1.5 Behavioural Response / Gaming Simulation
+
+Branch: `v1.5-behavioural-response-gaming-simulation`
+
+Baseline: PR #19 merged into `main`, including the sector stress matrix.
+
+Purpose of this build:
+
+- Add synthetic behavioural response / gaming pathway scenarios.
+- Map response pathways to linked avoidance flags, placeholder pressure bands, countermeasure categories, review statuses, external-review flags, and calibration blockers.
+- Add behavioural response reports, tests, CI step, documentation, and Streamlit page.
+
+Tests run:
+
+- Pending for this branch.
+
+Reports generated:
+
+- `reports/behavioural_response_simulation.json`
+- `reports/behavioural_response_simulation.md`
+
+Limitations:
+
+- Behavioural response outputs are prototype deterministic synthetic pathway reviews only.
+- They are not behavioural prediction, not behavioural elasticity, not ATO audit logic, not Treasury modelling, not ABS/ATO/DSS/PBO analysis, not compliance-risk scoring, not enforcement, not penalty modelling, not legal advice, not tax advice, not investment advice, and not economic validation.
+- They do not use firm-level, taxpayer-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data.
+- They do not estimate actual tax payable and do not modify firm-level CARSF liability logic.

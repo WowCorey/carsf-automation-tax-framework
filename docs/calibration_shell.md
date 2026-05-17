@@ -208,6 +208,21 @@ Required source categories include ABS labour and output data, ATO aggregated ta
 
 No such calibration has occurred in this repository. The sector stress matrix is prototype metadata review only, does not use real industry data, does not rank sectors, does not estimate actual tax payable, and does not modify firm-level CARSF liability logic.
 
+## Behavioural Response Calibration and Review
+
+The behavioural response / gaming simulation requires future calibration, legal review, ATO/Treasury methods review, and behavioural research before any response pathway could be used beyond prototype policy discussion:
+
+- behavioural response taxonomy and trigger definitions
+- response pressure band thresholds
+- evidence requirements for labour relabelling, token oversight, QLC inflation, entity splitting, offshore service routing, related-party fees, cloud/inference relabelling, robotics leasing, customer self-service shifts, schedule arbitrage, artificial low AAVA, platform IP royalty routing, open-source AI treatment, and mixed-unit apportionment gaming
+- mapping between response pathways and operative anti-avoidance provisions
+- grouped-entity, transfer-pricing, offshore-attribution, AAVA deductibility, capital-base, customer-self-service, and schedule-authority review processes
+- external behavioural research and administrative feasibility review
+
+Required source categories include legal review, tax counsel, ATO administrative methods review, Treasury policy review, behavioural research, industry automation surveys, transfer-pricing methods review, grouped-entity review methods, software/intangible accounting review, and secure evidence-governance design.
+
+No such calibration has occurred in this repository. Behavioural response outputs are deterministic synthetic pathway reviews only; they do not predict taxpayer behaviour, estimate behavioural elasticity, create compliance-risk scoring, implement enforcement, implement penalties, estimate actual tax payable, or modify firm-level CARSF liability logic.
+
 ## Non-Claims
 
 The calibration shell is not legal, tax, Treasury, ATO, ABS, Fair Work, OECD, BEPS, audit, forensic, or economic validation. It does not prove any model setting is correct.

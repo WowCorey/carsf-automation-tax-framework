@@ -18,7 +18,7 @@ All sector values, schedule values, examples, caps, Fiscal Replacement Value val
 
 - `paper/` - Markdown policy paper, V1.5 working draft, formulas, glossary, references, and export notes.
 - `audits/` - review notes, responses, and red-team register.
-- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, repository guardrails, investment/incidence guardrails, national fiscal trajectory modelling, transition funding, payment interactions, synthetic distributional scenarios, synthetic household weighting, deterministic uncertainty ranges, reviewed scenario display-control classifications, and metadata-only sector stress matrix review.
+- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, repository guardrails, investment/incidence guardrails, national fiscal trajectory modelling, transition funding, payment interactions, synthetic distributional scenarios, synthetic household weighting, deterministic uncertainty ranges, reviewed scenario display-control classifications, metadata-only sector stress matrix review, and synthetic behavioural response simulation.
 - `model/tests/` - pytest coverage for formula bounds, caps, examples, and avoidance flags.
 - `data/` - source-category registry and placeholder policy; no datasets are committed.
 - `data/mock_evidence/` - synthetic mock evidence packets for workflow testing only; no real evidence or personal data is committed.
@@ -82,6 +82,17 @@ Generated sector-stress reports:
 
 - `reports/sector_stress_matrix.md`
 - `reports/sector_stress_matrix.json`
+
+Run behavioural response / gaming simulation:
+
+```powershell
+python scripts/run_behavioural_response_simulation.py
+```
+
+Generated behavioural-response reports:
+
+- `reports/behavioural_response_simulation.md`
+- `reports/behavioural_response_simulation.json`
 
 Run controlled mock evidence workflow reports separately:
 
@@ -218,6 +229,7 @@ Uncertainty range reports are deterministic placeholder outputs only. They are n
 Reviewed scenario reports are prototype display-control outputs only. They are not statistical validation, population estimates, real household modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, ATO analysis, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.
 Sector schedule expansion reports are prototype placeholder outputs only. They are not calibrated. They are not legal schedules. They are not Treasury schedules. They are not ATO guidance. They are not ABS/ATO/DSS/PBO analysis. They do not contain real industry data. They must not be used to estimate actual tax payable.
 Sector stress matrix reports are prototype metadata review outputs only. They are not calibrated, not sector rankings, not Treasury modelling, not ATO guidance, not ABS/ATO/DSS/PBO analysis, not economic validation, not investment advice, not legal advice, and not tax advice. They do not use real industry data, do not estimate actual tax payable, do not implement legal sector attribution, do not implement real multi-schedule blending, and do not modify firm-level CARSF liability logic.
+Behavioural response reports are synthetic pathway review outputs only. They do not predict taxpayer behaviour, estimate behavioural elasticity, implement ATO audit logic, create compliance-risk scoring, implement enforcement, implement penalties, estimate actual tax payable, or modify firm-level CARSF liability logic.
 
 ## Run the Simulator
 
@@ -254,6 +266,7 @@ V1.5 is not just an examples update. It is V1.4 plus two prototype sector schedu
 - wrap synthetic household and weighted subgroup outputs with deterministic low/base/high uncertainty ranges without claiming confidence intervals, forecasts, or calibration;
 - classify reviewed scenario outputs into show, warning, hidden, non-interpretable, and external-review-only display categories without validating them or changing firm-level liability;
 - compare prototype sector schedules through a metadata-only stress matrix that uses do-not-rank display controls without calibration or real sector-score claims;
+- map synthetic behavioural response and gaming pathways to linked avoidance flags, placeholder pressure bands, countermeasure categories, and review statuses without predicting conduct or changing firm-level liability;
 - define a calibration shell and data source registry without collecting real data;
 - identify open-source AI and R&D Tax Incentive interaction questions without overclaiming.
 
@@ -276,3 +289,4 @@ Distributional scenario outputs are synthetic placeholders. They do not model re
 Household weighting and subgroup aggregation outputs are synthetic placeholders. They are not population estimates, survey weights, ABS/HILDA/Census analysis, DSS / Services Australia modelling, or real distributional modelling.
 Uncertainty range outputs are deterministic placeholders. They are not Monte Carlo, statistical confidence intervals, forecasts, real uncertainty quantification, or validated sensitivity analysis.
 Sector stress matrix outputs are metadata-only placeholders. They are not calibrated sector scores, not official schedules, not real industry analysis, and not usable for estimating actual tax payable.
+Behavioural response outputs are deterministic synthetic pathway reviews. They are not behavioural prediction, behavioural elasticity, ATO audit logic, compliance-risk scoring, enforcement, penalty modelling, or real taxpayer scoring.
