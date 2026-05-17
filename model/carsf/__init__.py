@@ -114,6 +114,14 @@ from .secure_ingestion import (
     evaluate_ingestion_request,
     get_default_ingestion_policy,
 )
+from .sector_stress_matrix import (
+    SectorStressInput,
+    SectorStressResult,
+    SectorStressSummary,
+    build_sector_stress_matrix,
+    evaluate_sector_stress,
+    summarise_sector_stress,
+)
 from .sensitive_scan import SensitiveScanResult, scan_mapping_for_sensitive_markers, scan_text_for_sensitive_markers
 from .sensitivity import (
     SensitivityPoint,
@@ -255,6 +263,9 @@ __all__ = [
     "ReviewedScenarioSummary",
     "RetentionPolicy",
     "SafeHarbourResult",
+    "SectorStressInput",
+    "SectorStressResult",
+    "SectorStressSummary",
     "SensitiveScanResult",
     "SensitivityPoint",
     "SensitivitySweepResult",
@@ -298,6 +309,7 @@ __all__ = [
     "automation_intensity_index",
     "automation_rent_levy",
     "australian_automated_value_added",
+    "build_sector_stress_matrix",
     "calculate_liability",
     "cars_i",
     "classify_evidence_item",
@@ -331,6 +343,7 @@ __all__ = [
     "evaluate_review_transition",
     "review_scenario",
     "evaluate_safe_harbour",
+    "evaluate_sector_stress",
     "evaluate_tax_incidence",
     "evaluate_target_population",
     "evaluate_transition_payment",
@@ -376,6 +389,7 @@ __all__ = [
     "summarise_distributional_scenarios",
     "summarise_evidence_packet",
     "summarise_reviewed_scenarios",
+    "summarise_sector_stress",
     "summarise_uncertainty_results",
     "sweep_aava",
     "sweep_liability_cap",

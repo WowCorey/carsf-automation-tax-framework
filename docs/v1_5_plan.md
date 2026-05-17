@@ -43,6 +43,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Add deterministic low/base/high uncertainty range mechanics without claiming Monte Carlo, confidence intervals, forecasts, representativeness, or calibration.
 - Add a reviewed scenario comparison layer that hides fragile, range-sensitive, missing-range, or non-interpretable synthetic outputs from clean point-estimate presentation.
 - Expand the prototype sector schedule library to call centres / customer support, accounting / administration, retail self-checkout / fulfilment, and software / digital platforms without calibration or legal schedule claims.
+- Add a sector stress matrix that compares placeholder schedules across metadata-only stress dimensions, display-control statuses, and do-not-rank warnings without calibration or real-world sector ranking claims.
 
 ## Data Separation
 
@@ -74,6 +75,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Uncertainty range reports can be generated with `python scripts/run_uncertainty_ranges.py`.
 - Reviewed scenario reports can be generated with `python scripts/run_reviewed_scenarios.py`.
 - Sector schedule expansion reports can be generated with `python scripts/run_sector_schedule_expansion.py`.
+- Sector stress matrix reports can be generated with `python scripts/run_sector_stress_matrix.py`.
 - Hybrid logistics stress variant demonstrates non-zero but intermediate NLTG.
 - V1.5 working paper contains TODO markers where policy drafting remains open.
 - Limitations document clearly blocks actual tax-payable claims.
@@ -95,4 +97,5 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Replace synthetic household weights and subgroup filters only after authorised survey weighting, representativeness, uncertainty, and data-governance review.
 - Replace deterministic placeholder uncertainty ranges only after external statistical methods, calibration, and data-governance review.
 - Expand sector schedules only after reviewed scenario display-control rules are in place so new sector outputs inherit suppression and external-review handling.
-- Build a sector stress matrix only after expanded schedule placeholders are present, and do not present it as a real sector ranking.
+- Build a sector stress matrix only after expanded schedule placeholders are present, and do not present it as a real-world sector ranking.
+- Add behavioural response and gaming simulation only after sector stress bands exist, so relabelling, entity splitting, offshore routing, customer self-service shifting, related-party software fees, and schedule arbitrage can be shown as prototype responses without real behavioural prediction claims.

@@ -1,0 +1,466 @@
+{
+  "metadata": {
+    "firm_level_liability_logic_modified": false,
+    "generated_at": "2026-05-17T06:11:15+00:00",
+    "non_claims": [
+      "The sector stress matrix is prototype metadata review only. It is not calibrated. It is not a real-world ranking of sectors. It is not Treasury modelling. It is not ATO guidance. It is not ABS/ATO/DSS/PBO analysis. It does not use real industry data. It does not estimate actual tax payable.",
+      "The sector stress matrix does not modify firm-level CARSF liability logic.",
+      "The sector stress matrix does not implement legal sector attribution or real multi-schedule blending.",
+      "The sector stress matrix is not economic validation, investment advice, legal advice, or tax advice.",
+      "All schedules remain placeholder-only and subject to external calibration, legal review, and methods review."
+    ],
+    "real_industry_data_added": false,
+    "real_sector_rankings_created": false,
+    "status": "prototype_sector_stress_matrix_metadata_only",
+    "version": "CARSF V1.5 prototype"
+  },
+  "stress_matrix": [
+    {
+      "aava_sensitivity_placeholder": "moderate_placeholder_stress",
+      "automation_intensity_placeholder": "critical_review_required",
+      "avoidance_gaming_risk_placeholder": "high_placeholder_stress",
+      "calibration_blockers": [
+        "ABS and ATO data separating accounting, bookkeeping, payroll, administration, and professional-services activities.",
+        "Professional-services and administration workforce wage and output data.",
+        "Fair Work award, classification, and job-security data for clerical and accounting-support roles.",
+        "Accounting platform transaction volumes, workflow automation adoption, and document-processing data.",
+        "HILDA, DSS, and labour-market transition data for displaced administrative and accounting-support workers.",
+        "Legal and tax review of professional judgement, advice, audit, and lodgement boundaries."
+      ],
+      "calibration_difficulty_placeholder": "critical_review_required",
+      "canonical_output_unit": "standardised_transactions_or_filings_processed",
+      "dimension_scores": {
+        "aava_sensitivity_placeholder": 0.3,
+        "automation_intensity_placeholder": 0.7699999999999999,
+        "avoidance_gaming_risk_placeholder": 0.48000000000000004,
+        "calibration_difficulty_placeholder": 0.67,
+        "incidence_risk_placeholder": 0.44,
+        "investment_deterrence_risk_placeholder": 0.21,
+        "legal_attribution_difficulty_placeholder": 0.52,
+        "qlc_vulnerability_placeholder": 0.46399999999999997
+      },
+      "display_control_status": "external_review_required",
+      "do_not_rank": true,
+      "incidence_risk_placeholder": "moderate_placeholder_stress",
+      "investment_deterrence_risk_placeholder": "low_placeholder_stress",
+      "legal_attribution_difficulty_placeholder": "high_placeholder_stress",
+      "main_reason": "automation_intensity_placeholder is critical_review_required using placeholder metadata only.",
+      "non_claims": [
+        "The sector stress matrix is prototype metadata review only. It is not calibrated. It is not a real-world ranking of sectors. It is not Treasury modelling. It is not ATO guidance. It is not ABS/ATO/DSS/PBO analysis. It does not use real industry data. It does not estimate actual tax payable.",
+        "The sector stress matrix does not modify firm-level CARSF liability logic.",
+        "The sector stress matrix does not implement legal sector attribution or real multi-schedule blending.",
+        "The sector stress matrix is not economic validation, investment advice, legal advice, or tax advice.",
+        "All schedules remain placeholder-only and subject to external calibration, legal review, and methods review."
+      ],
+      "qlc_vulnerability_placeholder": "high_placeholder_stress",
+      "schedule_id": "accounting_administration",
+      "schedule_name": "Prototype Schedule D - Accounting / Administration",
+      "stress_reasons": [
+        "4 avoidance controls are listed",
+        "AAVA sensitivity uses cap placeholders and AAVA-adjacent schedule terms only",
+        "AAVA-adjacent offshore, related-party, IP, cloud, model, data, or licence terms are present",
+        "Avoidance risk uses number and type of avoidance controls only",
+        "Calibration difficulty uses listed data requirements and review dependencies only",
+        "Incidence risk uses consumer-facing and transaction-facing wording only",
+        "Investment risk uses cap placeholders and unresolved capital/intangible wording only",
+        "Legal attribution difficulty uses schedule attribution and review wording only",
+        "QLC vulnerability uses placeholder QLC weights and schedule text only",
+        "automation emphasis uses AII metadata only (0.96)",
+        "consumer, support, retail, logistics, platform, or transaction terms increase review pressure",
+        "legal, tax, Treasury, AASB, intangible, platform, cross-border, or attribution terms are present",
+        "offshore, related-party, IP, platform, mixed-activity, customer self-service, legal review, or AASB terms are present",
+        "related-party, offshore, IP, platform, cloud, token-worker, or self-service terms are present",
+        "token, self-service, offshore, outsourced, or escalation terms increase review pressure"
+      ],
+      "warnings": [
+        "Sector stress matrix row is metadata-only and must not be treated as a sector rank.",
+        "Do not rank this schedule against other schedules using placeholder stress bands.",
+        "Firm-level CARSF liability logic is not modified."
+      ]
+    },
+    {
+      "aava_sensitivity_placeholder": "moderate_placeholder_stress",
+      "automation_intensity_placeholder": "high_placeholder_stress",
+      "avoidance_gaming_risk_placeholder": "high_placeholder_stress",
+      "calibration_blockers": [
+        "ATO small-business and company tax data by automotive repair ANZSIC class.",
+        "ABS labour force and output measures for repair and maintenance.",
+        "Fair Work occupational classifications, wage distributions, and casualisation measures.",
+        "HILDA income-transition and wage-scarring data for displaced mechanics and apprentices.",
+        "DSS transfer-system data and HELP repayment loss assumptions.",
+        "Workshop robotics and AI diagnostic adoption data from industry surveys."
+      ],
+      "calibration_difficulty_placeholder": "high_placeholder_stress",
+      "canonical_output_unit": "book_hour_equivalent_jobs_completed",
+      "dimension_scores": {
+        "aava_sensitivity_placeholder": 0.3,
+        "automation_intensity_placeholder": 0.5900000000000001,
+        "avoidance_gaming_risk_placeholder": 0.47000000000000003,
+        "calibration_difficulty_placeholder": 0.52,
+        "incidence_risk_placeholder": 0.26,
+        "investment_deterrence_risk_placeholder": 0.21,
+        "legal_attribution_difficulty_placeholder": 0.52,
+        "qlc_vulnerability_placeholder": 0.4774999999999999
+      },
+      "display_control_status": "strong_warning_required",
+      "do_not_rank": true,
+      "incidence_risk_placeholder": "moderate_placeholder_stress",
+      "investment_deterrence_risk_placeholder": "low_placeholder_stress",
+      "legal_attribution_difficulty_placeholder": "high_placeholder_stress",
+      "main_reason": "automation_intensity_placeholder is high_placeholder_stress using placeholder metadata only.",
+      "non_claims": [
+        "The sector stress matrix is prototype metadata review only. It is not calibrated. It is not a real-world ranking of sectors. It is not Treasury modelling. It is not ATO guidance. It is not ABS/ATO/DSS/PBO analysis. It does not use real industry data. It does not estimate actual tax payable.",
+        "The sector stress matrix does not modify firm-level CARSF liability logic.",
+        "The sector stress matrix does not implement legal sector attribution or real multi-schedule blending.",
+        "The sector stress matrix is not economic validation, investment advice, legal advice, or tax advice.",
+        "All schedules remain placeholder-only and subject to external calibration, legal review, and methods review."
+      ],
+      "qlc_vulnerability_placeholder": "high_placeholder_stress",
+      "schedule_id": "automotive_repair",
+      "schedule_name": "Prototype Schedule A - Automotive Repair",
+      "stress_reasons": [
+        "5 avoidance controls are listed",
+        "AAVA sensitivity uses cap placeholders and AAVA-adjacent schedule terms only",
+        "AAVA-adjacent offshore, related-party, IP, cloud, model, data, or licence terms are present",
+        "Avoidance risk uses number and type of avoidance controls only",
+        "Calibration difficulty uses listed data requirements and review dependencies only",
+        "Incidence risk uses consumer-facing and transaction-facing wording only",
+        "Investment risk uses cap placeholders and unresolved capital/intangible wording only",
+        "Legal attribution difficulty uses schedule attribution and review wording only",
+        "QLC vulnerability uses placeholder QLC weights and schedule text only",
+        "automation emphasis uses AII metadata only (0.74)",
+        "consumer, support, retail, logistics, platform, or transaction terms increase review pressure",
+        "legal, tax, Treasury, AASB, intangible, platform, cross-border, or attribution terms are present",
+        "offshore, related-party, IP, platform, mixed-activity, customer self-service, legal review, or AASB terms are present",
+        "related-party, offshore, IP, platform, cloud, token-worker, or self-service terms are present",
+        "robotics placeholder weight adds physical-automation review note",
+        "token, self-service, offshore, outsourced, or escalation terms increase review pressure"
+      ],
+      "warnings": [
+        "Sector stress matrix row is metadata-only and must not be treated as a sector rank.",
+        "Do not rank this schedule against other schedules using placeholder stress bands.",
+        "Firm-level CARSF liability logic is not modified."
+      ]
+    },
+    {
+      "aava_sensitivity_placeholder": "moderate_placeholder_stress",
+      "automation_intensity_placeholder": "critical_review_required",
+      "avoidance_gaming_risk_placeholder": "high_placeholder_stress",
+      "calibration_blockers": [
+        "ABS and industry customer-service workforce and output data.",
+        "ATO aggregated tax data for customer support and contact-centre entities.",
+        "CRM/ticketing benchmark data for resolved support cases per qualified FTE.",
+        "Fair Work wage, award, casualisation, and job-security data for support workers.",
+        "AI agent, chatbot, and automated triage adoption data from industry surveys.",
+        "DSS, HILDA, and labour-market transition data for displaced customer support workers."
+      ],
+      "calibration_difficulty_placeholder": "high_placeholder_stress",
+      "canonical_output_unit": "resolved_customer_support_cases",
+      "dimension_scores": {
+        "aava_sensitivity_placeholder": 0.355,
+        "automation_intensity_placeholder": 0.77,
+        "avoidance_gaming_risk_placeholder": 0.52,
+        "calibration_difficulty_placeholder": 0.52,
+        "incidence_risk_placeholder": 0.38,
+        "investment_deterrence_risk_placeholder": 0.22,
+        "legal_attribution_difficulty_placeholder": 0.36,
+        "qlc_vulnerability_placeholder": 0.5860000000000001
+      },
+      "display_control_status": "external_review_required",
+      "do_not_rank": true,
+      "incidence_risk_placeholder": "moderate_placeholder_stress",
+      "investment_deterrence_risk_placeholder": "low_placeholder_stress",
+      "legal_attribution_difficulty_placeholder": "moderate_placeholder_stress",
+      "main_reason": "automation_intensity_placeholder is critical_review_required using placeholder metadata only.",
+      "non_claims": [
+        "The sector stress matrix is prototype metadata review only. It is not calibrated. It is not a real-world ranking of sectors. It is not Treasury modelling. It is not ATO guidance. It is not ABS/ATO/DSS/PBO analysis. It does not use real industry data. It does not estimate actual tax payable.",
+        "The sector stress matrix does not modify firm-level CARSF liability logic.",
+        "The sector stress matrix does not implement legal sector attribution or real multi-schedule blending.",
+        "The sector stress matrix is not economic validation, investment advice, legal advice, or tax advice.",
+        "All schedules remain placeholder-only and subject to external calibration, legal review, and methods review."
+      ],
+      "qlc_vulnerability_placeholder": "high_placeholder_stress",
+      "schedule_id": "call_centres_customer_support",
+      "schedule_name": "Prototype Schedule C - Call Centres / Customer Support",
+      "stress_reasons": [
+        "4 avoidance controls are listed",
+        "AAVA sensitivity uses cap placeholders and AAVA-adjacent schedule terms only",
+        "AAVA-adjacent offshore, related-party, IP, cloud, model, data, or licence terms are present",
+        "Avoidance risk uses number and type of avoidance controls only",
+        "Calibration difficulty uses listed data requirements and review dependencies only",
+        "Incidence risk uses consumer-facing and transaction-facing wording only",
+        "Investment risk uses cap placeholders and unresolved capital/intangible wording only",
+        "Legal attribution difficulty uses schedule attribution and review wording only",
+        "QLC vulnerability uses placeholder QLC weights and schedule text only",
+        "automation emphasis uses AII metadata only (0.96)",
+        "consumer, support, retail, logistics, platform, or transaction terms increase review pressure",
+        "legal, tax, Treasury, AASB, intangible, platform, cross-border, or attribution terms are present",
+        "offshore, related-party, IP, platform, mixed-activity, customer self-service, legal review, or AASB terms are present",
+        "related-party, offshore, IP, platform, cloud, token-worker, or self-service terms are present",
+        "token, self-service, offshore, outsourced, or escalation terms increase review pressure"
+      ],
+      "warnings": [
+        "Sector stress matrix row is metadata-only and must not be treated as a sector rank.",
+        "Do not rank this schedule against other schedules using placeholder stress bands.",
+        "Firm-level CARSF liability logic is not modified."
+      ]
+    },
+    {
+      "aava_sensitivity_placeholder": "moderate_placeholder_stress",
+      "automation_intensity_placeholder": "critical_review_required",
+      "avoidance_gaming_risk_placeholder": "high_placeholder_stress",
+      "calibration_blockers": [
+        "ATO, ABS, and industry data separating freight, last-mile delivery, warehousing, and platform dispatch.",
+        "State payroll tax exposure and regional employment concentration.",
+        "HILDA and DSS data on driver, picker, packer, dispatcher, and warehouse transition outcomes.",
+        "Autonomous vehicle kilometres, automated dispatch share, and warehouse robotics adoption data.",
+        "Transfer pricing, diverted profits tax, and significant global entity interaction analysis."
+      ],
+      "calibration_difficulty_placeholder": "high_placeholder_stress",
+      "canonical_output_unit": "tonne_kilometres_or_pallet_movements",
+      "dimension_scores": {
+        "aava_sensitivity_placeholder": 0.365,
+        "automation_intensity_placeholder": 0.68,
+        "avoidance_gaming_risk_placeholder": 0.6200000000000001,
+        "calibration_difficulty_placeholder": 0.6000000000000001,
+        "incidence_risk_placeholder": 0.6799999999999999,
+        "investment_deterrence_risk_placeholder": 0.23,
+        "legal_attribution_difficulty_placeholder": 0.6,
+        "qlc_vulnerability_placeholder": 0.498
+      },
+      "display_control_status": "external_review_required",
+      "do_not_rank": true,
+      "incidence_risk_placeholder": "critical_review_required",
+      "investment_deterrence_risk_placeholder": "low_placeholder_stress",
+      "legal_attribution_difficulty_placeholder": "high_placeholder_stress",
+      "main_reason": "automation_intensity_placeholder is critical_review_required using placeholder metadata only.",
+      "non_claims": [
+        "The sector stress matrix is prototype metadata review only. It is not calibrated. It is not a real-world ranking of sectors. It is not Treasury modelling. It is not ATO guidance. It is not ABS/ATO/DSS/PBO analysis. It does not use real industry data. It does not estimate actual tax payable.",
+        "The sector stress matrix does not modify firm-level CARSF liability logic.",
+        "The sector stress matrix does not implement legal sector attribution or real multi-schedule blending.",
+        "The sector stress matrix is not economic validation, investment advice, legal advice, or tax advice.",
+        "All schedules remain placeholder-only and subject to external calibration, legal review, and methods review."
+      ],
+      "qlc_vulnerability_placeholder": "high_placeholder_stress",
+      "schedule_id": "logistics_warehousing",
+      "schedule_name": "Prototype Schedule B - Logistics / Warehousing",
+      "stress_reasons": [
+        "6 avoidance controls are listed",
+        "AAVA sensitivity uses cap placeholders and AAVA-adjacent schedule terms only",
+        "AAVA-adjacent offshore, related-party, IP, cloud, model, data, or licence terms are present",
+        "Avoidance risk uses number and type of avoidance controls only",
+        "Calibration difficulty uses listed data requirements and review dependencies only",
+        "Incidence risk uses consumer-facing and transaction-facing wording only",
+        "Investment risk uses cap placeholders and unresolved capital/intangible wording only",
+        "Legal attribution difficulty uses schedule attribution and review wording only",
+        "QLC vulnerability uses placeholder QLC weights and schedule text only",
+        "automation emphasis uses AII metadata only (0.85)",
+        "consumer, support, retail, logistics, platform, or transaction terms increase review pressure",
+        "legal, tax, Treasury, AASB, intangible, platform, cross-border, or attribution terms are present",
+        "offshore, related-party, IP, platform, mixed-activity, customer self-service, legal review, or AASB terms are present",
+        "related-party, offshore, IP, platform, cloud, token-worker, or self-service terms are present",
+        "token, self-service, offshore, outsourced, or escalation terms increase review pressure"
+      ],
+      "warnings": [
+        "Sector stress matrix row is metadata-only and must not be treated as a sector rank.",
+        "Do not rank this schedule against other schedules using placeholder stress bands.",
+        "Firm-level CARSF liability logic is not modified."
+      ]
+    },
+    {
+      "aava_sensitivity_placeholder": "moderate_placeholder_stress",
+      "automation_intensity_placeholder": "critical_review_required",
+      "avoidance_gaming_risk_placeholder": "high_placeholder_stress",
+      "calibration_blockers": [
+        "ABS, ATO, and industry data separating store retail, online retail, fulfilment, and marketplace activities.",
+        "POS, self-checkout, fulfilment, and inventory automation benchmark data.",
+        "Fair Work retail, warehouse, and fulfilment wage and employment data.",
+        "State payroll tax and regional employment data for retail and fulfilment sites.",
+        "HILDA, DSS, and labour-market transition data for displaced retail and fulfilment workers.",
+        "Legal review of customer self-service, contractor labour, platform retail, and fulfilment attribution."
+      ],
+      "calibration_difficulty_placeholder": "critical_review_required",
+      "canonical_output_unit": "customer_transactions_or_order_fulfilments",
+      "dimension_scores": {
+        "aava_sensitivity_placeholder": 0.31333333333333335,
+        "automation_intensity_placeholder": 0.65,
+        "avoidance_gaming_risk_placeholder": 0.48000000000000004,
+        "calibration_difficulty_placeholder": 0.67,
+        "incidence_risk_placeholder": 0.62,
+        "investment_deterrence_risk_placeholder": 0.22333333333333336,
+        "legal_attribution_difficulty_placeholder": 0.6,
+        "qlc_vulnerability_placeholder": 0.498
+      },
+      "display_control_status": "external_review_required",
+      "do_not_rank": true,
+      "incidence_risk_placeholder": "high_placeholder_stress",
+      "investment_deterrence_risk_placeholder": "low_placeholder_stress",
+      "legal_attribution_difficulty_placeholder": "high_placeholder_stress",
+      "main_reason": "automation_intensity_placeholder is critical_review_required using placeholder metadata only.",
+      "non_claims": [
+        "The sector stress matrix is prototype metadata review only. It is not calibrated. It is not a real-world ranking of sectors. It is not Treasury modelling. It is not ATO guidance. It is not ABS/ATO/DSS/PBO analysis. It does not use real industry data. It does not estimate actual tax payable.",
+        "The sector stress matrix does not modify firm-level CARSF liability logic.",
+        "The sector stress matrix does not implement legal sector attribution or real multi-schedule blending.",
+        "The sector stress matrix is not economic validation, investment advice, legal advice, or tax advice.",
+        "All schedules remain placeholder-only and subject to external calibration, legal review, and methods review."
+      ],
+      "qlc_vulnerability_placeholder": "high_placeholder_stress",
+      "schedule_id": "retail_self_checkout_fulfilment",
+      "schedule_name": "Prototype Schedule E - Retail Self-Checkout / Fulfilment",
+      "stress_reasons": [
+        "4 avoidance controls are listed",
+        "AAVA sensitivity uses cap placeholders and AAVA-adjacent schedule terms only",
+        "AAVA-adjacent offshore, related-party, IP, cloud, model, data, or licence terms are present",
+        "Avoidance risk uses number and type of avoidance controls only",
+        "Calibration difficulty uses listed data requirements and review dependencies only",
+        "Incidence risk uses consumer-facing and transaction-facing wording only",
+        "Investment risk uses cap placeholders and unresolved capital/intangible wording only",
+        "Legal attribution difficulty uses schedule attribution and review wording only",
+        "QLC vulnerability uses placeholder QLC weights and schedule text only",
+        "automation emphasis uses AII metadata only (0.81)",
+        "consumer, support, retail, logistics, platform, or transaction terms increase review pressure",
+        "legal, tax, Treasury, AASB, intangible, platform, cross-border, or attribution terms are present",
+        "offshore, related-party, IP, platform, mixed-activity, customer self-service, legal review, or AASB terms are present",
+        "related-party, offshore, IP, platform, cloud, token-worker, or self-service terms are present",
+        "robotics placeholder weight adds physical-automation review note",
+        "token, self-service, offshore, outsourced, or escalation terms increase review pressure"
+      ],
+      "warnings": [
+        "Sector stress matrix row is metadata-only and must not be treated as a sector rank.",
+        "Do not rank this schedule against other schedules using placeholder stress bands.",
+        "Firm-level CARSF liability logic is not modified."
+      ]
+    },
+    {
+      "aava_sensitivity_placeholder": "critical_review_required",
+      "automation_intensity_placeholder": "critical_review_required",
+      "avoidance_gaming_risk_placeholder": "critical_review_required",
+      "calibration_blockers": [
+        "ABS, ATO, and industry data separating software, platform, marketplace, digital services, and AI workflow activities.",
+        "Platform transaction, workflow, recommendation, matching, and automated decision volume data.",
+        "Cloud, inference, model, and data-access cost data with Australian-facing attribution.",
+        "Fair Work and labour-market data for Australian software, moderation, support, and operations workforces.",
+        "HILDA, DSS, and labour-market transition data for displaced administrative, platform, support, and digital-service workers.",
+        "AASB 138, tax counsel, Treasury, and ATO review of intangible assets, capital base, IP royalties, and Australian value attribution."
+      ],
+      "calibration_difficulty_placeholder": "critical_review_required",
+      "canonical_output_unit": "australian_served_platform_transactions_or_workflows",
+      "dimension_scores": {
+        "aava_sensitivity_placeholder": 0.7,
+        "automation_intensity_placeholder": 0.7699999999999999,
+        "avoidance_gaming_risk_placeholder": 0.71,
+        "calibration_difficulty_placeholder": 0.77,
+        "incidence_risk_placeholder": 0.62,
+        "investment_deterrence_risk_placeholder": 0.6,
+        "legal_attribution_difficulty_placeholder": 0.84,
+        "qlc_vulnerability_placeholder": 0.39799999999999996
+      },
+      "display_control_status": "external_review_required",
+      "do_not_rank": true,
+      "incidence_risk_placeholder": "high_placeholder_stress",
+      "investment_deterrence_risk_placeholder": "high_placeholder_stress",
+      "legal_attribution_difficulty_placeholder": "critical_review_required",
+      "main_reason": "aava_sensitivity_placeholder is critical_review_required using placeholder metadata only.",
+      "non_claims": [
+        "The sector stress matrix is prototype metadata review only. It is not calibrated. It is not a real-world ranking of sectors. It is not Treasury modelling. It is not ATO guidance. It is not ABS/ATO/DSS/PBO analysis. It does not use real industry data. It does not estimate actual tax payable.",
+        "The sector stress matrix does not modify firm-level CARSF liability logic.",
+        "The sector stress matrix does not implement legal sector attribution or real multi-schedule blending.",
+        "The sector stress matrix is not economic validation, investment advice, legal advice, or tax advice.",
+        "All schedules remain placeholder-only and subject to external calibration, legal review, and methods review."
+      ],
+      "qlc_vulnerability_placeholder": "moderate_placeholder_stress",
+      "schedule_id": "software_digital_platforms",
+      "schedule_name": "Prototype Schedule F - Software / Digital Platforms",
+      "stress_reasons": [
+        "5 avoidance controls are listed",
+        "AAVA sensitivity uses cap placeholders and AAVA-adjacent schedule terms only",
+        "AAVA-adjacent offshore, related-party, IP, cloud, model, data, or licence terms are present",
+        "Avoidance risk uses number and type of avoidance controls only",
+        "Calibration difficulty uses listed data requirements and review dependencies only",
+        "Incidence risk uses consumer-facing and transaction-facing wording only",
+        "Investment risk uses cap placeholders and unresolved capital/intangible wording only",
+        "Legal attribution difficulty uses schedule attribution and review wording only",
+        "QLC vulnerability uses placeholder QLC weights and schedule text only",
+        "automation emphasis uses AII metadata only (0.96)",
+        "consumer, support, retail, logistics, platform, or transaction terms increase review pressure",
+        "legal, tax, Treasury, AASB, intangible, platform, cross-border, or attribution terms are present",
+        "offshore, related-party, IP, platform, mixed-activity, customer self-service, legal review, or AASB terms are present",
+        "related-party, offshore, IP, platform, cloud, token-worker, or self-service terms are present",
+        "token, self-service, offshore, outsourced, or escalation terms increase review pressure",
+        "unresolved software, intangible, or AASB 138 capital-base treatment requires review"
+      ],
+      "warnings": [
+        "Sector stress matrix row is metadata-only and must not be treated as a sector rank.",
+        "Do not rank this schedule against other schedules using placeholder stress bands.",
+        "Firm-level CARSF liability logic is not modified.",
+        "Software / digital platform capital-base treatment remains unresolved and requires AASB 138, tax counsel, and Treasury review."
+      ]
+    }
+  ],
+  "summary": {
+    "calibration_blockers": [
+      "accounting_administration: ABS and ATO data separating accounting, bookkeeping, payroll, administration, and professional-services activities.",
+      "accounting_administration: Accounting platform transaction volumes, workflow automation adoption, and document-processing data.",
+      "accounting_administration: Fair Work award, classification, and job-security data for clerical and accounting-support roles.",
+      "accounting_administration: HILDA, DSS, and labour-market transition data for displaced administrative and accounting-support workers.",
+      "accounting_administration: Legal and tax review of professional judgement, advice, audit, and lodgement boundaries.",
+      "accounting_administration: Professional-services and administration workforce wage and output data.",
+      "automotive_repair: ABS labour force and output measures for repair and maintenance.",
+      "automotive_repair: ATO small-business and company tax data by automotive repair ANZSIC class.",
+      "automotive_repair: DSS transfer-system data and HELP repayment loss assumptions.",
+      "automotive_repair: Fair Work occupational classifications, wage distributions, and casualisation measures.",
+      "automotive_repair: HILDA income-transition and wage-scarring data for displaced mechanics and apprentices.",
+      "automotive_repair: Workshop robotics and AI diagnostic adoption data from industry surveys.",
+      "call_centres_customer_support: ABS and industry customer-service workforce and output data.",
+      "call_centres_customer_support: AI agent, chatbot, and automated triage adoption data from industry surveys.",
+      "call_centres_customer_support: ATO aggregated tax data for customer support and contact-centre entities.",
+      "call_centres_customer_support: CRM/ticketing benchmark data for resolved support cases per qualified FTE.",
+      "call_centres_customer_support: DSS, HILDA, and labour-market transition data for displaced customer support workers.",
+      "call_centres_customer_support: Fair Work wage, award, casualisation, and job-security data for support workers.",
+      "logistics_warehousing: ATO, ABS, and industry data separating freight, last-mile delivery, warehousing, and platform dispatch.",
+      "logistics_warehousing: Autonomous vehicle kilometres, automated dispatch share, and warehouse robotics adoption data.",
+      "logistics_warehousing: HILDA and DSS data on driver, picker, packer, dispatcher, and warehouse transition outcomes.",
+      "logistics_warehousing: State payroll tax exposure and regional employment concentration.",
+      "logistics_warehousing: Transfer pricing, diverted profits tax, and significant global entity interaction analysis.",
+      "retail_self_checkout_fulfilment: ABS, ATO, and industry data separating store retail, online retail, fulfilment, and marketplace activities.",
+      "retail_self_checkout_fulfilment: Fair Work retail, warehouse, and fulfilment wage and employment data.",
+      "retail_self_checkout_fulfilment: HILDA, DSS, and labour-market transition data for displaced retail and fulfilment workers.",
+      "retail_self_checkout_fulfilment: Legal review of customer self-service, contractor labour, platform retail, and fulfilment attribution.",
+      "retail_self_checkout_fulfilment: POS, self-checkout, fulfilment, and inventory automation benchmark data.",
+      "retail_self_checkout_fulfilment: State payroll tax and regional employment data for retail and fulfilment sites.",
+      "software_digital_platforms: AASB 138, tax counsel, Treasury, and ATO review of intangible assets, capital base, IP royalties, and Australian value attribution.",
+      "software_digital_platforms: ABS, ATO, and industry data separating software, platform, marketplace, digital services, and AI workflow activities.",
+      "software_digital_platforms: Cloud, inference, model, and data-access cost data with Australian-facing attribution.",
+      "software_digital_platforms: Fair Work and labour-market data for Australian software, moderation, support, and operations workforces.",
+      "software_digital_platforms: HILDA, DSS, and labour-market transition data for displaced administrative, platform, support, and digital-service workers.",
+      "software_digital_platforms: Platform transaction, workflow, recommendation, matching, and automated decision volume data."
+    ],
+    "display_status_counts": {
+      "external_review_required": 5,
+      "strong_warning_required": 1
+    },
+    "do_not_rank_all": true,
+    "external_review_required_count": 5,
+    "non_claims": [
+      "The sector stress matrix is prototype metadata review only. It is not calibrated. It is not a real-world ranking of sectors. It is not Treasury modelling. It is not ATO guidance. It is not ABS/ATO/DSS/PBO analysis. It does not use real industry data. It does not estimate actual tax payable.",
+      "The sector stress matrix does not modify firm-level CARSF liability logic.",
+      "The sector stress matrix does not implement legal sector attribution or real multi-schedule blending.",
+      "The sector stress matrix is not economic validation, investment advice, legal advice, or tax advice.",
+      "All schedules remain placeholder-only and subject to external calibration, legal review, and methods review."
+    ],
+    "schedule_count": 6,
+    "stress_band_counts": {
+      "critical_review_required": 12,
+      "high_placeholder_stress": 21,
+      "low_placeholder_stress": 5,
+      "moderate_placeholder_stress": 10,
+      "not_assessable": 0
+    },
+    "strong_warning_required_count": 1,
+    "warnings": [
+      "Summary counts are metadata review counts only, not sector ranks.",
+      "All rows are marked do_not_rank.",
+      "All schedules remain subject to external calibration, legal review, and methods review."
+    ]
+  }
+}

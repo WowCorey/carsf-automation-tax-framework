@@ -619,7 +619,24 @@ New schedules:
 
 Tests run:
 
-- Pending for this branch.
+- `python -m pytest` - 557 passed, 1 pytest-asyncio deprecation warning under Python 3.14.
+- `python -m compileall -q model simulator scripts` - passed.
+- Recursive YAML parse check for schedules/examples/data - parsed 71 YAML files.
+- `python scripts/run_examples.py` - regenerated existing example report outputs successfully.
+- `python scripts/run_sector_schedule_expansion.py` - regenerated sector schedule expansion reports successfully.
+- `python scripts/run_sector_stress_matrix.py` - generated sector stress matrix reports successfully.
+- `python scripts/run_evidence_workflow.py` - regenerated mock evidence workflow reports successfully.
+- `python scripts/run_ingestion_controls.py` - regenerated secure-ingestion control reports successfully.
+- `python scripts/run_investment_guardrails.py` - regenerated investment guardrail reports successfully.
+- `python scripts/run_fiscal_trajectory.py` - regenerated fiscal trajectory reports successfully.
+- `python scripts/run_transition_funding.py` - regenerated transition funding reports successfully.
+- `python scripts/run_payment_interactions.py` - regenerated payment interaction reports successfully.
+- `python scripts/run_distributional_scenarios.py` - regenerated distributional scenario reports successfully.
+- `python scripts/run_household_weighting.py` - regenerated household weighting reports successfully.
+- `python scripts/run_uncertainty_ranges.py` - regenerated uncertainty range reports successfully.
+- `python scripts/run_reviewed_scenarios.py` - regenerated reviewed scenario reports successfully.
+- `python scripts/run_repo_guardrails.py` - passed with zero denied findings and 49 warning findings.
+- Streamlit bare import probes for `simulator/app.py` and `simulator/pages/21_Sector_Stress_Matrix.py` - passed.
 
 Reports generated:
 
@@ -632,3 +649,31 @@ Limitations:
 - They are not calibrated, not legal schedules, not Treasury schedules, not ATO guidance, not ABS/ATO/DSS/PBO analysis, do not contain real industry data, and must not be used to estimate actual tax payable.
 - They do not modify firm-level CARSF liability logic and do not implement real multi-schedule attribution.
 - Software / digital platform capital-base treatment remains unresolved and subject to AASB 138, tax counsel, and Treasury review.
+
+## V1.5 Sector Stress Matrix
+
+Branch: `v1.5-sector-stress-matrix`
+
+Baseline: PR #17 merged into `main`, including expanded placeholder sector schedules.
+
+Purpose of this build:
+
+- Add a metadata-only sector stress matrix across all prototype schedules.
+- Compare placeholder schedules across automation intensity, QLC vulnerability, AAVA sensitivity, incidence risk, investment risk, avoidance / gaming risk, calibration difficulty, legal attribution difficulty, and display-control status.
+- Mark every row do-not-rank and preserve non-claim language.
+- Add sector stress matrix reports, tests, CI step, documentation, and Streamlit page.
+
+Tests run:
+
+- Pending for this branch.
+
+Reports generated:
+
+- `reports/sector_stress_matrix.json`
+- `reports/sector_stress_matrix.md`
+
+Limitations:
+
+- Sector stress matrix outputs are prototype metadata review outputs only.
+- They are not calibrated, not official sector scores, not Treasury modelling, not ATO guidance, not ABS/ATO/DSS/PBO analysis, not economic validation, not investment advice, not legal advice, and not tax advice.
+- They do not use real industry data, do not estimate actual tax payable, do not modify firm-level CARSF liability logic, do not implement legal sector attribution, and do not implement real multi-schedule blending.

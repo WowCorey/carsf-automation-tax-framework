@@ -47,6 +47,9 @@ jobs:
       - name: Run sector schedule expansion
         run: python scripts/run_sector_schedule_expansion.py
 
+      - name: Run sector stress matrix
+        run: python scripts/run_sector_stress_matrix.py
+
       - name: Run mock evidence workflow
         run: python scripts/run_evidence_workflow.py
 
