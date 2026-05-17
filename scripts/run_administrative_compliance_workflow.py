@@ -329,7 +329,7 @@ def build_markdown(results: list[Any], summary: Any, metadata: dict[str, Any]) -
             "- Placeholder only.",
             "- Synthetic administrative pathways only.",
             "- Not a workflow endorsed by the ATO, not guidance from the ATO, not Treasury modelling, not audit logic, not enforcement, and not compliance scoring.",
-            "- No statutory powers, notices, penalties, taxpayer-level data, firm-level data, industry data, ABS/ATO/DSS/Treasury/PBO/HILDA/Census data, legal advice, tax advice, economic validation, behavioural prediction, or behavioural elasticity.",
+            "- No statutory powers, notices, penalties, taxpayer-level data, firm-level data, industry data, ABS/ATO/DSS/Treasury/PBO/HILDA/Census data, legal advice, tax advice, economic validation, conduct forecasting, or elasticity modelling.",
             "- Not usable to estimate actual tax payable.",
             "- Firm-level CARSF liability logic is not modified.",
         ]

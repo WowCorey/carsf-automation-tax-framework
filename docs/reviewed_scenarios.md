@@ -12,6 +12,7 @@ It answers which synthetic household and weighted subgroup signals can be shown 
 - missing required uncertainty ranges
 - non-representative subgroup outputs
 - zero-weight or unmatched subgroup outputs
+- available subgroup metadata, including scenario counts, synthetic weights, subgroup filters, matched scenarios, and unmatched scenarios
 
 ## Display Categories
 
@@ -53,4 +54,4 @@ Generated reports:
 
 ## Future Work
 
-Build 17 should expand sector schedules only after this display-control layer exists, so new sector outputs inherit suppression and external-review rules before they are presented.
+Future review should keep subgroup metadata visible wherever weighted subgroup outputs are displayed, while preserving the non-representative and not-population-estimate warnings.

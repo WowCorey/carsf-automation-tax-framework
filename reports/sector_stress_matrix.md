@@ -1,6 +1,6 @@
 # CARSF V1.5 Sector Stress Matrix
 
-Generated at: `2026-05-17T06:11:15+00:00`
+Generated at: `2026-05-17T22:52:43+00:00`
 
 ## A. Purpose
 
@@ -18,6 +18,8 @@ This report compares prototype CARSF schedules across metadata-only review dimen
 ## C. Method - Placeholder Metadata Only
 
 Scores are deterministic placeholders derived only from schedule metadata such as AII weights, QLC weights, cap placeholders, avoidance controls, calibration requirements, attribution wording, and unresolved review notes. No real sector data is used.
+
+Automation intensity separates digital automation emphasis, physical automation emphasis, decision automation emphasis, and compute dependency emphasis so low-robotics and high-robotics schedules are easier to read without creating a real sector score.
 
 ## D. Sector Coverage
 
@@ -38,19 +40,30 @@ Scores are deterministic placeholders derived only from schedule metadata such a
 
 ## F. Sector Stress Matrix
 
-| Schedule ID | Schedule Name | Canonical Output Unit | Automation Intensity | QLC Vulnerability | AAVA Sensitivity | Incidence Risk | Investment Risk | Avoidance / Gaming Risk | Calibration Difficulty | Legal Attribution Difficulty | Display Status | Do Not Rank | Main Reason |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| accounting_administration | Prototype Schedule D - Accounting / Administration | standardised_transactions_or_filings_processed | critical_review_required | high_placeholder_stress | moderate_placeholder_stress | moderate_placeholder_stress | low_placeholder_stress | high_placeholder_stress | critical_review_required | high_placeholder_stress | external_review_required | True | automation_intensity_placeholder is critical_review_required using placeholder metadata only. |
-| automotive_repair | Prototype Schedule A - Automotive Repair | book_hour_equivalent_jobs_completed | high_placeholder_stress | high_placeholder_stress | moderate_placeholder_stress | moderate_placeholder_stress | low_placeholder_stress | high_placeholder_stress | high_placeholder_stress | high_placeholder_stress | strong_warning_required | True | automation_intensity_placeholder is high_placeholder_stress using placeholder metadata only. |
-| call_centres_customer_support | Prototype Schedule C - Call Centres / Customer Support | resolved_customer_support_cases | critical_review_required | high_placeholder_stress | moderate_placeholder_stress | moderate_placeholder_stress | low_placeholder_stress | high_placeholder_stress | high_placeholder_stress | moderate_placeholder_stress | external_review_required | True | automation_intensity_placeholder is critical_review_required using placeholder metadata only. |
-| logistics_warehousing | Prototype Schedule B - Logistics / Warehousing | tonne_kilometres_or_pallet_movements | critical_review_required | high_placeholder_stress | moderate_placeholder_stress | critical_review_required | low_placeholder_stress | high_placeholder_stress | high_placeholder_stress | high_placeholder_stress | external_review_required | True | automation_intensity_placeholder is critical_review_required using placeholder metadata only. |
-| retail_self_checkout_fulfilment | Prototype Schedule E - Retail Self-Checkout / Fulfilment | customer_transactions_or_order_fulfilments | critical_review_required | high_placeholder_stress | moderate_placeholder_stress | high_placeholder_stress | low_placeholder_stress | high_placeholder_stress | critical_review_required | high_placeholder_stress | external_review_required | True | automation_intensity_placeholder is critical_review_required using placeholder metadata only. |
-| software_digital_platforms | Prototype Schedule F - Software / Digital Platforms | australian_served_platform_transactions_or_workflows | critical_review_required | moderate_placeholder_stress | critical_review_required | high_placeholder_stress | high_placeholder_stress | critical_review_required | critical_review_required | critical_review_required | external_review_required | True | aava_sensitivity_placeholder is critical_review_required using placeholder metadata only. |
+| Schedule ID | Schedule Name | Canonical Output Unit | Automation Intensity | Digital Automation | Physical Automation | Decision Automation | Compute Dependency | QLC Vulnerability | AAVA Sensitivity | Incidence Risk | Investment Risk | Avoidance / Gaming Risk | Calibration Difficulty | Legal Attribution Difficulty | Display Status | Do Not Rank | Main Reason |
+| --- | --- | --- | --- | ---: | ---: | ---: | ---: | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| accounting_administration | Prototype Schedule D - Accounting / Administration | standardised_transactions_or_filings_processed | critical_review_required | 0.450 | 0.050 | 0.250 | 0.250 | high_placeholder_stress | moderate_placeholder_stress | moderate_placeholder_stress | low_placeholder_stress | high_placeholder_stress | critical_review_required | high_placeholder_stress | external_review_required | True | automation_intensity_placeholder is critical_review_required using placeholder metadata only. |
+| automotive_repair | Prototype Schedule A - Automotive Repair | book_hour_equivalent_jobs_completed | high_placeholder_stress | 0.250 | 0.350 | 0.250 | 0.150 | high_placeholder_stress | moderate_placeholder_stress | moderate_placeholder_stress | low_placeholder_stress | high_placeholder_stress | high_placeholder_stress | high_placeholder_stress | strong_warning_required | True | automation_intensity_placeholder is high_placeholder_stress using placeholder metadata only. |
+| call_centres_customer_support | Prototype Schedule C - Call Centres / Customer Support | resolved_customer_support_cases | critical_review_required | 0.400 | 0.050 | 0.300 | 0.250 | high_placeholder_stress | moderate_placeholder_stress | moderate_placeholder_stress | low_placeholder_stress | high_placeholder_stress | high_placeholder_stress | moderate_placeholder_stress | external_review_required | True | automation_intensity_placeholder is critical_review_required using placeholder metadata only. |
+| logistics_warehousing | Prototype Schedule B - Logistics / Warehousing | tonne_kilometres_or_pallet_movements | critical_review_required | 0.300 | 0.200 | 0.300 | 0.200 | high_placeholder_stress | moderate_placeholder_stress | critical_review_required | low_placeholder_stress | high_placeholder_stress | high_placeholder_stress | high_placeholder_stress | external_review_required | True | automation_intensity_placeholder is critical_review_required using placeholder metadata only. |
+| retail_self_checkout_fulfilment | Prototype Schedule E - Retail Self-Checkout / Fulfilment | customer_transactions_or_order_fulfilments | critical_review_required | 0.350 | 0.250 | 0.250 | 0.150 | high_placeholder_stress | moderate_placeholder_stress | high_placeholder_stress | low_placeholder_stress | high_placeholder_stress | critical_review_required | high_placeholder_stress | external_review_required | True | automation_intensity_placeholder is critical_review_required using placeholder metadata only. |
+| software_digital_platforms | Prototype Schedule F - Software / Digital Platforms | australian_served_platform_transactions_or_workflows | critical_review_required | 0.350 | 0.050 | 0.300 | 0.300 | moderate_placeholder_stress | critical_review_required | high_placeholder_stress | high_placeholder_stress | critical_review_required | critical_review_required | critical_review_required | external_review_required | True | aava_sensitivity_placeholder is critical_review_required using placeholder metadata only. |
 
 ## G. Automation Intensity Placeholder Bands
 
 - `high placeholder stress`: automotive_repair
 - `critical review required`: accounting_administration, call_centres_customer_support, logistics_warehousing, retail_self_checkout_fulfilment, software_digital_platforms
+
+### Automation Intensity Component Explanation
+
+| Schedule ID | Digital Automation Emphasis | Physical Automation Emphasis | Decision Automation Emphasis | Compute Dependency Emphasis | Robotics Dependency Note | Method Note |
+| --- | ---: | ---: | ---: | ---: | --- | --- |
+| accounting_administration | 0.450 | 0.050 | 0.250 | 0.250 | physical automation metadata is present as a robotics dependency note | Automation intensity is a placeholder metadata signal derived from AII component weights; digital, decision, compute, and physical components are shown separately and must not be used as real sector scores. |
+| automotive_repair | 0.250 | 0.350 | 0.250 | 0.150 | physical automation metadata is present as a robotics dependency note | Automation intensity is a placeholder metadata signal derived from AII component weights; digital, decision, compute, and physical components are shown separately and must not be used as real sector scores. |
+| call_centres_customer_support | 0.400 | 0.050 | 0.300 | 0.250 | physical automation metadata is present as a robotics dependency note | Automation intensity is a placeholder metadata signal derived from AII component weights; digital, decision, compute, and physical components are shown separately and must not be used as real sector scores. |
+| logistics_warehousing | 0.300 | 0.200 | 0.300 | 0.200 | physical automation metadata is present as a robotics dependency note | Automation intensity is a placeholder metadata signal derived from AII component weights; digital, decision, compute, and physical components are shown separately and must not be used as real sector scores. |
+| retail_self_checkout_fulfilment | 0.350 | 0.250 | 0.250 | 0.150 | physical automation metadata is present as a robotics dependency note | Automation intensity is a placeholder metadata signal derived from AII component weights; digital, decision, compute, and physical components are shown separately and must not be used as real sector scores. |
+| software_digital_platforms | 0.350 | 0.050 | 0.300 | 0.300 | physical automation metadata is present as a robotics dependency note | Automation intensity is a placeholder metadata signal derived from AII component weights; digital, decision, compute, and physical components are shown separately and must not be used as real sector scores. |
 
 ## H. QLC Vulnerability Placeholder Bands
 

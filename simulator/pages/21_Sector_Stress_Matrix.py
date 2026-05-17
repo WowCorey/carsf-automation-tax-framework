@@ -29,6 +29,10 @@ def matrix_rows(rows: list[dict]) -> list[dict]:
             "Schedule ID": item.get("schedule_id"),
             "Schedule Name": item.get("schedule_name"),
             "Automation Intensity": item.get("automation_intensity_placeholder"),
+            "Digital Automation": item.get("digital_automation_emphasis"),
+            "Physical Automation": item.get("physical_automation_emphasis"),
+            "Decision Automation": item.get("decision_automation_emphasis"),
+            "Compute Dependency": item.get("compute_dependency_emphasis"),
             "QLC Vulnerability": item.get("qlc_vulnerability_placeholder"),
             "AAVA Sensitivity": item.get("aava_sensitivity_placeholder"),
             "Incidence Risk": item.get("incidence_risk_placeholder"),
@@ -70,6 +74,19 @@ with right:
 
 st.markdown("### Sector Stress Matrix")
 st.table(matrix_rows(rows))
+
+st.markdown("### Automation Component Explanation")
+st.table(
+    [
+        {
+            "Schedule ID": item.get("schedule_id"),
+            "Robotics Note": item.get("robotics_dependency_note"),
+            "Method Note": item.get("automation_intensity_method_note"),
+            "Limitations": ", ".join(item.get("automation_intensity_limitations", [])),
+        }
+        for item in rows
+    ]
+)
 
 st.markdown("### Display-Control Groups")
 for status in sorted({item.get("display_control_status") for item in rows}):

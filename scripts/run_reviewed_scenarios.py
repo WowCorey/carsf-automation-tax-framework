@@ -86,6 +86,7 @@ def build_reviewed_rows(uncertainty_rows: list[dict[str, Any]]) -> tuple[list[An
                             "subgroup_id": subgroup_id,
                             "subgroup_name": str(subgroup.get("subgroup_name", subgroup_id)),
                             "representative_of_real_population": False,
+                            "total_synthetic_weight": subgroup.get("total_synthetic_weight"),
                             "placeholder_basis": [f"reviewed uncertainty example: {example_id}"],
                         }
                     )
@@ -152,13 +153,14 @@ def _household_table(household_reviews: list[Any]) -> list[str]:
 
 def _weighted_table(weighted_reviews: list[Any]) -> list[str]:
     lines = [
-        "| Subgroup | Residual Gap Stability | High/Critical Share Stability | Subgroup Sensitivity | Representative of Real Population | Review Category | Display Level | Main Reason |",
-        "| --- | --- | --- | --- | --- | --- | --- | --- |",
+        "| Subgroup | Scenario Count | Synthetic Weight | Not Population Estimate | Residual Gap Stability | High/Critical Share Stability | Subgroup Sensitivity | Representative of Real Population | Review Category | Display Level | Main Reason |",
+        "| --- | ---: | ---: | --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for review in weighted_reviews:
         lines.append(
             "| "
-            f"{review.subject_name} | {_fmt(review.residual_gap_stability)} | "
+            f"{review.subject_name} | {_fmt(review.scenario_count)} | {_fmt(review.total_synthetic_weight)} | "
+            f"{review.not_population_estimate} | {_fmt(review.residual_gap_stability)} | "
             f"{_fmt(review.high_critical_share_stability)} | {_fmt(review.subgroup_range_sensitivity)} | "
             f"{review.representative_of_real_population} | {review.review_category} | "
             f"{review.display_level} | {review.main_reason} |"

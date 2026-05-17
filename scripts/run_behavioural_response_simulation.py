@@ -104,14 +104,14 @@ def build_json_payload(results: list[Any], summary: Any, metadata: dict[str, Any
 
 def _table(results: list[Any]) -> list[str]:
     lines = [
-        "| Scenario ID | Scenario Name | Sector Schedule | Response Type | Linked Avoidance Flags | Response Pressure Band | Review Status | Countermeasure Categories | External Review Required | Do Not Predict | Main Reason |",
-        "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+        "| Scenario ID | Scenario Name | Sector Schedule | Response Type | Pressure Basis | Linked Avoidance Flags | Response Pressure Band | Review Status | Countermeasure Categories | External Review Required | Do Not Predict | Main Reason |",
+        "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for result in results:
         lines.append(
             "| "
             f"{result.scenario_id} | {result.scenario_name} | {result.sector_schedule_id} | "
-            f"{result.response_type} | {', '.join(result.linked_avoidance_flags) or 'None'} | "
+            f"{result.response_type} | {result.pressure_basis} | {', '.join(result.linked_avoidance_flags) or 'None'} | "
             f"{result.response_pressure_band} | {result.review_status} | "
             f"{', '.join(result.countermeasure_categories)} | {result.external_review_required} | "
             f"{result.do_not_predict} | {result.main_reason} |"
@@ -177,7 +177,7 @@ def build_markdown(results: list[Any], summary: Any, metadata: dict[str, Any]) -
             "",
             "## C. Method - Synthetic Placeholder Pathways Only",
             "",
-            "The simulation uses declared synthetic scenario metadata, linked prototype avoidance flags, countermeasure categories, and sector stress display status. It simulates response pathways, not behavioural outcomes.",
+            "The simulation uses declared synthetic scenario metadata, pressure basis labels, capped text modifiers, linked prototype avoidance flags, countermeasure categories, and sector stress display status. It simulates response pathways, not behavioural outcomes.",
             "",
             "## D. Scenario Coverage",
             "",
@@ -234,7 +234,7 @@ def build_markdown(results: list[Any], summary: Any, metadata: dict[str, Any]) -
             "- Placeholder only.",
             "- Synthetic scenarios only.",
             "- Deterministic scenario review only.",
-            "- Not behavioural prediction or behavioural elasticity.",
+            "- Does not predict conduct or estimate behavioural elasticity.",
             "- Not ATO audit logic, Treasury modelling, ABS/ATO/DSS/PBO analysis, compliance-risk scoring, legal advice, tax advice, investment advice, enforcement, or penalty modelling.",
             "- No firm-level, taxpayer-level, or industry data is used.",
             "- Not usable to estimate actual tax payable.",

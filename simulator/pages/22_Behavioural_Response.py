@@ -28,12 +28,14 @@ def matrix_rows(rows: list[dict]) -> list[dict]:
             "Scenario Name": item.get("scenario_name"),
             "Sector Schedule": item.get("sector_schedule_id"),
             "Response Type": item.get("response_type"),
+            "Pressure Basis": item.get("pressure_basis"),
             "Pressure Band": item.get("response_pressure_band"),
             "Review Status": item.get("review_status"),
             "Countermeasures": ", ".join(item.get("countermeasure_categories", [])),
             "External Review": item.get("external_review_required"),
             "Do Not Predict": item.get("do_not_predict"),
             "Main Reason": item.get("main_reason"),
+            "Band Explanation": item.get("pressure_band_explanation"),
         }
         for item in rows
     ]

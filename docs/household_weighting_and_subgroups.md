@@ -13,6 +13,7 @@ It does not use real household data, survey weights, ABS microdata, HILDA, Censu
 - `model/carsf/household_weights.py` validates synthetic household weights.
 - `model/carsf/subgroups.py` assigns synthetic household scenarios to deterministic placeholder subgroups.
 - `model/carsf/weighted_distributional.py` aggregates residual gaps and high/critical shock shares using synthetic weights.
+- Weighted subgroup outputs preserve subgroup filters, matched scenarios, unmatched scenarios, scenario counts, and synthetic weights so downstream uncertainty/review layers can retain context.
 - `model/carsf/household_calibration_shell.py` lists external data requirements for future calibration.
 - `model/carsf/weighted_uncertainty.py` can wrap weighted subgroup outputs with deterministic low/base/high uncertainty ranges.
 - Examples live under `examples/household_weighting/`.
@@ -57,3 +58,4 @@ Real household data is not allowed in this repository.
 - Subgroup filters are coarse placeholders and may hide overlap, exclusion, or leakage issues.
 - Calibration requirements are listed but unmet.
 - Weighted subgroup uncertainty ranges may be mistaken for population uncertainty unless warnings remain visible.
+- Duplicate or repeated synthetic weight records remain stress-test aggregates, not unique household or population estimates.

@@ -1163,6 +1163,16 @@
       ],
       "status": "prototype_only",
       "uncertainty_result": {
+        "aggregation_metadata": {
+          "aggregation_basis": "synthetic_weight_record_aggregate_not_unique_population_weight",
+          "aggregation_id": "placeholder_weights_basic",
+          "duplicate_scenario_weight_records": [],
+          "not_population_estimate": true,
+          "representative_of_real_population": false,
+          "scenario_count": 7,
+          "synthetic_weight_only": true,
+          "total_synthetic_weight": 5.0
+        },
         "highest_uncertainty_subgroups": [
           "critical_budget_stress",
           "regional_high_stress"
@@ -1205,6 +1215,12 @@
                 "Calibration status does not support real uncertainty quantification."
               ]
             },
+            "matched_scenarios": [
+              "dual_income_one_displaced_regional",
+              "single_adult_displaced_worker_high_rent",
+              "single_parent_retraining_gap"
+            ],
+            "not_population_estimate": true,
             "representative_of_real_population": false,
             "residual_gap_range": {
               "absolute_range_width": 5000.0,
@@ -1232,9 +1248,14 @@
                 "Calibration status does not support real uncertainty quantification."
               ]
             },
+            "scenario_count": 3,
+            "subgroup_filter": {},
             "subgroup_id": "all_synthetic_households",
             "subgroup_name": "All Synthetic Households",
             "subgroup_range_sensitivity": "moderately_sensitive",
+            "synthetic_weight_only": true,
+            "total_synthetic_weight": 3.0,
+            "unmatched_scenarios": [],
             "warnings": []
           },
           {
@@ -1264,6 +1285,10 @@
                 "Calibration status does not support real uncertainty quantification."
               ]
             },
+            "matched_scenarios": [
+              "older_worker_low_reemployment"
+            ],
+            "not_population_estimate": true,
             "representative_of_real_population": false,
             "residual_gap_range": {
               "absolute_range_width": 17000.0,
@@ -1291,18 +1316,36 @@
                 "Calibration status does not support real uncertainty quantification."
               ]
             },
+            "scenario_count": 1,
+            "subgroup_filter": {
+              "budget_stress_filter": "critical"
+            },
             "subgroup_id": "critical_budget_stress",
             "subgroup_name": "Critical Budget Stress",
             "subgroup_range_sensitivity": "fragile",
+            "synthetic_weight_only": true,
+            "total_synthetic_weight": 1.0,
+            "unmatched_scenarios": [],
             "warnings": []
           },
           {
             "high_critical_share_range": null,
+            "matched_scenarios": [],
+            "not_population_estimate": true,
             "representative_of_real_population": false,
             "residual_gap_range": null,
+            "scenario_count": 1,
+            "subgroup_filter": {
+              "regional_stress_filter": "high"
+            },
             "subgroup_id": "regional_high_stress",
             "subgroup_name": "High Regional Stress",
             "subgroup_range_sensitivity": "not_assessable",
+            "synthetic_weight_only": true,
+            "total_synthetic_weight": 1.0,
+            "unmatched_scenarios": [
+              "high_automation_region_cluster"
+            ],
             "warnings": [
               "missing residual gap range for subgroup: regional_high_stress",
               "missing high/critical share range for subgroup: regional_high_stress"
@@ -1321,7 +1364,7 @@
     }
   ],
   "metadata": {
-    "generated_at": "2026-05-14T06:39:50+00:00",
+    "generated_at": "2026-05-17T22:52:46+00:00",
     "non_claims": [
       "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
       "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",

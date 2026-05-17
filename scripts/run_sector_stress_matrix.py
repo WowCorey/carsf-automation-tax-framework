@@ -85,14 +85,16 @@ def _summary_lines(summary: Any) -> list[str]:
 
 def _matrix_table(rows: list[Any]) -> list[str]:
     lines = [
-        "| Schedule ID | Schedule Name | Canonical Output Unit | Automation Intensity | QLC Vulnerability | AAVA Sensitivity | Incidence Risk | Investment Risk | Avoidance / Gaming Risk | Calibration Difficulty | Legal Attribution Difficulty | Display Status | Do Not Rank | Main Reason |",
-        "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+        "| Schedule ID | Schedule Name | Canonical Output Unit | Automation Intensity | Digital Automation | Physical Automation | Decision Automation | Compute Dependency | QLC Vulnerability | AAVA Sensitivity | Incidence Risk | Investment Risk | Avoidance / Gaming Risk | Calibration Difficulty | Legal Attribution Difficulty | Display Status | Do Not Rank | Main Reason |",
+        "| --- | --- | --- | --- | ---: | ---: | ---: | ---: | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for row in rows:
         lines.append(
             "| "
             f"{row.schedule_id} | {row.schedule_name} | {row.canonical_output_unit} | "
-            f"{row.automation_intensity_placeholder} | {row.qlc_vulnerability_placeholder} | "
+            f"{row.automation_intensity_placeholder} | {row.digital_automation_emphasis:.3f} | "
+            f"{row.physical_automation_emphasis:.3f} | {row.decision_automation_emphasis:.3f} | "
+            f"{row.compute_dependency_emphasis:.3f} | {row.qlc_vulnerability_placeholder} | "
             f"{row.aava_sensitivity_placeholder} | {row.incidence_risk_placeholder} | "
             f"{row.investment_deterrence_risk_placeholder} | {row.avoidance_gaming_risk_placeholder} | "
             f"{row.calibration_difficulty_placeholder} | {row.legal_attribution_difficulty_placeholder} | "
@@ -109,6 +111,22 @@ def _band_group(rows: list[Any], dimension: str) -> list[str]:
             lines.append(f"- `{_label(band)}`: {', '.join(grouped)}")
     if not lines:
         lines.append("- No rows in this dimension.")
+    return lines
+
+
+def _automation_component_table(rows: list[Any]) -> list[str]:
+    lines = [
+        "| Schedule ID | Digital Automation Emphasis | Physical Automation Emphasis | Decision Automation Emphasis | Compute Dependency Emphasis | Robotics Dependency Note | Method Note |",
+        "| --- | ---: | ---: | ---: | ---: | --- | --- |",
+    ]
+    for row in rows:
+        lines.append(
+            "| "
+            f"{row.schedule_id} | {row.digital_automation_emphasis:.3f} | "
+            f"{row.physical_automation_emphasis:.3f} | {row.decision_automation_emphasis:.3f} | "
+            f"{row.compute_dependency_emphasis:.3f} | {row.robotics_dependency_note} | "
+            f"{row.automation_intensity_method_note} |"
+        )
     return lines
 
 
@@ -158,6 +176,8 @@ def build_markdown(rows: list[Any], summary: Any, metadata: dict[str, Any]) -> s
             "",
             "Scores are deterministic placeholders derived only from schedule metadata such as AII weights, QLC weights, cap placeholders, avoidance controls, calibration requirements, attribution wording, and unresolved review notes. No real sector data is used.",
             "",
+            "Automation intensity separates digital automation emphasis, physical automation emphasis, decision automation emphasis, and compute dependency emphasis so low-robotics and high-robotics schedules are easier to read without creating a real sector score.",
+            "",
             "## D. Sector Coverage",
             "",
         ]
@@ -180,6 +200,8 @@ def build_markdown(rows: list[Any], summary: Any, metadata: dict[str, Any]) -> s
     lines.extend(_matrix_table(rows))
     lines.extend(["", "## G. Automation Intensity Placeholder Bands", ""])
     lines.extend(_band_group(rows, "automation_intensity_placeholder"))
+    lines.extend(["", "### Automation Intensity Component Explanation", ""])
+    lines.extend(_automation_component_table(rows))
     lines.extend(["", "## H. QLC Vulnerability Placeholder Bands", ""])
     lines.extend(_band_group(rows, "qlc_vulnerability_placeholder"))
     lines.extend(["", "## I. AAVA Sensitivity Placeholder Bands", ""])

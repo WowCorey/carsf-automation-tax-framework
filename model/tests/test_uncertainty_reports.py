@@ -109,3 +109,26 @@ def test_uncertainty_report_does_not_claim_validation_or_forecasts(repo_root) ->
 
     for claim in forbidden_claims:
         assert claim not in combined
+
+
+def test_uncertainty_report_preserves_weighted_subgroup_metadata(repo_root) -> None:
+    reports_dir = repo_root / "tmp" / "test-uncertainty-subgroup-metadata"
+    subprocess.run(
+        [sys.executable, "scripts/run_uncertainty_ranges.py", "--reports-dir", str(reports_dir)],
+        cwd=repo_root,
+        check=True,
+    )
+    markdown = (reports_dir / "uncertainty_ranges.md").read_text(encoding="utf-8")
+    payload = json.loads((reports_dir / "uncertainty_ranges.json").read_text(encoding="utf-8"))
+    weighted_examples = [
+        example for example in payload["examples"] if example["uncertainty_type"] == "weighted"
+    ]
+
+    assert "Matched Scenarios | Unmatched Scenarios | Not Population Estimate" in markdown
+    assert weighted_examples
+    subgroup = weighted_examples[0]["uncertainty_result"]["subgroup_results"][0]
+    assert "scenario_count" in subgroup
+    assert "total_synthetic_weight" in subgroup
+    assert "matched_scenarios" in subgroup
+    assert subgroup["representative_of_real_population"] is False
+    assert subgroup["not_population_estimate"] is True

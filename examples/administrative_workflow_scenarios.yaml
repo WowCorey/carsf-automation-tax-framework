@@ -6,6 +6,73 @@ no_enforcement: true
 no_compliance_scoring: true
 no_tax_payable_estimate: true
 scenarios:
+  - scenario_id: routine_formula_completeness_check
+    scenario_name: Routine formula completeness check
+    linked_example_or_case: automotive repair synthetic completeness check
+    sector_schedule_id: automotive_repair
+    behavioural_response_scenario_ids: []
+    trigger_flags:
+      - CORE_FORMULA_COMPLETENESS
+    requested_review_domains:
+      - core_formula
+    synthetic_evidence_packet_ids: []
+    initial_review_state: partial
+    privacy_secrecy_sensitivity: low
+    external_review_required: false
+    suppress_until_calibrated: false
+    description: Synthetic routine check that only demonstrates core formula completeness review routing.
+    placeholder_basis:
+      - Synthetic routine pathway for workflow spread testing only.
+    non_claims:
+      - This synthetic prototype workflow does not enforce, does not create notices, does not score compliance, and does not modify firm-level CARSF liability.
+      - It is a demonstration row only and is not guidance from the ATO, legal advice, or tax advice.
+
+  - scenario_id: enhanced_sector_schedule_documentation_check
+    scenario_name: Enhanced sector schedule documentation check
+    linked_example_or_case: call-centre schedule documentation synthetic check
+    sector_schedule_id: call_centres_customer_support
+    behavioural_response_scenario_ids: []
+    trigger_flags:
+      - CORE_FORMULA_COMPLETENESS
+      - SECTOR_SCHEDULE_DOCUMENTATION
+    requested_review_domains:
+      - core_formula
+      - sector_schedule_review
+    synthetic_evidence_packet_ids: []
+    initial_review_state: partial
+    privacy_secrecy_sensitivity: low
+    external_review_required: false
+    suppress_until_calibrated: false
+    description: Synthetic enhanced check for schedule documentation routing without legal-policy or transfer-pricing review.
+    placeholder_basis:
+      - Synthetic enhanced pathway for workflow spread testing only.
+    non_claims:
+      - This synthetic prototype workflow does not enforce, does not create notices, does not score compliance, and does not modify firm-level CARSF liability.
+      - It is a demonstration row only and is not guidance from the ATO, legal advice, or tax advice.
+
+  - scenario_id: enhanced_privacy_evidence_handling_check
+    scenario_name: Enhanced privacy evidence handling check
+    linked_example_or_case: call-centre privacy evidence synthetic check
+    sector_schedule_id: call_centres_customer_support
+    behavioural_response_scenario_ids: []
+    trigger_flags:
+      - CORE_FORMULA_COMPLETENESS
+      - PRIVACY_EVIDENCE_HANDLING
+    requested_review_domains:
+      - core_formula
+      - privacy_secrecy_review
+    synthetic_evidence_packet_ids: []
+    initial_review_state: partial
+    privacy_secrecy_sensitivity: moderate
+    external_review_required: false
+    suppress_until_calibrated: false
+    description: Synthetic enhanced check for worker-related evidence handling and privacy/secrecy review routing only.
+    placeholder_basis:
+      - Synthetic privacy pathway for workflow spread testing only.
+    non_claims:
+      - This synthetic prototype workflow does not enforce, does not create notices, does not score compliance, and does not modify firm-level CARSF liability.
+      - It is a demonstration row only and is not guidance from the ATO, legal advice, or tax advice.
+
   - scenario_id: call_centre_token_oversight_triage
     scenario_name: Call-centre token oversight triage
     linked_example_or_case: call-centre synthetic token oversight case

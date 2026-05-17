@@ -1,7 +1,7 @@
 {
   "metadata": {
     "firm_level_liability_logic_modified": false,
-    "generated_at": "2026-05-17T06:11:15+00:00",
+    "generated_at": "2026-05-17T22:52:43+00:00",
     "non_claims": [
       "The sector stress matrix is prototype metadata review only. It is not calibrated. It is not a real-world ranking of sectors. It is not Treasury modelling. It is not ATO guidance. It is not ABS/ATO/DSS/PBO analysis. It does not use real industry data. It does not estimate actual tax payable.",
       "The sector stress matrix does not modify firm-level CARSF liability logic.",
@@ -17,6 +17,19 @@
   "stress_matrix": [
     {
       "aava_sensitivity_placeholder": "moderate_placeholder_stress",
+      "automation_intensity_components_used": [
+        "auto_process_share",
+        "auto_decision_ratio",
+        "compute_ratio",
+        "robotics_capital_ratio_as_physical_note"
+      ],
+      "automation_intensity_limitations": [
+        "metadata_only",
+        "not_calibrated",
+        "not_a_real_sector_score",
+        "do_not_rank"
+      ],
+      "automation_intensity_method_note": "Automation intensity is a placeholder metadata signal derived from AII component weights; digital, decision, compute, and physical components are shown separately and must not be used as real sector scores.",
       "automation_intensity_placeholder": "critical_review_required",
       "avoidance_gaming_risk_placeholder": "high_placeholder_stress",
       "calibration_blockers": [
@@ -29,6 +42,9 @@
       ],
       "calibration_difficulty_placeholder": "critical_review_required",
       "canonical_output_unit": "standardised_transactions_or_filings_processed",
+      "compute_dependency_emphasis": 0.25,
+      "decision_automation_emphasis": 0.25,
+      "digital_automation_emphasis": 0.45,
       "dimension_scores": {
         "aava_sensitivity_placeholder": 0.3,
         "automation_intensity_placeholder": 0.7699999999999999,
@@ -52,7 +68,9 @@
         "The sector stress matrix is not economic validation, investment advice, legal advice, or tax advice.",
         "All schedules remain placeholder-only and subject to external calibration, legal review, and methods review."
       ],
+      "physical_automation_emphasis": 0.05,
       "qlc_vulnerability_placeholder": "high_placeholder_stress",
+      "robotics_dependency_note": "physical automation metadata is present as a robotics dependency note",
       "schedule_id": "accounting_administration",
       "schedule_name": "Prototype Schedule D - Accounting / Administration",
       "stress_reasons": [
@@ -67,6 +85,7 @@
         "QLC vulnerability uses placeholder QLC weights and schedule text only",
         "automation emphasis uses AII metadata only (0.96)",
         "consumer, support, retail, logistics, platform, or transaction terms increase review pressure",
+        "digital, decision, compute, and physical automation components are reported separately for interpretability",
         "legal, tax, Treasury, AASB, intangible, platform, cross-border, or attribution terms are present",
         "offshore, related-party, IP, platform, mixed-activity, customer self-service, legal review, or AASB terms are present",
         "related-party, offshore, IP, platform, cloud, token-worker, or self-service terms are present",
@@ -80,6 +99,19 @@
     },
     {
       "aava_sensitivity_placeholder": "moderate_placeholder_stress",
+      "automation_intensity_components_used": [
+        "auto_process_share",
+        "auto_decision_ratio",
+        "compute_ratio",
+        "robotics_capital_ratio_as_physical_note"
+      ],
+      "automation_intensity_limitations": [
+        "metadata_only",
+        "not_calibrated",
+        "not_a_real_sector_score",
+        "do_not_rank"
+      ],
+      "automation_intensity_method_note": "Automation intensity is a placeholder metadata signal derived from AII component weights; digital, decision, compute, and physical components are shown separately and must not be used as real sector scores.",
       "automation_intensity_placeholder": "high_placeholder_stress",
       "avoidance_gaming_risk_placeholder": "high_placeholder_stress",
       "calibration_blockers": [
@@ -92,6 +124,9 @@
       ],
       "calibration_difficulty_placeholder": "high_placeholder_stress",
       "canonical_output_unit": "book_hour_equivalent_jobs_completed",
+      "compute_dependency_emphasis": 0.15,
+      "decision_automation_emphasis": 0.25,
+      "digital_automation_emphasis": 0.25,
       "dimension_scores": {
         "aava_sensitivity_placeholder": 0.3,
         "automation_intensity_placeholder": 0.5900000000000001,
@@ -115,7 +150,9 @@
         "The sector stress matrix is not economic validation, investment advice, legal advice, or tax advice.",
         "All schedules remain placeholder-only and subject to external calibration, legal review, and methods review."
       ],
+      "physical_automation_emphasis": 0.35,
       "qlc_vulnerability_placeholder": "high_placeholder_stress",
+      "robotics_dependency_note": "physical automation metadata is present as a robotics dependency note",
       "schedule_id": "automotive_repair",
       "schedule_name": "Prototype Schedule A - Automotive Repair",
       "stress_reasons": [
@@ -130,6 +167,7 @@
         "QLC vulnerability uses placeholder QLC weights and schedule text only",
         "automation emphasis uses AII metadata only (0.74)",
         "consumer, support, retail, logistics, platform, or transaction terms increase review pressure",
+        "digital, decision, compute, and physical automation components are reported separately for interpretability",
         "legal, tax, Treasury, AASB, intangible, platform, cross-border, or attribution terms are present",
         "offshore, related-party, IP, platform, mixed-activity, customer self-service, legal review, or AASB terms are present",
         "related-party, offshore, IP, platform, cloud, token-worker, or self-service terms are present",
@@ -144,6 +182,19 @@
     },
     {
       "aava_sensitivity_placeholder": "moderate_placeholder_stress",
+      "automation_intensity_components_used": [
+        "auto_process_share",
+        "auto_decision_ratio",
+        "compute_ratio",
+        "robotics_capital_ratio_as_physical_note"
+      ],
+      "automation_intensity_limitations": [
+        "metadata_only",
+        "not_calibrated",
+        "not_a_real_sector_score",
+        "do_not_rank"
+      ],
+      "automation_intensity_method_note": "Automation intensity is a placeholder metadata signal derived from AII component weights; digital, decision, compute, and physical components are shown separately and must not be used as real sector scores.",
       "automation_intensity_placeholder": "critical_review_required",
       "avoidance_gaming_risk_placeholder": "high_placeholder_stress",
       "calibration_blockers": [
@@ -156,9 +207,12 @@
       ],
       "calibration_difficulty_placeholder": "high_placeholder_stress",
       "canonical_output_unit": "resolved_customer_support_cases",
+      "compute_dependency_emphasis": 0.25,
+      "decision_automation_emphasis": 0.3,
+      "digital_automation_emphasis": 0.4,
       "dimension_scores": {
         "aava_sensitivity_placeholder": 0.355,
-        "automation_intensity_placeholder": 0.77,
+        "automation_intensity_placeholder": 0.7699999999999999,
         "avoidance_gaming_risk_placeholder": 0.52,
         "calibration_difficulty_placeholder": 0.52,
         "incidence_risk_placeholder": 0.38,
@@ -179,7 +233,9 @@
         "The sector stress matrix is not economic validation, investment advice, legal advice, or tax advice.",
         "All schedules remain placeholder-only and subject to external calibration, legal review, and methods review."
       ],
+      "physical_automation_emphasis": 0.05,
       "qlc_vulnerability_placeholder": "high_placeholder_stress",
+      "robotics_dependency_note": "physical automation metadata is present as a robotics dependency note",
       "schedule_id": "call_centres_customer_support",
       "schedule_name": "Prototype Schedule C - Call Centres / Customer Support",
       "stress_reasons": [
@@ -194,6 +250,7 @@
         "QLC vulnerability uses placeholder QLC weights and schedule text only",
         "automation emphasis uses AII metadata only (0.96)",
         "consumer, support, retail, logistics, platform, or transaction terms increase review pressure",
+        "digital, decision, compute, and physical automation components are reported separately for interpretability",
         "legal, tax, Treasury, AASB, intangible, platform, cross-border, or attribution terms are present",
         "offshore, related-party, IP, platform, mixed-activity, customer self-service, legal review, or AASB terms are present",
         "related-party, offshore, IP, platform, cloud, token-worker, or self-service terms are present",
@@ -207,6 +264,19 @@
     },
     {
       "aava_sensitivity_placeholder": "moderate_placeholder_stress",
+      "automation_intensity_components_used": [
+        "auto_process_share",
+        "auto_decision_ratio",
+        "compute_ratio",
+        "robotics_capital_ratio_as_physical_note"
+      ],
+      "automation_intensity_limitations": [
+        "metadata_only",
+        "not_calibrated",
+        "not_a_real_sector_score",
+        "do_not_rank"
+      ],
+      "automation_intensity_method_note": "Automation intensity is a placeholder metadata signal derived from AII component weights; digital, decision, compute, and physical components are shown separately and must not be used as real sector scores.",
       "automation_intensity_placeholder": "critical_review_required",
       "avoidance_gaming_risk_placeholder": "high_placeholder_stress",
       "calibration_blockers": [
@@ -218,6 +288,9 @@
       ],
       "calibration_difficulty_placeholder": "high_placeholder_stress",
       "canonical_output_unit": "tonne_kilometres_or_pallet_movements",
+      "compute_dependency_emphasis": 0.2,
+      "decision_automation_emphasis": 0.3,
+      "digital_automation_emphasis": 0.3,
       "dimension_scores": {
         "aava_sensitivity_placeholder": 0.365,
         "automation_intensity_placeholder": 0.68,
@@ -241,7 +314,9 @@
         "The sector stress matrix is not economic validation, investment advice, legal advice, or tax advice.",
         "All schedules remain placeholder-only and subject to external calibration, legal review, and methods review."
       ],
+      "physical_automation_emphasis": 0.2,
       "qlc_vulnerability_placeholder": "high_placeholder_stress",
+      "robotics_dependency_note": "physical automation metadata is present as a robotics dependency note",
       "schedule_id": "logistics_warehousing",
       "schedule_name": "Prototype Schedule B - Logistics / Warehousing",
       "stress_reasons": [
@@ -256,6 +331,7 @@
         "QLC vulnerability uses placeholder QLC weights and schedule text only",
         "automation emphasis uses AII metadata only (0.85)",
         "consumer, support, retail, logistics, platform, or transaction terms increase review pressure",
+        "digital, decision, compute, and physical automation components are reported separately for interpretability",
         "legal, tax, Treasury, AASB, intangible, platform, cross-border, or attribution terms are present",
         "offshore, related-party, IP, platform, mixed-activity, customer self-service, legal review, or AASB terms are present",
         "related-party, offshore, IP, platform, cloud, token-worker, or self-service terms are present",
@@ -269,6 +345,19 @@
     },
     {
       "aava_sensitivity_placeholder": "moderate_placeholder_stress",
+      "automation_intensity_components_used": [
+        "auto_process_share",
+        "auto_decision_ratio",
+        "compute_ratio",
+        "robotics_capital_ratio_as_physical_note"
+      ],
+      "automation_intensity_limitations": [
+        "metadata_only",
+        "not_calibrated",
+        "not_a_real_sector_score",
+        "do_not_rank"
+      ],
+      "automation_intensity_method_note": "Automation intensity is a placeholder metadata signal derived from AII component weights; digital, decision, compute, and physical components are shown separately and must not be used as real sector scores.",
       "automation_intensity_placeholder": "critical_review_required",
       "avoidance_gaming_risk_placeholder": "high_placeholder_stress",
       "calibration_blockers": [
@@ -281,6 +370,9 @@
       ],
       "calibration_difficulty_placeholder": "critical_review_required",
       "canonical_output_unit": "customer_transactions_or_order_fulfilments",
+      "compute_dependency_emphasis": 0.15,
+      "decision_automation_emphasis": 0.25,
+      "digital_automation_emphasis": 0.35,
       "dimension_scores": {
         "aava_sensitivity_placeholder": 0.31333333333333335,
         "automation_intensity_placeholder": 0.65,
@@ -304,7 +396,9 @@
         "The sector stress matrix is not economic validation, investment advice, legal advice, or tax advice.",
         "All schedules remain placeholder-only and subject to external calibration, legal review, and methods review."
       ],
+      "physical_automation_emphasis": 0.25,
       "qlc_vulnerability_placeholder": "high_placeholder_stress",
+      "robotics_dependency_note": "physical automation metadata is present as a robotics dependency note",
       "schedule_id": "retail_self_checkout_fulfilment",
       "schedule_name": "Prototype Schedule E - Retail Self-Checkout / Fulfilment",
       "stress_reasons": [
@@ -319,6 +413,7 @@
         "QLC vulnerability uses placeholder QLC weights and schedule text only",
         "automation emphasis uses AII metadata only (0.81)",
         "consumer, support, retail, logistics, platform, or transaction terms increase review pressure",
+        "digital, decision, compute, and physical automation components are reported separately for interpretability",
         "legal, tax, Treasury, AASB, intangible, platform, cross-border, or attribution terms are present",
         "offshore, related-party, IP, platform, mixed-activity, customer self-service, legal review, or AASB terms are present",
         "related-party, offshore, IP, platform, cloud, token-worker, or self-service terms are present",
@@ -333,6 +428,19 @@
     },
     {
       "aava_sensitivity_placeholder": "critical_review_required",
+      "automation_intensity_components_used": [
+        "auto_process_share",
+        "auto_decision_ratio",
+        "compute_ratio",
+        "robotics_capital_ratio_as_physical_note"
+      ],
+      "automation_intensity_limitations": [
+        "metadata_only",
+        "not_calibrated",
+        "not_a_real_sector_score",
+        "do_not_rank"
+      ],
+      "automation_intensity_method_note": "Automation intensity is a placeholder metadata signal derived from AII component weights; digital, decision, compute, and physical components are shown separately and must not be used as real sector scores.",
       "automation_intensity_placeholder": "critical_review_required",
       "avoidance_gaming_risk_placeholder": "critical_review_required",
       "calibration_blockers": [
@@ -345,6 +453,9 @@
       ],
       "calibration_difficulty_placeholder": "critical_review_required",
       "canonical_output_unit": "australian_served_platform_transactions_or_workflows",
+      "compute_dependency_emphasis": 0.3,
+      "decision_automation_emphasis": 0.3,
+      "digital_automation_emphasis": 0.35,
       "dimension_scores": {
         "aava_sensitivity_placeholder": 0.7,
         "automation_intensity_placeholder": 0.7699999999999999,
@@ -368,7 +479,9 @@
         "The sector stress matrix is not economic validation, investment advice, legal advice, or tax advice.",
         "All schedules remain placeholder-only and subject to external calibration, legal review, and methods review."
       ],
+      "physical_automation_emphasis": 0.05,
       "qlc_vulnerability_placeholder": "moderate_placeholder_stress",
+      "robotics_dependency_note": "physical automation metadata is present as a robotics dependency note",
       "schedule_id": "software_digital_platforms",
       "schedule_name": "Prototype Schedule F - Software / Digital Platforms",
       "stress_reasons": [
@@ -383,6 +496,7 @@
         "QLC vulnerability uses placeholder QLC weights and schedule text only",
         "automation emphasis uses AII metadata only (0.96)",
         "consumer, support, retail, logistics, platform, or transaction terms increase review pressure",
+        "digital, decision, compute, and physical automation components are reported separately for interpretability",
         "legal, tax, Treasury, AASB, intangible, platform, cross-border, or attribution terms are present",
         "offshore, related-party, IP, platform, mixed-activity, customer self-service, legal review, or AASB terms are present",
         "related-party, offshore, IP, platform, cloud, token-worker, or self-service terms are present",

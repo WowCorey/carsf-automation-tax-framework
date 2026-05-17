@@ -25,6 +25,7 @@ The workflow layer:
 - assigns deterministic workflow decision bands and workflow statuses;
 - assigns review queues and escalation pathways;
 - records locked or suppressed cases;
+- includes routine and enhanced synthetic demonstration rows so the workflow spread is visible;
 - preserves no-enforcement and no-liability-modification flags.
 
 ## Non-Claims
@@ -48,3 +49,5 @@ The report includes:
 - calibration and administrative-design blockers.
 
 The output is a display and governance shell only. It should not be used as an operational process, compliance workflow, or liability input.
+
+Routine and enhanced rows are demonstration rows only. They do not imply administrative approval, evidence sufficiency, clearance, operational readiness, or any real action.

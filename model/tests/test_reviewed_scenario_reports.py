@@ -57,7 +57,7 @@ def test_reviewed_scenario_report_has_required_tables_and_counts(repo_root) -> N
     assert "## D. Household Scenario Review Table" in markdown
     assert "## E. Weighted Subgroup Review Table" in markdown
     assert "Scenario | Risk Signal Stability | Low Case | Base Case | High Case" in markdown
-    assert "Subgroup | Residual Gap Stability | High/Critical Share Stability" in markdown
+    assert "Subgroup | Scenario Count | Synthetic Weight | Not Population Estimate" in markdown
     assert payload["summary"]["total_reviewed_outputs"] == (
         len(payload["household_reviews"]) + len(payload["weighted_subgroup_reviews"])
     )
@@ -137,3 +137,23 @@ def test_reviewed_scenario_report_does_not_claim_real_validation(repo_root) -> N
 
     for claim in forbidden_claims:
         assert claim not in combined
+
+
+def test_reviewed_scenario_report_preserves_weighted_subgroup_metadata(repo_root) -> None:
+    reports_dir = repo_root / "tmp" / "test-reviewed-scenarios-subgroup-metadata"
+    subprocess.run(
+        [sys.executable, "scripts/run_reviewed_scenarios.py", "--reports-dir", str(reports_dir)],
+        cwd=repo_root,
+        check=True,
+    )
+    markdown = (reports_dir / "reviewed_scenarios.md").read_text(encoding="utf-8")
+    payload = json.loads((reports_dir / "reviewed_scenarios.json").read_text(encoding="utf-8"))
+
+    assert "Scenario Count | Synthetic Weight | Not Population Estimate" in markdown
+    assert payload["weighted_subgroup_reviews"]
+    row = payload["weighted_subgroup_reviews"][0]
+    assert "scenario_count" in row
+    assert "total_synthetic_weight" in row
+    assert "matched_scenarios" in row
+    assert row["representative_of_real_population"] is False
+    assert row["not_population_estimate"] is True

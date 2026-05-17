@@ -161,6 +161,41 @@ def test_non_representative_subgroup_always_warns() -> None:
     assert "Synthetic subgroup output is not population representative." in result.warnings
 
 
+def test_weighted_subgroup_review_preserves_metadata() -> None:
+    source = {
+        "subgroup_id": "low_income",
+        "subgroup_name": "Low income",
+        "scenario_count": 2,
+        "total_synthetic_weight": 2.5,
+        "subgroup_filter": {"income_band_filter": "low"},
+        "matched_scenarios": ["scenario_a"],
+        "unmatched_scenarios": ["scenario_b"],
+        "residual_gap_range": _range("residual gap", "stable"),
+        "high_critical_share_range": _range("high critical share", "stable"),
+        "subgroup_range_sensitivity": "stable",
+        "representative_of_real_population": False,
+        "synthetic_weight_only": True,
+        "not_population_estimate": True,
+        "warnings": [],
+    }
+
+    result = review_scenario(
+        {
+            "review_id": "review-metadata",
+            "source_type": "weighted_subgroup",
+            "source_result": source,
+            "subgroup_id": "low_income",
+        }
+    )
+
+    assert result.scenario_count == 2
+    assert result.total_synthetic_weight == 2.5
+    assert result.subgroup_filter == {"income_band_filter": "low"}
+    assert result.matched_scenarios == ["scenario_a"]
+    assert result.unmatched_scenarios == ["scenario_b"]
+    assert result.not_population_estimate is True
+
+
 def test_zero_weight_subgroup_is_non_interpretable_until_calibrated() -> None:
     source = {
         "subgroup_id": "zero_weight",

@@ -29,6 +29,7 @@ Covered prototype pathways include:
 The module produces:
 
 - response pressure bands
+- pressure basis labels (`single_pathway`, `multi_pathway`, `cross_border`, `unresolved_legal_treatment`, or `calibration_suppressed`)
 - linked avoidance flags
 - countermeasure categories
 - review statuses
@@ -48,6 +49,8 @@ Behavioural response simulation is prototype-only deterministic placeholder scen
 
 The simulation does not use firm-level, taxpayer-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data. All response scenarios are synthetic placeholders requiring external calibration, legal review, ATO/Treasury methods review, and behavioural research.
 
+Pressure-band tuning is for demonstration spread only. It shows moderate, high, critical, and suppressed synthetic pathways without claiming behavioural probability or observed conduct.
+
 ## Run Command
 
 ```powershell
@@ -61,4 +64,4 @@ Generated reports:
 
 ## Future Work
 
-Build 20 should add an ATO / administrative compliance workflow for organising evidence requests, review states, behavioural-response flags, sector schedule review, grouped-entity review, transfer-pricing review, and escalation pathways without claiming real ATO enforcement powers or operational readiness.
+Future work must calibrate response taxonomy, pressure thresholds, and review pathways externally before any policy or administrative use.

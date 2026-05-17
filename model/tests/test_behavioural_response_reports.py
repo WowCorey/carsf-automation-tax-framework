@@ -85,6 +85,9 @@ def test_behavioural_response_report_has_required_summary_counts(repo_root) -> N
     assert summary["scenarios_requiring_customer_self_service_review"] >= 1
     assert summary["scenarios_suppress_until_calibrated"] >= 1
     assert summary["firm_level_liability_logic_modified"] is False
+    assert summary["scenarios_by_pressure_band"]["moderate_placeholder_response_pressure"] >= 1
+    assert summary["scenarios_by_pressure_band"]["high_placeholder_response_pressure"] >= 1
+    assert summary["scenarios_by_pressure_band"]["critical_review_required"] >= 1
 
 
 def test_behavioural_response_report_contains_required_table(repo_root) -> None:
@@ -97,7 +100,7 @@ def test_behavioural_response_report_contains_required_table(repo_root) -> None:
     markdown = (reports_dir / "behavioural_response_simulation.md").read_text(encoding="utf-8")
 
     assert "Scenario ID | Scenario Name | Sector Schedule | Response Type" in markdown
-    assert "Linked Avoidance Flags | Response Pressure Band | Review Status" in markdown
+    assert "Pressure Basis | Linked Avoidance Flags | Response Pressure Band | Review Status" in markdown
     assert "Do Not Predict | Main Reason" in markdown
 
 
