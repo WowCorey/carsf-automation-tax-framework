@@ -697,7 +697,12 @@ Purpose of this build:
 
 Tests run:
 
-- Pending for this branch.
+- `python -m pytest` - 579 passed, 1 pytest-asyncio deprecation warning.
+- `python -m compileall -q model simulator scripts` - passed.
+- Recursive YAML parse for `schedules/`, `examples/`, and `data/` - parsed 72 YAML files.
+- Report runners passed: examples, sector schedule expansion, sector stress matrix, behavioural response simulation, evidence workflow, ingestion controls, investment guardrails, fiscal trajectory, transition funding, payment interactions, distributional scenarios, household weighting, uncertainty ranges, reviewed scenarios, and repo guardrails.
+- Repo guardrails passed with zero denied findings.
+- Bare Streamlit import probes passed for `simulator/app.py` and `simulator/pages/22_Behavioural_Response.py`.
 
 Reports generated:
 
@@ -710,3 +715,35 @@ Limitations:
 - They are not behavioural prediction, not behavioural elasticity, not ATO audit logic, not Treasury modelling, not ABS/ATO/DSS/PBO analysis, not compliance-risk scoring, not enforcement, not penalty modelling, not legal advice, not tax advice, not investment advice, and not economic validation.
 - They do not use firm-level, taxpayer-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data.
 - They do not estimate actual tax payable and do not modify firm-level CARSF liability logic.
+
+## V1.5 Administrative Compliance Workflow
+
+Branch: `v1.5-administrative-compliance-workflow`
+
+Baseline: PR #20 merged into `main`, including behavioural response simulation.
+
+Purpose of this build:
+
+- Add synthetic administrative workflow scenarios.
+- Organise synthetic cases into evidence request bundles, review queues, escalation pathways, behavioural-response links, privacy/secrecy review notes, locked cases, suppressed cases, and external-review blockers.
+- Add administrative workflow reports, tests, CI step, documentation, and Streamlit page.
+
+Tests run:
+
+- `python -m pytest` - 598 passed, 1 pytest-asyncio deprecation warning.
+- `python -m compileall -q model simulator scripts` - passed.
+- Recursive YAML parse for `schedules/`, `examples/`, and `data/` - parsed 73 YAML files.
+- Report runners passed: examples, sector schedule expansion, sector stress matrix, behavioural response simulation, administrative compliance workflow, evidence workflow, ingestion controls, investment guardrails, fiscal trajectory, transition funding, payment interactions, distributional scenarios, household weighting, uncertainty ranges, reviewed scenarios, and repo guardrails.
+- Repo guardrails passed with zero denied findings.
+- Bare Streamlit import probes passed for `simulator/app.py` and `simulator/pages/23_Administrative_Workflow.py`.
+
+Reports generated:
+
+- `reports/administrative_compliance_workflow.json`
+- `reports/administrative_compliance_workflow.md`
+
+Limitations:
+
+- Administrative workflow outputs are prototype deterministic synthetic pathway-organisation reviews only.
+- They are not a workflow endorsed by the ATO, not guidance from the ATO, not Treasury modelling, not audit logic, not enforcement, not compliance scoring, not legal advice, not tax advice, and not economic validation.
+- They do not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, estimate actual tax payable, or modify firm-level CARSF liability logic.

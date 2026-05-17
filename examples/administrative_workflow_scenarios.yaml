@@ -1,0 +1,297 @@
+illustrative_placeholder_only: true
+synthetic_workflow_only: true
+not_calibrated: true
+no_real_data: true
+no_enforcement: true
+no_compliance_scoring: true
+no_tax_payable_estimate: true
+scenarios:
+  - scenario_id: call_centre_token_oversight_triage
+    scenario_name: Call-centre token oversight triage
+    linked_example_or_case: call-centre synthetic token oversight case
+    sector_schedule_id: call_centres_customer_support
+    behavioural_response_scenario_ids:
+      - token_oversight_workforce_wrapper
+      - fake_qlc_concentrated_roles
+    trigger_flags:
+      - TOKEN_HUMAN_OVERSIGHT
+      - FAKE_QLC_INFLATION
+    requested_review_domains:
+      - core_formula
+      - behavioural_response_review
+      - grouped_entity_review
+      - privacy_secrecy_review
+    synthetic_evidence_packet_ids:
+      - mechanic_ai_admin_mock_packet
+    initial_review_state: submitted_mock
+    privacy_secrecy_sensitivity: high
+    external_review_required: true
+    suppress_until_calibrated: false
+    description: Synthetic triage case for token oversight, QLC inflation, and worker-related evidence review.
+    placeholder_basis:
+      - Synthetic support-centre pathway for workflow testing only.
+    non_claims:
+      - This synthetic prototype workflow does not enforce, does not create notices, does not score compliance, and does not modify firm-level CARSF liability.
+      - It is not a workflow endorsed by the ATO, not guidance from the ATO, not legal advice, and not tax advice.
+
+  - scenario_id: related_party_ai_service_fee_review
+    scenario_name: Related-party AI service fee review
+    linked_example_or_case: accounting administration related-party fee case
+    sector_schedule_id: accounting_administration
+    behavioural_response_scenario_ids:
+      - related_party_ai_service_fee_routing
+    trigger_flags:
+      - RELATED_PARTY_AI_SERVICE_FEES
+      - ARTIFICIAL_LOW_PROFIT_OR_AAVA
+    requested_review_domains:
+      - core_formula
+      - behavioural_response_review
+      - transfer_pricing_review
+      - aava_deductibility_review
+      - legal_policy_review
+    synthetic_evidence_packet_ids:
+      - ai_logistics_platform_mock_packet
+    initial_review_state: submitted_mock
+    privacy_secrecy_sensitivity: high
+    external_review_required: true
+    suppress_until_calibrated: false
+    description: Synthetic review path for related-party AI service fees and AAVA deductibility questions.
+    placeholder_basis:
+      - Synthetic related-party review path for workflow testing only.
+    non_claims:
+      - This synthetic prototype workflow does not enforce, does not create notices, does not score compliance, and does not modify firm-level CARSF liability.
+      - It is not a workflow endorsed by the ATO, not guidance from the ATO, not legal advice, and not tax advice.
+
+  - scenario_id: offshore_automation_service_attribution_review
+    scenario_name: Offshore automation service attribution review
+    linked_example_or_case: offshore automation-as-a-service synthetic case
+    sector_schedule_id: logistics_warehousing
+    behavioural_response_scenario_ids:
+      - offshore_automation_service_routing
+    trigger_flags:
+      - OFFSHORE_AUTOMATION_SERVICE
+      - RELATED_PARTY_AI_SERVICE_FEES
+    requested_review_domains:
+      - core_formula
+      - behavioural_response_review
+      - grouped_entity_review
+      - transfer_pricing_review
+      - offshore_attribution_review
+      - legal_policy_review
+    synthetic_evidence_packet_ids:
+      - ai_logistics_platform_mock_packet
+    initial_review_state: submitted_mock
+    privacy_secrecy_sensitivity: high
+    external_review_required: true
+    suppress_until_calibrated: false
+    description: Synthetic workflow for offshore automation routing, group roles, and attribution review.
+    placeholder_basis:
+      - Synthetic offshore attribution pathway for workflow testing only.
+    non_claims:
+      - This synthetic prototype workflow does not enforce, does not create notices, does not score compliance, and does not modify firm-level CARSF liability.
+      - It is not a workflow endorsed by the ATO, not guidance from the ATO, not legal advice, and not tax advice.
+
+  - scenario_id: retail_self_checkout_labour_relabelling_review
+    scenario_name: Retail self-checkout labour relabelling review
+    linked_example_or_case: retail self-checkout synthetic case
+    sector_schedule_id: retail_self_checkout_fulfilment
+    behavioural_response_scenario_ids:
+      - customer_self_checkout_labour_relabelling
+    trigger_flags:
+      - SECTOR_CLASSIFICATION_ARBITRAGE
+      - CUSTOMER_SELF_SERVICE_REVIEW
+    requested_review_domains:
+      - core_formula
+      - sector_schedule_review
+      - behavioural_response_review
+      - privacy_secrecy_review
+      - legal_policy_review
+    synthetic_evidence_packet_ids:
+      - mixed_unit_platform_mock_packet
+    initial_review_state: partial
+    privacy_secrecy_sensitivity: moderate
+    external_review_required: false
+    suppress_until_calibrated: false
+    description: Synthetic workflow for customer self-service treatment and sector schedule review.
+    placeholder_basis:
+      - Synthetic retail pathway for workflow testing only.
+    non_claims:
+      - This synthetic prototype workflow does not enforce, does not create notices, does not score compliance, and does not modify firm-level CARSF liability.
+      - It is not a workflow endorsed by the ATO, not guidance from the ATO, not legal advice, and not tax advice.
+
+  - scenario_id: robotics_leasing_capital_base_review
+    scenario_name: Robotics leasing capital-base review
+    linked_example_or_case: robotics leasing synthetic case
+    sector_schedule_id: automotive_repair
+    behavioural_response_scenario_ids:
+      - robotics_lease_substitution
+    trigger_flags:
+      - ROBOTICS_LEASING_AVOIDANCE
+    requested_review_domains:
+      - core_formula
+      - behavioural_response_review
+      - transfer_pricing_review
+      - aava_deductibility_review
+      - capital_base_review
+    synthetic_evidence_packet_ids:
+      - mechanic_robotic_review_packet
+    initial_review_state: submitted_mock
+    privacy_secrecy_sensitivity: moderate
+    external_review_required: true
+    suppress_until_calibrated: false
+    description: Synthetic workflow for robotics leasing, capital-base treatment, and deductible cost review.
+    placeholder_basis:
+      - Synthetic robotics leasing pathway for workflow testing only.
+    non_claims:
+      - This synthetic prototype workflow does not enforce, does not create notices, does not score compliance, and does not modify firm-level CARSF liability.
+      - It is not a workflow endorsed by the ATO, not guidance from the ATO, not legal advice, and not tax advice.
+
+  - scenario_id: software_platform_ip_royalty_aasb_review
+    scenario_name: Software platform IP royalty / AASB 138 review
+    linked_example_or_case: software platform IP royalty synthetic case
+    sector_schedule_id: software_digital_platforms
+    behavioural_response_scenario_ids:
+      - platform_ip_royalty_routing
+      - cloud_inference_operating_cost_relabelling
+    trigger_flags:
+      - RELATED_PARTY_AI_SERVICE_FEES
+      - OFFSHORE_AUTOMATION_SERVICE
+      - ARTIFICIAL_LOW_PROFIT_OR_AAVA
+    requested_review_domains:
+      - core_formula
+      - sector_schedule_review
+      - behavioural_response_review
+      - transfer_pricing_review
+      - aava_deductibility_review
+      - capital_base_review
+      - offshore_attribution_review
+      - legal_policy_review
+      - ato_methods_review
+      - treasury_methods_review
+    synthetic_evidence_packet_ids:
+      - ai_logistics_platform_mock_packet
+    initial_review_state: needs_legal_review
+    privacy_secrecy_sensitivity: high
+    external_review_required: true
+    suppress_until_calibrated: false
+    description: Synthetic workflow for platform IP royalties, software/intangible capital-base treatment, AASB 138 review, and offshore attribution.
+    placeholder_basis:
+      - Synthetic software platform pathway for workflow testing only.
+    non_claims:
+      - This synthetic prototype workflow does not enforce, does not create notices, does not score compliance, and does not modify firm-level CARSF liability.
+      - It is not a workflow endorsed by the ATO, not guidance from the ATO, not legal advice, and not tax advice.
+
+  - scenario_id: mixed_unit_schedule_classification_review
+    scenario_name: Mixed-unit schedule classification review
+    linked_example_or_case: mixed-unit platform synthetic case
+    sector_schedule_id: logistics_warehousing
+    behavioural_response_scenario_ids:
+      - mixed_unit_apportionment_gaming
+      - schedule_classification_arbitrage
+    trigger_flags:
+      - SECTOR_CLASSIFICATION_ARBITRAGE
+    requested_review_domains:
+      - core_formula
+      - sector_schedule_review
+      - behavioural_response_review
+      - external_calibration_review
+    synthetic_evidence_packet_ids:
+      - mixed_unit_platform_mock_packet
+    initial_review_state: needs_calibration
+    privacy_secrecy_sensitivity: moderate
+    external_review_required: true
+    suppress_until_calibrated: false
+    description: Synthetic workflow for mixed output units, schedule classification, and conversion metadata review.
+    placeholder_basis:
+      - Synthetic mixed-unit pathway for workflow testing only.
+    non_claims:
+      - This synthetic prototype workflow does not enforce, does not create notices, does not score compliance, and does not modify firm-level CARSF liability.
+      - It is not a workflow endorsed by the ATO, not guidance from the ATO, not legal advice, and not tax advice.
+
+  - scenario_id: open_source_ai_treatment_locked_calibration_review
+    scenario_name: Open-source AI treatment locked-for-calibration review
+    linked_example_or_case: open-source AI treatment gap synthetic case
+    sector_schedule_id: software_digital_platforms
+    behavioural_response_scenario_ids:
+      - open_source_ai_treatment_gap
+    trigger_flags:
+      - OPEN_SOURCE_AI_TREATMENT_GAP
+    requested_review_domains:
+      - sector_schedule_review
+      - behavioural_response_review
+      - capital_base_review
+      - legal_policy_review
+      - external_calibration_review
+      - treasury_methods_review
+    synthetic_evidence_packet_ids: []
+    initial_review_state: needs_calibration
+    privacy_secrecy_sensitivity: low
+    external_review_required: true
+    suppress_until_calibrated: true
+    description: Synthetic locked case for unresolved open-source AI, software/intangible treatment, and external calibration design.
+    placeholder_basis:
+      - Synthetic unresolved-treatment pathway for workflow testing only.
+    non_claims:
+      - This synthetic prototype workflow does not enforce, does not create notices, does not score compliance, and does not modify firm-level CARSF liability.
+      - It is not a workflow endorsed by the ATO, not guidance from the ATO, not legal advice, and not tax advice.
+
+  - scenario_id: artificial_low_aava_cost_loading_review
+    scenario_name: Artificial low AAVA cost-loading review
+    linked_example_or_case: artificial low AAVA synthetic case
+    sector_schedule_id: accounting_administration
+    behavioural_response_scenario_ids:
+      - artificial_low_aava_cost_loading
+      - cloud_inference_operating_cost_relabelling
+    trigger_flags:
+      - ARTIFICIAL_LOW_PROFIT_OR_AAVA
+      - CLOUD_COST_RELABELING
+    requested_review_domains:
+      - core_formula
+      - behavioural_response_review
+      - transfer_pricing_review
+      - aava_deductibility_review
+      - legal_policy_review
+    synthetic_evidence_packet_ids:
+      - ai_logistics_platform_mock_packet
+    initial_review_state: submitted_mock
+    privacy_secrecy_sensitivity: high
+    external_review_required: true
+    suppress_until_calibrated: false
+    description: Synthetic workflow for cost loading, cloud/inference classification, and AAVA deductibility review.
+    placeholder_basis:
+      - Synthetic low-AAVA pathway for workflow testing only.
+    non_claims:
+      - This synthetic prototype workflow does not enforce, does not create notices, does not score compliance, and does not modify firm-level CARSF liability.
+      - It is not a workflow endorsed by the ATO, not guidance from the ATO, not legal advice, and not tax advice.
+
+  - scenario_id: grouped_entity_thin_australian_employer_review
+    scenario_name: Grouped-entity thin Australian employer review
+    linked_example_or_case: thin Australian employer synthetic case
+    sector_schedule_id: logistics_warehousing
+    behavioural_response_scenario_ids:
+      - offshore_automation_service_routing
+      - related_party_ai_service_fee_routing
+    trigger_flags:
+      - ENTITY_SPLITTING
+      - OFFSHORE_AUTOMATION_SERVICE
+      - RELATED_PARTY_AI_SERVICE_FEES
+    requested_review_domains:
+      - core_formula
+      - behavioural_response_review
+      - grouped_entity_review
+      - transfer_pricing_review
+      - offshore_attribution_review
+      - privacy_secrecy_review
+      - legal_policy_review
+    synthetic_evidence_packet_ids:
+      - ai_logistics_platform_mock_packet
+    initial_review_state: needs_legal_review
+    privacy_secrecy_sensitivity: high
+    external_review_required: true
+    suppress_until_calibrated: false
+    description: Synthetic workflow for group roles, thin Australian employer treatment, offshore provider links, and related-party review.
+    placeholder_basis:
+      - Synthetic grouped-entity pathway for workflow testing only.
+    non_claims:
+      - This synthetic prototype workflow does not enforce, does not create notices, does not score compliance, and does not modify firm-level CARSF liability.
+      - It is not a workflow endorsed by the ATO, not guidance from the ATO, not legal advice, and not tax advice.

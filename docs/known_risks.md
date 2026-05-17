@@ -70,4 +70,7 @@
 - Behavioural response scenarios may be mistaken for behavioural predictions, compliance-risk scores, or enforcement logic if synthetic-only and do-not-predict warnings are removed.
 - Response pressure bands may overstate or understate gaming pathway review pressure without behavioural research, legal review, ATO/Treasury methods review, and external calibration.
 - Countermeasure categories are review pathways only and do not implement evidence powers, penalties, audit logic, enforcement, or operational compliance workflows.
+- Administrative workflow queues may be mistaken for endorsed ATO processes if prototype-only and no-enforcement warnings are removed.
+- Draft evidence request bundles do not create notices, statutory powers, penalties, compliance scoring, real action, or actual tax-payable estimates.
+- Locked and suppressed workflow statuses are display controls only; they require external legal, tax, privacy, methods, calibration, and administrative-design review before any real use.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.

@@ -45,6 +45,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Expand the prototype sector schedule library to call centres / customer support, accounting / administration, retail self-checkout / fulfilment, and software / digital platforms without calibration or legal schedule claims.
 - Add a sector stress matrix that compares placeholder schedules across metadata-only stress dimensions, display-control statuses, and do-not-rank warnings without calibration or real-world sector ranking claims.
 - Add a behavioural response / gaming simulation layer that maps synthetic response pathways to linked avoidance flags, pressure bands, countermeasure categories, review statuses, and calibration blockers without behavioural prediction or liability modification.
+- Add a prototype administrative compliance workflow shell that organises synthetic cases into evidence request bundles, review queues, escalation pathways, behavioural-response links, locked/suppressed states, and external-review blockers without enforcement, notices, compliance scoring, or liability modification.
 
 ## Data Separation
 
@@ -78,6 +79,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Sector schedule expansion reports can be generated with `python scripts/run_sector_schedule_expansion.py`.
 - Sector stress matrix reports can be generated with `python scripts/run_sector_stress_matrix.py`.
 - Behavioural response simulation reports can be generated with `python scripts/run_behavioural_response_simulation.py`.
+- Administrative compliance workflow reports can be generated with `python scripts/run_administrative_compliance_workflow.py`.
 - Hybrid logistics stress variant demonstrates non-zero but intermediate NLTG.
 - V1.5 working paper contains TODO markers where policy drafting remains open.
 - Limitations document clearly blocks actual tax-payable claims.
@@ -102,3 +104,4 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Build a sector stress matrix only after expanded schedule placeholders are present, and do not present it as a real-world sector ranking.
 - Add behavioural response and gaming simulation only after sector stress bands exist, so relabelling, entity splitting, offshore routing, customer self-service shifting, related-party software fees, and schedule arbitrage can be shown as prototype responses without real behavioural prediction claims.
 - Build an administrative compliance workflow only after behavioural response flags exist, so evidence requests, review states, sector schedule review, grouped-entity review, transfer-pricing review, and escalation pathways can be organised without claiming real ATO enforcement powers.
+- Build a legislative architecture skeleton only after administrative workflow routing exists, so any future Parts, Divisions, schedules, evidence-power placeholders, safeguards, and review mechanisms inherit clear non-operative limits.

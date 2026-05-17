@@ -223,6 +223,23 @@ Required source categories include legal review, tax counsel, ATO administrative
 
 No such calibration has occurred in this repository. Behavioural response outputs are deterministic synthetic pathway reviews only; they do not predict taxpayer behaviour, estimate behavioural elasticity, create compliance-risk scoring, implement enforcement, implement penalties, estimate actual tax payable, or modify firm-level CARSF liability logic.
 
+## Administrative Workflow Calibration and Review
+
+The administrative compliance workflow shell requires external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use:
+
+- review queue taxonomy and stage definitions;
+- evidence request bundle mapping to operative source rules;
+- behavioural response links and escalation pathways;
+- grouped-entity, transfer-pricing, sector schedule, AAVA deductibility, capital-base, offshore-attribution, and privacy/secrecy routing;
+- locked and suppressed status rules;
+- methods governance for external calibration review;
+- administrative safeguards, taxpayer protections, review rights, and documentation controls;
+- secure evidence handling outside this repository.
+
+Required source categories include legal review, tax counsel, privacy and secrecy review, ATO administrative methods review, Treasury policy review, secure evidence-governance design, procedural fairness review, operational feasibility review, and external calibration review.
+
+No such calibration has occurred in this repository. Administrative workflow outputs are deterministic synthetic pathway-organisation reviews only; they are not a workflow endorsed by the ATO, not guidance from the ATO, not audit logic, not enforcement, not compliance scoring, do not create notices or penalties, do not estimate actual tax payable, and do not modify firm-level CARSF liability logic.
+
 ## Non-Claims
 
 The calibration shell is not legal, tax, Treasury, ATO, ABS, Fair Work, OECD, BEPS, audit, forensic, or economic validation. It does not prove any model setting is correct.

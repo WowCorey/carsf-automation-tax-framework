@@ -1,0 +1,2402 @@
+{
+  "administrative_workflow_results": [
+    {
+      "calibration_blockers": [
+        "artificial_low_aava_cost_loading_review: legal_policy_queue requires external review"
+      ],
+      "do_not_enforce": true,
+      "do_not_estimate_tax_payable": true,
+      "do_not_issue_notice": true,
+      "do_not_score_compliance": true,
+      "escalation_pathways": [
+        {
+          "escalation_id": "legal_policy_queue_escalation",
+          "external_review_required": true,
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "legal_policy_queue",
+          "reason": "legal_policy_queue requires external methods, legal, calibration, or policy review before any real use."
+        }
+      ],
+      "evidence_request_bundle": {
+        "bundle_id": "artificial_low_aava_cost_loading_review_evidence_bundle",
+        "non_claims": [
+          "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+          "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+          "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+        ],
+        "requirement_count": 21,
+        "requirement_ids": [
+          "avoid_cloud_relabelling",
+          "avoid_entity_splitting",
+          "avoid_fake_qlc",
+          "avoid_offshore_ai",
+          "avoid_related_party_fees",
+          "avoid_robotics_leasing",
+          "avoid_sector_classification",
+          "avoid_token_oversight",
+          "core_aava_revenue_costs",
+          "core_aii_components",
+          "core_output_unit",
+          "core_output_value",
+          "core_worker_hours",
+          "tp_cloud_inference",
+          "tp_cost_sharing",
+          "tp_data_model_access",
+          "tp_management_technical",
+          "tp_related_party_agreements",
+          "tp_robotics_leasing",
+          "tp_royalty_licence",
+          "tp_service_fee_invoices"
+        ],
+        "review_domains": [
+          "aava_deductibility_review",
+          "behavioural_response_review",
+          "core_formula",
+          "legal_policy_review",
+          "transfer_pricing_review"
+        ],
+        "scenario_id": "artificial_low_aava_cost_loading_review",
+        "warnings": [
+          "Evidence bundle is a draft prototype request only and does not use statutory powers.",
+          "Real evidence must not be committed to this repository."
+        ]
+      },
+      "external_review_required": true,
+      "firm_level_liability_logic_modified": false,
+      "linked_behavioural_response_ids": [
+        "artificial_low_aava_cost_loading",
+        "cloud_inference_operating_cost_relabelling"
+      ],
+      "main_reason": "Locked for external review because the scenario explicitly requires external review.",
+      "non_claims": [
+        "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+        "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+        "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+      ],
+      "privacy_secrecy_sensitivity": "high",
+      "queue_assignments": [
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "aava_review_queue",
+          "reason": "Queued because review domain(s) aava_deductibility_review are present.",
+          "review_domain": "aava_deductibility_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "behavioural_response_queue",
+          "reason": "Queued because review domain(s) behavioural_response_review are present.",
+          "review_domain": "behavioural_response_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "evidence_queue",
+          "reason": "Queued because review domain(s) behavioural_response_review, core_formula are present.",
+          "review_domain": "behavioural_response_review, core_formula"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "intake_queue",
+          "reason": "Queued because review domain(s) core_formula are present.",
+          "review_domain": "core_formula"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "legal_policy_queue",
+          "reason": "Queued because review domain(s) aava_deductibility_review, legal_policy_review, transfer_pricing_review are present.",
+          "review_domain": "aava_deductibility_review, legal_policy_review, transfer_pricing_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "prototype_closure_queue",
+          "reason": "Queued because review domain(s) closed_prototype_only are present.",
+          "review_domain": "closed_prototype_only"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "transfer_pricing_queue",
+          "reason": "Queued because review domain(s) aava_deductibility_review, transfer_pricing_review are present.",
+          "review_domain": "aava_deductibility_review, transfer_pricing_review"
+        }
+      ],
+      "real_ato_power_claimed": false,
+      "real_data_used": false,
+      "real_enforcement_created": false,
+      "requested_review_domains": [
+        "aava_deductibility_review",
+        "behavioural_response_review",
+        "core_formula",
+        "legal_policy_review",
+        "transfer_pricing_review"
+      ],
+      "scenario_id": "artificial_low_aava_cost_loading_review",
+      "scenario_name": "Artificial low AAVA cost-loading review",
+      "sector_schedule_id": "accounting_administration",
+      "suppress_until_calibrated": false,
+      "synthetic_evidence_packet_ids": [
+        "ai_logistics_platform_mock_packet"
+      ],
+      "trigger_flags": [
+        "ARTIFICIAL_LOW_PROFIT_OR_AAVA",
+        "CLOUD_COST_RELABELING"
+      ],
+      "warnings": [
+        "Synthetic administrative workflow only; no real action is created.",
+        "Draft evidence requests are prototype review prompts only.",
+        "Base complexity is external because the scenario declares external review or suppression.",
+        "transfer_pricing_review adds 0.10 placeholder workflow complexity.",
+        "legal_policy_review adds 0.10 placeholder workflow complexity.",
+        "behavioural_response_review adds 0.08 placeholder workflow complexity.",
+        "Linked behavioural response scenarios add 0.10 placeholder workflow complexity.",
+        "At least one linked behavioural response requires external review."
+      ],
+      "workflow_decision_band": "external_review_required",
+      "workflow_decision_score": 1.0,
+      "workflow_stages": [
+        "intake_placeholder",
+        "synthetic_case_triage",
+        "evidence_request_draft",
+        "evidence_packet_review",
+        "behavioural_response_review",
+        "transfer_pricing_review",
+        "aava_deductibility_review",
+        "legal_policy_review",
+        "locked_for_external_review",
+        "closed_prototype_only"
+      ],
+      "workflow_status": "locked_for_external_review"
+    },
+    {
+      "calibration_blockers": [
+        "call_centre_token_oversight_triage: legal_policy_queue requires external review"
+      ],
+      "do_not_enforce": true,
+      "do_not_estimate_tax_payable": true,
+      "do_not_issue_notice": true,
+      "do_not_score_compliance": true,
+      "escalation_pathways": [
+        {
+          "escalation_id": "legal_policy_queue_escalation",
+          "external_review_required": true,
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "legal_policy_queue",
+          "reason": "legal_policy_queue requires external methods, legal, calibration, or policy review before any real use."
+        }
+      ],
+      "evidence_request_bundle": {
+        "bundle_id": "call_centre_token_oversight_triage_evidence_bundle",
+        "non_claims": [
+          "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+          "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+          "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+        ],
+        "requirement_count": 23,
+        "requirement_ids": [
+          "avoid_cloud_relabelling",
+          "avoid_entity_splitting",
+          "avoid_fake_qlc",
+          "avoid_offshore_ai",
+          "avoid_related_party_fees",
+          "avoid_robotics_leasing",
+          "avoid_sector_classification",
+          "avoid_token_oversight",
+          "core_aava_revenue_costs",
+          "core_aii_components",
+          "core_australian_nexus",
+          "core_job_security",
+          "core_output_unit",
+          "core_output_value",
+          "core_skill_development",
+          "core_wage_quality",
+          "core_worker_hours",
+          "group_common_control",
+          "group_customer_facing",
+          "group_employer",
+          "group_ip_owner",
+          "group_offshore_provider",
+          "group_service_provider"
+        ],
+        "review_domains": [
+          "behavioural_response_review",
+          "core_formula",
+          "grouped_entity_review",
+          "privacy_secrecy_review"
+        ],
+        "scenario_id": "call_centre_token_oversight_triage",
+        "warnings": [
+          "Evidence bundle is a draft prototype request only and does not use statutory powers.",
+          "Real evidence must not be committed to this repository."
+        ]
+      },
+      "external_review_required": true,
+      "firm_level_liability_logic_modified": false,
+      "linked_behavioural_response_ids": [
+        "fake_qlc_concentrated_roles",
+        "token_oversight_workforce_wrapper"
+      ],
+      "main_reason": "Locked for external review because the scenario explicitly requires external review.",
+      "non_claims": [
+        "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+        "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+        "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+      ],
+      "privacy_secrecy_sensitivity": "high",
+      "queue_assignments": [
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "behavioural_response_queue",
+          "reason": "Queued because review domain(s) behavioural_response_review are present.",
+          "review_domain": "behavioural_response_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "evidence_queue",
+          "reason": "Queued because review domain(s) behavioural_response_review, core_formula, privacy_secrecy_review are present.",
+          "review_domain": "behavioural_response_review, core_formula, privacy_secrecy_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "grouped_entity_queue",
+          "reason": "Queued because review domain(s) grouped_entity_review are present.",
+          "review_domain": "grouped_entity_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "intake_queue",
+          "reason": "Queued because review domain(s) core_formula are present.",
+          "review_domain": "core_formula"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "legal_policy_queue",
+          "reason": "Queued because review domain(s) grouped_entity_review are present.",
+          "review_domain": "grouped_entity_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "privacy_review_queue",
+          "reason": "Queued because review domain(s) privacy_secrecy_review are present.",
+          "review_domain": "privacy_secrecy_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "prototype_closure_queue",
+          "reason": "Queued because review domain(s) closed_prototype_only are present.",
+          "review_domain": "closed_prototype_only"
+        }
+      ],
+      "real_ato_power_claimed": false,
+      "real_data_used": false,
+      "real_enforcement_created": false,
+      "requested_review_domains": [
+        "behavioural_response_review",
+        "core_formula",
+        "grouped_entity_review",
+        "privacy_secrecy_review"
+      ],
+      "scenario_id": "call_centre_token_oversight_triage",
+      "scenario_name": "Call-centre token oversight triage",
+      "sector_schedule_id": "call_centres_customer_support",
+      "suppress_until_calibrated": false,
+      "synthetic_evidence_packet_ids": [
+        "mechanic_ai_admin_mock_packet"
+      ],
+      "trigger_flags": [
+        "FAKE_QLC_INFLATION",
+        "TOKEN_HUMAN_OVERSIGHT"
+      ],
+      "warnings": [
+        "Synthetic administrative workflow only; no real action is created.",
+        "Draft evidence requests are prototype review prompts only.",
+        "Base complexity is external because the scenario declares external review or suppression.",
+        "grouped_entity_review adds 0.10 placeholder workflow complexity.",
+        "behavioural_response_review adds 0.08 placeholder workflow complexity.",
+        "privacy_secrecy_review adds 0.08 placeholder workflow complexity.",
+        "Linked behavioural response scenarios add 0.10 placeholder workflow complexity.",
+        "At least one linked behavioural response requires external review."
+      ],
+      "workflow_decision_band": "external_review_required",
+      "workflow_decision_score": 1.0,
+      "workflow_stages": [
+        "intake_placeholder",
+        "synthetic_case_triage",
+        "evidence_request_draft",
+        "evidence_packet_review",
+        "behavioural_response_review",
+        "grouped_entity_review",
+        "privacy_secrecy_review",
+        "locked_for_external_review",
+        "closed_prototype_only"
+      ],
+      "workflow_status": "locked_for_external_review"
+    },
+    {
+      "calibration_blockers": [
+        "grouped_entity_thin_australian_employer_review: legal_policy_queue requires external review"
+      ],
+      "do_not_enforce": true,
+      "do_not_estimate_tax_payable": true,
+      "do_not_issue_notice": true,
+      "do_not_score_compliance": true,
+      "escalation_pathways": [
+        {
+          "escalation_id": "legal_policy_queue_escalation",
+          "external_review_required": true,
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "legal_policy_queue",
+          "reason": "legal_policy_queue requires external methods, legal, calibration, or policy review before any real use."
+        }
+      ],
+      "evidence_request_bundle": {
+        "bundle_id": "grouped_entity_thin_australian_employer_review_evidence_bundle",
+        "non_claims": [
+          "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+          "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+          "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+        ],
+        "requirement_count": 31,
+        "requirement_ids": [
+          "avoid_cloud_relabelling",
+          "avoid_entity_splitting",
+          "avoid_fake_qlc",
+          "avoid_offshore_ai",
+          "avoid_related_party_fees",
+          "avoid_robotics_leasing",
+          "avoid_sector_classification",
+          "avoid_token_oversight",
+          "core_aava_revenue_costs",
+          "core_aii_components",
+          "core_australian_nexus",
+          "core_job_security",
+          "core_output_unit",
+          "core_output_value",
+          "core_skill_development",
+          "core_wage_quality",
+          "core_worker_hours",
+          "group_common_control",
+          "group_customer_facing",
+          "group_employer",
+          "group_ip_owner",
+          "group_offshore_provider",
+          "group_service_provider",
+          "tp_cloud_inference",
+          "tp_cost_sharing",
+          "tp_data_model_access",
+          "tp_management_technical",
+          "tp_related_party_agreements",
+          "tp_robotics_leasing",
+          "tp_royalty_licence",
+          "tp_service_fee_invoices"
+        ],
+        "review_domains": [
+          "behavioural_response_review",
+          "core_formula",
+          "grouped_entity_review",
+          "legal_policy_review",
+          "offshore_attribution_review",
+          "privacy_secrecy_review",
+          "transfer_pricing_review"
+        ],
+        "scenario_id": "grouped_entity_thin_australian_employer_review",
+        "warnings": [
+          "Evidence bundle is a draft prototype request only and does not use statutory powers.",
+          "Real evidence must not be committed to this repository."
+        ]
+      },
+      "external_review_required": true,
+      "firm_level_liability_logic_modified": false,
+      "linked_behavioural_response_ids": [
+        "offshore_automation_service_routing",
+        "related_party_ai_service_fee_routing"
+      ],
+      "main_reason": "Locked for external review because the scenario explicitly requires external review.",
+      "non_claims": [
+        "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+        "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+        "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+      ],
+      "privacy_secrecy_sensitivity": "high",
+      "queue_assignments": [
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "behavioural_response_queue",
+          "reason": "Queued because review domain(s) behavioural_response_review are present.",
+          "review_domain": "behavioural_response_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "evidence_queue",
+          "reason": "Queued because review domain(s) behavioural_response_review, core_formula, privacy_secrecy_review are present.",
+          "review_domain": "behavioural_response_review, core_formula, privacy_secrecy_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "grouped_entity_queue",
+          "reason": "Queued because review domain(s) grouped_entity_review are present.",
+          "review_domain": "grouped_entity_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "intake_queue",
+          "reason": "Queued because review domain(s) core_formula are present.",
+          "review_domain": "core_formula"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "legal_policy_queue",
+          "reason": "Queued because review domain(s) grouped_entity_review, legal_policy_review, offshore_attribution_review, transfer_pricing_review are present.",
+          "review_domain": "grouped_entity_review, legal_policy_review, offshore_attribution_review, transfer_pricing_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "offshore_attribution_queue",
+          "reason": "Queued because review domain(s) offshore_attribution_review are present.",
+          "review_domain": "offshore_attribution_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "privacy_review_queue",
+          "reason": "Queued because review domain(s) privacy_secrecy_review are present.",
+          "review_domain": "privacy_secrecy_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "prototype_closure_queue",
+          "reason": "Queued because review domain(s) closed_prototype_only are present.",
+          "review_domain": "closed_prototype_only"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "transfer_pricing_queue",
+          "reason": "Queued because review domain(s) offshore_attribution_review, transfer_pricing_review are present.",
+          "review_domain": "offshore_attribution_review, transfer_pricing_review"
+        }
+      ],
+      "real_ato_power_claimed": false,
+      "real_data_used": false,
+      "real_enforcement_created": false,
+      "requested_review_domains": [
+        "behavioural_response_review",
+        "core_formula",
+        "grouped_entity_review",
+        "legal_policy_review",
+        "offshore_attribution_review",
+        "privacy_secrecy_review",
+        "transfer_pricing_review"
+      ],
+      "scenario_id": "grouped_entity_thin_australian_employer_review",
+      "scenario_name": "Grouped-entity thin Australian employer review",
+      "sector_schedule_id": "logistics_warehousing",
+      "suppress_until_calibrated": false,
+      "synthetic_evidence_packet_ids": [
+        "ai_logistics_platform_mock_packet"
+      ],
+      "trigger_flags": [
+        "ENTITY_SPLITTING",
+        "OFFSHORE_AUTOMATION_SERVICE",
+        "RELATED_PARTY_AI_SERVICE_FEES"
+      ],
+      "warnings": [
+        "Synthetic administrative workflow only; no real action is created.",
+        "Draft evidence requests are prototype review prompts only.",
+        "Base complexity is external because the scenario declares external review or suppression.",
+        "transfer_pricing_review adds 0.10 placeholder workflow complexity.",
+        "grouped_entity_review adds 0.10 placeholder workflow complexity.",
+        "offshore_attribution_review adds 0.10 placeholder workflow complexity.",
+        "legal_policy_review adds 0.10 placeholder workflow complexity.",
+        "behavioural_response_review adds 0.08 placeholder workflow complexity.",
+        "privacy_secrecy_review adds 0.08 placeholder workflow complexity.",
+        "Linked behavioural response scenarios add 0.10 placeholder workflow complexity.",
+        "At least one linked behavioural response requires external review."
+      ],
+      "workflow_decision_band": "external_review_required",
+      "workflow_decision_score": 1.0,
+      "workflow_stages": [
+        "intake_placeholder",
+        "synthetic_case_triage",
+        "evidence_request_draft",
+        "evidence_packet_review",
+        "behavioural_response_review",
+        "grouped_entity_review",
+        "transfer_pricing_review",
+        "offshore_attribution_review",
+        "privacy_secrecy_review",
+        "legal_policy_review",
+        "locked_for_external_review",
+        "closed_prototype_only"
+      ],
+      "workflow_status": "locked_for_external_review"
+    },
+    {
+      "calibration_blockers": [
+        "mixed_unit_schedule_classification_review: ato_methods_queue requires external review",
+        "mixed_unit_schedule_classification_review: external_calibration_queue requires external review",
+        "mixed_unit_schedule_classification_review: treasury_methods_queue requires external review"
+      ],
+      "do_not_enforce": true,
+      "do_not_estimate_tax_payable": true,
+      "do_not_issue_notice": true,
+      "do_not_score_compliance": true,
+      "escalation_pathways": [
+        {
+          "escalation_id": "ato_methods_queue_escalation",
+          "external_review_required": true,
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "ato_methods_queue",
+          "reason": "ato_methods_queue requires external methods, legal, calibration, or policy review before any real use."
+        },
+        {
+          "escalation_id": "external_calibration_queue_escalation",
+          "external_review_required": true,
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "external_calibration_queue",
+          "reason": "external_calibration_queue requires external methods, legal, calibration, or policy review before any real use."
+        },
+        {
+          "escalation_id": "treasury_methods_queue_escalation",
+          "external_review_required": true,
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "treasury_methods_queue",
+          "reason": "treasury_methods_queue requires external methods, legal, calibration, or policy review before any real use."
+        }
+      ],
+      "evidence_request_bundle": {
+        "bundle_id": "mixed_unit_schedule_classification_review_evidence_bundle",
+        "non_claims": [
+          "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+          "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+          "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+        ],
+        "requirement_count": 20,
+        "requirement_ids": [
+          "avoid_cloud_relabelling",
+          "avoid_entity_splitting",
+          "avoid_fake_qlc",
+          "avoid_offshore_ai",
+          "avoid_related_party_fees",
+          "avoid_robotics_leasing",
+          "avoid_sector_classification",
+          "avoid_token_oversight",
+          "core_aava_revenue_costs",
+          "core_aii_components",
+          "core_frv",
+          "core_opfte_libc",
+          "core_output_unit",
+          "core_output_value",
+          "core_rates",
+          "core_worker_hours",
+          "mixed_activity_shares",
+          "mixed_conversion_metadata",
+          "mixed_schedule_classification",
+          "mixed_unit_evidence"
+        ],
+        "review_domains": [
+          "behavioural_response_review",
+          "core_formula",
+          "external_calibration_review",
+          "sector_schedule_review"
+        ],
+        "scenario_id": "mixed_unit_schedule_classification_review",
+        "warnings": [
+          "Evidence bundle is a draft prototype request only and does not use statutory powers.",
+          "Real evidence must not be committed to this repository."
+        ]
+      },
+      "external_review_required": true,
+      "firm_level_liability_logic_modified": false,
+      "linked_behavioural_response_ids": [
+        "mixed_unit_apportionment_gaming",
+        "schedule_classification_arbitrage"
+      ],
+      "main_reason": "Locked for external review because the scenario explicitly requires external review.",
+      "non_claims": [
+        "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+        "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+        "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+      ],
+      "privacy_secrecy_sensitivity": "moderate",
+      "queue_assignments": [
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "ato_methods_queue",
+          "reason": "Queued because review domain(s) external_calibration_review, sector_schedule_review are present.",
+          "review_domain": "external_calibration_review, sector_schedule_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "behavioural_response_queue",
+          "reason": "Queued because review domain(s) behavioural_response_review are present.",
+          "review_domain": "behavioural_response_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "evidence_queue",
+          "reason": "Queued because review domain(s) behavioural_response_review, core_formula are present.",
+          "review_domain": "behavioural_response_review, core_formula"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "external_calibration_queue",
+          "reason": "Queued because review domain(s) external_calibration_review are present.",
+          "review_domain": "external_calibration_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "intake_queue",
+          "reason": "Queued because review domain(s) core_formula are present.",
+          "review_domain": "core_formula"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "prototype_closure_queue",
+          "reason": "Queued because review domain(s) closed_prototype_only are present.",
+          "review_domain": "closed_prototype_only"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "sector_schedule_queue",
+          "reason": "Queued because review domain(s) sector_schedule_review are present.",
+          "review_domain": "sector_schedule_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "treasury_methods_queue",
+          "reason": "Queued because review domain(s) external_calibration_review, sector_schedule_review are present.",
+          "review_domain": "external_calibration_review, sector_schedule_review"
+        }
+      ],
+      "real_ato_power_claimed": false,
+      "real_data_used": false,
+      "real_enforcement_created": false,
+      "requested_review_domains": [
+        "behavioural_response_review",
+        "core_formula",
+        "external_calibration_review",
+        "sector_schedule_review"
+      ],
+      "scenario_id": "mixed_unit_schedule_classification_review",
+      "scenario_name": "Mixed-unit schedule classification review",
+      "sector_schedule_id": "logistics_warehousing",
+      "suppress_until_calibrated": false,
+      "synthetic_evidence_packet_ids": [
+        "mixed_unit_platform_mock_packet"
+      ],
+      "trigger_flags": [
+        "SECTOR_CLASSIFICATION_ARBITRAGE"
+      ],
+      "warnings": [
+        "Synthetic administrative workflow only; no real action is created.",
+        "Draft evidence requests are prototype review prompts only.",
+        "Base complexity is external because the scenario declares external review or suppression.",
+        "sector_schedule_review adds 0.08 placeholder workflow complexity.",
+        "behavioural_response_review adds 0.08 placeholder workflow complexity.",
+        "Linked behavioural response scenarios add 0.10 placeholder workflow complexity.",
+        "At least one linked behavioural response requires external review."
+      ],
+      "workflow_decision_band": "external_review_required",
+      "workflow_decision_score": 1.0,
+      "workflow_stages": [
+        "intake_placeholder",
+        "synthetic_case_triage",
+        "evidence_request_draft",
+        "evidence_packet_review",
+        "sector_schedule_review",
+        "behavioural_response_review",
+        "external_calibration_review",
+        "locked_for_external_review",
+        "closed_prototype_only"
+      ],
+      "workflow_status": "locked_for_external_review"
+    },
+    {
+      "calibration_blockers": [
+        "offshore_automation_service_attribution_review: legal_policy_queue requires external review"
+      ],
+      "do_not_enforce": true,
+      "do_not_estimate_tax_payable": true,
+      "do_not_issue_notice": true,
+      "do_not_score_compliance": true,
+      "escalation_pathways": [
+        {
+          "escalation_id": "legal_policy_queue_escalation",
+          "external_review_required": true,
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "legal_policy_queue",
+          "reason": "legal_policy_queue requires external methods, legal, calibration, or policy review before any real use."
+        }
+      ],
+      "evidence_request_bundle": {
+        "bundle_id": "offshore_automation_service_attribution_review_evidence_bundle",
+        "non_claims": [
+          "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+          "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+          "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+        ],
+        "requirement_count": 27,
+        "requirement_ids": [
+          "avoid_cloud_relabelling",
+          "avoid_entity_splitting",
+          "avoid_fake_qlc",
+          "avoid_offshore_ai",
+          "avoid_related_party_fees",
+          "avoid_robotics_leasing",
+          "avoid_sector_classification",
+          "avoid_token_oversight",
+          "core_aava_revenue_costs",
+          "core_aii_components",
+          "core_output_unit",
+          "core_output_value",
+          "core_worker_hours",
+          "group_common_control",
+          "group_customer_facing",
+          "group_employer",
+          "group_ip_owner",
+          "group_offshore_provider",
+          "group_service_provider",
+          "tp_cloud_inference",
+          "tp_cost_sharing",
+          "tp_data_model_access",
+          "tp_management_technical",
+          "tp_related_party_agreements",
+          "tp_robotics_leasing",
+          "tp_royalty_licence",
+          "tp_service_fee_invoices"
+        ],
+        "review_domains": [
+          "behavioural_response_review",
+          "core_formula",
+          "grouped_entity_review",
+          "legal_policy_review",
+          "offshore_attribution_review",
+          "transfer_pricing_review"
+        ],
+        "scenario_id": "offshore_automation_service_attribution_review",
+        "warnings": [
+          "Evidence bundle is a draft prototype request only and does not use statutory powers.",
+          "Real evidence must not be committed to this repository."
+        ]
+      },
+      "external_review_required": true,
+      "firm_level_liability_logic_modified": false,
+      "linked_behavioural_response_ids": [
+        "offshore_automation_service_routing"
+      ],
+      "main_reason": "Locked for external review because the scenario explicitly requires external review.",
+      "non_claims": [
+        "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+        "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+        "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+      ],
+      "privacy_secrecy_sensitivity": "high",
+      "queue_assignments": [
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "behavioural_response_queue",
+          "reason": "Queued because review domain(s) behavioural_response_review are present.",
+          "review_domain": "behavioural_response_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "evidence_queue",
+          "reason": "Queued because review domain(s) behavioural_response_review, core_formula are present.",
+          "review_domain": "behavioural_response_review, core_formula"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "grouped_entity_queue",
+          "reason": "Queued because review domain(s) grouped_entity_review are present.",
+          "review_domain": "grouped_entity_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "intake_queue",
+          "reason": "Queued because review domain(s) core_formula are present.",
+          "review_domain": "core_formula"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "legal_policy_queue",
+          "reason": "Queued because review domain(s) grouped_entity_review, legal_policy_review, offshore_attribution_review, transfer_pricing_review are present.",
+          "review_domain": "grouped_entity_review, legal_policy_review, offshore_attribution_review, transfer_pricing_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "offshore_attribution_queue",
+          "reason": "Queued because review domain(s) offshore_attribution_review are present.",
+          "review_domain": "offshore_attribution_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "prototype_closure_queue",
+          "reason": "Queued because review domain(s) closed_prototype_only are present.",
+          "review_domain": "closed_prototype_only"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "transfer_pricing_queue",
+          "reason": "Queued because review domain(s) offshore_attribution_review, transfer_pricing_review are present.",
+          "review_domain": "offshore_attribution_review, transfer_pricing_review"
+        }
+      ],
+      "real_ato_power_claimed": false,
+      "real_data_used": false,
+      "real_enforcement_created": false,
+      "requested_review_domains": [
+        "behavioural_response_review",
+        "core_formula",
+        "grouped_entity_review",
+        "legal_policy_review",
+        "offshore_attribution_review",
+        "transfer_pricing_review"
+      ],
+      "scenario_id": "offshore_automation_service_attribution_review",
+      "scenario_name": "Offshore automation service attribution review",
+      "sector_schedule_id": "logistics_warehousing",
+      "suppress_until_calibrated": false,
+      "synthetic_evidence_packet_ids": [
+        "ai_logistics_platform_mock_packet"
+      ],
+      "trigger_flags": [
+        "OFFSHORE_AUTOMATION_SERVICE",
+        "RELATED_PARTY_AI_SERVICE_FEES"
+      ],
+      "warnings": [
+        "Synthetic administrative workflow only; no real action is created.",
+        "Draft evidence requests are prototype review prompts only.",
+        "Base complexity is external because the scenario declares external review or suppression.",
+        "transfer_pricing_review adds 0.10 placeholder workflow complexity.",
+        "grouped_entity_review adds 0.10 placeholder workflow complexity.",
+        "offshore_attribution_review adds 0.10 placeholder workflow complexity.",
+        "legal_policy_review adds 0.10 placeholder workflow complexity.",
+        "behavioural_response_review adds 0.08 placeholder workflow complexity.",
+        "Linked behavioural response scenarios add 0.05 placeholder workflow complexity.",
+        "At least one linked behavioural response requires external review."
+      ],
+      "workflow_decision_band": "external_review_required",
+      "workflow_decision_score": 1.0,
+      "workflow_stages": [
+        "intake_placeholder",
+        "synthetic_case_triage",
+        "evidence_request_draft",
+        "evidence_packet_review",
+        "behavioural_response_review",
+        "grouped_entity_review",
+        "transfer_pricing_review",
+        "offshore_attribution_review",
+        "legal_policy_review",
+        "locked_for_external_review",
+        "closed_prototype_only"
+      ],
+      "workflow_status": "locked_for_external_review"
+    },
+    {
+      "calibration_blockers": [
+        "open_source_ai_treatment_locked_calibration_review: ato_methods_queue requires external review",
+        "open_source_ai_treatment_locked_calibration_review: external_calibration_queue requires external review",
+        "open_source_ai_treatment_locked_calibration_review: legal_policy_queue requires external review",
+        "open_source_ai_treatment_locked_calibration_review: suppressed until calibration and external methods review",
+        "open_source_ai_treatment_locked_calibration_review: suppression_queue requires external review",
+        "open_source_ai_treatment_locked_calibration_review: treasury_methods_queue requires external review"
+      ],
+      "do_not_enforce": true,
+      "do_not_estimate_tax_payable": true,
+      "do_not_issue_notice": true,
+      "do_not_score_compliance": true,
+      "escalation_pathways": [
+        {
+          "escalation_id": "ato_methods_queue_escalation",
+          "external_review_required": true,
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "ato_methods_queue",
+          "reason": "ato_methods_queue requires external methods, legal, calibration, or policy review before any real use."
+        },
+        {
+          "escalation_id": "external_calibration_queue_escalation",
+          "external_review_required": true,
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "external_calibration_queue",
+          "reason": "external_calibration_queue requires external methods, legal, calibration, or policy review before any real use."
+        },
+        {
+          "escalation_id": "legal_policy_queue_escalation",
+          "external_review_required": true,
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "legal_policy_queue",
+          "reason": "legal_policy_queue requires external methods, legal, calibration, or policy review before any real use."
+        },
+        {
+          "escalation_id": "suppression_queue_escalation",
+          "external_review_required": true,
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "suppression_queue",
+          "reason": "suppression_queue requires external methods, legal, calibration, or policy review before any real use."
+        },
+        {
+          "escalation_id": "treasury_methods_queue_escalation",
+          "external_review_required": true,
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "treasury_methods_queue",
+          "reason": "treasury_methods_queue requires external methods, legal, calibration, or policy review before any real use."
+        }
+      ],
+      "evidence_request_bundle": {
+        "bundle_id": "open_source_ai_treatment_locked_calibration_review_evidence_bundle",
+        "non_claims": [
+          "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+          "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+          "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+        ],
+        "requirement_count": 20,
+        "requirement_ids": [
+          "avoid_cloud_relabelling",
+          "avoid_entity_splitting",
+          "avoid_fake_qlc",
+          "avoid_offshore_ai",
+          "avoid_related_party_fees",
+          "avoid_robotics_leasing",
+          "avoid_sector_classification",
+          "avoid_token_oversight",
+          "core_capital_base",
+          "core_frv",
+          "core_opfte_libc",
+          "core_output_unit",
+          "core_rates",
+          "mixed_activity_shares",
+          "mixed_conversion_metadata",
+          "mixed_schedule_classification",
+          "mixed_unit_evidence",
+          "tp_data_model_access",
+          "tp_robotics_leasing",
+          "tp_royalty_licence"
+        ],
+        "review_domains": [
+          "behavioural_response_review",
+          "capital_base_review",
+          "external_calibration_review",
+          "legal_policy_review",
+          "sector_schedule_review",
+          "treasury_methods_review"
+        ],
+        "scenario_id": "open_source_ai_treatment_locked_calibration_review",
+        "warnings": [
+          "Evidence bundle is a draft prototype request only and does not use statutory powers.",
+          "Real evidence must not be committed to this repository."
+        ]
+      },
+      "external_review_required": true,
+      "firm_level_liability_logic_modified": false,
+      "linked_behavioural_response_ids": [
+        "open_source_ai_treatment_gap"
+      ],
+      "main_reason": "Suppressed until calibrated because the scenario declares unresolved external dependencies.",
+      "non_claims": [
+        "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+        "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+        "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+      ],
+      "privacy_secrecy_sensitivity": "low",
+      "queue_assignments": [
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "ato_methods_queue",
+          "reason": "Queued because review domain(s) external_calibration_review, sector_schedule_review are present.",
+          "review_domain": "external_calibration_review, sector_schedule_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "behavioural_response_queue",
+          "reason": "Queued because review domain(s) behavioural_response_review are present.",
+          "review_domain": "behavioural_response_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "capital_base_review_queue",
+          "reason": "Queued because review domain(s) capital_base_review are present.",
+          "review_domain": "capital_base_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "evidence_queue",
+          "reason": "Queued because review domain(s) behavioural_response_review are present.",
+          "review_domain": "behavioural_response_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "external_calibration_queue",
+          "reason": "Queued because review domain(s) external_calibration_review, suppress_until_calibrated are present.",
+          "review_domain": "external_calibration_review, suppress_until_calibrated"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "legal_policy_queue",
+          "reason": "Queued because review domain(s) capital_base_review, legal_policy_review, suppress_until_calibrated are present.",
+          "review_domain": "capital_base_review, legal_policy_review, suppress_until_calibrated"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "prototype_closure_queue",
+          "reason": "Queued because review domain(s) closed_prototype_only are present.",
+          "review_domain": "closed_prototype_only"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "sector_schedule_queue",
+          "reason": "Queued because review domain(s) sector_schedule_review are present.",
+          "review_domain": "sector_schedule_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "suppression_queue",
+          "reason": "Queued because review domain(s) suppress_until_calibrated are present.",
+          "review_domain": "suppress_until_calibrated"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "treasury_methods_queue",
+          "reason": "Queued because review domain(s) capital_base_review, external_calibration_review, sector_schedule_review, treasury_methods_review are present.",
+          "review_domain": "capital_base_review, external_calibration_review, sector_schedule_review, treasury_methods_review"
+        }
+      ],
+      "real_ato_power_claimed": false,
+      "real_data_used": false,
+      "real_enforcement_created": false,
+      "requested_review_domains": [
+        "behavioural_response_review",
+        "capital_base_review",
+        "external_calibration_review",
+        "legal_policy_review",
+        "sector_schedule_review",
+        "treasury_methods_review"
+      ],
+      "scenario_id": "open_source_ai_treatment_locked_calibration_review",
+      "scenario_name": "Open-source AI treatment locked-for-calibration review",
+      "sector_schedule_id": "software_digital_platforms",
+      "suppress_until_calibrated": true,
+      "synthetic_evidence_packet_ids": [],
+      "trigger_flags": [
+        "OPEN_SOURCE_AI_TREATMENT_GAP"
+      ],
+      "warnings": [
+        "Synthetic administrative workflow only; no real action is created.",
+        "Draft evidence requests are prototype review prompts only.",
+        "Base complexity is external because the scenario declares external review or suppression.",
+        "legal_policy_review adds 0.10 placeholder workflow complexity.",
+        "sector_schedule_review adds 0.08 placeholder workflow complexity.",
+        "behavioural_response_review adds 0.08 placeholder workflow complexity.",
+        "capital_base_review adds 0.08 placeholder workflow complexity.",
+        "Software, intangible, or AASB 138 wording adds placeholder workflow complexity.",
+        "Linked behavioural response scenarios add 0.05 placeholder workflow complexity.",
+        "At least one linked behavioural response requires external review.",
+        "Suppress-until-calibrated flag adds placeholder workflow complexity."
+      ],
+      "workflow_decision_band": "suppress_until_calibrated",
+      "workflow_decision_score": 1.0,
+      "workflow_stages": [
+        "intake_placeholder",
+        "synthetic_case_triage",
+        "evidence_request_draft",
+        "sector_schedule_review",
+        "behavioural_response_review",
+        "capital_base_review",
+        "legal_policy_review",
+        "treasury_methods_review",
+        "external_calibration_review",
+        "locked_for_external_review",
+        "suppress_until_calibrated",
+        "closed_prototype_only"
+      ],
+      "workflow_status": "suppress_until_calibrated"
+    },
+    {
+      "calibration_blockers": [
+        "related_party_ai_service_fee_review: legal_policy_queue requires external review"
+      ],
+      "do_not_enforce": true,
+      "do_not_estimate_tax_payable": true,
+      "do_not_issue_notice": true,
+      "do_not_score_compliance": true,
+      "escalation_pathways": [
+        {
+          "escalation_id": "legal_policy_queue_escalation",
+          "external_review_required": true,
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "legal_policy_queue",
+          "reason": "legal_policy_queue requires external methods, legal, calibration, or policy review before any real use."
+        }
+      ],
+      "evidence_request_bundle": {
+        "bundle_id": "related_party_ai_service_fee_review_evidence_bundle",
+        "non_claims": [
+          "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+          "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+          "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+        ],
+        "requirement_count": 21,
+        "requirement_ids": [
+          "avoid_cloud_relabelling",
+          "avoid_entity_splitting",
+          "avoid_fake_qlc",
+          "avoid_offshore_ai",
+          "avoid_related_party_fees",
+          "avoid_robotics_leasing",
+          "avoid_sector_classification",
+          "avoid_token_oversight",
+          "core_aava_revenue_costs",
+          "core_aii_components",
+          "core_output_unit",
+          "core_output_value",
+          "core_worker_hours",
+          "tp_cloud_inference",
+          "tp_cost_sharing",
+          "tp_data_model_access",
+          "tp_management_technical",
+          "tp_related_party_agreements",
+          "tp_robotics_leasing",
+          "tp_royalty_licence",
+          "tp_service_fee_invoices"
+        ],
+        "review_domains": [
+          "aava_deductibility_review",
+          "behavioural_response_review",
+          "core_formula",
+          "legal_policy_review",
+          "transfer_pricing_review"
+        ],
+        "scenario_id": "related_party_ai_service_fee_review",
+        "warnings": [
+          "Evidence bundle is a draft prototype request only and does not use statutory powers.",
+          "Real evidence must not be committed to this repository."
+        ]
+      },
+      "external_review_required": true,
+      "firm_level_liability_logic_modified": false,
+      "linked_behavioural_response_ids": [
+        "related_party_ai_service_fee_routing"
+      ],
+      "main_reason": "Locked for external review because the scenario explicitly requires external review.",
+      "non_claims": [
+        "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+        "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+        "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+      ],
+      "privacy_secrecy_sensitivity": "high",
+      "queue_assignments": [
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "aava_review_queue",
+          "reason": "Queued because review domain(s) aava_deductibility_review are present.",
+          "review_domain": "aava_deductibility_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "behavioural_response_queue",
+          "reason": "Queued because review domain(s) behavioural_response_review are present.",
+          "review_domain": "behavioural_response_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "evidence_queue",
+          "reason": "Queued because review domain(s) behavioural_response_review, core_formula are present.",
+          "review_domain": "behavioural_response_review, core_formula"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "intake_queue",
+          "reason": "Queued because review domain(s) core_formula are present.",
+          "review_domain": "core_formula"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "legal_policy_queue",
+          "reason": "Queued because review domain(s) aava_deductibility_review, legal_policy_review, transfer_pricing_review are present.",
+          "review_domain": "aava_deductibility_review, legal_policy_review, transfer_pricing_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "prototype_closure_queue",
+          "reason": "Queued because review domain(s) closed_prototype_only are present.",
+          "review_domain": "closed_prototype_only"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "transfer_pricing_queue",
+          "reason": "Queued because review domain(s) aava_deductibility_review, transfer_pricing_review are present.",
+          "review_domain": "aava_deductibility_review, transfer_pricing_review"
+        }
+      ],
+      "real_ato_power_claimed": false,
+      "real_data_used": false,
+      "real_enforcement_created": false,
+      "requested_review_domains": [
+        "aava_deductibility_review",
+        "behavioural_response_review",
+        "core_formula",
+        "legal_policy_review",
+        "transfer_pricing_review"
+      ],
+      "scenario_id": "related_party_ai_service_fee_review",
+      "scenario_name": "Related-party AI service fee review",
+      "sector_schedule_id": "accounting_administration",
+      "suppress_until_calibrated": false,
+      "synthetic_evidence_packet_ids": [
+        "ai_logistics_platform_mock_packet"
+      ],
+      "trigger_flags": [
+        "ARTIFICIAL_LOW_PROFIT_OR_AAVA",
+        "RELATED_PARTY_AI_SERVICE_FEES"
+      ],
+      "warnings": [
+        "Synthetic administrative workflow only; no real action is created.",
+        "Draft evidence requests are prototype review prompts only.",
+        "Base complexity is external because the scenario declares external review or suppression.",
+        "transfer_pricing_review adds 0.10 placeholder workflow complexity.",
+        "legal_policy_review adds 0.10 placeholder workflow complexity.",
+        "behavioural_response_review adds 0.08 placeholder workflow complexity.",
+        "Linked behavioural response scenarios add 0.05 placeholder workflow complexity.",
+        "At least one linked behavioural response requires external review."
+      ],
+      "workflow_decision_band": "external_review_required",
+      "workflow_decision_score": 1.0,
+      "workflow_stages": [
+        "intake_placeholder",
+        "synthetic_case_triage",
+        "evidence_request_draft",
+        "evidence_packet_review",
+        "behavioural_response_review",
+        "transfer_pricing_review",
+        "aava_deductibility_review",
+        "legal_policy_review",
+        "locked_for_external_review",
+        "closed_prototype_only"
+      ],
+      "workflow_status": "locked_for_external_review"
+    },
+    {
+      "calibration_blockers": [
+        "retail_self_checkout_labour_relabelling_review: ato_methods_queue requires external review",
+        "retail_self_checkout_labour_relabelling_review: legal_policy_queue requires external review",
+        "retail_self_checkout_labour_relabelling_review: treasury_methods_queue requires external review"
+      ],
+      "do_not_enforce": true,
+      "do_not_estimate_tax_payable": true,
+      "do_not_issue_notice": true,
+      "do_not_score_compliance": true,
+      "escalation_pathways": [
+        {
+          "escalation_id": "ato_methods_queue_escalation",
+          "external_review_required": true,
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "ato_methods_queue",
+          "reason": "ato_methods_queue requires external methods, legal, calibration, or policy review before any real use."
+        },
+        {
+          "escalation_id": "legal_policy_queue_escalation",
+          "external_review_required": true,
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "legal_policy_queue",
+          "reason": "legal_policy_queue requires external methods, legal, calibration, or policy review before any real use."
+        },
+        {
+          "escalation_id": "treasury_methods_queue_escalation",
+          "external_review_required": true,
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "treasury_methods_queue",
+          "reason": "treasury_methods_queue requires external methods, legal, calibration, or policy review before any real use."
+        }
+      ],
+      "evidence_request_bundle": {
+        "bundle_id": "retail_self_checkout_labour_relabelling_review_evidence_bundle",
+        "non_claims": [
+          "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+          "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+          "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+        ],
+        "requirement_count": 20,
+        "requirement_ids": [
+          "avoid_cloud_relabelling",
+          "avoid_entity_splitting",
+          "avoid_fake_qlc",
+          "avoid_offshore_ai",
+          "avoid_related_party_fees",
+          "avoid_robotics_leasing",
+          "avoid_sector_classification",
+          "avoid_token_oversight",
+          "core_aava_revenue_costs",
+          "core_aii_components",
+          "core_australian_nexus",
+          "core_job_security",
+          "core_output_unit",
+          "core_output_value",
+          "core_skill_development",
+          "core_wage_quality",
+          "core_worker_hours",
+          "mixed_activity_shares",
+          "mixed_schedule_classification",
+          "mixed_unit_evidence"
+        ],
+        "review_domains": [
+          "behavioural_response_review",
+          "core_formula",
+          "legal_policy_review",
+          "privacy_secrecy_review",
+          "sector_schedule_review"
+        ],
+        "scenario_id": "retail_self_checkout_labour_relabelling_review",
+        "warnings": [
+          "Evidence bundle is a draft prototype request only and does not use statutory powers.",
+          "Real evidence must not be committed to this repository."
+        ]
+      },
+      "external_review_required": true,
+      "firm_level_liability_logic_modified": false,
+      "linked_behavioural_response_ids": [
+        "customer_self_checkout_labour_relabelling"
+      ],
+      "main_reason": "external_review_required from deterministic placeholder workflow scoring; Base complexity is complex because tax-sensitive review domains are present.",
+      "non_claims": [
+        "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+        "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+        "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+      ],
+      "privacy_secrecy_sensitivity": "moderate",
+      "queue_assignments": [
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "ato_methods_queue",
+          "reason": "Queued because review domain(s) sector_schedule_review are present.",
+          "review_domain": "sector_schedule_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "behavioural_response_queue",
+          "reason": "Queued because review domain(s) behavioural_response_review are present.",
+          "review_domain": "behavioural_response_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "evidence_queue",
+          "reason": "Queued because review domain(s) behavioural_response_review, core_formula, privacy_secrecy_review are present.",
+          "review_domain": "behavioural_response_review, core_formula, privacy_secrecy_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "intake_queue",
+          "reason": "Queued because review domain(s) core_formula are present.",
+          "review_domain": "core_formula"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "legal_policy_queue",
+          "reason": "Queued because review domain(s) legal_policy_review are present.",
+          "review_domain": "legal_policy_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "privacy_review_queue",
+          "reason": "Queued because review domain(s) privacy_secrecy_review are present.",
+          "review_domain": "privacy_secrecy_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "prototype_closure_queue",
+          "reason": "Queued because review domain(s) closed_prototype_only are present.",
+          "review_domain": "closed_prototype_only"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "sector_schedule_queue",
+          "reason": "Queued because review domain(s) sector_schedule_review are present.",
+          "review_domain": "sector_schedule_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "treasury_methods_queue",
+          "reason": "Queued because review domain(s) sector_schedule_review are present.",
+          "review_domain": "sector_schedule_review"
+        }
+      ],
+      "real_ato_power_claimed": false,
+      "real_data_used": false,
+      "real_enforcement_created": false,
+      "requested_review_domains": [
+        "behavioural_response_review",
+        "core_formula",
+        "legal_policy_review",
+        "privacy_secrecy_review",
+        "sector_schedule_review"
+      ],
+      "scenario_id": "retail_self_checkout_labour_relabelling_review",
+      "scenario_name": "Retail self-checkout labour relabelling review",
+      "sector_schedule_id": "retail_self_checkout_fulfilment",
+      "suppress_until_calibrated": false,
+      "synthetic_evidence_packet_ids": [
+        "mixed_unit_platform_mock_packet"
+      ],
+      "trigger_flags": [
+        "CUSTOMER_SELF_SERVICE_REVIEW",
+        "SECTOR_CLASSIFICATION_ARBITRAGE"
+      ],
+      "warnings": [
+        "Synthetic administrative workflow only; no real action is created.",
+        "Draft evidence requests are prototype review prompts only.",
+        "Base complexity is complex because tax-sensitive review domains are present.",
+        "legal_policy_review adds 0.10 placeholder workflow complexity.",
+        "sector_schedule_review adds 0.08 placeholder workflow complexity.",
+        "behavioural_response_review adds 0.08 placeholder workflow complexity.",
+        "privacy_secrecy_review adds 0.08 placeholder workflow complexity.",
+        "Linked behavioural response scenarios add 0.05 placeholder workflow complexity.",
+        "At least one linked behavioural response requires external review."
+      ],
+      "workflow_decision_band": "external_review_required",
+      "workflow_decision_score": 1.0,
+      "workflow_stages": [
+        "intake_placeholder",
+        "synthetic_case_triage",
+        "evidence_request_draft",
+        "evidence_packet_review",
+        "sector_schedule_review",
+        "behavioural_response_review",
+        "privacy_secrecy_review",
+        "legal_policy_review",
+        "closed_prototype_only"
+      ],
+      "workflow_status": "external_review_required"
+    },
+    {
+      "calibration_blockers": [
+        "robotics_leasing_capital_base_review: legal_policy_queue requires external review",
+        "robotics_leasing_capital_base_review: treasury_methods_queue requires external review"
+      ],
+      "do_not_enforce": true,
+      "do_not_estimate_tax_payable": true,
+      "do_not_issue_notice": true,
+      "do_not_score_compliance": true,
+      "escalation_pathways": [
+        {
+          "escalation_id": "legal_policy_queue_escalation",
+          "external_review_required": true,
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "legal_policy_queue",
+          "reason": "legal_policy_queue requires external methods, legal, calibration, or policy review before any real use."
+        },
+        {
+          "escalation_id": "treasury_methods_queue_escalation",
+          "external_review_required": true,
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "treasury_methods_queue",
+          "reason": "treasury_methods_queue requires external methods, legal, calibration, or policy review before any real use."
+        }
+      ],
+      "evidence_request_bundle": {
+        "bundle_id": "robotics_leasing_capital_base_review_evidence_bundle",
+        "non_claims": [
+          "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+          "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+          "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+        ],
+        "requirement_count": 22,
+        "requirement_ids": [
+          "avoid_cloud_relabelling",
+          "avoid_entity_splitting",
+          "avoid_fake_qlc",
+          "avoid_offshore_ai",
+          "avoid_related_party_fees",
+          "avoid_robotics_leasing",
+          "avoid_sector_classification",
+          "avoid_token_oversight",
+          "core_aava_revenue_costs",
+          "core_aii_components",
+          "core_capital_base",
+          "core_output_unit",
+          "core_output_value",
+          "core_worker_hours",
+          "tp_cloud_inference",
+          "tp_cost_sharing",
+          "tp_data_model_access",
+          "tp_management_technical",
+          "tp_related_party_agreements",
+          "tp_robotics_leasing",
+          "tp_royalty_licence",
+          "tp_service_fee_invoices"
+        ],
+        "review_domains": [
+          "aava_deductibility_review",
+          "behavioural_response_review",
+          "capital_base_review",
+          "core_formula",
+          "transfer_pricing_review"
+        ],
+        "scenario_id": "robotics_leasing_capital_base_review",
+        "warnings": [
+          "Evidence bundle is a draft prototype request only and does not use statutory powers.",
+          "Real evidence must not be committed to this repository."
+        ]
+      },
+      "external_review_required": true,
+      "firm_level_liability_logic_modified": false,
+      "linked_behavioural_response_ids": [
+        "robotics_lease_substitution"
+      ],
+      "main_reason": "Locked for external review because the scenario explicitly requires external review.",
+      "non_claims": [
+        "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+        "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+        "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+      ],
+      "privacy_secrecy_sensitivity": "moderate",
+      "queue_assignments": [
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "aava_review_queue",
+          "reason": "Queued because review domain(s) aava_deductibility_review are present.",
+          "review_domain": "aava_deductibility_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "behavioural_response_queue",
+          "reason": "Queued because review domain(s) behavioural_response_review are present.",
+          "review_domain": "behavioural_response_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "capital_base_review_queue",
+          "reason": "Queued because review domain(s) capital_base_review are present.",
+          "review_domain": "capital_base_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "evidence_queue",
+          "reason": "Queued because review domain(s) behavioural_response_review, core_formula are present.",
+          "review_domain": "behavioural_response_review, core_formula"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "intake_queue",
+          "reason": "Queued because review domain(s) core_formula are present.",
+          "review_domain": "core_formula"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "legal_policy_queue",
+          "reason": "Queued because review domain(s) aava_deductibility_review, capital_base_review, transfer_pricing_review are present.",
+          "review_domain": "aava_deductibility_review, capital_base_review, transfer_pricing_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "prototype_closure_queue",
+          "reason": "Queued because review domain(s) closed_prototype_only are present.",
+          "review_domain": "closed_prototype_only"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "transfer_pricing_queue",
+          "reason": "Queued because review domain(s) aava_deductibility_review, transfer_pricing_review are present.",
+          "review_domain": "aava_deductibility_review, transfer_pricing_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "treasury_methods_queue",
+          "reason": "Queued because review domain(s) capital_base_review are present.",
+          "review_domain": "capital_base_review"
+        }
+      ],
+      "real_ato_power_claimed": false,
+      "real_data_used": false,
+      "real_enforcement_created": false,
+      "requested_review_domains": [
+        "aava_deductibility_review",
+        "behavioural_response_review",
+        "capital_base_review",
+        "core_formula",
+        "transfer_pricing_review"
+      ],
+      "scenario_id": "robotics_leasing_capital_base_review",
+      "scenario_name": "Robotics leasing capital-base review",
+      "sector_schedule_id": "automotive_repair",
+      "suppress_until_calibrated": false,
+      "synthetic_evidence_packet_ids": [
+        "mechanic_robotic_review_packet"
+      ],
+      "trigger_flags": [
+        "ROBOTICS_LEASING_AVOIDANCE"
+      ],
+      "warnings": [
+        "Synthetic administrative workflow only; no real action is created.",
+        "Draft evidence requests are prototype review prompts only.",
+        "Base complexity is external because the scenario declares external review or suppression.",
+        "transfer_pricing_review adds 0.10 placeholder workflow complexity.",
+        "behavioural_response_review adds 0.08 placeholder workflow complexity.",
+        "capital_base_review adds 0.08 placeholder workflow complexity.",
+        "Linked behavioural response scenarios add 0.05 placeholder workflow complexity.",
+        "At least one linked behavioural response requires external review."
+      ],
+      "workflow_decision_band": "external_review_required",
+      "workflow_decision_score": 1.0,
+      "workflow_stages": [
+        "intake_placeholder",
+        "synthetic_case_triage",
+        "evidence_request_draft",
+        "evidence_packet_review",
+        "behavioural_response_review",
+        "transfer_pricing_review",
+        "aava_deductibility_review",
+        "capital_base_review",
+        "locked_for_external_review",
+        "closed_prototype_only"
+      ],
+      "workflow_status": "locked_for_external_review"
+    },
+    {
+      "calibration_blockers": [
+        "software_platform_ip_royalty_aasb_review: ato_methods_queue requires external review",
+        "software_platform_ip_royalty_aasb_review: legal_policy_queue requires external review",
+        "software_platform_ip_royalty_aasb_review: treasury_methods_queue requires external review"
+      ],
+      "do_not_enforce": true,
+      "do_not_estimate_tax_payable": true,
+      "do_not_issue_notice": true,
+      "do_not_score_compliance": true,
+      "escalation_pathways": [
+        {
+          "escalation_id": "ato_methods_queue_escalation",
+          "external_review_required": true,
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "ato_methods_queue",
+          "reason": "ato_methods_queue requires external methods, legal, calibration, or policy review before any real use."
+        },
+        {
+          "escalation_id": "legal_policy_queue_escalation",
+          "external_review_required": true,
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "legal_policy_queue",
+          "reason": "legal_policy_queue requires external methods, legal, calibration, or policy review before any real use."
+        },
+        {
+          "escalation_id": "treasury_methods_queue_escalation",
+          "external_review_required": true,
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "treasury_methods_queue",
+          "reason": "treasury_methods_queue requires external methods, legal, calibration, or policy review before any real use."
+        }
+      ],
+      "evidence_request_bundle": {
+        "bundle_id": "software_platform_ip_royalty_aasb_review_evidence_bundle",
+        "non_claims": [
+          "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+          "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+          "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+        ],
+        "requirement_count": 26,
+        "requirement_ids": [
+          "avoid_cloud_relabelling",
+          "avoid_entity_splitting",
+          "avoid_fake_qlc",
+          "avoid_offshore_ai",
+          "avoid_related_party_fees",
+          "avoid_robotics_leasing",
+          "avoid_sector_classification",
+          "avoid_token_oversight",
+          "core_aava_revenue_costs",
+          "core_aii_components",
+          "core_capital_base",
+          "core_output_unit",
+          "core_output_value",
+          "core_worker_hours",
+          "group_offshore_provider",
+          "mixed_activity_shares",
+          "mixed_schedule_classification",
+          "mixed_unit_evidence",
+          "tp_cloud_inference",
+          "tp_cost_sharing",
+          "tp_data_model_access",
+          "tp_management_technical",
+          "tp_related_party_agreements",
+          "tp_robotics_leasing",
+          "tp_royalty_licence",
+          "tp_service_fee_invoices"
+        ],
+        "review_domains": [
+          "aava_deductibility_review",
+          "ato_methods_review",
+          "behavioural_response_review",
+          "capital_base_review",
+          "core_formula",
+          "legal_policy_review",
+          "offshore_attribution_review",
+          "sector_schedule_review",
+          "transfer_pricing_review",
+          "treasury_methods_review"
+        ],
+        "scenario_id": "software_platform_ip_royalty_aasb_review",
+        "warnings": [
+          "Evidence bundle is a draft prototype request only and does not use statutory powers.",
+          "Real evidence must not be committed to this repository."
+        ]
+      },
+      "external_review_required": true,
+      "firm_level_liability_logic_modified": false,
+      "linked_behavioural_response_ids": [
+        "cloud_inference_operating_cost_relabelling",
+        "platform_ip_royalty_routing"
+      ],
+      "main_reason": "Locked for external review because the scenario explicitly requires external review.",
+      "non_claims": [
+        "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+        "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+        "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+      ],
+      "privacy_secrecy_sensitivity": "high",
+      "queue_assignments": [
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "aava_review_queue",
+          "reason": "Queued because review domain(s) aava_deductibility_review are present.",
+          "review_domain": "aava_deductibility_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "ato_methods_queue",
+          "reason": "Queued because review domain(s) ato_methods_review, sector_schedule_review are present.",
+          "review_domain": "ato_methods_review, sector_schedule_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "behavioural_response_queue",
+          "reason": "Queued because review domain(s) behavioural_response_review are present.",
+          "review_domain": "behavioural_response_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "capital_base_review_queue",
+          "reason": "Queued because review domain(s) capital_base_review are present.",
+          "review_domain": "capital_base_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "evidence_queue",
+          "reason": "Queued because review domain(s) behavioural_response_review, core_formula are present.",
+          "review_domain": "behavioural_response_review, core_formula"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "intake_queue",
+          "reason": "Queued because review domain(s) core_formula are present.",
+          "review_domain": "core_formula"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "legal_policy_queue",
+          "reason": "Queued because review domain(s) aava_deductibility_review, capital_base_review, legal_policy_review, offshore_attribution_review, transfer_pricing_review are present.",
+          "review_domain": "aava_deductibility_review, capital_base_review, legal_policy_review, offshore_attribution_review, transfer_pricing_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "offshore_attribution_queue",
+          "reason": "Queued because review domain(s) offshore_attribution_review are present.",
+          "review_domain": "offshore_attribution_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "prototype_closure_queue",
+          "reason": "Queued because review domain(s) closed_prototype_only are present.",
+          "review_domain": "closed_prototype_only"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "sector_schedule_queue",
+          "reason": "Queued because review domain(s) sector_schedule_review are present.",
+          "review_domain": "sector_schedule_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "transfer_pricing_queue",
+          "reason": "Queued because review domain(s) aava_deductibility_review, offshore_attribution_review, transfer_pricing_review are present.",
+          "review_domain": "aava_deductibility_review, offshore_attribution_review, transfer_pricing_review"
+        },
+        {
+          "non_claims": [
+            "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+            "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+            "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+          ],
+          "queue_id": "treasury_methods_queue",
+          "reason": "Queued because review domain(s) capital_base_review, sector_schedule_review, treasury_methods_review are present.",
+          "review_domain": "capital_base_review, sector_schedule_review, treasury_methods_review"
+        }
+      ],
+      "real_ato_power_claimed": false,
+      "real_data_used": false,
+      "real_enforcement_created": false,
+      "requested_review_domains": [
+        "aava_deductibility_review",
+        "ato_methods_review",
+        "behavioural_response_review",
+        "capital_base_review",
+        "core_formula",
+        "legal_policy_review",
+        "offshore_attribution_review",
+        "sector_schedule_review",
+        "transfer_pricing_review",
+        "treasury_methods_review"
+      ],
+      "scenario_id": "software_platform_ip_royalty_aasb_review",
+      "scenario_name": "Software platform IP royalty / AASB 138 review",
+      "sector_schedule_id": "software_digital_platforms",
+      "suppress_until_calibrated": false,
+      "synthetic_evidence_packet_ids": [
+        "ai_logistics_platform_mock_packet"
+      ],
+      "trigger_flags": [
+        "ARTIFICIAL_LOW_PROFIT_OR_AAVA",
+        "OFFSHORE_AUTOMATION_SERVICE",
+        "RELATED_PARTY_AI_SERVICE_FEES"
+      ],
+      "warnings": [
+        "Synthetic administrative workflow only; no real action is created.",
+        "Draft evidence requests are prototype review prompts only.",
+        "Base complexity is external because the scenario declares external review or suppression.",
+        "transfer_pricing_review adds 0.10 placeholder workflow complexity.",
+        "offshore_attribution_review adds 0.10 placeholder workflow complexity.",
+        "legal_policy_review adds 0.10 placeholder workflow complexity.",
+        "sector_schedule_review adds 0.08 placeholder workflow complexity.",
+        "behavioural_response_review adds 0.08 placeholder workflow complexity.",
+        "capital_base_review adds 0.08 placeholder workflow complexity.",
+        "Software, intangible, or AASB 138 wording adds placeholder workflow complexity.",
+        "Linked behavioural response scenarios add 0.10 placeholder workflow complexity.",
+        "At least one linked behavioural response requires external review."
+      ],
+      "workflow_decision_band": "external_review_required",
+      "workflow_decision_score": 1.0,
+      "workflow_stages": [
+        "intake_placeholder",
+        "synthetic_case_triage",
+        "evidence_request_draft",
+        "evidence_packet_review",
+        "sector_schedule_review",
+        "behavioural_response_review",
+        "transfer_pricing_review",
+        "aava_deductibility_review",
+        "capital_base_review",
+        "offshore_attribution_review",
+        "legal_policy_review",
+        "ato_methods_review",
+        "treasury_methods_review",
+        "locked_for_external_review",
+        "closed_prototype_only"
+      ],
+      "workflow_status": "locked_for_external_review"
+    }
+  ],
+  "metadata": {
+    "compliance_scoring_created": false,
+    "firm_level_liability_logic_modified": false,
+    "generated_at": "2026-05-17T11:21:31+00:00",
+    "non_claims": [
+      "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+      "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+      "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+    ],
+    "notices_issued": false,
+    "real_ato_power_claimed": false,
+    "real_data_used": false,
+    "real_enforcement_created": false,
+    "status": "prototype_administrative_compliance_workflow_synthetic_only",
+    "version": "CARSF V1.5 prototype"
+  },
+  "summary": {
+    "calibration_blockers": [
+      "artificial_low_aava_cost_loading_review: legal_policy_queue requires external review",
+      "call_centre_token_oversight_triage: legal_policy_queue requires external review",
+      "grouped_entity_thin_australian_employer_review: legal_policy_queue requires external review",
+      "mixed_unit_schedule_classification_review: ato_methods_queue requires external review",
+      "mixed_unit_schedule_classification_review: external_calibration_queue requires external review",
+      "mixed_unit_schedule_classification_review: treasury_methods_queue requires external review",
+      "offshore_automation_service_attribution_review: legal_policy_queue requires external review",
+      "open_source_ai_treatment_locked_calibration_review: ato_methods_queue requires external review",
+      "open_source_ai_treatment_locked_calibration_review: external_calibration_queue requires external review",
+      "open_source_ai_treatment_locked_calibration_review: legal_policy_queue requires external review",
+      "open_source_ai_treatment_locked_calibration_review: suppressed until calibration and external methods review",
+      "open_source_ai_treatment_locked_calibration_review: suppression_queue requires external review",
+      "open_source_ai_treatment_locked_calibration_review: treasury_methods_queue requires external review",
+      "related_party_ai_service_fee_review: legal_policy_queue requires external review",
+      "retail_self_checkout_labour_relabelling_review: ato_methods_queue requires external review",
+      "retail_self_checkout_labour_relabelling_review: legal_policy_queue requires external review",
+      "retail_self_checkout_labour_relabelling_review: treasury_methods_queue requires external review",
+      "robotics_leasing_capital_base_review: legal_policy_queue requires external review",
+      "robotics_leasing_capital_base_review: treasury_methods_queue requires external review",
+      "software_platform_ip_royalty_aasb_review: ato_methods_queue requires external review",
+      "software_platform_ip_royalty_aasb_review: legal_policy_queue requires external review",
+      "software_platform_ip_royalty_aasb_review: treasury_methods_queue requires external review"
+    ],
+    "compliance_scoring_created": false,
+    "firm_level_liability_logic_modified": false,
+    "non_claims": [
+      "This is a prototype administrative workflow only. It is not an official workflow of the ATO. It is not guidance from the ATO, Treasury modelling, legal advice, tax advice, compliance scoring, audit logic, or enforcement. It does not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, estimate actual tax payable, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.",
+      "The workflow only organises synthetic placeholder review pathways for policy discussion.",
+      "All workflow steps require external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, and administrative-design review before any real use."
+    ],
+    "notices_issued": false,
+    "real_ato_power_claimed": false,
+    "real_data_used": false,
+    "real_enforcement_created": false,
+    "scenarios_by_decision_band": {
+      "external_review_required": 9,
+      "suppress_until_calibrated": 1
+    },
+    "scenarios_by_sector_schedule": {
+      "accounting_administration": 2,
+      "automotive_repair": 1,
+      "call_centres_customer_support": 1,
+      "logistics_warehousing": 3,
+      "retail_self_checkout_fulfilment": 1,
+      "software_digital_platforms": 2
+    },
+    "scenarios_by_workflow_status": {
+      "external_review_required": 1,
+      "locked_for_external_review": 8,
+      "suppress_until_calibrated": 1
+    },
+    "scenarios_locked_for_external_review": 8,
+    "scenarios_requiring_aava_review_queue": 4,
+    "scenarios_requiring_ato_methods_queue": 4,
+    "scenarios_requiring_capital_base_review_queue": 3,
+    "scenarios_requiring_evidence_queue": 10,
+    "scenarios_requiring_external_review": 10,
+    "scenarios_requiring_grouped_entity_queue": 3,
+    "scenarios_requiring_legal_policy_queue": 9,
+    "scenarios_requiring_offshore_attribution_queue": 3,
+    "scenarios_requiring_privacy_review_queue": 3,
+    "scenarios_requiring_sector_schedule_queue": 4,
+    "scenarios_requiring_transfer_pricing_queue": 6,
+    "scenarios_requiring_treasury_methods_queue": 5,
+    "scenarios_suppressed_until_calibrated": 1,
+    "total_scenarios": 10,
+    "warnings": [
+      "Summary counts are deterministic prototype workflow counts only.",
+      "Counts are not operational priorities, audit logic, or compliance scoring."
+    ]
+  }
+}

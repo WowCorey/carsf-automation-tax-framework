@@ -7,6 +7,19 @@ not a tax calculator and does not contain calibrated Australian policy settings.
 from .aii import automation_intensity_index
 from .aava import australian_automated_value_added
 from .aggregation import AggregationResult, EntityInput, evaluate_group_aggregation
+from .administrative_workflow import (
+    AdministrativeWorkflowResult,
+    AdministrativeWorkflowScenario,
+    AdministrativeWorkflowSummary,
+    EvidenceRequestBundle,
+    WorkflowEscalation,
+    WorkflowQueueAssignment,
+    evaluate_administrative_workflow,
+    evaluate_administrative_workflows,
+    summarise_administrative_workflows,
+    validate_administrative_workflow_scenario,
+    validate_administrative_workflow_scenarios,
+)
 from .apportionment import ApportionmentActivity, ApportionmentResult, evaluate_apportionment
 from .avoidance import AvoidanceResult, evaluate_avoidance_risk
 from .behavioural_response import (
@@ -196,6 +209,9 @@ __all__ = [
     "AggregationResult",
     "AccessControlPolicy",
     "AdjustmentCandidate",
+    "AdministrativeWorkflowResult",
+    "AdministrativeWorkflowScenario",
+    "AdministrativeWorkflowSummary",
     "ApportionmentActivity",
     "ApportionmentResult",
     "AvoidanceResult",
@@ -219,6 +235,7 @@ __all__ = [
     "EvidencePacket",
     "EvidencePacketSummary",
     "EvidenceRequirement",
+    "EvidenceRequestBundle",
     "ExampleResult",
     "ExampleRunnerError",
     "FiscalSensitivityPoint",
@@ -318,6 +335,8 @@ __all__ = [
     "WorkforceTrajectoryInput",
     "WorkforceTrajectoryResult",
     "WorkforceYearResult",
+    "WorkflowEscalation",
+    "WorkflowQueueAssignment",
     "add_decision_entry",
     "assess_evidence",
     "automation_equilibrium_levy",
@@ -335,6 +354,8 @@ __all__ = [
     "create_ingestion_audit_record",
     "create_redaction_plan",
     "assign_subgroups",
+    "evaluate_administrative_workflow",
+    "evaluate_administrative_workflows",
     "evaluate_apportionment",
     "evaluate_avoidance_risk",
     "evaluate_behavioural_response",
@@ -407,12 +428,15 @@ __all__ = [
     "summarise_evidence_packet",
     "summarise_reviewed_scenarios",
     "summarise_behavioural_responses",
+    "summarise_administrative_workflows",
     "summarise_sector_stress",
     "summarise_uncertainty_results",
     "sweep_aava",
     "sweep_liability_cap",
     "sweep_pass_through",
     "validate_no_fake_calibration_values",
+    "validate_administrative_workflow_scenario",
+    "validate_administrative_workflow_scenarios",
     "validate_behavioural_response_scenario",
     "validate_behavioural_response_scenarios",
     "validate_evidence_packet",
