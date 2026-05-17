@@ -65,4 +65,6 @@
 - Canonical output units for call centres, accounting / administration, retail fulfilment, and software / digital platforms may be too broad, too narrow, or unsuitable after external review.
 - Software / digital platform capital-base treatment remains unresolved and could materially affect any future schedule design.
 - Additional schedules do not solve legal multi-schedule attribution, grouping, apportionment, or transfer-pricing issues.
+- Sector stress matrix bands may be mistaken for real sector scores or comparative rankings if do-not-rank and metadata-only warnings are removed.
+- Cross-sector stress observations are not calibrated and may overstate or understate governance difficulty without external sector, legal, Treasury, ATO, ABS, PBO, and methods review.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.

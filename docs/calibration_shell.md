@@ -190,6 +190,24 @@ Required source categories include ABS labour and output data, ATO aggregated ta
 
 No such calibration has occurred in this repository. Expanded sector schedules are prototype placeholders only. They are not calibrated, not legal schedules, not Treasury schedules, not ATO guidance, not ABS/ATO/DSS/PBO analysis, do not contain real industry data, and must not be used to estimate actual tax payable.
 
+## Sector Stress Matrix Calibration and Review
+
+The sector stress matrix requires future calibration and methods review before any stress-band output could be treated as more than a metadata-only display control:
+
+- validated sector automation-exposure measures
+- validated QLC erosion and worker-quality measures
+- AAVA sensitivity and rent-attribution evidence
+- incidence and pass-through evidence
+- investment-deterrence and normal-return review
+- avoidance / gaming evidence and legal attribution review
+- calibration difficulty scoring methods
+- treatment of software, intangibles, platform attribution, and AASB 138 issues
+- real multi-schedule attribution and apportionment review
+
+Required source categories include ABS labour and output data, ATO aggregated tax data, industry automation surveys, platform/transaction benchmark data, Treasury modelling, PBO costing methods, legal review, tax counsel, accounting review, and external methods review.
+
+No such calibration has occurred in this repository. The sector stress matrix is prototype metadata review only, does not use real industry data, does not rank sectors, does not estimate actual tax payable, and does not modify firm-level CARSF liability logic.
+
 ## Non-Claims
 
 The calibration shell is not legal, tax, Treasury, ATO, ABS, Fair Work, OECD, BEPS, audit, forensic, or economic validation. It does not prove any model setting is correct.
