@@ -1,6 +1,6 @@
 # CARSF V1.5 Repository Guardrails
 
-Generated at: `2026-05-13T17:25:31+00:00`
+Generated at: `2026-05-18T05:09:22+00:00`
 
 ## A. Purpose
 
@@ -14,8 +14,8 @@ This report runs prototype repository-level guardrails for likely evidence leaks
 
 ## C. Files Scanned/Skipped
 
-- Files scanned: 259
-- Files skipped: 1124
+- Files scanned: 402
+- Files skipped: 2270
 - Clean: true
 
 ## D. Denied Findings
@@ -30,7 +30,7 @@ This report runs prototype repository-level guardrails for likely evidence leaks
 | --- | --- | --- | --- | --- |
 | BUILD_LOG.md | low | documented_marker_example | N/A | Documentation/test file contains marker examples: SECRET. |
 | CONTRIBUTING.md | low | documented_marker_example | N/A | Documentation/test file contains marker examples: API_KEY. |
-| README.md | low | documented_marker_example | N/A | Documentation/test file contains marker examples: SECRET. |
+| README.md | low | documented_marker_example | N/A | Documentation/test file contains marker examples: REAL_TAXPAYER, SECRET. |
 | data/README.md | low | documented_marker_example | N/A | Documentation/test file contains marker examples: REAL_BUSINESS_RECORD, REAL_TAXPAYER, TAX_FILE_NUMBER. |
 | data/mock_ingestion_requests/allowed_mock_evidence_request.yaml | low | allowlisted_synthetic_marker | N/A | Synthetic mock fixture contains controlled marker terms: SECRET. |
 | data/mock_ingestion_requests/denied_non_synthetic_evidence_request.yaml | low | allowlisted_synthetic_marker | N/A | Synthetic mock fixture contains controlled marker terms: SECRET. |
@@ -69,7 +69,11 @@ This report runs prototype repository-level guardrails for likely evidence leaks
 | model/tests/test_repo_guardrails.py | low | documented_marker_example | N/A | Documentation/test file contains marker examples: SECRET. |
 | model/tests/test_secure_ingestion.py | low | documented_marker_example | N/A | Documentation/test file contains marker examples: API_KEY, SECRET. |
 | model/tests/test_sensitive_scan.py | low | documented_marker_example | N/A | Documentation/test file contains marker examples: BANK_ACCOUNT, MEDICARE_NUMBER, SECRET, TFN. |
+| paper/CARSF_V1_5_WORKING.md | low | documented_marker_example | N/A | Documentation/test file contains marker examples: REAL_TAXPAYER. |
 | paper/aava_deductibility_appendix.md | low | documented_marker_example | N/A | Documentation/test file contains marker examples: INVOICE. |
+| paper/export_notes.md | low | documented_marker_example | N/A | Documentation/test file contains marker examples: REAL_TAXPAYER. |
+| release/v1_5_rc/NON_CLAIM_BOUNDARIES.md | low | documented_marker_example | N/A | Documentation/test file contains marker examples: REAL_TAXPAYER. |
+| schedules/accounting_administration.yaml | low | documented_marker_example | N/A | Documentation/test file contains marker examples: INVOICE. |
 | schedules/automotive_repair.yaml | low | documented_marker_example | N/A | Documentation/test file contains marker examples: INVOICE. |
 | scripts/run_evidence_workflow.py | low | policy_marker_definition | N/A | Guardrail implementation contains policy marker definitions: INVOICE, REAL_TAXPAYER, SECRET. |
 | scripts/run_ingestion_controls.py | low | policy_marker_definition | N/A | Guardrail implementation contains policy marker definitions: INVOICE, SECRET. |

@@ -1,0 +1,34 @@
+{
+  "release_id": "carsf_v1_5_release_candidate_pack",
+  "release_name": "CARSF V1.5 Release Candidate Pack",
+  "release_status": "private_research_prototype_release_candidate_pack",
+  "non_claims": [
+    "This is a private research prototype and release-candidate pack only.",
+    "It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare advice, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway.",
+    "It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability."
+  ],
+  "release_documents": [
+    "RELEASE_NOTES.md",
+    "REVIEWER_BRIEFING.md",
+    "REPORT_MAP.md",
+    "CALIBRATION_BLOCKERS.md",
+    "NON_CLAIM_BOUNDARIES.md",
+    "EXTERNAL_REVIEW_ROUTING.md"
+  ],
+  "generated_reports": [
+    "reports/v1_5_release_candidate_pack.md",
+    "reports/v1_5_release_candidate_pack.json"
+  ],
+  "summary_flags": {
+    "real_data_used": false,
+    "readiness_score_created": false,
+    "operational_readiness_claimed": false,
+    "legal_sufficiency_claimed": false,
+    "legislative_readiness_claimed": false,
+    "economic_validation_claimed": false,
+    "welfare_validation_claimed": false,
+    "statistical_validation_claimed": false,
+    "official_status_claimed": false,
+    "firm_level_liability_logic_modified": false
+  }
+}

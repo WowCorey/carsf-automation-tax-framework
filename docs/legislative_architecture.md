@@ -54,3 +54,7 @@ The runner validates that:
 - regulation-making placeholders create no real powers;
 - anti-avoidance placeholders remain non-operative;
 - summary flags for operative law, powers, notices, penalties, enforcement, real data, and firm-level liability changes remain false.
+
+## Release Candidate Cross-Reference
+
+The V1.5 release-candidate pack references this skeleton as one review layer only. The pack does not make the skeleton legal advice, tax advice, ATO guidance, Treasury modelling, economic validation, welfare advice, statistical validation, compliance scoring, enforcement, operational readiness, legal sufficiency, legislative readiness, a readiness score, or an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.

@@ -208,6 +208,7 @@ def _is_documented_marker_example(path: str, text: str) -> bool:
     normalised = _normalise(path).lower()
     documentation_paths = (
         normalised.startswith("docs/")
+        or normalised.startswith("release/")
         or normalised.startswith("paper/")
         or normalised.startswith("model/tests/")
         or normalised in {
