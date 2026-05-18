@@ -124,6 +124,25 @@ Refinement Acquisition on just terms (s 51(xxxi)) and trade-retaliation risks ex
 >
 > V1.5 scope note: V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It is not only an examples update.
 
+> V1.5 release-candidate packaging note: the repository now contains a broader private research prototype stack than the original V1.5 working copy. The release candidate pack points reviewers to the core formulas, worked examples, expanded sector schedules, sector stress matrix, behavioural response simulation, administrative workflow shell, non-operative legislative architecture skeleton, executive dashboard, evidence workflow, secure ingestion controls, repository guardrails, investment / incidence guardrails, national fiscal trajectory, transition funding, payment interactions, household distributional scenarios, household weighting, uncertainty ranges, reviewed scenario controls, calibration blockers, non-claims, and external review requirements. These layers are prototype, placeholder, synthetic, or non-operative as labelled. They do not create legal advice, tax advice, ATO guidance, Treasury modelling, economic validation, welfare advice, statistical validation, compliance scoring, enforcement, operational readiness, legal sufficiency, legislative readiness, a readiness score, an official review pathway, actual tax-payable determinations, real household modelling, population estimates, or firm-level CARSF liability changes.
+
+### V1.5 release-candidate stack map
+
+The current V1.5 release-candidate package should be read as a review bundle, not as a final policy design. It cross-references the following layers:
+
+- Formula architecture: QLC, OPFTE/HLE, AII, NLTG, AAVA, AEL, ARL, credits, caps, CARS-I, and CoverageRatio remain prototype mechanics requiring calibration and legal/tax review.
+- Sector schedules: automotive repair, logistics / warehousing, call centres / customer support, accounting / administration, retail self-checkout / fulfilment, and software / digital platforms are placeholder schedules only.
+- Sector stress matrix: metadata-only review bands help reviewers inspect fragility and governance load without creating a sector ranking.
+- Behavioural response: synthetic response pathways flag possible review triggers without predicting taxpayer behaviour or behavioural elasticity.
+- Administrative workflow: synthetic review queues, evidence bundles, locked states, and suppressed states organise discussion only and do not create ATO powers, notices, penalties, enforcement, compliance scoring, or operational readiness.
+- Evidence architecture and secure ingestion controls: mock evidence, source categories, privacy/secrecy labels, default-deny ingestion controls, and repository guardrails remain prototype-only and do not permit real taxpayer, firm, restricted, or government data inside the repo.
+- Investment / incidence guardrails: burden, pass-through, normal-return, over-capture, and under-capture checks remain placeholder sensitivity warnings.
+- Fiscal trajectory and transition funding: national fiscal trajectory, transition funding, payment interactions, and support-incidence previews are placeholder public-finance and social-support mechanics, not forecasts, Treasury costing, PBO costing, UBI policy, welfare advice, eligibility law, DSS modelling, or Services Australia modelling.
+- Household distributional scenarios and household weighting: household archetypes, residual gaps, subgroup weights, and shock bands are synthetic only and are not real household modelling, population estimates, or welfare validation.
+- Uncertainty ranges and reviewed scenario controls: deterministic low/base/high ranges and display-control categories protect against false precision, but they are not confidence intervals, forecasts, statistical validation, or approval signals.
+- Legislative architecture skeleton: proposed Parts, Divisions, definitions, schedules, evidence placeholders, safeguards, regulation-making placeholders, commencement/transitional placeholders, and anti-avoidance placeholders are non-operative and reserved for external legal, tax, Treasury, ATO, Parliamentary Counsel, privacy, calibration, administrative-design, and policy review.
+- Executive dashboard and release candidate pack: navigation, report maps, reviewer routing, calibration blocker summaries, non-claim boundaries, and external review routing are reviewer aids only and are not official processes or readiness findings.
+
 
 Australia's medium-term fiscal outlook is heavily dependent on personal income tax. The Parliamentary
 

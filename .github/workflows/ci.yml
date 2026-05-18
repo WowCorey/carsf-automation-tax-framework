@@ -62,6 +62,9 @@ jobs:
       - name: Run executive dashboard
         run: python scripts/run_executive_dashboard.py
 
+      - name: Run V1.5 release candidate pack
+        run: python scripts/run_v1_5_release_candidate_pack.py
+
       - name: Run mock evidence workflow
         run: python scripts/run_evidence_workflow.py
 

@@ -1,5 +1,27 @@
 # Build Log
 
+## V1.5 Working Paper Release Candidate Pack
+
+Branch: `v1.5-working-paper-release-candidate-pack`
+
+Baseline: PR #24 merged into `main`, including the executive dashboard consolidation.
+
+Purpose of this build:
+
+- Update the V1.5 working paper with a release-candidate stack map.
+- Add `release/v1_5_rc/` release notes, reviewer briefing, report map, calibration blockers, non-claim boundaries, external-review routing, and release manifest snapshot.
+- Add a release manifest and runner for `reports/v1_5_release_candidate_pack.md` and `reports/v1_5_release_candidate_pack.json`.
+- Add tests and CI integration for release-pack validation.
+
+Limitations:
+
+- Private research prototype only.
+- Release-candidate pack only.
+- Not legal advice, tax advice, ATO guidance, Treasury modelling, economic validation, welfare advice, statistical validation, compliance scoring, enforcement, operational readiness, legal sufficiency, legislative readiness, a readiness score, official status, or an official review pathway.
+- Does not determine actual tax payable.
+- Uses no taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data.
+- Does not modify firm-level CARSF liability.
+
 ## V1.5 End-to-End Example Runner
 
 Branch: `v1.5-end-to-end-example-runner`

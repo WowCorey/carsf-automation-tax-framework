@@ -83,4 +83,7 @@
 - The executive dashboard may create false comfort if readers treat report availability as readiness, validation, approval, legal sufficiency, operational readiness, or an official review pathway.
 - Suggested review navigation is a convenience only and may become stale if new reports, pages, or blockers are added without updating the dashboard manifest.
 - Dashboard guardrail status is a prototype safety signal only and does not prove complete DLP, cybersecurity, privacy compliance, operational readiness, or absence of sensitive content.
+- The V1.5 release-candidate pack may create false comfort if readers treat packaging, reviewer routing, report availability, or working-paper updates as readiness, validation, approval, legal sufficiency, legislative readiness, operational readiness, official status, welfare validation, statistical validation, or an official review pathway.
+- Release-pack documents and manifests can become stale if generated reports, pages, blockers, or working-paper sections change without updating `data/release/v1_5_release_manifest.yaml` and `release/v1_5_rc/`.
+- Report maps and reviewer routing are navigation aids only and may omit reviewer needs that become visible during hostile external review.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.

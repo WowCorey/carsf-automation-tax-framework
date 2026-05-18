@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-05-13T17:25:31+00:00",
+    "generated_at": "2026-05-18T05:09:22+00:00",
     "non_claims": [
       "These are prototype repository guardrails only. They are not a complete DLP system, secret scanner, cybersecurity control, legal/privacy audit, Treasury control, ATO control, or forensic validation.",
       "These are prototype repository guardrails only.",
@@ -82,8 +82,8 @@
   "result": {
     "clean": true,
     "denied_findings": [],
-    "files_scanned": 259,
-    "files_skipped": 1124,
+    "files_scanned": 402,
+    "files_skipped": 2270,
     "findings": [
       {
         "allowlisted": true,
@@ -113,7 +113,7 @@
         "finding_id": "documented_marker_example:README.md:0",
         "finding_type": "documented_marker_example",
         "line_number": null,
-        "message": "Documentation/test file contains marker examples: SECRET.",
+        "message": "Documentation/test file contains marker examples: REAL_TAXPAYER, SECRET.",
         "path": "README.md",
         "reason": "Allowed as documented scanner examples in docs/tests only.",
         "severity": "low"
@@ -539,11 +539,55 @@
       {
         "allowlisted": true,
         "deny": false,
+        "finding_id": "documented_marker_example:paper/CARSF_V1_5_WORKING.md:0",
+        "finding_type": "documented_marker_example",
+        "line_number": null,
+        "message": "Documentation/test file contains marker examples: REAL_TAXPAYER.",
+        "path": "paper/CARSF_V1_5_WORKING.md",
+        "reason": "Allowed as documented scanner examples in docs/tests only.",
+        "severity": "low"
+      },
+      {
+        "allowlisted": true,
+        "deny": false,
         "finding_id": "documented_marker_example:paper/aava_deductibility_appendix.md:0",
         "finding_type": "documented_marker_example",
         "line_number": null,
         "message": "Documentation/test file contains marker examples: INVOICE.",
         "path": "paper/aava_deductibility_appendix.md",
+        "reason": "Allowed as documented scanner examples in docs/tests only.",
+        "severity": "low"
+      },
+      {
+        "allowlisted": true,
+        "deny": false,
+        "finding_id": "documented_marker_example:paper/export_notes.md:0",
+        "finding_type": "documented_marker_example",
+        "line_number": null,
+        "message": "Documentation/test file contains marker examples: REAL_TAXPAYER.",
+        "path": "paper/export_notes.md",
+        "reason": "Allowed as documented scanner examples in docs/tests only.",
+        "severity": "low"
+      },
+      {
+        "allowlisted": true,
+        "deny": false,
+        "finding_id": "documented_marker_example:release/v1_5_rc/NON_CLAIM_BOUNDARIES.md:0",
+        "finding_type": "documented_marker_example",
+        "line_number": null,
+        "message": "Documentation/test file contains marker examples: REAL_TAXPAYER.",
+        "path": "release/v1_5_rc/NON_CLAIM_BOUNDARIES.md",
+        "reason": "Allowed as documented scanner examples in docs/tests only.",
+        "severity": "low"
+      },
+      {
+        "allowlisted": true,
+        "deny": false,
+        "finding_id": "documented_marker_example:schedules/accounting_administration.yaml:0",
+        "finding_type": "documented_marker_example",
+        "line_number": null,
+        "message": "Documentation/test file contains marker examples: INVOICE.",
+        "path": "schedules/accounting_administration.yaml",
         "reason": "Allowed as documented scanner examples in docs/tests only.",
         "severity": "low"
       },
@@ -647,7 +691,7 @@
         "finding_id": "documented_marker_example:README.md:0",
         "finding_type": "documented_marker_example",
         "line_number": null,
-        "message": "Documentation/test file contains marker examples: SECRET.",
+        "message": "Documentation/test file contains marker examples: REAL_TAXPAYER, SECRET.",
         "path": "README.md",
         "reason": "Allowed as documented scanner examples in docs/tests only.",
         "severity": "low"
@@ -1073,11 +1117,55 @@
       {
         "allowlisted": true,
         "deny": false,
+        "finding_id": "documented_marker_example:paper/CARSF_V1_5_WORKING.md:0",
+        "finding_type": "documented_marker_example",
+        "line_number": null,
+        "message": "Documentation/test file contains marker examples: REAL_TAXPAYER.",
+        "path": "paper/CARSF_V1_5_WORKING.md",
+        "reason": "Allowed as documented scanner examples in docs/tests only.",
+        "severity": "low"
+      },
+      {
+        "allowlisted": true,
+        "deny": false,
         "finding_id": "documented_marker_example:paper/aava_deductibility_appendix.md:0",
         "finding_type": "documented_marker_example",
         "line_number": null,
         "message": "Documentation/test file contains marker examples: INVOICE.",
         "path": "paper/aava_deductibility_appendix.md",
+        "reason": "Allowed as documented scanner examples in docs/tests only.",
+        "severity": "low"
+      },
+      {
+        "allowlisted": true,
+        "deny": false,
+        "finding_id": "documented_marker_example:paper/export_notes.md:0",
+        "finding_type": "documented_marker_example",
+        "line_number": null,
+        "message": "Documentation/test file contains marker examples: REAL_TAXPAYER.",
+        "path": "paper/export_notes.md",
+        "reason": "Allowed as documented scanner examples in docs/tests only.",
+        "severity": "low"
+      },
+      {
+        "allowlisted": true,
+        "deny": false,
+        "finding_id": "documented_marker_example:release/v1_5_rc/NON_CLAIM_BOUNDARIES.md:0",
+        "finding_type": "documented_marker_example",
+        "line_number": null,
+        "message": "Documentation/test file contains marker examples: REAL_TAXPAYER.",
+        "path": "release/v1_5_rc/NON_CLAIM_BOUNDARIES.md",
+        "reason": "Allowed as documented scanner examples in docs/tests only.",
+        "severity": "low"
+      },
+      {
+        "allowlisted": true,
+        "deny": false,
+        "finding_id": "documented_marker_example:schedules/accounting_administration.yaml:0",
+        "finding_type": "documented_marker_example",
+        "line_number": null,
+        "message": "Documentation/test file contains marker examples: INVOICE.",
+        "path": "schedules/accounting_administration.yaml",
         "reason": "Allowed as documented scanner examples in docs/tests only.",
         "severity": "low"
       },

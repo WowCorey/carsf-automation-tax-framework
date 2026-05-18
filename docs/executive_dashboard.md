@@ -62,3 +62,9 @@ The main simulator landing page points reviewers toward the dashboard before the
 The suggested read order is review navigation only. It is not an official process, approval route, implementation pathway, or readiness finding. Each linked layer keeps its own non-claim warnings and blockers.
 
 Future work should update this dashboard whenever a new generated report, Streamlit page, or major documentation layer is added.
+
+## Relationship to Release Candidate Pack
+
+Build 23 adds `release/v1_5_rc/` and `reports/v1_5_release_candidate_pack.*`. The executive dashboard remains the navigation entry point; the release-candidate pack packages the working paper, release notes, reviewer briefing, report map, calibration blockers, non-claim boundaries, and external-review routing for external review.
+
+The release-candidate pack is not legal advice, tax advice, ATO guidance, Treasury modelling, economic validation, welfare advice, statistical validation, compliance scoring, enforcement, operational readiness, legal sufficiency, legislative readiness, a readiness score, or an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.
