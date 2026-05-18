@@ -81,3 +81,9 @@ Key risks: attack overclaiming, stale manifests, missing non-claims, hidden cali
 Inspect next: `release/v1_5_rc/attack_pack/ATTACK_PACK_OVERVIEW.md` and `reports/external_review_attack_pack.md`.
 
 The attack pack gives reviewer-specific challenge questions and failure modes. It does not mean external review has been completed, does not mean approval has been granted, does not mean validation has occurred, and does not modify firm-level CARSF liability.
+
+## Final RC Integrity Seal
+
+Inspect next: `release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.md` and `reports/v1_5_final_rc_integrity_seal.md`.
+
+The integrity seal checks internal artefact presence, manifest alignment, report availability, non-claim boundaries, digest metadata, repo guardrail expectations, CI expectations, and false readiness/legal/validation flags. It is an internal integrity seal only and does not mean approval, validation, external review completion, operational readiness, legal sufficiency, legislative readiness, official status, a readiness score, a maturity score, or firm-level CARSF liability modification.

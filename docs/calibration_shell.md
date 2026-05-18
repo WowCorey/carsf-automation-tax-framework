@@ -294,6 +294,23 @@ The executive dashboard requires maintenance review rather than calibration of n
 
 No such dashboard maintenance should be treated as calibration, validation, approval, legal sufficiency, operational readiness, or an official review pathway. The dashboard consolidates existing prototype reports and blockers only; it does not modify firm-level CARSF liability logic.
 
+## Final RC Integrity Seal Review
+
+The final RC integrity seal requires maintenance review whenever release documents, attack-pack documents, generated reports, manifests, scripts, tests, CI runners, or non-claim boundaries change:
+
+- release document inventory checks;
+- attack-pack document inventory checks;
+- generated report path checks;
+- manifest alignment checks;
+- false readiness/legal/validation flag checks;
+- boundary phrase checks;
+- forbidden affirmative claim scanning;
+- repo guardrail denied-finding checks;
+- CI expectation checks;
+- SHA-256 digest metadata generation for key release artefacts.
+
+No such integrity check is calibration, validation, approval, legal sufficiency, operational readiness, legislative readiness, official status, external review completion, a readiness score, a maturity score, or an official review pathway. The seal only verifies internal artefact presence, manifest alignment, report availability, non-claim boundaries, guardrail status expectations, digest metadata, and false readiness/legal/validation flags. It does not modify firm-level CARSF liability logic.
+
 ## Non-Claims
 
 The calibration shell is not legal, tax, Treasury, ATO, ABS, Fair Work, OECD, BEPS, audit, forensic, or economic validation. It does not prove any model setting is correct.

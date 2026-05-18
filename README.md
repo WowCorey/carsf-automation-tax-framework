@@ -14,7 +14,7 @@ Current status: private research/prototype.
 
 All sector values, schedule values, examples, caps, Fiscal Replacement Value values, AAVA settings, and behavioural assumptions are placeholders unless explicitly labelled as confirmed baseline figures from official sources.
 
-The current Build 24 layer adds a V1.5 external review attack pack. It structures discipline-specific challenge questions, failure modes, required external inputs, boundary checks, report attack matrices, layer attack matrices, and locked-until-review items without implying that review has been completed, approval has been granted, validation has occurred, operational readiness exists, legal sufficiency exists, or firm-level liability has changed.
+The current Build 25 layer adds a V1.5 final RC integrity seal. It verifies release documents, attack-pack documents, generated reports, manifests, scripts, digest metadata, non-claim boundaries, repo guardrail expectations, CI expectations, and false readiness/legal/validation flags without implying approval, validation, external review completion, operational readiness, legal sufficiency, official status, or firm-level liability changes.
 
 ## Repository Structure
 
@@ -22,7 +22,7 @@ The current Build 24 layer adds a V1.5 external review attack pack. It structure
 - `release/v1_5_rc/` - V1.5 release-candidate pack with release notes, reviewer briefing, report map, calibration blockers, non-claim boundaries, external-review routing, and release manifest snapshot.
 - `release/v1_5_rc/attack_pack/` - V1.5 external review attack-pack documents for policy, technical, legal, tax, ATO methods, Treasury methods, privacy/secrecy, statistical, economic, welfare, Parliamentary Counsel, and hostile/red-team review.
 - `audits/` - review notes, responses, and red-team register.
-- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, repository guardrails, investment/incidence guardrails, national fiscal trajectory modelling, transition funding, payment interactions, synthetic distributional scenarios, synthetic household weighting, deterministic uncertainty ranges, reviewed scenario display-control classifications, metadata-only sector stress matrix review, synthetic behavioural response simulation, prototype administrative workflow routing, non-operative legislative architecture mapping, executive dashboard consolidation, release-candidate packaging, and external review attack-pack validation.
+- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, repository guardrails, investment/incidence guardrails, national fiscal trajectory modelling, transition funding, payment interactions, synthetic distributional scenarios, synthetic household weighting, deterministic uncertainty ranges, reviewed scenario display-control classifications, metadata-only sector stress matrix review, synthetic behavioural response simulation, prototype administrative workflow routing, non-operative legislative architecture mapping, executive dashboard consolidation, release-candidate packaging, external review attack-pack validation, and final RC integrity seal validation.
 - `model/tests/` - pytest coverage for formula bounds, caps, examples, and avoidance flags.
 - `data/` - source-category registry and placeholder policy; no datasets are committed.
 - `data/mock_evidence/` - synthetic mock evidence packets for workflow testing only; no real evidence or personal data is committed.
@@ -41,6 +41,7 @@ The current Build 24 layer adds a V1.5 external review attack pack. It structure
 - `docs/executive_dashboard.md` - consolidated dashboard and report-index notes.
 - `docs/v1_5_release_candidate_pack.md` - release-candidate pack notes and boundaries.
 - `docs/external_review_attack_pack.md` - external review attack-pack notes and boundaries.
+- `docs/final_rc_integrity_seal.md` - final RC internal integrity seal notes and boundaries.
 - `simulator/` - Streamlit interface for policy review, tax model inputs, worked examples, red-team tests, and audit log.
 - `docs/` - data requirements, limitations, implementation notes, known risks, and V1.5 plan.
 
@@ -157,6 +158,20 @@ Generated external-review attack-pack reports:
 
 - `reports/external_review_attack_pack.md`
 - `reports/external_review_attack_pack.json`
+
+Run the V1.5 final RC integrity seal:
+
+```powershell
+python scripts/run_v1_5_final_rc_integrity_seal.py
+```
+
+Generated final RC integrity seal reports and release artefacts:
+
+- `reports/v1_5_final_rc_integrity_seal.md`
+- `reports/v1_5_final_rc_integrity_seal.json`
+- `release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.md`
+- `release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.json`
+- `release/v1_5_rc/FINAL_RC_DIGESTS.json`
 
 Run controlled mock evidence workflow reports separately:
 

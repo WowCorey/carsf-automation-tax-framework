@@ -1,0 +1,244 @@
+seal_id: carsf_v1_5_final_rc_integrity_seal
+seal_name: CARSF V1.5 Final RC Integrity Seal
+seal_status: internal_integrity_seal_only
+non_claims:
+  - This is an internal integrity seal only. It is not approval, not validation, not external review completion, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not a maturity score, not official status, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.
+  - The seal only verifies internal artefact presence, manifest alignment, report availability, non-claim boundaries, guardrail status expectations, digest metadata, and false readiness/legal/validation flags.
+  - Seal status is an internal integrity status only and is not approval, validation, legal sufficiency, operational readiness, legislative readiness, official status, or external review completion.
+required_release_documents:
+  - release/v1_5_rc/RELEASE_NOTES.md
+  - release/v1_5_rc/REVIEWER_BRIEFING.md
+  - release/v1_5_rc/REPORT_MAP.md
+  - release/v1_5_rc/CALIBRATION_BLOCKERS.md
+  - release/v1_5_rc/NON_CLAIM_BOUNDARIES.md
+  - release/v1_5_rc/EXTERNAL_REVIEW_ROUTING.md
+  - release/v1_5_rc/RELEASE_MANIFEST.json
+required_attack_pack_documents:
+  - release/v1_5_rc/attack_pack/ATTACK_PACK_OVERVIEW.md
+  - release/v1_5_rc/attack_pack/POLICY_REVIEW_ATTACKS.md
+  - release/v1_5_rc/attack_pack/TECHNICAL_REVIEW_ATTACKS.md
+  - release/v1_5_rc/attack_pack/LEGAL_REVIEW_ATTACKS.md
+  - release/v1_5_rc/attack_pack/TAX_REVIEW_ATTACKS.md
+  - release/v1_5_rc/attack_pack/ATO_METHODS_REVIEW_ATTACKS.md
+  - release/v1_5_rc/attack_pack/TREASURY_METHODS_REVIEW_ATTACKS.md
+  - release/v1_5_rc/attack_pack/PRIVACY_SECRECY_REVIEW_ATTACKS.md
+  - release/v1_5_rc/attack_pack/STATISTICAL_METHODS_REVIEW_ATTACKS.md
+  - release/v1_5_rc/attack_pack/ECONOMIC_METHODS_REVIEW_ATTACKS.md
+  - release/v1_5_rc/attack_pack/WELFARE_POLICY_REVIEW_ATTACKS.md
+  - release/v1_5_rc/attack_pack/PARLIAMENTARY_COUNSEL_REVIEW_ATTACKS.md
+  - release/v1_5_rc/attack_pack/HOSTILE_RED_TEAM_ATTACKS.md
+  - release/v1_5_rc/attack_pack/REPORT_ATTACK_MATRIX.md
+  - release/v1_5_rc/attack_pack/LAYER_ATTACK_MATRIX.md
+  - release/v1_5_rc/attack_pack/BOUNDARY_CHECKS.md
+  - release/v1_5_rc/attack_pack/ATTACK_PACK_MANIFEST.json
+required_generated_reports:
+  - reports/example_results.md
+  - reports/example_results.json
+  - reports/grouped_entity_results.md
+  - reports/grouped_entity_results.json
+  - reports/transfer_pricing_results.md
+  - reports/transfer_pricing_results.json
+  - reports/evidence_requirements.md
+  - reports/evidence_requirements.json
+  - reports/calibration_requirements.md
+  - reports/calibration_requirements.json
+  - reports/sector_schedule_expansion.md
+  - reports/sector_schedule_expansion.json
+  - reports/sector_stress_matrix.md
+  - reports/sector_stress_matrix.json
+  - reports/behavioural_response_simulation.md
+  - reports/behavioural_response_simulation.json
+  - reports/administrative_compliance_workflow.md
+  - reports/administrative_compliance_workflow.json
+  - reports/legislative_architecture.md
+  - reports/legislative_architecture.json
+  - reports/executive_dashboard.md
+  - reports/executive_dashboard.json
+  - reports/v1_5_release_candidate_pack.md
+  - reports/v1_5_release_candidate_pack.json
+  - reports/external_review_attack_pack.md
+  - reports/external_review_attack_pack.json
+  - reports/v1_5_final_rc_integrity_seal.md
+  - reports/v1_5_final_rc_integrity_seal.json
+  - reports/mock_evidence_workflow.md
+  - reports/mock_evidence_workflow.json
+  - reports/secure_ingestion_controls.md
+  - reports/secure_ingestion_controls.json
+  - reports/repo_guardrails.md
+  - reports/repo_guardrails.json
+  - reports/investment_guardrails.md
+  - reports/investment_guardrails.json
+  - reports/fiscal_trajectory.md
+  - reports/fiscal_trajectory.json
+  - reports/transition_funding.md
+  - reports/transition_funding.json
+  - reports/payment_interactions.md
+  - reports/payment_interactions.json
+  - reports/distributional_scenarios.md
+  - reports/distributional_scenarios.json
+  - reports/household_weighting.md
+  - reports/household_weighting.json
+  - reports/uncertainty_ranges.md
+  - reports/uncertainty_ranges.json
+  - reports/reviewed_scenarios.md
+  - reports/reviewed_scenarios.json
+required_manifests:
+  - data/dashboard/executive_dashboard_manifest.yaml
+  - data/release/v1_5_release_manifest.yaml
+  - data/review/v1_5_external_review_attack_pack.yaml
+  - release/v1_5_rc/RELEASE_MANIFEST.json
+  - release/v1_5_rc/attack_pack/ATTACK_PACK_MANIFEST.json
+required_streamlit_pages:
+  - simulator/app.py
+  - simulator/pages/25_Executive_Dashboard.py
+required_docs:
+  - README.md
+  - docs/current_status.md
+  - docs/known_risks.md
+  - docs/calibration_shell.md
+  - docs/v1_5_plan.md
+  - docs/executive_dashboard.md
+  - docs/external_review_attack_pack.md
+  - docs/v1_5_release_candidate_pack.md
+  - docs/final_rc_integrity_seal.md
+required_scripts:
+  - scripts/run_examples.py
+  - scripts/run_sector_schedule_expansion.py
+  - scripts/run_sector_stress_matrix.py
+  - scripts/run_behavioural_response_simulation.py
+  - scripts/run_administrative_compliance_workflow.py
+  - scripts/run_legislative_architecture.py
+  - scripts/run_executive_dashboard.py
+  - scripts/run_v1_5_release_candidate_pack.py
+  - scripts/run_external_review_attack_pack.py
+  - scripts/run_v1_5_final_rc_integrity_seal.py
+  - scripts/run_evidence_workflow.py
+  - scripts/run_ingestion_controls.py
+  - scripts/run_investment_guardrails.py
+  - scripts/run_fiscal_trajectory.py
+  - scripts/run_transition_funding.py
+  - scripts/run_payment_interactions.py
+  - scripts/run_distributional_scenarios.py
+  - scripts/run_household_weighting.py
+  - scripts/run_uncertainty_ranges.py
+  - scripts/run_reviewed_scenarios.py
+  - scripts/run_repo_guardrails.py
+required_tests:
+  - model/tests/test_final_rc_integrity_seal.py
+  - model/tests/test_final_rc_integrity_seal_reports.py
+required_false_flags:
+  review_completed: false
+  approval_claimed: false
+  validation_claimed: false
+  readiness_score_created: false
+  maturity_score_created: false
+  operational_readiness_claimed: false
+  legal_sufficiency_claimed: false
+  legislative_readiness_claimed: false
+  economic_validation_claimed: false
+  welfare_validation_claimed: false
+  statistical_validation_claimed: false
+  official_status_claimed: false
+  official_review_pathway_claimed: false
+  real_data_used: false
+  actual_tax_payable_determined: false
+  compliance_scoring_created: false
+  enforcement_created: false
+  notices_created: false
+  penalties_created: false
+  operative_law_created: false
+  firm_level_liability_logic_modified: false
+required_boundary_phrases:
+  - not legal advice
+  - not tax advice
+  - not ATO guidance
+  - not Treasury modelling
+  - does not modify firm-level CARSF liability
+forbidden_affirmative_claims:
+  - review completed
+  - approved by reviewer
+  - validated by reviewer
+  - externally validated
+  - ready for government
+  - ready for ATO
+  - ready for Treasury
+  - ready for Parliament
+  - ready for implementation
+  - ready for public release
+  - operationally ready
+  - legally sufficient
+  - legislative-ready
+  - bill-ready
+  - parliament-ready
+  - Treasury validated
+  - ATO validated
+  - official review completed
+  - official review pathway
+  - official status
+  - official policy
+  - compliance score
+  - readiness score
+  - maturity score
+  - approved
+  - enforceable
+  - actual tax payable
+  - real policy result
+  - real household estimate
+  - population estimate
+  - official sector ranking
+  - economic validation is complete
+  - welfare validation is complete
+  - statistical validation is complete
+  - operational validation is complete
+  - legal review complete
+  - tax review complete
+  - final approval
+  - final validation
+guardrail_expectations:
+  source_report: reports/repo_guardrails.json
+  denied_findings: 0
+  clean_expected: true
+ci_expectations:
+  workflow_path: .github/workflows/ci.yml
+  required_commands:
+    - python scripts/run_examples.py
+    - python scripts/run_sector_schedule_expansion.py
+    - python scripts/run_sector_stress_matrix.py
+    - python scripts/run_behavioural_response_simulation.py
+    - python scripts/run_administrative_compliance_workflow.py
+    - python scripts/run_legislative_architecture.py
+    - python scripts/run_executive_dashboard.py
+    - python scripts/run_v1_5_release_candidate_pack.py
+    - python scripts/run_external_review_attack_pack.py
+    - python scripts/run_v1_5_final_rc_integrity_seal.py
+    - python scripts/run_evidence_workflow.py
+    - python scripts/run_ingestion_controls.py
+    - python scripts/run_investment_guardrails.py
+    - python scripts/run_fiscal_trajectory.py
+    - python scripts/run_transition_funding.py
+    - python scripts/run_payment_interactions.py
+    - python scripts/run_distributional_scenarios.py
+    - python scripts/run_household_weighting.py
+    - python scripts/run_uncertainty_ranges.py
+    - python scripts/run_reviewed_scenarios.py
+    - python scripts/run_repo_guardrails.py
+digest_targets:
+  - release/v1_5_rc/*.md
+  - release/v1_5_rc/*.json
+  - release/v1_5_rc/attack_pack/*.md
+  - release/v1_5_rc/attack_pack/*.json
+  - reports/v1_5_release_candidate_pack.md
+  - reports/v1_5_release_candidate_pack.json
+  - reports/external_review_attack_pack.md
+  - reports/external_review_attack_pack.json
+  - reports/executive_dashboard.md
+  - reports/executive_dashboard.json
+  - reports/legislative_architecture.md
+  - reports/legislative_architecture.json
+  - reports/administrative_compliance_workflow.md
+  - reports/administrative_compliance_workflow.json
+  - reports/behavioural_response_simulation.md
+  - reports/behavioural_response_simulation.json
+  - reports/sector_stress_matrix.md
+  - reports/sector_stress_matrix.json
+  - paper/CARSF_V1_5_WORKING.md

@@ -1,6 +1,6 @@
 # CARSF V1.5 Executive Dashboard Consolidation
 
-Generated at: `2026-05-18T09:37:03+00:00`
+Generated at: `2026-05-18T11:03:52+00:00`
 
 ## A. Purpose
 
@@ -257,7 +257,7 @@ Use this as a review navigation index. Read order is suggested review navigation
 
 | Source Report | Exists | Clean | Denied Findings | Warning Findings | Interpretation Warning |
 | --- | --- | --- | ---: | ---: | --- |
-| reports/repo_guardrails.json | True | True | 0 | 52 | Guardrail status is a prototype repository-safety signal only, not operational readiness or validation. |
+| reports/repo_guardrails.json | True | True | 0 | 53 | Guardrail status is a prototype repository-safety signal only, not operational readiness or validation. |
 | reports/secure_ingestion_controls.json | True | None | 0 | 0 | Guardrail status is a prototype repository-safety signal only, not operational readiness or validation. |
 | reports/investment_guardrails.json | True | None | 0 | 0 | Guardrail status is a prototype repository-safety signal only, not operational readiness or validation. |
 

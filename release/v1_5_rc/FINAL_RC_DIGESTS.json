@@ -1,0 +1,294 @@
+{
+  "digests": [
+    {
+      "artefact_path": "paper/CARSF_V1_5_WORKING.md",
+      "byte_count": 58590,
+      "exists": true,
+      "sha256": "0acf67ff7c956e4af8bf523fe1da6deeff9a0d7669f5d48d41ea6a472e00e11a",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/CALIBRATION_BLOCKERS.md",
+      "byte_count": 4113,
+      "exists": true,
+      "sha256": "49316bc4b684000660a6890fb43400d011cd8fc77e0a99e3a2831fa25091f36d",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/EXTERNAL_REVIEW_ROUTING.md",
+      "byte_count": 5387,
+      "exists": true,
+      "sha256": "4a2fc93bef4db1c97b1550d18307291f6ca1b415d1a3f5a9e62653212b990b79",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/NON_CLAIM_BOUNDARIES.md",
+      "byte_count": 2443,
+      "exists": true,
+      "sha256": "30913a171ed4c698d832caa34e00a2eca13ece3f84ef19972d97fc7a8474f276",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/RELEASE_MANIFEST.json",
+      "byte_count": 2274,
+      "exists": true,
+      "sha256": "107e42bd10cea25b1740f34f599ee53f271ff47e278b552a28140b1777c1bd30",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/RELEASE_NOTES.md",
+      "byte_count": 4794,
+      "exists": true,
+      "sha256": "150590d66e9dd4750ff4ca2397a158a18def07baa538c4e88126aac149535ec8",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/REPORT_MAP.md",
+      "byte_count": 5573,
+      "exists": true,
+      "sha256": "aacae3b487d812cedd8f1cbf66bf9c89cb435c85a7f97edbfa392587da27cd4e",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/REVIEWER_BRIEFING.md",
+      "byte_count": 6038,
+      "exists": true,
+      "sha256": "27dd709f77fbac1a93731002719c5f1980bf2ed0c047562ab27b51a5e15982f0",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/attack_pack/ATO_METHODS_REVIEW_ATTACKS.md",
+      "byte_count": 1761,
+      "exists": true,
+      "sha256": "8f090d716009827ac6d8d95ce7f1953a59710879439c1b55c276e7b6159e72d9",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/attack_pack/ATTACK_PACK_MANIFEST.json",
+      "byte_count": 1834,
+      "exists": true,
+      "sha256": "abf2b7b635ffcf241c12bb6737b549e56b2980984c086c2ecfc01b0c66814e6c",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/attack_pack/ATTACK_PACK_OVERVIEW.md",
+      "byte_count": 1495,
+      "exists": true,
+      "sha256": "0406d65cdf82f671871cc00f5d1fa928691597976ba9788f98ddbed62a691ff8",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/attack_pack/BOUNDARY_CHECKS.md",
+      "byte_count": 1199,
+      "exists": true,
+      "sha256": "c0089b1c42a759eb372f5e11c57440f2d2f035be54d551d9748fdf5e586d0ca9",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/attack_pack/ECONOMIC_METHODS_REVIEW_ATTACKS.md",
+      "byte_count": 1785,
+      "exists": true,
+      "sha256": "a2b22c668f3ccee9b32cccd887364dccf3dd0b7a4d47d2fbd35f5224d89e556f",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/attack_pack/HOSTILE_RED_TEAM_ATTACKS.md",
+      "byte_count": 1709,
+      "exists": true,
+      "sha256": "905d11d91e8fb5895827a59c479ffedd374d1292a2aa3106d5864fc95c563d88",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/attack_pack/LAYER_ATTACK_MATRIX.md",
+      "byte_count": 986,
+      "exists": true,
+      "sha256": "0e549c086088dc2d9c0ce7b9241fff5c287cb7f1eed47233c364ce4c8ddfbdb4",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/attack_pack/LEGAL_REVIEW_ATTACKS.md",
+      "byte_count": 1861,
+      "exists": true,
+      "sha256": "c35afb3f5be6b9227b316858c37bd245194ecacb60746fc02dc82790d2f67fe8",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/attack_pack/PARLIAMENTARY_COUNSEL_REVIEW_ATTACKS.md",
+      "byte_count": 1805,
+      "exists": true,
+      "sha256": "1db9f9c4f12a12c868059fb578578ca7198d37eb411c53de4cc04ba51f0b9b40",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/attack_pack/POLICY_REVIEW_ATTACKS.md",
+      "byte_count": 1947,
+      "exists": true,
+      "sha256": "6fbf891c47578e44509ba783e5474d6e92c767356b47cb691f6d93ec0ef2e74a",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/attack_pack/PRIVACY_SECRECY_REVIEW_ATTACKS.md",
+      "byte_count": 1837,
+      "exists": true,
+      "sha256": "8ec9158e3f0ee7c6f56675e7f3cc4868d197a7f3c24eb8a8c988fd322552bb81",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/attack_pack/REPORT_ATTACK_MATRIX.md",
+      "byte_count": 1027,
+      "exists": true,
+      "sha256": "86f1500a142984c7506919a041e1fa097fcdd2be7aae828b1ec02aed2edfdb12",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/attack_pack/STATISTICAL_METHODS_REVIEW_ATTACKS.md",
+      "byte_count": 1846,
+      "exists": true,
+      "sha256": "421e702dd6fa685df4e9a5d5b37a8f41b69cb836b658e432b320a1fa257c4088",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/attack_pack/TAX_REVIEW_ATTACKS.md",
+      "byte_count": 1857,
+      "exists": true,
+      "sha256": "3d81ec52e40726c2860fdb0db6395f010c5c07c120d5ce5beb5a7d007240c8a3",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/attack_pack/TECHNICAL_REVIEW_ATTACKS.md",
+      "byte_count": 1771,
+      "exists": true,
+      "sha256": "708d4dd52a0ce067cda3508966247a215981ed4feb1878710bbe1272c377a0e5",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/attack_pack/TREASURY_METHODS_REVIEW_ATTACKS.md",
+      "byte_count": 1806,
+      "exists": true,
+      "sha256": "24337baf64eba8ae2282a70f20b66c927ac9710ff542a0b739274795304bcffa",
+      "status": "present"
+    },
+    {
+      "artefact_path": "release/v1_5_rc/attack_pack/WELFARE_POLICY_REVIEW_ATTACKS.md",
+      "byte_count": 1852,
+      "exists": true,
+      "sha256": "51f353e89efc8ddb533284631b019f0d0095b79953965cd9121e936d4abcce08",
+      "status": "present"
+    },
+    {
+      "artefact_path": "reports/administrative_compliance_workflow.json",
+      "byte_count": 223206,
+      "exists": true,
+      "sha256": "9f515e9ce5cd45c51f34ac768e04e496d0f9f39295b8687440291f3791c0857b",
+      "status": "present"
+    },
+    {
+      "artefact_path": "reports/administrative_compliance_workflow.md",
+      "byte_count": 32885,
+      "exists": true,
+      "sha256": "b0fdde12303b33cf4ea646b0ec3b0e52fcfc671c6e9225d1cbd4388fbc0c6388",
+      "status": "present"
+    },
+    {
+      "artefact_path": "reports/behavioural_response_simulation.json",
+      "byte_count": 95790,
+      "exists": true,
+      "sha256": "4c2cd7a8007a7de33411278c24ce94ee97b9387b57ccd3f4e6a7cf9ba688a49c",
+      "status": "present"
+    },
+    {
+      "artefact_path": "reports/behavioural_response_simulation.md",
+      "byte_count": 18118,
+      "exists": true,
+      "sha256": "6f9622d75ca80e93c70ca944c3ae8ce3c765c52539e5012979262cb671741a4c",
+      "status": "present"
+    },
+    {
+      "artefact_path": "reports/executive_dashboard.json",
+      "byte_count": 110856,
+      "exists": true,
+      "sha256": "942fc0266987b8e6eacd418437e94f4a51b64324e27a48ab5ff9a3405660d8d0",
+      "status": "present"
+    },
+    {
+      "artefact_path": "reports/executive_dashboard.md",
+      "byte_count": 49716,
+      "exists": true,
+      "sha256": "6e9ecd91ea91d36ecfaf292876494872f446ba161f2c56c6df5dc77768fb323e",
+      "status": "present"
+    },
+    {
+      "artefact_path": "reports/external_review_attack_pack.json",
+      "byte_count": 361321,
+      "exists": true,
+      "sha256": "d7ef05bb34e6a95db41610ac3ea6b02a1761bb89502d3f7e54a1ee9de0d31f35",
+      "status": "present"
+    },
+    {
+      "artefact_path": "reports/external_review_attack_pack.md",
+      "byte_count": 166957,
+      "exists": true,
+      "sha256": "c4bd75b741dc64033696d21ec336128c36a51e494547b3a8b9667a8a4e10c2fc",
+      "status": "present"
+    },
+    {
+      "artefact_path": "reports/legislative_architecture.json",
+      "byte_count": 111506,
+      "exists": true,
+      "sha256": "91faafcfd0a73c4fc3783dabcdac881ae32c390d5a7817f493b6836cefa827ae",
+      "status": "present"
+    },
+    {
+      "artefact_path": "reports/legislative_architecture.md",
+      "byte_count": 58342,
+      "exists": true,
+      "sha256": "472c9e6943c6a6a6b7a834c545c41aa40c11796310f5273ca33cd43bce3d5d14",
+      "status": "present"
+    },
+    {
+      "artefact_path": "reports/sector_stress_matrix.json",
+      "byte_count": 41062,
+      "exists": true,
+      "sha256": "85cc65c2a58eb34bc2789f69dbfee9a2bcfebd18e2b138c98fd7341c9f28c2a1",
+      "status": "present"
+    },
+    {
+      "artefact_path": "reports/sector_stress_matrix.md",
+      "byte_count": 15896,
+      "exists": true,
+      "sha256": "38b990d048e5cfbca5a2c7a0a8e9f2e8af32fd2646de4a41ca44063998d5ac86",
+      "status": "present"
+    },
+    {
+      "artefact_path": "reports/v1_5_release_candidate_pack.json",
+      "byte_count": 116493,
+      "exists": true,
+      "sha256": "c567b33fd7d7fd3feca9606af513cf59dd6ce6c228ada62bd2bc16eb8b758ee3",
+      "status": "present"
+    },
+    {
+      "artefact_path": "reports/v1_5_release_candidate_pack.md",
+      "byte_count": 46948,
+      "exists": true,
+      "sha256": "9a812cdc6c01144075a367c1359f8a72d12a37d5ec7f4ab819034fcd85eae396",
+      "status": "present"
+    }
+  ],
+  "metadata": {
+    "generated_at": "not_timestamped_for_idempotent_digest_manifest",
+    "non_claims": [
+      "This is an internal integrity seal only. It is not approval, not validation, not external review completion, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not a maturity score, not official status, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.",
+      "Digests are integrity metadata only.",
+      "They are not signatures.",
+      "They are not legal seals.",
+      "They are not external attestation.",
+      "They are not approval."
+    ],
+    "status": "digest_metadata_only_not_signature_not_approval",
+    "version": "CARSF V1.5 prototype"
+  },
+  "summary": {
+    "digest_targets_total": 39,
+    "digests_written": 39
+  }
+}

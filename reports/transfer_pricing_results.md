@@ -1,6 +1,6 @@
 # CARSF V1.5 Transfer-Pricing and Mixed-Unit Preview Results
 
-Generated at: `2026-05-18T09:37:02+00:00`
+Generated at: `2026-05-18T11:03:51+00:00`
 
 Version: CARSF V1.5 prototype
 

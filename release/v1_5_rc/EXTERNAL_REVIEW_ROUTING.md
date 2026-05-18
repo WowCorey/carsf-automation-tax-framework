@@ -35,3 +35,21 @@ Required challenge:
 Non-claim:
 
 - The attack pack does not mean external review has been completed, does not mean approval has been granted, does not mean validation has occurred, and does not modify firm-level CARSF liability.
+
+## Final RC Integrity Seal Routing Addendum
+
+Inspect:
+
+- `release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.md`
+- `release/v1_5_rc/FINAL_RC_DIGESTS.json`
+- `reports/v1_5_final_rc_integrity_seal.md`
+
+Required challenge:
+
+- Treat the seal as an internal artefact completeness check only.
+- Use the seal to find missing documents, missing reports, manifest drift, false readiness/legal/validation flag failures, boundary phrase failures, guardrail denied findings, and CI expectation gaps.
+- Do not treat `seal_passed` as approval, validation, external review completion, legal sufficiency, operational readiness, official status, or implementation readiness.
+
+Non-claim:
+
+- The final RC integrity seal is not approval, not validation, not external review completion, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not a maturity score, not official status, and not an official review pathway. It does not determine actual tax payable or modify firm-level CARSF liability.

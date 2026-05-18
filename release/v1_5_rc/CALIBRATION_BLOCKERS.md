@@ -26,3 +26,7 @@ This calibration blocker summary is for a private research prototype and release
 ## Consolidated Position
 
 No blocker is resolved by this release pack. The pack makes blockers easier to find; it does not remove calibration, external review, legal, tax, ATO, Treasury, privacy, statistical, economic, welfare, or Parliamentary Counsel dependencies.
+
+## Final RC Integrity Seal Note
+
+The final RC integrity seal checks that blocker documents, reports, manifests, attack-pack documents, non-claim boundaries, CI expectations, and guardrail expectations remain visible. It does not resolve any blocker and is not approval, validation, external review completion, legal sufficiency, operational readiness, legislative readiness, official status, a readiness score, a maturity score, or firm-level liability modification.
