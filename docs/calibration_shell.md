@@ -248,6 +248,21 @@ No such calibration has occurred in this repository. Administrative workflow out
 
 Routine and enhanced workflow scenarios are included for demonstration coverage only. They do not create administrative readiness, approval, sufficiency, clearance, or operational status.
 
+## Legislative Architecture Review and Calibration
+
+The legislative architecture skeleton requires external legal, tax, Treasury, ATO-methods, Parliamentary Counsel, privacy, calibration, administrative-design, and policy review before any operative drafting could be considered:
+
+- operative definitions for CARSF, QLC, OPFTE, HLE, AII, NLTG, AAVA, AEL, ARL, CARS-I, CoverageRatio, sector schedules, evidence bundles, review queues, transition payments, and automation dividends;
+- liability architecture, caps, credits, safeguards, and safe-harbour effect;
+- legal schedule attribution, multi-schedule treatment, and schedule authority design;
+- evidence and information architecture, including whether any statutory information-gathering powers could exist outside this prototype;
+- privacy, secrecy, redaction, retention, audit trail, and external secure storage design;
+- review rights, objection processes, reasons-for-decision, human review, external calibration review, and parliamentary oversight;
+- anti-avoidance, grouping, related-party, transfer-pricing, offshore attribution, and integrity rules;
+- regulation-making, commencement, and transitional architecture.
+
+No such review has occurred in this repository. Legislative architecture outputs are non-operative mapping outputs only; they are not a Bill, not legal drafting, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not Parliamentary Counsel drafting, not legally sufficient, not constitutionally reviewed, and do not create rights, obligations, powers, notices, penalties, enforcement, compliance scoring, tax-payable determinations, or firm-level CARSF liability changes.
+
 ## Non-Claims
 
 The calibration shell is not legal, tax, Treasury, ATO, ABS, Fair Work, OECD, BEPS, audit, forensic, or economic validation. It does not prove any model setting is correct.

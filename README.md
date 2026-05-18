@@ -14,13 +14,13 @@ Current status: private research/prototype.
 
 All sector values, schedule values, examples, caps, Fiscal Replacement Value values, AAVA settings, and behavioural assumptions are placeholders unless explicitly labelled as confirmed baseline figures from official sources.
 
-The current pre-Build 21 hardening pass preserves synthetic subgroup metadata through uncertainty/review outputs, clarifies sector stress automation-intensity components, improves behavioural response pressure-band spread, and adds routine/enhanced administrative workflow demonstration rows. It does not add legislative architecture, operative law, real data, enforcement, compliance scoring, or firm-level liability changes.
+The current Build 21 layer adds a non-operative legislative architecture skeleton. It maps CARSF concepts into proposed Parts, Divisions, definition placeholders, sector schedule placeholders, evidence and safeguard placeholders, regulation-making placeholders, commencement/transitional placeholders, and external-review blockers. It does not draft operative law, create powers, create obligations, create penalties, issue notices, implement enforcement, claim legal sufficiency, or modify firm-level liability.
 
 ## Repository Structure
 
 - `paper/` - Markdown policy paper, V1.5 working draft, formulas, glossary, references, and export notes.
 - `audits/` - review notes, responses, and red-team register.
-- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, repository guardrails, investment/incidence guardrails, national fiscal trajectory modelling, transition funding, payment interactions, synthetic distributional scenarios, synthetic household weighting, deterministic uncertainty ranges, reviewed scenario display-control classifications, metadata-only sector stress matrix review, synthetic behavioural response simulation, and prototype administrative workflow routing.
+- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, repository guardrails, investment/incidence guardrails, national fiscal trajectory modelling, transition funding, payment interactions, synthetic distributional scenarios, synthetic household weighting, deterministic uncertainty ranges, reviewed scenario display-control classifications, metadata-only sector stress matrix review, synthetic behavioural response simulation, prototype administrative workflow routing, and non-operative legislative architecture mapping.
 - `model/tests/` - pytest coverage for formula bounds, caps, examples, and avoidance flags.
 - `data/` - source-category registry and placeholder policy; no datasets are committed.
 - `data/mock_evidence/` - synthetic mock evidence packets for workflow testing only; no real evidence or personal data is committed.
@@ -35,6 +35,7 @@ The current pre-Build 21 hardening pass preserves synthetic subgroup metadata th
 - `examples/household_weighting/` - synthetic household weighting and subgroup aggregation cases with no real household data.
 - `examples/uncertainty_ranges/` - deterministic placeholder uncertainty range cases with no real household data or statistical confidence claims.
 - `docs/pre_legislative_hardening.md` - focused hardening note before the non-operative legislative architecture skeleton build.
+- `docs/legislative_architecture.md` - non-operative legislative architecture skeleton notes and review blockers.
 - `simulator/` - Streamlit interface for policy review, tax model inputs, worked examples, red-team tests, and audit log.
 - `docs/` - data requirements, limitations, implementation notes, known risks, and V1.5 plan.
 
@@ -107,6 +108,17 @@ Generated administrative workflow reports:
 
 - `reports/administrative_compliance_workflow.md`
 - `reports/administrative_compliance_workflow.json`
+
+Run non-operative legislative architecture skeleton:
+
+```powershell
+python scripts/run_legislative_architecture.py
+```
+
+Generated legislative architecture reports:
+
+- `reports/legislative_architecture.md`
+- `reports/legislative_architecture.json`
 
 Run controlled mock evidence workflow reports separately:
 
@@ -245,6 +257,7 @@ Sector schedule expansion reports are prototype placeholder outputs only. They a
 Sector stress matrix reports are prototype metadata review outputs only. They are not calibrated, not sector rankings, not Treasury modelling, not ATO guidance, not ABS/ATO/DSS/PBO analysis, not economic validation, not investment advice, not legal advice, and not tax advice. They do not use real industry data, do not estimate actual tax payable, do not implement legal sector attribution, do not implement real multi-schedule blending, and do not modify firm-level CARSF liability logic.
 Behavioural response reports are synthetic pathway review outputs only. They do not predict taxpayer behaviour, estimate behavioural elasticity, implement ATO audit logic, create compliance-risk scoring, implement enforcement, implement penalties, estimate actual tax payable, or modify firm-level CARSF liability logic.
 Administrative workflow reports are synthetic pathway-organisation outputs only. They are not a workflow endorsed by the ATO, not guidance from the ATO, not audit logic, not enforcement, not compliance scoring, do not create notices or penalties, and do not modify firm-level CARSF liability logic.
+Legislative architecture reports are non-operative architecture maps only. They are not operative law, not a Bill, not legal drafting, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not Parliamentary Counsel drafting, not legally sufficient, and not constitutionally reviewed. They create no rights, obligations, statutory powers, information-gathering powers, notices, penalties, enforcement process, or compliance scoring, do not determine tax payable, and do not modify firm-level CARSF liability logic.
 
 ## Run the Simulator
 
@@ -283,6 +296,7 @@ V1.5 is not just an examples update. It is V1.4 plus two prototype sector schedu
 - compare prototype sector schedules through a metadata-only stress matrix that uses do-not-rank display controls without calibration or real sector-score claims;
 - map synthetic behavioural response and gaming pathways to linked avoidance flags, placeholder pressure bands, countermeasure categories, and review statuses without predicting conduct or changing firm-level liability;
 - organise synthetic cases into administrative workflow queues, evidence request bundles, behavioural-response links, locked/suppressed states, and external-review pathways without creating enforcement, notices, compliance scoring, or liability changes;
+- map CARSF concepts into a non-operative legislative architecture skeleton with Parts, Divisions, definition placeholders, schedule placeholders, evidence/safeguard placeholders, regulation-making placeholders, commencement/transitional placeholders, and external-review blockers without drafting operative law or changing liability;
 - define a calibration shell and data source registry without collecting real data;
 - identify open-source AI and R&D Tax Incentive interaction questions without overclaiming.
 
@@ -307,3 +321,4 @@ Uncertainty range outputs are deterministic placeholders. They are not Monte Car
 Sector stress matrix outputs are metadata-only placeholders. They are not calibrated sector scores, not official schedules, not real industry analysis, and not usable for estimating actual tax payable.
 Behavioural response outputs are deterministic synthetic pathway reviews. They do not predict conduct, estimate behavioural elasticity, implement ATO audit logic, create compliance-risk scoring, implement enforcement, model penalties, or score real taxpayers.
 Administrative workflow outputs are deterministic synthetic pathway-routing reviews. They are not an operational ATO process, not enforcement, not notices, not penalties, not compliance scoring, and not usable for estimating actual tax payable.
+Legislative architecture outputs are non-operative mapping outputs. They are not a Bill, not legal drafting, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not Parliamentary Counsel drafting, not constitutionally reviewed, and not usable to create rights, obligations, powers, notices, penalties, enforcement, compliance scoring, or tax-payable determinations.

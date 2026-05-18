@@ -788,3 +788,27 @@ Limitations:
 - This hardening pass is prototype-only and placeholder-only.
 - It does not add legislative architecture, draft operative law, establish legal sufficiency, create real data, create compliance scoring, create enforcement, create notices, implement penalties, or modify firm-level CARSF liability.
 - All affected outputs remain subject to external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, methods, and administrative-design review before any real use.
+
+## V1.5 Legislative Architecture Skeleton
+
+Branch: `v1.5-legislative-architecture-skeleton`
+
+Baseline: PR #22 merged into `main`, including the pre-Build 21 hardening pass.
+
+Purpose of this build:
+
+- Add a non-operative legislative architecture skeleton.
+- Map CARSF concepts into proposed Parts, Divisions, definition placeholders, sector schedule placeholders, formula/liability placeholders, safe-harbour placeholders, anti-avoidance placeholders, grouped-entity and related-party placeholders, evidence and information placeholders, safeguards, regulation-making placeholders, commencement/transitional placeholders, and external-review blockers.
+- Add legislative architecture data, model validation, reports, tests, CI step, documentation, and Streamlit page.
+
+Reports generated:
+
+- `reports/legislative_architecture.json`
+- `reports/legislative_architecture.md`
+
+Limitations:
+
+- Legislative architecture outputs are non-operative mapping outputs only.
+- They are not operative law, not a Bill, not legal drafting, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not Parliamentary Counsel drafting, not legally sufficient, and not constitutionally reviewed.
+- They create no rights, obligations, statutory powers, information-gathering powers, notices, penalties, enforcement process, or compliance scoring.
+- They do not determine tax payable, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability logic.
