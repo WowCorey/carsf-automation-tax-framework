@@ -1180,27 +1180,6 @@
         "status": "present"
       },
       {
-        "artefact_path": "release/v1_5_rc/FINAL_RC_DIGESTS.json",
-        "byte_count": 11713,
-        "exists": true,
-        "sha256": "e6e43673aff74c7ecf8ddc29dceff3841ed4226eada8e7b3d5346c1916ed9c67",
-        "status": "present"
-      },
-      {
-        "artefact_path": "release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.json",
-        "byte_count": 139691,
-        "exists": true,
-        "sha256": "1035fee068a2984469be2490455ead658f1c5a8bd995fdd7f5992fbe0f32cfb0",
-        "status": "present"
-      },
-      {
-        "artefact_path": "release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.md",
-        "byte_count": 49759,
-        "exists": true,
-        "sha256": "45bab48824368b2f2a3cd86b1c9191f95bc138d1600c9b9ab0a2501805c910c3",
-        "status": "present"
-      },
-      {
         "artefact_path": "release/v1_5_rc/NON_CLAIM_BOUNDARIES.md",
         "byte_count": 2443,
         "exists": true,
@@ -3369,8 +3348,8 @@
       "attack_pack_documents_present": 17,
       "boundary_phrase_failures": 0,
       "compliance_scoring_created": false,
-      "digest_targets_total": 42,
-      "digests_written": 42,
+      "digest_targets_total": 39,
+      "digests_written": 39,
       "economic_validation_claimed": false,
       "enforcement_created": false,
       "false_flag_failures": 0,
@@ -3428,7 +3407,7 @@
     "economic_validation_claimed": false,
     "enforcement_created": false,
     "firm_level_liability_logic_modified": false,
-    "generated_at": "2026-05-18T11:06:22+00:00",
+    "generated_at": "2026-05-18T22:15:21+00:00",
     "legal_sufficiency_claimed": false,
     "legislative_readiness_claimed": false,
     "maturity_score_created": false,
@@ -3459,8 +3438,8 @@
     "attack_pack_documents_present": 17,
     "boundary_phrase_failures": 0,
     "compliance_scoring_created": false,
-    "digest_targets_total": 42,
-    "digests_written": 42,
+    "digest_targets_total": 39,
+    "digests_written": 39,
     "economic_validation_claimed": false,
     "enforcement_created": false,
     "false_flag_failures": 0,

@@ -137,6 +137,31 @@ def test_final_rc_integrity_seal_reports_have_no_forbidden_affirmative_claims(re
     assert find_forbidden_affirmative_seal_claims(combined) == []
 
 
+def test_final_rc_digest_manifest_is_not_self_referential_and_is_idempotent(repo_root) -> None:
+    subprocess.run(
+        [sys.executable, "scripts/run_v1_5_final_rc_integrity_seal.py"],
+        cwd=repo_root,
+        check=True,
+    )
+    digest_path = repo_root / "release" / "v1_5_rc" / "FINAL_RC_DIGESTS.json"
+    first_text = digest_path.read_text(encoding="utf-8")
+    first_payload = json.loads(first_text)
+
+    assert all(
+        item["artefact_path"] != "release/v1_5_rc/FINAL_RC_DIGESTS.json"
+        for item in first_payload["digests"]
+    )
+
+    subprocess.run(
+        [sys.executable, "scripts/run_v1_5_final_rc_integrity_seal.py"],
+        cwd=repo_root,
+        check=True,
+    )
+    second_text = digest_path.read_text(encoding="utf-8")
+
+    assert second_text == first_text
+
+
 def test_final_rc_integrity_seal_ci_order(repo_root) -> None:
     workflow = (repo_root / ".github" / "workflows" / "ci.yml").read_text(encoding="utf-8")
 

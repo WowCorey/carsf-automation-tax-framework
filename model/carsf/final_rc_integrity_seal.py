@@ -115,6 +115,14 @@ FALSE_FLAG_SOURCE_PATHS = [
     "release/v1_5_rc/attack_pack/ATTACK_PACK_MANIFEST.json",
 ]
 
+SELF_GENERATED_DIGEST_EXCLUSIONS = {
+    "release/v1_5_rc/FINAL_RC_DIGESTS.json",
+    "release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.json",
+    "release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.md",
+    "reports/v1_5_final_rc_integrity_seal.json",
+    "reports/v1_5_final_rc_integrity_seal.md",
+}
+
 
 @dataclass(frozen=True)
 class IntegritySealArtefact:
@@ -684,9 +692,10 @@ def _expand_digest_targets(repo_root: Path, patterns: list[str]) -> list[str]:
         if matches:
             for match in matches:
                 path = Path(match)
-                if path.is_file():
-                    paths.add(path.relative_to(repo_root).as_posix())
-        elif (repo_root / pattern).is_file():
+                relative = path.relative_to(repo_root).as_posix()
+                if path.is_file() and relative not in SELF_GENERATED_DIGEST_EXCLUSIONS:
+                    paths.add(relative)
+        elif (repo_root / pattern).is_file() and pattern not in SELF_GENERATED_DIGEST_EXCLUSIONS:
             paths.add(pattern)
     return sorted(paths)
 

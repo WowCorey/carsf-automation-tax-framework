@@ -333,9 +333,11 @@ def build_markdown(result: Any, metadata: dict[str, Any]) -> str:
 
 
 def _digest_payload(result: Any, metadata: dict[str, Any]) -> dict[str, Any]:
+    deterministic_metadata = {key: value for key, value in metadata.items() if key != "generated_at"}
     return {
         "metadata": {
-            **metadata,
+            **deterministic_metadata,
+            "generated_at": "not_timestamped_for_idempotent_digest_manifest",
             "status": "digest_metadata_only_not_signature_not_approval",
             "non_claims": [
                 FINAL_RC_INTEGRITY_SEAL_NON_CLAIMS[0],

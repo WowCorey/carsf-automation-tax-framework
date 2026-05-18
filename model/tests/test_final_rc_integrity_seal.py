@@ -6,6 +6,7 @@ import json
 import yaml
 
 from carsf.final_rc_integrity_seal import (
+    SELF_GENERATED_DIGEST_EXCLUSIONS,
     build_digest_manifest,
     build_final_rc_integrity_seal_result,
     find_forbidden_affirmative_seal_claims,
@@ -115,12 +116,21 @@ def test_forbidden_affirmative_claim_scanner_allows_negative_warnings() -> None:
 
 
 def test_digest_manifest_entries_include_sha256(repo_root) -> None:
-    digests = build_digest_manifest(repo_root, ["release/v1_5_rc/RELEASE_NOTES.md", "reports/executive_dashboard.json"])
+    digests = build_digest_manifest(
+        repo_root,
+        [
+            "release/v1_5_rc/*.json",
+            "release/v1_5_rc/RELEASE_NOTES.md",
+            "reports/executive_dashboard.json",
+        ],
+    )
 
     assert digests
     assert all(item.exists for item in digests)
     assert all(item.sha256 and len(item.sha256) == 64 for item in digests)
     assert all(item.byte_count and item.byte_count > 0 for item in digests)
+    assert "release/v1_5_rc/FINAL_RC_DIGESTS.json" not in {item.artefact_path for item in digests}
+    assert not (SELF_GENERATED_DIGEST_EXCLUSIONS & {item.artefact_path for item in digests})
 
 
 def test_repo_guardrail_denied_findings_read_as_zero(repo_root) -> None:

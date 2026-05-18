@@ -1,6 +1,6 @@
 # CARSF V1.5 Final RC Integrity Seal
 
-Generated at: `2026-05-18T11:06:22+00:00`
+Generated at: `2026-05-18T22:15:21+00:00`
 
 ## A. Purpose
 
@@ -51,8 +51,8 @@ This report records an internal final release-candidate integrity check for the 
 - Total required scripts: 21
 - Scripts present: 21
 - Scripts missing: 0
-- Digest targets total: 42
-- Digests written: 42
+- Digest targets total: 39
+- Digests written: 39
 - Forbidden claim findings: 0
 - Boundary phrase failures: 0
 - False flag failures: 0
@@ -186,9 +186,6 @@ This report records an internal final release-candidate integrity check for the 
 | paper/CARSF_V1_5_WORKING.md | True | 0acf67ff7c956e4af8bf523fe1da6deeff9a0d7669f5d48d41ea6a472e00e11a | 58590 | present |
 | release/v1_5_rc/CALIBRATION_BLOCKERS.md | True | 49316bc4b684000660a6890fb43400d011cd8fc77e0a99e3a2831fa25091f36d | 4113 | present |
 | release/v1_5_rc/EXTERNAL_REVIEW_ROUTING.md | True | 4a2fc93bef4db1c97b1550d18307291f6ca1b415d1a3f5a9e62653212b990b79 | 5387 | present |
-| release/v1_5_rc/FINAL_RC_DIGESTS.json | True | e6e43673aff74c7ecf8ddc29dceff3841ed4226eada8e7b3d5346c1916ed9c67 | 11713 | present |
-| release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.json | True | 1035fee068a2984469be2490455ead658f1c5a8bd995fdd7f5992fbe0f32cfb0 | 139691 | present |
-| release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.md | True | 45bab48824368b2f2a3cd86b1c9191f95bc138d1600c9b9ab0a2501805c910c3 | 49759 | present |
 | release/v1_5_rc/NON_CLAIM_BOUNDARIES.md | True | 30913a171ed4c698d832caa34e00a2eca13ece3f84ef19972d97fc7a8474f276 | 2443 | present |
 | release/v1_5_rc/RELEASE_MANIFEST.json | True | 107e42bd10cea25b1740f34f599ee53f271ff47e278b552a28140b1777c1bd30 | 2274 | present |
 | release/v1_5_rc/RELEASE_NOTES.md | True | 150590d66e9dd4750ff4ca2397a158a18def07baa538c4e88126aac149535ec8 | 4794 | present |
