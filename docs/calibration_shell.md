@@ -263,6 +263,19 @@ The legislative architecture skeleton requires external legal, tax, Treasury, AT
 
 No such review has occurred in this repository. Legislative architecture outputs are non-operative mapping outputs only; they are not a Bill, not legal drafting, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not Parliamentary Counsel drafting, not legally sufficient, not constitutionally reviewed, and do not create rights, obligations, powers, notices, penalties, enforcement, compliance scoring, tax-payable determinations, or firm-level CARSF liability changes.
 
+## Executive Dashboard Review
+
+The executive dashboard requires maintenance review rather than calibration of new model values:
+
+- layer inventory updates whenever a major model, report, document, or Streamlit page is added;
+- generated report path checks so missing reports are not silently ignored;
+- non-claim profile checks so dashboard navigation does not weaken layer-specific warnings;
+- blocker routing checks for legal, tax, Treasury, ATO-methods, privacy, welfare-policy, statistical-methods, economic-methods, and Parliamentary Counsel review;
+- guardrail-status interpretation checks so prototype safety signals are not mistaken for operational readiness;
+- reviewer-routing review to keep suggested navigation clear and non-official.
+
+No such dashboard maintenance should be treated as calibration, validation, approval, legal sufficiency, operational readiness, or an official review pathway. The dashboard consolidates existing prototype reports and blockers only; it does not modify firm-level CARSF liability logic.
+
 ## Non-Claims
 
 The calibration shell is not legal, tax, Treasury, ATO, ABS, Fair Work, OECD, BEPS, audit, forensic, or economic validation. It does not prove any model setting is correct.

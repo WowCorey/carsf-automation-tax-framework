@@ -80,4 +80,7 @@
 - Proposed Parts, Divisions, definitions, schedules, evidence placeholders, safeguards, regulation-making placeholders, commencement/transitional placeholders, and external-review blockers are conceptual locations only.
 - The legislative architecture skeleton creates no rights, obligations, statutory powers, information-gathering powers, notices, penalties, enforcement process, compliance scoring, or tax-payable determinations.
 - Operative definitions, liability architecture, evidence powers, anti-avoidance rules, review rights, regulation-making mechanisms, commencement, and transitional rules remain reserved for external legal, tax, Treasury, ATO, Parliamentary Counsel, privacy, calibration, administrative-design, and policy review.
+- The executive dashboard may create false comfort if readers treat report availability as readiness, validation, approval, legal sufficiency, operational readiness, or an official review pathway.
+- Suggested review navigation is a convenience only and may become stale if new reports, pages, or blockers are added without updating the dashboard manifest.
+- Dashboard guardrail status is a prototype safety signal only and does not prove complete DLP, cybersecurity, privacy compliance, operational readiness, or absence of sensitive content.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.

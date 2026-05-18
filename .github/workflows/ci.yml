@@ -59,6 +59,9 @@ jobs:
       - name: Run legislative architecture
         run: python scripts/run_legislative_architecture.py
 
+      - name: Run executive dashboard
+        run: python scripts/run_executive_dashboard.py
+
       - name: Run mock evidence workflow
         run: python scripts/run_evidence_workflow.py
 
