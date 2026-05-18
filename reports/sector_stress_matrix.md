@@ -1,6 +1,6 @@
 # CARSF V1.5 Sector Stress Matrix
 
-Generated at: `2026-05-17T22:52:43+00:00`
+Generated at: `2026-05-18T09:37:02+00:00`
 
 ## A. Purpose
 

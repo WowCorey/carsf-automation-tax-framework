@@ -1,6 +1,6 @@
 # CARSF V1.5 Repository Guardrails
 
-Generated at: `2026-05-18T05:09:22+00:00`
+Generated at: `2026-05-18T09:37:08+00:00`
 
 ## A. Purpose
 
@@ -14,8 +14,8 @@ This report runs prototype repository-level guardrails for likely evidence leaks
 
 ## C. Files Scanned/Skipped
 
-- Files scanned: 402
-- Files skipped: 2270
+- Files scanned: 427
+- Files skipped: 2339
 - Clean: true
 
 ## D. Denied Findings
@@ -73,6 +73,7 @@ This report runs prototype repository-level guardrails for likely evidence leaks
 | paper/aava_deductibility_appendix.md | low | documented_marker_example | N/A | Documentation/test file contains marker examples: INVOICE. |
 | paper/export_notes.md | low | documented_marker_example | N/A | Documentation/test file contains marker examples: REAL_TAXPAYER. |
 | release/v1_5_rc/NON_CLAIM_BOUNDARIES.md | low | documented_marker_example | N/A | Documentation/test file contains marker examples: REAL_TAXPAYER. |
+| release/v1_5_rc/attack_pack/PRIVACY_SECRECY_REVIEW_ATTACKS.md | low | documented_marker_example | N/A | Documentation/test file contains marker examples: REAL_TAXPAYER. |
 | schedules/accounting_administration.yaml | low | documented_marker_example | N/A | Documentation/test file contains marker examples: INVOICE. |
 | schedules/automotive_repair.yaml | low | documented_marker_example | N/A | Documentation/test file contains marker examples: INVOICE. |
 | scripts/run_evidence_workflow.py | low | policy_marker_definition | N/A | Guardrail implementation contains policy marker definitions: INVOICE, REAL_TAXPAYER, SECRET. |

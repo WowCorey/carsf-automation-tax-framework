@@ -857,3 +857,27 @@ Limitations:
 - Executive dashboard outputs are prototype navigation and report-index outputs only.
 - They are not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare advice, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not a maturity score, not an official review pathway, not approval, and not validation.
 - They do not determine actual tax payable, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability logic.
+
+## V1.5 External Review Attack Pack
+
+Branch: `v1.5-external-review-attack-pack`
+
+Baseline: PR #25 merged into `main`, including the V1.5 working paper release-candidate pack.
+
+Purpose of this build:
+
+- Add a structured external review attack pack for the V1.5 release candidate.
+- Provide policy, technical, legal, tax, ATO methods, Treasury methods, privacy/secrecy, statistical, economic, welfare, Parliamentary Counsel, and hostile/red-team challenge tracks.
+- Add attack questions, failure modes, required external inputs, must-not-infer warnings, boundary checks, report attack matrix, layer attack matrix, release attack-pack documents, model validation, generated reports, tests, documentation, and CI step.
+
+Reports generated:
+
+- `reports/external_review_attack_pack.json`
+- `reports/external_review_attack_pack.md`
+
+Limitations:
+
+- External review attack-pack outputs are challenge-organisation outputs only.
+- They do not mean external review has been completed, do not mean approval has been granted, and do not mean validation has occurred.
+- They are not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not official status, and not an official review pathway.
+- They do not determine actual tax payable, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability logic.

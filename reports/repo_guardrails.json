@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-05-18T05:09:22+00:00",
+    "generated_at": "2026-05-18T09:37:08+00:00",
     "non_claims": [
       "These are prototype repository guardrails only. They are not a complete DLP system, secret scanner, cybersecurity control, legal/privacy audit, Treasury control, ATO control, or forensic validation.",
       "These are prototype repository guardrails only.",
@@ -82,8 +82,8 @@
   "result": {
     "clean": true,
     "denied_findings": [],
-    "files_scanned": 402,
-    "files_skipped": 2270,
+    "files_scanned": 427,
+    "files_skipped": 2339,
     "findings": [
       {
         "allowlisted": true,
@@ -577,6 +577,17 @@
         "line_number": null,
         "message": "Documentation/test file contains marker examples: REAL_TAXPAYER.",
         "path": "release/v1_5_rc/NON_CLAIM_BOUNDARIES.md",
+        "reason": "Allowed as documented scanner examples in docs/tests only.",
+        "severity": "low"
+      },
+      {
+        "allowlisted": true,
+        "deny": false,
+        "finding_id": "documented_marker_example:release/v1_5_rc/attack_pack/PRIVACY_SECRECY_REVIEW_ATTACKS.md:0",
+        "finding_type": "documented_marker_example",
+        "line_number": null,
+        "message": "Documentation/test file contains marker examples: REAL_TAXPAYER.",
+        "path": "release/v1_5_rc/attack_pack/PRIVACY_SECRECY_REVIEW_ATTACKS.md",
         "reason": "Allowed as documented scanner examples in docs/tests only.",
         "severity": "low"
       },
@@ -1155,6 +1166,17 @@
         "line_number": null,
         "message": "Documentation/test file contains marker examples: REAL_TAXPAYER.",
         "path": "release/v1_5_rc/NON_CLAIM_BOUNDARIES.md",
+        "reason": "Allowed as documented scanner examples in docs/tests only.",
+        "severity": "low"
+      },
+      {
+        "allowlisted": true,
+        "deny": false,
+        "finding_id": "documented_marker_example:release/v1_5_rc/attack_pack/PRIVACY_SECRECY_REVIEW_ATTACKS.md:0",
+        "finding_type": "documented_marker_example",
+        "line_number": null,
+        "message": "Documentation/test file contains marker examples: REAL_TAXPAYER.",
+        "path": "release/v1_5_rc/attack_pack/PRIVACY_SECRECY_REVIEW_ATTACKS.md",
         "reason": "Allowed as documented scanner examples in docs/tests only.",
         "severity": "low"
       },

@@ -75,3 +75,9 @@ Key risks: the architecture skeleton is not a Bill, not legal drafting, not lega
 Inspect first: `docs/known_risks.md`, `reports/behavioural_response_simulation.md`, `reports/reviewed_scenarios.md`, and `reports/repo_guardrails.md`.
 
 Key risks: attack overclaiming, stale manifests, missing non-claims, hidden calibration assumptions, false precision, and any language implying approval, validation, readiness, or real-world use.
+
+## External Review Attack Pack
+
+Inspect next: `release/v1_5_rc/attack_pack/ATTACK_PACK_OVERVIEW.md` and `reports/external_review_attack_pack.md`.
+
+The attack pack gives reviewer-specific challenge questions and failure modes. It does not mean external review has been completed, does not mean approval has been granted, does not mean validation has occurred, and does not modify firm-level CARSF liability.
