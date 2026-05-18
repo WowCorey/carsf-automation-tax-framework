@@ -1364,7 +1364,7 @@
     }
   ],
   "metadata": {
-    "generated_at": "2026-05-18T09:37:07+00:00",
+    "generated_at": "2026-05-18T11:03:56+00:00",
     "non_claims": [
       "These are deterministic placeholder uncertainty ranges only. They are not statistical confidence intervals, forecasts, real uncertainty quantification, population estimates, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
       "This is a prototype deterministic range wrapper only; it is not Monte Carlo, calibration, forecasting, or statistical inference.",

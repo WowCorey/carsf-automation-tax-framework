@@ -22,7 +22,11 @@ The V1.5 release-candidate pack consolidates the current CARSF prototype stack i
 - It is not legal sufficiency.
 - It is not legislative readiness.
 - It is not a readiness score.
+- It is not a maturity score.
 - It is not an official review pathway.
+- It is not approval.
+- It is not validation.
+- External review has not been completed.
 - It does not determine actual tax payable.
 - It does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data.
 - It does not modify firm-level CARSF liability.
@@ -37,6 +41,9 @@ The V1.5 release-candidate pack consolidates the current CARSF prototype stack i
 - `release/v1_5_rc/NON_CLAIM_BOUNDARIES.md`
 - `release/v1_5_rc/EXTERNAL_REVIEW_ROUTING.md`
 - `release/v1_5_rc/RELEASE_MANIFEST.json`
+- `release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.md`
+- `release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.json`
+- `release/v1_5_rc/FINAL_RC_DIGESTS.json`
 
 ## Runner
 
@@ -50,6 +57,8 @@ Generated reports:
 
 - `reports/v1_5_release_candidate_pack.md`
 - `reports/v1_5_release_candidate_pack.json`
+- `reports/v1_5_final_rc_integrity_seal.md`
+- `reports/v1_5_final_rc_integrity_seal.json`
 
 ## Working Paper Link
 
@@ -58,3 +67,7 @@ The V1.5 working paper remains `paper/CARSF_V1_5_WORKING.md`. The release-candid
 ## Review Use
 
 Use the release pack after the executive dashboard. The pack is useful for routing external review, identifying calibration blockers, and checking report boundaries. It must not be used as a readiness finding, official review pathway, legal sufficiency claim, operational readiness claim, economic validation, welfare validation, statistical validation, or actual-tax-payable analysis.
+
+## Final RC Integrity Seal Link
+
+The final RC integrity seal checks release documents, attack-pack documents, generated reports, manifests, scripts, digest metadata, non-claim boundaries, repo guardrail expectations, CI expectations, and false readiness/legal/validation flags. `seal_passed` is an internal integrity status only and must not be read as approval, validation, external review completion, operational readiness, legal sufficiency, legislative readiness, official status, or implementation readiness.

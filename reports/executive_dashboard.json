@@ -328,7 +328,7 @@
         "exists": true,
         "interpretation_warning": "Guardrail status is a prototype repository-safety signal only, not operational readiness or validation.",
         "source_report": "reports/repo_guardrails.json",
-        "warning_findings": 52
+        "warning_findings": 53
       },
       {
         "clean": null,
@@ -2800,7 +2800,7 @@
   "metadata": {
     "economic_validation_claimed": false,
     "firm_level_liability_logic_modified": false,
-    "generated_at": "2026-05-18T09:37:03+00:00",
+    "generated_at": "2026-05-18T11:03:52+00:00",
     "legal_sufficiency_claimed": false,
     "maturity_score_created": false,
     "non_claims": [

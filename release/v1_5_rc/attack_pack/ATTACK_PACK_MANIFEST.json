@@ -10,6 +10,25 @@
     "It does not modify firm-level CARSF liability."
   ],
   "review_track_count": 12,
+  "release_documents": [
+    "ATO_METHODS_REVIEW_ATTACKS.md",
+    "ATTACK_PACK_MANIFEST.json",
+    "ATTACK_PACK_OVERVIEW.md",
+    "BOUNDARY_CHECKS.md",
+    "ECONOMIC_METHODS_REVIEW_ATTACKS.md",
+    "HOSTILE_RED_TEAM_ATTACKS.md",
+    "LAYER_ATTACK_MATRIX.md",
+    "LEGAL_REVIEW_ATTACKS.md",
+    "PARLIAMENTARY_COUNSEL_REVIEW_ATTACKS.md",
+    "POLICY_REVIEW_ATTACKS.md",
+    "PRIVACY_SECRECY_REVIEW_ATTACKS.md",
+    "REPORT_ATTACK_MATRIX.md",
+    "STATISTICAL_METHODS_REVIEW_ATTACKS.md",
+    "TAX_REVIEW_ATTACKS.md",
+    "TECHNICAL_REVIEW_ATTACKS.md",
+    "TREASURY_METHODS_REVIEW_ATTACKS.md",
+    "WELFARE_POLICY_REVIEW_ATTACKS.md"
+  ],
   "generated_reports": [
     "reports/external_review_attack_pack.md",
     "reports/external_review_attack_pack.json"

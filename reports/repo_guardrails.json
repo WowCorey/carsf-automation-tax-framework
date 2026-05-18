@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-05-18T09:37:08+00:00",
+    "generated_at": "2026-05-18T11:06:35+00:00",
     "non_claims": [
       "These are prototype repository guardrails only. They are not a complete DLP system, secret scanner, cybersecurity control, legal/privacy audit, Treasury control, ATO control, or forensic validation.",
       "These are prototype repository guardrails only.",
@@ -82,8 +82,8 @@
   "result": {
     "clean": true,
     "denied_findings": [],
-    "files_scanned": 427,
-    "files_skipped": 2339,
+    "files_scanned": 438,
+    "files_skipped": 2468,
     "findings": [
       {
         "allowlisted": true,

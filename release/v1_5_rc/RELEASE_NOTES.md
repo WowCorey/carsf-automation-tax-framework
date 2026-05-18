@@ -42,3 +42,9 @@ Start with `reports/executive_dashboard.md`, then read this release pack, the wo
 The external review attack pack under `release/v1_5_rc/attack_pack/` adds discipline-specific challenge prompts, failure modes, required external inputs, boundary checks, report attack matrices, and layer attack matrices.
 
 It does not mean external review has been completed. It does not mean approval has been granted. It does not mean validation has occurred. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, and does not modify firm-level CARSF liability.
+
+## Build 25 Final RC Integrity Seal Addendum
+
+The final RC integrity seal under `release/v1_5_rc/` verifies release documents, attack-pack documents, generated reports, required manifests, required scripts, digest metadata, non-claim boundaries, forbidden affirmative claim scanning, repo guardrail status expectations, CI expectations, and false readiness/legal/validation flags.
+
+It is an internal integrity seal only. It is not approval, not validation, not external review completion, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not a maturity score, not official status, and not an official review pathway. It does not determine actual tax payable, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.

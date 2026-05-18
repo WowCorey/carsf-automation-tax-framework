@@ -881,3 +881,30 @@ Limitations:
 - They do not mean external review has been completed, do not mean approval has been granted, and do not mean validation has occurred.
 - They are not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not official status, and not an official review pathway.
 - They do not determine actual tax payable, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability logic.
+
+## V1.5 Final RC Integrity Seal
+
+Branch: `v1.5-final-rc-integrity-seal`
+
+Baseline: PR #26 merged into `main`, including the external review attack pack.
+
+Purpose of this build:
+
+- Add a final internal integrity seal for the V1.5 release candidate.
+- Verify release documents, attack-pack documents, generated reports, required manifests, required scripts, digest metadata, non-claim boundaries, forbidden affirmative claim scanning, repo guardrail status expectations, CI expectations, and false readiness/legal/validation flags.
+- Add seal manifest, model validation, release seal documents, generated reports, tests, documentation, and CI step.
+
+Reports generated:
+
+- `reports/v1_5_final_rc_integrity_seal.json`
+- `reports/v1_5_final_rc_integrity_seal.md`
+- `release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.json`
+- `release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.md`
+- `release/v1_5_rc/FINAL_RC_DIGESTS.json`
+
+Limitations:
+
+- Final RC integrity seal outputs are internal artefact integrity checks only.
+- They are not approval, not validation, and do not mean external review has been completed.
+- They are not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not a maturity score, not official status, and not an official review pathway.
+- They do not determine actual tax payable, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability logic.

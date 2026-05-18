@@ -20,6 +20,10 @@ It does not determine actual tax payable, does not use taxpayer-level, firm-leve
 - Not legislative readiness.
 - Not a readiness score.
 - Not an official review pathway.
+- Not approval.
+- Not validation.
+- Not external review completion.
+- Not a maturity score.
 - Not actual tax payable.
 - Not real household modelling.
 - Not population estimates.
@@ -36,3 +40,9 @@ It does not determine actual tax payable, does not use taxpayer-level, firm-leve
 ## Interpretation Rule
 
 If a report, example, scenario, schedule, workflow, or document appears to imply any prohibited output, that interpretation is outside scope and should be treated as a defect to review. Prohibited outputs include validation, approval, official status, readiness, legal sufficiency, economic validation, welfare validation, statistical validation, population representation, sector ranking, or tax-payable use.
+
+## Final RC Integrity Seal Boundary
+
+The final RC integrity seal is an internal artefact check only. It verifies release documents, attack-pack documents, generated reports, manifests, scripts, digest metadata, non-claim boundaries, guardrail status expectations, CI expectations, and false readiness/legal/validation flags.
+
+It does not mean approval, validation, external review completion, operational readiness, legal sufficiency, legislative readiness, official status, implementation readiness, or firm-level CARSF liability modification.

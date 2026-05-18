@@ -1,6 +1,6 @@
 # CARSF V1.5 Release Candidate Pack
 
-Generated at: `2026-05-18T09:37:04+00:00`
+Generated at: `2026-05-18T11:03:53+00:00`
 
 ## A. Purpose
 
@@ -15,12 +15,12 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 
 ## C. Release Pack Contents
 
-- Total layers: 24
-- Total reports indexed: 46
-- Reports present: 46
+- Total layers: 25
+- Total reports indexed: 48
+- Reports present: 48
 - Reports missing: 0
-- Total release documents: 7
-- Release documents present: 7
+- Total release documents: 10
+- Release documents present: 10
 - Release documents missing: 0
 - Paper files checked: 6
 - Working paper updated: True
@@ -61,6 +61,7 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | core_formula_model | Core Formula Model | formula_core | Prototype QLC, HLE, AII, NLTG, AAVA, levy, credit, cap, CARS-I, and CoverageRatio mechanics. | prototype_only, placeholder_only, not_for_real_world_use | reports/example_results.md, reports/example_results.json | simulator/pages/2_Tax_Model.py | legal_reviewer, tax_reviewer, treasury_methods_reviewer, ato_methods_reviewer | Core formula outputs remain prototype calculations and do not determine tax payable. |
 | evidence_workflow | Evidence Workflow | evidence_workflow | Synthetic mock evidence packet, review-state, confidence, and privacy/secrecy workflow. | prototype_only, synthetic_only, privacy_review_required | reports/mock_evidence_workflow.md, reports/mock_evidence_workflow.json, reports/evidence_requirements.md, reports/evidence_requirements.json | simulator/pages/9_Mock_Evidence_Workflow.py | privacy_reviewer, ato_methods_reviewer, legal_reviewer | Mock evidence workflow uses synthetic packets only. |
 | executive_dashboard | Executive Dashboard | executive_dashboard | Consolidated dashboard and report index for navigating the V1.5 prototype stack. | prototype_only, placeholder_only, generated_report_available | reports/executive_dashboard.md, reports/executive_dashboard.json | simulator/pages/25_Executive_Dashboard.py | policy_reviewer, technical_reviewer | Dashboard is navigation only. |
+| final_rc_integrity_seal | V1.5 Final RC Integrity Seal | documentation | Internal artefact integrity check for release documents, attack-pack documents, reports, manifests, scripts, CI expectations, guardrail expectations, digest metadata, and false readiness/legal/validation flags. | prototype_only, generated_report_available, not_for_real_world_use | reports/v1_5_final_rc_integrity_seal.md, reports/v1_5_final_rc_integrity_seal.json | simulator/pages/25_Executive_Dashboard.py | technical_reviewer, policy_reviewer, hostile_red_team_reviewer | Seal verifies internal artefact consistency only. |
 | fiscal_trajectory | Fiscal Trajectory | fiscal_trajectory | Placeholder national fiscal trajectory for PAYG erosion, support pressure, automation revenue capture, and residual gaps. | prototype_only, placeholder_only, calibration_required | reports/fiscal_trajectory.md, reports/fiscal_trajectory.json | simulator/pages/13_Fiscal_Trajectory.py | treasury_methods_reviewer, economic_methods_reviewer, technical_reviewer | Fiscal trajectory is placeholder accounting only. |
 | household_distributional | Household Distributional Scenarios | household_distributional | Synthetic household budget, re-employment, regional stress, payment cliff, and shock-band scenarios. | prototype_only, synthetic_only, statistical_methods_review_required | reports/distributional_scenarios.md, reports/distributional_scenarios.json | simulator/pages/16_Distributional_Scenarios.py | statistical_methods_reviewer, welfare_policy_reviewer, privacy_reviewer | Household cases are synthetic only. |
 | household_weighting | Household Weighting | household_weighting | Synthetic subgroup weights, weighted residual gaps, high/critical shares, and calibration-readiness shell. | prototype_only, synthetic_only, not_population_estimate | reports/household_weighting.md, reports/household_weighting.json | simulator/pages/17_Household_Weighting.py | statistical_methods_reviewer, privacy_reviewer, welfare_policy_reviewer | Weighting shell is synthetic and not representative. |
@@ -88,6 +89,8 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | reports/executive_dashboard.md | executive_dashboard | True | python scripts/run_executive_dashboard.py | dashboard and report index | does not show: readiness score | dashboard navigation only | policy_reviewer, technical_reviewer | 1 |
 | reports/v1_5_release_candidate_pack.json | release_candidate_pack | True | python scripts/run_v1_5_release_candidate_pack.py | release-candidate pack data | does not show: no readiness score or official status | release packaging only | technical_reviewer | 2 |
 | reports/v1_5_release_candidate_pack.md | release_candidate_pack | True | python scripts/run_v1_5_release_candidate_pack.py | release-candidate pack summary | does not show: no readiness score or official status | release packaging only | policy_reviewer, technical_reviewer | 2 |
+| reports/v1_5_final_rc_integrity_seal.json | final_rc_integrity_seal | True | python scripts/run_v1_5_final_rc_integrity_seal.py | machine-readable seal checks and false flags | does not show: approval validation external review completion readiness legal sufficiency official status or liability change | internal integrity seal only | technical_reviewer | 3 |
+| reports/v1_5_final_rc_integrity_seal.md | final_rc_integrity_seal | True | python scripts/run_v1_5_final_rc_integrity_seal.py | internal artefact integrity seal | does not show: approval validation external review completion readiness legal sufficiency official status or liability change | internal integrity seal only | technical_reviewer, policy_reviewer, hostile_red_team_reviewer | 3 |
 | reports/example_results.json | worked_examples | True | python scripts/run_examples.py | machine-readable worked example outputs | does not show: calibrated firm outcomes | prototype placeholders only | technical_reviewer | 5 |
 | reports/example_results.md | worked_examples | True | python scripts/run_examples.py | worked example formula outputs | does not show: calibrated firm outcomes | prototype placeholders only | technical_reviewer, policy_reviewer | 5 |
 | reports/grouped_entity_results.json | worked_examples | True | python scripts/run_examples.py | grouped preview data | does not show: legal grouping results | non-operative preview only | technical_reviewer | 6 |
@@ -137,6 +140,9 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | --- | --- | --- | --- | --- |
 | release/v1_5_rc/CALIBRATION_BLOCKERS.md | calibration_blockers | True | Consolidated calibration blocker summary. | True |
 | release/v1_5_rc/EXTERNAL_REVIEW_ROUTING.md | external_review_routing | True | Suggested external reviewer routing. | True |
+| release/v1_5_rc/FINAL_RC_DIGESTS.json | final_rc_digest_manifest | True | SHA-256 digest metadata for key release artefacts. | True |
+| release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.json | final_rc_integrity_seal_json | True | Machine-readable final RC artefact integrity seal report. | True |
+| release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.md | final_rc_integrity_seal | True | Internal final RC artefact integrity seal report. | True |
 | release/v1_5_rc/NON_CLAIM_BOUNDARIES.md | non_claim_boundaries | True | Consolidated boundaries and prohibited inferences. | True |
 | release/v1_5_rc/RELEASE_MANIFEST.json | release_manifest_snapshot | True | Static release manifest summary for reviewers. | True |
 | release/v1_5_rc/RELEASE_NOTES.md | release_notes | True | Summary of V1.5 release-candidate contents and boundaries. | True |
@@ -156,7 +162,7 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | privacy_reviewer | secure_ingestion, evidence_workflow, administrative_workflow, household_distributional | reports/secure_ingestion_controls.md, reports/mock_evidence_workflow.md | release/v1_5_rc/NON_CLAIM_BOUNDARIES.md | False | Privacy reviewers should attack data boundaries and real-data exclusion. |
 | statistical_methods_reviewer | household_distributional, household_weighting, uncertainty_ranges, reviewed_scenarios | reports/uncertainty_ranges.md, reports/reviewed_scenarios.md | release/v1_5_rc/CALIBRATION_BLOCKERS.md | False | Statistical reviewers should attack representativeness, uncertainty, and suppression logic. |
 | tax_reviewer | core_formula_model, sector_schedules, worked_examples, behavioural_response | reports/transfer_pricing_results.md, reports/sector_schedule_expansion.md | release/v1_5_rc/CALIBRATION_BLOCKERS.md | False | Tax reviewers should focus on AAVA, addback previews, grouping, schedules, and liability boundaries. |
-| technical_reviewer | core_formula_model, worked_examples, secure_ingestion, repo_guardrails, executive_dashboard | reports/example_results.md, reports/repo_guardrails.md, reports/executive_dashboard.md | release/v1_5_rc/REPORT_MAP.md | False | Technical reviewers should inspect reproducibility, runners, report schemas, and guardrails. |
+| technical_reviewer | core_formula_model, worked_examples, secure_ingestion, repo_guardrails, executive_dashboard, final_rc_integrity_seal | reports/example_results.md, reports/repo_guardrails.md, reports/executive_dashboard.md, reports/v1_5_final_rc_integrity_seal.md | release/v1_5_rc/REPORT_MAP.md, release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.md | False | Technical reviewers should inspect reproducibility, runners, report schemas, and guardrails. |
 | treasury_methods_reviewer | fiscal_trajectory, transition_funding, investment_incidence, calibration_shell | reports/fiscal_trajectory.md, reports/transition_funding.md, reports/investment_guardrails.md | release/v1_5_rc/CALIBRATION_BLOCKERS.md | False | Treasury methods reviewers should attack fiscal, incidence, and funding assumptions. |
 | welfare_policy_reviewer | transition_funding, payment_interactions, household_distributional, household_weighting | reports/payment_interactions.md, reports/distributional_scenarios.md | release/v1_5_rc/CALIBRATION_BLOCKERS.md | False | Welfare reviewers should inspect payment interactions, eligibility boundaries, and household synthetic status. |
 
@@ -188,6 +194,7 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | calibration_shell | calibration | Real calibration requires authorised external datasets and methods review. | calibration | Shell lists unresolved data needs only. |
 | working_paper | calibration | Working paper remains a concept paper and is not calibrated or validated. | calibration | Paper explains the concept but does not make operative claims. |
 | status_risks_docs | calibration | Documentation must remain aligned with generated reports and blockers. | calibration | Documentation records blockers and should not be read as approval. |
+| final_rc_integrity_seal | calibration | Integrity checks do not calibrate model values or resolve any external review blocker. | calibration | Seal verifies internal artefact consistency only. |
 
 ## J. External Review Blockers
 
@@ -217,6 +224,7 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | calibration_shell | external_review | Data-owner, privacy, legal, tax, Treasury, ATO, economic, statistical, welfare, and Parliamentary Counsel review are required. | external_review | Shell lists unresolved data needs only. |
 | working_paper | external_review | Legal, tax, Treasury, ATO, Parliamentary Counsel, privacy, statistical, economic, welfare, and policy review are required. | external_review | Paper explains the concept but does not make operative claims. |
 | status_risks_docs | external_review | Risk documentation requires hostile, legal, tax, privacy, policy, and methods review. | external_review | Documentation records blockers and should not be read as approval. |
+| final_rc_integrity_seal | external_review | The seal requires technical and hostile review so completeness checks are not mistaken for approval, validation, or readiness. | external_review | Seal verifies internal artefact consistency only. |
 
 ## K. Guardrail / Safety Status
 
@@ -224,7 +232,7 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 - Exists: True
 - Clean: True
 - Denied findings: 0
-- Warning findings: 52
+- Warning findings: 53
 - Interpretation warning: Guardrail status is a prototype repository-safety signal only, not validation or operational readiness.
 
 ## L. Legislative / Legal Boundary

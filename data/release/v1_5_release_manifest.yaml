@@ -852,9 +852,54 @@ prototype_layers:
       - hostile_red_team_reviewer
       - technical_reviewer
     main_reason: Documentation records blockers and should not be read as approval.
+  - layer_id: final_rc_integrity_seal
+    layer_name: V1.5 Final RC Integrity Seal
+    layer_group: documentation
+    summary: Internal artefact integrity check for release documents, attack-pack documents, reports, manifests, scripts, CI expectations, guardrail expectations, digest metadata, and false readiness/legal/validation flags.
+    primary_files:
+      - model/carsf/final_rc_integrity_seal.py
+      - data/seal/v1_5_final_rc_integrity_seal.yaml
+      - scripts/run_v1_5_final_rc_integrity_seal.py
+      - docs/final_rc_integrity_seal.md
+    primary_reports:
+      - reports/v1_5_final_rc_integrity_seal.md
+      - reports/v1_5_final_rc_integrity_seal.json
+    streamlit_pages:
+      - simulator/pages/25_Executive_Dashboard.py
+    status_labels:
+      - prototype_only
+      - generated_report_available
+      - not_for_real_world_use
+    non_claim_flags:
+      - not_approval
+      - not_validation
+      - not_external_review_completion
+      - not_operational_readiness
+      - not_legal_sufficiency
+      - not_readiness_score
+      - not_maturity_score
+      - not_official_status
+    calibration_blockers:
+      - Integrity checks do not calibrate model values or resolve any external review blocker.
+    external_review_blockers:
+      - The seal requires technical and hostile review so completeness checks are not mistaken for approval, validation, or readiness.
+    must_not_be_used_for:
+      - approval
+      - validation
+      - external review completion
+      - readiness finding
+      - legal sufficiency
+      - official status
+    recommended_reviewer:
+      - technical_reviewer
+      - policy_reviewer
+      - hostile_red_team_reviewer
+    main_reason: Seal verifies internal artefact consistency only.
 generated_reports:
   - {report_path: reports/v1_5_release_candidate_pack.md, layer_id: release_candidate_pack, generated_by: python scripts/run_v1_5_release_candidate_pack.py, what_it_shows: release-candidate pack summary, what_it_does_not_show: no readiness score or official status, primary_non_claim: release packaging only, recommended_reviewer: [policy_reviewer, technical_reviewer], suggested_read_order: 2, optional: true}
   - {report_path: reports/v1_5_release_candidate_pack.json, layer_id: release_candidate_pack, generated_by: python scripts/run_v1_5_release_candidate_pack.py, what_it_shows: release-candidate pack data, what_it_does_not_show: no readiness score or official status, primary_non_claim: release packaging only, recommended_reviewer: [technical_reviewer], suggested_read_order: 2, optional: true}
+  - {report_path: reports/v1_5_final_rc_integrity_seal.md, layer_id: final_rc_integrity_seal, generated_by: python scripts/run_v1_5_final_rc_integrity_seal.py, what_it_shows: internal artefact integrity seal, what_it_does_not_show: approval validation external review completion readiness legal sufficiency official status or liability change, primary_non_claim: internal integrity seal only, recommended_reviewer: [technical_reviewer, policy_reviewer, hostile_red_team_reviewer], suggested_read_order: 3, optional: true}
+  - {report_path: reports/v1_5_final_rc_integrity_seal.json, layer_id: final_rc_integrity_seal, generated_by: python scripts/run_v1_5_final_rc_integrity_seal.py, what_it_shows: machine-readable seal checks and false flags, what_it_does_not_show: approval validation external review completion readiness legal sufficiency official status or liability change, primary_non_claim: internal integrity seal only, recommended_reviewer: [technical_reviewer], suggested_read_order: 3, optional: true}
   - {report_path: reports/example_results.md, layer_id: worked_examples, generated_by: python scripts/run_examples.py, what_it_shows: worked example formula outputs, what_it_does_not_show: calibrated firm outcomes, primary_non_claim: prototype placeholders only, recommended_reviewer: [technical_reviewer, policy_reviewer], suggested_read_order: 5}
   - {report_path: reports/example_results.json, layer_id: worked_examples, generated_by: python scripts/run_examples.py, what_it_shows: machine-readable worked example outputs, what_it_does_not_show: calibrated firm outcomes, primary_non_claim: prototype placeholders only, recommended_reviewer: [technical_reviewer], suggested_read_order: 5}
   - {report_path: reports/grouped_entity_results.md, layer_id: worked_examples, generated_by: python scripts/run_examples.py, what_it_shows: grouped-entity preview outputs, what_it_does_not_show: legal grouping results, primary_non_claim: non-operative preview only, recommended_reviewer: [legal_reviewer, tax_reviewer], suggested_read_order: 6}
@@ -930,6 +975,9 @@ release_documents:
   - {document_path: release/v1_5_rc/NON_CLAIM_BOUNDARIES.md, document_type: non_claim_boundaries, purpose: Consolidated boundaries and prohibited inferences.}
   - {document_path: release/v1_5_rc/EXTERNAL_REVIEW_ROUTING.md, document_type: external_review_routing, purpose: Suggested external reviewer routing.}
   - {document_path: release/v1_5_rc/RELEASE_MANIFEST.json, document_type: release_manifest_snapshot, purpose: Static release manifest summary for reviewers.}
+  - {document_path: release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.md, document_type: final_rc_integrity_seal, purpose: Internal final RC artefact integrity seal report.}
+  - {document_path: release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.json, document_type: final_rc_integrity_seal_json, purpose: Machine-readable final RC artefact integrity seal report.}
+  - {document_path: release/v1_5_rc/FINAL_RC_DIGESTS.json, document_type: final_rc_digest_manifest, purpose: SHA-256 digest metadata for key release artefacts.}
 reviewer_routes:
   - reviewer: policy_reviewer
     layers: [release_candidate_pack, working_paper, executive_dashboard, reviewed_scenarios, status_risks_docs]
@@ -937,9 +985,9 @@ reviewer_routes:
     release_documents: [release/v1_5_rc/RELEASE_NOTES.md, release/v1_5_rc/REVIEWER_BRIEFING.md]
     main_reason: Policy reviewers should start with scope, boundaries, and display controls.
   - reviewer: technical_reviewer
-    layers: [core_formula_model, worked_examples, secure_ingestion, repo_guardrails, executive_dashboard]
-    reports: [reports/example_results.md, reports/repo_guardrails.md, reports/executive_dashboard.md]
-    release_documents: [release/v1_5_rc/REPORT_MAP.md]
+    layers: [core_formula_model, worked_examples, secure_ingestion, repo_guardrails, executive_dashboard, final_rc_integrity_seal]
+    reports: [reports/example_results.md, reports/repo_guardrails.md, reports/executive_dashboard.md, reports/v1_5_final_rc_integrity_seal.md]
+    release_documents: [release/v1_5_rc/REPORT_MAP.md, release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.md]
     main_reason: Technical reviewers should inspect reproducibility, runners, report schemas, and guardrails.
   - reviewer: legal_reviewer
     layers: [legislative_architecture, administrative_workflow, payment_interactions, behavioural_response]

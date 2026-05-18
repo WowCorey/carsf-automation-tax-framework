@@ -14,6 +14,9 @@
     "CALIBRATION_BLOCKERS.md",
     "NON_CLAIM_BOUNDARIES.md",
     "EXTERNAL_REVIEW_ROUTING.md",
+    "FINAL_RC_INTEGRITY_SEAL.md",
+    "FINAL_RC_INTEGRITY_SEAL.json",
+    "FINAL_RC_DIGESTS.json",
     "attack_pack/ATTACK_PACK_OVERVIEW.md",
     "attack_pack/REPORT_ATTACK_MATRIX.md",
     "attack_pack/LAYER_ATTACK_MATRIX.md",
@@ -23,7 +26,9 @@
     "reports/v1_5_release_candidate_pack.md",
     "reports/v1_5_release_candidate_pack.json",
     "reports/external_review_attack_pack.md",
-    "reports/external_review_attack_pack.json"
+    "reports/external_review_attack_pack.json",
+    "reports/v1_5_final_rc_integrity_seal.md",
+    "reports/v1_5_final_rc_integrity_seal.json"
   ],
   "attack_pack_summary": {
     "review_tracks": 12,
