@@ -1,0 +1,29 @@
+{
+  "attack_pack_id": "carsf_v1_5_external_review_attack_pack",
+  "attack_pack_name": "CARSF V1.5 External Review Attack Pack",
+  "status": "prototype_external_review_attack_pack_only",
+  "non_claims": [
+    "This attack pack does not mean external review has been completed.",
+    "It does not mean approval has been granted.",
+    "It does not mean validation has occurred.",
+    "It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement.",
+    "It does not modify firm-level CARSF liability."
+  ],
+  "review_track_count": 12,
+  "generated_reports": [
+    "reports/external_review_attack_pack.md",
+    "reports/external_review_attack_pack.json"
+  ],
+  "summary_flags": {
+    "review_completed": false,
+    "approval_claimed": false,
+    "validation_claimed": false,
+    "readiness_score_created": false,
+    "legal_sufficiency_claimed": false,
+    "operational_readiness_claimed": false,
+    "legislative_readiness_claimed": false,
+    "official_status_claimed": false,
+    "real_data_used": false,
+    "firm_level_liability_logic_modified": false
+  }
+}

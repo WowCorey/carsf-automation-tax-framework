@@ -19,3 +19,19 @@ Suggested routing is review navigation only and is not an official process.
 | Parliamentary Counsel | legislative architecture skeleton and working paper | `reports/legislative_architecture.md`, `paper/CARSF_V1_5_WORKING.md` | Which areas must remain reserved for external drafting counsel? |
 | Cybersecurity / DLP / repository controls | ingestion controls and repo guardrails | `reports/secure_ingestion_controls.md`, `reports/repo_guardrails.md` | What external controls are required before any evidence-adjacent use? |
 | Hostile red-team | all boundary layers | `docs/known_risks.md`, `reports/executive_dashboard.md` | Where could a reader overclaim validation, readiness, official status, or real-world use? |
+
+## Attack-Pack Routing Addendum
+
+Inspect:
+
+- `release/v1_5_rc/attack_pack/`
+- `reports/external_review_attack_pack.md`
+
+Required challenge:
+
+- Use the attack pack to structure discipline-specific objections, missing-evidence requests, and boundary checks.
+- Treat attack-pack severity labels as challenge labels only. They are not risk scores, not validation outcomes, not approval statuses, and not readiness ratings.
+
+Non-claim:
+
+- The attack pack does not mean external review has been completed, does not mean approval has been granted, does not mean validation has occurred, and does not modify firm-level CARSF liability.

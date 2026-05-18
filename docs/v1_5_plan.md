@@ -50,6 +50,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Add a non-operative legislative architecture skeleton that maps CARSF concepts into proposed Parts, Divisions, definitions, sector schedules, evidence placeholders, safeguards, regulation-making placeholders, commencement/transitional placeholders, and external-review blockers without drafting operative law or changing liability.
 - Add an executive dashboard and report index that consolidates prototype layers, generated reports, Streamlit pages, non-claim profiles, calibration blockers, external-review blockers, suggested review navigation, and reviewer routing without creating a readiness score or validation claim.
 - Add a V1.5 working paper release-candidate pack that updates working-paper references and packages release notes, reviewer briefing, report map, calibration blockers, non-claim boundaries, external-review routing, and manifest metadata without creating official status, legal sufficiency, operational readiness, validation, or liability changes.
+- Add a V1.5 external review attack pack that gives discipline-specific reviewers challenge questions, failure modes, required external inputs, boundary checks, report attack matrices, and layer attack matrices without implying review completion, approval, validation, legal sufficiency, operational readiness, official status, or liability changes.
 
 ## Data Separation
 

@@ -264,6 +264,7 @@
           "Synthetic household weights are illustrative placeholders and are not representative of real households.",
           "Household weighting outputs do not modify firm-level CARSF liability."
         ],
+        "not_population_estimate": true,
         "overall_weighted_average_residual_gap": 10923.076923076924,
         "overall_weighted_high_or_critical_share": 1.0,
         "representative_of_real_population": false,
@@ -273,11 +274,21 @@
             "highest_risk_scenarios": [
               "single_parent_retraining_gap"
             ],
+            "matched_scenarios": [
+              "single_parent_retraining_gap"
+            ],
+            "not_population_estimate": true,
+            "representative_of_real_population": false,
             "representativeness_warning": true,
             "scenario_count": 1,
+            "subgroup_filter": {
+              "budget_stress_filter": "critical"
+            },
             "subgroup_id": "critical_budget_stress",
             "subgroup_name": "Critical Budget Stress",
+            "synthetic_weight_only": true,
             "total_synthetic_weight": 1.0,
+            "unmatched_scenarios": [],
             "warnings": [
               "Subgroup result is synthetic placeholder-only and not representative."
             ],
@@ -290,11 +301,23 @@
               "single_adult_displaced_worker_high_rent",
               "ubi_lite_payment_cliff_case"
             ],
+            "matched_scenarios": [
+              "single_adult_displaced_worker_high_rent",
+              "single_parent_retraining_gap",
+              "ubi_lite_payment_cliff_case"
+            ],
+            "not_population_estimate": true,
+            "representative_of_real_population": false,
             "representativeness_warning": true,
             "scenario_count": 3,
+            "subgroup_filter": {
+              "income_band_filter": "lower_middle_placeholder"
+            },
             "subgroup_id": "lower_middle_income",
             "subgroup_name": "Lower-Middle Placeholder Income Band",
+            "synthetic_weight_only": true,
             "total_synthetic_weight": 5.5,
+            "unmatched_scenarios": [],
             "warnings": [
               "Subgroup result is synthetic placeholder-only and not representative."
             ],
@@ -302,6 +325,7 @@
             "weighted_high_or_critical_share": 1.0
           }
         ],
+        "synthetic_weight_only": true,
         "total_synthetic_weight": 6.5,
         "warnings": [
           "Weighted distributional aggregation uses synthetic placeholder weights only.",
@@ -502,6 +526,7 @@
           "Synthetic household weights are illustrative placeholders and are not representative of real households.",
           "Household weighting outputs do not modify firm-level CARSF liability."
         ],
+        "not_population_estimate": true,
         "overall_weighted_average_residual_gap": 12200.0,
         "overall_weighted_high_or_critical_share": 1.0,
         "representative_of_real_population": false,
@@ -513,11 +538,21 @@
               "single_adult_displaced_worker_high_rent",
               "dual_income_one_displaced_regional"
             ],
+            "matched_scenarios": [
+              "dual_income_one_displaced_regional",
+              "single_adult_displaced_worker_high_rent",
+              "single_parent_retraining_gap"
+            ],
+            "not_population_estimate": true,
+            "representative_of_real_population": false,
             "representativeness_warning": true,
             "scenario_count": 3,
+            "subgroup_filter": {},
             "subgroup_id": "all_synthetic_households",
             "subgroup_name": "All Synthetic Households",
+            "synthetic_weight_only": true,
             "total_synthetic_weight": 3.0,
+            "unmatched_scenarios": [],
             "warnings": [
               "Subgroup result is synthetic placeholder-only and not representative."
             ],
@@ -528,11 +563,21 @@
             "highest_risk_scenarios": [
               "older_worker_low_reemployment"
             ],
+            "matched_scenarios": [
+              "older_worker_low_reemployment"
+            ],
+            "not_population_estimate": true,
+            "representative_of_real_population": false,
             "representativeness_warning": true,
             "scenario_count": 1,
+            "subgroup_filter": {
+              "budget_stress_filter": "critical"
+            },
             "subgroup_id": "critical_budget_stress",
             "subgroup_name": "Critical Budget Stress",
+            "synthetic_weight_only": true,
             "total_synthetic_weight": 1.0,
+            "unmatched_scenarios": [],
             "warnings": [
               "Subgroup result is synthetic placeholder-only and not representative."
             ],
@@ -543,11 +588,21 @@
             "highest_risk_scenarios": [
               "high_automation_region_cluster"
             ],
+            "matched_scenarios": [],
+            "not_population_estimate": true,
+            "representative_of_real_population": false,
             "representativeness_warning": true,
             "scenario_count": 1,
+            "subgroup_filter": {
+              "regional_stress_filter": "high"
+            },
             "subgroup_id": "regional_high_stress",
             "subgroup_name": "High Regional Stress",
+            "synthetic_weight_only": true,
             "total_synthetic_weight": 1.0,
+            "unmatched_scenarios": [
+              "high_automation_region_cluster"
+            ],
             "warnings": [
               "Subgroup result is synthetic placeholder-only and not representative.",
               "weight for high_automation_region_cluster is assigned to regional_high_stress but does not match subgroup filters"
@@ -556,6 +611,7 @@
             "weighted_high_or_critical_share": 1.0
           }
         ],
+        "synthetic_weight_only": true,
         "total_synthetic_weight": 5.0,
         "warnings": [
           "Weighted distributional aggregation uses synthetic placeholder weights only.",
@@ -778,6 +834,7 @@
           "Synthetic household weights are illustrative placeholders and are not representative of real households.",
           "Household weighting outputs do not modify firm-level CARSF liability."
         ],
+        "not_population_estimate": true,
         "overall_weighted_average_residual_gap": 15833.333333333334,
         "overall_weighted_high_or_critical_share": 1.0,
         "representative_of_real_population": false,
@@ -788,11 +845,22 @@
               "high_automation_region_cluster",
               "older_worker_low_reemployment"
             ],
+            "matched_scenarios": [
+              "high_automation_region_cluster",
+              "older_worker_low_reemployment"
+            ],
+            "not_population_estimate": true,
+            "representative_of_real_population": false,
             "representativeness_warning": true,
             "scenario_count": 2,
+            "subgroup_filter": {
+              "reemployment_risk_filter": "critical"
+            },
             "subgroup_id": "critical_reemployment_risk",
             "subgroup_name": "Critical Re-Employment Risk",
+            "synthetic_weight_only": true,
             "total_synthetic_weight": 6.0,
+            "unmatched_scenarios": [],
             "warnings": [
               "Subgroup result is synthetic placeholder-only and not representative."
             ],
@@ -804,11 +872,22 @@
               "single_parent_retraining_gap",
               "single_adult_displaced_worker_high_rent"
             ],
+            "matched_scenarios": [
+              "single_adult_displaced_worker_high_rent",
+              "single_parent_retraining_gap"
+            ],
+            "not_population_estimate": true,
+            "representative_of_real_population": false,
             "representativeness_warning": true,
             "scenario_count": 2,
+            "subgroup_filter": {
+              "reemployment_risk_filter": "high"
+            },
             "subgroup_id": "high_reemployment_risk",
             "subgroup_name": "High Re-Employment Risk",
+            "synthetic_weight_only": true,
             "total_synthetic_weight": 3.0,
+            "unmatched_scenarios": [],
             "warnings": [
               "Subgroup result is synthetic placeholder-only and not representative."
             ],
@@ -816,6 +895,7 @@
             "weighted_high_or_critical_share": 1.0
           }
         ],
+        "synthetic_weight_only": true,
         "total_synthetic_weight": 9.0,
         "warnings": [
           "Weighted distributional aggregation uses synthetic placeholder weights only.",
@@ -1008,6 +1088,7 @@
           "Synthetic household weights are illustrative placeholders and are not representative of real households.",
           "Household weighting outputs do not modify firm-level CARSF liability."
         ],
+        "not_population_estimate": true,
         "overall_weighted_average_residual_gap": 12705.882352941177,
         "overall_weighted_high_or_critical_share": 0.9411764705882353,
         "representative_of_real_population": false,
@@ -1017,11 +1098,19 @@
             "highest_risk_scenarios": [
               "young_worker_retraining_rebound"
             ],
+            "matched_scenarios": [
+              "young_worker_retraining_rebound"
+            ],
+            "not_population_estimate": true,
+            "representative_of_real_population": false,
             "representativeness_warning": true,
             "scenario_count": 1,
+            "subgroup_filter": {},
             "subgroup_id": "all_synthetic_households",
             "subgroup_name": "All Synthetic Households",
+            "synthetic_weight_only": true,
             "total_synthetic_weight": 0.5,
+            "unmatched_scenarios": [],
             "warnings": [
               "Subgroup result is synthetic placeholder-only and not representative."
             ],
@@ -1032,11 +1121,21 @@
             "highest_risk_scenarios": [
               "high_automation_region_cluster"
             ],
+            "matched_scenarios": [
+              "high_automation_region_cluster"
+            ],
+            "not_population_estimate": true,
+            "representative_of_real_population": false,
             "representativeness_warning": true,
             "scenario_count": 1,
+            "subgroup_filter": {
+              "regional_stress_filter": "critical"
+            },
             "subgroup_id": "regional_critical_stress",
             "subgroup_name": "Critical Regional Stress",
+            "synthetic_weight_only": true,
             "total_synthetic_weight": 4.0,
+            "unmatched_scenarios": [],
             "warnings": [
               "Subgroup result is synthetic placeholder-only and not representative."
             ],
@@ -1048,11 +1147,22 @@
               "older_worker_low_reemployment",
               "dual_income_one_displaced_regional"
             ],
+            "matched_scenarios": [
+              "dual_income_one_displaced_regional",
+              "older_worker_low_reemployment"
+            ],
+            "not_population_estimate": true,
+            "representative_of_real_population": false,
             "representativeness_warning": true,
             "scenario_count": 2,
+            "subgroup_filter": {
+              "regional_stress_filter": "high"
+            },
             "subgroup_id": "regional_high_stress",
             "subgroup_name": "High Regional Stress",
+            "synthetic_weight_only": true,
             "total_synthetic_weight": 4.0,
+            "unmatched_scenarios": [],
             "warnings": [
               "Subgroup result is synthetic placeholder-only and not representative."
             ],
@@ -1060,6 +1170,7 @@
             "weighted_high_or_critical_share": 1.0
           }
         ],
+        "synthetic_weight_only": true,
         "total_synthetic_weight": 8.5,
         "warnings": [
           "Weighted distributional aggregation uses synthetic placeholder weights only.",
@@ -1261,6 +1372,7 @@
           "Synthetic household weights are illustrative placeholders and are not representative of real households.",
           "Household weighting outputs do not modify firm-level CARSF liability."
         ],
+        "not_population_estimate": true,
         "overall_weighted_average_residual_gap": null,
         "overall_weighted_high_or_critical_share": null,
         "representative_of_real_population": false,
@@ -1271,11 +1383,20 @@
               "single_adult_displaced_worker_high_rent",
               "young_worker_retraining_rebound"
             ],
+            "matched_scenarios": [
+              "single_adult_displaced_worker_high_rent",
+              "young_worker_retraining_rebound"
+            ],
+            "not_population_estimate": true,
+            "representative_of_real_population": false,
             "representativeness_warning": true,
             "scenario_count": 2,
+            "subgroup_filter": {},
             "subgroup_id": "all_synthetic_households",
             "subgroup_name": "All Synthetic Households",
+            "synthetic_weight_only": true,
             "total_synthetic_weight": 0.0,
+            "unmatched_scenarios": [],
             "warnings": [
               "Subgroup result is synthetic placeholder-only and not representative."
             ],
@@ -1283,6 +1404,7 @@
             "weighted_high_or_critical_share": null
           }
         ],
+        "synthetic_weight_only": true,
         "total_synthetic_weight": 0.0,
         "warnings": [
           "Weighted distributional aggregation uses synthetic placeholder weights only.",
@@ -1436,7 +1558,7 @@
     }
   ],
   "metadata": {
-    "generated_at": "2026-05-14T05:57:00+00:00",
+    "generated_at": "2026-05-18T09:37:06+00:00",
     "non_claims": [
       "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
       "This is a prototype weighting and subgroup aggregation shell only; it is not a validated distributional model.",

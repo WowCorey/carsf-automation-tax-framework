@@ -185,6 +185,12 @@ The V1.5 release-candidate pack requires ongoing maintenance before any external
 
 No calibration has occurred because of the release-candidate pack. It is not legal advice, tax advice, ATO guidance, Treasury modelling, economic validation, welfare advice, statistical validation, compliance scoring, enforcement, operational readiness, legal sufficiency, legislative readiness, a readiness score, or an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.
 
+## External Review Attack Pack Calibration Boundary
+
+The external review attack pack adds challenge questions and required external-input prompts only. It does not mean external review has been completed, does not mean approval has been granted, does not mean validation has occurred, is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, and does not modify firm-level CARSF liability.
+
+Attack-pack prompts should be treated as a calibration and review to-do list. They do not calibrate formula values, sector schedules, behavioural pathways, administrative workflows, household outputs, fiscal outputs, or legal architecture placeholders.
+
 ## Expanded Sector Schedule Calibration
 
 The expanded prototype sector schedules require future calibration before any operative schedule or sector comparison could be claimed:

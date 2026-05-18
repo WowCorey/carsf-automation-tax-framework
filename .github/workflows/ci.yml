@@ -65,6 +65,9 @@ jobs:
       - name: Run V1.5 release candidate pack
         run: python scripts/run_v1_5_release_candidate_pack.py
 
+      - name: Run external review attack pack
+        run: python scripts/run_external_review_attack_pack.py
+
       - name: Run mock evidence workflow
         run: python scripts/run_evidence_workflow.py
 

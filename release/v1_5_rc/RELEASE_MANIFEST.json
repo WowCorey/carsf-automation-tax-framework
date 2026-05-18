@@ -13,12 +13,26 @@
     "REPORT_MAP.md",
     "CALIBRATION_BLOCKERS.md",
     "NON_CLAIM_BOUNDARIES.md",
-    "EXTERNAL_REVIEW_ROUTING.md"
+    "EXTERNAL_REVIEW_ROUTING.md",
+    "attack_pack/ATTACK_PACK_OVERVIEW.md",
+    "attack_pack/REPORT_ATTACK_MATRIX.md",
+    "attack_pack/LAYER_ATTACK_MATRIX.md",
+    "attack_pack/BOUNDARY_CHECKS.md"
   ],
   "generated_reports": [
     "reports/v1_5_release_candidate_pack.md",
-    "reports/v1_5_release_candidate_pack.json"
+    "reports/v1_5_release_candidate_pack.json",
+    "reports/external_review_attack_pack.md",
+    "reports/external_review_attack_pack.json"
   ],
+  "attack_pack_summary": {
+    "review_tracks": 12,
+    "review_completed": false,
+    "approval_claimed": false,
+    "validation_claimed": false,
+    "readiness_score_created": false,
+    "firm_level_liability_logic_modified": false
+  },
   "summary_flags": {
     "real_data_used": false,
     "readiness_score_created": false,

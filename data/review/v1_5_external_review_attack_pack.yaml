@@ -1,0 +1,1389 @@
+attack_pack_id: carsf_v1_5_external_review_attack_pack
+attack_pack_name: CARSF V1.5 External Review Attack Pack
+status: prototype_external_review_attack_pack_only
+non_claims:
+  - This is an attack pack for external review. It does not mean external review has been completed, does not mean approval has been granted, does not mean validation has occurred, is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not official status, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.
+  - The attack pack only structures questions, challenges, failure modes, boundary checks, and review routes for external reviewers.
+  - Challenge severity labels are not risk scores, not validation outcomes, not approval statuses, and not readiness ratings.
+
+x_common_non_claims: &common_non_claims
+  - This attack track does not mean external review has been completed, does not mean approval has been granted, and does not mean validation has occurred.
+  - It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, and does not modify firm-level CARSF liability.
+x_common_must_not: &common_must_not
+  - Do not infer completed external review.
+  - Do not infer approval, validation, operational readiness, legal sufficiency, or official endorsement.
+  - Do not infer that any output determines actual tax payable.
+  - Do not infer use of taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data.
+  - Do not infer any firm-level CARSF liability change.
+x_common_inputs:
+  - &input_assumptions Independent review memo with assumptions challenged.
+  - &input_trace Source-report trace from manifest entry to generated report.
+  - &input_boundary Non-claim boundary check against the relevant report.
+  - &input_blockers Calibration blocker list for the layer.
+  - &input_no_validation External reviewer note separating challenge from validation.
+x_common_questions:
+  - &q_overclaim
+    question_id: common_overclaim_boundary
+    question: Could a reader overread this layer as more than a private prototype?
+    attack_category: overclaiming_risk
+    target_layers: [release_candidate_pack, executive_dashboard, legislative_architecture]
+    target_reports: [reports/v1_5_release_candidate_pack.md, reports/executive_dashboard.md, reports/legislative_architecture.md]
+    why_it_matters: The release materials are broad enough to be quoted without the surrounding caveats.
+    what_would_fail: Any wording that implies completed review, approval, validation, readiness, government endorsement, or legal adequacy.
+    required_evidence_or_review: Red-team language review and explicit non-claim retention.
+    severity_label: critical_blocker
+    must_not_be_treated_as_validation: true
+  - &q_calibration
+    question_id: common_calibration_gap
+    question: Are calibration blockers visible before numerical outputs are interpreted?
+    attack_category: calibration_gap
+    target_layers: [core_formula_model, sector_schedules, uncertainty_ranges, calibration_shell]
+    target_reports: [reports/example_results.md, reports/sector_schedule_expansion.md, reports/uncertainty_ranges.md, reports/calibration_requirements.md]
+    why_it_matters: Placeholder values can look precise even when no external calibration has occurred.
+    what_would_fail: Any report path where placeholders are easier to see than the missing calibration basis.
+    required_evidence_or_review: Calibration-methods review, source-data plan, and blocker prominence review.
+    severity_label: material_issue
+    must_not_be_treated_as_validation: true
+  - &q_real_data
+    question_id: common_real_data_boundary
+    question: Does any path imply taxpayer-level, firm-level, industry, welfare, or government data was used?
+    attack_category: data_access_gap
+    target_layers: [secure_ingestion, repo_guardrails, household_weighting, household_distributional]
+    target_reports: [reports/secure_ingestion_controls.md, reports/repo_guardrails.md, reports/household_weighting.md, reports/distributional_scenarios.md]
+    why_it_matters: The repository must remain synthetic-only and data-free.
+    what_would_fail: Any committed artefact that looks like real evidence, restricted data, or government microdata.
+    required_evidence_or_review: Repository guardrail review, secure-ingestion review, and privacy review.
+    severity_label: critical_blocker
+    must_not_be_treated_as_validation: true
+  - &q_false_precision
+    question_id: common_false_precision
+    question: Do ranges, bands, or matrices create false precision?
+    attack_category: false_precision_gap
+    target_layers: [sector_stress_matrix, behavioural_response, uncertainty_ranges, reviewed_scenarios]
+    target_reports: [reports/sector_stress_matrix.md, reports/behavioural_response_simulation.md, reports/uncertainty_ranges.md, reports/reviewed_scenarios.md]
+    why_it_matters: Deterministic bands and synthetic ranges are review aids only.
+    what_would_fail: Any phrasing that turns placeholder bands into empirical findings, forecasts, or confidence claims.
+    required_evidence_or_review: Statistical, economic, and red-team review of band language.
+    severity_label: material_issue
+    must_not_be_treated_as_validation: true
+  - &q_manifest_drift
+    question_id: common_manifest_drift
+    question: Do manifests, reports, docs, runners, and CI steps refer to the same artefacts?
+    attack_category: manifest_drift_gap
+    target_layers: [executive_dashboard, release_candidate_pack, repo_guardrails]
+    target_reports: [reports/executive_dashboard.md, reports/v1_5_release_candidate_pack.md, reports/repo_guardrails.md]
+    why_it_matters: Stale manifests make the release package misleading even when models are unchanged.
+    what_would_fail: Any missing report, untracked runner, stale document path, or CI ordering mismatch.
+    required_evidence_or_review: Technical manifest trace and CI review.
+    severity_label: material_issue
+    must_not_be_treated_as_validation: true
+  - &q_power_boundary
+    question_id: common_power_boundary
+    question: Could evidence, workflow, or architecture language be mistaken for a real power or process?
+    attack_category: administrative_power_gap
+    target_layers: [administrative_workflow, legislative_architecture, evidence_workflow]
+    target_reports: [reports/administrative_compliance_workflow.md, reports/legislative_architecture.md, reports/mock_evidence_workflow.md]
+    why_it_matters: The prototype must not imply notices, penalties, powers, enforcement, or official administrative action.
+    what_would_fail: Any path that reads like operative law, a statutory notice, enforcement step, penalty, or endorsed administrative process.
+    required_evidence_or_review: Legal, ATO-methods, administrative-law, and Parliamentary Counsel review.
+    severity_label: locked_until_external_review
+    must_not_be_treated_as_validation: true
+x_common_failures:
+  - &f_overclaim
+    failure_id: common_failure_overclaim
+    failure_mode: Non-claim warnings are less prominent than prototype outputs.
+    affected_layers: [release_candidate_pack, executive_dashboard]
+    affected_reports: [reports/v1_5_release_candidate_pack.md, reports/executive_dashboard.md]
+    boundary_at_risk: Reader misinterpretation.
+    required_follow_up: Increase warning prominence and add report-specific caveats.
+    severity_label: material_issue
+    not_a_finding_of_actual_error: true
+  - &f_missing_blocker
+    failure_id: common_failure_missing_blocker
+    failure_mode: A report omits the blocker that controls interpretation.
+    affected_layers: [calibration_shell, sector_schedules, uncertainty_ranges]
+    affected_reports: [reports/calibration_requirements.md, reports/sector_schedule_expansion.md, reports/uncertainty_ranges.md]
+    boundary_at_risk: Calibration gap.
+    required_follow_up: Add blocker to the source manifest and generated report.
+    severity_label: critical_blocker
+    not_a_finding_of_actual_error: true
+  - &f_stale_manifest
+    failure_id: common_failure_stale_manifest
+    failure_mode: Manifest and generated report indexes drift apart.
+    affected_layers: [executive_dashboard, release_candidate_pack]
+    affected_reports: [reports/executive_dashboard.md, reports/v1_5_release_candidate_pack.md]
+    boundary_at_risk: Manifest drift.
+    required_follow_up: Regenerate reports and update manifest references.
+    severity_label: material_issue
+    not_a_finding_of_actual_error: true
+
+prototype_layers:
+  - release_candidate_pack
+  - core_formula_model
+  - worked_examples
+  - sector_schedules
+  - sector_schedule_expansion
+  - sector_stress_matrix
+  - behavioural_response
+  - administrative_workflow
+  - legislative_architecture
+  - executive_dashboard
+  - evidence_workflow
+  - secure_ingestion
+  - repo_guardrails
+  - investment_incidence
+  - fiscal_trajectory
+  - transition_funding
+  - payment_interactions
+  - household_distributional
+  - household_weighting
+  - uncertainty_ranges
+  - reviewed_scenarios
+  - calibration_shell
+  - working_paper
+  - status_risks_docs
+generated_reports:
+  - reports/v1_5_release_candidate_pack.md
+  - reports/v1_5_release_candidate_pack.json
+  - reports/example_results.md
+  - reports/example_results.json
+  - reports/grouped_entity_results.md
+  - reports/grouped_entity_results.json
+  - reports/transfer_pricing_results.md
+  - reports/transfer_pricing_results.json
+  - reports/evidence_requirements.md
+  - reports/evidence_requirements.json
+  - reports/calibration_requirements.md
+  - reports/calibration_requirements.json
+  - reports/sector_schedule_expansion.md
+  - reports/sector_schedule_expansion.json
+  - reports/sector_stress_matrix.md
+  - reports/sector_stress_matrix.json
+  - reports/behavioural_response_simulation.md
+  - reports/behavioural_response_simulation.json
+  - reports/administrative_compliance_workflow.md
+  - reports/administrative_compliance_workflow.json
+  - reports/legislative_architecture.md
+  - reports/legislative_architecture.json
+  - reports/executive_dashboard.md
+  - reports/executive_dashboard.json
+  - reports/mock_evidence_workflow.md
+  - reports/mock_evidence_workflow.json
+  - reports/secure_ingestion_controls.md
+  - reports/secure_ingestion_controls.json
+  - reports/repo_guardrails.md
+  - reports/repo_guardrails.json
+  - reports/investment_guardrails.md
+  - reports/investment_guardrails.json
+  - reports/fiscal_trajectory.md
+  - reports/fiscal_trajectory.json
+  - reports/transition_funding.md
+  - reports/transition_funding.json
+  - reports/payment_interactions.md
+  - reports/payment_interactions.json
+  - reports/distributional_scenarios.md
+  - reports/distributional_scenarios.json
+  - reports/household_weighting.md
+  - reports/household_weighting.json
+  - reports/uncertainty_ranges.md
+  - reports/uncertainty_ranges.json
+  - reports/reviewed_scenarios.md
+  - reports/reviewed_scenarios.json
+attack_categories:
+  - overclaiming_risk
+  - hidden_assumption_risk
+  - calibration_gap
+  - legal_power_gap
+  - tax_law_gap
+  - administrative_power_gap
+  - privacy_secrecy_gap
+  - data_access_gap
+  - statistical_validity_gap
+  - economic_incidence_gap
+  - welfare_interaction_gap
+  - behavioural_elasticity_gap
+  - sector_attribution_gap
+  - transfer_pricing_gap
+  - software_intangible_gap
+  - open_source_ai_gap
+  - evidence_sufficiency_gap
+  - report_staleness_gap
+  - manifest_drift_gap
+  - guardrail_coverage_gap
+  - false_precision_gap
+  - reader_misinterpretation_gap
+
+review_tracks:
+  - track_id: policy_review
+    track_name: Policy Reviewer
+    reviewer_type: policy_reviewer
+    purpose: Attack policy framing, reader overread, public-language risk, equity gaps, and transition framing.
+    inspect_first: [release/v1_5_rc/RELEASE_NOTES.md, release/v1_5_rc/REVIEWER_BRIEFING.md, reports/v1_5_release_candidate_pack.md]
+    relevant_layers: [release_candidate_pack, executive_dashboard, working_paper, status_risks_docs, transition_funding, payment_interactions]
+    relevant_reports: [reports/v1_5_release_candidate_pack.md, reports/executive_dashboard.md, reports/transition_funding.md, reports/payment_interactions.md]
+    core_attack_questions:
+      - *q_overclaim
+      - *q_calibration
+      - *q_real_data
+      - *q_false_precision
+      - *q_manifest_drift
+      - *q_power_boundary
+      - question_id: policy_public_language
+        question: Could public-facing language make the prototype sound like final policy design?
+        attack_category: reader_misinterpretation_gap
+        target_layers: [working_paper, release_candidate_pack]
+        target_reports: [reports/v1_5_release_candidate_pack.md, reports/executive_dashboard.md]
+        why_it_matters: Reviewers need to see the prototype as critique-ready, not settled policy.
+        what_would_fail: Language that suppresses uncertainty, blockers, or external-review needs.
+        required_evidence_or_review: Policy and communications review of release material.
+        severity_label: material_issue
+        must_not_be_treated_as_validation: true
+      - question_id: policy_social_licence_gap
+        question: Are social licence, equity, transition, and business-impact questions underdeveloped?
+        attack_category: hidden_assumption_risk
+        target_layers: [transition_funding, payment_interactions, household_distributional]
+        target_reports: [reports/transition_funding.md, reports/payment_interactions.md, reports/distributional_scenarios.md]
+        why_it_matters: A prototype can look coherent while omitting policy feasibility concerns.
+        what_would_fail: Missing notes on distributional, business, or transition-design uncertainty.
+        required_evidence_or_review: Policy review and stakeholder impact review outside this repo.
+        severity_label: material_issue
+        must_not_be_treated_as_validation: true
+      - question_id: policy_blocker_prominence
+        question: Are calibration and review blockers visible enough in the reading path?
+        attack_category: overclaiming_risk
+        target_layers: [executive_dashboard, release_candidate_pack]
+        target_reports: [reports/executive_dashboard.md, reports/v1_5_release_candidate_pack.md]
+        why_it_matters: Weak blocker prominence can make a prototype look more complete than it is.
+        what_would_fail: A reader can reach outputs before seeing hard limitations.
+        required_evidence_or_review: Navigation review and hostile-reader review.
+        severity_label: material_issue
+        must_not_be_treated_as_validation: true
+      - question_id: policy_coherence_overstatement
+        question: Does the release pack overstate stack coherence across unrelated review layers?
+        attack_category: hidden_assumption_risk
+        target_layers: [release_candidate_pack, executive_dashboard]
+        target_reports: [reports/v1_5_release_candidate_pack.md, reports/executive_dashboard.md]
+        why_it_matters: Consolidation can imply completion when it only shows navigation.
+        what_would_fail: Missing caveats that layer consistency has not been externally reviewed.
+        required_evidence_or_review: Independent policy synthesis review.
+        severity_label: review_note
+        must_not_be_treated_as_validation: true
+    layer_attack_questions: [Attack reader-facing claim discipline, Attack calibration-blocker visibility, Attack transition and equity framing]
+    report_attack_questions: [Can the report be quoted out of context, Does the report front-load caveats, Are blockers tied to reports]
+    required_external_inputs: [*input_assumptions, *input_trace, *input_boundary, *input_blockers, *input_no_validation, social licence review, transition policy review, business-impact review, stakeholder challenge memo, equity framing review]
+    failure_modes:
+      - *f_overclaim
+      - *f_missing_blocker
+      - *f_stale_manifest
+      - failure_id: policy_failure_final_design_tone
+        failure_mode: Release text sounds like settled design rather than challenge material.
+        affected_layers: [working_paper, release_candidate_pack]
+        affected_reports: [reports/v1_5_release_candidate_pack.md, reports/executive_dashboard.md]
+        boundary_at_risk: Reader overread.
+        required_follow_up: Reframe as critique-ready and add stronger blockers.
+        severity_label: material_issue
+        not_a_finding_of_actual_error: true
+      - failure_id: policy_failure_transition_gap
+        failure_mode: Transition and equity constraints are not visible near fiscal or payment outputs.
+        affected_layers: [transition_funding, payment_interactions, household_distributional]
+        affected_reports: [reports/transition_funding.md, reports/payment_interactions.md, reports/distributional_scenarios.md]
+        boundary_at_risk: Hidden assumption.
+        required_follow_up: Add policy-risk cross-links and reviewer prompts.
+        severity_label: material_issue
+        not_a_finding_of_actual_error: true
+    must_not_infer: *common_must_not
+    locked_until_review_items: [public-facing policy claims, final policy design language, transition-policy feasibility, equity conclusions, stakeholder acceptability]
+    recommended_output_format: Findings table with overclaim risk, missing policy evidence, required external review, and suggested wording change.
+    non_claims: *common_non_claims
+
+  - track_id: technical_review
+    track_name: Technical Reviewer
+    reviewer_type: technical_reviewer
+    purpose: Attack manifests, runners, generated artefacts, CI coverage, fail-closed tests, and guardrail bypasses.
+    inspect_first: [data/release/v1_5_release_manifest.yaml, data/dashboard/executive_dashboard_manifest.yaml, .github/workflows/ci.yml]
+    relevant_layers: [repo_guardrails, executive_dashboard, release_candidate_pack, evidence_workflow, secure_ingestion]
+    relevant_reports: [reports/repo_guardrails.md, reports/executive_dashboard.md, reports/v1_5_release_candidate_pack.md, reports/secure_ingestion_controls.md]
+    core_attack_questions:
+      - *q_overclaim
+      - *q_calibration
+      - *q_real_data
+      - *q_false_precision
+      - *q_manifest_drift
+      - *q_power_boundary
+      - question_id: technical_ci_runner_gap
+        question: Does CI run every report runner in the intended order?
+        attack_category: guardrail_coverage_gap
+        target_layers: [repo_guardrails, release_candidate_pack]
+        target_reports: [reports/repo_guardrails.md, reports/v1_5_release_candidate_pack.md]
+        why_it_matters: Generated artefacts can drift if a runner is outside CI.
+        what_would_fail: Missing CI step or report runner after its dependencies.
+        required_evidence_or_review: CI workflow trace and local runner reproduction.
+        severity_label: material_issue
+        must_not_be_treated_as_validation: true
+      - question_id: technical_fail_closed
+        question: Do invalid manifests and report paths fail closed?
+        attack_category: guardrail_coverage_gap
+        target_layers: [executive_dashboard, release_candidate_pack, repo_guardrails]
+        target_reports: [reports/executive_dashboard.md, reports/v1_5_release_candidate_pack.md, reports/repo_guardrails.md]
+        why_it_matters: A packaging layer should reject stale or missing references.
+        what_would_fail: Mutated missing paths pass tests or runners.
+        required_evidence_or_review: Negative tests for missing reports, layers, documents, and warnings.
+        severity_label: critical_blocker
+        must_not_be_treated_as_validation: true
+      - question_id: technical_allowlist_scope
+        question: Are guardrail allowlists too broad for release and attack-pack documents?
+        attack_category: guardrail_coverage_gap
+        target_layers: [repo_guardrails, secure_ingestion]
+        target_reports: [reports/repo_guardrails.md, reports/secure_ingestion_controls.md]
+        why_it_matters: Documentation allowlists can accidentally hide sensitive-marker misuse.
+        what_would_fail: A non-document artefact can pass under a documentation exception.
+        required_evidence_or_review: Guardrail fixture review and path allowlist review.
+        severity_label: material_issue
+        must_not_be_treated_as_validation: true
+      - question_id: technical_report_json_trace
+        question: Does each Markdown report trace to its JSON payload and runner?
+        attack_category: report_staleness_gap
+        target_layers: [executive_dashboard, release_candidate_pack]
+        target_reports: [reports/executive_dashboard.md, reports/v1_5_release_candidate_pack.md]
+        why_it_matters: A reviewer needs reproducible paths from source manifest to generated report.
+        what_would_fail: Report text diverges from JSON or source manifest.
+        required_evidence_or_review: Runner output diff and generated report trace.
+        severity_label: material_issue
+        must_not_be_treated_as_validation: true
+    layer_attack_questions: [Attack manifest-reference drift, Attack CI runner coverage, Attack fail-closed behavior]
+    report_attack_questions: [Does the Markdown match JSON, Is the runner in CI, Is the report regenerated]
+    required_external_inputs: [*input_assumptions, *input_trace, *input_boundary, *input_blockers, *input_no_validation, CI run log, manifest diff review, guardrail fixture review, report regeneration trace]
+    failure_modes:
+      - *f_overclaim
+      - *f_missing_blocker
+      - *f_stale_manifest
+      - failure_id: technical_failure_ci_gap
+        failure_mode: New runner is absent from CI or ordered before its dependencies.
+        affected_layers: [release_candidate_pack, repo_guardrails]
+        affected_reports: [reports/v1_5_release_candidate_pack.md, reports/repo_guardrails.md]
+        boundary_at_risk: Guardrail coverage.
+        required_follow_up: Add CI step and ordering test.
+        severity_label: critical_blocker
+        not_a_finding_of_actual_error: true
+      - failure_id: technical_failure_report_drift
+        failure_mode: Report text and JSON payload disagree.
+        affected_layers: [executive_dashboard, release_candidate_pack]
+        affected_reports: [reports/executive_dashboard.md, reports/v1_5_release_candidate_pack.md]
+        boundary_at_risk: Report staleness.
+        required_follow_up: Regenerate and add stable test assertions.
+        severity_label: material_issue
+        not_a_finding_of_actual_error: true
+    must_not_infer: *common_must_not
+    locked_until_review_items: [CI coverage completeness, manifest drift controls, guardrail allowlists, generated-report traceability, fail-closed mutation coverage]
+    recommended_output_format: Technical findings with file path, reproduction command, expected fail-closed behavior, and required test.
+    non_claims: *common_non_claims
+
+  - track_id: legal_review
+    track_name: Legal Reviewer
+    reviewer_type: legal_reviewer
+    purpose: Attack legal overread, powers, safeguards, review placeholders, rights, obligations, penalties, and legal-sufficiency language.
+    inspect_first: [reports/legislative_architecture.md, docs/legislative_architecture.md, release/v1_5_rc/NON_CLAIM_BOUNDARIES.md]
+    relevant_layers: [legislative_architecture, administrative_workflow, evidence_workflow, release_candidate_pack]
+    relevant_reports: [reports/legislative_architecture.md, reports/administrative_compliance_workflow.md, reports/mock_evidence_workflow.md, reports/v1_5_release_candidate_pack.md]
+    core_attack_questions:
+      - *q_overclaim
+      - *q_calibration
+      - *q_real_data
+      - *q_false_precision
+      - *q_manifest_drift
+      - *q_power_boundary
+      - question_id: legal_powers_overread
+        question: Could evidence placeholders be read as powers, notices, or obligations?
+        attack_category: legal_power_gap
+        target_layers: [legislative_architecture, evidence_workflow, administrative_workflow]
+        target_reports: [reports/legislative_architecture.md, reports/mock_evidence_workflow.md, reports/administrative_compliance_workflow.md]
+        why_it_matters: The skeleton must stay non-operative and avoid legal effect.
+        what_would_fail: Any provision placeholder that looks like a legal test, binding-sounding request, or obligation.
+        required_evidence_or_review: Legal review, administrative-law review, and drafting counsel review.
+        severity_label: locked_until_external_review
+        must_not_be_treated_as_validation: true
+      - question_id: legal_safeguard_gap
+        question: Are review rights, reasons, privacy, secrecy, and administrative protections only placeholders?
+        attack_category: legal_power_gap
+        target_layers: [legislative_architecture, administrative_workflow]
+        target_reports: [reports/legislative_architecture.md, reports/administrative_compliance_workflow.md]
+        why_it_matters: Placeholder safeguards cannot be treated as real legal protections.
+        what_would_fail: Any language suggesting real rights, appeals, objections, or statutory safeguards exist.
+        required_evidence_or_review: Administrative-law and privacy/secrecy review.
+        severity_label: critical_blocker
+        must_not_be_treated_as_validation: true
+      - question_id: legal_constitutional_gap
+        question: Are constitutional and taxing-power assumptions explicitly unresolved?
+        attack_category: legal_power_gap
+        target_layers: [legislative_architecture, working_paper]
+        target_reports: [reports/legislative_architecture.md, reports/v1_5_release_candidate_pack.md]
+        why_it_matters: Architecture mapping is not constitutional analysis.
+        what_would_fail: Any implication that constitutional review has occurred.
+        required_evidence_or_review: External constitutional and tax-law review.
+        severity_label: locked_until_external_review
+        must_not_be_treated_as_validation: true
+      - question_id: legal_drafting_boundary
+        question: Does any text cross from architecture into operative drafting?
+        attack_category: legal_power_gap
+        target_layers: [legislative_architecture]
+        target_reports: [reports/legislative_architecture.md]
+        why_it_matters: Build 21 intentionally reserved operative drafting for counsel.
+        what_would_fail: Mandatory wording, legal tests, rights, obligations, powers, penalties, or commencement effect.
+        required_evidence_or_review: Parliamentary Counsel and legal drafting review.
+        severity_label: locked_until_external_review
+        must_not_be_treated_as_validation: true
+    layer_attack_questions: [Attack power implication, Attack safeguard placeholders, Attack legal drafting boundary]
+    report_attack_questions: [Does architecture read as law, Are rights placeholders clear, Are powers explicitly absent]
+    required_external_inputs: [*input_assumptions, *input_trace, *input_boundary, *input_blockers, *input_no_validation, legal review, administrative-law review, constitutional review, Parliamentary Counsel review, privacy/secrecy legal review]
+    failure_modes:
+      - *f_overclaim
+      - *f_missing_blocker
+      - *f_stale_manifest
+      - failure_id: legal_failure_operative_tone
+        failure_mode: A placeholder reads like operative drafting.
+        affected_layers: [legislative_architecture]
+        affected_reports: [reports/legislative_architecture.md]
+        boundary_at_risk: Legal power gap.
+        required_follow_up: Rewrite as conceptual location only and lock for counsel review.
+        severity_label: locked_until_external_review
+        not_a_finding_of_actual_error: true
+      - failure_id: legal_failure_safeguard_overread
+        failure_mode: Safeguard placeholders could be mistaken for real review protections.
+        affected_layers: [legislative_architecture, administrative_workflow]
+        affected_reports: [reports/legislative_architecture.md, reports/administrative_compliance_workflow.md]
+        boundary_at_risk: Administrative-law safeguard gap.
+        required_follow_up: Add stronger non-operative warnings and legal-review blocker.
+        severity_label: critical_blocker
+        not_a_finding_of_actual_error: true
+    must_not_infer: *common_must_not
+    locked_until_review_items: [constitutional basis, taxing power, evidence powers, review rights, operative drafting]
+    recommended_output_format: Legal issue list separating power implication, drafting risk, safeguard gap, and required counsel review.
+    non_claims: *common_non_claims
+
+  - track_id: tax_review
+    track_name: Tax Reviewer
+    reviewer_type: tax_reviewer
+    purpose: Attack AAVA, deductibility, transfer-pricing, grouped-entity, safe-harbour, cap, credit, and tax-base ambiguities.
+    inspect_first: [reports/example_results.md, reports/transfer_pricing_results.md, reports/sector_schedule_expansion.md]
+    relevant_layers: [core_formula_model, worked_examples, sector_schedules, administrative_workflow, legislative_architecture]
+    relevant_reports: [reports/example_results.md, reports/transfer_pricing_results.md, reports/grouped_entity_results.md, reports/sector_schedule_expansion.md]
+    core_attack_questions:
+      - *q_overclaim
+      - *q_calibration
+      - *q_real_data
+      - *q_false_precision
+      - *q_manifest_drift
+      - *q_power_boundary
+      - question_id: tax_aava_deductibility
+        question: Are AAVA and deductibility treatments clearly unresolved?
+        attack_category: tax_law_gap
+        target_layers: [core_formula_model, administrative_workflow]
+        target_reports: [reports/example_results.md, reports/administrative_compliance_workflow.md]
+        why_it_matters: AAVA previews could be mistaken for a settled tax base.
+        what_would_fail: Any language that turns a deductibility preview into a tax-law conclusion.
+        required_evidence_or_review: Tax counsel and Treasury methods review.
+        severity_label: critical_blocker
+        must_not_be_treated_as_validation: true
+      - question_id: tax_transfer_pricing
+        question: Do transfer-pricing and offshore attribution previews avoid addback conclusions?
+        attack_category: transfer_pricing_gap
+        target_layers: [worked_examples, administrative_workflow]
+        target_reports: [reports/transfer_pricing_results.md, reports/administrative_compliance_workflow.md]
+        why_it_matters: Related-party examples are non-operative and cannot imply a tax adjustment.
+        what_would_fail: Any wording that implies a real addback or accepted attribution method.
+        required_evidence_or_review: International tax and transfer-pricing review.
+        severity_label: locked_until_external_review
+        must_not_be_treated_as_validation: true
+      - question_id: tax_grouping
+        question: Are grouped-entity previews clearly non-legal and non-aggregation for real tax?
+        attack_category: tax_law_gap
+        target_layers: [worked_examples, administrative_workflow]
+        target_reports: [reports/grouped_entity_results.md, reports/administrative_compliance_workflow.md]
+        why_it_matters: Grouped-entity review flags cannot become legal grouping rules.
+        what_would_fail: Any implied real grouping, attribution, or liability aggregation.
+        required_evidence_or_review: Legal and tax grouping review.
+        severity_label: critical_blocker
+        must_not_be_treated_as_validation: true
+      - question_id: tax_caps_safe_harbours
+        question: Are cap, credit, and safe-harbour values explicitly placeholders?
+        attack_category: calibration_gap
+        target_layers: [core_formula_model, sector_schedules]
+        target_reports: [reports/example_results.md, reports/sector_schedule_expansion.md]
+        why_it_matters: Placeholder thresholds can look like policy settings.
+        what_would_fail: Missing cap, credit, FRV, OPFTE, or safe-harbour non-claims.
+        required_evidence_or_review: Tax, Treasury, ATO methods, and calibration review.
+        severity_label: material_issue
+        must_not_be_treated_as_validation: true
+    layer_attack_questions: [Attack AAVA tax-base ambiguity, Attack transfer-pricing overread, Attack grouping and safe-harbour assumptions]
+    report_attack_questions: [Does a report imply a tax amount, Does it imply addbacks, Does it imply legal grouping]
+    required_external_inputs: [*input_assumptions, *input_trace, *input_boundary, *input_blockers, *input_no_validation, tax counsel review, transfer-pricing review, AAVA deductibility review, grouping-law review, safe-harbour threshold review]
+    failure_modes:
+      - *f_overclaim
+      - *f_missing_blocker
+      - *f_stale_manifest
+      - failure_id: tax_failure_addback_overread
+        failure_mode: Transfer-pricing preview reads like an actual addback mechanism.
+        affected_layers: [worked_examples, administrative_workflow]
+        affected_reports: [reports/transfer_pricing_results.md, reports/administrative_compliance_workflow.md]
+        boundary_at_risk: Tax law gap.
+        required_follow_up: Reword preview as challenge-only and add tax-review blocker.
+        severity_label: critical_blocker
+        not_a_finding_of_actual_error: true
+      - failure_id: tax_failure_tax_base_overread
+        failure_mode: AAVA or cap output appears as settled tax-base treatment.
+        affected_layers: [core_formula_model]
+        affected_reports: [reports/example_results.md]
+        boundary_at_risk: Tax base ambiguity.
+        required_follow_up: Strengthen AAVA and deductibility caveats.
+        severity_label: critical_blocker
+        not_a_finding_of_actual_error: true
+    must_not_infer: *common_must_not
+    locked_until_review_items: [AAVA deductibility, transfer-pricing attribution, legal grouping, safe-harbour thresholds, cap and credit settings]
+    recommended_output_format: Tax issue register with affected formula, relevant report, tax-law gap, and required external review.
+    non_claims: *common_non_claims
+
+  - track_id: ato_methods_review
+    track_name: ATO Methods Reviewer
+    reviewer_type: ato_methods_reviewer
+    purpose: Attack administrative workflow overread, evidence bundles, queue labels, audit-logic risk, and operational boundary discipline.
+    inspect_first: [reports/administrative_compliance_workflow.md, reports/mock_evidence_workflow.md, reports/secure_ingestion_controls.md]
+    relevant_layers: [administrative_workflow, evidence_workflow, secure_ingestion, behavioural_response]
+    relevant_reports: [reports/administrative_compliance_workflow.md, reports/mock_evidence_workflow.md, reports/secure_ingestion_controls.md, reports/behavioural_response_simulation.md]
+    core_attack_questions:
+      - *q_overclaim
+      - *q_calibration
+      - *q_real_data
+      - *q_false_precision
+      - *q_manifest_drift
+      - *q_power_boundary
+      - question_id: ato_workflow_overread
+        question: Could queue labels be mistaken for operational workflow?
+        attack_category: administrative_power_gap
+        target_layers: [administrative_workflow]
+        target_reports: [reports/administrative_compliance_workflow.md]
+        why_it_matters: Queue names are synthetic routing labels only.
+        what_would_fail: Any text that sounds like a real case path, audit step, notice path, or enforcement action.
+        required_evidence_or_review: ATO methods and administrative design review.
+        severity_label: locked_until_external_review
+        must_not_be_treated_as_validation: true
+      - question_id: ato_evidence_bundle_overread
+        question: Could evidence request bundles be mistaken for real information requests?
+        attack_category: evidence_sufficiency_gap
+        target_layers: [evidence_workflow, administrative_workflow]
+        target_reports: [reports/mock_evidence_workflow.md, reports/administrative_compliance_workflow.md]
+        why_it_matters: Evidence bundles are mock-only and cannot imply powers or sufficiency.
+        what_would_fail: Any evidence label that looks sufficient for administration or powers.
+        required_evidence_or_review: ATO methods, legal, privacy, and evidence-governance review.
+        severity_label: critical_blocker
+        must_not_be_treated_as_validation: true
+      - question_id: ato_compliance_scoring_risk
+        question: Do behavioural flags avoid becoming compliance scoring?
+        attack_category: administrative_power_gap
+        target_layers: [behavioural_response, administrative_workflow]
+        target_reports: [reports/behavioural_response_simulation.md, reports/administrative_compliance_workflow.md]
+        why_it_matters: Response pathways are synthetic challenge scenarios only.
+        what_would_fail: Any score, status, or label that reads as compliance assessment.
+        required_evidence_or_review: ATO methods and red-team review.
+        severity_label: critical_blocker
+        must_not_be_treated_as_validation: true
+      - question_id: ato_notice_power_boundary
+        question: Are notices, powers, penalties, and enforcement explicitly absent?
+        attack_category: administrative_power_gap
+        target_layers: [administrative_workflow, legislative_architecture]
+        target_reports: [reports/administrative_compliance_workflow.md, reports/legislative_architecture.md]
+        why_it_matters: The repo must not imply administrative authority.
+        what_would_fail: Any command-like wording or implied statutory process.
+        required_evidence_or_review: Legal and ATO methods review.
+        severity_label: locked_until_external_review
+        must_not_be_treated_as_validation: true
+    layer_attack_questions: [Attack queue labels, Attack evidence request language, Attack compliance-score boundary]
+    report_attack_questions: [Does the report imply audit logic, Does it imply information powers, Does it imply case action]
+    required_external_inputs: [*input_assumptions, *input_trace, *input_boundary, *input_blockers, *input_no_validation, ATO methods review, administrative design review, legal powers review, evidence governance review, workflow language red-team]
+    failure_modes:
+      - *f_overclaim
+      - *f_missing_blocker
+      - *f_stale_manifest
+      - failure_id: ato_failure_queue_overread
+        failure_mode: Queue label looks like a real administrative queue.
+        affected_layers: [administrative_workflow]
+        affected_reports: [reports/administrative_compliance_workflow.md]
+        boundary_at_risk: Operational overread.
+        required_follow_up: Rename or caveat queue labels as synthetic review labels.
+        severity_label: critical_blocker
+        not_a_finding_of_actual_error: true
+      - failure_id: ato_failure_evidence_power
+        failure_mode: Evidence bundle text looks like a real information request.
+        affected_layers: [evidence_workflow, administrative_workflow]
+        affected_reports: [reports/mock_evidence_workflow.md, reports/administrative_compliance_workflow.md]
+        boundary_at_risk: Information-power implication.
+        required_follow_up: Add no-power warning and legal review blocker.
+        severity_label: locked_until_external_review
+        not_a_finding_of_actual_error: true
+    must_not_infer: *common_must_not
+    locked_until_review_items: [workflow queues, evidence bundles, review states, behavioural flags, escalation pathways]
+    recommended_output_format: ATO-methods challenge sheet with overread risk, evidence concern, queue concern, and required methods review.
+    non_claims: *common_non_claims
+
+  - track_id: treasury_methods_review
+    track_name: Treasury Methods Reviewer
+    reviewer_type: treasury_methods_reviewer
+    purpose: Attack fiscal trajectory, incidence, investment, transition, macro boundary, and costing overread.
+    inspect_first: [reports/fiscal_trajectory.md, reports/investment_guardrails.md, reports/transition_funding.md]
+    relevant_layers: [fiscal_trajectory, investment_incidence, transition_funding, core_formula_model]
+    relevant_reports: [reports/fiscal_trajectory.md, reports/investment_guardrails.md, reports/transition_funding.md, reports/example_results.md]
+    core_attack_questions:
+      - *q_overclaim
+      - *q_calibration
+      - *q_real_data
+      - *q_false_precision
+      - *q_manifest_drift
+      - *q_power_boundary
+      - question_id: treasury_costing_overread
+        question: Could fiscal outputs be mistaken for a costing or revenue estimate?
+        attack_category: economic_incidence_gap
+        target_layers: [fiscal_trajectory, transition_funding]
+        target_reports: [reports/fiscal_trajectory.md, reports/transition_funding.md]
+        why_it_matters: Fiscal trajectory uses placeholders and is not a costing exercise.
+        what_would_fail: Any wording that implies budget forecasting, official costing, or revenue validation.
+        required_evidence_or_review: Treasury methods, fiscal, and PBO-style review outside the repo.
+        severity_label: critical_blocker
+        must_not_be_treated_as_validation: true
+      - question_id: treasury_incidence_gap
+        question: Are incidence and investment assumptions clearly uncalibrated?
+        attack_category: economic_incidence_gap
+        target_layers: [investment_incidence]
+        target_reports: [reports/investment_guardrails.md]
+        why_it_matters: Incidence placeholders cannot support policy burden claims.
+        what_would_fail: Pass-through or deterrence text presented as observed behavior.
+        required_evidence_or_review: Economic and Treasury methods review.
+        severity_label: material_issue
+        must_not_be_treated_as_validation: true
+      - question_id: treasury_transition_interaction
+        question: Are transition funding and revenue capture kept separate from welfare design?
+        attack_category: welfare_interaction_gap
+        target_layers: [transition_funding, payment_interactions]
+        target_reports: [reports/transition_funding.md, reports/payment_interactions.md]
+        why_it_matters: Funding previews must not imply welfare architecture or budget feasibility.
+        what_would_fail: Combined fiscal and welfare outputs without blocker language.
+        required_evidence_or_review: Treasury, DSS/Services Australia policy, and welfare review.
+        severity_label: material_issue
+        must_not_be_treated_as_validation: true
+      - question_id: treasury_macro_boundary
+        question: Are macro, labour-market, pass-through, and revenue-capture assumptions explicitly placeholders?
+        attack_category: hidden_assumption_risk
+        target_layers: [fiscal_trajectory, investment_incidence]
+        target_reports: [reports/fiscal_trajectory.md, reports/investment_guardrails.md]
+        why_it_matters: Macro assumptions are easy to hide inside scenario plumbing.
+        what_would_fail: Hidden rates or behavioural assumptions without calibration blocker.
+        required_evidence_or_review: Treasury methods and economic review.
+        severity_label: material_issue
+        must_not_be_treated_as_validation: true
+    layer_attack_questions: [Attack fiscal overread, Attack incidence assumptions, Attack transition funding boundaries]
+    report_attack_questions: [Does fiscal output look like costing, Are assumptions explicit, Are welfare boundaries clear]
+    required_external_inputs: [*input_assumptions, *input_trace, *input_boundary, *input_blockers, *input_no_validation, Treasury methods review, fiscal costing methods review, incidence study review, macro assumption review, transition funding policy review]
+    failure_modes:
+      - *f_overclaim
+      - *f_missing_blocker
+      - *f_stale_manifest
+      - failure_id: treasury_failure_costing_overread
+        failure_mode: Fiscal trajectory reads like a costing or forecast.
+        affected_layers: [fiscal_trajectory]
+        affected_reports: [reports/fiscal_trajectory.md]
+        boundary_at_risk: Fiscal boundary.
+        required_follow_up: Add costing and forecast non-claims near fiscal tables.
+        severity_label: critical_blocker
+        not_a_finding_of_actual_error: true
+      - failure_id: treasury_failure_incidence_assumption
+        failure_mode: Pass-through or investment response assumptions are too hidden.
+        affected_layers: [investment_incidence]
+        affected_reports: [reports/investment_guardrails.md]
+        boundary_at_risk: Economic incidence gap.
+        required_follow_up: Surface assumptions and external review blockers.
+        severity_label: material_issue
+        not_a_finding_of_actual_error: true
+    must_not_infer: *common_must_not
+    locked_until_review_items: [fiscal trajectory assumptions, revenue capture, pass-through, investment deterrence, transition funding feasibility]
+    recommended_output_format: Treasury-methods blocker table with assumption, report location, missing evidence, and required external method.
+    non_claims: *common_non_claims
+
+  - track_id: privacy_review
+    track_name: Privacy / Secrecy Reviewer
+    reviewer_type: privacy_secrecy_reviewer
+    purpose: Attack synthetic-only controls, secure ingestion, privacy/secrecy classification, retention, redaction, and restricted-data boundaries.
+    inspect_first: [reports/secure_ingestion_controls.md, reports/repo_guardrails.md, docs/privacy_and_secrecy_classification.md]
+    relevant_layers: [secure_ingestion, repo_guardrails, evidence_workflow, household_weighting]
+    relevant_reports: [reports/secure_ingestion_controls.md, reports/repo_guardrails.md, reports/mock_evidence_workflow.md, reports/household_weighting.md]
+    core_attack_questions:
+      - *q_overclaim
+      - *q_calibration
+      - *q_real_data
+      - *q_false_precision
+      - *q_manifest_drift
+      - *q_power_boundary
+      - question_id: privacy_real_data_exclusion
+        question: Can any workflow accidentally permit taxpayer-level, firm-level, welfare, or restricted data?
+        attack_category: privacy_secrecy_gap
+        target_layers: [secure_ingestion, repo_guardrails, evidence_workflow]
+        target_reports: [reports/secure_ingestion_controls.md, reports/repo_guardrails.md, reports/mock_evidence_workflow.md]
+        why_it_matters: The repo must stay synthetic-only.
+        what_would_fail: Any path that accepts, stores, or reports real or restricted data.
+        required_evidence_or_review: Privacy, secrecy, secure ingestion, and repository-control review.
+        severity_label: critical_blocker
+        must_not_be_treated_as_validation: true
+      - question_id: privacy_classification_overread
+        question: Could privacy/secrecy labels be mistaken for formal government markings?
+        attack_category: privacy_secrecy_gap
+        target_layers: [evidence_workflow, administrative_workflow]
+        target_reports: [reports/mock_evidence_workflow.md, reports/administrative_compliance_workflow.md]
+        why_it_matters: Classification helpers are prototype labels only.
+        what_would_fail: Any implication that classification is authoritative or operational.
+        required_evidence_or_review: Privacy/secrecy classification review.
+        severity_label: material_issue
+        must_not_be_treated_as_validation: true
+      - question_id: privacy_retention_iam_absence
+        question: Are redaction, retention, IAM, secure storage, and audit logging limitations explicit?
+        attack_category: privacy_secrecy_gap
+        target_layers: [secure_ingestion, repo_guardrails]
+        target_reports: [reports/secure_ingestion_controls.md, reports/repo_guardrails.md]
+        why_it_matters: Documentation helpers are not a real secure environment.
+        what_would_fail: Any suggestion that repo controls replace external secure systems.
+        required_evidence_or_review: Privacy, cybersecurity, DLP, retention, and IAM review.
+        severity_label: critical_blocker
+        must_not_be_treated_as_validation: true
+      - question_id: privacy_household_overread
+        question: Are household layers explicit that no real household or welfare records are present?
+        attack_category: data_access_gap
+        target_layers: [household_distributional, household_weighting]
+        target_reports: [reports/distributional_scenarios.md, reports/household_weighting.md]
+        why_it_matters: Household outputs can be mistaken for real population evidence.
+        what_would_fail: Any missing warning about synthetic data and no population representation.
+        required_evidence_or_review: Privacy and statistical methods review.
+        severity_label: material_issue
+        must_not_be_treated_as_validation: true
+    layer_attack_questions: [Attack real-data exclusion, Attack privacy label overread, Attack retention and IAM gaps]
+    report_attack_questions: [Does any report imply real data, Are classifications official-looking, Are secure controls overclaimed]
+    required_external_inputs: [*input_assumptions, *input_trace, *input_boundary, *input_blockers, *input_no_validation, privacy impact review, secrecy review, DLP review, secure storage review, retention and IAM review]
+    failure_modes:
+      - *f_overclaim
+      - *f_missing_blocker
+      - *f_stale_manifest
+      - failure_id: privacy_failure_real_data_path
+        failure_mode: A path appears capable of accepting real or restricted data.
+        affected_layers: [secure_ingestion, repo_guardrails]
+        affected_reports: [reports/secure_ingestion_controls.md, reports/repo_guardrails.md]
+        boundary_at_risk: Real data exclusion.
+        required_follow_up: Tighten deny rules and document external-system-only path.
+        severity_label: critical_blocker
+        not_a_finding_of_actual_error: true
+      - failure_id: privacy_failure_official_marking
+        failure_mode: Prototype classification label resembles a formal marking.
+        affected_layers: [evidence_workflow, administrative_workflow]
+        affected_reports: [reports/mock_evidence_workflow.md, reports/administrative_compliance_workflow.md]
+        boundary_at_risk: Classification overread.
+        required_follow_up: Add label caveat and privacy/secrecy review blocker.
+        severity_label: material_issue
+        not_a_finding_of_actual_error: true
+    must_not_infer: *common_must_not
+    locked_until_review_items: [real-data ingestion, privacy classification, secrecy handling, secure storage, retention and IAM]
+    recommended_output_format: Privacy/secrecy challenge table with data path, classification overread, control gap, and required external system review.
+    non_claims: *common_non_claims
+
+  - track_id: statistical_methods_review
+    track_name: Statistical Methods Reviewer
+    reviewer_type: statistical_methods_reviewer
+    purpose: Attack uncertainty ranges, weighting, subgroup metadata, reviewed-scenario suppression, and synthetic representativeness boundaries.
+    inspect_first: [reports/uncertainty_ranges.md, reports/household_weighting.md, reports/reviewed_scenarios.md]
+    relevant_layers: [uncertainty_ranges, household_weighting, reviewed_scenarios, household_distributional]
+    relevant_reports: [reports/uncertainty_ranges.md, reports/household_weighting.md, reports/reviewed_scenarios.md, reports/distributional_scenarios.md]
+    core_attack_questions:
+      - *q_overclaim
+      - *q_calibration
+      - *q_real_data
+      - *q_false_precision
+      - *q_manifest_drift
+      - *q_power_boundary
+      - question_id: stats_confidence_overread
+        question: Could deterministic ranges be mistaken for confidence intervals?
+        attack_category: statistical_validity_gap
+        target_layers: [uncertainty_ranges, reviewed_scenarios]
+        target_reports: [reports/uncertainty_ranges.md, reports/reviewed_scenarios.md]
+        why_it_matters: Low/base/high ranges are deterministic placeholders only.
+        what_would_fail: Any wording that suggests probability, confidence, or statistical inference.
+        required_evidence_or_review: Statistical methods and uncertainty review.
+        severity_label: critical_blocker
+        must_not_be_treated_as_validation: true
+      - question_id: stats_population_overread
+        question: Could household weights be mistaken for population estimates?
+        attack_category: statistical_validity_gap
+        target_layers: [household_weighting, household_distributional]
+        target_reports: [reports/household_weighting.md, reports/distributional_scenarios.md]
+        why_it_matters: Synthetic weights are not survey weights and not representative.
+        what_would_fail: Missing not-population-estimate warnings or representative wording.
+        required_evidence_or_review: Statistical methods and household survey calibration review.
+        severity_label: critical_blocker
+        must_not_be_treated_as_validation: true
+      - question_id: stats_suppression_rules
+        question: Are reviewed-scenario suppression rules strong enough for fragile outputs?
+        attack_category: false_precision_gap
+        target_layers: [reviewed_scenarios, uncertainty_ranges]
+        target_reports: [reports/reviewed_scenarios.md, reports/uncertainty_ranges.md]
+        why_it_matters: Fragile synthetic results should not look interpretable.
+        what_would_fail: Point estimates shown where ranges are missing, unstable, or non-interpretable.
+        required_evidence_or_review: Statistical and policy display-control review.
+        severity_label: material_issue
+        must_not_be_treated_as_validation: true
+      - question_id: stats_forecast_boundary
+        question: Are forecasts and probability claims explicitly absent?
+        attack_category: statistical_validity_gap
+        target_layers: [uncertainty_ranges, fiscal_trajectory]
+        target_reports: [reports/uncertainty_ranges.md, reports/fiscal_trajectory.md]
+        why_it_matters: Ranges and trajectories are placeholders, not prediction methods.
+        what_would_fail: Any forecast or probability language without external method.
+        required_evidence_or_review: Statistical and forecasting-method review outside this repo.
+        severity_label: material_issue
+        must_not_be_treated_as_validation: true
+    layer_attack_questions: [Attack confidence overread, Attack population-estimate boundary, Attack suppression logic]
+    report_attack_questions: [Does the range imply probability, Does weighting imply representation, Are fragile rows suppressed]
+    required_external_inputs: [*input_assumptions, *input_trace, *input_boundary, *input_blockers, *input_no_validation, statistical methods review, survey weight calibration review, uncertainty method review, suppression-rule review, forecast boundary review]
+    failure_modes:
+      - *f_overclaim
+      - *f_missing_blocker
+      - *f_stale_manifest
+      - failure_id: stats_failure_population_overread
+        failure_mode: Synthetic household weights look representative.
+        affected_layers: [household_weighting]
+        affected_reports: [reports/household_weighting.md]
+        boundary_at_risk: Synthetic representativeness overread.
+        required_follow_up: Increase not-population-estimate warnings and metadata fields.
+        severity_label: critical_blocker
+        not_a_finding_of_actual_error: true
+      - failure_id: stats_failure_confidence_overread
+        failure_mode: Low/base/high range looks like statistical confidence.
+        affected_layers: [uncertainty_ranges]
+        affected_reports: [reports/uncertainty_ranges.md]
+        boundary_at_risk: Statistical validity gap.
+        required_follow_up: Add deterministic-only caveats near range tables.
+        severity_label: critical_blocker
+        not_a_finding_of_actual_error: true
+    must_not_infer: *common_must_not
+    locked_until_review_items: [uncertainty method, household representativeness, subgroup inference, confidence treatment, reviewed-scenario suppression]
+    recommended_output_format: Statistical challenge memo with inference risk, missing data/method, suppression concern, and required external calibration.
+    non_claims: *common_non_claims
+
+  - track_id: economic_methods_review
+    track_name: Economic Methods Reviewer
+    reviewer_type: economic_methods_reviewer
+    purpose: Attack incidence, investment, pass-through, normal-return preservation, behavioural pathways, and economic-validation boundaries.
+    inspect_first: [reports/investment_guardrails.md, reports/sector_stress_matrix.md, reports/behavioural_response_simulation.md]
+    relevant_layers: [investment_incidence, sector_stress_matrix, behavioural_response, fiscal_trajectory]
+    relevant_reports: [reports/investment_guardrails.md, reports/sector_stress_matrix.md, reports/behavioural_response_simulation.md, reports/fiscal_trajectory.md]
+    core_attack_questions:
+      - *q_overclaim
+      - *q_calibration
+      - *q_real_data
+      - *q_false_precision
+      - *q_manifest_drift
+      - *q_power_boundary
+      - question_id: econ_incidence_placeholder
+        question: Are incidence and pass-through labels visibly placeholders?
+        attack_category: economic_incidence_gap
+        target_layers: [investment_incidence, fiscal_trajectory]
+        target_reports: [reports/investment_guardrails.md, reports/fiscal_trajectory.md]
+        why_it_matters: Pass-through and burden assumptions need empirical methods before policy use.
+        what_would_fail: Any burden or pass-through wording that implies observed economic behavior.
+        required_evidence_or_review: Economic methods review and incidence evidence plan.
+        severity_label: material_issue
+        must_not_be_treated_as_validation: true
+      - question_id: econ_behavioural_pathway
+        question: Do behavioural pathways avoid prediction or elasticity language?
+        attack_category: behavioural_elasticity_gap
+        target_layers: [behavioural_response]
+        target_reports: [reports/behavioural_response_simulation.md]
+        why_it_matters: Response pathways are hypothetical challenge cases, not behavioural estimates.
+        what_would_fail: Any pathway presented as expected conduct, probability, or elasticity.
+        required_evidence_or_review: Behavioural economics and tax-compliance research review.
+        severity_label: critical_blocker
+        must_not_be_treated_as_validation: true
+      - question_id: econ_sector_bands
+        question: Could sector stress bands be read as economic rankings?
+        attack_category: economic_incidence_gap
+        target_layers: [sector_stress_matrix]
+        target_reports: [reports/sector_stress_matrix.md]
+        why_it_matters: Metadata bands are not empirical sector comparison.
+        what_would_fail: Any ordinal or real-world sector ranking wording.
+        required_evidence_or_review: Economic and sector methods review.
+        severity_label: critical_blocker
+        must_not_be_treated_as_validation: true
+      - question_id: econ_normal_return
+        question: Is normal-return preservation a placeholder guardrail, not an empirical investment result?
+        attack_category: economic_incidence_gap
+        target_layers: [investment_incidence]
+        target_reports: [reports/investment_guardrails.md]
+        why_it_matters: Investment deterrence cannot be inferred from placeholder guardrails.
+        what_would_fail: Any output implying investment effects have been measured.
+        required_evidence_or_review: Investment and incidence methods review.
+        severity_label: material_issue
+        must_not_be_treated_as_validation: true
+    layer_attack_questions: [Attack economic validation boundary, Attack behavioural elasticity gap, Attack sector-band overread]
+    report_attack_questions: [Does the report imply incidence, Does it imply sector ranking, Does it imply prediction]
+    required_external_inputs: [*input_assumptions, *input_trace, *input_boundary, *input_blockers, *input_no_validation, incidence methods review, behavioural elasticity research, investment response review, sector economic review, pass-through evidence review]
+    failure_modes:
+      - *f_overclaim
+      - *f_missing_blocker
+      - *f_stale_manifest
+      - failure_id: econ_failure_prediction_overread
+        failure_mode: Behavioural pathway reads like predicted behavior.
+        affected_layers: [behavioural_response]
+        affected_reports: [reports/behavioural_response_simulation.md]
+        boundary_at_risk: Behavioural elasticity gap.
+        required_follow_up: Reword as hypothetical challenge and add research blocker.
+        severity_label: critical_blocker
+        not_a_finding_of_actual_error: true
+      - failure_id: econ_failure_sector_ranking
+        failure_mode: Sector stress band could be read as economic ranking.
+        affected_layers: [sector_stress_matrix]
+        affected_reports: [reports/sector_stress_matrix.md]
+        boundary_at_risk: Sector comparison overread.
+        required_follow_up: Strengthen do-not-rank language.
+        severity_label: critical_blocker
+        not_a_finding_of_actual_error: true
+    must_not_infer: *common_must_not
+    locked_until_review_items: [incidence assumptions, investment response, behavioural elasticity, sector comparison, pass-through]
+    recommended_output_format: Economic methods challenge table with assumption, empirical gap, overread risk, and required external study.
+    non_claims: *common_non_claims
+
+  - track_id: welfare_policy_review
+    track_name: Welfare Policy Reviewer
+    reviewer_type: welfare_policy_reviewer
+    purpose: Attack payment interactions, household hardship, payment cliffs, eligibility-law overread, DSS/Services Australia boundaries, and welfare-validation claims.
+    inspect_first: [reports/payment_interactions.md, reports/transition_funding.md, reports/distributional_scenarios.md]
+    relevant_layers: [payment_interactions, transition_funding, household_distributional, household_weighting]
+    relevant_reports: [reports/payment_interactions.md, reports/transition_funding.md, reports/distributional_scenarios.md, reports/household_weighting.md]
+    core_attack_questions:
+      - *q_overclaim
+      - *q_calibration
+      - *q_real_data
+      - *q_false_precision
+      - *q_manifest_drift
+      - *q_power_boundary
+      - question_id: welfare_eligibility_overread
+        question: Could payment interactions be mistaken for eligibility law or Services Australia administration?
+        attack_category: welfare_interaction_gap
+        target_layers: [payment_interactions, transition_funding]
+        target_reports: [reports/payment_interactions.md, reports/transition_funding.md]
+        why_it_matters: Payment previews are not welfare-law or administration models.
+        what_would_fail: Any implication of eligibility determination, payment entitlement, or administrative feasibility.
+        required_evidence_or_review: Welfare policy, legal, and Services Australia/DSS methods review outside this repo.
+        severity_label: critical_blocker
+        must_not_be_treated_as_validation: true
+      - question_id: welfare_household_hardship
+        question: Are household hardship rows clearly synthetic and not real welfare evidence?
+        attack_category: welfare_interaction_gap
+        target_layers: [household_distributional, household_weighting]
+        target_reports: [reports/distributional_scenarios.md, reports/household_weighting.md]
+        why_it_matters: Household examples can look like real distributional modelling.
+        what_would_fail: Missing synthetic-only and not-population-estimate caveats.
+        required_evidence_or_review: Welfare, statistical, and privacy review.
+        severity_label: critical_blocker
+        must_not_be_treated_as_validation: true
+      - question_id: welfare_payment_cliffs
+        question: Are payment cliffs and baseline transfer interactions explicitly placeholders?
+        attack_category: welfare_interaction_gap
+        target_layers: [payment_interactions, household_distributional]
+        target_reports: [reports/payment_interactions.md, reports/distributional_scenarios.md]
+        why_it_matters: Payment-cliff logic requires welfare-law and microsimulation review.
+        what_would_fail: Any cliff result presented as validated welfare effect.
+        required_evidence_or_review: Welfare policy and statistical methods review.
+        severity_label: material_issue
+        must_not_be_treated_as_validation: true
+      - question_id: welfare_baseline_transfer
+        question: Are baseline transfer and new support concepts kept separate?
+        attack_category: hidden_assumption_risk
+        target_layers: [payment_interactions, transition_funding]
+        target_reports: [reports/payment_interactions.md, reports/transition_funding.md]
+        why_it_matters: Double counting can hide inside payment-stack examples.
+        what_would_fail: Combined transfer and transition support without caveats.
+        required_evidence_or_review: Welfare policy and fiscal methods review.
+        severity_label: material_issue
+        must_not_be_treated_as_validation: true
+    layer_attack_questions: [Attack eligibility overread, Attack household representativeness, Attack payment cliff placeholders]
+    report_attack_questions: [Does output imply entitlement, Does it imply DSS validation, Does household data look real]
+    required_external_inputs: [*input_assumptions, *input_trace, *input_boundary, *input_blockers, *input_no_validation, welfare policy review, eligibility-law review, DSS/Services Australia methods review, household microsimulation review, payment cliff review]
+    failure_modes:
+      - *f_overclaim
+      - *f_missing_blocker
+      - *f_stale_manifest
+      - failure_id: welfare_failure_eligibility_overread
+        failure_mode: Payment interaction row looks like eligibility analysis.
+        affected_layers: [payment_interactions]
+        affected_reports: [reports/payment_interactions.md]
+        boundary_at_risk: Welfare law overread.
+        required_follow_up: Add no-eligibility-law caveat near outputs.
+        severity_label: critical_blocker
+        not_a_finding_of_actual_error: true
+      - failure_id: welfare_failure_household_validation
+        failure_mode: Household scenario looks like real welfare validation.
+        affected_layers: [household_distributional, household_weighting]
+        affected_reports: [reports/distributional_scenarios.md, reports/household_weighting.md]
+        boundary_at_risk: Welfare validation overread.
+        required_follow_up: Increase synthetic-only warnings and external review blockers.
+        severity_label: critical_blocker
+        not_a_finding_of_actual_error: true
+    must_not_infer: *common_must_not
+    locked_until_review_items: [eligibility interactions, Services Australia administration, DSS policy interaction, household hardship validation, payment cliffs]
+    recommended_output_format: Welfare review challenge list with payment interaction, household risk, eligibility boundary, and required external method.
+    non_claims: *common_non_claims
+
+  - track_id: parliamentary_counsel_review
+    track_name: Parliamentary Counsel Reviewer
+    reviewer_type: parliamentary_counsel_reviewer
+    purpose: Attack Parts, Divisions, definitions, schedules, regulation placeholders, evidence placeholders, commencement, and reserved-for-counsel boundaries.
+    inspect_first: [reports/legislative_architecture.md, data/legislative_architecture/legislative_architecture_skeleton.yaml, docs/legislative_architecture.md]
+    relevant_layers: [legislative_architecture, sector_schedules, administrative_workflow, release_candidate_pack]
+    relevant_reports: [reports/legislative_architecture.md, reports/sector_schedule_expansion.md, reports/administrative_compliance_workflow.md, reports/v1_5_release_candidate_pack.md]
+    core_attack_questions:
+      - *q_overclaim
+      - *q_calibration
+      - *q_real_data
+      - *q_false_precision
+      - *q_manifest_drift
+      - *q_power_boundary
+      - question_id: counsel_parts_architecture
+        question: Does the Parts and Divisions map stay conceptual and non-operative?
+        attack_category: legal_power_gap
+        target_layers: [legislative_architecture]
+        target_reports: [reports/legislative_architecture.md]
+        why_it_matters: Structural maps can be mistaken for drafting instructions.
+        what_would_fail: Any provision type that looks ready to be enacted.
+        required_evidence_or_review: Parliamentary Counsel and legal drafting review.
+        severity_label: locked_until_external_review
+        must_not_be_treated_as_validation: true
+      - question_id: counsel_definitions
+        question: Are definition placeholders barred from operative use?
+        attack_category: legal_power_gap
+        target_layers: [legislative_architecture]
+        target_reports: [reports/legislative_architecture.md]
+        why_it_matters: CARSF terms are not legal definitions.
+        what_would_fail: Any term that appears usable as a legal definition without review.
+        required_evidence_or_review: Drafting counsel, legal, and tax review.
+        severity_label: critical_blocker
+        must_not_be_treated_as_validation: true
+      - question_id: counsel_regulation_placeholders
+        question: Do regulation-making placeholders avoid creating any real power?
+        attack_category: legal_power_gap
+        target_layers: [legislative_architecture]
+        target_reports: [reports/legislative_architecture.md]
+        why_it_matters: Regulation-making concepts require legal and parliamentary scrutiny design.
+        what_would_fail: Any placeholder that sounds like an available regulation power.
+        required_evidence_or_review: Parliamentary Counsel, legal, Treasury, and ATO methods review.
+        severity_label: locked_until_external_review
+        must_not_be_treated_as_validation: true
+      - question_id: counsel_schedule_placeholders
+        question: Are sector schedules locked away from official schedule treatment?
+        attack_category: sector_attribution_gap
+        target_layers: [sector_schedules, legislative_architecture]
+        target_reports: [reports/sector_schedule_expansion.md, reports/legislative_architecture.md]
+        why_it_matters: YAML schedules are placeholders and cannot become legislative schedules.
+        what_would_fail: Any schedule row that appears official or calibrated.
+        required_evidence_or_review: Sector, legal, tax, and drafting counsel review.
+        severity_label: critical_blocker
+        must_not_be_treated_as_validation: true
+    layer_attack_questions: [Attack definition placeholders, Attack schedule placeholders, Attack regulation placeholders]
+    report_attack_questions: [Does text look like drafting, Are counsel-locked areas visible, Are schedules clearly non-official]
+    required_external_inputs: [*input_assumptions, *input_trace, *input_boundary, *input_blockers, *input_no_validation, Parliamentary Counsel review, legal drafting review, legislative architecture review, regulation-making review, schedule-authority design review]
+    failure_modes:
+      - *f_overclaim
+      - *f_missing_blocker
+      - *f_stale_manifest
+      - failure_id: counsel_failure_drafting_overread
+        failure_mode: Architecture text looks like enactable drafting.
+        affected_layers: [legislative_architecture]
+        affected_reports: [reports/legislative_architecture.md]
+        boundary_at_risk: Drafting boundary.
+        required_follow_up: Rewrite as reserved-for-counsel placeholder.
+        severity_label: locked_until_external_review
+        not_a_finding_of_actual_error: true
+      - failure_id: counsel_failure_schedule_status
+        failure_mode: Sector schedule placeholder looks official.
+        affected_layers: [sector_schedules, legislative_architecture]
+        affected_reports: [reports/sector_schedule_expansion.md, reports/legislative_architecture.md]
+        boundary_at_risk: Schedule authority overread.
+        required_follow_up: Add not-official schedule warning and legal review blocker.
+        severity_label: critical_blocker
+        not_a_finding_of_actual_error: true
+    must_not_infer: *common_must_not
+    locked_until_review_items: [Parts and Divisions, definitions, schedules, regulation placeholders, commencement and transition placeholders]
+    recommended_output_format: Drafting-boundary memo with provision-like text, reason it must remain locked, and counsel review needed.
+    non_claims: *common_non_claims
+
+  - track_id: hostile_red_team_review
+    track_name: Hostile / Red-Team Reviewer
+    reviewer_type: hostile_red_team_reviewer
+    purpose: Attack every non-claim boundary, hidden validation language, stale artefacts, false precision, quoted-out-of-context risk, and blocker omissions.
+    inspect_first: [release/v1_5_rc/NON_CLAIM_BOUNDARIES.md, reports/executive_dashboard.md, reports/v1_5_release_candidate_pack.md]
+    relevant_layers: [release_candidate_pack, executive_dashboard, legislative_architecture, administrative_workflow, behavioural_response, household_weighting, sector_stress_matrix]
+    relevant_reports: [reports/v1_5_release_candidate_pack.md, reports/executive_dashboard.md, reports/legislative_architecture.md, reports/administrative_compliance_workflow.md, reports/behavioural_response_simulation.md, reports/sector_stress_matrix.md]
+    core_attack_questions:
+      - *q_overclaim
+      - *q_calibration
+      - *q_real_data
+      - *q_false_precision
+      - *q_manifest_drift
+      - *q_power_boundary
+      - question_id: redteam_quote_out_of_context
+        question: Which sentence could be quoted without its non-claim boundary?
+        attack_category: reader_misinterpretation_gap
+        target_layers: [release_candidate_pack, executive_dashboard, working_paper]
+        target_reports: [reports/v1_5_release_candidate_pack.md, reports/executive_dashboard.md]
+        why_it_matters: Hostile readers may quote outputs without caveats.
+        what_would_fail: Any standalone sentence that sounds validated, official, ready, or legally adequate.
+        required_evidence_or_review: Hostile quote review and warning proximity review.
+        severity_label: critical_blocker
+        must_not_be_treated_as_validation: true
+      - question_id: redteam_title_overread
+        question: Do report titles or section headings sound more official than the contents?
+        attack_category: overclaiming_risk
+        target_layers: [executive_dashboard, release_candidate_pack]
+        target_reports: [reports/executive_dashboard.md, reports/v1_5_release_candidate_pack.md]
+        why_it_matters: Titles are often read without limitations.
+        what_would_fail: Any title that suggests endorsement, completion, or official pathway.
+        required_evidence_or_review: Red-team naming review.
+        severity_label: material_issue
+        must_not_be_treated_as_validation: true
+      - question_id: redteam_boundary_missing
+        question: Is every hard boundary repeated in reports, docs, and release materials?
+        attack_category: overclaiming_risk
+        target_layers: [release_candidate_pack, executive_dashboard, status_risks_docs]
+        target_reports: [reports/v1_5_release_candidate_pack.md, reports/executive_dashboard.md]
+        why_it_matters: Boundary warnings weaken when they live in only one document.
+        what_would_fail: A required non-claim appears in one report but not the related document.
+        required_evidence_or_review: Boundary coverage diff across release documents and reports.
+        severity_label: material_issue
+        must_not_be_treated_as_validation: true
+      - question_id: redteam_false_authority
+        question: Could reviewer routing itself be mistaken for an official process?
+        attack_category: reader_misinterpretation_gap
+        target_layers: [release_candidate_pack, executive_dashboard]
+        target_reports: [reports/v1_5_release_candidate_pack.md, reports/executive_dashboard.md]
+        why_it_matters: Suggested routing is a navigation aid only.
+        what_would_fail: Routing language that implies formal review, authority, or approval status.
+        required_evidence_or_review: Red-team review of routing language and headings.
+        severity_label: critical_blocker
+        must_not_be_treated_as_validation: true
+    layer_attack_questions: [Attack quote risk, Attack heading risk, Attack boundary repetition]
+    report_attack_questions: [Can a report be quoted as validation, Does title imply authority, Are non-claims adjacent to outputs]
+    required_external_inputs: [*input_assumptions, *input_trace, *input_boundary, *input_blockers, *input_no_validation, hostile quote review, forbidden phrase scan, heading review, blocker coverage diff, stale report trace]
+    failure_modes:
+      - *f_overclaim
+      - *f_missing_blocker
+      - *f_stale_manifest
+      - failure_id: redteam_failure_quote
+        failure_mode: A sentence can be quoted as endorsement without caveat.
+        affected_layers: [release_candidate_pack, executive_dashboard]
+        affected_reports: [reports/v1_5_release_candidate_pack.md, reports/executive_dashboard.md]
+        boundary_at_risk: Reader misinterpretation.
+        required_follow_up: Move warning closer to the sentence or rewrite it.
+        severity_label: critical_blocker
+        not_a_finding_of_actual_error: true
+      - failure_id: redteam_failure_false_authority
+        failure_mode: Reviewer routing looks formal rather than suggested.
+        affected_layers: [release_candidate_pack, executive_dashboard]
+        affected_reports: [reports/v1_5_release_candidate_pack.md, reports/executive_dashboard.md]
+        boundary_at_risk: Official-process overread.
+        required_follow_up: Add suggested-navigation-only wording.
+        severity_label: material_issue
+        not_a_finding_of_actual_error: true
+    must_not_infer: *common_must_not
+    locked_until_review_items: [all external-review claims, all validation language, all readiness language, all official-status language, all firm-liability implications]
+    recommended_output_format: Hostile red-team log with quote, overread risk, violated boundary, and rewrite proposal.
+    non_claims: *common_non_claims
+
+cross_cutting_attack_questions:
+  - *q_overclaim
+  - *q_calibration
+  - *q_real_data
+  - *q_false_precision
+  - *q_manifest_drift
+  - *q_power_boundary
+
+boundary_checks:
+  - boundary_id: legal_sufficiency_boundary
+    boundary_question: Does any output imply legal sufficiency?
+    prohibited_affirmative_claims: [legally sufficient, legal review complete]
+    allowed_negative_warnings: [not legal sufficiency, not legally sufficient, legal_sufficiency_claimed false]
+    affected_layers: [legislative_architecture, release_candidate_pack]
+    affected_reports: [reports/legislative_architecture.md, reports/v1_5_release_candidate_pack.md]
+    fail_closed_if_found: true
+  - boundary_id: ato_guidance_boundary
+    boundary_question: Does any output imply ATO guidance?
+    prohibited_affirmative_claims: [ATO guidance, ATO validated, ready for ATO]
+    allowed_negative_warnings: [not ATO guidance, not ATO validated, not ready for ATO]
+    affected_layers: [administrative_workflow, evidence_workflow]
+    affected_reports: [reports/administrative_compliance_workflow.md, reports/mock_evidence_workflow.md]
+    fail_closed_if_found: true
+  - boundary_id: treasury_validation_boundary
+    boundary_question: Does any output imply Treasury validation?
+    prohibited_affirmative_claims: [Treasury validated, Treasury modelling]
+    allowed_negative_warnings: [not Treasury modelling, not Treasury validated]
+    affected_layers: [fiscal_trajectory, release_candidate_pack]
+    affected_reports: [reports/fiscal_trajectory.md, reports/v1_5_release_candidate_pack.md]
+    fail_closed_if_found: true
+  - boundary_id: economic_validation_boundary
+    boundary_question: Does any output imply economic validation?
+    prohibited_affirmative_claims: [economic validation is complete, validated]
+    allowed_negative_warnings: [not economic validation, no economic validation]
+    affected_layers: [investment_incidence, sector_stress_matrix]
+    affected_reports: [reports/investment_guardrails.md, reports/sector_stress_matrix.md]
+    fail_closed_if_found: true
+  - boundary_id: welfare_validation_boundary
+    boundary_question: Does any output imply welfare validation?
+    prohibited_affirmative_claims: [welfare validation is complete]
+    allowed_negative_warnings: [not welfare validation, no welfare validation]
+    affected_layers: [payment_interactions, household_distributional]
+    affected_reports: [reports/payment_interactions.md, reports/distributional_scenarios.md]
+    fail_closed_if_found: true
+  - boundary_id: statistical_validation_boundary
+    boundary_question: Does any output imply statistical validation?
+    prohibited_affirmative_claims: [statistical validation is complete]
+    allowed_negative_warnings: [not statistical validation, no statistical validation]
+    affected_layers: [uncertainty_ranges, household_weighting]
+    affected_reports: [reports/uncertainty_ranges.md, reports/household_weighting.md]
+    fail_closed_if_found: true
+  - boundary_id: operational_readiness_boundary
+    boundary_question: Does any output imply operational readiness?
+    prohibited_affirmative_claims: [operationally ready, operational validation is complete]
+    allowed_negative_warnings: [not operational readiness, operational_readiness_claimed false]
+    affected_layers: [administrative_workflow, executive_dashboard]
+    affected_reports: [reports/administrative_compliance_workflow.md, reports/executive_dashboard.md]
+    fail_closed_if_found: true
+  - boundary_id: legislative_readiness_boundary
+    boundary_question: Does any output imply legislative readiness?
+    prohibited_affirmative_claims: [legislative-ready, bill-ready, parliament-ready]
+    allowed_negative_warnings: [not legislative readiness, not a Bill, not drafting]
+    affected_layers: [legislative_architecture]
+    affected_reports: [reports/legislative_architecture.md]
+    fail_closed_if_found: true
+  - boundary_id: official_status_boundary
+    boundary_question: Does any output imply official status?
+    prohibited_affirmative_claims: [official status, official policy, official review pathway]
+    allowed_negative_warnings: [not official status, not official policy, not an official review pathway]
+    affected_layers: [release_candidate_pack, executive_dashboard]
+    affected_reports: [reports/v1_5_release_candidate_pack.md, reports/executive_dashboard.md]
+    fail_closed_if_found: true
+  - boundary_id: tax_payable_boundary
+    boundary_question: Does any output imply actual tax payable?
+    prohibited_affirmative_claims: [actual tax payable]
+    allowed_negative_warnings: [does not determine actual tax payable, not actual tax payable]
+    affected_layers: [core_formula_model, worked_examples]
+    affected_reports: [reports/example_results.md, reports/transfer_pricing_results.md]
+    fail_closed_if_found: true
+  - boundary_id: real_data_boundary
+    boundary_question: Does any output imply real data was used?
+    prohibited_affirmative_claims: [taxpayer-level real data, firm-level real data, industry real data]
+    allowed_negative_warnings: [no taxpayer-level real data, no firm-level real data, no industry real data]
+    affected_layers: [secure_ingestion, repo_guardrails]
+    affected_reports: [reports/secure_ingestion_controls.md, reports/repo_guardrails.md]
+    fail_closed_if_found: true
+  - boundary_id: population_estimate_boundary
+    boundary_question: Does any output imply population estimates?
+    prohibited_affirmative_claims: [population estimate, real household estimate]
+    allowed_negative_warnings: [not population estimates, not real household modelling]
+    affected_layers: [household_weighting, household_distributional]
+    affected_reports: [reports/household_weighting.md, reports/distributional_scenarios.md]
+    fail_closed_if_found: true
+  - boundary_id: forecast_boundary
+    boundary_question: Does any output imply forecasts?
+    prohibited_affirmative_claims: [forecast]
+    allowed_negative_warnings: [not forecasts, no forecasts]
+    affected_layers: [fiscal_trajectory, uncertainty_ranges]
+    affected_reports: [reports/fiscal_trajectory.md, reports/uncertainty_ranges.md]
+    fail_closed_if_found: true
+  - boundary_id: confidence_interval_boundary
+    boundary_question: Does any output imply confidence intervals?
+    prohibited_affirmative_claims: [confidence interval]
+    allowed_negative_warnings: [not confidence intervals, no confidence intervals]
+    affected_layers: [uncertainty_ranges, reviewed_scenarios]
+    affected_reports: [reports/uncertainty_ranges.md, reports/reviewed_scenarios.md]
+    fail_closed_if_found: true
+  - boundary_id: compliance_scoring_boundary
+    boundary_question: Does any output imply compliance scoring?
+    prohibited_affirmative_claims: [compliance score, real compliance score]
+    allowed_negative_warnings: [not compliance scoring, no compliance scoring]
+    affected_layers: [behavioural_response, administrative_workflow]
+    affected_reports: [reports/behavioural_response_simulation.md, reports/administrative_compliance_workflow.md]
+    fail_closed_if_found: true
+  - boundary_id: enforcement_boundary
+    boundary_question: Does any output imply enforcement, notices, or penalties?
+    prohibited_affirmative_claims: [notice is issued, penalty applies, enforceable]
+    allowed_negative_warnings: [not enforcement, no notices, no penalties]
+    affected_layers: [administrative_workflow, legislative_architecture]
+    affected_reports: [reports/administrative_compliance_workflow.md, reports/legislative_architecture.md]
+    fail_closed_if_found: true
+  - boundary_id: operative_law_boundary
+    boundary_question: Does any output imply operative law?
+    prohibited_affirmative_claims: [operative law, enforceable provision]
+    allowed_negative_warnings: [not operative law, non-operative]
+    affected_layers: [legislative_architecture]
+    affected_reports: [reports/legislative_architecture.md]
+    fail_closed_if_found: true
+  - boundary_id: liability_modification_boundary
+    boundary_question: Does any output imply firm-level liability was modified?
+    prohibited_affirmative_claims: [firm-level liability change]
+    allowed_negative_warnings: [does not modify firm-level CARSF liability, firm_level_liability_logic_modified false]
+    affected_layers: [core_formula_model, release_candidate_pack]
+    affected_reports: [reports/example_results.md, reports/v1_5_release_candidate_pack.md]
+    fail_closed_if_found: true
+
+release_documents:
+  - release/v1_5_rc/attack_pack/ATTACK_PACK_OVERVIEW.md
+  - release/v1_5_rc/attack_pack/POLICY_REVIEW_ATTACKS.md
+  - release/v1_5_rc/attack_pack/TECHNICAL_REVIEW_ATTACKS.md
+  - release/v1_5_rc/attack_pack/LEGAL_REVIEW_ATTACKS.md
+  - release/v1_5_rc/attack_pack/TAX_REVIEW_ATTACKS.md
+  - release/v1_5_rc/attack_pack/ATO_METHODS_REVIEW_ATTACKS.md
+  - release/v1_5_rc/attack_pack/TREASURY_METHODS_REVIEW_ATTACKS.md
+  - release/v1_5_rc/attack_pack/PRIVACY_SECRECY_REVIEW_ATTACKS.md
+  - release/v1_5_rc/attack_pack/STATISTICAL_METHODS_REVIEW_ATTACKS.md
+  - release/v1_5_rc/attack_pack/ECONOMIC_METHODS_REVIEW_ATTACKS.md
+  - release/v1_5_rc/attack_pack/WELFARE_POLICY_REVIEW_ATTACKS.md
+  - release/v1_5_rc/attack_pack/PARLIAMENTARY_COUNSEL_REVIEW_ATTACKS.md
+  - release/v1_5_rc/attack_pack/HOSTILE_RED_TEAM_ATTACKS.md
+  - release/v1_5_rc/attack_pack/REPORT_ATTACK_MATRIX.md
+  - release/v1_5_rc/attack_pack/LAYER_ATTACK_MATRIX.md
+  - release/v1_5_rc/attack_pack/BOUNDARY_CHECKS.md
+  - release/v1_5_rc/attack_pack/ATTACK_PACK_MANIFEST.json
+suggested_reviewer_output_format: Reviewer notes should list challenged claim, affected layer/report, evidence gap, boundary risk, severity label, and required follow-up while stating that the note is not validation or approval.
+forbidden_claims:
+  - review completed
+  - approved by reviewer
+  - validated by reviewer
+  - externally validated
+  - ready for government
+  - ready for ATO
+  - operationally ready
+  - legally sufficient
+  - legislative-ready
+  - bill-ready
+  - parliament-ready
+  - Treasury validated
+  - ATO validated
+  - official review completed
+  - official review pathway
+  - official status
+  - official policy
+  - compliance score
+  - readiness score
+  - maturity score
+  - approved
+  - enforceable
+  - actual tax payable
+  - real policy result
+  - real household estimate
+  - population estimate
+  - official sector ranking
+  - economic validation is complete
+  - welfare validation is complete
+  - statistical validation is complete
+  - operational validation is complete
+  - legal review complete
+  - tax review complete
