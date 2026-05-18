@@ -1,0 +1,1443 @@
+architecture_id: carsf_v1_5_legislative_architecture_skeleton
+architecture_name: CARSF V1.5 Legislative Architecture Skeleton
+status: non_operative_architecture_skeleton_only
+non_claims:
+  - This is a non-operative legislative architecture skeleton only. It is not operative law. It is not a Bill. It is not legal drafting. It is not legal advice. It is not tax advice. It is not ATO guidance. It is not Treasury modelling. It is not Parliamentary Counsel drafting. It is not legally sufficient and it has not been constitutionally reviewed. It creates no rights, obligations, statutory powers, information-gathering powers, notices, penalties, enforcement process, or compliance scoring. It does not determine tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.
+  - The skeleton maps conceptual architecture only for external legal, tax, Treasury, ATO, Parliamentary Counsel, privacy, calibration, administrative-design, and policy review.
+  - All Parts, Divisions, definitions, schedules, evidence placeholders, safeguards, regulation-making placeholders, and anti-avoidance placeholders are reserved for external drafting review before any real use.
+parts:
+  - part_id: part_01
+    part_title: Preliminary
+    purpose: Locate objects, application boundaries, non-operative status, and interpretation placeholders.
+    non_operative_status: true
+    linked_carsf_modules:
+      - model/carsf/types.py
+    linked_reports:
+      - reports/example_results.md
+    divisions:
+      - division_id: div_01_01
+        division_title: Preliminary Interpretation Placeholders
+        conceptual_scope: Conceptual objects, simplified outline, non-operative status, and interpretation placeholders only.
+        linked_existing_layer: docs/current_status.md
+        placeholder_provision_types:
+          - definition_placeholder
+          - reserved_for_counsel
+        requires_legal_review: true
+        requires_tax_review: true
+        requires_ato_methods_review: true
+        requires_treasury_review: true
+        requires_privacy_review: false
+        requires_external_calibration: false
+        forbidden_operational_claims:
+          - must not claim operative commencement
+          - must not claim legal sufficiency
+    external_review_required: true
+    drafting_risk: high_external_review_required
+    main_reason: Preliminary architecture determines how every later placeholder is read and must be reserved for legal drafting review.
+  - part_id: part_02
+    part_title: Core CARSF Concepts
+    purpose: Map core CARSF concept placeholders without creating legal tests.
+    non_operative_status: true
+    linked_carsf_modules:
+      - model/carsf/coverage.py
+      - model/carsf/levy.py
+    linked_reports:
+      - reports/example_results.md
+    divisions:
+      - division_id: div_02_01
+        division_title: Core Concept Map
+        conceptual_scope: CARSF, CARS-I, coverage, and levy concepts as modelling references only.
+        linked_existing_layer: model/carsf/coverage.py
+        placeholder_provision_types:
+          - definition_placeholder
+          - formula_placeholder
+          - reserved_for_counsel
+        requires_legal_review: true
+        requires_tax_review: true
+        requires_ato_methods_review: true
+        requires_treasury_review: true
+        requires_privacy_review: false
+        requires_external_calibration: true
+        forbidden_operational_claims:
+          - must not claim a liability trigger
+          - must not claim tax payable
+    external_review_required: true
+    drafting_risk: high_external_review_required
+    main_reason: Core concepts need legal, tax, Treasury, and ATO methods review before any operative drafting.
+  - part_id: part_03
+    part_title: Liability Architecture Placeholder
+    purpose: Reserve location for liability architecture without altering the Python liability model.
+    non_operative_status: true
+    linked_carsf_modules:
+      - model/carsf/levy.py
+      - model/carsf/caps.py
+    linked_reports:
+      - reports/example_results.md
+    divisions:
+      - division_id: div_03_01
+        division_title: Liability Calculation Location Placeholder
+        conceptual_scope: Conceptual location for liability architecture, credits, caps, and guardrails only.
+        linked_existing_layer: model/carsf/levy.py
+        placeholder_provision_types:
+          - liability_placeholder
+          - formula_placeholder
+          - reserved_for_counsel
+        requires_legal_review: true
+        requires_tax_review: true
+        requires_ato_methods_review: true
+        requires_treasury_review: true
+        requires_privacy_review: false
+        requires_external_calibration: true
+        forbidden_operational_claims:
+          - must not claim firm liability
+          - must not claim actual tax payable
+    external_review_required: true
+    drafting_risk: critical_reserved_for_counsel
+    main_reason: Any liability architecture is legally sensitive and must remain non-operative in this prototype.
+  - part_id: part_04
+    part_title: Sector Schedules
+    purpose: Locate prototype sector schedules and schedule authority placeholders.
+    non_operative_status: true
+    linked_carsf_modules:
+      - model/carsf/sector_stress_matrix.py
+    linked_reports:
+      - reports/sector_schedule_expansion.md
+      - reports/sector_stress_matrix.md
+    divisions:
+      - division_id: div_04_01
+        division_title: Sector Schedule Placeholder Location
+        conceptual_scope: Placeholder location for sector schedules, canonical output units, and future schedule authority review.
+        linked_existing_layer: schedules/
+        placeholder_provision_types:
+          - schedule_authority_placeholder
+          - regulation_making_placeholder
+          - reserved_for_counsel
+        requires_legal_review: true
+        requires_tax_review: true
+        requires_ato_methods_review: true
+        requires_treasury_review: true
+        requires_privacy_review: false
+        requires_external_calibration: true
+        forbidden_operational_claims:
+          - must not claim official schedules
+          - must not claim sector ranking
+    external_review_required: true
+    drafting_risk: high_external_review_required
+    main_reason: Schedule attribution, calibration, and update processes require legal and methods review.
+  - part_id: part_05
+    part_title: Qualified Labour Contribution
+    purpose: Locate QLC definitions, caps, evidence links, and labour-quality placeholders.
+    non_operative_status: true
+    linked_carsf_modules:
+      - model/carsf/qlc.py
+    linked_reports:
+      - reports/evidence_requirements.md
+    divisions:
+      - division_id: div_05_01
+        division_title: QLC Measurement Placeholder
+        conceptual_scope: QLC worker-hour, wage-quality, job-security, skill-development, and Australian-nexus placeholders.
+        linked_existing_layer: model/carsf/qlc.py
+        placeholder_provision_types:
+          - formula_placeholder
+          - evidence_power_placeholder
+          - privacy_safeguard_placeholder
+        requires_legal_review: true
+        requires_tax_review: true
+        requires_ato_methods_review: true
+        requires_treasury_review: true
+        requires_privacy_review: true
+        requires_external_calibration: true
+        forbidden_operational_claims:
+          - must not claim evidence powers
+          - must not claim real worker data handling approval
+    external_review_required: true
+    drafting_risk: high_privacy_and_methods_review_required
+    main_reason: QLC requires privacy, labour, tax, and methods review before any legally operative measurement.
+  - part_id: part_06
+    part_title: Automation Intensity Index
+    purpose: Locate AII component and measurement-control placeholders.
+    non_operative_status: true
+    linked_carsf_modules:
+      - model/carsf/aii.py
+    linked_reports:
+      - reports/sector_stress_matrix.md
+    divisions:
+      - division_id: div_06_01
+        division_title: AII Measurement Placeholder
+        conceptual_scope: Compute, decision, robotics, and automated-process components as prototype measurement metadata.
+        linked_existing_layer: model/carsf/aii.py
+        placeholder_provision_types:
+          - formula_placeholder
+          - evidence_power_placeholder
+          - reserved_for_counsel
+        requires_legal_review: true
+        requires_tax_review: true
+        requires_ato_methods_review: true
+        requires_treasury_review: true
+        requires_privacy_review: false
+        requires_external_calibration: true
+        forbidden_operational_claims:
+          - must not claim calibrated automation weights
+          - must not claim enforceable measurement rules
+    external_review_required: true
+    drafting_risk: high_methods_review_required
+    main_reason: AII components remain prototype metadata and need calibration and methods review.
+  - part_id: part_07
+    part_title: National Labour Tax Gap
+    purpose: Locate national labour tax gap placeholders.
+    non_operative_status: true
+    linked_carsf_modules:
+      - model/carsf/libc.py
+    linked_reports:
+      - reports/example_results.md
+    divisions:
+      - division_id: div_07_01
+        division_title: NLTG Placeholder
+        conceptual_scope: National labour tax gap modelling location without real national calibration.
+        linked_existing_layer: model/carsf/libc.py
+        placeholder_provision_types:
+          - formula_placeholder
+          - regulation_making_placeholder
+          - reserved_for_counsel
+        requires_legal_review: true
+        requires_tax_review: true
+        requires_ato_methods_review: true
+        requires_treasury_review: true
+        requires_privacy_review: false
+        requires_external_calibration: true
+        forbidden_operational_claims:
+          - must not claim national fiscal calibration
+          - must not claim tax-base validation
+    external_review_required: true
+    drafting_risk: high_calibration_review_required
+    main_reason: NLTG requires external fiscal, tax, and labour-market calibration before legal use.
+  - part_id: part_08
+    part_title: Australian Automated Value Added
+    purpose: Locate AAVA definitions, deductions, and review-sensitive value-base placeholders.
+    non_operative_status: true
+    linked_carsf_modules:
+      - model/carsf/aava.py
+    linked_reports:
+      - reports/transfer_pricing_results.md
+    divisions:
+      - division_id: div_08_01
+        division_title: AAVA and Deductibility Placeholder
+        conceptual_scope: AAVA value-base concepts, deductions, and related-party review placeholders only.
+        linked_existing_layer: model/carsf/aava.py
+        placeholder_provision_types:
+          - formula_placeholder
+          - transfer_pricing_placeholder
+          - reserved_for_counsel
+        requires_legal_review: true
+        requires_tax_review: true
+        requires_ato_methods_review: true
+        requires_treasury_review: true
+        requires_privacy_review: false
+        requires_external_calibration: true
+        forbidden_operational_claims:
+          - must not claim deduction law
+          - must not claim transfer-pricing addback
+    external_review_required: true
+    drafting_risk: critical_reserved_for_counsel
+    main_reason: AAVA deductibility and related-party treatment are legal and tax-design issues, not operative in this skeleton.
+  - part_id: part_09
+    part_title: Levies, Credits, Caps, and Safeguards
+    purpose: Locate levy, credit, cap, and safeguard architecture placeholders.
+    non_operative_status: true
+    linked_carsf_modules:
+      - model/carsf/levy.py
+      - model/carsf/caps.py
+    linked_reports:
+      - reports/investment_guardrails.md
+    divisions:
+      - division_id: div_09_01
+        division_title: Levy and Safeguard Placeholder
+        conceptual_scope: AEL, ARL, credits, caps, normal-return preservation, and burden guardrail placeholders.
+        linked_existing_layer: model/carsf/caps.py
+        placeholder_provision_types:
+          - formula_placeholder
+          - safe_harbour_placeholder
+          - reserved_for_counsel
+        requires_legal_review: true
+        requires_tax_review: true
+        requires_ato_methods_review: true
+        requires_treasury_review: true
+        requires_privacy_review: false
+        requires_external_calibration: true
+        forbidden_operational_claims:
+          - must not claim calibrated rates
+          - must not claim enforceable caps
+    external_review_required: true
+    drafting_risk: high_external_review_required
+    main_reason: Levy and safeguard settings are placeholders and do not alter liability in this prototype.
+  - part_id: part_10
+    part_title: Safe Harbours
+    purpose: Locate safe-harbour classification placeholders.
+    non_operative_status: true
+    linked_carsf_modules:
+      - model/carsf/safe_harbour.py
+    linked_reports:
+      - reports/example_results.md
+    divisions:
+      - division_id: div_10_01
+        division_title: Safe Harbour Placeholder
+        conceptual_scope: Prototype safe-harbour classification only, without reducing or removing liability.
+        linked_existing_layer: model/carsf/safe_harbour.py
+        placeholder_provision_types:
+          - safe_harbour_placeholder
+          - review_right_placeholder
+          - reserved_for_counsel
+        requires_legal_review: true
+        requires_tax_review: true
+        requires_ato_methods_review: true
+        requires_treasury_review: true
+        requires_privacy_review: false
+        requires_external_calibration: true
+        forbidden_operational_claims:
+          - must not claim safe harbour entitlement
+          - must not claim liability reduction
+    external_review_required: true
+    drafting_risk: high_external_review_required
+    main_reason: Safe harbours are currently display classifications and require legal drafting before any real effect.
+  - part_id: part_11
+    part_title: Anti-Avoidance and Integrity
+    purpose: Locate non-operative integrity and anti-avoidance placeholders.
+    non_operative_status: true
+    linked_carsf_modules:
+      - model/carsf/avoidance.py
+      - model/carsf/behavioural_response.py
+    linked_reports:
+      - reports/behavioural_response_simulation.md
+    divisions:
+      - division_id: div_11_01
+        division_title: Integrity Placeholder
+        conceptual_scope: Prototype anti-avoidance review concepts without legal tests or ATO positions.
+        linked_existing_layer: model/carsf/behavioural_response.py
+        placeholder_provision_types:
+          - integrity_rule_placeholder
+          - evidence_power_placeholder
+          - reserved_for_counsel
+        requires_legal_review: true
+        requires_tax_review: true
+        requires_ato_methods_review: true
+        requires_treasury_review: true
+        requires_privacy_review: false
+        requires_external_calibration: true
+        forbidden_operational_claims:
+          - must not claim anti-avoidance rule
+          - must not claim ATO position
+    external_review_required: true
+    drafting_risk: critical_reserved_for_counsel
+    main_reason: Integrity concepts are legally sensitive and must remain placeholders.
+  - part_id: part_12
+    part_title: Grouped Entities and Related Parties
+    purpose: Locate grouped-entity and related-party placeholders.
+    non_operative_status: true
+    linked_carsf_modules:
+      - model/carsf/grouping.py
+    linked_reports:
+      - reports/grouped_entity_results.md
+    divisions:
+      - division_id: div_12_01
+        division_title: Grouping Placeholder
+        conceptual_scope: Related-party and grouped-entity review concepts without legal grouping.
+        linked_existing_layer: model/carsf/grouping.py
+        placeholder_provision_types:
+          - grouping_placeholder
+          - transfer_pricing_placeholder
+          - reserved_for_counsel
+        requires_legal_review: true
+        requires_tax_review: true
+        requires_ato_methods_review: true
+        requires_treasury_review: true
+        requires_privacy_review: false
+        requires_external_calibration: true
+        forbidden_operational_claims:
+          - must not claim legal grouping
+          - must not claim related-party addback
+    external_review_required: true
+    drafting_risk: critical_reserved_for_counsel
+    main_reason: Grouped-entity and related-party treatment requires legal and tax review.
+  - part_id: part_13
+    part_title: Transfer-Pricing and Offshore Attribution Review
+    purpose: Locate transfer-pricing and offshore-attribution review placeholders.
+    non_operative_status: true
+    linked_carsf_modules:
+      - model/carsf/transfer_pricing.py
+    linked_reports:
+      - reports/transfer_pricing_results.md
+    divisions:
+      - division_id: div_13_01
+        division_title: Transfer-Pricing Placeholder
+        conceptual_scope: Offshore automation service, IP, cloud, robotics, and data/model access review placeholders.
+        linked_existing_layer: model/carsf/transfer_pricing.py
+        placeholder_provision_types:
+          - transfer_pricing_placeholder
+          - evidence_power_placeholder
+          - reserved_for_counsel
+        requires_legal_review: true
+        requires_tax_review: true
+        requires_ato_methods_review: true
+        requires_treasury_review: true
+        requires_privacy_review: false
+        requires_external_calibration: true
+        forbidden_operational_claims:
+          - must not claim OECD analysis
+          - must not claim international tax outcome
+    external_review_required: true
+    drafting_risk: critical_reserved_for_counsel
+    main_reason: Transfer-pricing and offshore attribution are external legal, tax, and methods-review areas.
+  - part_id: part_14
+    part_title: Evidence and Information Architecture
+    purpose: Locate evidence request and information architecture placeholders.
+    non_operative_status: true
+    linked_carsf_modules:
+      - model/carsf/evidence.py
+      - model/carsf/evidence_packet.py
+    linked_reports:
+      - reports/evidence_requirements.md
+      - reports/mock_evidence_workflow.md
+    divisions:
+      - division_id: div_14_01
+        division_title: Evidence Placeholder
+        conceptual_scope: Draft evidence bundle, sufficiency, confidence, redaction, retention, and audit logging placeholders.
+        linked_existing_layer: model/carsf/evidence.py
+        placeholder_provision_types:
+          - evidence_power_placeholder
+          - privacy_safeguard_placeholder
+          - reserved_for_counsel
+        requires_legal_review: true
+        requires_tax_review: true
+        requires_ato_methods_review: true
+        requires_treasury_review: true
+        requires_privacy_review: true
+        requires_external_calibration: true
+        forbidden_operational_claims:
+          - must not claim statutory evidence power
+          - must not claim notice power
+    external_review_required: true
+    drafting_risk: critical_privacy_and_legal_review_required
+    main_reason: Evidence architecture is sensitive and creates no real information request or power.
+  - part_id: part_15
+    part_title: Administrative Workflow and Review
+    purpose: Locate administrative workflow and review placeholders.
+    non_operative_status: true
+    linked_carsf_modules:
+      - model/carsf/administrative_workflow.py
+      - model/carsf/review_workflow.py
+    linked_reports:
+      - reports/administrative_compliance_workflow.md
+    divisions:
+      - division_id: div_15_01
+        division_title: Administrative Review Placeholder
+        conceptual_scope: Workflow queues, review states, locked states, and no-real-action review placeholders.
+        linked_existing_layer: model/carsf/administrative_workflow.py
+        placeholder_provision_types:
+          - review_right_placeholder
+          - evidence_power_placeholder
+          - reserved_for_counsel
+        requires_legal_review: true
+        requires_tax_review: true
+        requires_ato_methods_review: true
+        requires_treasury_review: true
+        requires_privacy_review: true
+        requires_external_calibration: true
+        forbidden_operational_claims:
+          - must not claim ATO workflow
+          - must not claim enforcement process
+    external_review_required: true
+    drafting_risk: critical_reserved_for_counsel
+    main_reason: Administrative pathway labels are synthetic and cannot imply official action.
+  - part_id: part_16
+    part_title: Privacy, Secrecy, and Data Handling
+    purpose: Locate privacy, secrecy, ingestion, redaction, retention, and data-handling safeguards.
+    non_operative_status: true
+    linked_carsf_modules:
+      - model/carsf/secure_ingestion.py
+      - model/carsf/redaction.py
+      - model/carsf/retention.py
+    linked_reports:
+      - reports/secure_ingestion_controls.md
+    divisions:
+      - division_id: div_16_01
+        division_title: Privacy and Secrecy Placeholder
+        conceptual_scope: Restricted-data handling, storage-zone, redaction, retention, and audit trail placeholders.
+        linked_existing_layer: model/carsf/secure_ingestion.py
+        placeholder_provision_types:
+          - privacy_safeguard_placeholder
+          - evidence_power_placeholder
+          - reserved_for_counsel
+        requires_legal_review: true
+        requires_tax_review: false
+        requires_ato_methods_review: true
+        requires_treasury_review: true
+        requires_privacy_review: true
+        requires_external_calibration: false
+        forbidden_operational_claims:
+          - must not claim real data handling approval
+          - must not claim production security control
+    external_review_required: true
+    drafting_risk: high_privacy_review_required
+    main_reason: Privacy and secrecy architecture requires external legal, privacy, ATO, and administrative-design review.
+  - part_id: part_17
+    part_title: Calibration, External Review, and Schedule Authority
+    purpose: Locate calibration shell, source registry, and schedule authority placeholders.
+    non_operative_status: true
+    linked_carsf_modules:
+      - model/carsf/calibration.py
+    linked_reports:
+      - reports/calibration_requirements.md
+      - reports/sector_schedule_expansion.md
+    divisions:
+      - division_id: div_17_01
+        division_title: Calibration and Schedule Authority Placeholder
+        conceptual_scope: External calibration registry, benchmark updates, and schedule authority governance placeholders.
+        linked_existing_layer: docs/calibration_shell.md
+        placeholder_provision_types:
+          - schedule_authority_placeholder
+          - regulation_making_placeholder
+          - reserved_for_counsel
+        requires_legal_review: true
+        requires_tax_review: true
+        requires_ato_methods_review: true
+        requires_treasury_review: true
+        requires_privacy_review: true
+        requires_external_calibration: true
+        forbidden_operational_claims:
+          - must not claim calibration status
+          - must not claim official benchmark
+    external_review_required: true
+    drafting_risk: high_external_review_required
+    main_reason: Calibration and schedule authority remain external-review blockers.
+  - part_id: part_18
+    part_title: Reporting, Transparency, and Parliamentary Oversight
+    purpose: Locate reporting, transparency, oversight, and publication placeholders.
+    non_operative_status: true
+    linked_carsf_modules:
+      - model/carsf/decision_log.py
+    linked_reports:
+      - reports/reviewed_scenarios.md
+    divisions:
+      - division_id: div_18_01
+        division_title: Transparency Placeholder
+        conceptual_scope: Reporting, decision-log, review publication, and parliamentary oversight placeholders.
+        linked_existing_layer: model/carsf/decision_log.py
+        placeholder_provision_types:
+          - review_right_placeholder
+          - privacy_safeguard_placeholder
+          - regulation_making_placeholder
+        requires_legal_review: true
+        requires_tax_review: true
+        requires_ato_methods_review: true
+        requires_treasury_review: true
+        requires_privacy_review: true
+        requires_external_calibration: false
+        forbidden_operational_claims:
+          - must not claim parliamentary procedure
+          - must not claim real publication duty
+    external_review_required: true
+    drafting_risk: high_external_review_required
+    main_reason: Oversight and transparency require legal, privacy, and parliamentary process design.
+  - part_id: part_19
+    part_title: Transitional and Commencement Rules
+    purpose: Locate commencement and transitional placeholders without creating dates or obligations.
+    non_operative_status: true
+    linked_carsf_modules:
+      - model/carsf/review_workflow.py
+    linked_reports:
+      - reports/administrative_compliance_workflow.md
+    divisions:
+      - division_id: div_19_01
+        division_title: Transitional Placeholder
+        conceptual_scope: Commencement, transitional, grandfathering, phased reporting, and deferred calibration placeholders.
+        linked_existing_layer: docs/v1_5_plan.md
+        placeholder_provision_types:
+          - commencement_placeholder
+          - transitional_placeholder
+          - reserved_for_counsel
+        requires_legal_review: true
+        requires_tax_review: true
+        requires_ato_methods_review: true
+        requires_treasury_review: true
+        requires_privacy_review: false
+        requires_external_calibration: true
+        forbidden_operational_claims:
+          - must not claim start date
+          - must not claim transitional obligation
+    external_review_required: true
+    drafting_risk: high_external_review_required
+    main_reason: Commencement and transitional rules must be externally drafted and remain absent here.
+  - part_id: part_20
+    part_title: Regulation-Making Powers
+    purpose: Locate regulation-making placeholders without creating powers.
+    non_operative_status: true
+    linked_carsf_modules:
+      - model/carsf/calibration.py
+    linked_reports:
+      - reports/calibration_requirements.md
+    divisions:
+      - division_id: div_20_01
+        division_title: Regulation-Making Placeholder
+        conceptual_scope: Future update areas for schedules, benchmarks, caps, evidence, and privacy rules.
+        linked_existing_layer: docs/calibration_shell.md
+        placeholder_provision_types:
+          - regulation_making_placeholder
+          - schedule_authority_placeholder
+          - reserved_for_counsel
+        requires_legal_review: true
+        requires_tax_review: true
+        requires_ato_methods_review: true
+        requires_treasury_review: true
+        requires_privacy_review: true
+        requires_external_calibration: true
+        forbidden_operational_claims:
+          - must not claim power to make regulations
+          - must not claim parliamentary scrutiny design
+    external_review_required: true
+    drafting_risk: critical_reserved_for_counsel
+    main_reason: Regulation-making powers are not created and require constitutional/legal drafting review.
+  - part_id: part_21
+    part_title: Non-Operative Matters / Reserved for Drafting Counsel
+    purpose: Lock unresolved matters for drafting counsel and external legal review.
+    non_operative_status: true
+    linked_carsf_modules:
+      - model/carsf/repo_guardrails.py
+    linked_reports:
+      - reports/repo_guardrails.md
+    divisions:
+      - division_id: div_21_01
+        division_title: Reserved for Counsel
+        conceptual_scope: Areas too sensitive to draft in this repository, including powers, penalties, rights, obligations, and operative definitions.
+        linked_existing_layer: docs/known_risks.md
+        placeholder_provision_types:
+          - reserved_for_counsel
+        requires_legal_review: true
+        requires_tax_review: true
+        requires_ato_methods_review: true
+        requires_treasury_review: true
+        requires_privacy_review: true
+        requires_external_calibration: true
+        forbidden_operational_claims:
+          - must not claim drafting sufficiency
+          - must not claim readiness for a Bill
+    external_review_required: true
+    drafting_risk: critical_reserved_for_counsel
+    main_reason: Sensitive legal architecture is deliberately locked and not drafted here.
+definitions:
+  - term: CARSF
+    plain_english_description: Commonwealth Automation Revenue Stabilisation Framework concept placeholder.
+    linked_module_or_doc: README.md
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: Qualified Labour Contribution
+    plain_english_description: Placeholder labour contribution concept combining worker-hour and labour-quality dimensions.
+    linked_module_or_doc: model/carsf/qlc.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: QLC
+    plain_english_description: Abbreviation placeholder for Qualified Labour Contribution.
+    linked_module_or_doc: model/carsf/qlc.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: Output-Linked Full-Time Equivalent
+    plain_english_description: Placeholder output-linked labour benchmark concept.
+    linked_module_or_doc: model/carsf/libc.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: OPFTE
+    plain_english_description: Abbreviation placeholder for Output-Linked Full-Time Equivalent.
+    linked_module_or_doc: model/carsf/libc.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: Human Labour Equivalent
+    plain_english_description: Placeholder for human labour equivalent measurement.
+    linked_module_or_doc: model/carsf/libc.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: HLE
+    plain_english_description: Abbreviation placeholder for Human Labour Equivalent.
+    linked_module_or_doc: model/carsf/libc.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: Automation Intensity Index
+    plain_english_description: Placeholder index for automation intensity components.
+    linked_module_or_doc: model/carsf/aii.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: AII
+    plain_english_description: Abbreviation placeholder for Automation Intensity Index.
+    linked_module_or_doc: model/carsf/aii.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: National Labour Tax Gap
+    plain_english_description: Placeholder concept for labour-linked tax-base gap.
+    linked_module_or_doc: model/carsf/libc.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: NLTG
+    plain_english_description: Abbreviation placeholder for National Labour Tax Gap.
+    linked_module_or_doc: model/carsf/libc.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: Australian Automated Value Added
+    plain_english_description: Placeholder value-base concept for automation-linked Australian value added.
+    linked_module_or_doc: model/carsf/aava.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: AAVA
+    plain_english_description: Abbreviation placeholder for Australian Automated Value Added.
+    linked_module_or_doc: model/carsf/aava.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: Automation Exposure Levy
+    plain_english_description: Placeholder for a conceptual levy component linked to automation exposure.
+    linked_module_or_doc: model/carsf/levy.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: AEL
+    plain_english_description: Abbreviation placeholder for Automation Exposure Levy.
+    linked_module_or_doc: model/carsf/levy.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: Automation Rent Levy
+    plain_english_description: Placeholder for a conceptual levy component linked to automation rents.
+    linked_module_or_doc: model/carsf/levy.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: ARL
+    plain_english_description: Abbreviation placeholder for Automation Rent Levy.
+    linked_module_or_doc: model/carsf/levy.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: CARS-I
+    plain_english_description: Placeholder coverage and stabilisation indicator.
+    linked_module_or_doc: model/carsf/coverage.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: CoverageRatio
+    plain_english_description: Placeholder ratio comparing automation revenue capture to relevant pressure metrics.
+    linked_module_or_doc: model/carsf/coverage.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: sector schedule
+    plain_english_description: Placeholder schedule metadata for a prototype sector.
+    linked_module_or_doc: docs/sector_schedule_expansion.md
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: canonical output unit
+    plain_english_description: Placeholder output unit used by prototype schedules.
+    linked_module_or_doc: docs/sector_schedule_expansion.md
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: safe harbour
+    plain_english_description: Placeholder review classification that does not change liability.
+    linked_module_or_doc: model/carsf/safe_harbour.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: grouped entity
+    plain_english_description: Placeholder for grouped-entity review concepts without legal grouping.
+    linked_module_or_doc: model/carsf/grouping.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: related-party automation service
+    plain_english_description: Placeholder related-party service review concept.
+    linked_module_or_doc: model/carsf/transfer_pricing.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: offshore automation service
+    plain_english_description: Placeholder offshore automation service routing concept.
+    linked_module_or_doc: model/carsf/transfer_pricing.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: mixed-unit activity
+    plain_english_description: Placeholder for activity mixes with different canonical output units.
+    linked_module_or_doc: model/carsf/mixed_units.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: evidence bundle
+    plain_english_description: Placeholder bundle of evidence requirements for synthetic review.
+    linked_module_or_doc: model/carsf/evidence.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: review queue
+    plain_english_description: Placeholder administrative workflow queue with no real action.
+    linked_module_or_doc: model/carsf/administrative_workflow.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: external calibration
+    plain_english_description: Placeholder for future external calibration and methods review.
+    linked_module_or_doc: docs/calibration_shell.md
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: schedule authority
+    plain_english_description: Placeholder for a future schedule-governance authority design.
+    linked_module_or_doc: docs/sector_schedule_expansion.md
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: transition payment
+    plain_english_description: Placeholder transition-payment concept from funding previews.
+    linked_module_or_doc: model/carsf/transition_payments.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+  - term: automation dividend
+    plain_english_description: Placeholder automation-dividend payment concept.
+    linked_module_or_doc: model/carsf/transition_payments.py
+    drafting_status: non_operative_placeholder
+    requires_legal_review: true
+    requires_tax_review: true
+    requires_policy_review: true
+    must_not_be_used_as_operative_definition: true
+schedules:
+  - schedule_id: automotive_repair
+    schedule_name: Automotive Repair
+    source_yaml: schedules/automotive_repair.yaml
+    status: prototype_placeholder_only
+    calibration_status: illustrative_placeholder_values_only
+    legal_attribution_status: not_legally_attributed
+    capital_base_issue: ordinary tangible and software treatment still requires legal and tax review
+    multi_schedule_attribution_issue: unresolved
+    requires_external_calibration: true
+    requires_legal_review: true
+    must_not_be_treated_as_official_schedule: true
+  - schedule_id: logistics_warehousing
+    schedule_name: Logistics / Warehousing
+    source_yaml: schedules/logistics_warehousing.yaml
+    status: prototype_placeholder_only
+    calibration_status: illustrative_placeholder_values_only
+    legal_attribution_status: not_legally_attributed
+    capital_base_issue: robotics and software allocation requires legal and tax review
+    multi_schedule_attribution_issue: unresolved
+    requires_external_calibration: true
+    requires_legal_review: true
+    must_not_be_treated_as_official_schedule: true
+  - schedule_id: call_centres_customer_support
+    schedule_name: Call Centres / Customer Support
+    source_yaml: schedules/call_centres_customer_support.yaml
+    status: prototype_placeholder_only
+    calibration_status: illustrative_placeholder_values_only
+    legal_attribution_status: not_legally_attributed
+    capital_base_issue: chatbot and software treatment unresolved
+    multi_schedule_attribution_issue: unresolved
+    requires_external_calibration: true
+    requires_legal_review: true
+    must_not_be_treated_as_official_schedule: true
+  - schedule_id: accounting_administration
+    schedule_name: Accounting / Administration
+    source_yaml: schedules/accounting_administration.yaml
+    status: prototype_placeholder_only
+    calibration_status: illustrative_placeholder_values_only
+    legal_attribution_status: not_legally_attributed
+    capital_base_issue: document automation and software treatment unresolved
+    multi_schedule_attribution_issue: unresolved
+    requires_external_calibration: true
+    requires_legal_review: true
+    must_not_be_treated_as_official_schedule: true
+  - schedule_id: retail_self_checkout_fulfilment
+    schedule_name: Retail Self-Checkout / Fulfilment
+    source_yaml: schedules/retail_self_checkout_fulfilment.yaml
+    status: prototype_placeholder_only
+    calibration_status: illustrative_placeholder_values_only
+    legal_attribution_status: not_legally_attributed
+    capital_base_issue: robotics, checkout, and customer self-service treatment unresolved
+    multi_schedule_attribution_issue: unresolved
+    requires_external_calibration: true
+    requires_legal_review: true
+    must_not_be_treated_as_official_schedule: true
+  - schedule_id: software_digital_platforms
+    schedule_name: Software / Digital Platforms
+    source_yaml: schedules/software_digital_platforms.yaml
+    status: prototype_placeholder_only
+    calibration_status: illustrative_placeholder_values_only
+    legal_attribution_status: not_legally_attributed
+    capital_base_issue: software and intangible capital-base treatment unresolved and subject to AASB 138, tax counsel, and Treasury review
+    multi_schedule_attribution_issue: unresolved
+    requires_external_calibration: true
+    requires_legal_review: true
+    must_not_be_treated_as_official_schedule: true
+regulation_making_placeholders:
+  - placeholder_id: sector_schedule_updates
+    placeholder_title: Sector Schedule Updates
+    conceptual_scope: Future update mechanism for sector schedule metadata.
+    placeholder_type: regulation_making_placeholder
+    flags: &reg_flags
+      no_real_regulation_making_power_created: true
+      requires_constitutional_legal_drafting_review: true
+      requires_treasury_ato_methods_review: true
+      may_require_parliamentary_scrutiny_design: true
+    review_requirements: &reg_reviews
+      - constitutional_legal_drafting_review
+      - treasury_methods_review
+      - ato_methods_review
+      - parliamentary_scrutiny_design
+    non_claims: &reg_nonclaims
+      - no real regulation-making power is created
+      - requires constitutional and legal drafting review
+      - requires Treasury and ATO methods review
+      - may require parliamentary scrutiny design
+  - placeholder_id: opfte_benchmark_updates
+    placeholder_title: OPFTE Benchmark Updates
+    conceptual_scope: Future update mechanism for OPFTE benchmark metadata.
+    placeholder_type: regulation_making_placeholder
+    flags: *reg_flags
+    review_requirements: *reg_reviews
+    non_claims: *reg_nonclaims
+  - placeholder_id: frv_updates
+    placeholder_title: FRV Updates
+    conceptual_scope: Future update mechanism for Fiscal Replacement Value placeholders.
+    placeholder_type: regulation_making_placeholder
+    flags: *reg_flags
+    review_requirements: *reg_reviews
+    non_claims: *reg_nonclaims
+  - placeholder_id: cap_credit_settings
+    placeholder_title: Cap / Credit Settings
+    conceptual_scope: Future cap and credit setting update design.
+    placeholder_type: regulation_making_placeholder
+    flags: *reg_flags
+    review_requirements: *reg_reviews
+    non_claims: *reg_nonclaims
+  - placeholder_id: safe_harbour_thresholds
+    placeholder_title: Safe Harbour Thresholds
+    conceptual_scope: Future safe-harbour threshold update design.
+    placeholder_type: regulation_making_placeholder
+    flags: *reg_flags
+    review_requirements: *reg_reviews
+    non_claims: *reg_nonclaims
+  - placeholder_id: evidence_requirement_updates
+    placeholder_title: Evidence Requirement Updates
+    conceptual_scope: Future evidence requirement update design.
+    placeholder_type: regulation_making_placeholder
+    flags: *reg_flags
+    review_requirements: *reg_reviews
+    non_claims: *reg_nonclaims
+  - placeholder_id: calibration_registry_updates
+    placeholder_title: Calibration Registry Updates
+    conceptual_scope: Future calibration source registry update design.
+    placeholder_type: regulation_making_placeholder
+    flags: *reg_flags
+    review_requirements: *reg_reviews
+    non_claims: *reg_nonclaims
+  - placeholder_id: transition_payment_interaction_settings
+    placeholder_title: Transition-Payment Interaction Settings
+    conceptual_scope: Future interaction settings between transition support and CARSF reporting.
+    placeholder_type: regulation_making_placeholder
+    flags: *reg_flags
+    review_requirements: *reg_reviews
+    non_claims: *reg_nonclaims
+  - placeholder_id: reporting_transparency_requirements
+    placeholder_title: Reporting and Transparency Requirements
+    conceptual_scope: Future reporting and transparency design.
+    placeholder_type: regulation_making_placeholder
+    flags: *reg_flags
+    review_requirements: *reg_reviews
+    non_claims: *reg_nonclaims
+  - placeholder_id: privacy_secrecy_handling_rules
+    placeholder_title: Privacy / Secrecy Handling Rules
+    conceptual_scope: Future privacy and secrecy handling design.
+    placeholder_type: regulation_making_placeholder
+    flags: *reg_flags
+    review_requirements: *reg_reviews
+    non_claims: *reg_nonclaims
+  - placeholder_id: external_review_procedure
+    placeholder_title: External Review Procedure
+    conceptual_scope: Future external review procedure design.
+    placeholder_type: regulation_making_placeholder
+    flags: *reg_flags
+    review_requirements: *reg_reviews
+    non_claims: *reg_nonclaims
+safeguards:
+  - placeholder_id: taxpayer_review_rights
+    placeholder_title: Taxpayer Review Rights Placeholder
+    conceptual_scope: Placeholder location for possible future review rights.
+    placeholder_type: review_right_placeholder
+    flags: &safeguard_flags
+      not_real_review_right: true
+      not_real_appeal_right: true
+      not_real_objection_process: true
+      requires_legal_and_administrative_law_review: true
+    review_requirements: &safeguard_reviews
+      - legal_review
+      - administrative_law_review
+      - privacy_review
+      - tax_review
+    non_claims: &safeguard_nonclaims
+      - not a real review right
+      - not a real appeal right
+      - not a real objection process
+      - requires legal and administrative-law review
+  - placeholder_id: administrative_merits_review
+    placeholder_title: Administrative Merits Review Placeholder
+    conceptual_scope: Placeholder location for possible merits review architecture.
+    placeholder_type: review_right_placeholder
+    flags: *safeguard_flags
+    review_requirements: *safeguard_reviews
+    non_claims: *safeguard_nonclaims
+  - placeholder_id: objection_process
+    placeholder_title: Objection Process Placeholder
+    conceptual_scope: Placeholder location for possible objection process architecture.
+    placeholder_type: review_right_placeholder
+    flags: *safeguard_flags
+    review_requirements: *safeguard_reviews
+    non_claims: *safeguard_nonclaims
+  - placeholder_id: reasons_for_decision
+    placeholder_title: Reasons-for-Decision Placeholder
+    conceptual_scope: Placeholder location for possible reasons-for-decision architecture.
+    placeholder_type: review_right_placeholder
+    flags: *safeguard_flags
+    review_requirements: *safeguard_reviews
+    non_claims: *safeguard_nonclaims
+  - placeholder_id: privacy_secrecy_safeguard
+    placeholder_title: Privacy / Secrecy Safeguard Placeholder
+    conceptual_scope: Placeholder location for privacy and secrecy safeguards.
+    placeholder_type: privacy_safeguard_placeholder
+    flags: *safeguard_flags
+    review_requirements: *safeguard_reviews
+    non_claims: *safeguard_nonclaims
+  - placeholder_id: protected_information_handling
+    placeholder_title: Protected Information Handling Placeholder
+    conceptual_scope: Placeholder location for protected information handling.
+    placeholder_type: privacy_safeguard_placeholder
+    flags: *safeguard_flags
+    review_requirements: *safeguard_reviews
+    non_claims: *safeguard_nonclaims
+  - placeholder_id: audit_trail
+    placeholder_title: Audit Trail Placeholder
+    conceptual_scope: Placeholder location for audit trail design without operational logging claims.
+    placeholder_type: privacy_safeguard_placeholder
+    flags: *safeguard_flags
+    review_requirements: *safeguard_reviews
+    non_claims: *safeguard_nonclaims
+  - placeholder_id: human_review
+    placeholder_title: Human Review Placeholder
+    conceptual_scope: Placeholder location for human review safeguards.
+    placeholder_type: review_right_placeholder
+    flags: *safeguard_flags
+    review_requirements: *safeguard_reviews
+    non_claims: *safeguard_nonclaims
+  - placeholder_id: external_calibration_review
+    placeholder_title: External Calibration Review Placeholder
+    conceptual_scope: Placeholder location for external calibration review.
+    placeholder_type: review_right_placeholder
+    flags: *safeguard_flags
+    review_requirements: *safeguard_reviews
+    non_claims: *safeguard_nonclaims
+  - placeholder_id: parliamentary_oversight
+    placeholder_title: Parliamentary Oversight Placeholder
+    conceptual_scope: Placeholder location for future parliamentary oversight design.
+    placeholder_type: review_right_placeholder
+    flags: *safeguard_flags
+    review_requirements: *safeguard_reviews
+    non_claims: *safeguard_nonclaims
+evidence_power_placeholders:
+  - placeholder_id: evidence_request_bundle
+    placeholder_title: Evidence Request Bundle
+    conceptual_scope: Placeholder for draft evidence request bundles only.
+    placeholder_type: evidence_power_placeholder
+    flags: &evidence_flags
+      no_statutory_information_gathering_power_created: true
+      no_notice_issued: true
+      no_real_evidence_collected: true
+      no_taxpayer_data_ingested: true
+      no_firm_data_ingested: true
+      no_restricted_data_ingested: true
+      requires_legal_privacy_secrecy_ato_and_administrative_design_review: true
+    review_requirements: &evidence_reviews
+      - legal_review
+      - privacy_review
+      - secrecy_review
+      - ato_methods_review
+      - administrative_design_review
+    non_claims: &evidence_nonclaims
+      - no statutory information-gathering power is created
+      - no notice is issued
+      - no real evidence is collected
+      - no taxpayer data is ingested
+      - no firm data is ingested
+      - no restricted data is ingested
+      - requires legal, privacy, secrecy, ATO, and administrative-design review
+  - placeholder_id: draft_information_request
+    placeholder_title: Draft Information Request
+    conceptual_scope: Placeholder for draft information request format only.
+    placeholder_type: evidence_power_placeholder
+    flags: *evidence_flags
+    review_requirements: *evidence_reviews
+    non_claims: *evidence_nonclaims
+  - placeholder_id: evidence_sufficiency_review
+    placeholder_title: Evidence Sufficiency Review
+    conceptual_scope: Placeholder for prototype sufficiency labels only.
+    placeholder_type: evidence_power_placeholder
+    flags: *evidence_flags
+    review_requirements: *evidence_reviews
+    non_claims: *evidence_nonclaims
+  - placeholder_id: evidence_confidence_rating
+    placeholder_title: Evidence Confidence Rating
+    conceptual_scope: Placeholder for prototype evidence confidence labels only.
+    placeholder_type: evidence_power_placeholder
+    flags: *evidence_flags
+    review_requirements: *evidence_reviews
+    non_claims: *evidence_nonclaims
+  - placeholder_id: privacy_secrecy_classification
+    placeholder_title: Privacy / Secrecy Classification
+    conceptual_scope: Placeholder for prototype privacy and secrecy labels only.
+    placeholder_type: evidence_power_placeholder
+    flags: *evidence_flags
+    review_requirements: *evidence_reviews
+    non_claims: *evidence_nonclaims
+  - placeholder_id: restricted_data_handling
+    placeholder_title: Restricted-Data Handling
+    conceptual_scope: Placeholder for external restricted-data handling design.
+    placeholder_type: evidence_power_placeholder
+    flags: *evidence_flags
+    review_requirements: *evidence_reviews
+    non_claims: *evidence_nonclaims
+  - placeholder_id: redaction_retention
+    placeholder_title: Redaction and Retention
+    conceptual_scope: Placeholder for redaction and retention design.
+    placeholder_type: evidence_power_placeholder
+    flags: *evidence_flags
+    review_requirements: *evidence_reviews
+    non_claims: *evidence_nonclaims
+  - placeholder_id: audit_logging
+    placeholder_title: Audit Logging
+    conceptual_scope: Placeholder for audit logging design without production enforcement.
+    placeholder_type: evidence_power_placeholder
+    flags: *evidence_flags
+    review_requirements: *evidence_reviews
+    non_claims: *evidence_nonclaims
+  - placeholder_id: external_secure_storage
+    placeholder_title: External Secure Storage
+    conceptual_scope: Placeholder for external secure storage design.
+    placeholder_type: evidence_power_placeholder
+    flags: *evidence_flags
+    review_requirements: *evidence_reviews
+    non_claims: *evidence_nonclaims
+anti_avoidance_placeholders:
+  - placeholder_id: token_human_oversight
+    placeholder_title: Token Human Oversight
+    conceptual_scope: Placeholder integrity concept for token human oversight scenarios.
+    placeholder_type: integrity_rule_placeholder
+    flags: &avoidance_flags
+      not_operative_anti_avoidance_rule: true
+      not_legal_test: true
+      not_ato_position: true
+      requires_legal_tax_treasury_ato_international_tax_and_behavioural_review: true
+    review_requirements: &avoidance_reviews
+      - legal_review
+      - tax_review
+      - treasury_review
+      - ato_methods_review
+      - international_tax_review
+      - behavioural_review
+    non_claims: &avoidance_nonclaims
+      - not an operative anti-avoidance rule
+      - not a legal test
+      - not an ATO position
+      - requires legal, tax, Treasury, ATO, international tax, and behavioural review
+  - placeholder_id: fake_qlc_inflation
+    placeholder_title: Fake QLC Inflation
+    conceptual_scope: Placeholder integrity concept for artificial QLC inflation.
+    placeholder_type: integrity_rule_placeholder
+    flags: *avoidance_flags
+    review_requirements: *avoidance_reviews
+    non_claims: *avoidance_nonclaims
+  - placeholder_id: entity_splitting
+    placeholder_title: Entity Splitting
+    conceptual_scope: Placeholder integrity concept for entity splitting.
+    placeholder_type: integrity_rule_placeholder
+    flags: *avoidance_flags
+    review_requirements: *avoidance_reviews
+    non_claims: *avoidance_nonclaims
+  - placeholder_id: offshore_automation_service_routing
+    placeholder_title: Offshore Automation Service Routing
+    conceptual_scope: Placeholder integrity concept for offshore automation routing.
+    placeholder_type: integrity_rule_placeholder
+    flags: *avoidance_flags
+    review_requirements: *avoidance_reviews
+    non_claims: *avoidance_nonclaims
+  - placeholder_id: related_party_ai_fees
+    placeholder_title: Related-Party AI Fees
+    conceptual_scope: Placeholder integrity concept for related-party AI service fees.
+    placeholder_type: integrity_rule_placeholder
+    flags: *avoidance_flags
+    review_requirements: *avoidance_reviews
+    non_claims: *avoidance_nonclaims
+  - placeholder_id: cloud_inference_relabelling
+    placeholder_title: Cloud / Inference Relabelling
+    conceptual_scope: Placeholder integrity concept for cloud and inference cost relabelling.
+    placeholder_type: integrity_rule_placeholder
+    flags: *avoidance_flags
+    review_requirements: *avoidance_reviews
+    non_claims: *avoidance_nonclaims
+  - placeholder_id: robotics_leasing
+    placeholder_title: Robotics Leasing
+    conceptual_scope: Placeholder integrity concept for robotics leasing structures.
+    placeholder_type: integrity_rule_placeholder
+    flags: *avoidance_flags
+    review_requirements: *avoidance_reviews
+    non_claims: *avoidance_nonclaims
+  - placeholder_id: customer_self_service_relabelling
+    placeholder_title: Customer Self-Service Relabelling
+    conceptual_scope: Placeholder integrity concept for customer self-service relabelling.
+    placeholder_type: integrity_rule_placeholder
+    flags: *avoidance_flags
+    review_requirements: *avoidance_reviews
+    non_claims: *avoidance_nonclaims
+  - placeholder_id: schedule_classification_arbitrage
+    placeholder_title: Schedule Classification Arbitrage
+    conceptual_scope: Placeholder integrity concept for schedule classification arbitrage.
+    placeholder_type: integrity_rule_placeholder
+    flags: *avoidance_flags
+    review_requirements: *avoidance_reviews
+    non_claims: *avoidance_nonclaims
+  - placeholder_id: artificial_low_aava
+    placeholder_title: Artificial Low AAVA
+    conceptual_scope: Placeholder integrity concept for artificial low AAVA.
+    placeholder_type: integrity_rule_placeholder
+    flags: *avoidance_flags
+    review_requirements: *avoidance_reviews
+    non_claims: *avoidance_nonclaims
+  - placeholder_id: platform_ip_royalty_routing
+    placeholder_title: Platform IP / Royalty Routing
+    conceptual_scope: Placeholder integrity concept for platform IP and royalty routing.
+    placeholder_type: integrity_rule_placeholder
+    flags: *avoidance_flags
+    review_requirements: *avoidance_reviews
+    non_claims: *avoidance_nonclaims
+  - placeholder_id: open_source_ai_treatment_gap
+    placeholder_title: Open-Source AI Treatment Gap
+    conceptual_scope: Placeholder integrity concept for unresolved open-source AI treatment.
+    placeholder_type: integrity_rule_placeholder
+    flags: *avoidance_flags
+    review_requirements: *avoidance_reviews
+    non_claims: *avoidance_nonclaims
+  - placeholder_id: mixed_unit_apportionment_gaming
+    placeholder_title: Mixed-Unit Apportionment Gaming
+    conceptual_scope: Placeholder integrity concept for mixed-unit apportionment gaming.
+    placeholder_type: integrity_rule_placeholder
+    flags: *avoidance_flags
+    review_requirements: *avoidance_reviews
+    non_claims: *avoidance_nonclaims
+commencement_transition_placeholders:
+  - placeholder_id: commencement_placeholder
+    placeholder_title: Commencement Placeholder
+    conceptual_scope: Placeholder location for commencement design without dates or obligations.
+    placeholder_type: commencement_placeholder
+    flags:
+      no_real_commencement_created: true
+      no_real_obligation_created: true
+      requires_legal_review: true
+    review_requirements:
+      - legal_review
+      - tax_review
+      - treasury_review
+      - ato_methods_review
+    non_claims:
+      - no commencement date is created
+      - no real obligation is created
+      - requires legal and tax review
+  - placeholder_id: transitional_placeholder
+    placeholder_title: Transitional Placeholder
+    conceptual_scope: Placeholder location for transition, grandfathering, and phased reporting design.
+    placeholder_type: transitional_placeholder
+    flags:
+      no_real_transition_rule_created: true
+      no_real_obligation_created: true
+      requires_legal_review: true
+    review_requirements:
+      - legal_review
+      - tax_review
+      - treasury_review
+      - ato_methods_review
+    non_claims:
+      - no transitional rule is created
+      - no real obligation is created
+      - requires legal and tax review
+external_review_blockers:
+  - blocker_id: operative_definitions_reserved
+    blocker_title: Operative Definitions Reserved for Counsel
+    blocker_type: legal_drafting
+    affected_parts:
+      - part_01
+      - part_02
+      - part_21
+    required_review:
+      - legal_review
+      - parliamentary_counsel_review
+      - tax_review
+    locked_or_reserved_for_counsel: true
+    main_reason: Operative definitions cannot be drafted in this prototype repository.
+  - blocker_id: liability_architecture_reserved
+    blocker_title: Liability Architecture Reserved for Counsel
+    blocker_type: liability_design
+    affected_parts:
+      - part_03
+      - part_09
+    required_review:
+      - legal_review
+      - tax_review
+      - treasury_review
+      - ato_methods_review
+    locked_or_reserved_for_counsel: true
+    main_reason: Liability architecture is legally sensitive and this skeleton does not create it.
+  - blocker_id: evidence_powers_reserved
+    blocker_title: Evidence Powers Reserved for Counsel
+    blocker_type: information_powers
+    affected_parts:
+      - part_14
+      - part_16
+    required_review:
+      - legal_review
+      - privacy_review
+      - secrecy_review
+      - ato_methods_review
+    locked_or_reserved_for_counsel: true
+    main_reason: Information-gathering powers, notices, and evidence handling cannot be created here.
+  - blocker_id: integrity_rules_reserved
+    blocker_title: Integrity Rules Reserved for Counsel
+    blocker_type: anti_avoidance
+    affected_parts:
+      - part_11
+      - part_12
+      - part_13
+    required_review:
+      - legal_review
+      - tax_review
+      - international_tax_review
+      - behavioural_review
+    locked_or_reserved_for_counsel: true
+    main_reason: Anti-avoidance, grouping, related-party, and offshore attribution concepts are not operative rules.
+  - blocker_id: regulation_making_reserved
+    blocker_title: Regulation-Making Reserved for Counsel
+    blocker_type: regulation_design
+    affected_parts:
+      - part_20
+    required_review:
+      - constitutional_legal_review
+      - parliamentary_scrutiny_design
+      - treasury_review
+      - ato_methods_review
+    locked_or_reserved_for_counsel: true
+    main_reason: No real regulation-making power is created in this repository.
+forbidden_claims:
+  - legally sufficient
+  - legislative-ready
+  - bill-ready
+  - parliament-ready
+  - official legal architecture
+  - official bill
+  - operative law
+  - enforceable provision
+  - valid law
+  - lawful power
+  - statutory power is created
+  - information-gathering power is created
+  - notice is issued
+  - penalty applies
+  - offence
+  - taxpayer must pay
+  - firm is liable
+  - commissioner may require
+  - ATO may require
+  - ATO will audit
+  - official ATO process
+  - ATO guidance
+  - Treasury validated
+  - ATO validated
+  - actual tax payable
+  - binding obligation
+  - real review right
+  - appeal right created
+  - objection right created
+  - regulation-making power is created

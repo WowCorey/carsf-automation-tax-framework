@@ -76,4 +76,8 @@
 - Draft evidence request bundles do not create notices, statutory powers, penalties, compliance scoring, real action, or actual tax-payable estimates.
 - Locked and suppressed workflow statuses are display controls only; they require external legal, tax, privacy, methods, calibration, and administrative-design review before any real use.
 - Routine and enhanced workflow rows are demonstration paths only; they are not clearance, approval, operational readiness, or evidence sufficiency findings.
+- Legislative architecture placeholders may be mistaken for legal drafting if non-operative warnings are removed.
+- Proposed Parts, Divisions, definitions, schedules, evidence placeholders, safeguards, regulation-making placeholders, commencement/transitional placeholders, and external-review blockers are conceptual locations only.
+- The legislative architecture skeleton creates no rights, obligations, statutory powers, information-gathering powers, notices, penalties, enforcement process, compliance scoring, or tax-payable determinations.
+- Operative definitions, liability architecture, evidence powers, anti-avoidance rules, review rights, regulation-making mechanisms, commencement, and transitional rules remain reserved for external legal, tax, Treasury, ATO, Parliamentary Counsel, privacy, calibration, administrative-design, and policy review.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.

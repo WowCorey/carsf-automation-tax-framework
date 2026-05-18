@@ -56,6 +56,9 @@ jobs:
       - name: Run administrative compliance workflow
         run: python scripts/run_administrative_compliance_workflow.py
 
+      - name: Run legislative architecture
+        run: python scripts/run_legislative_architecture.py
+
       - name: Run mock evidence workflow
         run: python scripts/run_evidence_workflow.py
 
