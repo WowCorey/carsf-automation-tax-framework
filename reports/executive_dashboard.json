@@ -1,0 +1,2850 @@
+{
+  "executive_dashboard": {
+    "calibration_blockers": [
+      {
+        "blocker": "OPFTE, FRV, caps, rates, and schedule coefficients require external calibration.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "core_formula_model",
+        "main_reason": "Formula concepts are central but remain placeholder and non-operative."
+      },
+      {
+        "blocker": "Worked examples use synthetic inputs and placeholder schedule values.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "worked_examples",
+        "main_reason": "Examples help reviewers follow the model but cannot be read as real cases."
+      },
+      {
+        "blocker": "Sector schedules require official data, legal attribution, and external calibration.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "sector_schedules",
+        "main_reason": "Schedules frame sector examples but are not official or calibrated."
+      },
+      {
+        "blocker": "Schedule weights and thresholds remain uncalibrated.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "sector_schedule_expansion",
+        "main_reason": "Review schedule coverage before sector stress or behavioural layers."
+      },
+      {
+        "blocker": "Stress bands are metadata-only and require sector calibration.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "sector_stress_matrix",
+        "main_reason": "Stress matrix helps target review without creating real sector scores."
+      },
+      {
+        "blocker": "Behavioural elasticity and response evidence are not calibrated.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "behavioural_response",
+        "main_reason": "Behavioural layer identifies review pathways without predicting behaviour."
+      },
+      {
+        "blocker": "Administrative workflow is not an operational design and requires external process review.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "administrative_workflow",
+        "main_reason": "Administrative workflow must be read before legislative architecture boundaries."
+      },
+      {
+        "blocker": "Legislative architecture cannot proceed without external calibration of formula and schedule concepts.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "legislative_architecture",
+        "main_reason": "Legislative skeleton is non-operative and reserved for external review."
+      },
+      {
+        "blocker": "Evidence confidence and sufficiency are not calibrated.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "evidence_workflow",
+        "main_reason": "Evidence workflow is needed to understand data boundaries."
+      },
+      {
+        "blocker": "Real evidence handling requires external secure environment design.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "secure_ingestion",
+        "main_reason": "Ingestion controls protect no-real-data boundaries."
+      },
+      {
+        "blocker": "Guardrails are not a complete DLP or security system.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "repo_guardrails",
+        "main_reason": "Guardrails help verify no-real-data discipline."
+      },
+      {
+        "blocker": "Incidence, investment, and pass-through assumptions are not calibrated.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "investment_incidence",
+        "main_reason": "Incidence and investment warnings frame interpretation boundaries."
+      },
+      {
+        "blocker": "Fiscal, labour-market, transfer, and revenue assumptions require calibration.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "fiscal_trajectory",
+        "main_reason": "Fiscal trajectory sets context for support and funding layers."
+      },
+      {
+        "blocker": "Payment rates, eligibility, population, and fiscal assumptions are placeholders.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "transition_funding",
+        "main_reason": "Transition funding connects fiscal trajectory to support costs."
+      },
+      {
+        "blocker": "Eligibility, household tests, incidence offsets, and payment interactions are placeholders.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "payment_interactions",
+        "main_reason": "Payment interactions explain support-stack caveats before household scenarios."
+      },
+      {
+        "blocker": "Household composition, income, regional, support, and re-employment assumptions are synthetic.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "household_distributional",
+        "main_reason": "Synthetic households illustrate possible stress mechanics only."
+      },
+      {
+        "blocker": "Weights are synthetic and not representative.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "household_weighting",
+        "main_reason": "Weighting layer is not representative and must be read with warnings."
+      },
+      {
+        "blocker": "Ranges are deterministic placeholders, not statistical uncertainty.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "uncertainty_ranges",
+        "main_reason": "Uncertainty ranges should be read before reviewed scenario classifications."
+      },
+      {
+        "blocker": "Missing or fragile ranges require calibration before interpretation.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "reviewed_scenarios",
+        "main_reason": "Reviewed scenarios tell reviewers which point estimates to suppress."
+      },
+      {
+        "blocker": "Calibration requirements are listed but unmet.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "calibration_shell",
+        "main_reason": "Calibration shell summarises unresolved data and methods needs."
+      },
+      {
+        "blocker": "Working paper contains unresolved policy and calibration questions.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "working_paper",
+        "main_reason": "Working paper provides the main concept narrative before detailed reports."
+      },
+      {
+        "blocker": "Known risks and status docs list unresolved calibration and review gaps.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "status_risks_docs",
+        "main_reason": "Status and risks docs should be read before interpreting outputs."
+      }
+    ],
+    "dashboard_id": "carsf_v1_5_executive_dashboard",
+    "dashboard_name": "CARSF V1.5 Executive Dashboard Consolidation",
+    "external_review_blockers": [
+      {
+        "blocker": "Dashboard consolidation requires reviewer judgement and does not replace layer-specific review.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "executive_dashboard",
+        "main_reason": "Reviewers should start with the dashboard to find reports and boundary warnings."
+      },
+      {
+        "blocker": "Tax, Treasury, ATO methods, and legal review are required before any real use.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "core_formula_model",
+        "main_reason": "Formula concepts are central but remain placeholder and non-operative."
+      },
+      {
+        "blocker": "External methods review is required before any example interpretation.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "worked_examples",
+        "main_reason": "Examples help reviewers follow the model but cannot be read as real cases."
+      },
+      {
+        "blocker": "Schedule authority, Treasury, ATO methods, tax, and legal review required.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "sector_schedules",
+        "main_reason": "Schedules frame sector examples but are not official or calibrated."
+      },
+      {
+        "blocker": "External schedule, legal, Treasury, and ATO methods review required.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "sector_schedule_expansion",
+        "main_reason": "Review schedule coverage before sector stress or behavioural layers."
+      },
+      {
+        "blocker": "Sector, legal, tax, Treasury, and ATO methods review required.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "sector_stress_matrix",
+        "main_reason": "Stress matrix helps target review without creating real sector scores."
+      },
+      {
+        "blocker": "Legal, tax, Treasury, ATO methods, and behavioural research review required.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "behavioural_response",
+        "main_reason": "Behavioural layer identifies review pathways without predicting behaviour."
+      },
+      {
+        "blocker": "Legal, tax, ATO methods, Treasury methods, privacy, and administrative-design review required.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "administrative_workflow",
+        "main_reason": "Administrative workflow must be read before legislative architecture boundaries."
+      },
+      {
+        "blocker": "Legal, tax, Treasury, ATO methods, Parliamentary Counsel, privacy, and administrative-design review required.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "legislative_architecture",
+        "main_reason": "Legislative skeleton is non-operative and reserved for external review."
+      },
+      {
+        "blocker": "Legal, privacy, secrecy, ATO methods, and evidence-design review required.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "evidence_workflow",
+        "main_reason": "Evidence workflow is needed to understand data boundaries."
+      },
+      {
+        "blocker": "Privacy, secrecy, cybersecurity, legal, and administrative review required.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "secure_ingestion",
+        "main_reason": "Ingestion controls protect no-real-data boundaries."
+      },
+      {
+        "blocker": "Security, privacy, legal, and repository governance review required.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "repo_guardrails",
+        "main_reason": "Guardrails help verify no-real-data discipline."
+      },
+      {
+        "blocker": "Economic, Treasury, tax, and investment methods review required.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "investment_incidence",
+        "main_reason": "Incidence and investment warnings frame interpretation boundaries."
+      },
+      {
+        "blocker": "Treasury, economic methods, labour-market, and fiscal review required.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "fiscal_trajectory",
+        "main_reason": "Fiscal trajectory sets context for support and funding layers."
+      },
+      {
+        "blocker": "Welfare policy, Treasury, legal, tax, and fiscal methods review required.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "transition_funding",
+        "main_reason": "Transition funding connects fiscal trajectory to support costs."
+      },
+      {
+        "blocker": "Welfare policy, legal, fiscal, privacy, and Treasury methods review required.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "payment_interactions",
+        "main_reason": "Payment interactions explain support-stack caveats before household scenarios."
+      },
+      {
+        "blocker": "Statistical, welfare policy, privacy, and external data review required.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "household_distributional",
+        "main_reason": "Synthetic households illustrate possible stress mechanics only."
+      },
+      {
+        "blocker": "Statistical methods, privacy, ABS/HILDA/Census access, and external data review required.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "household_weighting",
+        "main_reason": "Weighting layer is not representative and must be read with warnings."
+      },
+      {
+        "blocker": "Statistical methods and external calibration review required.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "uncertainty_ranges",
+        "main_reason": "Uncertainty ranges should be read before reviewed scenario classifications."
+      },
+      {
+        "blocker": "Statistical methods, policy, and external calibration review required.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "reviewed_scenarios",
+        "main_reason": "Reviewed scenarios tell reviewers which point estimates to suppress."
+      },
+      {
+        "blocker": "External data governance, statistical methods, Treasury, ATO, legal, privacy, and policy review required.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "calibration_shell",
+        "main_reason": "Calibration shell summarises unresolved data and methods needs."
+      },
+      {
+        "blocker": "Policy, legal, tax, Treasury, ATO methods, and Parliamentary Counsel review required.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "working_paper",
+        "main_reason": "Working paper provides the main concept narrative before detailed reports."
+      },
+      {
+        "blocker": "Cross-functional external review required before real use.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "status_risks_docs",
+        "main_reason": "Status and risks docs should be read before interpreting outputs."
+      }
+    ],
+    "guardrail_statuses": [
+      {
+        "clean": true,
+        "denied_findings": 0,
+        "exists": true,
+        "interpretation_warning": "Guardrail status is a prototype repository-safety signal only, not operational readiness or validation.",
+        "source_report": "reports/repo_guardrails.json",
+        "warning_findings": 48
+      },
+      {
+        "clean": null,
+        "denied_findings": 0,
+        "exists": true,
+        "interpretation_warning": "Guardrail status is a prototype repository-safety signal only, not operational readiness or validation.",
+        "source_report": "reports/secure_ingestion_controls.json",
+        "warning_findings": 0
+      },
+      {
+        "clean": null,
+        "denied_findings": 0,
+        "exists": true,
+        "interpretation_warning": "Guardrail status is a prototype repository-safety signal only, not operational readiness or validation.",
+        "source_report": "reports/investment_guardrails.json",
+        "warning_findings": 0
+      }
+    ],
+    "layers": [
+      {
+        "blocker_explanation": "This layer is navigation only and creates no score or approval.",
+        "calibration_blockers": [],
+        "external_review_blockers": [
+          "Dashboard consolidation requires reviewer judgement and does not replace layer-specific review."
+        ],
+        "layer_group": "overview",
+        "layer_id": "executive_dashboard",
+        "layer_name": "Executive Dashboard",
+        "main_reason": "Reviewers should start with the dashboard to find reports and boundary warnings.",
+        "must_not_be_used_for": [
+          "readiness score",
+          "maturity score",
+          "official review pathway",
+          "validation"
+        ],
+        "non_claim_flags": [
+          "not_legal_advice",
+          "not_tax_advice",
+          "not_ato_guidance",
+          "not_treasury_modelling",
+          "not_economic_validation",
+          "not_operational_readiness",
+          "not_legal_sufficiency"
+        ],
+        "primary_files": [
+          "model/carsf/executive_dashboard.py",
+          "data/dashboard/executive_dashboard_manifest.yaml",
+          "scripts/run_executive_dashboard.py"
+        ],
+        "primary_reports": [],
+        "purpose": "Consolidated navigation and report index for the CARSF V1.5 prototype stack.",
+        "read_order": 1,
+        "recommended_reviewer": [
+          "policy_reviewer",
+          "technical_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "placeholder_only",
+          "not_for_real_world_use"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/25_Executive_Dashboard.py"
+        ]
+      },
+      {
+        "blocker_explanation": "Working paper is a research draft only.",
+        "calibration_blockers": [
+          "Working paper contains unresolved policy and calibration questions."
+        ],
+        "external_review_blockers": [
+          "Policy, legal, tax, Treasury, ATO methods, and Parliamentary Counsel review required."
+        ],
+        "layer_group": "documentation",
+        "layer_id": "working_paper",
+        "layer_name": "CARSF V1.5 Working Paper",
+        "main_reason": "Working paper provides the main concept narrative before detailed reports.",
+        "must_not_be_used_for": [
+          "legal advice",
+          "tax advice",
+          "official policy"
+        ],
+        "non_claim_flags": [
+          "not_legal_advice",
+          "not_tax_advice",
+          "not_treasury_modelling",
+          "not_ato_guidance"
+        ],
+        "primary_files": [
+          "paper/CARSF_V1_5_WORKING.md",
+          "paper/formula_reference.md",
+          "paper/glossary.md"
+        ],
+        "primary_reports": [
+          "paper/CARSF_V1_5_WORKING.md",
+          "paper/formula_reference.md"
+        ],
+        "purpose": "Working paper, formula reference, glossary, and supporting documentation.",
+        "read_order": 2,
+        "recommended_reviewer": [
+          "policy_reviewer",
+          "legal_reviewer",
+          "tax_reviewer",
+          "treasury_methods_reviewer",
+          "ato_methods_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "placeholder_only",
+          "external_review_required"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/1_Policy_Paper.py"
+        ]
+      },
+      {
+        "blocker_explanation": "Documentation orients reviewers but does not approve the prototype.",
+        "calibration_blockers": [
+          "Known risks and status docs list unresolved calibration and review gaps."
+        ],
+        "external_review_blockers": [
+          "Cross-functional external review required before real use."
+        ],
+        "layer_group": "documentation",
+        "layer_id": "status_risks_docs",
+        "layer_name": "Current Status and Known Risks",
+        "main_reason": "Status and risks docs should be read before interpreting outputs.",
+        "must_not_be_used_for": [
+          "approval",
+          "validation",
+          "operational readiness"
+        ],
+        "non_claim_flags": [
+          "not_legal_advice",
+          "not_tax_advice",
+          "not_economic_validation",
+          "not_operational_readiness"
+        ],
+        "primary_files": [
+          "docs/current_status.md",
+          "docs/known_risks.md",
+          "docs/limitations.md",
+          "docs/v1_5_plan.md"
+        ],
+        "primary_reports": [
+          "docs/current_status.md",
+          "docs/known_risks.md"
+        ],
+        "purpose": "Status, risk, limitation, and implementation documentation for reviewer orientation.",
+        "read_order": 3,
+        "recommended_reviewer": [
+          "policy_reviewer",
+          "technical_reviewer",
+          "legal_reviewer",
+          "tax_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "placeholder_only",
+          "external_review_required"
+        ],
+        "streamlit_pages": [
+          "simulator/app.py"
+        ]
+      },
+      {
+        "blocker_explanation": "Core formula outputs are prototype calculations only.",
+        "calibration_blockers": [
+          "OPFTE, FRV, caps, rates, and schedule coefficients require external calibration."
+        ],
+        "external_review_blockers": [
+          "Tax, Treasury, ATO methods, and legal review are required before any real use."
+        ],
+        "layer_group": "formula_core",
+        "layer_id": "core_formula_model",
+        "layer_name": "Core Formula Model",
+        "main_reason": "Formula concepts are central but remain placeholder and non-operative.",
+        "must_not_be_used_for": [
+          "actual tax payable",
+          "legal advice",
+          "tax advice",
+          "ATO guidance",
+          "Treasury modelling",
+          "economic validation",
+          "operational readiness"
+        ],
+        "non_claim_flags": [
+          "not_actual_tax_payable",
+          "not_tax_advice",
+          "not_ato_guidance",
+          "not_treasury_modelling"
+        ],
+        "primary_files": [
+          "model/carsf/qlc.py",
+          "model/carsf/libc.py",
+          "model/carsf/aii.py",
+          "model/carsf/aava.py",
+          "model/carsf/levy.py",
+          "model/carsf/caps.py"
+        ],
+        "primary_reports": [
+          "reports/example_results.md",
+          "reports/example_results.json"
+        ],
+        "purpose": "Core placeholder formula mechanics for QLC, HLE, AII, AAVA, levies, caps, and coverage.",
+        "read_order": 5,
+        "recommended_reviewer": [
+          "legal_reviewer",
+          "tax_reviewer",
+          "treasury_methods_reviewer",
+          "ato_methods_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "placeholder_only",
+          "calibration_required",
+          "not_for_real_world_use"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/2_Tax_Model.py"
+        ]
+      },
+      {
+        "blocker_explanation": "Examples are demonstration fixtures only.",
+        "calibration_blockers": [
+          "Worked examples use synthetic inputs and placeholder schedule values."
+        ],
+        "external_review_blockers": [
+          "External methods review is required before any example interpretation."
+        ],
+        "layer_group": "worked_examples",
+        "layer_id": "worked_examples",
+        "layer_name": "Worked Examples",
+        "main_reason": "Examples help reviewers follow the model but cannot be read as real cases.",
+        "must_not_be_used_for": [
+          "actual tax payable",
+          "legal advice",
+          "tax advice",
+          "ATO guidance",
+          "Treasury modelling",
+          "economic validation",
+          "operational readiness"
+        ],
+        "non_claim_flags": [
+          "not_actual_tax_payable",
+          "not_real_data",
+          "not_tax_advice"
+        ],
+        "primary_files": [
+          "scripts/run_examples.py",
+          "examples"
+        ],
+        "primary_reports": [
+          "reports/example_results.md",
+          "reports/example_results.json"
+        ],
+        "purpose": "Synthetic worked examples showing formula traces, evidence labels, and limitation notes.",
+        "read_order": 5,
+        "recommended_reviewer": [
+          "policy_reviewer",
+          "technical_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "generated_report_available",
+          "synthetic_only",
+          "placeholder_only"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/3_Worked_Examples.py"
+        ]
+      },
+      {
+        "blocker_explanation": "Report validates placeholders rather than calibrating them.",
+        "calibration_blockers": [
+          "Schedule weights and thresholds remain uncalibrated."
+        ],
+        "external_review_blockers": [
+          "External schedule, legal, Treasury, and ATO methods review required."
+        ],
+        "layer_group": "sector_schedules",
+        "layer_id": "sector_schedule_expansion",
+        "layer_name": "Sector Schedule Expansion",
+        "main_reason": "Review schedule coverage before sector stress or behavioural layers.",
+        "must_not_be_used_for": [
+          "actual tax payable",
+          "legal advice",
+          "tax advice",
+          "ATO guidance",
+          "Treasury modelling",
+          "economic validation",
+          "operational readiness"
+        ],
+        "non_claim_flags": [
+          "not_ato_guidance",
+          "not_treasury_modelling",
+          "not_actual_tax_payable"
+        ],
+        "primary_files": [
+          "scripts/run_sector_schedule_expansion.py",
+          "model/tests/test_sector_schedule_expansion.py"
+        ],
+        "primary_reports": [
+          "reports/sector_schedule_expansion.md",
+          "reports/sector_schedule_expansion.json"
+        ],
+        "purpose": "Validates schedule coverage, placeholder weights, calibration labels, and non-claim language.",
+        "read_order": 6,
+        "recommended_reviewer": [
+          "legal_reviewer",
+          "tax_reviewer",
+          "treasury_methods_reviewer",
+          "ato_methods_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "generated_report_available",
+          "placeholder_only",
+          "calibration_required"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/20_Sector_Schedules.py"
+        ]
+      },
+      {
+        "blocker_explanation": "Schedules are prototype placeholders only.",
+        "calibration_blockers": [
+          "Sector schedules require official data, legal attribution, and external calibration."
+        ],
+        "external_review_blockers": [
+          "Schedule authority, Treasury, ATO methods, tax, and legal review required."
+        ],
+        "layer_group": "sector_schedules",
+        "layer_id": "sector_schedules",
+        "layer_name": "Sector Schedules",
+        "main_reason": "Schedules frame sector examples but are not official or calibrated.",
+        "must_not_be_used_for": [
+          "actual tax payable",
+          "legal advice",
+          "tax advice",
+          "ATO guidance",
+          "Treasury modelling",
+          "economic validation",
+          "operational readiness"
+        ],
+        "non_claim_flags": [
+          "not_ato_guidance",
+          "not_treasury_modelling",
+          "not_actual_tax_payable"
+        ],
+        "primary_files": [
+          "schedules",
+          "docs/sector_schedule_expansion.md"
+        ],
+        "primary_reports": [
+          "reports/sector_schedule_expansion.md",
+          "reports/sector_schedule_expansion.json"
+        ],
+        "purpose": "Prototype sector schedule YAML files and canonical output unit metadata.",
+        "read_order": 6,
+        "recommended_reviewer": [
+          "legal_reviewer",
+          "tax_reviewer",
+          "treasury_methods_reviewer",
+          "ato_methods_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "placeholder_only",
+          "calibration_required",
+          "legal_review_required"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/20_Sector_Schedules.py"
+        ]
+      },
+      {
+        "blocker_explanation": "Matrix groups placeholder review bands and must not rank sectors.",
+        "calibration_blockers": [
+          "Stress bands are metadata-only and require sector calibration."
+        ],
+        "external_review_blockers": [
+          "Sector, legal, tax, Treasury, and ATO methods review required."
+        ],
+        "layer_group": "sector_stress",
+        "layer_id": "sector_stress_matrix",
+        "layer_name": "Sector Stress Matrix",
+        "main_reason": "Stress matrix helps target review without creating real sector scores.",
+        "must_not_be_used_for": [
+          "sector ranking",
+          "actual tax payable",
+          "economic validation",
+          "investment advice"
+        ],
+        "non_claim_flags": [
+          "not_economic_validation",
+          "not_ato_guidance",
+          "not_treasury_modelling",
+          "not_actual_tax_payable"
+        ],
+        "primary_files": [
+          "model/carsf/sector_stress_matrix.py",
+          "scripts/run_sector_stress_matrix.py"
+        ],
+        "primary_reports": [
+          "reports/sector_stress_matrix.md",
+          "reports/sector_stress_matrix.json"
+        ],
+        "purpose": "Metadata-only cross-sector stress matrix with do-not-rank display controls.",
+        "read_order": 7,
+        "recommended_reviewer": [
+          "legal_reviewer",
+          "tax_reviewer",
+          "treasury_methods_reviewer",
+          "ato_methods_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "generated_report_available",
+          "placeholder_only",
+          "external_review_required"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/21_Sector_Stress_Matrix.py"
+        ]
+      },
+      {
+        "blocker_explanation": "Synthetic pathways do not predict conduct.",
+        "calibration_blockers": [
+          "Behavioural elasticity and response evidence are not calibrated."
+        ],
+        "external_review_blockers": [
+          "Legal, tax, Treasury, ATO methods, and behavioural research review required."
+        ],
+        "layer_group": "behavioural_response",
+        "layer_id": "behavioural_response",
+        "layer_name": "Behavioural Response Simulation",
+        "main_reason": "Behavioural layer identifies review pathways without predicting behaviour.",
+        "must_not_be_used_for": [
+          "taxpayer behaviour prediction",
+          "behavioural elasticity",
+          "compliance scoring",
+          "enforcement"
+        ],
+        "non_claim_flags": [
+          "not_forecast",
+          "not_economic_validation",
+          "not_compliance_scoring",
+          "not_enforcement"
+        ],
+        "primary_files": [
+          "model/carsf/behavioural_response.py",
+          "examples/behavioural_response_scenarios.yaml",
+          "scripts/run_behavioural_response_simulation.py"
+        ],
+        "primary_reports": [
+          "reports/behavioural_response_simulation.md",
+          "reports/behavioural_response_simulation.json"
+        ],
+        "purpose": "Synthetic behavioural pathway review mapped to pressure bands and countermeasure categories.",
+        "read_order": 8,
+        "recommended_reviewer": [
+          "policy_reviewer",
+          "legal_reviewer",
+          "tax_reviewer",
+          "ato_methods_reviewer",
+          "economic_methods_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "generated_report_available",
+          "synthetic_only",
+          "placeholder_only",
+          "external_review_required"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/22_Behavioural_Response.py"
+        ]
+      },
+      {
+        "blocker_explanation": "Workflow routes synthetic cases only and creates no real action.",
+        "calibration_blockers": [
+          "Administrative workflow is not an operational design and requires external process review."
+        ],
+        "external_review_blockers": [
+          "Legal, tax, ATO methods, Treasury methods, privacy, and administrative-design review required."
+        ],
+        "layer_group": "administrative_workflow",
+        "layer_id": "administrative_workflow",
+        "layer_name": "Administrative Compliance Workflow",
+        "main_reason": "Administrative workflow must be read before legislative architecture boundaries.",
+        "must_not_be_used_for": [
+          "enforcement",
+          "notices",
+          "penalties",
+          "compliance scoring",
+          "official review pathway"
+        ],
+        "non_claim_flags": [
+          "not_compliance_scoring",
+          "not_enforcement",
+          "not_ato_guidance",
+          "not_actual_tax_payable"
+        ],
+        "primary_files": [
+          "model/carsf/administrative_workflow.py",
+          "examples/administrative_workflow_scenarios.yaml",
+          "scripts/run_administrative_compliance_workflow.py"
+        ],
+        "primary_reports": [
+          "reports/administrative_compliance_workflow.md",
+          "reports/administrative_compliance_workflow.json"
+        ],
+        "purpose": "Synthetic administrative pathway organisation across evidence bundles, queues, and locked review states.",
+        "read_order": 9,
+        "recommended_reviewer": [
+          "ato_methods_reviewer",
+          "legal_reviewer",
+          "tax_reviewer",
+          "privacy_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "generated_report_available",
+          "synthetic_only",
+          "non_operative",
+          "external_review_required"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/23_Administrative_Workflow.py"
+        ]
+      },
+      {
+        "blocker_explanation": "Architecture is a conceptual map only.",
+        "calibration_blockers": [
+          "Legislative architecture cannot proceed without external calibration of formula and schedule concepts."
+        ],
+        "external_review_blockers": [
+          "Legal, tax, Treasury, ATO methods, Parliamentary Counsel, privacy, and administrative-design review required."
+        ],
+        "layer_group": "legislative_architecture",
+        "layer_id": "legislative_architecture",
+        "layer_name": "Legislative Architecture Skeleton",
+        "main_reason": "Legislative skeleton is non-operative and reserved for external review.",
+        "must_not_be_used_for": [
+          "operative law",
+          "legal drafting",
+          "legal sufficiency",
+          "rights or obligations",
+          "statutory powers"
+        ],
+        "non_claim_flags": [
+          "not_operative_law",
+          "not_bill",
+          "not_legal_advice",
+          "not_tax_advice",
+          "not_ato_guidance",
+          "not_parliamentary_counsel_drafting"
+        ],
+        "primary_files": [
+          "model/carsf/legislative_architecture.py",
+          "data/legislative_architecture/legislative_architecture_skeleton.yaml",
+          "scripts/run_legislative_architecture.py"
+        ],
+        "primary_reports": [
+          "reports/legislative_architecture.md",
+          "reports/legislative_architecture.json"
+        ],
+        "purpose": "Non-operative legislative-style architecture map for Parts, Divisions, definitions, schedules, powers placeholders, safeguards, and blockers.",
+        "read_order": 10,
+        "recommended_reviewer": [
+          "legal_reviewer",
+          "tax_reviewer",
+          "parliamentary_counsel_reviewer",
+          "treasury_methods_reviewer",
+          "ato_methods_reviewer",
+          "privacy_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "generated_report_available",
+          "non_operative",
+          "legal_review_required",
+          "external_review_required"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/24_Legislative_Architecture.py"
+        ]
+      },
+      {
+        "blocker_explanation": "Fiscal trajectory outputs are placeholders only.",
+        "calibration_blockers": [
+          "Fiscal, labour-market, transfer, and revenue assumptions require calibration."
+        ],
+        "external_review_blockers": [
+          "Treasury, economic methods, labour-market, and fiscal review required."
+        ],
+        "layer_group": "fiscal_trajectory",
+        "layer_id": "fiscal_trajectory",
+        "layer_name": "Fiscal Trajectory",
+        "main_reason": "Fiscal trajectory sets context for support and funding layers.",
+        "must_not_be_used_for": [
+          "Treasury modelling",
+          "forecasts",
+          "budget costing"
+        ],
+        "non_claim_flags": [
+          "not_treasury_modelling",
+          "not_economic_validation",
+          "not_forecast"
+        ],
+        "primary_files": [
+          "model/carsf/fiscal_trajectory.py",
+          "scripts/run_fiscal_trajectory.py"
+        ],
+        "primary_reports": [
+          "reports/fiscal_trajectory.md",
+          "reports/fiscal_trajectory.json"
+        ],
+        "purpose": "Placeholder national fiscal trajectory engine for displacement, PAYG erosion, transfer pressure, and residual gaps.",
+        "read_order": 11,
+        "recommended_reviewer": [
+          "treasury_methods_reviewer",
+          "economic_methods_reviewer",
+          "policy_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "generated_report_available",
+          "placeholder_only",
+          "calibration_required"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/13_Fiscal_Trajectory.py"
+        ]
+      },
+      {
+        "blocker_explanation": "Funding module does not design real UBI or welfare policy.",
+        "calibration_blockers": [
+          "Payment rates, eligibility, population, and fiscal assumptions are placeholders."
+        ],
+        "external_review_blockers": [
+          "Welfare policy, Treasury, legal, tax, and fiscal methods review required."
+        ],
+        "layer_group": "transition_funding",
+        "layer_id": "transition_funding",
+        "layer_name": "Transition Funding",
+        "main_reason": "Transition funding connects fiscal trajectory to support costs.",
+        "must_not_be_used_for": [
+          "welfare advice",
+          "UBI policy",
+          "Treasury costing"
+        ],
+        "non_claim_flags": [
+          "not_welfare_advice",
+          "not_treasury_modelling",
+          "not_economic_validation"
+        ],
+        "primary_files": [
+          "model/carsf/transition_funding.py",
+          "scripts/run_transition_funding.py"
+        ],
+        "primary_reports": [
+          "reports/transition_funding.md",
+          "reports/transition_funding.json"
+        ],
+        "purpose": "Placeholder transition-payment funding comparison against automation revenue.",
+        "read_order": 12,
+        "recommended_reviewer": [
+          "welfare_policy_reviewer",
+          "treasury_methods_reviewer",
+          "policy_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "generated_report_available",
+          "placeholder_only",
+          "calibration_required"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/14_Transition_Funding.py"
+        ]
+      },
+      {
+        "blocker_explanation": "Payment interaction mechanics are prototype-only.",
+        "calibration_blockers": [
+          "Eligibility, household tests, incidence offsets, and payment interactions are placeholders."
+        ],
+        "external_review_blockers": [
+          "Welfare policy, legal, fiscal, privacy, and Treasury methods review required."
+        ],
+        "layer_group": "payment_interactions",
+        "layer_id": "payment_interactions",
+        "layer_name": "Payment Interactions",
+        "main_reason": "Payment interactions explain support-stack caveats before household scenarios.",
+        "must_not_be_used_for": [
+          "welfare eligibility",
+          "welfare advice",
+          "validated savings"
+        ],
+        "non_claim_flags": [
+          "not_welfare_advice",
+          "not_economic_validation",
+          "not_actual_tax_payable"
+        ],
+        "primary_files": [
+          "model/carsf/payment_interactions.py",
+          "scripts/run_payment_interactions.py"
+        ],
+        "primary_reports": [
+          "reports/payment_interactions.md",
+          "reports/payment_interactions.json"
+        ],
+        "purpose": "Placeholder baseline separation, targeting, phase rules, stack interactions, and support incidence.",
+        "read_order": 13,
+        "recommended_reviewer": [
+          "welfare_policy_reviewer",
+          "treasury_methods_reviewer",
+          "legal_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "generated_report_available",
+          "synthetic_only",
+          "placeholder_only",
+          "calibration_required"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/15_Payment_Interactions.py"
+        ]
+      },
+      {
+        "blocker_explanation": "Scenarios do not represent real households.",
+        "calibration_blockers": [
+          "Household composition, income, regional, support, and re-employment assumptions are synthetic."
+        ],
+        "external_review_blockers": [
+          "Statistical, welfare policy, privacy, and external data review required."
+        ],
+        "layer_group": "household_distributional",
+        "layer_id": "household_distributional",
+        "layer_name": "Household Distributional Scenarios",
+        "main_reason": "Synthetic households illustrate possible stress mechanics only.",
+        "must_not_be_used_for": [
+          "real household modelling",
+          "population estimate",
+          "welfare advice",
+          "eligibility law",
+          "statistical validation"
+        ],
+        "non_claim_flags": [
+          "not_population_estimate",
+          "not_welfare_advice",
+          "not_statistical_validation",
+          "not_real_data"
+        ],
+        "primary_files": [
+          "model/carsf/distributional_scenarios.py",
+          "scripts/run_distributional_scenarios.py"
+        ],
+        "primary_reports": [
+          "reports/distributional_scenarios.md",
+          "reports/distributional_scenarios.json"
+        ],
+        "purpose": "Synthetic household budget stress, re-employment, regional stress, cliff, and shock-band scenarios.",
+        "read_order": 14,
+        "recommended_reviewer": [
+          "welfare_policy_reviewer",
+          "statistical_methods_reviewer",
+          "privacy_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "generated_report_available",
+          "synthetic_only",
+          "placeholder_only",
+          "calibration_required"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/16_Distributional_Scenarios.py"
+        ]
+      },
+      {
+        "blocker_explanation": "Weight-record summaries are stress-test outputs only.",
+        "calibration_blockers": [
+          "Weights are synthetic and not representative."
+        ],
+        "external_review_blockers": [
+          "Statistical methods, privacy, ABS/HILDA/Census access, and external data review required."
+        ],
+        "layer_group": "household_weighting",
+        "layer_id": "household_weighting",
+        "layer_name": "Household Weighting",
+        "main_reason": "Weighting layer is not representative and must be read with warnings.",
+        "must_not_be_used_for": [
+          "real household modelling",
+          "population estimate",
+          "welfare advice",
+          "eligibility law",
+          "statistical validation"
+        ],
+        "non_claim_flags": [
+          "not_population_estimate",
+          "not_statistical_validation",
+          "not_real_data"
+        ],
+        "primary_files": [
+          "model/carsf/weighted_distributional.py",
+          "scripts/run_household_weighting.py"
+        ],
+        "primary_reports": [
+          "reports/household_weighting.md",
+          "reports/household_weighting.json"
+        ],
+        "purpose": "Synthetic subgroup weighting and aggregation shell with representativeness warnings.",
+        "read_order": 15,
+        "recommended_reviewer": [
+          "statistical_methods_reviewer",
+          "privacy_reviewer",
+          "policy_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "generated_report_available",
+          "synthetic_only",
+          "placeholder_only",
+          "calibration_required"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/17_Household_Weighting.py"
+        ]
+      },
+      {
+        "blocker_explanation": "Ranges protect against false precision only.",
+        "calibration_blockers": [
+          "Ranges are deterministic placeholders, not statistical uncertainty."
+        ],
+        "external_review_blockers": [
+          "Statistical methods and external calibration review required."
+        ],
+        "layer_group": "uncertainty_ranges",
+        "layer_id": "uncertainty_ranges",
+        "layer_name": "Uncertainty Ranges",
+        "main_reason": "Uncertainty ranges should be read before reviewed scenario classifications.",
+        "must_not_be_used_for": [
+          "confidence intervals",
+          "forecasts",
+          "statistical validation"
+        ],
+        "non_claim_flags": [
+          "not_confidence_interval",
+          "not_forecast",
+          "not_statistical_validation",
+          "not_population_estimate"
+        ],
+        "primary_files": [
+          "model/carsf/uncertainty_ranges.py",
+          "scripts/run_uncertainty_ranges.py"
+        ],
+        "primary_reports": [
+          "reports/uncertainty_ranges.md",
+          "reports/uncertainty_ranges.json"
+        ],
+        "purpose": "Deterministic low/base/high placeholder ranges and stability checks.",
+        "read_order": 16,
+        "recommended_reviewer": [
+          "statistical_methods_reviewer",
+          "policy_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "generated_report_available",
+          "synthetic_only",
+          "placeholder_only",
+          "calibration_required"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/18_Uncertainty_Ranges.py"
+        ]
+      },
+      {
+        "blocker_explanation": "Review layer controls display only and does not validate outputs.",
+        "calibration_blockers": [
+          "Missing or fragile ranges require calibration before interpretation."
+        ],
+        "external_review_blockers": [
+          "Statistical methods, policy, and external calibration review required."
+        ],
+        "layer_group": "reviewed_scenarios",
+        "layer_id": "reviewed_scenarios",
+        "layer_name": "Reviewed Scenarios",
+        "main_reason": "Reviewed scenarios tell reviewers which point estimates to suppress.",
+        "must_not_be_used_for": [
+          "validation",
+          "population estimates",
+          "clean point estimates for fragile outputs"
+        ],
+        "non_claim_flags": [
+          "not_population_estimate",
+          "not_statistical_validation",
+          "not_real_data"
+        ],
+        "primary_files": [
+          "model/carsf/scenario_review.py",
+          "scripts/run_reviewed_scenarios.py"
+        ],
+        "primary_reports": [
+          "reports/reviewed_scenarios.md",
+          "reports/reviewed_scenarios.json"
+        ],
+        "purpose": "Display-control layer for stable, fragile, range-sensitive, missing-range, or non-interpretable synthetic outputs.",
+        "read_order": 17,
+        "recommended_reviewer": [
+          "statistical_methods_reviewer",
+          "policy_reviewer",
+          "technical_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "generated_report_available",
+          "synthetic_only",
+          "non_operative",
+          "external_review_required"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/19_Reviewed_Scenarios.py"
+        ]
+      },
+      {
+        "blocker_explanation": "Mock evidence is synthetic only.",
+        "calibration_blockers": [
+          "Evidence confidence and sufficiency are not calibrated."
+        ],
+        "external_review_blockers": [
+          "Legal, privacy, secrecy, ATO methods, and evidence-design review required."
+        ],
+        "layer_group": "evidence_workflow",
+        "layer_id": "evidence_workflow",
+        "layer_name": "Evidence Workflow",
+        "main_reason": "Evidence workflow is needed to understand data boundaries.",
+        "must_not_be_used_for": [
+          "real evidence ingestion",
+          "enforcement",
+          "notices",
+          "audit validation"
+        ],
+        "non_claim_flags": [
+          "not_ato_guidance",
+          "not_enforcement",
+          "not_actual_tax_payable",
+          "not_real_data"
+        ],
+        "primary_files": [
+          "model/carsf/evidence.py",
+          "scripts/run_evidence_workflow.py",
+          "data/mock_evidence"
+        ],
+        "primary_reports": [
+          "reports/evidence_requirements.md",
+          "reports/evidence_requirements.json",
+          "reports/mock_evidence_workflow.md",
+          "reports/mock_evidence_workflow.json"
+        ],
+        "purpose": "Prototype evidence requirements and synthetic mock evidence workflow.",
+        "read_order": 18,
+        "recommended_reviewer": [
+          "ato_methods_reviewer",
+          "privacy_reviewer",
+          "legal_reviewer",
+          "technical_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "generated_report_available",
+          "synthetic_only",
+          "placeholder_only"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/8_Evidence_and_Calibration.py",
+          "simulator/pages/9_Mock_Evidence_Workflow.py"
+        ]
+      },
+      {
+        "blocker_explanation": "Controls are scaffolding only and do not implement production security.",
+        "calibration_blockers": [
+          "Real evidence handling requires external secure environment design."
+        ],
+        "external_review_blockers": [
+          "Privacy, secrecy, cybersecurity, legal, and administrative review required."
+        ],
+        "layer_group": "secure_ingestion",
+        "layer_id": "secure_ingestion",
+        "layer_name": "Secure Ingestion Controls",
+        "main_reason": "Ingestion controls protect no-real-data boundaries.",
+        "must_not_be_used_for": [
+          "secure evidence platform",
+          "real access control",
+          "legal or privacy compliance"
+        ],
+        "non_claim_flags": [
+          "not_real_data",
+          "not_enforcement",
+          "not_ato_guidance"
+        ],
+        "primary_files": [
+          "model/carsf/secure_ingestion.py",
+          "scripts/run_ingestion_controls.py"
+        ],
+        "primary_reports": [
+          "reports/secure_ingestion_controls.md",
+          "reports/secure_ingestion_controls.json"
+        ],
+        "purpose": "Default-deny synthetic evidence ingestion controls and storage-zone checks.",
+        "read_order": 19,
+        "recommended_reviewer": [
+          "privacy_reviewer",
+          "technical_reviewer",
+          "legal_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "generated_report_available",
+          "synthetic_only",
+          "external_review_required"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/10_Secure_Ingestion_Controls.py"
+        ]
+      },
+      {
+        "blocker_explanation": "Guardrail outputs are warnings only and do not change liability.",
+        "calibration_blockers": [
+          "Incidence, investment, and pass-through assumptions are not calibrated."
+        ],
+        "external_review_blockers": [
+          "Economic, Treasury, tax, and investment methods review required."
+        ],
+        "layer_group": "investment_incidence",
+        "layer_id": "investment_incidence",
+        "layer_name": "Investment / Incidence Guardrails",
+        "main_reason": "Incidence and investment warnings frame interpretation boundaries.",
+        "must_not_be_used_for": [
+          "investment advice",
+          "economic validation",
+          "liability modification"
+        ],
+        "non_claim_flags": [
+          "not_economic_validation",
+          "not_forecast",
+          "not_tax_advice",
+          "not_actual_tax_payable"
+        ],
+        "primary_files": [
+          "model/carsf/investment.py",
+          "model/carsf/incidence.py",
+          "scripts/run_investment_guardrails.py"
+        ],
+        "primary_reports": [
+          "reports/investment_guardrails.md",
+          "reports/investment_guardrails.json"
+        ],
+        "purpose": "Placeholder investment and incidence guardrails that do not alter final liability.",
+        "read_order": 20,
+        "recommended_reviewer": [
+          "economic_methods_reviewer",
+          "treasury_methods_reviewer",
+          "tax_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "generated_report_available",
+          "placeholder_only",
+          "calibration_required"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/12_Investment_and_Incidence_Guardrails.py"
+        ]
+      },
+      {
+        "blocker_explanation": "Guardrails fail closed on repo hygiene but do not validate readiness.",
+        "calibration_blockers": [
+          "Guardrails are not a complete DLP or security system."
+        ],
+        "external_review_blockers": [
+          "Security, privacy, legal, and repository governance review required."
+        ],
+        "layer_group": "repo_guardrails",
+        "layer_id": "repo_guardrails",
+        "layer_name": "Repository Guardrails",
+        "main_reason": "Guardrails help verify no-real-data discipline.",
+        "must_not_be_used_for": [
+          "cybersecurity validation",
+          "complete DLP",
+          "operational readiness"
+        ],
+        "non_claim_flags": [
+          "not_real_data",
+          "not_compliance_scoring",
+          "not_enforcement"
+        ],
+        "primary_files": [
+          "model/carsf/repo_guardrails.py",
+          "scripts/run_repo_guardrails.py"
+        ],
+        "primary_reports": [
+          "reports/repo_guardrails.md",
+          "reports/repo_guardrails.json"
+        ],
+        "purpose": "Prototype repository-level scans for prohibited paths, markers, and generated-report non-claims.",
+        "read_order": 20,
+        "recommended_reviewer": [
+          "technical_reviewer",
+          "privacy_reviewer",
+          "legal_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "generated_report_available",
+          "placeholder_only"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/11_Repository_Guardrails.py"
+        ]
+      },
+      {
+        "blocker_explanation": "Calibration shell blocks real-world claims.",
+        "calibration_blockers": [
+          "Calibration requirements are listed but unmet."
+        ],
+        "external_review_blockers": [
+          "External data governance, statistical methods, Treasury, ATO, legal, privacy, and policy review required."
+        ],
+        "layer_group": "calibration",
+        "layer_id": "calibration_shell",
+        "layer_name": "Calibration Shell",
+        "main_reason": "Calibration shell summarises unresolved data and methods needs.",
+        "must_not_be_used_for": [
+          "calibrated output",
+          "real-world validation",
+          "external data access approval"
+        ],
+        "non_claim_flags": [
+          "not_real_data",
+          "not_economic_validation",
+          "not_statistical_validation"
+        ],
+        "primary_files": [
+          "model/carsf/calibration.py",
+          "docs/calibration_shell.md"
+        ],
+        "primary_reports": [
+          "reports/calibration_requirements.md",
+          "reports/calibration_requirements.json"
+        ],
+        "purpose": "Calibration requirements registry and external-data readiness shell.",
+        "read_order": 21,
+        "recommended_reviewer": [
+          "statistical_methods_reviewer",
+          "treasury_methods_reviewer",
+          "ato_methods_reviewer",
+          "privacy_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "generated_report_available",
+          "placeholder_only",
+          "calibration_required",
+          "external_review_required"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/8_Evidence_and_Calibration.py"
+        ]
+      }
+    ],
+    "missing_reports_or_navigation_gaps": [],
+    "non_claim_profiles": [
+      {
+        "layer_id": "executive_dashboard",
+        "must_not_be_used_for": [
+          "readiness score",
+          "maturity score",
+          "official review pathway",
+          "validation"
+        ],
+        "non_claim_flags": [
+          "not_legal_advice",
+          "not_tax_advice",
+          "not_ato_guidance",
+          "not_treasury_modelling",
+          "not_economic_validation",
+          "not_operational_readiness",
+          "not_legal_sufficiency"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "core_formula_model",
+        "must_not_be_used_for": [
+          "actual tax payable",
+          "legal advice",
+          "tax advice",
+          "ATO guidance",
+          "Treasury modelling",
+          "economic validation",
+          "operational readiness"
+        ],
+        "non_claim_flags": [
+          "not_actual_tax_payable",
+          "not_tax_advice",
+          "not_ato_guidance",
+          "not_treasury_modelling"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "worked_examples",
+        "must_not_be_used_for": [
+          "actual tax payable",
+          "legal advice",
+          "tax advice",
+          "ATO guidance",
+          "Treasury modelling",
+          "economic validation",
+          "operational readiness"
+        ],
+        "non_claim_flags": [
+          "not_actual_tax_payable",
+          "not_real_data",
+          "not_tax_advice"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "sector_schedules",
+        "must_not_be_used_for": [
+          "actual tax payable",
+          "legal advice",
+          "tax advice",
+          "ATO guidance",
+          "Treasury modelling",
+          "economic validation",
+          "operational readiness"
+        ],
+        "non_claim_flags": [
+          "not_ato_guidance",
+          "not_treasury_modelling",
+          "not_actual_tax_payable"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "sector_schedule_expansion",
+        "must_not_be_used_for": [
+          "actual tax payable",
+          "legal advice",
+          "tax advice",
+          "ATO guidance",
+          "Treasury modelling",
+          "economic validation",
+          "operational readiness"
+        ],
+        "non_claim_flags": [
+          "not_ato_guidance",
+          "not_treasury_modelling",
+          "not_actual_tax_payable"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "sector_stress_matrix",
+        "must_not_be_used_for": [
+          "sector ranking",
+          "actual tax payable",
+          "economic validation",
+          "investment advice"
+        ],
+        "non_claim_flags": [
+          "not_economic_validation",
+          "not_ato_guidance",
+          "not_treasury_modelling",
+          "not_actual_tax_payable"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "behavioural_response",
+        "must_not_be_used_for": [
+          "taxpayer behaviour prediction",
+          "behavioural elasticity",
+          "compliance scoring",
+          "enforcement"
+        ],
+        "non_claim_flags": [
+          "not_forecast",
+          "not_economic_validation",
+          "not_compliance_scoring",
+          "not_enforcement"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "administrative_workflow",
+        "must_not_be_used_for": [
+          "enforcement",
+          "notices",
+          "penalties",
+          "compliance scoring",
+          "official review pathway"
+        ],
+        "non_claim_flags": [
+          "not_compliance_scoring",
+          "not_enforcement",
+          "not_ato_guidance",
+          "not_actual_tax_payable"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "legislative_architecture",
+        "must_not_be_used_for": [
+          "operative law",
+          "legal drafting",
+          "legal sufficiency",
+          "rights or obligations",
+          "statutory powers"
+        ],
+        "non_claim_flags": [
+          "not_operative_law",
+          "not_bill",
+          "not_legal_advice",
+          "not_tax_advice",
+          "not_ato_guidance",
+          "not_parliamentary_counsel_drafting"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "evidence_workflow",
+        "must_not_be_used_for": [
+          "real evidence ingestion",
+          "enforcement",
+          "notices",
+          "audit validation"
+        ],
+        "non_claim_flags": [
+          "not_ato_guidance",
+          "not_enforcement",
+          "not_actual_tax_payable",
+          "not_real_data"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "secure_ingestion",
+        "must_not_be_used_for": [
+          "secure evidence platform",
+          "real access control",
+          "legal or privacy compliance"
+        ],
+        "non_claim_flags": [
+          "not_real_data",
+          "not_enforcement",
+          "not_ato_guidance"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "repo_guardrails",
+        "must_not_be_used_for": [
+          "cybersecurity validation",
+          "complete DLP",
+          "operational readiness"
+        ],
+        "non_claim_flags": [
+          "not_real_data",
+          "not_compliance_scoring",
+          "not_enforcement"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "investment_incidence",
+        "must_not_be_used_for": [
+          "investment advice",
+          "economic validation",
+          "liability modification"
+        ],
+        "non_claim_flags": [
+          "not_economic_validation",
+          "not_forecast",
+          "not_tax_advice",
+          "not_actual_tax_payable"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "fiscal_trajectory",
+        "must_not_be_used_for": [
+          "Treasury modelling",
+          "forecasts",
+          "budget costing"
+        ],
+        "non_claim_flags": [
+          "not_treasury_modelling",
+          "not_economic_validation",
+          "not_forecast"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "transition_funding",
+        "must_not_be_used_for": [
+          "welfare advice",
+          "UBI policy",
+          "Treasury costing"
+        ],
+        "non_claim_flags": [
+          "not_welfare_advice",
+          "not_treasury_modelling",
+          "not_economic_validation"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "payment_interactions",
+        "must_not_be_used_for": [
+          "welfare eligibility",
+          "welfare advice",
+          "validated savings"
+        ],
+        "non_claim_flags": [
+          "not_welfare_advice",
+          "not_economic_validation",
+          "not_actual_tax_payable"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "household_distributional",
+        "must_not_be_used_for": [
+          "real household modelling",
+          "population estimate",
+          "welfare advice",
+          "eligibility law",
+          "statistical validation"
+        ],
+        "non_claim_flags": [
+          "not_population_estimate",
+          "not_welfare_advice",
+          "not_statistical_validation",
+          "not_real_data"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "household_weighting",
+        "must_not_be_used_for": [
+          "real household modelling",
+          "population estimate",
+          "welfare advice",
+          "eligibility law",
+          "statistical validation"
+        ],
+        "non_claim_flags": [
+          "not_population_estimate",
+          "not_statistical_validation",
+          "not_real_data"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "uncertainty_ranges",
+        "must_not_be_used_for": [
+          "confidence intervals",
+          "forecasts",
+          "statistical validation"
+        ],
+        "non_claim_flags": [
+          "not_confidence_interval",
+          "not_forecast",
+          "not_statistical_validation",
+          "not_population_estimate"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "reviewed_scenarios",
+        "must_not_be_used_for": [
+          "validation",
+          "population estimates",
+          "clean point estimates for fragile outputs"
+        ],
+        "non_claim_flags": [
+          "not_population_estimate",
+          "not_statistical_validation",
+          "not_real_data"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "calibration_shell",
+        "must_not_be_used_for": [
+          "calibrated output",
+          "real-world validation",
+          "external data access approval"
+        ],
+        "non_claim_flags": [
+          "not_real_data",
+          "not_economic_validation",
+          "not_statistical_validation"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "working_paper",
+        "must_not_be_used_for": [
+          "legal advice",
+          "tax advice",
+          "official policy"
+        ],
+        "non_claim_flags": [
+          "not_legal_advice",
+          "not_tax_advice",
+          "not_treasury_modelling",
+          "not_ato_guidance"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "status_risks_docs",
+        "must_not_be_used_for": [
+          "approval",
+          "validation",
+          "operational readiness"
+        ],
+        "non_claim_flags": [
+          "not_legal_advice",
+          "not_tax_advice",
+          "not_economic_validation",
+          "not_operational_readiness"
+        ],
+        "not_for_real_world_use": true
+      }
+    ],
+    "non_claims": [
+      "This is a prototype dashboard and report index only. It is not legal advice, tax advice, ATO guidance, Treasury modelling, economic validation, welfare advice, compliance scoring, enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.",
+      "The dashboard only consolidates existing prototype reports, warnings, navigation, and review blockers.",
+      "Suggested review navigation is a reviewer convenience only and is not an official process."
+    ],
+    "report_entries": [
+      {
+        "exists": true,
+        "generated_by": "scripts/run_executive_dashboard.py",
+        "interpretation_warning": "This dashboard is generated by the current runner and is navigation only.",
+        "layer_id": "executive_dashboard",
+        "linked_streamlit_page": "simulator/pages/25_Executive_Dashboard.py",
+        "must_not_be_used_for": [
+          "readiness score",
+          "validation",
+          "official process"
+        ],
+        "optional": true,
+        "recommended_read_order": 1,
+        "report_path": "reports/executive_dashboard.json",
+        "report_type": "json"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_executive_dashboard.py",
+        "interpretation_warning": "This dashboard is generated by the current runner and is navigation only.",
+        "layer_id": "executive_dashboard",
+        "linked_streamlit_page": "simulator/pages/25_Executive_Dashboard.py",
+        "must_not_be_used_for": [
+          "readiness score",
+          "validation",
+          "official process"
+        ],
+        "optional": true,
+        "recommended_read_order": 1,
+        "report_path": "reports/executive_dashboard.md",
+        "report_type": "markdown"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_examples.py",
+        "interpretation_warning": "Synthetic examples only; not actual tax payable.",
+        "layer_id": "worked_examples",
+        "linked_streamlit_page": "simulator/pages/3_Worked_Examples.py",
+        "must_not_be_used_for": [
+          "actual tax payable",
+          "legal advice",
+          "tax advice",
+          "ATO guidance",
+          "Treasury modelling",
+          "economic validation",
+          "operational readiness"
+        ],
+        "optional": false,
+        "recommended_read_order": 5,
+        "report_path": "reports/example_results.json",
+        "report_type": "json"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_examples.py",
+        "interpretation_warning": "Synthetic examples only; not actual tax payable.",
+        "layer_id": "worked_examples",
+        "linked_streamlit_page": "simulator/pages/3_Worked_Examples.py",
+        "must_not_be_used_for": [
+          "actual tax payable",
+          "legal advice",
+          "tax advice",
+          "ATO guidance",
+          "Treasury modelling",
+          "economic validation",
+          "operational readiness"
+        ],
+        "optional": false,
+        "recommended_read_order": 5,
+        "report_path": "reports/example_results.md",
+        "report_type": "markdown"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_sector_schedule_expansion.py",
+        "interpretation_warning": "Prototype schedule validation only; not calibrated.",
+        "layer_id": "sector_schedule_expansion",
+        "linked_streamlit_page": "simulator/pages/20_Sector_Schedules.py",
+        "must_not_be_used_for": [
+          "actual tax payable",
+          "legal advice",
+          "tax advice",
+          "ATO guidance",
+          "Treasury modelling",
+          "economic validation",
+          "operational readiness"
+        ],
+        "optional": false,
+        "recommended_read_order": 6,
+        "report_path": "reports/sector_schedule_expansion.json",
+        "report_type": "json"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_sector_schedule_expansion.py",
+        "interpretation_warning": "Prototype schedule validation only; not calibrated.",
+        "layer_id": "sector_schedule_expansion",
+        "linked_streamlit_page": "simulator/pages/20_Sector_Schedules.py",
+        "must_not_be_used_for": [
+          "actual tax payable",
+          "legal advice",
+          "tax advice",
+          "ATO guidance",
+          "Treasury modelling",
+          "economic validation",
+          "operational readiness"
+        ],
+        "optional": false,
+        "recommended_read_order": 6,
+        "report_path": "reports/sector_schedule_expansion.md",
+        "report_type": "markdown"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_sector_stress_matrix.py",
+        "interpretation_warning": "Metadata-only stress bands; not sector rankings.",
+        "layer_id": "sector_stress_matrix",
+        "linked_streamlit_page": "simulator/pages/21_Sector_Stress_Matrix.py",
+        "must_not_be_used_for": [
+          "sector ranking",
+          "economic validation",
+          "actual tax payable"
+        ],
+        "optional": false,
+        "recommended_read_order": 7,
+        "report_path": "reports/sector_stress_matrix.json",
+        "report_type": "json"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_sector_stress_matrix.py",
+        "interpretation_warning": "Metadata-only stress bands; not sector rankings.",
+        "layer_id": "sector_stress_matrix",
+        "linked_streamlit_page": "simulator/pages/21_Sector_Stress_Matrix.py",
+        "must_not_be_used_for": [
+          "sector ranking",
+          "economic validation",
+          "actual tax payable"
+        ],
+        "optional": false,
+        "recommended_read_order": 7,
+        "report_path": "reports/sector_stress_matrix.md",
+        "report_type": "markdown"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_behavioural_response_simulation.py",
+        "interpretation_warning": "Synthetic pathways only; no conduct prediction.",
+        "layer_id": "behavioural_response",
+        "linked_streamlit_page": "simulator/pages/22_Behavioural_Response.py",
+        "must_not_be_used_for": [
+          "behavioural prediction",
+          "behavioural elasticity",
+          "compliance scoring"
+        ],
+        "optional": false,
+        "recommended_read_order": 8,
+        "report_path": "reports/behavioural_response_simulation.json",
+        "report_type": "json"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_behavioural_response_simulation.py",
+        "interpretation_warning": "Synthetic pathways only; no conduct prediction.",
+        "layer_id": "behavioural_response",
+        "linked_streamlit_page": "simulator/pages/22_Behavioural_Response.py",
+        "must_not_be_used_for": [
+          "behavioural prediction",
+          "behavioural elasticity",
+          "compliance scoring"
+        ],
+        "optional": false,
+        "recommended_read_order": 8,
+        "report_path": "reports/behavioural_response_simulation.md",
+        "report_type": "markdown"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_administrative_compliance_workflow.py",
+        "interpretation_warning": "Synthetic pathway organisation only; no real action.",
+        "layer_id": "administrative_workflow",
+        "linked_streamlit_page": "simulator/pages/23_Administrative_Workflow.py",
+        "must_not_be_used_for": [
+          "enforcement",
+          "notices",
+          "penalties",
+          "compliance scoring",
+          "official review pathway"
+        ],
+        "optional": false,
+        "recommended_read_order": 9,
+        "report_path": "reports/administrative_compliance_workflow.json",
+        "report_type": "json"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_administrative_compliance_workflow.py",
+        "interpretation_warning": "Synthetic pathway organisation only; no real action.",
+        "layer_id": "administrative_workflow",
+        "linked_streamlit_page": "simulator/pages/23_Administrative_Workflow.py",
+        "must_not_be_used_for": [
+          "enforcement",
+          "notices",
+          "penalties",
+          "compliance scoring",
+          "official review pathway"
+        ],
+        "optional": false,
+        "recommended_read_order": 9,
+        "report_path": "reports/administrative_compliance_workflow.md",
+        "report_type": "markdown"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_legislative_architecture.py",
+        "interpretation_warning": "Non-operative architecture only; not legal drafting.",
+        "layer_id": "legislative_architecture",
+        "linked_streamlit_page": "simulator/pages/24_Legislative_Architecture.py",
+        "must_not_be_used_for": [
+          "operative law",
+          "legal sufficiency",
+          "statutory powers"
+        ],
+        "optional": false,
+        "recommended_read_order": 10,
+        "report_path": "reports/legislative_architecture.json",
+        "report_type": "json"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_legislative_architecture.py",
+        "interpretation_warning": "Non-operative architecture only; not legal drafting.",
+        "layer_id": "legislative_architecture",
+        "linked_streamlit_page": "simulator/pages/24_Legislative_Architecture.py",
+        "must_not_be_used_for": [
+          "operative law",
+          "legal sufficiency",
+          "statutory powers"
+        ],
+        "optional": false,
+        "recommended_read_order": 10,
+        "report_path": "reports/legislative_architecture.md",
+        "report_type": "markdown"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_fiscal_trajectory.py",
+        "interpretation_warning": "Placeholder fiscal trajectory only; not a forecast.",
+        "layer_id": "fiscal_trajectory",
+        "linked_streamlit_page": "simulator/pages/13_Fiscal_Trajectory.py",
+        "must_not_be_used_for": [
+          "Treasury modelling",
+          "forecast",
+          "budget costing"
+        ],
+        "optional": false,
+        "recommended_read_order": 11,
+        "report_path": "reports/fiscal_trajectory.json",
+        "report_type": "json"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_fiscal_trajectory.py",
+        "interpretation_warning": "Placeholder fiscal trajectory only; not a forecast.",
+        "layer_id": "fiscal_trajectory",
+        "linked_streamlit_page": "simulator/pages/13_Fiscal_Trajectory.py",
+        "must_not_be_used_for": [
+          "Treasury modelling",
+          "forecast",
+          "budget costing"
+        ],
+        "optional": false,
+        "recommended_read_order": 11,
+        "report_path": "reports/fiscal_trajectory.md",
+        "report_type": "markdown"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_transition_funding.py",
+        "interpretation_warning": "Placeholder transition-payment funding only.",
+        "layer_id": "transition_funding",
+        "linked_streamlit_page": "simulator/pages/14_Transition_Funding.py",
+        "must_not_be_used_for": [
+          "UBI policy",
+          "welfare advice",
+          "Treasury costing"
+        ],
+        "optional": false,
+        "recommended_read_order": 12,
+        "report_path": "reports/transition_funding.json",
+        "report_type": "json"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_transition_funding.py",
+        "interpretation_warning": "Placeholder transition-payment funding only.",
+        "layer_id": "transition_funding",
+        "linked_streamlit_page": "simulator/pages/14_Transition_Funding.py",
+        "must_not_be_used_for": [
+          "UBI policy",
+          "welfare advice",
+          "Treasury costing"
+        ],
+        "optional": false,
+        "recommended_read_order": 12,
+        "report_path": "reports/transition_funding.md",
+        "report_type": "markdown"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_payment_interactions.py",
+        "interpretation_warning": "Placeholder payment interaction mechanics only.",
+        "layer_id": "payment_interactions",
+        "linked_streamlit_page": "simulator/pages/15_Payment_Interactions.py",
+        "must_not_be_used_for": [
+          "welfare eligibility",
+          "welfare advice",
+          "validated savings"
+        ],
+        "optional": false,
+        "recommended_read_order": 13,
+        "report_path": "reports/payment_interactions.json",
+        "report_type": "json"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_payment_interactions.py",
+        "interpretation_warning": "Placeholder payment interaction mechanics only.",
+        "layer_id": "payment_interactions",
+        "linked_streamlit_page": "simulator/pages/15_Payment_Interactions.py",
+        "must_not_be_used_for": [
+          "welfare eligibility",
+          "welfare advice",
+          "validated savings"
+        ],
+        "optional": false,
+        "recommended_read_order": 13,
+        "report_path": "reports/payment_interactions.md",
+        "report_type": "markdown"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_distributional_scenarios.py",
+        "interpretation_warning": "Synthetic household scenarios only.",
+        "layer_id": "household_distributional",
+        "linked_streamlit_page": "simulator/pages/16_Distributional_Scenarios.py",
+        "must_not_be_used_for": [
+          "real household modelling",
+          "population estimate",
+          "welfare advice",
+          "eligibility law",
+          "statistical validation"
+        ],
+        "optional": false,
+        "recommended_read_order": 14,
+        "report_path": "reports/distributional_scenarios.json",
+        "report_type": "json"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_distributional_scenarios.py",
+        "interpretation_warning": "Synthetic household scenarios only.",
+        "layer_id": "household_distributional",
+        "linked_streamlit_page": "simulator/pages/16_Distributional_Scenarios.py",
+        "must_not_be_used_for": [
+          "real household modelling",
+          "population estimate",
+          "welfare advice",
+          "eligibility law",
+          "statistical validation"
+        ],
+        "optional": false,
+        "recommended_read_order": 14,
+        "report_path": "reports/distributional_scenarios.md",
+        "report_type": "markdown"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_household_weighting.py",
+        "interpretation_warning": "Synthetic weight-record aggregation only.",
+        "layer_id": "household_weighting",
+        "linked_streamlit_page": "simulator/pages/17_Household_Weighting.py",
+        "must_not_be_used_for": [
+          "real household modelling",
+          "population estimate",
+          "welfare advice",
+          "eligibility law",
+          "statistical validation"
+        ],
+        "optional": false,
+        "recommended_read_order": 15,
+        "report_path": "reports/household_weighting.json",
+        "report_type": "json"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_household_weighting.py",
+        "interpretation_warning": "Synthetic weight-record aggregation only.",
+        "layer_id": "household_weighting",
+        "linked_streamlit_page": "simulator/pages/17_Household_Weighting.py",
+        "must_not_be_used_for": [
+          "real household modelling",
+          "population estimate",
+          "welfare advice",
+          "eligibility law",
+          "statistical validation"
+        ],
+        "optional": false,
+        "recommended_read_order": 15,
+        "report_path": "reports/household_weighting.md",
+        "report_type": "markdown"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_uncertainty_ranges.py",
+        "interpretation_warning": "Deterministic placeholder ranges only.",
+        "layer_id": "uncertainty_ranges",
+        "linked_streamlit_page": "simulator/pages/18_Uncertainty_Ranges.py",
+        "must_not_be_used_for": [
+          "confidence intervals",
+          "forecast",
+          "statistical validation"
+        ],
+        "optional": false,
+        "recommended_read_order": 16,
+        "report_path": "reports/uncertainty_ranges.json",
+        "report_type": "json"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_uncertainty_ranges.py",
+        "interpretation_warning": "Deterministic placeholder ranges only.",
+        "layer_id": "uncertainty_ranges",
+        "linked_streamlit_page": "simulator/pages/18_Uncertainty_Ranges.py",
+        "must_not_be_used_for": [
+          "confidence intervals",
+          "forecast",
+          "statistical validation"
+        ],
+        "optional": false,
+        "recommended_read_order": 16,
+        "report_path": "reports/uncertainty_ranges.md",
+        "report_type": "markdown"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_reviewed_scenarios.py",
+        "interpretation_warning": "Display-control classifications only.",
+        "layer_id": "reviewed_scenarios",
+        "linked_streamlit_page": "simulator/pages/19_Reviewed_Scenarios.py",
+        "must_not_be_used_for": [
+          "validation",
+          "population estimates",
+          "official review pathway"
+        ],
+        "optional": false,
+        "recommended_read_order": 17,
+        "report_path": "reports/reviewed_scenarios.json",
+        "report_type": "json"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_reviewed_scenarios.py",
+        "interpretation_warning": "Display-control classifications only.",
+        "layer_id": "reviewed_scenarios",
+        "linked_streamlit_page": "simulator/pages/19_Reviewed_Scenarios.py",
+        "must_not_be_used_for": [
+          "validation",
+          "population estimates",
+          "official review pathway"
+        ],
+        "optional": false,
+        "recommended_read_order": 17,
+        "report_path": "reports/reviewed_scenarios.md",
+        "report_type": "markdown"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_examples.py",
+        "interpretation_warning": "Evidence requirements are prototype-only.",
+        "layer_id": "evidence_workflow",
+        "linked_streamlit_page": "simulator/pages/8_Evidence_and_Calibration.py",
+        "must_not_be_used_for": [
+          "information-gathering powers",
+          "notices",
+          "enforcement"
+        ],
+        "optional": false,
+        "recommended_read_order": 18,
+        "report_path": "reports/evidence_requirements.json",
+        "report_type": "json"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_examples.py",
+        "interpretation_warning": "Evidence requirements are prototype-only.",
+        "layer_id": "evidence_workflow",
+        "linked_streamlit_page": "simulator/pages/8_Evidence_and_Calibration.py",
+        "must_not_be_used_for": [
+          "information-gathering powers",
+          "notices",
+          "enforcement"
+        ],
+        "optional": false,
+        "recommended_read_order": 18,
+        "report_path": "reports/evidence_requirements.md",
+        "report_type": "markdown"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_evidence_workflow.py",
+        "interpretation_warning": "Mock evidence workflow uses synthetic packets only.",
+        "layer_id": "evidence_workflow",
+        "linked_streamlit_page": "simulator/pages/9_Mock_Evidence_Workflow.py",
+        "must_not_be_used_for": [
+          "real evidence ingestion",
+          "notices",
+          "enforcement"
+        ],
+        "optional": false,
+        "recommended_read_order": 18,
+        "report_path": "reports/mock_evidence_workflow.json",
+        "report_type": "json"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_evidence_workflow.py",
+        "interpretation_warning": "Mock evidence workflow uses synthetic packets only.",
+        "layer_id": "evidence_workflow",
+        "linked_streamlit_page": "simulator/pages/9_Mock_Evidence_Workflow.py",
+        "must_not_be_used_for": [
+          "real evidence ingestion",
+          "notices",
+          "enforcement"
+        ],
+        "optional": false,
+        "recommended_read_order": 18,
+        "report_path": "reports/mock_evidence_workflow.md",
+        "report_type": "markdown"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_ingestion_controls.py",
+        "interpretation_warning": "Prototype default-deny ingestion controls only.",
+        "layer_id": "secure_ingestion",
+        "linked_streamlit_page": "simulator/pages/10_Secure_Ingestion_Controls.py",
+        "must_not_be_used_for": [
+          "secure evidence platform",
+          "real access control",
+          "privacy compliance"
+        ],
+        "optional": false,
+        "recommended_read_order": 19,
+        "report_path": "reports/secure_ingestion_controls.json",
+        "report_type": "json"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_ingestion_controls.py",
+        "interpretation_warning": "Prototype default-deny ingestion controls only.",
+        "layer_id": "secure_ingestion",
+        "linked_streamlit_page": "simulator/pages/10_Secure_Ingestion_Controls.py",
+        "must_not_be_used_for": [
+          "secure evidence platform",
+          "real access control",
+          "privacy compliance"
+        ],
+        "optional": false,
+        "recommended_read_order": 19,
+        "report_path": "reports/secure_ingestion_controls.md",
+        "report_type": "markdown"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_investment_guardrails.py",
+        "interpretation_warning": "Placeholder investment and incidence guardrails only.",
+        "layer_id": "investment_incidence",
+        "linked_streamlit_page": "simulator/pages/12_Investment_and_Incidence_Guardrails.py",
+        "must_not_be_used_for": [
+          "investment advice",
+          "economic validation",
+          "liability modification"
+        ],
+        "optional": false,
+        "recommended_read_order": 20,
+        "report_path": "reports/investment_guardrails.json",
+        "report_type": "json"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_investment_guardrails.py",
+        "interpretation_warning": "Placeholder investment and incidence guardrails only.",
+        "layer_id": "investment_incidence",
+        "linked_streamlit_page": "simulator/pages/12_Investment_and_Incidence_Guardrails.py",
+        "must_not_be_used_for": [
+          "investment advice",
+          "economic validation",
+          "liability modification"
+        ],
+        "optional": false,
+        "recommended_read_order": 20,
+        "report_path": "reports/investment_guardrails.md",
+        "report_type": "markdown"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_repo_guardrails.py",
+        "interpretation_warning": "Prototype repository guardrails only.",
+        "layer_id": "repo_guardrails",
+        "linked_streamlit_page": "simulator/pages/11_Repository_Guardrails.py",
+        "must_not_be_used_for": [
+          "complete DLP",
+          "cybersecurity validation",
+          "operational readiness"
+        ],
+        "optional": false,
+        "recommended_read_order": 20,
+        "report_path": "reports/repo_guardrails.json",
+        "report_type": "json"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_repo_guardrails.py",
+        "interpretation_warning": "Prototype repository guardrails only.",
+        "layer_id": "repo_guardrails",
+        "linked_streamlit_page": "simulator/pages/11_Repository_Guardrails.py",
+        "must_not_be_used_for": [
+          "complete DLP",
+          "cybersecurity validation",
+          "operational readiness"
+        ],
+        "optional": false,
+        "recommended_read_order": 20,
+        "report_path": "reports/repo_guardrails.md",
+        "report_type": "markdown"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_examples.py",
+        "interpretation_warning": "Calibration requirements are unmet placeholders.",
+        "layer_id": "calibration_shell",
+        "linked_streamlit_page": "simulator/pages/8_Evidence_and_Calibration.py",
+        "must_not_be_used_for": [
+          "calibrated output",
+          "real-world validation",
+          "external data approval"
+        ],
+        "optional": false,
+        "recommended_read_order": 21,
+        "report_path": "reports/calibration_requirements.json",
+        "report_type": "json"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_examples.py",
+        "interpretation_warning": "Calibration requirements are unmet placeholders.",
+        "layer_id": "calibration_shell",
+        "linked_streamlit_page": "simulator/pages/8_Evidence_and_Calibration.py",
+        "must_not_be_used_for": [
+          "calibrated output",
+          "real-world validation",
+          "external data approval"
+        ],
+        "optional": false,
+        "recommended_read_order": 21,
+        "report_path": "reports/calibration_requirements.md",
+        "report_type": "markdown"
+      }
+    ],
+    "status": "prototype_dashboard_report_index_only",
+    "streamlit_page_index": [
+      "simulator/app.py",
+      "simulator/pages/10_Secure_Ingestion_Controls.py",
+      "simulator/pages/11_Repository_Guardrails.py",
+      "simulator/pages/12_Investment_and_Incidence_Guardrails.py",
+      "simulator/pages/13_Fiscal_Trajectory.py",
+      "simulator/pages/14_Transition_Funding.py",
+      "simulator/pages/15_Payment_Interactions.py",
+      "simulator/pages/16_Distributional_Scenarios.py",
+      "simulator/pages/17_Household_Weighting.py",
+      "simulator/pages/18_Uncertainty_Ranges.py",
+      "simulator/pages/19_Reviewed_Scenarios.py",
+      "simulator/pages/1_Policy_Paper.py",
+      "simulator/pages/20_Sector_Schedules.py",
+      "simulator/pages/21_Sector_Stress_Matrix.py",
+      "simulator/pages/22_Behavioural_Response.py",
+      "simulator/pages/23_Administrative_Workflow.py",
+      "simulator/pages/24_Legislative_Architecture.py",
+      "simulator/pages/25_Executive_Dashboard.py",
+      "simulator/pages/2_Tax_Model.py",
+      "simulator/pages/3_Worked_Examples.py",
+      "simulator/pages/8_Evidence_and_Calibration.py",
+      "simulator/pages/9_Mock_Evidence_Workflow.py"
+    ],
+    "suggested_review_navigation": [
+      {
+        "layer_id": "executive_dashboard",
+        "layer_name": "Executive Dashboard",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Consolidated navigation and report index for the CARSF V1.5 prototype stack.",
+        "read_order": 1
+      },
+      {
+        "layer_id": "working_paper",
+        "layer_name": "CARSF V1.5 Working Paper",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Working paper, formula reference, glossary, and supporting documentation.",
+        "read_order": 2
+      },
+      {
+        "layer_id": "status_risks_docs",
+        "layer_name": "Current Status and Known Risks",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Status, risk, limitation, and implementation documentation for reviewer orientation.",
+        "read_order": 3
+      },
+      {
+        "layer_id": "core_formula_model",
+        "layer_name": "Core Formula Model",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Core placeholder formula mechanics for QLC, HLE, AII, AAVA, levies, caps, and coverage.",
+        "read_order": 5
+      },
+      {
+        "layer_id": "worked_examples",
+        "layer_name": "Worked Examples",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Synthetic worked examples showing formula traces, evidence labels, and limitation notes.",
+        "read_order": 5
+      },
+      {
+        "layer_id": "sector_schedule_expansion",
+        "layer_name": "Sector Schedule Expansion",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Validates schedule coverage, placeholder weights, calibration labels, and non-claim language.",
+        "read_order": 6
+      },
+      {
+        "layer_id": "sector_schedules",
+        "layer_name": "Sector Schedules",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Prototype sector schedule YAML files and canonical output unit metadata.",
+        "read_order": 6
+      },
+      {
+        "layer_id": "sector_stress_matrix",
+        "layer_name": "Sector Stress Matrix",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Metadata-only cross-sector stress matrix with do-not-rank display controls.",
+        "read_order": 7
+      },
+      {
+        "layer_id": "behavioural_response",
+        "layer_name": "Behavioural Response Simulation",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Synthetic behavioural pathway review mapped to pressure bands and countermeasure categories.",
+        "read_order": 8
+      },
+      {
+        "layer_id": "administrative_workflow",
+        "layer_name": "Administrative Compliance Workflow",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Synthetic administrative pathway organisation across evidence bundles, queues, and locked review states.",
+        "read_order": 9
+      },
+      {
+        "layer_id": "legislative_architecture",
+        "layer_name": "Legislative Architecture Skeleton",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Non-operative legislative-style architecture map for Parts, Divisions, definitions, schedules, powers placeholders, safeguards, and blockers.",
+        "read_order": 10
+      },
+      {
+        "layer_id": "fiscal_trajectory",
+        "layer_name": "Fiscal Trajectory",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Placeholder national fiscal trajectory engine for displacement, PAYG erosion, transfer pressure, and residual gaps.",
+        "read_order": 11
+      },
+      {
+        "layer_id": "transition_funding",
+        "layer_name": "Transition Funding",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Placeholder transition-payment funding comparison against automation revenue.",
+        "read_order": 12
+      },
+      {
+        "layer_id": "payment_interactions",
+        "layer_name": "Payment Interactions",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Placeholder baseline separation, targeting, phase rules, stack interactions, and support incidence.",
+        "read_order": 13
+      },
+      {
+        "layer_id": "household_distributional",
+        "layer_name": "Household Distributional Scenarios",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Synthetic household budget stress, re-employment, regional stress, cliff, and shock-band scenarios.",
+        "read_order": 14
+      },
+      {
+        "layer_id": "household_weighting",
+        "layer_name": "Household Weighting",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Synthetic subgroup weighting and aggregation shell with representativeness warnings.",
+        "read_order": 15
+      },
+      {
+        "layer_id": "uncertainty_ranges",
+        "layer_name": "Uncertainty Ranges",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Deterministic low/base/high placeholder ranges and stability checks.",
+        "read_order": 16
+      },
+      {
+        "layer_id": "reviewed_scenarios",
+        "layer_name": "Reviewed Scenarios",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Display-control layer for stable, fragile, range-sensitive, missing-range, or non-interpretable synthetic outputs.",
+        "read_order": 17
+      },
+      {
+        "layer_id": "evidence_workflow",
+        "layer_name": "Evidence Workflow",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Prototype evidence requirements and synthetic mock evidence workflow.",
+        "read_order": 18
+      },
+      {
+        "layer_id": "secure_ingestion",
+        "layer_name": "Secure Ingestion Controls",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Default-deny synthetic evidence ingestion controls and storage-zone checks.",
+        "read_order": 19
+      },
+      {
+        "layer_id": "investment_incidence",
+        "layer_name": "Investment / Incidence Guardrails",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Placeholder investment and incidence guardrails that do not alter final liability.",
+        "read_order": 20
+      },
+      {
+        "layer_id": "repo_guardrails",
+        "layer_name": "Repository Guardrails",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Prototype repository-level scans for prohibited paths, markers, and generated-report non-claims.",
+        "read_order": 20
+      },
+      {
+        "layer_id": "calibration_shell",
+        "layer_name": "Calibration Shell",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Calibration requirements registry and external-data readiness shell.",
+        "read_order": 21
+      }
+    ],
+    "summary": {
+      "ato_methods_review_required_layers": 10,
+      "calibration_required_layers": 16,
+      "economic_validation_claimed": false,
+      "external_review_required_layers": 20,
+      "firm_level_liability_logic_modified": false,
+      "layers_with_generated_reports": 22,
+      "legal_review_required_layers": 13,
+      "legal_sufficiency_claimed": false,
+      "non_claims": [
+        "This is a prototype dashboard and report index only. It is not legal advice, tax advice, ATO guidance, Treasury modelling, economic validation, welfare advice, compliance scoring, enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.",
+        "The dashboard only consolidates existing prototype reports, warnings, navigation, and review blockers.",
+        "Suggested review navigation is a reviewer convenience only and is not an official process."
+      ],
+      "non_operative_layers": 3,
+      "operational_readiness_claimed": false,
+      "placeholder_only_layers": 19,
+      "privacy_review_required_layers": 9,
+      "readiness_score_created": false,
+      "real_data_used": false,
+      "reports_missing": 0,
+      "reports_present": 40,
+      "statistical_methods_review_required_layers": 5,
+      "synthetic_only_layers": 10,
+      "tax_review_required_layers": 10,
+      "total_layers": 23,
+      "total_reports_indexed": 40,
+      "treasury_methods_review_required_layers": 14,
+      "warnings": [
+        "Dashboard is navigation and consolidation only.",
+        "No readiness score, maturity score, official review status, validation claim, or liability change is created."
+      ]
+    },
+    "warnings": [
+      "Dashboard is navigation and consolidation only.",
+      "No readiness score, maturity score, official review status, validation claim, or liability change is created."
+    ]
+  },
+  "metadata": {
+    "economic_validation_claimed": false,
+    "firm_level_liability_logic_modified": false,
+    "generated_at": "2026-05-18T04:07:04+00:00",
+    "legal_sufficiency_claimed": false,
+    "maturity_score_created": false,
+    "non_claims": [
+      "This is a prototype dashboard and report index only. It is not legal advice, tax advice, ATO guidance, Treasury modelling, economic validation, welfare advice, compliance scoring, enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.",
+      "The dashboard only consolidates existing prototype reports, warnings, navigation, and review blockers.",
+      "Suggested review navigation is a reviewer convenience only and is not an official process."
+    ],
+    "operational_readiness_claimed": false,
+    "readiness_score_created": false,
+    "real_data_used": false,
+    "status": "prototype_executive_dashboard_report_index_only",
+    "version": "CARSF V1.5 prototype"
+  },
+  "summary": {
+    "ato_methods_review_required_layers": 10,
+    "calibration_required_layers": 16,
+    "economic_validation_claimed": false,
+    "external_review_required_layers": 20,
+    "firm_level_liability_logic_modified": false,
+    "layers_with_generated_reports": 22,
+    "legal_review_required_layers": 13,
+    "legal_sufficiency_claimed": false,
+    "non_claims": [
+      "This is a prototype dashboard and report index only. It is not legal advice, tax advice, ATO guidance, Treasury modelling, economic validation, welfare advice, compliance scoring, enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.",
+      "The dashboard only consolidates existing prototype reports, warnings, navigation, and review blockers.",
+      "Suggested review navigation is a reviewer convenience only and is not an official process."
+    ],
+    "non_operative_layers": 3,
+    "operational_readiness_claimed": false,
+    "placeholder_only_layers": 19,
+    "privacy_review_required_layers": 9,
+    "readiness_score_created": false,
+    "real_data_used": false,
+    "reports_missing": 0,
+    "reports_present": 40,
+    "statistical_methods_review_required_layers": 5,
+    "synthetic_only_layers": 10,
+    "tax_review_required_layers": 10,
+    "total_layers": 23,
+    "total_reports_indexed": 40,
+    "treasury_methods_review_required_layers": 14,
+    "warnings": [
+      "Dashboard is navigation and consolidation only.",
+      "No readiness score, maturity score, official review status, validation claim, or liability change is created."
+    ]
+  }
+}

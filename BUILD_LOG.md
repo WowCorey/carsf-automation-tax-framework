@@ -812,3 +812,26 @@ Limitations:
 - They are not operative law, not a Bill, not legal drafting, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not Parliamentary Counsel drafting, not legally sufficient, and not constitutionally reviewed.
 - They create no rights, obligations, statutory powers, information-gathering powers, notices, penalties, enforcement process, or compliance scoring.
 - They do not determine tax payable, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability logic.
+
+## V1.5 Executive Dashboard Consolidation
+
+Branch: `v1.5-executive-dashboard-consolidation`
+
+Baseline: PR #23 merged into `main`, including the legislative architecture skeleton.
+
+Purpose of this build:
+
+- Add a consolidated executive dashboard and report index for the CARSF V1.5 prototype stack.
+- Map prototype layers, generated reports, Streamlit pages, non-claim profiles, calibration blockers, external-review blockers, suggested review navigation, and reviewer routing.
+- Add dashboard manifest, model validation, reports, tests, CI step, documentation, and Streamlit page.
+
+Reports generated:
+
+- `reports/executive_dashboard.json`
+- `reports/executive_dashboard.md`
+
+Limitations:
+
+- Executive dashboard outputs are prototype navigation and report-index outputs only.
+- They are not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare advice, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not a maturity score, not an official review pathway, not approval, and not validation.
+- They do not determine actual tax payable, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability logic.

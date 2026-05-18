@@ -16,6 +16,7 @@ paper_path = REPO_ROOT / "paper" / "executive_summary.md"
 st.markdown(paper_path.read_text(encoding="utf-8"))
 
 st.info(
-    "Use the sidebar pages for the policy paper, tax model, worked examples, "
-    "red-team tests, and audit log."
+    "Start with the Executive Dashboard page for a consolidated report index and "
+    "non-claim summary, then use the sidebar pages for the policy paper, tax "
+    "model, worked examples, red-team tests, and audit log."
 )

@@ -48,6 +48,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Add a prototype administrative compliance workflow shell that organises synthetic cases into evidence request bundles, review queues, escalation pathways, behavioural-response links, locked/suppressed states, and external-review blockers without enforcement, notices, compliance scoring, or liability modification.
 - Add a pre-Build 21 hardening pass that preserves subgroup metadata, clarifies automation-intensity component explanations, improves behavioural response band spread, and adds routine/enhanced administrative workflow demonstration paths without adding legislative architecture or changing liability.
 - Add a non-operative legislative architecture skeleton that maps CARSF concepts into proposed Parts, Divisions, definitions, sector schedules, evidence placeholders, safeguards, regulation-making placeholders, commencement/transitional placeholders, and external-review blockers without drafting operative law or changing liability.
+- Add an executive dashboard and report index that consolidates prototype layers, generated reports, Streamlit pages, non-claim profiles, calibration blockers, external-review blockers, suggested review navigation, and reviewer routing without creating a readiness score or validation claim.
 
 ## Data Separation
 
@@ -84,6 +85,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Administrative compliance workflow reports can be generated with `python scripts/run_administrative_compliance_workflow.py`.
 - Pre-Build 21 hardening is documented in `docs/pre_legislative_hardening.md` and covered by regenerated uncertainty, reviewed-scenario, sector-stress, behavioural-response, and administrative-workflow reports.
 - Legislative architecture reports can be generated with `python scripts/run_legislative_architecture.py`.
+- Executive dashboard reports can be generated with `python scripts/run_executive_dashboard.py`.
 - Hybrid logistics stress variant demonstrates non-zero but intermediate NLTG.
 - V1.5 working paper contains TODO markers where policy drafting remains open.
 - Limitations document clearly blocks actual tax-payable claims.
@@ -110,3 +112,4 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Build an administrative compliance workflow only after behavioural response flags exist, so evidence requests, review states, sector schedule review, grouped-entity review, transfer-pricing review, and escalation pathways can be organised without claiming real ATO enforcement powers.
 - Build a legislative architecture skeleton only after administrative workflow routing exists, so any future Parts, Divisions, schedules, evidence-power placeholders, safeguards, and review mechanisms inherit clear non-operative limits.
 - Consolidate the full prototype stack into an executive dashboard only after the legislative architecture skeleton exists, so reviewers can navigate formulas, schedules, stress, behavioural, administrative, legislative, uncertainty, household, fiscal, guardrail, and calibration outputs without implying operational readiness or legal sufficiency.
+- Update the V1.5 working paper and release-candidate pack only after the dashboard exists, so the paper can point reviewers to the complete prototype stack without implying legal, economic, Treasury, ATO, welfare, or operational validation.
