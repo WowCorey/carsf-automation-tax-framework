@@ -14,12 +14,14 @@
       "high_critical_share_stability": null,
       "low_case_shock_band": "low",
       "main_reason": "Low/base/high cases cross risk bands, so the point estimate should not be used.",
+      "matched_scenarios": [],
       "missing_ranges": [],
       "non_claims": [
         "Reviewed scenario outputs are prototype display-control signals only. They are not statistical validation, population estimates, real household modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, ATO analysis, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
         "Stable prototype discussion signals still require external calibration and methods review.",
         "Reviewed scenario outputs do not modify firm-level CARSF liability."
       ],
+      "not_population_estimate": true,
       "representative_of_real_population": false,
       "residual_gap_stability": "fragile",
       "review_category": "range_sensitive_do_not_use_as_point_estimate",
@@ -28,12 +30,16 @@
         "range_sensitive"
       ],
       "risk_signal_stability": "range_sensitive",
+      "scenario_count": null,
       "source_type": "household",
+      "subgroup_filter": {},
       "subgroup_range_sensitivity": null,
       "subject_id": "ubi_lite_payment_cliff_case",
       "subject_name": "Fragile Result Requires Calibration",
       "suppress_point_estimate": true,
+      "synthetic_weight_only": true,
       "total_synthetic_weight": null,
+      "unmatched_scenarios": [],
       "warnings": [
         "Reviewed household scenario output is synthetic and controls display only.",
         "Firm-level CARSF liability is not modified by reviewed scenario classification.",
@@ -54,12 +60,14 @@
       "high_critical_share_stability": null,
       "low_case_shock_band": "high",
       "main_reason": "Stable high-risk signal exists, but primary uncertainty metrics include fragile ranges.",
+      "matched_scenarios": [],
       "missing_ranges": [],
       "non_claims": [
         "Reviewed scenario outputs are prototype display-control signals only. They are not statistical validation, population estimates, real household modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, ATO analysis, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
         "Stable prototype discussion signals still require external calibration and methods review.",
         "Reviewed scenario outputs do not modify firm-level CARSF liability."
       ],
+      "not_population_estimate": true,
       "representative_of_real_population": false,
       "residual_gap_stability": "fragile",
       "review_category": "discussion_with_strong_warning",
@@ -69,12 +77,16 @@
         "stable_high_risk"
       ],
       "risk_signal_stability": "stable_high_risk",
+      "scenario_count": null,
       "source_type": "household",
+      "subgroup_filter": {},
       "subgroup_range_sensitivity": null,
       "subject_id": "single_adult_displaced_worker_high_rent",
       "subject_name": "High Rent Low Savings Range",
       "suppress_point_estimate": false,
+      "synthetic_weight_only": true,
       "total_synthetic_weight": null,
+      "unmatched_scenarios": [],
       "warnings": [
         "Reviewed household scenario output is synthetic and controls display only.",
         "Firm-level CARSF liability is not modified by reviewed scenario classification.",
@@ -94,12 +106,14 @@
       "high_critical_share_stability": null,
       "low_case_shock_band": "low",
       "main_reason": "One or more required household uncertainty ranges is not assessable without calibration.",
+      "matched_scenarios": [],
       "missing_ranges": [],
       "non_claims": [
         "Reviewed scenario outputs are prototype display-control signals only. They are not statistical validation, population estimates, real household modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, ATO analysis, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
         "Stable prototype discussion signals still require external calibration and methods review.",
         "Reviewed scenario outputs do not modify firm-level CARSF liability."
       ],
+      "not_population_estimate": true,
       "representative_of_real_population": false,
       "residual_gap_stability": "not_assessable",
       "review_category": "non_interpretable_until_calibrated",
@@ -109,12 +123,16 @@
         "stable_low_risk"
       ],
       "risk_signal_stability": "stable_low_risk",
+      "scenario_count": null,
       "source_type": "household",
+      "subgroup_filter": {},
       "subgroup_range_sensitivity": null,
       "subject_id": "young_worker_retraining_rebound",
       "subject_name": "Payment Support Low Mid High Range",
       "suppress_point_estimate": true,
+      "synthetic_weight_only": true,
       "total_synthetic_weight": null,
+      "unmatched_scenarios": [],
       "warnings": [
         "Reviewed household scenario output is synthetic and controls display only.",
         "Firm-level CARSF liability is not modified by reviewed scenario classification.",
@@ -135,12 +153,14 @@
       "high_critical_share_stability": null,
       "low_case_shock_band": "high",
       "main_reason": "Stable high-risk signal exists, but primary uncertainty metrics include fragile ranges.",
+      "matched_scenarios": [],
       "missing_ranges": [],
       "non_claims": [
         "Reviewed scenario outputs are prototype display-control signals only. They are not statistical validation, population estimates, real household modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, ATO analysis, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
         "Stable prototype discussion signals still require external calibration and methods review.",
         "Reviewed scenario outputs do not modify firm-level CARSF liability."
       ],
+      "not_population_estimate": true,
       "representative_of_real_population": false,
       "residual_gap_stability": "fragile",
       "review_category": "discussion_with_strong_warning",
@@ -150,12 +170,16 @@
         "stable_high_risk"
       ],
       "risk_signal_stability": "stable_high_risk",
+      "scenario_count": null,
       "source_type": "household",
+      "subgroup_filter": {},
       "subgroup_range_sensitivity": null,
       "subject_id": "older_worker_low_reemployment",
       "subject_name": "Regional Re-Employment Delay Range",
       "suppress_point_estimate": false,
+      "synthetic_weight_only": true,
       "total_synthetic_weight": null,
+      "unmatched_scenarios": [],
       "warnings": [
         "Reviewed household scenario output is synthetic and controls display only.",
         "Firm-level CARSF liability is not modified by reviewed scenario classification.",
@@ -175,12 +199,14 @@
       "high_critical_share_stability": null,
       "low_case_shock_band": "high",
       "main_reason": "Stable high-risk signal exists, but primary uncertainty metrics include fragile ranges.",
+      "matched_scenarios": [],
       "missing_ranges": [],
       "non_claims": [
         "Reviewed scenario outputs are prototype display-control signals only. They are not statistical validation, population estimates, real household modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, ATO analysis, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
         "Stable prototype discussion signals still require external calibration and methods review.",
         "Reviewed scenario outputs do not modify firm-level CARSF liability."
       ],
+      "not_population_estimate": true,
       "representative_of_real_population": false,
       "residual_gap_stability": "fragile",
       "review_category": "discussion_with_strong_warning",
@@ -190,12 +216,16 @@
         "stable_high_risk"
       ],
       "risk_signal_stability": "stable_high_risk",
+      "scenario_count": null,
       "source_type": "household",
+      "subgroup_filter": {},
       "subgroup_range_sensitivity": null,
       "subject_id": "single_parent_retraining_gap",
       "subject_name": "Single Parent Cost Pressure Range",
       "suppress_point_estimate": false,
+      "synthetic_weight_only": true,
       "total_synthetic_weight": null,
+      "unmatched_scenarios": [],
       "warnings": [
         "Reviewed household scenario output is synthetic and controls display only.",
         "Firm-level CARSF liability is not modified by reviewed scenario classification.",
@@ -205,7 +235,7 @@
   ],
   "metadata": {
     "firm_level_liability_modified": false,
-    "generated_at": "2026-05-14T10:50:20+00:00",
+    "generated_at": "2026-05-17T22:52:47+00:00",
     "non_claims": [
       "Reviewed scenario outputs are prototype display-control signals only. They are not statistical validation, population estimates, real household modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, ATO analysis, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
       "Stable prototype discussion signals still require external calibration and methods review.",
@@ -304,12 +334,18 @@
       "high_critical_share_stability": "stable",
       "low_case_shock_band": null,
       "main_reason": "Required subgroup ranges are stable or moderately sensitive and no required range is missing.",
+      "matched_scenarios": [
+        "dual_income_one_displaced_regional",
+        "single_adult_displaced_worker_high_rent",
+        "single_parent_retraining_gap"
+      ],
       "missing_ranges": [],
       "non_claims": [
         "Reviewed scenario outputs are prototype display-control signals only. They are not statistical validation, population estimates, real household modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, ATO analysis, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
         "Stable prototype discussion signals still require external calibration and methods review.",
         "Reviewed scenario outputs do not modify firm-level CARSF liability."
       ],
+      "not_population_estimate": true,
       "representative_of_real_population": false,
       "residual_gap_stability": "moderately_sensitive",
       "review_category": "prototype_discussion_signal",
@@ -320,12 +356,16 @@
         "stable_high_risk"
       ],
       "risk_signal_stability": null,
+      "scenario_count": 3,
       "source_type": "weighted_subgroup",
+      "subgroup_filter": {},
       "subgroup_range_sensitivity": "moderately_sensitive",
       "subject_id": "all_synthetic_households",
       "subject_name": "All Synthetic Households",
       "suppress_point_estimate": false,
-      "total_synthetic_weight": null,
+      "synthetic_weight_only": true,
+      "total_synthetic_weight": 3.0,
+      "unmatched_scenarios": [],
       "warnings": [
         "Reviewed weighted subgroup output is synthetic and controls display only.",
         "Synthetic subgroup output is not population representative.",
@@ -344,12 +384,16 @@
       "high_critical_share_stability": "moderately_sensitive",
       "low_case_shock_band": null,
       "main_reason": "Weighted subgroup range sensitivity is fragile; suppress the point estimate.",
+      "matched_scenarios": [
+        "older_worker_low_reemployment"
+      ],
       "missing_ranges": [],
       "non_claims": [
         "Reviewed scenario outputs are prototype display-control signals only. They are not statistical validation, population estimates, real household modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, ATO analysis, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
         "Stable prototype discussion signals still require external calibration and methods review.",
         "Reviewed scenario outputs do not modify firm-level CARSF liability."
       ],
+      "not_population_estimate": true,
       "representative_of_real_population": false,
       "residual_gap_stability": "fragile",
       "review_category": "fragile_suppress_point_estimate",
@@ -359,12 +403,18 @@
         "not_representative"
       ],
       "risk_signal_stability": null,
+      "scenario_count": 1,
       "source_type": "weighted_subgroup",
+      "subgroup_filter": {
+        "budget_stress_filter": "critical"
+      },
       "subgroup_range_sensitivity": "fragile",
       "subject_id": "critical_budget_stress",
       "subject_name": "Critical Budget Stress",
       "suppress_point_estimate": true,
-      "total_synthetic_weight": null,
+      "synthetic_weight_only": true,
+      "total_synthetic_weight": 1.0,
+      "unmatched_scenarios": [],
       "warnings": [
         "Reviewed weighted subgroup output is synthetic and controls display only.",
         "Synthetic subgroup output is not population representative.",
@@ -382,6 +432,7 @@
       "high_critical_share_stability": null,
       "low_case_shock_band": null,
       "main_reason": "Required weighted subgroup uncertainty range is missing.",
+      "matched_scenarios": [],
       "missing_ranges": [
         "residual_gap_range",
         "high_critical_share_range"
@@ -391,6 +442,7 @@
         "Stable prototype discussion signals still require external calibration and methods review.",
         "Reviewed scenario outputs do not modify firm-level CARSF liability."
       ],
+      "not_population_estimate": true,
       "representative_of_real_population": false,
       "residual_gap_stability": null,
       "review_category": "missing_uncertainty_range",
@@ -401,12 +453,20 @@
         "not_representative"
       ],
       "risk_signal_stability": null,
+      "scenario_count": 1,
       "source_type": "weighted_subgroup",
+      "subgroup_filter": {
+        "regional_stress_filter": "high"
+      },
       "subgroup_range_sensitivity": "not_assessable",
       "subject_id": "regional_high_stress",
       "subject_name": "High Regional Stress",
       "suppress_point_estimate": true,
-      "total_synthetic_weight": null,
+      "synthetic_weight_only": true,
+      "total_synthetic_weight": 1.0,
+      "unmatched_scenarios": [
+        "high_automation_region_cluster"
+      ],
       "warnings": [
         "Reviewed weighted subgroup output is synthetic and controls display only.",
         "Synthetic subgroup output is not population representative.",

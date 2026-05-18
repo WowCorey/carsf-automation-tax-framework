@@ -68,6 +68,14 @@ class SectorStressResult:
     do_not_rank: bool
     main_reason: str
     dimension_scores: dict[str, float | None]
+    digital_automation_emphasis: float
+    physical_automation_emphasis: float
+    decision_automation_emphasis: float
+    compute_dependency_emphasis: float
+    robotics_dependency_note: str
+    automation_intensity_method_note: str
+    automation_intensity_components_used: list[str]
+    automation_intensity_limitations: list[str]
     stress_reasons: list[str]
     calibration_blockers: list[str]
     warnings: list[str] = field(default_factory=list)
@@ -157,18 +165,43 @@ def _validate_schedule_basics(schedule: dict[str, Any]) -> None:
             raise ValueError(f"schedule missing required field for stress matrix: {field}")
 
 
-def _automation_score(schedule: dict[str, Any], text: str) -> tuple[float, list[str]]:
-    del text
+def _automation_components(schedule: dict[str, Any]) -> dict[str, Any]:
     weights = schedule["aii"]["weights"]
     compute = _finite(weights["compute_ratio"], "compute_ratio")
     auto_decision = _finite(weights["auto_decision_ratio"], "auto_decision_ratio")
     robotics = _finite(weights["robotics_capital_ratio"], "robotics_capital_ratio")
     auto_process = _finite(weights["auto_process_share"], "auto_process_share")
-    emphasis = compute + auto_decision + auto_process + (0.25 * robotics)
-    reasons = [f"automation emphasis uses AII metadata only ({emphasis:.2f})"]
+    digital = auto_process
+    physical = robotics
+    decision = auto_decision
+    compute_dependency = compute
+    emphasis = digital + decision + compute_dependency + (0.25 * physical)
+    return {
+        "digital_automation_emphasis": round(digital, 4),
+        "physical_automation_emphasis": round(physical, 4),
+        "decision_automation_emphasis": round(decision, 4),
+        "compute_dependency_emphasis": round(compute_dependency, 4),
+        "derived_score": _score_cap(emphasis / 1.25),
+        "raw_emphasis": emphasis,
+        "robotics_dependency_note": (
+            "physical automation metadata is present as a robotics dependency note"
+            if robotics > 0
+            else "no robotics dependency note from AII metadata"
+        ),
+    }
+
+
+def _automation_score(schedule: dict[str, Any], text: str) -> tuple[float, list[str]]:
+    del text
+    components = _automation_components(schedule)
+    reasons = [
+        f"automation emphasis uses AII metadata only ({components['raw_emphasis']:.2f})",
+        "digital, decision, compute, and physical automation components are reported separately for interpretability",
+    ]
+    robotics = components["physical_automation_emphasis"]
     if robotics >= 0.25:
         reasons.append("robotics placeholder weight adds physical-automation review note")
-    return _score_cap(emphasis / 1.25), reasons
+    return components["derived_score"], reasons
 
 
 def _qlc_score(schedule: dict[str, Any], text: str) -> tuple[float, list[str]]:
@@ -362,6 +395,7 @@ def evaluate_sector_stress(inputs: SectorStressInput | dict[str, Any]) -> Sector
         scores[dimension] = score
         bands[dimension] = _band(score)
         reasons.extend(dimension_reasons)
+    automation_components = _automation_components(schedule)
 
     display_status = _display_status(bands)
     max_dimension = sorted(bands, key=lambda key: (-_rank_band(bands[key]), key))[0]
@@ -390,6 +424,27 @@ def evaluate_sector_stress(inputs: SectorStressInput | dict[str, Any]) -> Sector
         do_not_rank=True,
         main_reason=f"{max_dimension} is {bands[max_dimension]} using placeholder metadata only.",
         dimension_scores=scores,
+        digital_automation_emphasis=automation_components["digital_automation_emphasis"],
+        physical_automation_emphasis=automation_components["physical_automation_emphasis"],
+        decision_automation_emphasis=automation_components["decision_automation_emphasis"],
+        compute_dependency_emphasis=automation_components["compute_dependency_emphasis"],
+        robotics_dependency_note=automation_components["robotics_dependency_note"],
+        automation_intensity_method_note=(
+            "Automation intensity is a placeholder metadata signal derived from AII component weights; "
+            "digital, decision, compute, and physical components are shown separately and must not be used as real sector scores."
+        ),
+        automation_intensity_components_used=[
+            "auto_process_share",
+            "auto_decision_ratio",
+            "compute_ratio",
+            "robotics_capital_ratio_as_physical_note",
+        ],
+        automation_intensity_limitations=[
+            "metadata_only",
+            "not_calibrated",
+            "not_a_real_sector_score",
+            "do_not_rank",
+        ],
         stress_reasons=sorted(set(reasons)),
         calibration_blockers=blockers,
         warnings=warnings,

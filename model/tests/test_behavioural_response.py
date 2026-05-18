@@ -53,6 +53,7 @@ def test_all_scenarios_contain_required_fields(repo_root) -> None:
         "linked_avoidance_flags",
         "linked_countermeasures",
         "placeholder_response_pressure",
+        "pressure_basis",
         "requires_external_review",
         "non_claims",
     }
@@ -117,6 +118,7 @@ def test_every_result_has_do_not_predict_and_no_liability_modification(repo_root
     assert all(result.do_not_predict is True for result in results)
     assert all(result.do_not_score_real_taxpayer is True for result in results)
     assert all(result.firm_level_liability_logic_modified is False for result in results)
+    assert all(result.pressure_band_explanation for result in results)
 
 
 def test_response_pressure_band_is_deterministic(repo_root) -> None:
@@ -173,3 +175,14 @@ def test_countermeasure_categories_map_for_response_types(repo_root) -> None:
     assert {"offshore_attribution_review", "transfer_pricing_review", "legal_policy_review"} <= set(offshore.countermeasure_categories)
     assert {"customer_self_service_review", "schedule_authority_review"} <= set(customer.countermeasure_categories)
     assert {"capital_base_review", "aava_deductibility_review"} <= set(robotics.countermeasure_categories)
+
+
+def test_pressure_band_distribution_includes_moderate_high_critical_and_suppressed(repo_root) -> None:
+    results = evaluate_behavioural_responses(_scenarios(repo_root), _schedule_ids(repo_root))
+    bands = {result.response_pressure_band for result in results}
+    statuses = {result.review_status for result in results}
+
+    assert "moderate_placeholder_response_pressure" in bands
+    assert "high_placeholder_response_pressure" in bands
+    assert "critical_review_required" in bands
+    assert "suppress_until_calibrated" in statuses

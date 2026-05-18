@@ -71,11 +71,16 @@ def test_sector_stress_matrix_report_contains_required_matrix_fields(repo_root) 
     markdown = (reports_dir / "sector_stress_matrix.md").read_text(encoding="utf-8")
 
     assert "Schedule ID | Schedule Name | Canonical Output Unit | Automation Intensity" in markdown
+    assert "Automation Intensity Component Explanation" in markdown
+    assert "Digital Automation Emphasis | Physical Automation Emphasis" in markdown
     assert len(payload["stress_matrix"]) == 6
     for row in payload["stress_matrix"]:
         assert row["do_not_rank"] is True
         assert row["display_control_status"]
         assert row["automation_intensity_placeholder"]
+        assert row["automation_intensity_method_note"]
+        assert row["automation_intensity_components_used"]
+        assert row["automation_intensity_limitations"]
         assert row["calibration_difficulty_placeholder"]
         assert row["legal_attribution_difficulty_placeholder"]
 

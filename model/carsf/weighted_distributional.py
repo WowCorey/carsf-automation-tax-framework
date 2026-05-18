@@ -38,8 +38,14 @@ class WeightedSubgroupResult:
     total_synthetic_weight: float
     weighted_average_residual_gap: float | None
     weighted_high_or_critical_share: float | None
+    subgroup_filter: dict[str, Any] = field(default_factory=dict)
+    matched_scenarios: list[str] = field(default_factory=list)
+    unmatched_scenarios: list[str] = field(default_factory=list)
     highest_risk_scenarios: list[str] = field(default_factory=list)
     representativeness_warning: bool = True
+    representative_of_real_population: bool = False
+    synthetic_weight_only: bool = True
+    not_population_estimate: bool = True
     warnings: list[str] = field(default_factory=list)
 
     def to_jsonable(self) -> dict[str, Any]:
@@ -59,6 +65,8 @@ class WeightedDistributionalResult:
     highest_risk_subgroups: list[str] = field(default_factory=list)
     calibration_status: str = "not_calibrated"
     representative_of_real_population: bool = False
+    synthetic_weight_only: bool = True
+    not_population_estimate: bool = True
     warnings: list[str] = field(default_factory=list)
     non_claims: list[str] = field(default_factory=lambda: list(HOUSEHOLD_WEIGHTING_NON_CLAIMS))
 
@@ -83,6 +91,18 @@ def _input_from_mapping(source: WeightedDistributionalInput | dict[str, Any]) ->
 
 def _scenario_id(row: dict[str, Any]) -> str:
     return str(row.get("scenario_id") or row.get("household_id") or "")
+
+
+def _subgroup_filter(definition: SubgroupDefinition) -> dict[str, Any]:
+    fields = {
+        "household_type_filter": definition.household_type_filter,
+        "income_band_filter": definition.income_band_filter,
+        "region_type_filter": definition.region_type_filter,
+        "reemployment_risk_filter": definition.reemployment_risk_filter,
+        "budget_stress_filter": definition.budget_stress_filter,
+        "regional_stress_filter": definition.regional_stress_filter,
+    }
+    return {key: value for key, value in fields.items() if value is not None}
 
 
 def _severity(row: dict[str, Any]) -> tuple[int, float, str]:
@@ -172,6 +192,16 @@ def run_weighted_distributional_aggregation(
                     f"weight for {weight.scenario_id} is assigned to {definition.subgroup_id} but does not match subgroup filters"
                 )
         subgroup_total = sum(weight.weight_value for weight in subgroup_weights)
+        matched_scenarios = sorted(
+            weight.scenario_id
+            for weight in subgroup_weights
+            if definition.subgroup_id in assignment_by_scenario.get(weight.scenario_id, set())
+        )
+        unmatched_scenarios = sorted(
+            weight.scenario_id
+            for weight in subgroup_weights
+            if definition.subgroup_id not in assignment_by_scenario.get(weight.scenario_id, set())
+        )
         ordered = sorted(
             [scenario_by_id[weight.scenario_id] for weight in subgroup_weights],
             key=lambda row: (-_severity(row)[0], -_severity(row)[1], _severity(row)[2]),
@@ -184,8 +214,14 @@ def run_weighted_distributional_aggregation(
                 total_synthetic_weight=subgroup_total,
                 weighted_average_residual_gap=_weighted_average(subgroup_rows),
                 weighted_high_or_critical_share=_weighted_high_critical_share(subgroup_rows),
+                subgroup_filter=_subgroup_filter(definition),
+                matched_scenarios=matched_scenarios,
+                unmatched_scenarios=unmatched_scenarios,
                 highest_risk_scenarios=[_scenario_id(row) for row in ordered[:3]],
                 representativeness_warning=True,
+                representative_of_real_population=False,
+                synthetic_weight_only=True,
+                not_population_estimate=True,
                 warnings=subgroup_warnings,
             )
         )
@@ -213,5 +249,7 @@ def run_weighted_distributional_aggregation(
         highest_risk_subgroups=[item.subgroup_id for item in highest_subgroups[:3]],
         calibration_status=input_obj.calibration_status,
         representative_of_real_population=False,
+        synthetic_weight_only=True,
+        not_population_estimate=True,
         warnings=warnings,
     )

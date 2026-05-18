@@ -1,6 +1,6 @@
 # CARSF V1.5 Uncertainty Range Mechanics
 
-Generated at: `2026-05-14T06:39:50+00:00`
+Generated at: `2026-05-17T22:52:46+00:00`
 
 ## A. Purpose
 
@@ -53,11 +53,11 @@ Point estimates can imply false precision. These deterministic ranges show where
 
 ## F. Weighted Subgroup Uncertainty Results
 
-| Example | Subgroup | Residual Gap Stability | High/Critical Share Stability | Subgroup Sensitivity |
-| --- | --- | --- | --- | --- |
-| Weighted Subgroup Uncertainty Range | all_synthetic_households | moderately_sensitive | stable | moderately_sensitive |
-| Weighted Subgroup Uncertainty Range | critical_budget_stress | fragile | moderately_sensitive | fragile |
-| Weighted Subgroup Uncertainty Range | regional_high_stress | missing | missing | not_assessable |
+| Example | Subgroup | Scenario Count | Synthetic Weight | Matched Scenarios | Unmatched Scenarios | Not Population Estimate | Residual Gap Stability | High/Critical Share Stability | Subgroup Sensitivity |
+| --- | --- | ---: | ---: | --- | --- | --- | --- | --- | --- |
+| Weighted Subgroup Uncertainty Range | all_synthetic_households | 3 | 3.000 | dual_income_one_displaced_regional, single_adult_displaced_worker_high_rent, single_parent_retraining_gap | None | True | moderately_sensitive | stable | moderately_sensitive |
+| Weighted Subgroup Uncertainty Range | critical_budget_stress | 1 | 1.000 | older_worker_low_reemployment | None | True | fragile | moderately_sensitive | fragile |
+| Weighted Subgroup Uncertainty Range | regional_high_stress | 1 | 1.000 | None | high_automation_region_cluster | True | missing | missing | not_assessable |
 
 ## G. Stable High-Risk Signals
 

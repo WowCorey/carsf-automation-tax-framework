@@ -680,7 +680,7 @@ Reports generated:
 Limitations:
 
 - Sector stress matrix outputs are prototype metadata review outputs only.
-- They are not calibrated, not official sector scores, not Treasury modelling, not ATO guidance, not ABS/ATO/DSS/PBO analysis, not economic validation, not investment advice, not legal advice, and not tax advice.
+- They are not calibrated, not government sector assessments, not Treasury modelling, not ATO guidance, not ABS/ATO/DSS/PBO analysis, not economic validation, not investment advice, not legal advice, and not tax advice.
 - They do not use real industry data, do not estimate actual tax payable, do not modify firm-level CARSF liability logic, do not implement legal sector attribution, and do not implement real multi-schedule blending.
 
 ## V1.5 Behavioural Response / Gaming Simulation
@@ -712,7 +712,7 @@ Reports generated:
 Limitations:
 
 - Behavioural response outputs are prototype deterministic synthetic pathway reviews only.
-- They are not behavioural prediction, not behavioural elasticity, not ATO audit logic, not Treasury modelling, not ABS/ATO/DSS/PBO analysis, not compliance-risk scoring, not enforcement, not penalty modelling, not legal advice, not tax advice, not investment advice, and not economic validation.
+- They do not predict conduct, estimate behavioural elasticity, implement ATO audit logic, perform Treasury modelling, perform ABS/ATO/DSS/PBO analysis, create compliance-risk scoring, implement enforcement, model penalties, provide legal advice, provide tax advice, provide investment advice, or provide economic validation.
 - They do not use firm-level, taxpayer-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data.
 - They do not estimate actual tax payable and do not modify firm-level CARSF liability logic.
 
@@ -747,3 +747,44 @@ Limitations:
 - Administrative workflow outputs are prototype deterministic synthetic pathway-organisation reviews only.
 - They are not a workflow endorsed by the ATO, not guidance from the ATO, not Treasury modelling, not audit logic, not enforcement, not compliance scoring, not legal advice, not tax advice, and not economic validation.
 - They do not create notices, implement penalties, use statutory information-gathering powers, determine non-compliance, predict taxpayer behaviour, estimate behavioural elasticity, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, estimate actual tax payable, or modify firm-level CARSF liability logic.
+
+## V1.5 Pre-Build 21 Hardening Pass
+
+Branch: `v1.5-pre-legislative-hardening`
+
+Baseline: PR #21 merged into `main`, including the administrative compliance workflow shell.
+
+Purpose of this build:
+
+- Preserve subgroup metadata through weighted uncertainty and reviewed-scenario outputs where available.
+- Clarify sector stress matrix automation-intensity explanations by separating digital, physical, decision, and compute metadata components.
+- Tune behavioural response pressure-band spread across moderate, high, critical, and suppressed synthetic pathways.
+- Add routine and enhanced administrative workflow demonstration rows before the future legislative architecture skeleton.
+
+Tests run:
+
+- `python -m pytest` - 605 passed, 1 pytest-asyncio deprecation warning.
+- `python -m compileall -q model simulator scripts` - passed.
+- Recursive YAML parse for `schedules/`, `examples/`, and `data/` - parsed 73 YAML files.
+- Report runners passed: examples, sector schedule expansion, sector stress matrix, behavioural response simulation, administrative compliance workflow, evidence workflow, ingestion controls, investment guardrails, fiscal trajectory, transition funding, payment interactions, distributional scenarios, household weighting, uncertainty ranges, reviewed scenarios, and repo guardrails.
+- Repo guardrails passed with zero denied findings.
+- Bare Streamlit import probes passed for `simulator/app.py`, `simulator/pages/21_Sector_Stress_Matrix.py`, `simulator/pages/22_Behavioural_Response.py`, and `simulator/pages/23_Administrative_Workflow.py`.
+
+Reports regenerated:
+
+- `reports/uncertainty_ranges.json`
+- `reports/uncertainty_ranges.md`
+- `reports/reviewed_scenarios.json`
+- `reports/reviewed_scenarios.md`
+- `reports/sector_stress_matrix.json`
+- `reports/sector_stress_matrix.md`
+- `reports/behavioural_response_simulation.json`
+- `reports/behavioural_response_simulation.md`
+- `reports/administrative_compliance_workflow.json`
+- `reports/administrative_compliance_workflow.md`
+
+Limitations:
+
+- This hardening pass is prototype-only and placeholder-only.
+- It does not add legislative architecture, draft operative law, establish legal sufficiency, create real data, create compliance scoring, create enforcement, create notices, implement penalties, or modify firm-level CARSF liability.
+- All affected outputs remain subject to external legal, tax, ATO-methods, Treasury-methods, privacy, calibration, methods, and administrative-design review before any real use.

@@ -55,6 +55,7 @@
 - Placeholder subgroup weights do not use survey weights, ABS/HILDA/Census microdata, DSS / Services Australia data, ATO data, Treasury modelling, PBO costing, or household survey data.
 - Highest-risk subgroup tables are deterministic stress summaries only and do not prove real subgroup incidence, prevalence, or representativeness.
 - Zero-weight or unmatched subgroup cases may be useful plumbing tests but are not assessable as population outcomes.
+- Subgroup metadata can still be lost if downstream integrations bypass the weighted aggregation payload; reports now warn when metadata is unavailable.
 - Deterministic low/base/high uncertainty ranges may be mistaken for confidence intervals, forecasts, Monte Carlo outputs, or calibrated sensitivity analysis.
 - Stable high-risk uncertainty signals may still be wrong without external household, labour-market, welfare, regional, and weighting calibration.
 - Fragile uncertainty outputs may be over-interpreted if point estimates remain visible beside range results.
@@ -67,10 +68,12 @@
 - Additional schedules do not solve legal multi-schedule attribution, grouping, apportionment, or transfer-pricing issues.
 - Sector stress matrix bands may be mistaken for real sector scores or comparative rankings if do-not-rank and metadata-only warnings are removed.
 - Cross-sector stress observations are not calibrated and may overstate or understate governance difficulty without external sector, legal, Treasury, ATO, ABS, PBO, and methods review.
-- Behavioural response scenarios may be mistaken for behavioural predictions, compliance-risk scores, or enforcement logic if synthetic-only and do-not-predict warnings are removed.
-- Response pressure bands may overstate or understate gaming pathway review pressure without behavioural research, legal review, ATO/Treasury methods review, and external calibration.
+- Automation-intensity component fields are interpretive metadata aids only; they are not calibrated digital, physical, decision, or compute sector scores.
+- Behavioural response scenarios may be mistaken for conduct forecasts, compliance-risk scores, or enforcement logic if synthetic-only and do-not-predict warnings are removed.
+- Response pressure bands may overstate or understate gaming pathway review pressure without behavioural research, legal review, ATO/Treasury methods review, and external calibration, even after placeholder spread tuning.
 - Countermeasure categories are review pathways only and do not implement evidence powers, penalties, audit logic, enforcement, or operational compliance workflows.
 - Administrative workflow queues may be mistaken for endorsed ATO processes if prototype-only and no-enforcement warnings are removed.
 - Draft evidence request bundles do not create notices, statutory powers, penalties, compliance scoring, real action, or actual tax-payable estimates.
 - Locked and suppressed workflow statuses are display controls only; they require external legal, tax, privacy, methods, calibration, and administrative-design review before any real use.
+- Routine and enhanced workflow rows are demonstration paths only; they are not clearance, approval, operational readiness, or evidence sufficiency findings.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.

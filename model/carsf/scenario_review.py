@@ -61,6 +61,12 @@ class ReviewedScenarioResult:
     subgroup_range_sensitivity: str | None
     representative_of_real_population: bool
     total_synthetic_weight: float | None
+    scenario_count: int | None
+    subgroup_filter: dict[str, Any]
+    matched_scenarios: list[str]
+    unmatched_scenarios: list[str]
+    synthetic_weight_only: bool
+    not_population_estimate: bool
     fragile_metrics: list[str]
     missing_ranges: list[str]
     review_signals: list[str]
@@ -235,6 +241,12 @@ def _household_review(input_obj: ReviewedScenarioInput) -> ReviewedScenarioResul
         subgroup_range_sensitivity=None,
         representative_of_real_population=False,
         total_synthetic_weight=None,
+        scenario_count=None,
+        subgroup_filter={},
+        matched_scenarios=[],
+        unmatched_scenarios=[],
+        synthetic_weight_only=True,
+        not_population_estimate=True,
         fragile_metrics=fragile,
         missing_ranges=missing,
         review_signals=sorted(set(signals)),
@@ -255,9 +267,22 @@ def _weighted_review(input_obj: ReviewedScenarioInput) -> ReviewedScenarioResult
     residual_stability = _range_stability(source.get("residual_gap_range"))
     share_stability = _range_stability(source.get("high_critical_share_range"))
     subgroup_sensitivity = str(source.get("subgroup_range_sensitivity") or "not_assessable")
-    total_weight = input_obj.total_synthetic_weight
+    total_weight = (
+        input_obj.total_synthetic_weight
+        if input_obj.total_synthetic_weight is not None
+        else (
+            None
+            if source.get("total_synthetic_weight") is None
+            else float(source.get("total_synthetic_weight"))
+        )
+    )
     scenario_count = source.get("scenario_count")
     representative = bool(source.get("representative_of_real_population", input_obj.representative_of_real_population))
+    subgroup_filter = dict(source.get("subgroup_filter", {}))
+    matched_scenarios = [str(item) for item in source.get("matched_scenarios", [])]
+    unmatched_scenarios = [str(item) for item in source.get("unmatched_scenarios", [])]
+    synthetic_weight_only = bool(source.get("synthetic_weight_only", True))
+    not_population_estimate = bool(source.get("not_population_estimate", True))
     warnings = [
         "Reviewed weighted subgroup output is synthetic and controls display only.",
         "Synthetic subgroup output is not population representative.",
@@ -305,6 +330,13 @@ def _weighted_review(input_obj: ReviewedScenarioInput) -> ReviewedScenarioResult
         warnings.append("Zero-weight or unmatched subgroup output is non-interpretable until calibrated.")
     if representative is not False:
         warnings.append("Representative status was not explicitly false; review required.")
+    if not_population_estimate is not True:
+        warnings.append("Weighted subgroup output is not explicitly marked as not a population estimate; review required.")
+    if any(
+        key not in source
+        for key in ["scenario_count", "total_synthetic_weight", "subgroup_filter", "matched_scenarios", "unmatched_scenarios"]
+    ):
+        warnings.append("subgroup metadata unavailable in this prototype path")
 
     return ReviewedScenarioResult(
         review_id=input_obj.review_id,
@@ -320,6 +352,12 @@ def _weighted_review(input_obj: ReviewedScenarioInput) -> ReviewedScenarioResult
         subgroup_range_sensitivity=subgroup_sensitivity,
         representative_of_real_population=False,
         total_synthetic_weight=total_weight,
+        scenario_count=None if scenario_count is None else int(scenario_count),
+        subgroup_filter=subgroup_filter,
+        matched_scenarios=matched_scenarios,
+        unmatched_scenarios=unmatched_scenarios,
+        synthetic_weight_only=synthetic_weight_only,
+        not_population_estimate=not_population_estimate,
         fragile_metrics=["weighted subgroup range"] if subgroup_sensitivity == "fragile" else [],
         missing_ranges=missing,
         review_signals=sorted(set(signals)),

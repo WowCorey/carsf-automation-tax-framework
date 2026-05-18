@@ -39,6 +39,7 @@ class WeightedSubgroupUncertaintyResult:
     overall_range_sensitivity: str
     highest_uncertainty_subgroups: list[str]
     stable_high_risk_subgroups: list[str]
+    aggregation_metadata: dict[str, Any] = field(default_factory=dict)
     warnings: list[str] = field(default_factory=list)
     non_claims: list[str] = field(default_factory=lambda: list(UNCERTAINTY_NON_CLAIMS))
 
@@ -84,6 +85,32 @@ def _sensitivity_from_rank(rank: int) -> str:
     return "not_assessable"
 
 
+def _aggregation_metadata(aggregation: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "aggregation_id": aggregation.get("aggregation_id"),
+        "scenario_count": aggregation.get("scenario_count"),
+        "total_synthetic_weight": aggregation.get("total_synthetic_weight"),
+        "aggregation_basis": aggregation.get("aggregation_basis"),
+        "duplicate_scenario_weight_records": list(aggregation.get("duplicate_scenario_weight_records", [])),
+        "representative_of_real_population": False,
+        "synthetic_weight_only": bool(aggregation.get("synthetic_weight_only", True)),
+        "not_population_estimate": bool(aggregation.get("not_population_estimate", True)),
+    }
+
+
+def _metadata_missing(row: dict[str, Any]) -> bool:
+    return any(
+        key not in row
+        for key in [
+            "scenario_count",
+            "total_synthetic_weight",
+            "subgroup_filter",
+            "matched_scenarios",
+            "unmatched_scenarios",
+        ]
+    )
+
+
 def evaluate_weighted_uncertainty(
     inputs: WeightedSubgroupUncertaintyInput | dict[str, Any],
 ) -> WeightedSubgroupUncertaintyResult:
@@ -97,6 +124,8 @@ def evaluate_weighted_uncertainty(
     ]
     if aggregation.get("representative_of_real_population") is not False:
         warnings.append("Weighted aggregation input is not explicitly marked as non-representative; review required.")
+    if aggregation.get("not_population_estimate") is not True:
+        warnings.append("Weighted aggregation input is not explicitly marked as not a population estimate; review required.")
 
     subgroup_rows = aggregation.get("subgroup_results", [])
     subgroup_ids = [str(row.get("subgroup_id")) for row in subgroup_rows]
@@ -121,6 +150,8 @@ def evaluate_weighted_uncertainty(
             subgroup_warnings.append(f"missing high/critical share range for subgroup: {subgroup_id}")
         if subgroup_warnings:
             warnings.extend(subgroup_warnings)
+        if _metadata_missing(row):
+            subgroup_warnings.append("subgroup metadata unavailable in this prototype path")
         stability_values = [
             item.stability_band
             for item in [residual_result, share_result]
@@ -135,10 +166,17 @@ def evaluate_weighted_uncertainty(
             {
                 "subgroup_id": subgroup_id,
                 "subgroup_name": row.get("subgroup_name", subgroup_id),
+                "scenario_count": row.get("scenario_count"),
+                "total_synthetic_weight": row.get("total_synthetic_weight"),
+                "subgroup_filter": dict(row.get("subgroup_filter", {})),
+                "matched_scenarios": list(row.get("matched_scenarios", [])),
+                "unmatched_scenarios": list(row.get("unmatched_scenarios", [])),
                 "residual_gap_range": None if residual_result is None else residual_result.to_jsonable(),
                 "high_critical_share_range": None if share_result is None else share_result.to_jsonable(),
                 "subgroup_range_sensitivity": subgroup_sensitivity,
                 "representative_of_real_population": False,
+                "synthetic_weight_only": bool(row.get("synthetic_weight_only", True)),
+                "not_population_estimate": bool(row.get("not_population_estimate", True)),
                 "warnings": subgroup_warnings,
             }
         )
@@ -155,5 +193,6 @@ def evaluate_weighted_uncertainty(
         overall_range_sensitivity=_sensitivity_from_rank(max_rank),
         highest_uncertainty_subgroups=sorted(set(highest_uncertainty)),
         stable_high_risk_subgroups=sorted(set(stable_high_risk)),
+        aggregation_metadata=_aggregation_metadata(aggregation),
         warnings=warnings,
     )

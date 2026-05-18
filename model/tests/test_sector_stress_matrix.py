@@ -33,6 +33,9 @@ def test_every_stress_row_has_required_dimensions(repo_root) -> None:
             assert getattr(row, dimension)
         assert row.display_control_status
         assert row.main_reason
+        assert row.automation_intensity_method_note
+        assert row.automation_intensity_components_used
+        assert row.automation_intensity_limitations
 
 
 def test_every_stress_row_is_do_not_rank(repo_root) -> None:
@@ -83,3 +86,15 @@ def test_sector_stress_output_order_is_deterministic(repo_root) -> None:
 
     assert [row.schedule_id for row in first] == [row.schedule_id for row in second]
     assert summarise_sector_stress(first).to_jsonable() == summarise_sector_stress(second).to_jsonable()
+
+
+def test_automation_component_explanation_is_available(repo_root) -> None:
+    rows = build_sector_stress_matrix(load_schedules(repo_root / "schedules"))
+
+    for row in rows:
+        assert 0 <= row.digital_automation_emphasis <= 1
+        assert 0 <= row.physical_automation_emphasis <= 1
+        assert 0 <= row.decision_automation_emphasis <= 1
+        assert 0 <= row.compute_dependency_emphasis <= 1
+        assert "metadata" in row.automation_intensity_method_note.lower()
+        assert "do_not_rank" in row.automation_intensity_limitations

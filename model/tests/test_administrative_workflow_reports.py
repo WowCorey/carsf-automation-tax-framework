@@ -83,7 +83,13 @@ def test_administrative_workflow_report_has_required_summary_counts(repo_root) -
     payload = json.loads((reports_dir / "administrative_compliance_workflow.json").read_text(encoding="utf-8"))
     summary = payload["summary"]
 
-    assert summary["total_scenarios"] == 10
+    assert summary["total_scenarios"] == 13
+    assert summary["scenarios_by_decision_band"]["routine_placeholder_review"] >= 1
+    assert summary["scenarios_by_decision_band"]["enhanced_placeholder_review"] >= 1
+    assert (
+        summary["scenarios_by_decision_band"].get("complex_placeholder_review", 0)
+        + summary["scenarios_by_decision_band"].get("external_review_required", 0)
+    ) >= 1
     assert summary["scenarios_requiring_external_review"] >= 1
     assert summary["scenarios_locked_for_external_review"] >= 1
     assert summary["scenarios_suppressed_until_calibrated"] >= 1

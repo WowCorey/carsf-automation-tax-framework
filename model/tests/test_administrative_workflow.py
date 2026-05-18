@@ -43,6 +43,9 @@ def test_all_administrative_workflow_scenarios_parse(repo_root) -> None:
 
     assert len(scenarios) >= 8
     assert {scenario["scenario_id"] for scenario in scenarios} >= {
+        "routine_formula_completeness_check",
+        "enhanced_sector_schedule_documentation_check",
+        "enhanced_privacy_evidence_handling_check",
         "call_centre_token_oversight_triage",
         "related_party_ai_service_fee_review",
         "offshore_automation_service_attribution_review",
@@ -218,3 +221,36 @@ def test_every_result_has_no_enforcement_and_no_real_data_flags(repo_root) -> No
     assert all(result.real_ato_power_claimed is False for result in results)
     assert all(result.real_enforcement_created is False for result in results)
     assert all(result.real_data_used is False for result in results)
+
+
+def test_lower_complexity_scenarios_show_routine_and_enhanced_paths(repo_root) -> None:
+    scenarios = {scenario["scenario_id"]: scenario for scenario in _scenarios(repo_root)}
+
+    routine = evaluate_administrative_workflow(
+        scenarios["routine_formula_completeness_check"],
+        _schedule_ids(repo_root),
+        _behavioural_ids(repo_root),
+        _packet_ids(repo_root),
+    )
+    sector = evaluate_administrative_workflow(
+        scenarios["enhanced_sector_schedule_documentation_check"],
+        _schedule_ids(repo_root),
+        _behavioural_ids(repo_root),
+        _packet_ids(repo_root),
+    )
+    privacy = evaluate_administrative_workflow(
+        scenarios["enhanced_privacy_evidence_handling_check"],
+        _schedule_ids(repo_root),
+        _behavioural_ids(repo_root),
+        _packet_ids(repo_root),
+    )
+
+    assert routine.workflow_decision_band == "routine_placeholder_review"
+    assert routine.workflow_status == "prototype_discussion_only"
+    assert routine.external_review_required is False
+    assert sector.workflow_decision_band == "enhanced_placeholder_review"
+    assert sector.workflow_status == "show_with_warning"
+    assert sector.external_review_required is False
+    assert privacy.workflow_decision_band == "enhanced_placeholder_review"
+    assert privacy.workflow_status == "show_with_warning"
+    assert privacy.external_review_required is False

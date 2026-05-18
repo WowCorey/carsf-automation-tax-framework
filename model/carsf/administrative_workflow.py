@@ -717,7 +717,10 @@ def evaluate_administrative_workflow(
     external_review = (
         scenario_obj.external_review_required
         or status in {"external_review_required", "locked_for_external_review", "suppress_until_calibrated"}
-        or bool(escalations)
+        or any(
+            escalation.queue_id in {"external_calibration_queue", "suppression_queue", "legal_policy_queue"}
+            for escalation in escalations
+        )
     )
     blockers = sorted(
         {

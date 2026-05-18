@@ -14,6 +14,8 @@ Current status: private research/prototype.
 
 All sector values, schedule values, examples, caps, Fiscal Replacement Value values, AAVA settings, and behavioural assumptions are placeholders unless explicitly labelled as confirmed baseline figures from official sources.
 
+The current pre-Build 21 hardening pass preserves synthetic subgroup metadata through uncertainty/review outputs, clarifies sector stress automation-intensity components, improves behavioural response pressure-band spread, and adds routine/enhanced administrative workflow demonstration rows. It does not add legislative architecture, operative law, real data, enforcement, compliance scoring, or firm-level liability changes.
+
 ## Repository Structure
 
 - `paper/` - Markdown policy paper, V1.5 working draft, formulas, glossary, references, and export notes.
@@ -32,6 +34,7 @@ All sector values, schedule values, examples, caps, Fiscal Replacement Value val
 - `examples/distributional_scenarios/` - synthetic household distributional cases with no real household data.
 - `examples/household_weighting/` - synthetic household weighting and subgroup aggregation cases with no real household data.
 - `examples/uncertainty_ranges/` - deterministic placeholder uncertainty range cases with no real household data or statistical confidence claims.
+- `docs/pre_legislative_hardening.md` - focused hardening note before the non-operative legislative architecture skeleton build.
 - `simulator/` - Streamlit interface for policy review, tax model inputs, worked examples, red-team tests, and audit log.
 - `docs/` - data requirements, limitations, implementation notes, known risks, and V1.5 plan.
 
@@ -285,7 +288,7 @@ V1.5 is not just an examples update. It is V1.4 plus two prototype sector schedu
 
 ## Not Yet Solved
 
-The model still needs real Treasury, ATO, ABS, DSS, HILDA, HELP, superannuation, state payroll tax, industry, and legal data. It also needs calibrated safe-harbour thresholds, legal grouped-entity rules, tax-law attribution, transfer pricing, GST and international tax review, related-party adjustments, behavioural elasticity estimates, tax incidence modelling, anti-avoidance drafting, privacy review, and independent tax counsel review before any external policy use.
+The model still needs real Treasury, ATO, ABS, DSS, HILDA, HELP, superannuation, state payroll tax, industry, and legal data. It also needs calibrated safe-harbour thresholds, legal grouped-entity rules, tax-law attribution, transfer pricing, GST and international tax review, related-party adjustments, behavioural elasticity work, tax incidence modelling, anti-avoidance drafting, privacy review, and independent tax counsel review before any external policy use.
 
 Safe-harbour outputs are prototype classification only. They do not reduce, cap, or erase calculated liability in this build.
 Grouped-entity and apportionment outputs are prototype modelling previews only. They do not establish legal grouping, tax attribution, or actual liability.
@@ -302,5 +305,5 @@ Distributional scenario outputs are synthetic placeholders. They do not model re
 Household weighting and subgroup aggregation outputs are synthetic placeholders. They are not population estimates, survey weights, ABS/HILDA/Census analysis, DSS / Services Australia modelling, or real distributional modelling.
 Uncertainty range outputs are deterministic placeholders. They are not Monte Carlo, statistical confidence intervals, forecasts, real uncertainty quantification, or validated sensitivity analysis.
 Sector stress matrix outputs are metadata-only placeholders. They are not calibrated sector scores, not official schedules, not real industry analysis, and not usable for estimating actual tax payable.
-Behavioural response outputs are deterministic synthetic pathway reviews. They are not behavioural prediction, behavioural elasticity, ATO audit logic, compliance-risk scoring, enforcement, penalty modelling, or real taxpayer scoring.
+Behavioural response outputs are deterministic synthetic pathway reviews. They do not predict conduct, estimate behavioural elasticity, implement ATO audit logic, create compliance-risk scoring, implement enforcement, model penalties, or score real taxpayers.
 Administrative workflow outputs are deterministic synthetic pathway-routing reviews. They are not an operational ATO process, not enforcement, not notices, not penalties, not compliance scoring, and not usable for estimating actual tax payable.

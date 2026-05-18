@@ -1,6 +1,6 @@
 # CARSF V1.5 Reviewed Scenario Comparison Layer
 
-Generated at: `2026-05-14T10:50:20+00:00`
+Generated at: `2026-05-17T22:52:47+00:00`
 
 ## A. Purpose
 
@@ -45,11 +45,11 @@ This report classifies deterministic synthetic uncertainty outputs into prototyp
 
 ## E. Weighted Subgroup Review Table
 
-| Subgroup | Residual Gap Stability | High/Critical Share Stability | Subgroup Sensitivity | Representative of Real Population | Review Category | Display Level | Main Reason |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| All Synthetic Households | moderately_sensitive | stable | moderately_sensitive | False | prototype_discussion_signal | show_with_warning | Required subgroup ranges are stable or moderately sensitive and no required range is missing. |
-| Critical Budget Stress | fragile | moderately_sensitive | fragile | False | fragile_suppress_point_estimate | hide_point_estimate | Weighted subgroup range sensitivity is fragile; suppress the point estimate. |
-| High Regional Stress | N/A | N/A | not_assessable | False | missing_uncertainty_range | external_review_only | Required weighted subgroup uncertainty range is missing. |
+| Subgroup | Scenario Count | Synthetic Weight | Not Population Estimate | Residual Gap Stability | High/Critical Share Stability | Subgroup Sensitivity | Representative of Real Population | Review Category | Display Level | Main Reason |
+| --- | ---: | ---: | --- | --- | --- | --- | --- | --- | --- | --- |
+| All Synthetic Households | 3 | 3.000 | True | moderately_sensitive | stable | moderately_sensitive | False | prototype_discussion_signal | show_with_warning | Required subgroup ranges are stable or moderately sensitive and no required range is missing. |
+| Critical Budget Stress | 1 | 1.000 | True | fragile | moderately_sensitive | fragile | False | fragile_suppress_point_estimate | hide_point_estimate | Weighted subgroup range sensitivity is fragile; suppress the point estimate. |
+| High Regional Stress | 1 | 1.000 | True | N/A | N/A | not_assessable | False | missing_uncertainty_range | external_review_only | Required weighted subgroup uncertainty range is missing. |
 
 ## F. Prototype Discussion Signals
 

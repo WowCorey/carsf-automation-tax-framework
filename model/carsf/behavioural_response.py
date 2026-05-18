@@ -179,6 +179,7 @@ class BehaviouralResponseScenario:
     placeholder_response_pressure: str
     requires_external_review: bool
     non_claims: list[str]
+    pressure_basis: str = "multi_pathway"
     unresolved_new_flag: bool = False
     suppress_until_calibrated: bool = False
     suppression_calibration_dependencies: list[str] = field(default_factory=list)
@@ -210,6 +211,8 @@ class BehaviouralResponseResult:
     linked_avoidance_flags: list[str]
     response_pressure_score: float
     response_pressure_band: str
+    pressure_basis: str
+    pressure_band_explanation: str
     review_status: str
     countermeasure_categories: list[str]
     countermeasures: list[BehaviouralCountermeasure]
@@ -265,6 +268,7 @@ def _scenario_from_mapping(source: BehaviouralResponseScenario | dict[str, Any])
         placeholder_response_pressure=str(source["placeholder_response_pressure"]),
         requires_external_review=bool(source["requires_external_review"]),
         non_claims=[str(item) for item in source.get("non_claims", [])],
+        pressure_basis=str(source.get("pressure_basis", "multi_pathway")),
         unresolved_new_flag=bool(source.get("unresolved_new_flag", False)),
         suppress_until_calibrated=bool(source.get("suppress_until_calibrated", False)),
         suppression_calibration_dependencies=[
@@ -321,6 +325,14 @@ def validate_behavioural_response_scenario(
         raise ValueError(f"{scenario_obj.scenario_id} has unknown response_type: {scenario_obj.response_type}")
     if scenario_obj.placeholder_response_pressure not in PRESSURE_BASE:
         raise ValueError(f"{scenario_obj.scenario_id} has unknown placeholder_response_pressure")
+    if scenario_obj.pressure_basis not in {
+        "single_pathway",
+        "multi_pathway",
+        "cross_border",
+        "unresolved_legal_treatment",
+        "calibration_suppressed",
+    }:
+        raise ValueError(f"{scenario_obj.scenario_id} has unknown pressure_basis")
     if not scenario_obj.synthetic_triggers:
         raise ValueError(f"{scenario_obj.scenario_id} must include synthetic_triggers")
     if not scenario_obj.linked_countermeasures:
@@ -403,6 +415,19 @@ def _pressure_score(
 ) -> tuple[float, list[str]]:
     score = PRESSURE_BASE[scenario.placeholder_response_pressure]
     reasons = [f"Base pressure comes from declared placeholder pressure `{scenario.placeholder_response_pressure}`."]
+    basis_adjustments = {
+        "single_pathway": -0.10,
+        "multi_pathway": 0.0,
+        "cross_border": 0.05,
+        "unresolved_legal_treatment": 0.08,
+        "calibration_suppressed": 0.0,
+    }
+    basis_adjustment = basis_adjustments[scenario.pressure_basis]
+    if basis_adjustment:
+        score += basis_adjustment
+        reasons.append(f"Pressure basis `{scenario.pressure_basis}` adjusts placeholder pressure by {basis_adjustment:+.2f}.")
+    else:
+        reasons.append(f"Pressure basis `{scenario.pressure_basis}` adds no standalone modifier.")
     text = _scenario_text(scenario)
     modifiers = [
         ("offshore", 0.10, "offshore routing wording adds review pressure"),
@@ -421,21 +446,26 @@ def _pressure_score(
         ("unresolved", 0.10, "unresolved software, intangible, or AASB 138 wording adds review pressure"),
     ]
     applied: set[str] = set()
+    text_modifier = 0.0
     for term, amount, reason in modifiers:
         if term in text and reason not in applied:
-            score += amount
+            text_modifier += amount
             reasons.append(reason)
             applied.add(reason)
-    flag_modifier = min(0.20, len(scenario.linked_avoidance_flags) * 0.05)
+    text_modifier = min(0.20, text_modifier)
+    if text_modifier:
+        score += text_modifier
+        reasons.append(f"Text modifiers are capped at {text_modifier:.2f} to avoid double-counting related pathway wording.")
+    flag_modifier = min(0.10, len(scenario.linked_avoidance_flags) * 0.03)
     if flag_modifier:
         score += flag_modifier
         reasons.append(f"Linked avoidance flags add {flag_modifier:.2f} placeholder review pressure.")
     status = _stress_status(sector_stress_by_schedule, scenario.sector_schedule_id)
     if status == "external_review_required":
-        score += 0.10
+        score += 0.05
         reasons.append("Sector stress matrix external-review status adds placeholder review pressure.")
     elif status == "strong_warning_required":
-        score += 0.05
+        score += 0.03
         reasons.append("Sector stress matrix strong-warning status adds placeholder review pressure.")
     return _score_cap(score), reasons
 
@@ -500,6 +530,11 @@ def evaluate_behavioural_response(
         linked_avoidance_flags=sorted(scenario_obj.linked_avoidance_flags),
         response_pressure_score=round(score, 4),
         response_pressure_band=band,
+        pressure_basis=scenario_obj.pressure_basis,
+        pressure_band_explanation=(
+            f"{band} is based on declared placeholder pressure, pressure_basis={scenario_obj.pressure_basis}, "
+            "capped text modifiers, linked avoidance flags, and sector stress display status. It is not a behavioural probability."
+        ),
         review_status=review_status,
         countermeasure_categories=countermeasure_categories,
         countermeasures=[_countermeasure_detail(category) for category in countermeasure_categories],
@@ -510,7 +545,7 @@ def evaluate_behavioural_response(
         main_reason=main_reason,
         calibration_blockers=sorted(set(blockers)),
         warnings=[
-            "Synthetic pathway only; do not treat as behavioural prediction.",
+            "Synthetic pathway only; do not treat as a conduct forecast.",
             "Do not use this result for taxpayer-level scoring or compliance action.",
             *reasons,
         ],
@@ -575,6 +610,6 @@ def summarise_behavioural_responses(
         calibration_blockers=blockers,
         warnings=[
             "Summary counts are deterministic placeholder review counts only.",
-            "Counts are not behavioural predictions, compliance scores, or enforcement priorities.",
+            "Counts are not conduct forecasts, compliance scores, or enforcement priorities.",
         ],
     )

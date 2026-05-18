@@ -1,6 +1,6 @@
 # CARSF V1.5 Behavioural Response / Gaming Simulation
 
-Generated at: `2026-05-17T06:44:05+00:00`
+Generated at: `2026-05-17T22:52:44+00:00`
 
 ## A. Purpose
 
@@ -18,7 +18,7 @@ This report maps synthetic CARSF response pathways to placeholder pressure bands
 
 ## C. Method - Synthetic Placeholder Pathways Only
 
-The simulation uses declared synthetic scenario metadata, linked prototype avoidance flags, countermeasure categories, and sector stress display status. It simulates response pathways, not behavioural outcomes.
+The simulation uses declared synthetic scenario metadata, pressure basis labels, capped text modifiers, linked prototype avoidance flags, countermeasure categories, and sector stress display status. It simulates response pathways, not behavioural outcomes.
 
 ## D. Scenario Coverage
 
@@ -37,27 +37,28 @@ The simulation uses declared synthetic scenario metadata, linked prototype avoid
 
 ## E. Behavioural Response Matrix
 
-| Scenario ID | Scenario Name | Sector Schedule | Response Type | Linked Avoidance Flags | Response Pressure Band | Review Status | Countermeasure Categories | External Review Required | Do Not Predict | Main Reason |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| artificial_low_aava_cost_loading | Artificial low AAVA through cost loading | accounting_administration | artificial_low_profit_or_aava | ARTIFICIAL_LOW_PROFIT_OR_AAVA, RELATED_PARTY_AI_SERVICE_FEES | critical_review_required | external_review_required | aava_deductibility_review, grouped_entity_review, transfer_pricing_review | True | True | critical_review_required from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `high`. |
-| cloud_inference_operating_cost_relabelling | Cloud / inference relabelling as ordinary operating cost | software_digital_platforms | cloud_inference_relabelling | ARTIFICIAL_LOW_PROFIT_OR_AAVA, CLOUD_COST_RELABELING | critical_review_required | external_review_required | aava_deductibility_review, evidence_requirement, transfer_pricing_review | True | True | critical_review_required from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `high`. |
-| customer_self_checkout_labour_relabelling | Customer self-checkout labour relabelling | retail_self_checkout_fulfilment | customer_self_service_shift | SECTOR_CLASSIFICATION_ARBITRAGE | high_placeholder_response_pressure | strong_warning_required | customer_self_service_review, legal_policy_review, schedule_authority_review | True | True | high_placeholder_response_pressure from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `moderate`. |
-| fake_qlc_concentrated_roles | Fake QLC inflation through concentrated high-scored roles | call_centres_customer_support | fake_qlc_inflation | FAKE_QLC_INFLATION, TOKEN_HUMAN_OVERSIGHT | critical_review_required | external_review_required | evidence_requirement, grouped_entity_review | True | True | critical_review_required from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `high`. |
-| mixed_unit_apportionment_gaming | Mixed-unit apportionment gaming | logistics_warehousing | mixed_unit_apportionment_gaming | SECTOR_CLASSIFICATION_ARBITRAGE | critical_review_required | external_review_required | evidence_requirement, legal_policy_review, schedule_authority_review | True | True | critical_review_required from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `moderate`. |
-| offshore_automation_service_routing | Offshore automation-as-a-service routing | logistics_warehousing | offshore_automation_service_routing | OFFSHORE_AUTOMATION_SERVICE, RELATED_PARTY_AI_SERVICE_FEES | critical_review_required | external_review_required | legal_policy_review, offshore_attribution_review, transfer_pricing_review | True | True | critical_review_required from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `high`. |
-| open_source_ai_treatment_gap | Open-source AI treatment gap | software_digital_platforms | open_source_ai_treatment_gap | OPEN_SOURCE_AI_TREATMENT_GAP | critical_review_required | suppress_until_calibrated | capital_base_review, external_calibration_required, legal_policy_review | True | True | Suppressed until calibration because required dependencies are unresolved. |
-| platform_ip_royalty_routing | Platform IP royalty routing | software_digital_platforms | platform_ip_royalty_routing | ARTIFICIAL_LOW_PROFIT_OR_AAVA, OFFSHORE_AUTOMATION_SERVICE, RELATED_PARTY_AI_SERVICE_FEES | critical_review_required | external_review_required | capital_base_review, legal_policy_review, offshore_attribution_review, transfer_pricing_review | True | True | critical_review_required from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `critical`. |
-| related_party_ai_service_fee_routing | Related-party AI service fee routing | accounting_administration | related_party_ai_service_fees | ARTIFICIAL_LOW_PROFIT_OR_AAVA, RELATED_PARTY_AI_SERVICE_FEES | critical_review_required | external_review_required | aava_deductibility_review, evidence_requirement, transfer_pricing_review | True | True | critical_review_required from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `high`. |
-| robotics_lease_substitution | Robotics lease substitution for capital ownership | automotive_repair | robotics_leasing_shift | ROBOTICS_LEASING_AVOIDANCE | high_placeholder_response_pressure | strong_warning_required | aava_deductibility_review, capital_base_review, evidence_requirement | True | True | high_placeholder_response_pressure from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `moderate`. |
-| schedule_classification_arbitrage | Schedule classification arbitrage | retail_self_checkout_fulfilment | schedule_classification_arbitrage | SECTOR_CLASSIFICATION_ARBITRAGE | critical_review_required | external_review_required | legal_policy_review, schedule_authority_review | True | True | critical_review_required from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `high`. |
-| token_oversight_workforce_wrapper | Token oversight workforce wrapper | call_centres_customer_support | token_human_oversight | FAKE_QLC_INFLATION, TOKEN_HUMAN_OVERSIGHT | critical_review_required | external_review_required | evidence_requirement, grouped_entity_review, legal_policy_review | True | True | critical_review_required from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `high`. |
+| Scenario ID | Scenario Name | Sector Schedule | Response Type | Pressure Basis | Linked Avoidance Flags | Response Pressure Band | Review Status | Countermeasure Categories | External Review Required | Do Not Predict | Main Reason |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| artificial_low_aava_cost_loading | Artificial low AAVA through cost loading | accounting_administration | artificial_low_profit_or_aava | multi_pathway | ARTIFICIAL_LOW_PROFIT_OR_AAVA, RELATED_PARTY_AI_SERVICE_FEES | critical_review_required | external_review_required | aava_deductibility_review, grouped_entity_review, transfer_pricing_review | True | True | critical_review_required from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `high`. |
+| cloud_inference_operating_cost_relabelling | Cloud / inference relabelling as ordinary operating cost | software_digital_platforms | cloud_inference_relabelling | unresolved_legal_treatment | ARTIFICIAL_LOW_PROFIT_OR_AAVA, CLOUD_COST_RELABELING | critical_review_required | external_review_required | aava_deductibility_review, evidence_requirement, transfer_pricing_review | True | True | critical_review_required from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `high`. |
+| customer_self_checkout_labour_relabelling | Customer self-checkout labour relabelling | retail_self_checkout_fulfilment | customer_self_service_shift | single_pathway | SECTOR_CLASSIFICATION_ARBITRAGE | high_placeholder_response_pressure | strong_warning_required | customer_self_service_review, legal_policy_review, schedule_authority_review | True | True | high_placeholder_response_pressure from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `moderate`. |
+| fake_qlc_concentrated_roles | Fake QLC inflation through concentrated high-scored roles | call_centres_customer_support | fake_qlc_inflation | single_pathway | FAKE_QLC_INFLATION, TOKEN_HUMAN_OVERSIGHT | high_placeholder_response_pressure | strong_warning_required | evidence_requirement, grouped_entity_review | True | True | high_placeholder_response_pressure from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `high`. |
+| mixed_unit_apportionment_gaming | Mixed-unit apportionment gaming | logistics_warehousing | mixed_unit_apportionment_gaming | multi_pathway | SECTOR_CLASSIFICATION_ARBITRAGE | moderate_placeholder_response_pressure | show_with_warning | evidence_requirement, legal_policy_review, schedule_authority_review | True | True | moderate_placeholder_response_pressure from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `low`. |
+| offshore_automation_service_routing | Offshore automation-as-a-service routing | logistics_warehousing | offshore_automation_service_routing | cross_border | OFFSHORE_AUTOMATION_SERVICE, RELATED_PARTY_AI_SERVICE_FEES | critical_review_required | external_review_required | legal_policy_review, offshore_attribution_review, transfer_pricing_review | True | True | critical_review_required from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `high`. |
+| open_source_ai_treatment_gap | Open-source AI treatment gap | software_digital_platforms | open_source_ai_treatment_gap | calibration_suppressed | OPEN_SOURCE_AI_TREATMENT_GAP | high_placeholder_response_pressure | suppress_until_calibrated | capital_base_review, external_calibration_required, legal_policy_review | True | True | Suppressed until calibration because required dependencies are unresolved. |
+| platform_ip_royalty_routing | Platform IP royalty routing | software_digital_platforms | platform_ip_royalty_routing | unresolved_legal_treatment | ARTIFICIAL_LOW_PROFIT_OR_AAVA, OFFSHORE_AUTOMATION_SERVICE, RELATED_PARTY_AI_SERVICE_FEES | critical_review_required | external_review_required | capital_base_review, legal_policy_review, offshore_attribution_review, transfer_pricing_review | True | True | critical_review_required from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `critical`. |
+| related_party_ai_service_fee_routing | Related-party AI service fee routing | accounting_administration | related_party_ai_service_fees | multi_pathway | ARTIFICIAL_LOW_PROFIT_OR_AAVA, RELATED_PARTY_AI_SERVICE_FEES | critical_review_required | external_review_required | aava_deductibility_review, evidence_requirement, transfer_pricing_review | True | True | critical_review_required from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `high`. |
+| robotics_lease_substitution | Robotics lease substitution for capital ownership | automotive_repair | robotics_leasing_shift | multi_pathway | ROBOTICS_LEASING_AVOIDANCE | moderate_placeholder_response_pressure | show_with_warning | aava_deductibility_review, capital_base_review, evidence_requirement | True | True | moderate_placeholder_response_pressure from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `low`. |
+| schedule_classification_arbitrage | Schedule classification arbitrage | retail_self_checkout_fulfilment | schedule_classification_arbitrage | multi_pathway | SECTOR_CLASSIFICATION_ARBITRAGE | critical_review_required | external_review_required | legal_policy_review, schedule_authority_review | True | True | critical_review_required from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `moderate`. |
+| token_oversight_workforce_wrapper | Token oversight workforce wrapper | call_centres_customer_support | token_human_oversight | single_pathway | FAKE_QLC_INFLATION, TOKEN_HUMAN_OVERSIGHT | high_placeholder_response_pressure | strong_warning_required | evidence_requirement, grouped_entity_review, legal_policy_review | True | True | high_placeholder_response_pressure from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `high`. |
 
 ## F. Response Pressure Bands
 
 ### Scenarios By Pressure Band
 
-- `critical_review_required`: 10
-- `high_placeholder_response_pressure`: 2
+- `critical_review_required`: 6
+- `high_placeholder_response_pressure`: 4
+- `moderate_placeholder_response_pressure`: 2
 
 ## G. Linked Avoidance Flags
 
@@ -101,8 +102,9 @@ The simulation uses declared synthetic scenario metadata, linked prototype avoid
 
 ## J. Suppressed / External-Review Scenarios
 
-- `external_review_required`: artificial_low_aava_cost_loading, cloud_inference_operating_cost_relabelling, fake_qlc_concentrated_roles, mixed_unit_apportionment_gaming, offshore_automation_service_routing, platform_ip_royalty_routing, related_party_ai_service_fee_routing, schedule_classification_arbitrage, token_oversight_workforce_wrapper
-- `strong_warning_required`: customer_self_checkout_labour_relabelling, robotics_lease_substitution
+- `external_review_required`: artificial_low_aava_cost_loading, cloud_inference_operating_cost_relabelling, offshore_automation_service_routing, platform_ip_royalty_routing, related_party_ai_service_fee_routing, schedule_classification_arbitrage
+- `show_with_warning`: mixed_unit_apportionment_gaming, robotics_lease_substitution
+- `strong_warning_required`: customer_self_checkout_labour_relabelling, fake_qlc_concentrated_roles, token_oversight_workforce_wrapper
 - `suppress_until_calibrated`: open_source_ai_treatment_gap
 
 ## K. Calibration and Behavioural Research Blockers
@@ -153,8 +155,9 @@ The simulation uses declared synthetic scenario metadata, linked prototype avoid
 
 ### Scenarios By Review Status
 
-- `external_review_required`: 9
-- `strong_warning_required`: 2
+- `external_review_required`: 6
+- `show_with_warning`: 2
+- `strong_warning_required`: 3
 - `suppress_until_calibrated`: 1
 
 - Total scenarios: 12
@@ -172,7 +175,7 @@ The simulation uses declared synthetic scenario metadata, linked prototype avoid
 - Placeholder only.
 - Synthetic scenarios only.
 - Deterministic scenario review only.
-- Not behavioural prediction or behavioural elasticity.
+- Does not predict conduct or estimate behavioural elasticity.
 - Not ATO audit logic, Treasury modelling, ABS/ATO/DSS/PBO analysis, compliance-risk scoring, legal advice, tax advice, investment advice, enforcement, or penalty modelling.
 - No firm-level, taxpayer-level, or industry data is used.
 - Not usable to estimate actual tax payable.

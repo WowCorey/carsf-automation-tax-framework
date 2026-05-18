@@ -18,6 +18,16 @@ The scoring uses schedule-internal placeholder metadata only, including:
 - unresolved attribution and capital-base warning text
 - cross-border, related-party, customer self-service, token-worker, software, platform, and intangible review wording
 
+Automation intensity now preserves explanatory components separately:
+
+- `digital_automation_emphasis`
+- `physical_automation_emphasis`
+- `decision_automation_emphasis`
+- `compute_dependency_emphasis`
+- `robotics_dependency_note`
+
+These fields are interpretation aids only. They are not real sector scores and must not be used to rank schedules.
+
 ## Output Statuses
 
 - `prototype_discussion_only`
@@ -49,4 +59,4 @@ Generated reports:
 
 ## Future Work
 
-Build 19 should add behavioural response / gaming simulation for relabelling labour, entity splitting, offshore service routing, customer self-service shifting, related-party software fees, and schedule arbitrage without claiming real behavioural elasticity or taxpayer behaviour prediction.
+Future calibration must review the component method before any sector use. The current matrix remains metadata-only and do-not-rank.

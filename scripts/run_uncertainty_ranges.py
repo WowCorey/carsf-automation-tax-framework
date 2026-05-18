@@ -261,8 +261,8 @@ def _household_table(rows: list[dict[str, Any]]) -> list[str]:
 
 def _weighted_table(rows: list[dict[str, Any]]) -> list[str]:
     lines = [
-        "| Example | Subgroup | Residual Gap Stability | High/Critical Share Stability | Subgroup Sensitivity |",
-        "| --- | --- | --- | --- | --- |",
+        "| Example | Subgroup | Scenario Count | Synthetic Weight | Matched Scenarios | Unmatched Scenarios | Not Population Estimate | Residual Gap Stability | High/Critical Share Stability | Subgroup Sensitivity |",
+        "| --- | --- | ---: | ---: | --- | --- | --- | --- | --- | --- |",
     ]
     for row in rows:
         if row["example"].get("uncertainty_type") != "weighted":
@@ -274,6 +274,10 @@ def _weighted_table(rows: list[dict[str, Any]]) -> list[str]:
             lines.append(
                 "| "
                 f"{row['example']['name']} | {subgroup['subgroup_id']} | "
+                f"{subgroup.get('scenario_count', 'N/A')} | {number(subgroup.get('total_synthetic_weight'))} | "
+                f"{', '.join(subgroup.get('matched_scenarios', [])) or 'None'} | "
+                f"{', '.join(subgroup.get('unmatched_scenarios', [])) or 'None'} | "
+                f"{subgroup.get('not_population_estimate', True)} | "
                 f"{residual.get('stability_band', 'missing')} | {share.get('stability_band', 'missing')} | "
                 f"{subgroup['subgroup_range_sensitivity']} |"
             )

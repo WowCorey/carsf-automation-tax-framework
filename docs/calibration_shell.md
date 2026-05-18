@@ -171,6 +171,8 @@ Required source categories include ABS, HILDA, Census, DSS / Services Australia,
 
 No such calibration has occurred in this repository. Reviewed scenario outputs are prototype display-control signals only; they are not statistical validation, population estimates, real household modelling, forecasts, confidence intervals, welfare advice, eligibility law, legal advice, tax advice, or economic validation.
 
+The pre-Build 21 hardening pass preserves available subgroup metadata through weighted uncertainty and reviewed-scenario payloads. That metadata remains synthetic and non-representative, and missing metadata still requires prototype warnings rather than inference.
+
 ## Expanded Sector Schedule Calibration
 
 The expanded prototype sector schedules require future calibration before any operative schedule or sector comparison could be claimed:
@@ -208,6 +210,8 @@ Required source categories include ABS labour and output data, ATO aggregated ta
 
 No such calibration has occurred in this repository. The sector stress matrix is prototype metadata review only, does not use real industry data, does not rank sectors, does not estimate actual tax payable, and does not modify firm-level CARSF liability logic.
 
+Automation-intensity outputs now show digital, physical, decision, and compute metadata components separately. These components are explanation aids only and are not calibrated sector scores.
+
 ## Behavioural Response Calibration and Review
 
 The behavioural response / gaming simulation requires future calibration, legal review, ATO/Treasury methods review, and behavioural research before any response pathway could be used beyond prototype policy discussion:
@@ -222,6 +226,8 @@ The behavioural response / gaming simulation requires future calibration, legal 
 Required source categories include legal review, tax counsel, ATO administrative methods review, Treasury policy review, behavioural research, industry automation surveys, transfer-pricing methods review, grouped-entity review methods, software/intangible accounting review, and secure evidence-governance design.
 
 No such calibration has occurred in this repository. Behavioural response outputs are deterministic synthetic pathway reviews only; they do not predict taxpayer behaviour, estimate behavioural elasticity, create compliance-risk scoring, implement enforcement, implement penalties, estimate actual tax payable, or modify firm-level CARSF liability logic.
+
+Placeholder response-band tuning only improves demonstration spread across moderate, high, critical, and suppressed categories. It does not make any response pathway a behavioural probability or observed conduct signal.
 
 ## Administrative Workflow Calibration and Review
 
@@ -239,6 +245,8 @@ The administrative compliance workflow shell requires external legal, tax, ATO-m
 Required source categories include legal review, tax counsel, privacy and secrecy review, ATO administrative methods review, Treasury policy review, secure evidence-governance design, procedural fairness review, operational feasibility review, and external calibration review.
 
 No such calibration has occurred in this repository. Administrative workflow outputs are deterministic synthetic pathway-organisation reviews only; they are not a workflow endorsed by the ATO, not guidance from the ATO, not audit logic, not enforcement, not compliance scoring, do not create notices or penalties, do not estimate actual tax payable, and do not modify firm-level CARSF liability logic.
+
+Routine and enhanced workflow scenarios are included for demonstration coverage only. They do not create administrative readiness, approval, sufficiency, clearance, or operational status.
 
 ## Non-Claims
 

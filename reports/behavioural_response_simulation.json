@@ -74,18 +74,21 @@
         "All response scenarios are synthetic placeholders requiring external calibration, legal review, ATO/Treasury methods review, and behavioural research.",
         "Scenario pressure bands are review prompts only, not compliance findings or real-world outcome estimates."
       ],
+      "pressure_band_explanation": "critical_review_required is based on declared placeholder pressure, pressure_basis=multi_pathway, capped text modifiers, linked avoidance flags, and sector stress display status. It is not a behavioural probability.",
+      "pressure_basis": "multi_pathway",
       "response_pressure_band": "critical_review_required",
-      "response_pressure_score": 0.85,
+      "response_pressure_score": 0.76,
       "response_type": "artificial_low_profit_or_aava",
       "review_status": "external_review_required",
       "scenario_id": "artificial_low_aava_cost_loading",
       "scenario_name": "Artificial low AAVA through cost loading",
       "sector_schedule_id": "accounting_administration",
       "warnings": [
-        "Synthetic pathway only; do not treat as behavioural prediction.",
+        "Synthetic pathway only; do not treat as a conduct forecast.",
         "Do not use this result for taxpayer-level scoring or compliance action.",
         "Base pressure comes from declared placeholder pressure `high`.",
-        "Linked avoidance flags add 0.10 placeholder review pressure.",
+        "Pressure basis `multi_pathway` adds no standalone modifier.",
+        "Linked avoidance flags add 0.06 placeholder review pressure.",
         "Sector stress matrix external-review status adds placeholder review pressure."
       ]
     },
@@ -163,19 +166,23 @@
         "All response scenarios are synthetic placeholders requiring external calibration, legal review, ATO/Treasury methods review, and behavioural research.",
         "Scenario pressure bands are review prompts only, not compliance findings or real-world outcome estimates."
       ],
+      "pressure_band_explanation": "critical_review_required is based on declared placeholder pressure, pressure_basis=unresolved_legal_treatment, capped text modifiers, linked avoidance flags, and sector stress display status. It is not a behavioural probability.",
+      "pressure_basis": "unresolved_legal_treatment",
       "response_pressure_band": "critical_review_required",
-      "response_pressure_score": 0.93,
+      "response_pressure_score": 0.92,
       "response_type": "cloud_inference_relabelling",
       "review_status": "external_review_required",
       "scenario_id": "cloud_inference_operating_cost_relabelling",
       "scenario_name": "Cloud / inference relabelling as ordinary operating cost",
       "sector_schedule_id": "software_digital_platforms",
       "warnings": [
-        "Synthetic pathway only; do not treat as behavioural prediction.",
+        "Synthetic pathway only; do not treat as a conduct forecast.",
         "Do not use this result for taxpayer-level scoring or compliance action.",
         "Base pressure comes from declared placeholder pressure `high`.",
+        "Pressure basis `unresolved_legal_treatment` adjusts placeholder pressure by +0.08.",
         "cloud or inference relabelling wording adds review pressure",
-        "Linked avoidance flags add 0.10 placeholder review pressure.",
+        "Text modifiers are capped at 0.08 to avoid double-counting related pathway wording.",
+        "Linked avoidance flags add 0.06 placeholder review pressure.",
         "Sector stress matrix external-review status adds placeholder review pressure."
       ]
     },
@@ -252,19 +259,23 @@
         "All response scenarios are synthetic placeholders requiring external calibration, legal review, ATO/Treasury methods review, and behavioural research.",
         "Scenario pressure bands are review prompts only, not compliance findings or real-world outcome estimates."
       ],
+      "pressure_band_explanation": "high_placeholder_response_pressure is based on declared placeholder pressure, pressure_basis=single_pathway, capped text modifiers, linked avoidance flags, and sector stress display status. It is not a behavioural probability.",
+      "pressure_basis": "single_pathway",
       "response_pressure_band": "high_placeholder_response_pressure",
-      "response_pressure_score": 0.68,
+      "response_pressure_score": 0.51,
       "response_type": "customer_self_service_shift",
       "review_status": "strong_warning_required",
       "scenario_id": "customer_self_checkout_labour_relabelling",
       "scenario_name": "Customer self-checkout labour relabelling",
       "sector_schedule_id": "retail_self_checkout_fulfilment",
       "warnings": [
-        "Synthetic pathway only; do not treat as behavioural prediction.",
+        "Synthetic pathway only; do not treat as a conduct forecast.",
         "Do not use this result for taxpayer-level scoring or compliance action.",
         "Base pressure comes from declared placeholder pressure `moderate`.",
+        "Pressure basis `single_pathway` adjusts placeholder pressure by -0.10.",
         "customer self-service wording adds review pressure",
-        "Linked avoidance flags add 0.05 placeholder review pressure.",
+        "Text modifiers are capped at 0.08 to avoid double-counting related pathway wording.",
+        "Linked avoidance flags add 0.03 placeholder review pressure.",
         "Sector stress matrix external-review status adds placeholder review pressure."
       ]
     },
@@ -316,25 +327,28 @@
         "FAKE_QLC_INFLATION",
         "TOKEN_HUMAN_OVERSIGHT"
       ],
-      "main_reason": "critical_review_required from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `high`.",
+      "main_reason": "high_placeholder_response_pressure from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `high`.",
       "non_claims": [
         "Behavioural response simulation is prototype-only deterministic placeholder scenario review. It does not predict taxpayer behaviour. It does not estimate behavioural elasticity. It is not ATO audit logic, Treasury modelling, ABS/ATO/DSS/PBO analysis, economic validation, compliance-risk scoring, legal advice, tax advice, or investment advice. It does not estimate actual tax payable, modify firm-level CARSF liability, implement penalties, or implement enforcement.",
         "The simulation does not use firm-level, taxpayer-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data.",
         "All response scenarios are synthetic placeholders requiring external calibration, legal review, ATO/Treasury methods review, and behavioural research.",
         "Scenario pressure bands are review prompts only, not compliance findings or real-world outcome estimates."
       ],
-      "response_pressure_band": "critical_review_required",
-      "response_pressure_score": 0.85,
+      "pressure_band_explanation": "high_placeholder_response_pressure is based on declared placeholder pressure, pressure_basis=single_pathway, capped text modifiers, linked avoidance flags, and sector stress display status. It is not a behavioural probability.",
+      "pressure_basis": "single_pathway",
+      "response_pressure_band": "high_placeholder_response_pressure",
+      "response_pressure_score": 0.66,
       "response_type": "fake_qlc_inflation",
-      "review_status": "external_review_required",
+      "review_status": "strong_warning_required",
       "scenario_id": "fake_qlc_concentrated_roles",
       "scenario_name": "Fake QLC inflation through concentrated high-scored roles",
       "sector_schedule_id": "call_centres_customer_support",
       "warnings": [
-        "Synthetic pathway only; do not treat as behavioural prediction.",
+        "Synthetic pathway only; do not treat as a conduct forecast.",
         "Do not use this result for taxpayer-level scoring or compliance action.",
         "Base pressure comes from declared placeholder pressure `high`.",
-        "Linked avoidance flags add 0.10 placeholder review pressure.",
+        "Pressure basis `single_pathway` adjusts placeholder pressure by -0.10.",
+        "Linked avoidance flags add 0.06 placeholder review pressure.",
         "Sector stress matrix external-review status adds placeholder review pressure."
       ]
     },
@@ -404,26 +418,30 @@
       "linked_avoidance_flags": [
         "SECTOR_CLASSIFICATION_ARBITRAGE"
       ],
-      "main_reason": "critical_review_required from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `moderate`.",
+      "main_reason": "moderate_placeholder_response_pressure from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `low`.",
       "non_claims": [
         "Behavioural response simulation is prototype-only deterministic placeholder scenario review. It does not predict taxpayer behaviour. It does not estimate behavioural elasticity. It is not ATO audit logic, Treasury modelling, ABS/ATO/DSS/PBO analysis, economic validation, compliance-risk scoring, legal advice, tax advice, or investment advice. It does not estimate actual tax payable, modify firm-level CARSF liability, implement penalties, or implement enforcement.",
         "The simulation does not use firm-level, taxpayer-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data.",
         "All response scenarios are synthetic placeholders requiring external calibration, legal review, ATO/Treasury methods review, and behavioural research.",
         "Scenario pressure bands are review prompts only, not compliance findings or real-world outcome estimates."
       ],
-      "response_pressure_band": "critical_review_required",
-      "response_pressure_score": 0.7,
+      "pressure_band_explanation": "moderate_placeholder_response_pressure is based on declared placeholder pressure, pressure_basis=multi_pathway, capped text modifiers, linked avoidance flags, and sector stress display status. It is not a behavioural probability.",
+      "pressure_basis": "multi_pathway",
+      "response_pressure_band": "moderate_placeholder_response_pressure",
+      "response_pressure_score": 0.38,
       "response_type": "mixed_unit_apportionment_gaming",
-      "review_status": "external_review_required",
+      "review_status": "show_with_warning",
       "scenario_id": "mixed_unit_apportionment_gaming",
       "scenario_name": "Mixed-unit apportionment gaming",
       "sector_schedule_id": "logistics_warehousing",
       "warnings": [
-        "Synthetic pathway only; do not treat as behavioural prediction.",
+        "Synthetic pathway only; do not treat as a conduct forecast.",
         "Do not use this result for taxpayer-level scoring or compliance action.",
-        "Base pressure comes from declared placeholder pressure `moderate`.",
+        "Base pressure comes from declared placeholder pressure `low`.",
+        "Pressure basis `multi_pathway` adds no standalone modifier.",
         "unresolved software, intangible, or AASB 138 wording adds review pressure",
-        "Linked avoidance flags add 0.05 placeholder review pressure.",
+        "Text modifiers are capped at 0.10 to avoid double-counting related pathway wording.",
+        "Linked avoidance flags add 0.03 placeholder review pressure.",
         "Sector stress matrix external-review status adds placeholder review pressure."
       ]
     },
@@ -503,6 +521,8 @@
         "All response scenarios are synthetic placeholders requiring external calibration, legal review, ATO/Treasury methods review, and behavioural research.",
         "Scenario pressure bands are review prompts only, not compliance findings or real-world outcome estimates."
       ],
+      "pressure_band_explanation": "critical_review_required is based on declared placeholder pressure, pressure_basis=cross_border, capped text modifiers, linked avoidance flags, and sector stress display status. It is not a behavioural probability.",
+      "pressure_basis": "cross_border",
       "response_pressure_band": "critical_review_required",
       "response_pressure_score": 1.0,
       "response_type": "offshore_automation_service_routing",
@@ -511,12 +531,14 @@
       "scenario_name": "Offshore automation-as-a-service routing",
       "sector_schedule_id": "logistics_warehousing",
       "warnings": [
-        "Synthetic pathway only; do not treat as behavioural prediction.",
+        "Synthetic pathway only; do not treat as a conduct forecast.",
         "Do not use this result for taxpayer-level scoring or compliance action.",
         "Base pressure comes from declared placeholder pressure `high`.",
+        "Pressure basis `cross_border` adjusts placeholder pressure by +0.05.",
         "offshore routing wording adds review pressure",
         "unresolved software, intangible, or AASB 138 wording adds review pressure",
-        "Linked avoidance flags add 0.10 placeholder review pressure.",
+        "Text modifiers are capped at 0.20 to avoid double-counting related pathway wording.",
+        "Linked avoidance flags add 0.06 placeholder review pressure.",
         "Sector stress matrix external-review status adds placeholder review pressure."
       ]
     },
@@ -596,19 +618,23 @@
         "All response scenarios are synthetic placeholders requiring external calibration, legal review, ATO/Treasury methods review, and behavioural research.",
         "Scenario pressure bands are review prompts only, not compliance findings or real-world outcome estimates."
       ],
-      "response_pressure_band": "critical_review_required",
-      "response_pressure_score": 0.7,
+      "pressure_band_explanation": "high_placeholder_response_pressure is based on declared placeholder pressure, pressure_basis=calibration_suppressed, capped text modifiers, linked avoidance flags, and sector stress display status. It is not a behavioural probability.",
+      "pressure_basis": "calibration_suppressed",
+      "response_pressure_band": "high_placeholder_response_pressure",
+      "response_pressure_score": 0.63,
       "response_type": "open_source_ai_treatment_gap",
       "review_status": "suppress_until_calibrated",
       "scenario_id": "open_source_ai_treatment_gap",
       "scenario_name": "Open-source AI treatment gap",
       "sector_schedule_id": "software_digital_platforms",
       "warnings": [
-        "Synthetic pathway only; do not treat as behavioural prediction.",
+        "Synthetic pathway only; do not treat as a conduct forecast.",
         "Do not use this result for taxpayer-level scoring or compliance action.",
         "Base pressure comes from declared placeholder pressure `moderate`.",
+        "Pressure basis `calibration_suppressed` adds no standalone modifier.",
         "unresolved software, intangible, or AASB 138 wording adds review pressure",
-        "Linked avoidance flags add 0.05 placeholder review pressure.",
+        "Text modifiers are capped at 0.10 to avoid double-counting related pathway wording.",
+        "Linked avoidance flags add 0.03 placeholder review pressure.",
         "Sector stress matrix external-review status adds placeholder review pressure."
       ]
     },
@@ -707,6 +733,8 @@
         "All response scenarios are synthetic placeholders requiring external calibration, legal review, ATO/Treasury methods review, and behavioural research.",
         "Scenario pressure bands are review prompts only, not compliance findings or real-world outcome estimates."
       ],
+      "pressure_band_explanation": "critical_review_required is based on declared placeholder pressure, pressure_basis=unresolved_legal_treatment, capped text modifiers, linked avoidance flags, and sector stress display status. It is not a behavioural probability.",
+      "pressure_basis": "unresolved_legal_treatment",
       "response_pressure_band": "critical_review_required",
       "response_pressure_score": 1.0,
       "response_type": "platform_ip_royalty_routing",
@@ -715,13 +743,15 @@
       "scenario_name": "Platform IP royalty routing",
       "sector_schedule_id": "software_digital_platforms",
       "warnings": [
-        "Synthetic pathway only; do not treat as behavioural prediction.",
+        "Synthetic pathway only; do not treat as a conduct forecast.",
         "Do not use this result for taxpayer-level scoring or compliance action.",
         "Base pressure comes from declared placeholder pressure `critical`.",
+        "Pressure basis `unresolved_legal_treatment` adjusts placeholder pressure by +0.08.",
         "offshore routing wording adds review pressure",
         "IP or royalty routing wording adds review pressure",
         "unresolved software, intangible, or AASB 138 wording adds review pressure",
-        "Linked avoidance flags add 0.15 placeholder review pressure.",
+        "Text modifiers are capped at 0.20 to avoid double-counting related pathway wording.",
+        "Linked avoidance flags add 0.09 placeholder review pressure.",
         "Sector stress matrix external-review status adds placeholder review pressure."
       ]
     },
@@ -799,19 +829,23 @@
         "All response scenarios are synthetic placeholders requiring external calibration, legal review, ATO/Treasury methods review, and behavioural research.",
         "Scenario pressure bands are review prompts only, not compliance findings or real-world outcome estimates."
       ],
+      "pressure_band_explanation": "critical_review_required is based on declared placeholder pressure, pressure_basis=multi_pathway, capped text modifiers, linked avoidance flags, and sector stress display status. It is not a behavioural probability.",
+      "pressure_basis": "multi_pathway",
       "response_pressure_band": "critical_review_required",
-      "response_pressure_score": 0.95,
+      "response_pressure_score": 0.86,
       "response_type": "related_party_ai_service_fees",
       "review_status": "external_review_required",
       "scenario_id": "related_party_ai_service_fee_routing",
       "scenario_name": "Related-party AI service fee routing",
       "sector_schedule_id": "accounting_administration",
       "warnings": [
-        "Synthetic pathway only; do not treat as behavioural prediction.",
+        "Synthetic pathway only; do not treat as a conduct forecast.",
         "Do not use this result for taxpayer-level scoring or compliance action.",
         "Base pressure comes from declared placeholder pressure `high`.",
+        "Pressure basis `multi_pathway` adds no standalone modifier.",
         "related-party fee wording adds review pressure",
-        "Linked avoidance flags add 0.10 placeholder review pressure.",
+        "Text modifiers are capped at 0.10 to avoid double-counting related pathway wording.",
+        "Linked avoidance flags add 0.06 placeholder review pressure.",
         "Sector stress matrix external-review status adds placeholder review pressure."
       ]
     },
@@ -881,26 +915,30 @@
       "linked_avoidance_flags": [
         "ROBOTICS_LEASING_AVOIDANCE"
       ],
-      "main_reason": "high_placeholder_response_pressure from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `moderate`.",
+      "main_reason": "moderate_placeholder_response_pressure from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `low`.",
       "non_claims": [
         "Behavioural response simulation is prototype-only deterministic placeholder scenario review. It does not predict taxpayer behaviour. It does not estimate behavioural elasticity. It is not ATO audit logic, Treasury modelling, ABS/ATO/DSS/PBO analysis, economic validation, compliance-risk scoring, legal advice, tax advice, or investment advice. It does not estimate actual tax payable, modify firm-level CARSF liability, implement penalties, or implement enforcement.",
         "The simulation does not use firm-level, taxpayer-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data.",
         "All response scenarios are synthetic placeholders requiring external calibration, legal review, ATO/Treasury methods review, and behavioural research.",
         "Scenario pressure bands are review prompts only, not compliance findings or real-world outcome estimates."
       ],
-      "response_pressure_band": "high_placeholder_response_pressure",
-      "response_pressure_score": 0.63,
+      "pressure_band_explanation": "moderate_placeholder_response_pressure is based on declared placeholder pressure, pressure_basis=multi_pathway, capped text modifiers, linked avoidance flags, and sector stress display status. It is not a behavioural probability.",
+      "pressure_basis": "multi_pathway",
+      "response_pressure_band": "moderate_placeholder_response_pressure",
+      "response_pressure_score": 0.34,
       "response_type": "robotics_leasing_shift",
-      "review_status": "strong_warning_required",
+      "review_status": "show_with_warning",
       "scenario_id": "robotics_lease_substitution",
       "scenario_name": "Robotics lease substitution for capital ownership",
       "sector_schedule_id": "automotive_repair",
       "warnings": [
-        "Synthetic pathway only; do not treat as behavioural prediction.",
+        "Synthetic pathway only; do not treat as a conduct forecast.",
         "Do not use this result for taxpayer-level scoring or compliance action.",
-        "Base pressure comes from declared placeholder pressure `moderate`.",
+        "Base pressure comes from declared placeholder pressure `low`.",
+        "Pressure basis `multi_pathway` adds no standalone modifier.",
         "robotics leasing wording adds review pressure",
-        "Linked avoidance flags add 0.05 placeholder review pressure.",
+        "Text modifiers are capped at 0.08 to avoid double-counting related pathway wording.",
+        "Linked avoidance flags add 0.03 placeholder review pressure.",
         "Sector stress matrix strong-warning status adds placeholder review pressure."
       ]
     },
@@ -953,27 +991,31 @@
       "linked_avoidance_flags": [
         "SECTOR_CLASSIFICATION_ARBITRAGE"
       ],
-      "main_reason": "critical_review_required from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `high`.",
+      "main_reason": "critical_review_required from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `moderate`.",
       "non_claims": [
         "Behavioural response simulation is prototype-only deterministic placeholder scenario review. It does not predict taxpayer behaviour. It does not estimate behavioural elasticity. It is not ATO audit logic, Treasury modelling, ABS/ATO/DSS/PBO analysis, economic validation, compliance-risk scoring, legal advice, tax advice, or investment advice. It does not estimate actual tax payable, modify firm-level CARSF liability, implement penalties, or implement enforcement.",
         "The simulation does not use firm-level, taxpayer-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data.",
         "All response scenarios are synthetic placeholders requiring external calibration, legal review, ATO/Treasury methods review, and behavioural research.",
         "Scenario pressure bands are review prompts only, not compliance findings or real-world outcome estimates."
       ],
+      "pressure_band_explanation": "critical_review_required is based on declared placeholder pressure, pressure_basis=multi_pathway, capped text modifiers, linked avoidance flags, and sector stress display status. It is not a behavioural probability.",
+      "pressure_basis": "multi_pathway",
       "response_pressure_band": "critical_review_required",
-      "response_pressure_score": 0.98,
+      "response_pressure_score": 0.71,
       "response_type": "schedule_classification_arbitrage",
       "review_status": "external_review_required",
       "scenario_id": "schedule_classification_arbitrage",
       "scenario_name": "Schedule classification arbitrage",
       "sector_schedule_id": "retail_self_checkout_fulfilment",
       "warnings": [
-        "Synthetic pathway only; do not treat as behavioural prediction.",
+        "Synthetic pathway only; do not treat as a conduct forecast.",
         "Do not use this result for taxpayer-level scoring or compliance action.",
-        "Base pressure comes from declared placeholder pressure `high`.",
+        "Base pressure comes from declared placeholder pressure `moderate`.",
+        "Pressure basis `multi_pathway` adds no standalone modifier.",
         "schedule classification wording adds review pressure",
         "unresolved software, intangible, or AASB 138 wording adds review pressure",
-        "Linked avoidance flags add 0.05 placeholder review pressure.",
+        "Text modifiers are capped at 0.18 to avoid double-counting related pathway wording.",
+        "Linked avoidance flags add 0.03 placeholder review pressure.",
         "Sector stress matrix external-review status adds placeholder review pressure."
       ]
     },
@@ -1044,25 +1086,28 @@
         "FAKE_QLC_INFLATION",
         "TOKEN_HUMAN_OVERSIGHT"
       ],
-      "main_reason": "critical_review_required from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `high`.",
+      "main_reason": "high_placeholder_response_pressure from deterministic placeholder scoring; Base pressure comes from declared placeholder pressure `high`.",
       "non_claims": [
         "Behavioural response simulation is prototype-only deterministic placeholder scenario review. It does not predict taxpayer behaviour. It does not estimate behavioural elasticity. It is not ATO audit logic, Treasury modelling, ABS/ATO/DSS/PBO analysis, economic validation, compliance-risk scoring, legal advice, tax advice, or investment advice. It does not estimate actual tax payable, modify firm-level CARSF liability, implement penalties, or implement enforcement.",
         "The simulation does not use firm-level, taxpayer-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data.",
         "All response scenarios are synthetic placeholders requiring external calibration, legal review, ATO/Treasury methods review, and behavioural research.",
         "Scenario pressure bands are review prompts only, not compliance findings or real-world outcome estimates."
       ],
-      "response_pressure_band": "critical_review_required",
-      "response_pressure_score": 0.85,
+      "pressure_band_explanation": "high_placeholder_response_pressure is based on declared placeholder pressure, pressure_basis=single_pathway, capped text modifiers, linked avoidance flags, and sector stress display status. It is not a behavioural probability.",
+      "pressure_basis": "single_pathway",
+      "response_pressure_band": "high_placeholder_response_pressure",
+      "response_pressure_score": 0.66,
       "response_type": "token_human_oversight",
-      "review_status": "external_review_required",
+      "review_status": "strong_warning_required",
       "scenario_id": "token_oversight_workforce_wrapper",
       "scenario_name": "Token oversight workforce wrapper",
       "sector_schedule_id": "call_centres_customer_support",
       "warnings": [
-        "Synthetic pathway only; do not treat as behavioural prediction.",
+        "Synthetic pathway only; do not treat as a conduct forecast.",
         "Do not use this result for taxpayer-level scoring or compliance action.",
         "Base pressure comes from declared placeholder pressure `high`.",
-        "Linked avoidance flags add 0.10 placeholder review pressure.",
+        "Pressure basis `single_pathway` adjusts placeholder pressure by -0.10.",
+        "Linked avoidance flags add 0.06 placeholder review pressure.",
         "Sector stress matrix external-review status adds placeholder review pressure."
       ]
     }
@@ -1071,7 +1116,7 @@
     "behavioural_prediction_created": false,
     "compliance_scoring_created": false,
     "firm_level_liability_logic_modified": false,
-    "generated_at": "2026-05-17T06:44:05+00:00",
+    "generated_at": "2026-05-17T22:52:44+00:00",
     "non_claims": [
       "Behavioural response simulation is prototype-only deterministic placeholder scenario review. It does not predict taxpayer behaviour. It does not estimate behavioural elasticity. It is not ATO audit logic, Treasury modelling, ABS/ATO/DSS/PBO analysis, economic validation, compliance-risk scoring, legal advice, tax advice, or investment advice. It does not estimate actual tax payable, modify firm-level CARSF liability, implement penalties, or implement enforcement.",
       "The simulation does not use firm-level, taxpayer-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data.",
@@ -1112,8 +1157,9 @@
       "Scenario pressure bands are review prompts only, not compliance findings or real-world outcome estimates."
     ],
     "scenarios_by_pressure_band": {
-      "critical_review_required": 10,
-      "high_placeholder_response_pressure": 2
+      "critical_review_required": 6,
+      "high_placeholder_response_pressure": 4,
+      "moderate_placeholder_response_pressure": 2
     },
     "scenarios_by_response_type": {
       "artificial_low_profit_or_aava": 1,
@@ -1130,8 +1176,9 @@
       "token_human_oversight": 1
     },
     "scenarios_by_review_status": {
-      "external_review_required": 9,
-      "strong_warning_required": 2,
+      "external_review_required": 6,
+      "show_with_warning": 2,
+      "strong_warning_required": 3,
       "suppress_until_calibrated": 1
     },
     "scenarios_requiring_aava_deductibility_review": 4,
@@ -1146,7 +1193,7 @@
     "total_scenarios": 12,
     "warnings": [
       "Summary counts are deterministic placeholder review counts only.",
-      "Counts are not behavioural predictions, compliance scores, or enforcement priorities."
+      "Counts are not conduct forecasts, compliance scores, or enforcement priorities."
     ]
   }
 }
