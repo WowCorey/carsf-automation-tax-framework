@@ -18,3 +18,9 @@ This folder gives external reviewers discipline-specific prompts for attacking t
 - Policy, technical, legal, tax, ATO methods, Treasury methods, privacy/secrecy, statistical, economic, welfare, Parliamentary Counsel, and hostile/red-team attack files.
 - Report and layer attack matrices.
 - Cross-cutting boundary checks.
+
+## Build 26 Real-Data Feasibility Attack Note
+
+Reviewers should attack `reports/real_data_feasibility.md` for public-source licensing gaps, aggregate-only handling, restricted-data exclusion, realistic-placeholder labelling, forbidden repo data rules, and Build 27 pilot readiness.
+
+This does not mean real data has been loaded, calibration has occurred, validation has occurred, approval has been granted, or firm-level CARSF liability has changed.

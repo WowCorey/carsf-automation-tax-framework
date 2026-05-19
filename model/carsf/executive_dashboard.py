@@ -48,6 +48,7 @@ REQUIRED_LAYER_IDS = {
     "uncertainty_ranges",
     "reviewed_scenarios",
     "calibration_shell",
+    "real_data_feasibility",
     "working_paper",
     "status_risks_docs",
 }
@@ -91,6 +92,8 @@ REQUIRED_REPORT_PATHS = {
     "reports/legislative_architecture.json",
     "reports/calibration_requirements.md",
     "reports/calibration_requirements.json",
+    "reports/real_data_feasibility.md",
+    "reports/real_data_feasibility.json",
 }
 
 FORBIDDEN_AFFIRMATIVE_DASHBOARD_CLAIMS = [

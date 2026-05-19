@@ -14,6 +14,10 @@ The generated attack-pack report builds the report-by-report matrix from the V1.
 - Report says what it must not be used for.
 - Report links to calibration or external-review blockers.
 
+## Build 26 Addition
+
+`reports/real_data_feasibility.md` and `reports/real_data_feasibility.json` are attack targets for the real-data feasibility and calibration-intake map. Attack them for public-source overread, restricted-data boundary failure, realistic-placeholder labelling failure, forbidden repo data gaps, and any wording that could imply real data was loaded or calibration occurred.
+
 ## What Not To Infer
 
 The matrix is not validation, not approval, not a readiness metric, and not government endorsement.

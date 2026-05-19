@@ -36,6 +36,11 @@ It does not determine actual tax payable, does not use taxpayer-level, firm-leve
 - No real industry data.
 - No ABS / ATO / DSS / Treasury / PBO / HILDA / Census data.
 - No firm-level liability modification.
+- No Build 26 real-data loading.
+- No Build 26 calibration.
+- Public-data candidates are not loaded datasets.
+- Restricted-data requirements are not data access.
+- Realistic placeholders are not real data and are not calibrated.
 
 ## Interpretation Rule
 
@@ -46,3 +51,5 @@ If a report, example, scenario, schedule, workflow, or document appears to imply
 The final RC integrity seal is an internal artefact check only. It verifies release documents, attack-pack documents, generated reports, manifests, scripts, digest metadata, non-claim boundaries, guardrail status expectations, CI expectations, and false readiness/legal/validation flags.
 
 It does not mean approval, validation, external review completion, operational readiness, legal sufficiency, legislative readiness, official status, implementation readiness, or firm-level CARSF liability modification.
+
+Build 25 sealed the previous RC state. Build 26 adds feasibility artefacts after that seal; a later sealed RC must regenerate the integrity seal if Build 26 is included.

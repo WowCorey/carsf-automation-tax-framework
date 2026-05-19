@@ -48,3 +48,11 @@ It does not mean external review has been completed. It does not mean approval h
 The final RC integrity seal under `release/v1_5_rc/` verifies release documents, attack-pack documents, generated reports, required manifests, required scripts, digest metadata, non-claim boundaries, forbidden affirmative claim scanning, repo guardrail status expectations, CI expectations, and false readiness/legal/validation flags.
 
 It is an internal integrity seal only. It is not approval, not validation, not external review completion, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not a maturity score, not official status, and not an official review pathway. It does not determine actual tax payable, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability.
+
+## Build 26 Real-Data Feasibility Addendum
+
+Build 26 adds a real-data feasibility and calibration-intake map that identifies public aggregate data candidates, restricted-data requirements, realistic placeholders, forbidden repo data, module data needs, and Build 27 pilot candidates.
+
+No real data has been loaded by Build 26. No calibration has occurred. Realistic placeholders are not real data and are not calibrated. Public-data candidates are not loaded datasets. Restricted-data requirements are not data access. This is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, not official status, and does not determine actual tax payable or modify firm-level CARSF liability.
+
+Build 25 sealed the previous RC state. If Build 26 is included in a later sealed RC, the final RC integrity seal must be regenerated for that later state rather than described as already covering these feasibility artefacts.

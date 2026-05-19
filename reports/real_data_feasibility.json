@@ -1,0 +1,3342 @@
+{
+  "metadata": {
+    "approval_claimed": false,
+    "firm_level_confidential_data_loaded": false,
+    "firm_level_liability_logic_modified": false,
+    "generated_at": "2026-05-19T00:03:08+00:00",
+    "household_microdata_loaded": false,
+    "legal_sufficiency_claimed": false,
+    "non_claims": [
+      "This is a feasibility and calibration-intake map only. No real data has been loaded by this build, no calibration has occurred, realistic placeholders are not real data and are not calibrated, public-data candidates are not loaded datasets, and restricted-data requirements are not data access. It is not legal advice, tax advice, ATO guidance, Treasury modelling, economic validation, welfare validation, statistical validation, operational readiness, legal sufficiency, official status, and does not determine actual tax payable. It does not use taxpayer-level, firm-level confidential, household microdata, ABS DataLab, HILDA microdata, DSS/Services Australia records, ATO records, Treasury/PBO confidential material, or restricted government data, and does not modify firm-level CARSF liability.",
+      "The map only separates public-data candidates, restricted-data requirements, realistic placeholders, synthetic fixtures, forbidden repo data, and public-data pilot readiness.",
+      "Build 26 performs feasibility mapping only; any future public-data pilot must keep loaded public aggregates separate from placeholders and restricted-data needs."
+    ],
+    "official_status_claimed": false,
+    "operational_readiness_claimed": false,
+    "real_calibration_completed": false,
+    "real_data_loaded": false,
+    "restricted_data_loaded": false,
+    "status": "prototype_real_data_feasibility_calibration_intake_map_only",
+    "taxpayer_data_loaded": false,
+    "validation_claimed": false,
+    "version": "CARSF V1.5 prototype"
+  },
+  "real_data_feasibility": {
+    "access_class_taxonomy": [
+      "public_open",
+      "public_manual_download",
+      "public_api_available",
+      "licence_required",
+      "restricted_research_access",
+      "government_internal_only",
+      "confidential_or_prohibited",
+      "unknown"
+    ],
+    "calibration_fields": [
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "ato_corporate_tax_transparency",
+          "public_company_reports"
+        ],
+        "current_status": "external_review_required",
+        "field_id": "aava_deductibility_treatment",
+        "field_name": "AAVA deductibility treatment",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "legal and tax review",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "restricted_data_required",
+        "required_review_tracks": [
+          "legal_reviewer",
+          "tax_reviewer",
+          "ato_methods_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": [
+          "ato_taxpayer_records"
+        ]
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": false,
+        "candidate_sources": [
+          "ato_taxation_statistics"
+        ],
+        "current_status": "synthetic_fixture",
+        "field_id": "administrative_workflow_routing",
+        "field_name": "Administrative workflow routing",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "synthetic workflow only",
+        "realistic_placeholder_allowed": false,
+        "required_data_status": "external_review_required",
+        "required_review_tracks": [
+          "ato_methods_reviewer",
+          "legal_reviewer",
+          "privacy_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": [
+          "ato_taxpayer_records"
+        ]
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "treasury_budget_papers",
+          "pbo_public_costings"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "ael_arl_rate_settings",
+        "field_name": "AEL and ARL rate settings",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public fiscal aggregate context only",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "external_review_required",
+        "required_review_tracks": [
+          "treasury_methods_reviewer",
+          "economic_methods_reviewer",
+          "tax_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": []
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "industry_association_reports",
+          "public_company_reports"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "aii_component_weights",
+        "field_name": "AII component weights",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public qualitative component context only",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "external_review_required",
+        "required_review_tracks": [
+          "economic_methods_reviewer",
+          "statistical_methods_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": []
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": false,
+        "candidate_sources": [
+          "public_company_reports"
+        ],
+        "current_status": "synthetic_fixture",
+        "field_id": "anti_avoidance_thresholds",
+        "field_name": "Anti-avoidance thresholds",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "synthetic flags only until legal and behavioural review",
+        "realistic_placeholder_allowed": false,
+        "required_data_status": "external_review_required",
+        "required_review_tracks": [
+          "legal_reviewer",
+          "tax_reviewer",
+          "ato_methods_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": [
+          "ato_taxpayer_records"
+        ]
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": false,
+        "candidate_sources": [
+          "public_company_reports",
+          "industry_association_reports"
+        ],
+        "current_status": "synthetic_fixture",
+        "field_id": "behavioural_response_pressure_bands",
+        "field_name": "Behavioural response pressure bands",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "synthetic discussion pathways only",
+        "realistic_placeholder_allowed": false,
+        "required_data_status": "external_review_required",
+        "required_review_tracks": [
+          "behavioural_reviewer",
+          "tax_reviewer",
+          "legal_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": [
+          "ato_taxpayer_records"
+        ]
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "treasury_budget_papers",
+          "pbo_public_costings"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "cap_credit_settings",
+        "field_name": "cap and credit settings",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public fiscal context plus policy review",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "external_review_required",
+        "required_review_tracks": [
+          "treasury_methods_reviewer",
+          "policy_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": []
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "treasury_budget_papers",
+          "pbo_public_costings",
+          "ato_taxation_statistics"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "fiscal_trajectory_assumptions",
+        "field_name": "Fiscal trajectory assumptions",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public fiscal aggregate context",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "real_public_data_candidate",
+        "required_review_tracks": [
+          "treasury_methods_reviewer",
+          "economic_methods_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": []
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": false,
+        "candidate_sources": [
+          "public_company_reports"
+        ],
+        "current_status": "synthetic_fixture",
+        "field_id": "grouped_entity_attribution",
+        "field_name": "Grouped-entity attribution",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "synthetic grouped flags only",
+        "realistic_placeholder_allowed": false,
+        "required_data_status": "restricted_data_required",
+        "required_review_tracks": [
+          "tax_reviewer",
+          "legal_reviewer",
+          "ato_methods_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": [
+          "ato_taxpayer_records"
+        ]
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "abs_household_expenditure_income"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "gst_consumption_effects",
+        "field_name": "GST consumption effects",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public aggregate expenditure context",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "real_public_data_candidate",
+        "required_review_tracks": [
+          "treasury_methods_reviewer",
+          "welfare_policy_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": []
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "help_hecs_thresholds"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "help_hecs_repayment_pressure",
+        "field_name": "HELP HECS repayment pressure",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public threshold context",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "real_public_data_candidate",
+        "required_review_tracks": [
+          "welfare_policy_reviewer",
+          "legal_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": []
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "abs_labour_force",
+          "fair_work_awards"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "hle_assumptions",
+        "field_name": "HLE assumptions",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public labour and wage band context",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "real_public_data_candidate",
+        "required_review_tracks": [
+          "statistical_methods_reviewer",
+          "policy_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": []
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "abs_census_aggregates",
+          "abs_household_expenditure_income"
+        ],
+        "current_status": "synthetic_fixture",
+        "field_id": "household_distributional_scenario_assumptions",
+        "field_name": "Household distributional scenario assumptions",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public aggregate sanity check only",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "restricted_data_required",
+        "required_review_tracks": [
+          "statistical_methods_reviewer",
+          "welfare_policy_reviewer",
+          "privacy_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": [
+          "hilda_microdata",
+          "abs_datalab_microdata"
+        ]
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "abs_census_aggregates"
+        ],
+        "current_status": "synthetic_fixture",
+        "field_id": "household_weighting_assumptions",
+        "field_name": "Household weighting assumptions",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public aggregate comparison only",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "restricted_data_required",
+        "required_review_tracks": [
+          "statistical_methods_reviewer",
+          "privacy_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": [
+          "hilda_microdata",
+          "abs_datalab_microdata"
+        ]
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "public_company_reports",
+          "treasury_budget_papers",
+          "industry_association_reports"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "investment_incidence_assumptions",
+        "field_name": "Investment and incidence assumptions",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public aggregate and public document context only",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "external_review_required",
+        "required_review_tracks": [
+          "economic_methods_reviewer",
+          "treasury_methods_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": []
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "abs_industry_wages_hours",
+          "industry_association_reports"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "mixed_unit_weighting",
+        "field_name": "Mixed-unit weighting",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public industry category anchor",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "real_public_data_candidate",
+        "required_review_tracks": [
+          "statistical_methods_reviewer",
+          "policy_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": []
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "abs_labour_force",
+          "ato_taxation_statistics"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "nltg_labour_displacement_assumptions",
+        "field_name": "NLTG labour displacement assumptions",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public aggregate sanity check only",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "restricted_data_required",
+        "required_review_tracks": [
+          "treasury_methods_reviewer",
+          "ato_methods_reviewer",
+          "economic_methods_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": [
+          "ato_taxpayer_records"
+        ]
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "treasury_budget_papers",
+          "public_company_reports"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "normal_return_preservation_thresholds",
+        "field_name": "Normal return preservation thresholds",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public fiscal and public report context only",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "external_review_required",
+        "required_review_tracks": [
+          "economic_methods_reviewer",
+          "tax_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": []
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": false,
+        "candidate_sources": [
+          "public_company_reports"
+        ],
+        "current_status": "synthetic_fixture",
+        "field_id": "offshore_ai_service_attribution",
+        "field_name": "Offshore AI service attribution",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "synthetic preview only",
+        "realistic_placeholder_allowed": false,
+        "required_data_status": "restricted_data_required",
+        "required_review_tracks": [
+          "tax_reviewer",
+          "legal_reviewer",
+          "ato_methods_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": [
+          "ato_taxpayer_records"
+        ]
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "abs_labour_force",
+          "abs_industry_wages_hours",
+          "fair_work_awards",
+          "jobs_skills_labour_market"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "opfte_benchmarks",
+        "field_name": "OPFTE benchmarks",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public wage and hours aggregate anchor",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "real_public_data_candidate",
+        "required_review_tracks": [
+          "statistical_methods_reviewer",
+          "treasury_methods_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": []
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "abs_household_expenditure_income",
+          "industry_association_reports"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "pass_through_assumptions",
+        "field_name": "Pass-through assumptions",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public aggregate context only",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "external_review_required",
+        "required_review_tracks": [
+          "economic_methods_reviewer",
+          "welfare_policy_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": []
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "ato_taxation_statistics",
+          "abs_labour_force"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "payg_erosion_assumptions",
+        "field_name": "PAYG erosion assumptions",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public aggregate sanity check only",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "restricted_data_required",
+        "required_review_tracks": [
+          "tax_reviewer",
+          "treasury_methods_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": [
+          "ato_taxpayer_records"
+        ]
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "abs_industry_wages_hours",
+          "fair_work_awards"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "qlc_weights",
+        "field_name": "QLC weights",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public wage classification anchor plus policy review",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "external_review_required",
+        "required_review_tracks": [
+          "legal_reviewer",
+          "tax_reviewer",
+          "treasury_methods_reviewer",
+          "ato_methods_reviewer",
+          "statistical_methods_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": []
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": false,
+        "candidate_sources": [
+          "abs_census_aggregates",
+          "treasury_budget_papers"
+        ],
+        "current_status": "synthetic_fixture",
+        "field_id": "reviewed_scenario_display_control_thresholds",
+        "field_name": "Reviewed scenario display-control thresholds",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "policy review only",
+        "realistic_placeholder_allowed": false,
+        "required_data_status": "external_review_required",
+        "required_review_tracks": [
+          "policy_reviewer",
+          "statistical_methods_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": []
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "fair_work_awards",
+          "treasury_budget_papers"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "safe_harbour_thresholds",
+        "field_name": "Safe-harbour thresholds",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public threshold context plus legal review",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "external_review_required",
+        "required_review_tracks": [
+          "legal_reviewer",
+          "tax_reviewer",
+          "policy_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": []
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "abs_industry_wages_hours",
+          "jobs_skills_labour_market",
+          "industry_association_reports"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "sector_schedule_values",
+        "field_name": "Sector schedule values",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public industry and labour aggregate context",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "real_public_data_candidate",
+        "required_review_tracks": [
+          "statistical_methods_reviewer",
+          "economic_methods_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": []
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "jobs_skills_labour_market",
+          "industry_association_reports"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "sector_stress_metadata_bands",
+        "field_name": "Sector stress metadata bands",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public category context only",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "external_review_required",
+        "required_review_tracks": [
+          "economic_methods_reviewer",
+          "statistical_methods_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": []
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "state_payroll_tax_thresholds"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "state_payroll_tax_pressure",
+        "field_name": "State payroll tax pressure",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public state threshold context",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "real_public_data_candidate",
+        "required_review_tracks": [
+          "tax_reviewer",
+          "treasury_methods_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": []
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "super_guarantee_settings",
+          "ato_taxation_statistics"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "superannuation_contribution_pressure",
+        "field_name": "Superannuation contribution pressure",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public setting and aggregate context",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "real_public_data_candidate",
+        "required_review_tracks": [
+          "tax_reviewer",
+          "welfare_policy_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": []
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": false,
+        "candidate_sources": [
+          "public_company_reports"
+        ],
+        "current_status": "synthetic_fixture",
+        "field_id": "transfer_pricing_review_shares",
+        "field_name": "Transfer-pricing review shares",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "synthetic review flags only",
+        "realistic_placeholder_allowed": false,
+        "required_data_status": "restricted_data_required",
+        "required_review_tracks": [
+          "tax_reviewer",
+          "ato_methods_reviewer",
+          "legal_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": [
+          "ato_taxpayer_records"
+        ]
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "treasury_budget_papers",
+          "pbo_public_costings"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "transition_payment_assumptions",
+        "field_name": "Transition payment assumptions",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public fiscal context only",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "restricted_data_required",
+        "required_review_tracks": [
+          "welfare_policy_reviewer",
+          "treasury_methods_reviewer",
+          "privacy_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": [
+          "dss_services_payment_data",
+          "services_australia_records"
+        ]
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "abs_census_aggregates",
+          "treasury_budget_papers"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "uncertainty_range_assumptions",
+        "field_name": "Uncertainty range assumptions",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public aggregate context only",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "restricted_data_required",
+        "required_review_tracks": [
+          "statistical_methods_reviewer",
+          "treasury_methods_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": [
+          "abs_datalab_microdata",
+          "hilda_microdata"
+        ]
+      },
+      {
+        "can_be_calibrated_from_public_data_only": false,
+        "can_be_publicly_sanity_checked": true,
+        "candidate_sources": [
+          "abs_household_expenditure_income",
+          "help_hecs_thresholds"
+        ],
+        "current_status": "realistic_placeholder",
+        "field_id": "welfare_payment_interaction_assumptions",
+        "field_name": "Welfare payment interaction assumptions",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_allowed": true,
+        "placeholder_basis_required": "public thresholds and aggregate context only",
+        "realistic_placeholder_allowed": true,
+        "required_data_status": "restricted_data_required",
+        "required_review_tracks": [
+          "welfare_policy_reviewer",
+          "privacy_reviewer",
+          "statistical_methods_reviewer"
+        ],
+        "requires_external_review": true,
+        "restricted_sources_needed": [
+          "dss_services_payment_data",
+          "services_australia_records",
+          "hilda_microdata"
+        ]
+      }
+    ],
+    "claim_level_taxonomy": [
+      "inventory_only",
+      "feasibility_only",
+      "sanity_check_only",
+      "placeholder_anchor_only",
+      "calibration_candidate_only",
+      "external_review_only",
+      "forbidden_for_model_use"
+    ],
+    "data_status_taxonomy": [
+      "real_public_data_candidate",
+      "real_public_data_loaded",
+      "restricted_data_required",
+      "realistic_placeholder",
+      "synthetic_fixture",
+      "forbidden_repo_data",
+      "not_collected",
+      "external_review_required"
+    ],
+    "external_review_routes": [
+      {
+        "main_reason": "Confirm Build 27 loading does not create legal",
+        "or tax advice issues.": null,
+        "privacy": null,
+        "review_track": "legal_reviewer",
+        "scope": [
+          "forbidden data",
+          "evidence boundaries",
+          "public source terms"
+        ]
+      },
+      {
+        "main_reason": "Prevent public tax tables being overread as real tax-payable support.",
+        "review_track": "tax_reviewer",
+        "scope": [
+          "AAVA",
+          "ATO public sources",
+          "payroll tax",
+          "transfer pricing"
+        ]
+      },
+      {
+        "main_reason": "Prevent public fiscal documents being overread as official costing.",
+        "review_track": "treasury_methods_reviewer",
+        "scope": [
+          "fiscal aggregates",
+          "Budget papers",
+          "PBO public material"
+        ]
+      },
+      {
+        "guidance": null,
+        "main_reason": "Keep ATO public data separate from ATO records",
+        "or audit methods.": null,
+        "review_track": "ato_methods_reviewer",
+        "scope": [
+          "ATO public aggregates",
+          "taxpayer-record boundary"
+        ]
+      },
+      {
+        "main_reason": "Ensure no person-level or restricted data enters the repository.",
+        "review_track": "privacy_reviewer",
+        "scope": [
+          "restricted data",
+          "forbidden repo data",
+          "household microdata"
+        ]
+      },
+      {
+        "main_reason": "Prevent public aggregates being overread as population estimates or confidence intervals.",
+        "review_track": "statistical_methods_reviewer",
+        "scope": [
+          "aggregate sanity checks",
+          "household weighting",
+          "uncertainty"
+        ]
+      }
+    ],
+    "forbidden_claims": [
+      "calibrated",
+      "calibration completed",
+      "real data loaded",
+      "public data proves",
+      "model works",
+      "tax model works",
+      "ready for government",
+      "ready for ATO",
+      "operationally ready",
+      "legally sufficient",
+      "official status",
+      "official policy",
+      "validated",
+      "externally validated",
+      "Treasury validated",
+      "ATO validated",
+      "economic validation complete",
+      "welfare validation complete",
+      "statistical validation complete",
+      "actual tax payable",
+      "real household estimate",
+      "population estimate",
+      "official sector ranking",
+      "compliance score",
+      "readiness score",
+      "approved"
+    ],
+    "forbidden_data_rules": [
+      {
+        "allowed_handling": "Do not commit; use public aggregates only",
+        "external_system_required_if_ever_authorised": true,
+        "forbidden_data_type": "ABS DataLab microdata",
+        "guardrail_expected": "default-deny sensitive scan",
+        "must_not_commit_to_repo": true,
+        "must_not_use_in_tests": true,
+        "non_claim": "No ABS DataLab microdata is used.",
+        "reason": "Restricted microdata must remain in authorised systems",
+        "rule_id": "fd_abs_datalab"
+      },
+      {
+        "allowed_handling": "External authorised environment only if ever approved",
+        "external_system_required_if_ever_authorised": true,
+        "forbidden_data_type": "DSS restricted records",
+        "guardrail_expected": "default-deny sensitive scan",
+        "must_not_commit_to_repo": true,
+        "must_not_use_in_tests": true,
+        "non_claim": "No DSS restricted records are used.",
+        "reason": "Restricted welfare records are prohibited",
+        "rule_id": "fd_dss_restricted"
+      },
+      {
+        "allowed_handling": "Use public aggregates only",
+        "external_system_required_if_ever_authorised": true,
+        "forbidden_data_type": "employee records",
+        "guardrail_expected": "default-deny sensitive scan",
+        "must_not_commit_to_repo": true,
+        "must_not_use_in_tests": true,
+        "non_claim": "No employee records are used.",
+        "reason": "Person-level employee records are prohibited",
+        "rule_id": "fd_employee_records"
+      },
+      {
+        "allowed_handling": "Use synthetic fixtures or public aggregates only",
+        "external_system_required_if_ever_authorised": true,
+        "forbidden_data_type": "firm-level confidential tax data",
+        "guardrail_expected": "default-deny sensitive scan",
+        "must_not_commit_to_repo": true,
+        "must_not_use_in_tests": true,
+        "non_claim": "No firm-level confidential tax data is used.",
+        "reason": "Confidential firm tax material is prohibited",
+        "rule_id": "fd_firm_confidential_tax"
+      },
+      {
+        "allowed_handling": "Do not commit; source-route only",
+        "external_system_required_if_ever_authorised": true,
+        "forbidden_data_type": "HILDA licensed microdata",
+        "guardrail_expected": "default-deny sensitive scan",
+        "must_not_commit_to_repo": true,
+        "must_not_use_in_tests": true,
+        "non_claim": "No HILDA microdata is used.",
+        "reason": "Licensed microdata cannot be placed in repo",
+        "rule_id": "fd_hilda_microdata"
+      },
+      {
+        "allowed_handling": "Do not collect or commit",
+        "external_system_required_if_ever_authorised": false,
+        "forbidden_data_type": "leaked documents",
+        "guardrail_expected": "default-deny sensitive scan",
+        "must_not_commit_to_repo": true,
+        "must_not_use_in_tests": true,
+        "non_claim": "No leaked documents are used.",
+        "reason": "Leaked material is prohibited",
+        "rule_id": "fd_leaked_documents"
+      },
+      {
+        "allowed_handling": "Use synthetic examples only",
+        "external_system_required_if_ever_authorised": true,
+        "forbidden_data_type": "payslips",
+        "guardrail_expected": "default-deny sensitive scan",
+        "must_not_commit_to_repo": true,
+        "must_not_use_in_tests": true,
+        "non_claim": "No payslips are used.",
+        "reason": "Private payroll documents are prohibited",
+        "rule_id": "fd_payslips"
+      },
+      {
+        "allowed_handling": "Public ABN context is not enough to commit private tax records",
+        "external_system_required_if_ever_authorised": true,
+        "forbidden_data_type": "ABNs tied to private unpublished tax material",
+        "guardrail_expected": "default-deny sensitive scan",
+        "must_not_commit_to_repo": true,
+        "must_not_use_in_tests": true,
+        "non_claim": "No private ABN-linked tax material is used.",
+        "reason": "Private tax material is prohibited",
+        "rule_id": "fd_private_abn_tax_material"
+      },
+      {
+        "allowed_handling": "Use public wage bands or synthetic fixtures",
+        "external_system_required_if_ever_authorised": true,
+        "forbidden_data_type": "private payroll records",
+        "guardrail_expected": "default-deny sensitive scan",
+        "must_not_commit_to_repo": true,
+        "must_not_use_in_tests": true,
+        "non_claim": "No private payroll records are used.",
+        "reason": "Payroll records are confidential",
+        "rule_id": "fd_private_payroll_records"
+      },
+      {
+        "allowed_handling": "Do not collect or commit",
+        "external_system_required_if_ever_authorised": true,
+        "forbidden_data_type": "raw bank records",
+        "guardrail_expected": "default-deny sensitive scan",
+        "must_not_commit_to_repo": true,
+        "must_not_use_in_tests": true,
+        "non_claim": "No raw bank records are used.",
+        "reason": "Private financial records are prohibited",
+        "rule_id": "fd_raw_bank_records"
+      },
+      {
+        "allowed_handling": "Use mock evidence packets only",
+        "external_system_required_if_ever_authorised": true,
+        "forbidden_data_type": "real evidence packets and redacted real evidence copies",
+        "guardrail_expected": "default-deny evidence boundary",
+        "must_not_commit_to_repo": true,
+        "must_not_use_in_tests": true,
+        "non_claim": "No real evidence packets or redacted real evidence copies are used.",
+        "reason": "Real evidence cannot enter prototype repo",
+        "rule_id": "fd_real_evidence_packets"
+      },
+      {
+        "allowed_handling": "Do not scrape or commit",
+        "external_system_required_if_ever_authorised": true,
+        "forbidden_data_type": "scraped personal data",
+        "guardrail_expected": "default-deny sensitive scan",
+        "must_not_commit_to_repo": true,
+        "must_not_use_in_tests": true,
+        "non_claim": "No scraped personal data is used.",
+        "reason": "Unauthorised scraped personal data is prohibited",
+        "rule_id": "fd_scraped_personal"
+      },
+      {
+        "allowed_handling": "Do not collect or commit",
+        "external_system_required_if_ever_authorised": true,
+        "forbidden_data_type": "medical or sensitive personal information",
+        "guardrail_expected": "default-deny sensitive scan",
+        "must_not_commit_to_repo": true,
+        "must_not_use_in_tests": true,
+        "non_claim": "No medical or sensitive personal information is used.",
+        "reason": "Sensitive personal information is prohibited",
+        "rule_id": "fd_sensitive_personal"
+      },
+      {
+        "allowed_handling": "Do not collect or commit",
+        "external_system_required_if_ever_authorised": true,
+        "forbidden_data_type": "Services Australia person-level records",
+        "guardrail_expected": "default-deny sensitive scan",
+        "must_not_commit_to_repo": true,
+        "must_not_use_in_tests": true,
+        "non_claim": "No Services Australia person-level records are used.",
+        "reason": "Person-level administrative records are prohibited",
+        "rule_id": "fd_services_person_records"
+      },
+      {
+        "allowed_handling": "Do not collect or commit; external authorised system required if ever approved",
+        "external_system_required_if_ever_authorised": true,
+        "forbidden_data_type": "taxpayer-level ATO data",
+        "guardrail_expected": "default-deny sensitive scan",
+        "must_not_commit_to_repo": true,
+        "must_not_use_in_tests": true,
+        "non_claim": "No ATO taxpayer records are used.",
+        "reason": "Confidential taxpayer material is prohibited in repo",
+        "rule_id": "fd_taxpayer_ato_data"
+      },
+      {
+        "allowed_handling": "Do not collect or commit",
+        "external_system_required_if_ever_authorised": true,
+        "forbidden_data_type": "TFNs",
+        "guardrail_expected": "default-deny sensitive scan",
+        "must_not_commit_to_repo": true,
+        "must_not_use_in_tests": true,
+        "non_claim": "No TFNs are used.",
+        "reason": "Tax file numbers are prohibited identifiers",
+        "rule_id": "fd_tfns"
+      },
+      {
+        "allowed_handling": "Do not collect or commit",
+        "external_system_required_if_ever_authorised": false,
+        "forbidden_data_type": "unauthorised government records",
+        "guardrail_expected": "default-deny sensitive scan",
+        "must_not_commit_to_repo": true,
+        "must_not_use_in_tests": true,
+        "non_claim": "No unauthorised government records are used.",
+        "reason": "Unauthorised records are prohibited",
+        "rule_id": "fd_unauthorised_government_records"
+      }
+    ],
+    "map_id": "carsf_v1_5_real_data_feasibility_calibration_intake_map",
+    "map_name": "CARSF V1.5 Real Data Feasibility and Calibration Intake Map",
+    "module_data_needs": [
+      {
+        "calibration_possible_now": false,
+        "can_only_use_synthetic_data": true,
+        "can_use_public_aggregate_data": false,
+        "candidate_public_sources": [
+          "ato_taxation_statistics"
+        ],
+        "current_data_status": "synthetic_fixture",
+        "forbidden_data_types": [
+          "ATO taxpayer records",
+          "real evidence packets"
+        ],
+        "main_blockers": [
+          "ATO methods and legal review"
+        ],
+        "module_id": "administrative_workflow",
+        "module_name": "Administrative workflow",
+        "must_not_claim": [
+          "ATO guidance",
+          "enforcement",
+          "calibration completed"
+        ],
+        "realistic_placeholder_fields": [
+          "administrative_workflow_routing"
+        ],
+        "required_restricted_sources": [
+          "ato_taxpayer_records"
+        ],
+        "requires_restricted_data_for_calibration": true,
+        "sanity_check_possible": false
+      },
+      {
+        "calibration_possible_now": false,
+        "can_only_use_synthetic_data": true,
+        "can_use_public_aggregate_data": false,
+        "candidate_public_sources": [
+          "public_company_reports",
+          "industry_association_reports"
+        ],
+        "current_data_status": "synthetic_fixture",
+        "forbidden_data_types": [
+          "taxpayer-level ATO data",
+          "firm-level confidential tax data"
+        ],
+        "main_blockers": [
+          "behavioural elasticity gap",
+          "tax/legal review"
+        ],
+        "module_id": "behavioural_response",
+        "module_name": "Behavioural response",
+        "must_not_claim": [
+          "behaviour prediction",
+          "calibration completed",
+          "compliance score"
+        ],
+        "realistic_placeholder_fields": [
+          "behavioural_response_pressure_bands"
+        ],
+        "required_restricted_sources": [
+          "ato_taxpayer_records"
+        ],
+        "requires_restricted_data_for_calibration": true,
+        "sanity_check_possible": false
+      },
+      {
+        "calibration_possible_now": false,
+        "can_only_use_synthetic_data": false,
+        "can_use_public_aggregate_data": true,
+        "candidate_public_sources": [
+          "abs_labour_force",
+          "abs_industry_wages_hours",
+          "fair_work_awards",
+          "treasury_budget_papers"
+        ],
+        "current_data_status": "realistic_placeholder",
+        "forbidden_data_types": [
+          "taxpayer-level ATO data",
+          "firm-level confidential tax data"
+        ],
+        "main_blockers": [
+          "legal attribution",
+          "AAVA deductibility",
+          "restricted taxpayer data"
+        ],
+        "module_id": "core_formula_model",
+        "module_name": "Core formula model",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "realistic_placeholder_fields": [
+          "aava_deductibility_treatment",
+          "hle_assumptions",
+          "opfte_benchmarks",
+          "qlc_weights"
+        ],
+        "required_restricted_sources": [
+          "ato_taxpayer_records"
+        ],
+        "requires_restricted_data_for_calibration": true,
+        "sanity_check_possible": true
+      },
+      {
+        "calibration_possible_now": false,
+        "can_only_use_synthetic_data": true,
+        "can_use_public_aggregate_data": false,
+        "candidate_public_sources": [],
+        "current_data_status": "synthetic_fixture",
+        "forbidden_data_types": [
+          "real evidence packets",
+          "redacted real evidence copies"
+        ],
+        "main_blockers": [
+          "real evidence forbidden in repo"
+        ],
+        "module_id": "evidence_workflow",
+        "module_name": "Evidence workflow",
+        "must_not_claim": [
+          "evidence sufficiency",
+          "enforcement",
+          "calibration completed"
+        ],
+        "realistic_placeholder_fields": [],
+        "required_restricted_sources": [
+          "ato_taxpayer_records"
+        ],
+        "requires_restricted_data_for_calibration": true,
+        "sanity_check_possible": false
+      },
+      {
+        "calibration_possible_now": false,
+        "can_only_use_synthetic_data": false,
+        "can_use_public_aggregate_data": true,
+        "candidate_public_sources": [
+          "fair_work_awards",
+          "abs_industry_wages_hours"
+        ],
+        "current_data_status": "synthetic_fixture",
+        "forbidden_data_types": [
+          "real evidence packets",
+          "private payroll records"
+        ],
+        "main_blockers": [
+          "examples remain illustrative"
+        ],
+        "module_id": "examples",
+        "module_name": "Worked examples",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "realistic_placeholder_fields": [
+          "opfte_benchmarks",
+          "qlc_weights"
+        ],
+        "required_restricted_sources": [],
+        "requires_restricted_data_for_calibration": false,
+        "sanity_check_possible": true
+      },
+      {
+        "calibration_possible_now": false,
+        "can_only_use_synthetic_data": false,
+        "can_use_public_aggregate_data": false,
+        "candidate_public_sources": [],
+        "current_data_status": "not_collected",
+        "forbidden_data_types": [
+          "readiness score"
+        ],
+        "main_blockers": [
+          "navigation only"
+        ],
+        "module_id": "executive_dashboard",
+        "module_name": "Executive dashboard",
+        "must_not_claim": [
+          "readiness score",
+          "validation",
+          "official status"
+        ],
+        "realistic_placeholder_fields": [],
+        "required_restricted_sources": [],
+        "requires_restricted_data_for_calibration": false,
+        "sanity_check_possible": false
+      },
+      {
+        "calibration_possible_now": false,
+        "can_only_use_synthetic_data": false,
+        "can_use_public_aggregate_data": false,
+        "candidate_public_sources": [],
+        "current_data_status": "not_collected",
+        "forbidden_data_types": [
+          "review completion"
+        ],
+        "main_blockers": [
+          "questions only"
+        ],
+        "module_id": "external_review_attack_pack",
+        "module_name": "External review attack pack",
+        "must_not_claim": [
+          "approval",
+          "validation",
+          "review completed"
+        ],
+        "realistic_placeholder_fields": [],
+        "required_restricted_sources": [],
+        "requires_restricted_data_for_calibration": false,
+        "sanity_check_possible": false
+      },
+      {
+        "calibration_possible_now": false,
+        "can_only_use_synthetic_data": false,
+        "can_use_public_aggregate_data": false,
+        "candidate_public_sources": [],
+        "current_data_status": "not_collected",
+        "forbidden_data_types": [
+          "approval status"
+        ],
+        "main_blockers": [
+          "integrity only"
+        ],
+        "module_id": "final_rc_integrity_seal",
+        "module_name": "Final RC integrity seal",
+        "must_not_claim": [
+          "approval",
+          "validation",
+          "operational readiness"
+        ],
+        "realistic_placeholder_fields": [],
+        "required_restricted_sources": [],
+        "requires_restricted_data_for_calibration": false,
+        "sanity_check_possible": false
+      },
+      {
+        "calibration_possible_now": false,
+        "can_only_use_synthetic_data": false,
+        "can_use_public_aggregate_data": true,
+        "candidate_public_sources": [
+          "treasury_budget_papers",
+          "pbo_public_costings",
+          "ato_taxation_statistics"
+        ],
+        "current_data_status": "realistic_placeholder",
+        "forbidden_data_types": [
+          "confidential Treasury material"
+        ],
+        "main_blockers": [
+          "Treasury methods review"
+        ],
+        "module_id": "fiscal_trajectory",
+        "module_name": "Fiscal trajectory",
+        "must_not_claim": [
+          "Treasury modelling",
+          "official costing",
+          "calibration completed"
+        ],
+        "realistic_placeholder_fields": [
+          "fiscal_trajectory_assumptions",
+          "payg_erosion_assumptions"
+        ],
+        "required_restricted_sources": [],
+        "requires_restricted_data_for_calibration": false,
+        "sanity_check_possible": true
+      },
+      {
+        "calibration_possible_now": false,
+        "can_only_use_synthetic_data": false,
+        "can_use_public_aggregate_data": true,
+        "candidate_public_sources": [
+          "abs_census_aggregates",
+          "abs_household_expenditure_income"
+        ],
+        "current_data_status": "synthetic_fixture",
+        "forbidden_data_types": [
+          "household microdata",
+          "HILDA microdata"
+        ],
+        "main_blockers": [
+          "microdata not permitted in repo"
+        ],
+        "module_id": "household_distributional",
+        "module_name": "Household distributional scenarios",
+        "must_not_claim": [
+          "real household estimate",
+          "population estimate",
+          "calibration completed"
+        ],
+        "realistic_placeholder_fields": [
+          "gst_consumption_effects",
+          "household_distributional_scenario_assumptions"
+        ],
+        "required_restricted_sources": [
+          "hilda_microdata",
+          "abs_datalab_microdata"
+        ],
+        "requires_restricted_data_for_calibration": true,
+        "sanity_check_possible": true
+      },
+      {
+        "calibration_possible_now": false,
+        "can_only_use_synthetic_data": false,
+        "can_use_public_aggregate_data": true,
+        "candidate_public_sources": [
+          "abs_census_aggregates"
+        ],
+        "current_data_status": "synthetic_fixture",
+        "forbidden_data_types": [
+          "ABS DataLab microdata",
+          "HILDA microdata"
+        ],
+        "main_blockers": [
+          "representativeness requires restricted methods review"
+        ],
+        "module_id": "household_weighting",
+        "module_name": "Household weighting",
+        "must_not_claim": [
+          "population estimate",
+          "representative sample",
+          "calibration completed"
+        ],
+        "realistic_placeholder_fields": [
+          "household_weighting_assumptions"
+        ],
+        "required_restricted_sources": [
+          "hilda_microdata",
+          "abs_datalab_microdata"
+        ],
+        "requires_restricted_data_for_calibration": true,
+        "sanity_check_possible": true
+      },
+      {
+        "calibration_possible_now": false,
+        "can_only_use_synthetic_data": false,
+        "can_use_public_aggregate_data": true,
+        "candidate_public_sources": [
+          "treasury_budget_papers",
+          "public_company_reports",
+          "industry_association_reports"
+        ],
+        "current_data_status": "realistic_placeholder",
+        "forbidden_data_types": [
+          "firm-level confidential investment data"
+        ],
+        "main_blockers": [
+          "economic methods review"
+        ],
+        "module_id": "investment_incidence",
+        "module_name": "Investment and incidence guardrails",
+        "must_not_claim": [
+          "economic validation",
+          "investment advice",
+          "calibration completed"
+        ],
+        "realistic_placeholder_fields": [
+          "investment_incidence_assumptions",
+          "normal_return_preservation_thresholds",
+          "pass_through_assumptions"
+        ],
+        "required_restricted_sources": [],
+        "requires_restricted_data_for_calibration": false,
+        "sanity_check_possible": true
+      },
+      {
+        "calibration_possible_now": false,
+        "can_only_use_synthetic_data": false,
+        "can_use_public_aggregate_data": false,
+        "candidate_public_sources": [],
+        "current_data_status": "not_collected",
+        "forbidden_data_types": [
+          "operative law drafting"
+        ],
+        "main_blockers": [
+          "legal drafting review"
+        ],
+        "module_id": "legislative_architecture",
+        "module_name": "Legislative architecture",
+        "must_not_claim": [
+          "legal sufficiency",
+          "official status",
+          "operational readiness"
+        ],
+        "realistic_placeholder_fields": [],
+        "required_restricted_sources": [],
+        "requires_restricted_data_for_calibration": false,
+        "sanity_check_possible": false
+      },
+      {
+        "calibration_possible_now": false,
+        "can_only_use_synthetic_data": false,
+        "can_use_public_aggregate_data": true,
+        "candidate_public_sources": [
+          "help_hecs_thresholds",
+          "super_guarantee_settings",
+          "state_payroll_tax_thresholds"
+        ],
+        "current_data_status": "realistic_placeholder",
+        "forbidden_data_types": [
+          "person-level payment records"
+        ],
+        "main_blockers": [
+          "person-level data forbidden in repo"
+        ],
+        "module_id": "payment_interactions",
+        "module_name": "Payment interactions",
+        "must_not_claim": [
+          "welfare advice",
+          "individual estimate",
+          "calibration completed"
+        ],
+        "realistic_placeholder_fields": [
+          "help_hecs_repayment_pressure",
+          "state_payroll_tax_pressure",
+          "superannuation_contribution_pressure",
+          "welfare_payment_interaction_assumptions"
+        ],
+        "required_restricted_sources": [
+          "dss_services_payment_data",
+          "services_australia_records"
+        ],
+        "requires_restricted_data_for_calibration": true,
+        "sanity_check_possible": true
+      },
+      {
+        "calibration_possible_now": false,
+        "can_only_use_synthetic_data": false,
+        "can_use_public_aggregate_data": false,
+        "candidate_public_sources": [],
+        "current_data_status": "not_collected",
+        "forbidden_data_types": [
+          "official release status"
+        ],
+        "main_blockers": [
+          "packaging only"
+        ],
+        "module_id": "release_candidate_pack",
+        "module_name": "Release candidate pack",
+        "must_not_claim": [
+          "official status",
+          "validation",
+          "calibration completed"
+        ],
+        "realistic_placeholder_fields": [],
+        "required_restricted_sources": [],
+        "requires_restricted_data_for_calibration": false,
+        "sanity_check_possible": false
+      },
+      {
+        "calibration_possible_now": false,
+        "can_only_use_synthetic_data": true,
+        "can_use_public_aggregate_data": false,
+        "candidate_public_sources": [],
+        "current_data_status": "synthetic_fixture",
+        "forbidden_data_types": [
+          "taxpayer data",
+          "private payroll records",
+          "leaked documents"
+        ],
+        "main_blockers": [
+          "guardrail scan is not complete DLP"
+        ],
+        "module_id": "repo_guardrails",
+        "module_name": "Repository guardrails",
+        "must_not_claim": [
+          "complete DLP",
+          "cybersecurity validation",
+          "approval"
+        ],
+        "realistic_placeholder_fields": [],
+        "required_restricted_sources": [],
+        "requires_restricted_data_for_calibration": false,
+        "sanity_check_possible": true
+      },
+      {
+        "calibration_possible_now": false,
+        "can_only_use_synthetic_data": true,
+        "can_use_public_aggregate_data": false,
+        "candidate_public_sources": [],
+        "current_data_status": "synthetic_fixture",
+        "forbidden_data_types": [
+          "approval status"
+        ],
+        "main_blockers": [
+          "display controls only"
+        ],
+        "module_id": "reviewed_scenarios",
+        "module_name": "Reviewed scenarios",
+        "must_not_claim": [
+          "approval",
+          "validation",
+          "calibration completed"
+        ],
+        "realistic_placeholder_fields": [
+          "reviewed_scenario_display_control_thresholds"
+        ],
+        "required_restricted_sources": [],
+        "requires_restricted_data_for_calibration": false,
+        "sanity_check_possible": false
+      },
+      {
+        "calibration_possible_now": false,
+        "can_only_use_synthetic_data": false,
+        "can_use_public_aggregate_data": true,
+        "candidate_public_sources": [
+          "abs_industry_wages_hours",
+          "jobs_skills_labour_market",
+          "industry_association_reports"
+        ],
+        "current_data_status": "realistic_placeholder",
+        "forbidden_data_types": [
+          "firm-level confidential data"
+        ],
+        "main_blockers": [
+          "source mapping and schedule authority review"
+        ],
+        "module_id": "sector_schedules",
+        "module_name": "Sector schedules",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "realistic_placeholder_fields": [
+          "mixed_unit_weighting",
+          "sector_schedule_values"
+        ],
+        "required_restricted_sources": [],
+        "requires_restricted_data_for_calibration": false,
+        "sanity_check_possible": true
+      },
+      {
+        "calibration_possible_now": false,
+        "can_only_use_synthetic_data": false,
+        "can_use_public_aggregate_data": true,
+        "candidate_public_sources": [
+          "jobs_skills_labour_market",
+          "industry_association_reports"
+        ],
+        "current_data_status": "realistic_placeholder",
+        "forbidden_data_types": [
+          "official sector ranking inputs"
+        ],
+        "main_blockers": [
+          "do-not-rank metadata boundary"
+        ],
+        "module_id": "sector_stress_matrix",
+        "module_name": "Sector stress matrix",
+        "must_not_claim": [
+          "official sector ranking",
+          "economic validation",
+          "calibration completed"
+        ],
+        "realistic_placeholder_fields": [
+          "aii_component_weights",
+          "sector_stress_metadata_bands"
+        ],
+        "required_restricted_sources": [],
+        "requires_restricted_data_for_calibration": false,
+        "sanity_check_possible": true
+      },
+      {
+        "calibration_possible_now": false,
+        "can_only_use_synthetic_data": true,
+        "can_use_public_aggregate_data": false,
+        "candidate_public_sources": [],
+        "current_data_status": "synthetic_fixture",
+        "forbidden_data_types": [
+          "restricted datasets",
+          "secrets"
+        ],
+        "main_blockers": [
+          "prototype default-deny controls only"
+        ],
+        "module_id": "secure_ingestion_controls",
+        "module_name": "Secure ingestion controls",
+        "must_not_claim": [
+          "cybersecurity validation",
+          "operational readiness",
+          "approval"
+        ],
+        "realistic_placeholder_fields": [],
+        "required_restricted_sources": [],
+        "requires_restricted_data_for_calibration": false,
+        "sanity_check_possible": true
+      },
+      {
+        "calibration_possible_now": false,
+        "can_only_use_synthetic_data": false,
+        "can_use_public_aggregate_data": true,
+        "candidate_public_sources": [
+          "treasury_budget_papers",
+          "pbo_public_costings"
+        ],
+        "current_data_status": "realistic_placeholder",
+        "forbidden_data_types": [
+          "DSS records",
+          "Services Australia records"
+        ],
+        "main_blockers": [
+          "welfare and fiscal restricted data"
+        ],
+        "module_id": "transition_funding",
+        "module_name": "Transition funding",
+        "must_not_claim": [
+          "welfare validation",
+          "official costing",
+          "calibration completed"
+        ],
+        "realistic_placeholder_fields": [
+          "transition_payment_assumptions"
+        ],
+        "required_restricted_sources": [
+          "dss_services_payment_data",
+          "services_australia_records"
+        ],
+        "requires_restricted_data_for_calibration": true,
+        "sanity_check_possible": true
+      },
+      {
+        "calibration_possible_now": false,
+        "can_only_use_synthetic_data": false,
+        "can_use_public_aggregate_data": true,
+        "candidate_public_sources": [
+          "abs_census_aggregates",
+          "treasury_budget_papers"
+        ],
+        "current_data_status": "realistic_placeholder",
+        "forbidden_data_types": [
+          "restricted microdata"
+        ],
+        "main_blockers": [
+          "not confidence intervals"
+        ],
+        "module_id": "uncertainty_ranges",
+        "module_name": "Uncertainty ranges",
+        "must_not_claim": [
+          "confidence interval",
+          "forecast",
+          "calibration completed"
+        ],
+        "realistic_placeholder_fields": [
+          "uncertainty_range_assumptions"
+        ],
+        "required_restricted_sources": [
+          "hilda_microdata",
+          "abs_datalab_microdata"
+        ],
+        "requires_restricted_data_for_calibration": true,
+        "sanity_check_possible": true
+      }
+    ],
+    "non_claims": [
+      "This is a feasibility and calibration-intake map only. No real data has been loaded by this build. No calibration has occurred. Realistic placeholders are not real data and are not calibrated. Public-data candidates are not loaded datasets. Restricted-data requirements are not data access.",
+      "This is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, not official status, and does not determine actual tax payable.",
+      "This does not use taxpayer-level, firm-level confidential, household microdata, ABS DataLab, HILDA microdata, DSS/Services Australia records, ATO records, Treasury/PBO confidential material, or restricted government data.",
+      "This does not modify firm-level CARSF liability. It only maps data feasibility, placeholder provenance, restricted-data needs, forbidden repo data, and public-data pilot readiness."
+    ],
+    "public_data_pilot_candidates": [
+      {
+        "blockers_before_loading": [
+          "confirm public licence",
+          "record source URL",
+          "keep aggregate-only"
+        ],
+        "build_27_ready": true,
+        "candidate_modules": [
+          "core_formula_model",
+          "sector_schedules"
+        ],
+        "claim_level": "placeholder_anchor_only",
+        "expected_file_type": "csv_or_xlsx_public_aggregate",
+        "expected_update_frequency": "periodic_public_release",
+        "fields_to_extract": [
+          "opfte_benchmarks",
+          "qlc_weights",
+          "sector_schedule_values"
+        ],
+        "manual_download_or_api": "manual_download",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "pilot_id": "pilot_abs_labour_wage",
+        "pilot_name": "ABS public aggregate labour wage table pilot",
+        "safe_to_commit_if_public_licence_allows": true,
+        "source_candidate_id": "abs_industry_wages_hours",
+        "why_useful": "Could anchor OPFTE and sector placeholder context"
+      },
+      {
+        "blockers_before_loading": [
+          "confirm public licence",
+          "avoid firm-level liability inference"
+        ],
+        "build_27_ready": true,
+        "candidate_modules": [
+          "fiscal_trajectory",
+          "investment_incidence"
+        ],
+        "claim_level": "sanity_check_only",
+        "expected_file_type": "csv_or_xlsx_public_table",
+        "expected_update_frequency": "annual_public_release",
+        "fields_to_extract": [
+          "aava_deductibility_treatment",
+          "fiscal_trajectory_assumptions"
+        ],
+        "manual_download_or_api": "manual_download",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "pilot_id": "pilot_ato_corporate_public",
+        "pilot_name": "ATO corporate transparency public table pilot",
+        "safe_to_commit_if_public_licence_allows": true,
+        "source_candidate_id": "ato_corporate_tax_transparency",
+        "why_useful": "Could support tax aggregate sanity-check only"
+      },
+      {
+        "blockers_before_loading": [
+          "confirm source licence",
+          "keep aggregate-only"
+        ],
+        "build_27_ready": true,
+        "candidate_modules": [
+          "fiscal_trajectory",
+          "payment_interactions"
+        ],
+        "claim_level": "sanity_check_only",
+        "expected_file_type": "public_aggregate_table",
+        "expected_update_frequency": "annual_public_release",
+        "fields_to_extract": [
+          "payg_erosion_assumptions",
+          "fiscal_trajectory_assumptions"
+        ],
+        "manual_download_or_api": "manual_download",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "pilot_id": "pilot_ato_tax_stats",
+        "pilot_name": "ATO taxation statistics aggregate pilot",
+        "safe_to_commit_if_public_licence_allows": true,
+        "source_candidate_id": "ato_taxation_statistics",
+        "why_useful": "Could sanity-check PAYG and fiscal aggregate placeholders"
+      },
+      {
+        "blockers_before_loading": [
+          "source citation and extract control"
+        ],
+        "build_27_ready": true,
+        "candidate_modules": [
+          "fiscal_trajectory",
+          "transition_funding"
+        ],
+        "claim_level": "sanity_check_only",
+        "expected_file_type": "public_document_extract",
+        "expected_update_frequency": "budget_cycle",
+        "fields_to_extract": [
+          "fiscal_trajectory_assumptions",
+          "transition_payment_assumptions"
+        ],
+        "manual_download_or_api": "manual_download",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "pilot_id": "pilot_budget_public",
+        "pilot_name": "Budget paper public fiscal aggregate pilot",
+        "safe_to_commit_if_public_licence_allows": true,
+        "source_candidate_id": "treasury_budget_papers",
+        "why_useful": "Could sanity-check fiscal trajectory placeholders"
+      },
+      {
+        "blockers_before_loading": [
+          "legal/source terms review"
+        ],
+        "build_27_ready": true,
+        "candidate_modules": [
+          "core_formula_model",
+          "sector_schedules"
+        ],
+        "claim_level": "placeholder_anchor_only",
+        "expected_file_type": "public_threshold_table",
+        "expected_update_frequency": "periodic_public_update",
+        "fields_to_extract": [
+          "qlc_weights",
+          "hle_assumptions",
+          "opfte_benchmarks"
+        ],
+        "manual_download_or_api": "manual_download",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "pilot_id": "pilot_fair_work_awards",
+        "pilot_name": "Fair Work wage and award anchor pilot",
+        "safe_to_commit_if_public_licence_allows": true,
+        "source_candidate_id": "fair_work_awards",
+        "why_useful": "Could anchor wage-band realistic placeholders"
+      },
+      {
+        "blockers_before_loading": [
+          "source citation and no individual estimates"
+        ],
+        "build_27_ready": true,
+        "candidate_modules": [
+          "payment_interactions"
+        ],
+        "claim_level": "placeholder_anchor_only",
+        "expected_file_type": "public_threshold_table",
+        "expected_update_frequency": "annual_public_update",
+        "fields_to_extract": [
+          "help_hecs_repayment_pressure"
+        ],
+        "manual_download_or_api": "manual_download",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "pilot_id": "pilot_help_thresholds",
+        "pilot_name": "HELP HECS public thresholds pilot",
+        "safe_to_commit_if_public_licence_allows": true,
+        "source_candidate_id": "help_hecs_thresholds",
+        "why_useful": "Could anchor payment interaction placeholders"
+      },
+      {
+        "blockers_before_loading": [
+          "jurisdiction source review and no tax advice"
+        ],
+        "build_27_ready": true,
+        "candidate_modules": [
+          "payment_interactions",
+          "fiscal_trajectory"
+        ],
+        "claim_level": "placeholder_anchor_only",
+        "expected_file_type": "public_threshold_table",
+        "expected_update_frequency": "jurisdiction_update",
+        "fields_to_extract": [
+          "state_payroll_tax_pressure"
+        ],
+        "manual_download_or_api": "manual_download",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "pilot_id": "pilot_state_payroll_tax",
+        "pilot_name": "State payroll tax threshold public pilot",
+        "safe_to_commit_if_public_licence_allows": true,
+        "source_candidate_id": "state_payroll_tax_thresholds",
+        "why_useful": "Could anchor payroll-tax interaction placeholders"
+      },
+      {
+        "blockers_before_loading": [
+          "source citation and tax review"
+        ],
+        "build_27_ready": true,
+        "candidate_modules": [
+          "payment_interactions",
+          "transition_funding"
+        ],
+        "claim_level": "placeholder_anchor_only",
+        "expected_file_type": "public_threshold_table",
+        "expected_update_frequency": "policy_update",
+        "fields_to_extract": [
+          "superannuation_contribution_pressure"
+        ],
+        "manual_download_or_api": "manual_download",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "pilot_id": "pilot_super_guarantee",
+        "pilot_name": "Superannuation Guarantee public settings pilot",
+        "safe_to_commit_if_public_licence_allows": true,
+        "source_candidate_id": "super_guarantee_settings",
+        "why_useful": "Could anchor superannuation pressure placeholders"
+      }
+    ],
+    "realistic_placeholders": [
+      {
+        "allowed_anchor_sources": [
+          "public_company_reports"
+        ],
+        "basis_type": "cannot_anchor_yet",
+        "data_status": "realistic_placeholder",
+        "field_id": "behavioural_response_pressure_bands",
+        "missing_real_source": "behavioural elasticity study and authorised data",
+        "must_be_labelled_realistic_placeholder": true,
+        "must_not_be_labelled_calibrated": true,
+        "must_not_be_labelled_real_data": true,
+        "must_not_claim": [
+          "behaviour prediction",
+          "calibration completed",
+          "validation"
+        ],
+        "placeholder_id": "ph_cannot_anchor_behaviour",
+        "placeholder_name": "Behavioural response cannot-anchor placeholder",
+        "reason_placeholder_needed": "Public sources do not support behavioural response calibration",
+        "review_required_before_replacement": [
+          "behavioural_reviewer",
+          "tax_reviewer",
+          "legal_reviewer"
+        ]
+      },
+      {
+        "allowed_anchor_sources": [
+          "treasury_budget_papers",
+          "pbo_public_costings"
+        ],
+        "basis_type": "anchored_to_public_fiscal_aggregate",
+        "data_status": "realistic_placeholder",
+        "field_id": "fiscal_trajectory_assumptions",
+        "missing_real_source": "Treasury/PBO methods review",
+        "must_be_labelled_realistic_placeholder": true,
+        "must_not_be_labelled_calibrated": true,
+        "must_not_be_labelled_real_data": true,
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_id": "ph_fiscal_public_aggregate",
+        "placeholder_name": "Fiscal public aggregate anchor",
+        "reason_placeholder_needed": "Public fiscal documents do not calibrate CARSF",
+        "review_required_before_replacement": [
+          "treasury_methods_reviewer"
+        ]
+      },
+      {
+        "allowed_anchor_sources": [
+          "help_hecs_thresholds"
+        ],
+        "basis_type": "anchored_to_public_threshold",
+        "data_status": "realistic_placeholder",
+        "field_id": "help_hecs_repayment_pressure",
+        "missing_real_source": "household-level interaction data",
+        "must_be_labelled_realistic_placeholder": true,
+        "must_not_be_labelled_calibrated": true,
+        "must_not_be_labelled_real_data": true,
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_id": "ph_help_threshold",
+        "placeholder_name": "HELP threshold placeholder anchor",
+        "reason_placeholder_needed": "Public thresholds do not model individual repayment interactions",
+        "review_required_before_replacement": [
+          "welfare_policy_reviewer"
+        ]
+      },
+      {
+        "allowed_anchor_sources": [
+          "abs_labour_force"
+        ],
+        "basis_type": "anchored_to_public_industry_category",
+        "data_status": "realistic_placeholder",
+        "field_id": "hle_assumptions",
+        "missing_real_source": "external HLE method review",
+        "must_be_labelled_realistic_placeholder": true,
+        "must_not_be_labelled_calibrated": true,
+        "must_not_be_labelled_real_data": true,
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_id": "ph_hle_labour_aggregate",
+        "placeholder_name": "HLE labour aggregate anchor",
+        "reason_placeholder_needed": "Public aggregates do not define HLE conversion",
+        "review_required_before_replacement": [
+          "statistical_methods_reviewer"
+        ]
+      },
+      {
+        "allowed_anchor_sources": [
+          "abs_census_aggregates",
+          "abs_household_expenditure_income"
+        ],
+        "basis_type": "anchored_to_public_industry_category",
+        "data_status": "realistic_placeholder",
+        "field_id": "household_distributional_scenario_assumptions",
+        "missing_real_source": "authorised household microdata method",
+        "must_be_labelled_realistic_placeholder": true,
+        "must_not_be_labelled_calibrated": true,
+        "must_not_be_labelled_real_data": true,
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_id": "ph_household_public_aggregate",
+        "placeholder_name": "Household public aggregate placeholder",
+        "reason_placeholder_needed": "Public aggregates cannot represent household-level variation",
+        "review_required_before_replacement": [
+          "statistical_methods_reviewer",
+          "privacy_reviewer"
+        ]
+      },
+      {
+        "allowed_anchor_sources": [
+          "treasury_budget_papers",
+          "industry_association_reports"
+        ],
+        "basis_type": "anchored_to_public_fiscal_aggregate",
+        "data_status": "realistic_placeholder",
+        "field_id": "investment_incidence_assumptions",
+        "missing_real_source": "economic incidence study",
+        "must_be_labelled_realistic_placeholder": true,
+        "must_not_be_labelled_calibrated": true,
+        "must_not_be_labelled_real_data": true,
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_id": "ph_incidence_public_report",
+        "placeholder_name": "Incidence public report placeholder",
+        "reason_placeholder_needed": "Public reports do not validate pass-through or incidence",
+        "review_required_before_replacement": [
+          "economic_methods_reviewer"
+        ]
+      },
+      {
+        "allowed_anchor_sources": [
+          "abs_industry_wages_hours",
+          "fair_work_awards"
+        ],
+        "basis_type": "anchored_to_public_wage_band",
+        "data_status": "realistic_placeholder",
+        "field_id": "opfte_benchmarks",
+        "missing_real_source": "external OPFTE benchmark study",
+        "must_be_labelled_realistic_placeholder": true,
+        "must_not_be_labelled_calibrated": true,
+        "must_not_be_labelled_real_data": true,
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_id": "ph_opfte_public_wage_band",
+        "placeholder_name": "OPFTE public wage-band anchor",
+        "reason_placeholder_needed": "Public aggregates can only provide sanity-check context.",
+        "review_required_before_replacement": [
+          "statistical_methods_reviewer",
+          "treasury_methods_reviewer"
+        ]
+      },
+      {
+        "allowed_anchor_sources": [
+          "fair_work_awards"
+        ],
+        "basis_type": "anchored_to_public_wage_band",
+        "data_status": "realistic_placeholder",
+        "field_id": "qlc_weights",
+        "missing_real_source": "reviewed QLC weighting method",
+        "must_be_labelled_realistic_placeholder": true,
+        "must_not_be_labelled_calibrated": true,
+        "must_not_be_labelled_real_data": true,
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_id": "ph_qlc_award_anchor",
+        "placeholder_name": "QLC award anchor",
+        "reason_placeholder_needed": "Award data can anchor ranges but not determine weights",
+        "review_required_before_replacement": [
+          "legal_reviewer",
+          "statistical_methods_reviewer"
+        ]
+      },
+      {
+        "allowed_anchor_sources": [
+          "abs_industry_wages_hours",
+          "jobs_skills_labour_market"
+        ],
+        "basis_type": "anchored_to_public_industry_category",
+        "data_status": "realistic_placeholder",
+        "field_id": "sector_schedule_values",
+        "missing_real_source": "schedule authority calibration",
+        "must_be_labelled_realistic_placeholder": true,
+        "must_not_be_labelled_calibrated": true,
+        "must_not_be_labelled_real_data": true,
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_id": "ph_sector_schedule_public_category",
+        "placeholder_name": "Sector public category anchor",
+        "reason_placeholder_needed": "Public categories may not match CARSF schedules",
+        "review_required_before_replacement": [
+          "statistical_methods_reviewer",
+          "policy_reviewer"
+        ]
+      },
+      {
+        "allowed_anchor_sources": [
+          "super_guarantee_settings"
+        ],
+        "basis_type": "anchored_to_public_threshold",
+        "data_status": "realistic_placeholder",
+        "field_id": "superannuation_contribution_pressure",
+        "missing_real_source": "wage and contribution microdata",
+        "must_be_labelled_realistic_placeholder": true,
+        "must_not_be_labelled_calibrated": true,
+        "must_not_be_labelled_real_data": true,
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "placeholder_id": "ph_super_threshold",
+        "placeholder_name": "Superannuation setting placeholder anchor",
+        "reason_placeholder_needed": "Public settings cannot model actual contributions",
+        "review_required_before_replacement": [
+          "tax_reviewer"
+        ]
+      }
+    ],
+    "restricted_data_requirements": [
+      {
+        "access_class": "confidential_or_prohibited",
+        "affected_fields": [
+          "aava_deductibility_treatment",
+          "transfer_pricing_review_shares",
+          "grouped_entity_attribution"
+        ],
+        "affected_modules": [
+          "core_formula_model",
+          "behavioural_response",
+          "administrative_workflow"
+        ],
+        "can_be_committed_to_repo": false,
+        "data_need": "Taxpayer-level tax base and deductibility data",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "reason": "Confidential taxpayer records are forbidden repo data.",
+        "requirement_id": "rd_ato_taxpayer_records",
+        "restricted_sources": [
+          "ato_taxpayer_records"
+        ],
+        "review_required": [
+          "legal_reviewer",
+          "tax_reviewer",
+          "privacy_reviewer"
+        ]
+      },
+      {
+        "access_class": "confidential_or_prohibited",
+        "affected_fields": [
+          "behavioural_response_pressure_bands",
+          "anti_avoidance_thresholds"
+        ],
+        "affected_modules": [
+          "behavioural_response"
+        ],
+        "can_be_committed_to_repo": false,
+        "data_need": "Behavioural and compliance-response calibration",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "reason": "Behavioural tax response evidence cannot be inferred from repo data.",
+        "requirement_id": "rd_behavioural_tax_response",
+        "restricted_sources": [
+          "ato_taxpayer_records"
+        ],
+        "review_required": [
+          "tax_reviewer",
+          "legal_reviewer",
+          "behavioural_reviewer"
+        ]
+      },
+      {
+        "access_class": "restricted_research_access",
+        "affected_fields": [
+          "household_distributional_scenario_assumptions",
+          "household_weighting_assumptions",
+          "uncertainty_range_assumptions"
+        ],
+        "affected_modules": [
+          "household_distributional",
+          "household_weighting",
+          "uncertainty_ranges"
+        ],
+        "can_be_committed_to_repo": false,
+        "data_need": "Household-level distributional calibration",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "reason": "Licensed or restricted microdata cannot enter the repo.",
+        "requirement_id": "rd_household_microdata",
+        "restricted_sources": [
+          "hilda_microdata",
+          "abs_datalab_microdata"
+        ],
+        "review_required": [
+          "privacy_reviewer",
+          "statistical_methods_reviewer"
+        ]
+      },
+      {
+        "access_class": "government_internal_only",
+        "affected_fields": [
+          "welfare_payment_interaction_assumptions",
+          "transition_payment_assumptions"
+        ],
+        "affected_modules": [
+          "payment_interactions",
+          "transition_funding"
+        ],
+        "can_be_committed_to_repo": false,
+        "data_need": "Payment interaction and transition funding calibration",
+        "must_not_claim": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "reason": "Person-level government records are forbidden repo data.",
+        "requirement_id": "rd_services_payment_records",
+        "restricted_sources": [
+          "dss_services_payment_data",
+          "services_australia_records"
+        ],
+        "review_required": [
+          "privacy_reviewer",
+          "welfare_policy_reviewer",
+          "legal_reviewer"
+        ]
+      }
+    ],
+    "source_candidates": [
+      {
+        "access_class": "public_manual_download",
+        "can_be_committed_to_repo": true,
+        "candidate_fields": [
+          "household_distributional_scenario_assumptions",
+          "household_weighting_assumptions"
+        ],
+        "candidate_modules": [
+          "household_distributional",
+          "household_weighting",
+          "reviewed_scenarios"
+        ],
+        "claim_level": "sanity_check_only",
+        "data_status": "real_public_data_candidate",
+        "licence_or_access_notes": "Aggregate tables only; no microdata in repo.",
+        "main_use": "Household and subgroup aggregate sanity-check candidate",
+        "must_not_be_used_for": [
+          "population estimate",
+          "real household estimate",
+          "welfare validation",
+          "calibration completed"
+        ],
+        "privacy_or_confidentiality_risk": "low_public_aggregate_only",
+        "public_url_required_later": true,
+        "publisher": "Australian Bureau of Statistics",
+        "requires_external_access_process": false,
+        "review_required": [
+          "statistical_methods_reviewer",
+          "welfare_policy_reviewer",
+          "privacy_reviewer"
+        ],
+        "source_category": "demographic_public_aggregate",
+        "source_id": "abs_census_aggregates",
+        "source_name": "ABS Census regional and household aggregates"
+      },
+      {
+        "access_class": "restricted_research_access",
+        "can_be_committed_to_repo": false,
+        "candidate_fields": [
+          "household_weighting_assumptions",
+          "uncertainty_range_assumptions"
+        ],
+        "candidate_modules": [
+          "household_weighting",
+          "uncertainty_ranges"
+        ],
+        "claim_level": "external_review_only",
+        "data_status": "restricted_data_required",
+        "licence_or_access_notes": "Restricted microdata must remain in authorised environments only.",
+        "main_use": "External restricted methods review only",
+        "must_not_be_used_for": [
+          "repo data",
+          "population estimate",
+          "calibration completed"
+        ],
+        "privacy_or_confidentiality_risk": "high_restricted_microdata",
+        "public_url_required_later": false,
+        "publisher": "Australian Bureau of Statistics restricted access",
+        "requires_external_access_process": true,
+        "review_required": [
+          "privacy_reviewer",
+          "statistical_methods_reviewer"
+        ],
+        "source_category": "restricted_research_microdata",
+        "source_id": "abs_datalab_microdata",
+        "source_name": "ABS DataLab microdata"
+      },
+      {
+        "access_class": "public_manual_download",
+        "can_be_committed_to_repo": true,
+        "candidate_fields": [
+          "household_distributional_scenario_assumptions",
+          "gst_consumption_effects",
+          "welfare_payment_interaction_assumptions"
+        ],
+        "candidate_modules": [
+          "household_distributional",
+          "payment_interactions",
+          "transition_funding"
+        ],
+        "claim_level": "sanity_check_only",
+        "data_status": "real_public_data_candidate",
+        "licence_or_access_notes": "Aggregate products only; no unit records in repo.",
+        "main_use": "Household aggregate plausibility checks",
+        "must_not_be_used_for": [
+          "real household estimate",
+          "population estimate",
+          "welfare validation",
+          "calibration completed"
+        ],
+        "privacy_or_confidentiality_risk": "low_public_aggregate_only",
+        "public_url_required_later": true,
+        "publisher": "Australian Bureau of Statistics",
+        "requires_external_access_process": false,
+        "review_required": [
+          "statistical_methods_reviewer",
+          "welfare_policy_reviewer"
+        ],
+        "source_category": "household_public_aggregate",
+        "source_id": "abs_household_expenditure_income",
+        "source_name": "ABS household expenditure and income aggregate products"
+      },
+      {
+        "access_class": "public_manual_download",
+        "can_be_committed_to_repo": true,
+        "candidate_fields": [
+          "opfte_benchmarks",
+          "qlc_weights",
+          "sector_schedule_values"
+        ],
+        "candidate_modules": [
+          "sector_schedules",
+          "sector_stress_matrix",
+          "core_formula_model"
+        ],
+        "claim_level": "placeholder_anchor_only",
+        "data_status": "real_public_data_candidate",
+        "licence_or_access_notes": "Public aggregate source and licence to be checked before loading.",
+        "main_use": "Wage and hours anchor candidate",
+        "must_not_be_used_for": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "privacy_or_confidentiality_risk": "low_public_aggregate_only",
+        "public_url_required_later": true,
+        "publisher": "Australian Bureau of Statistics",
+        "requires_external_access_process": false,
+        "review_required": [
+          "statistical_methods_reviewer",
+          "economic_methods_reviewer"
+        ],
+        "source_category": "labour_cost_public_aggregate",
+        "source_id": "abs_industry_wages_hours",
+        "source_name": "ABS industry employment wages and hours aggregates"
+      },
+      {
+        "access_class": "public_open",
+        "can_be_committed_to_repo": true,
+        "candidate_fields": [
+          "opfte_benchmarks",
+          "hle_assumptions",
+          "qlc_weights"
+        ],
+        "candidate_modules": [
+          "core_formula_model",
+          "sector_schedules",
+          "household_weighting"
+        ],
+        "claim_level": "sanity_check_only",
+        "data_status": "real_public_data_candidate",
+        "licence_or_access_notes": "Public aggregate source reference to be checked before any Build 27 loading.",
+        "main_use": "Public aggregate labour sanity-check candidate",
+        "must_not_be_used_for": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "privacy_or_confidentiality_risk": "low_public_aggregate_only",
+        "public_url_required_later": true,
+        "publisher": "Australian Bureau of Statistics",
+        "requires_external_access_process": false,
+        "review_required": [
+          "statistical_methods_reviewer",
+          "technical_reviewer"
+        ],
+        "source_category": "labour_market_public_aggregate",
+        "source_id": "abs_labour_force",
+        "source_name": "ABS labour force and employment aggregates"
+      },
+      {
+        "access_class": "public_manual_download",
+        "can_be_committed_to_repo": true,
+        "candidate_fields": [
+          "aava_deductibility_treatment",
+          "fiscal_trajectory_assumptions"
+        ],
+        "candidate_modules": [
+          "core_formula_model",
+          "fiscal_trajectory",
+          "investment_incidence"
+        ],
+        "claim_level": "sanity_check_only",
+        "data_status": "real_public_data_candidate",
+        "licence_or_access_notes": "Public table candidate; do not infer confidential taxpayer records.",
+        "main_use": "Public corporate-tax aggregate sanity-check candidate",
+        "must_not_be_used_for": [
+          "taxpayer record",
+          "actual tax payable",
+          "compliance score",
+          "calibration completed"
+        ],
+        "privacy_or_confidentiality_risk": "medium_public_entity_overread_risk",
+        "public_url_required_later": true,
+        "publisher": "Australian Taxation Office",
+        "requires_external_access_process": false,
+        "review_required": [
+          "tax_reviewer",
+          "ato_methods_reviewer",
+          "privacy_reviewer"
+        ],
+        "source_category": "tax_public_aggregate_or_public_entity_table",
+        "source_id": "ato_corporate_tax_transparency",
+        "source_name": "ATO corporate tax transparency public data"
+      },
+      {
+        "access_class": "public_manual_download",
+        "can_be_committed_to_repo": true,
+        "candidate_fields": [
+          "payg_erosion_assumptions",
+          "fiscal_trajectory_assumptions",
+          "superannuation_contribution_pressure"
+        ],
+        "candidate_modules": [
+          "fiscal_trajectory",
+          "payment_interactions",
+          "transition_funding"
+        ],
+        "claim_level": "sanity_check_only",
+        "data_status": "real_public_data_candidate",
+        "licence_or_access_notes": "Aggregate statistics only; no taxpayer records.",
+        "main_use": "Public tax aggregate plausibility checks",
+        "must_not_be_used_for": [
+          "taxpayer-level inference",
+          "actual tax payable",
+          "calibration completed"
+        ],
+        "privacy_or_confidentiality_risk": "low_public_aggregate_only",
+        "public_url_required_later": true,
+        "publisher": "Australian Taxation Office",
+        "requires_external_access_process": false,
+        "review_required": [
+          "tax_reviewer",
+          "treasury_methods_reviewer",
+          "ato_methods_reviewer"
+        ],
+        "source_category": "tax_public_aggregate",
+        "source_id": "ato_taxation_statistics",
+        "source_name": "ATO taxation statistics aggregate tables"
+      },
+      {
+        "access_class": "confidential_or_prohibited",
+        "can_be_committed_to_repo": false,
+        "candidate_fields": [
+          "aava_deductibility_treatment",
+          "transfer_pricing_review_shares",
+          "grouped_entity_attribution"
+        ],
+        "candidate_modules": [
+          "core_formula_model",
+          "transfer_pricing_preview",
+          "administrative_workflow"
+        ],
+        "claim_level": "forbidden_for_model_use",
+        "data_status": "forbidden_repo_data",
+        "licence_or_access_notes": "Confidential taxpayer records are forbidden repo data.",
+        "main_use": "Forbidden in repo; external legal authorisation would be required elsewhere",
+        "must_not_be_used_for": [
+          "repo data",
+          "tests",
+          "calibration completed"
+        ],
+        "privacy_or_confidentiality_risk": "prohibited_taxpayer_records",
+        "public_url_required_later": false,
+        "publisher": "Australian Taxation Office restricted records",
+        "requires_external_access_process": true,
+        "review_required": [
+          "legal_reviewer",
+          "tax_reviewer",
+          "privacy_reviewer",
+          "ato_methods_reviewer"
+        ],
+        "source_category": "confidential_taxpayer_data",
+        "source_id": "ato_taxpayer_records",
+        "source_name": "ATO taxpayer records"
+      },
+      {
+        "access_class": "government_internal_only",
+        "can_be_committed_to_repo": false,
+        "candidate_fields": [
+          "welfare_payment_interaction_assumptions",
+          "transition_payment_assumptions"
+        ],
+        "candidate_modules": [
+          "payment_interactions",
+          "transition_funding"
+        ],
+        "claim_level": "external_review_only",
+        "data_status": "restricted_data_required",
+        "licence_or_access_notes": "Restricted administrative records must not be stored in this repo.",
+        "main_use": "Restricted welfare calibration would require authorised external system",
+        "must_not_be_used_for": [
+          "repo data",
+          "welfare validation",
+          "calibration completed"
+        ],
+        "privacy_or_confidentiality_risk": "very_high_person_level_records",
+        "public_url_required_later": false,
+        "publisher": "DSS or Services Australia restricted records",
+        "requires_external_access_process": true,
+        "review_required": [
+          "privacy_reviewer",
+          "welfare_policy_reviewer",
+          "legal_reviewer"
+        ],
+        "source_category": "government_restricted_payment_data",
+        "source_id": "dss_services_payment_data",
+        "source_name": "DSS and Services Australia payment data"
+      },
+      {
+        "access_class": "public_open",
+        "can_be_committed_to_repo": true,
+        "candidate_fields": [
+          "qlc_weights",
+          "hle_assumptions",
+          "opfte_benchmarks"
+        ],
+        "candidate_modules": [
+          "core_formula_model",
+          "sector_schedules"
+        ],
+        "claim_level": "placeholder_anchor_only",
+        "data_status": "real_public_data_candidate",
+        "licence_or_access_notes": "Public wage anchors only; review source terms before loading.",
+        "main_use": "Realistic wage-band placeholder anchor candidate",
+        "must_not_be_used_for": [
+          "legal wage sufficiency",
+          "tax advice",
+          "calibration completed"
+        ],
+        "privacy_or_confidentiality_risk": "low_public_threshold_only",
+        "public_url_required_later": true,
+        "publisher": "Fair Work Ombudsman or Fair Work Commission public sources",
+        "requires_external_access_process": false,
+        "review_required": [
+          "legal_reviewer",
+          "statistical_methods_reviewer"
+        ],
+        "source_category": "wage_public_threshold",
+        "source_id": "fair_work_awards",
+        "source_name": "Fair Work award and wage classification data"
+      },
+      {
+        "access_class": "public_open",
+        "can_be_committed_to_repo": true,
+        "candidate_fields": [
+          "help_hecs_repayment_pressure",
+          "payment_interaction_assumptions"
+        ],
+        "candidate_modules": [
+          "payment_interactions",
+          "household_distributional"
+        ],
+        "claim_level": "placeholder_anchor_only",
+        "data_status": "real_public_data_candidate",
+        "licence_or_access_notes": "Public thresholds only; no borrower records.",
+        "main_use": "Public repayment threshold anchor candidate",
+        "must_not_be_used_for": [
+          "individual repayment estimate",
+          "welfare validation",
+          "calibration completed"
+        ],
+        "privacy_or_confidentiality_risk": "low_public_setting_only",
+        "public_url_required_later": true,
+        "publisher": "Australian Government public sources",
+        "requires_external_access_process": false,
+        "review_required": [
+          "welfare_policy_reviewer",
+          "legal_reviewer"
+        ],
+        "source_category": "public_threshold_setting",
+        "source_id": "help_hecs_thresholds",
+        "source_name": "HELP HECS repayment public threshold data"
+      },
+      {
+        "access_class": "licence_required",
+        "can_be_committed_to_repo": false,
+        "candidate_fields": [
+          "household_weighting_assumptions",
+          "welfare_payment_interaction_assumptions"
+        ],
+        "candidate_modules": [
+          "household_weighting",
+          "payment_interactions",
+          "uncertainty_ranges"
+        ],
+        "claim_level": "external_review_only",
+        "data_status": "restricted_data_required",
+        "licence_or_access_notes": "Licensed microdata must not be committed to this repo.",
+        "main_use": "Restricted household calibration would require authorised external environment",
+        "must_not_be_used_for": [
+          "repo data",
+          "public release",
+          "calibration completed"
+        ],
+        "privacy_or_confidentiality_risk": "high_microdata_restriction",
+        "public_url_required_later": false,
+        "publisher": "Melbourne Institute restricted/licensed access",
+        "requires_external_access_process": true,
+        "review_required": [
+          "privacy_reviewer",
+          "statistical_methods_reviewer",
+          "welfare_policy_reviewer"
+        ],
+        "source_category": "household_microdata",
+        "source_id": "hilda_microdata",
+        "source_name": "HILDA microdata"
+      },
+      {
+        "access_class": "public_manual_download",
+        "can_be_committed_to_repo": false,
+        "candidate_fields": [
+          "sector_schedule_values",
+          "sector_stress_metadata_bands",
+          "automation_intensity_components"
+        ],
+        "candidate_modules": [
+          "sector_schedules",
+          "sector_stress_matrix"
+        ],
+        "claim_level": "inventory_only",
+        "data_status": "real_public_data_candidate",
+        "licence_or_access_notes": "Source terms vary; reference rather than commit until reviewed.",
+        "main_use": "Sector context candidate",
+        "must_not_be_used_for": [
+          "official sector ranking",
+          "economic validation",
+          "calibration completed"
+        ],
+        "privacy_or_confidentiality_risk": "medium_source_quality_overread_risk",
+        "public_url_required_later": true,
+        "publisher": "Industry associations",
+        "requires_external_access_process": false,
+        "review_required": [
+          "economic_methods_reviewer",
+          "legal_reviewer"
+        ],
+        "source_category": "public_industry_document",
+        "source_id": "industry_association_reports",
+        "source_name": "Industry association public reports"
+      },
+      {
+        "access_class": "public_open",
+        "can_be_committed_to_repo": true,
+        "candidate_fields": [
+          "opfte_benchmarks",
+          "sector_schedule_values",
+          "sector_stress_metadata_bands"
+        ],
+        "candidate_modules": [
+          "sector_schedules",
+          "sector_stress_matrix"
+        ],
+        "claim_level": "sanity_check_only",
+        "data_status": "real_public_data_candidate",
+        "licence_or_access_notes": "Public aggregate candidate; method review before loading.",
+        "main_use": "Labour market plausibility candidate",
+        "must_not_be_used_for": [
+          "official sector ranking",
+          "labour market forecast",
+          "calibration completed"
+        ],
+        "privacy_or_confidentiality_risk": "low_public_aggregate_only",
+        "public_url_required_later": true,
+        "publisher": "Jobs and Skills Australia",
+        "requires_external_access_process": false,
+        "review_required": [
+          "statistical_methods_reviewer",
+          "economic_methods_reviewer"
+        ],
+        "source_category": "labour_market_public_aggregate",
+        "source_id": "jobs_skills_labour_market",
+        "source_name": "Jobs and Skills Australia public labour market data"
+      },
+      {
+        "access_class": "public_open",
+        "can_be_committed_to_repo": true,
+        "candidate_fields": [
+          "fiscal_trajectory_assumptions",
+          "transition_payment_assumptions"
+        ],
+        "candidate_modules": [
+          "fiscal_trajectory",
+          "transition_funding"
+        ],
+        "claim_level": "inventory_only",
+        "data_status": "real_public_data_candidate",
+        "licence_or_access_notes": "Public documents only; no confidential costing material.",
+        "main_use": "Public fiscal-method context candidate",
+        "must_not_be_used_for": [
+          "PBO validation",
+          "official costing",
+          "calibration completed"
+        ],
+        "privacy_or_confidentiality_risk": "low_public_document_only",
+        "public_url_required_later": true,
+        "publisher": "Parliamentary Budget Office",
+        "requires_external_access_process": false,
+        "review_required": [
+          "treasury_methods_reviewer",
+          "policy_reviewer"
+        ],
+        "source_category": "fiscal_public_document",
+        "source_id": "pbo_public_costings",
+        "source_name": "PBO public costing and budget analysis material"
+      },
+      {
+        "access_class": "public_manual_download",
+        "can_be_committed_to_repo": false,
+        "candidate_fields": [
+          "aava_deductibility_treatment",
+          "automation_intensity_components",
+          "investment_incidence_assumptions"
+        ],
+        "candidate_modules": [
+          "investment_incidence",
+          "sector_stress_matrix",
+          "behavioural_response"
+        ],
+        "claim_level": "inventory_only",
+        "data_status": "real_public_data_candidate",
+        "licence_or_access_notes": "Public documents may be source-referenced; copying/licence review required before committing extracts.",
+        "main_use": "Qualitative public-document feasibility candidate",
+        "must_not_be_used_for": [
+          "firm-level liability",
+          "real firm data",
+          "calibration completed"
+        ],
+        "privacy_or_confidentiality_risk": "medium_entity_overread_risk",
+        "public_url_required_later": true,
+        "publisher": "Public companies and exchanges",
+        "requires_external_access_process": false,
+        "review_required": [
+          "legal_reviewer",
+          "economic_methods_reviewer",
+          "technical_reviewer"
+        ],
+        "source_category": "public_company_document",
+        "source_id": "public_company_reports",
+        "source_name": "Public listed-company annual reports"
+      },
+      {
+        "access_class": "government_internal_only",
+        "can_be_committed_to_repo": false,
+        "candidate_fields": [
+          "welfare_payment_interaction_assumptions",
+          "household_distributional_scenario_assumptions"
+        ],
+        "candidate_modules": [
+          "payment_interactions",
+          "household_distributional"
+        ],
+        "claim_level": "forbidden_for_model_use",
+        "data_status": "forbidden_repo_data",
+        "licence_or_access_notes": "Person-level administrative records are forbidden repo data.",
+        "main_use": "Forbidden in repo; external lawful authorisation required elsewhere",
+        "must_not_be_used_for": [
+          "repo data",
+          "tests",
+          "welfare validation"
+        ],
+        "privacy_or_confidentiality_risk": "prohibited_person_level_records",
+        "public_url_required_later": false,
+        "publisher": "Services Australia restricted records",
+        "requires_external_access_process": true,
+        "review_required": [
+          "privacy_reviewer",
+          "legal_reviewer",
+          "welfare_policy_reviewer"
+        ],
+        "source_category": "government_internal_person_records",
+        "source_id": "services_australia_records",
+        "source_name": "Services Australia administrative records"
+      },
+      {
+        "access_class": "public_manual_download",
+        "can_be_committed_to_repo": true,
+        "candidate_fields": [
+          "state_payroll_tax_pressure",
+          "fiscal_trajectory_assumptions"
+        ],
+        "candidate_modules": [
+          "payment_interactions",
+          "fiscal_trajectory"
+        ],
+        "claim_level": "placeholder_anchor_only",
+        "data_status": "real_public_data_candidate",
+        "licence_or_access_notes": "Public thresholds only; review jurisdiction source terms before loading.",
+        "main_use": "Public threshold anchor candidate",
+        "must_not_be_used_for": [
+          "state tax advice",
+          "actual tax payable",
+          "calibration completed"
+        ],
+        "privacy_or_confidentiality_risk": "low_public_setting_only",
+        "public_url_required_later": true,
+        "publisher": "State and territory revenue offices",
+        "requires_external_access_process": false,
+        "review_required": [
+          "tax_reviewer",
+          "treasury_methods_reviewer"
+        ],
+        "source_category": "public_threshold_setting",
+        "source_id": "state_payroll_tax_thresholds",
+        "source_name": "State payroll tax public thresholds and rates"
+      },
+      {
+        "access_class": "public_open",
+        "can_be_committed_to_repo": true,
+        "candidate_fields": [
+          "superannuation_contribution_pressure",
+          "transition_payment_assumptions"
+        ],
+        "candidate_modules": [
+          "payment_interactions",
+          "transition_funding"
+        ],
+        "claim_level": "placeholder_anchor_only",
+        "data_status": "real_public_data_candidate",
+        "licence_or_access_notes": "Public settings only; no member records.",
+        "main_use": "Public threshold placeholder anchor candidate",
+        "must_not_be_used_for": [
+          "ATO guidance",
+          "individual estimate",
+          "calibration completed"
+        ],
+        "privacy_or_confidentiality_risk": "low_public_setting_only",
+        "public_url_required_later": true,
+        "publisher": "ATO public guidance or legislation reference sources",
+        "requires_external_access_process": false,
+        "review_required": [
+          "tax_reviewer",
+          "welfare_policy_reviewer"
+        ],
+        "source_category": "public_threshold_setting",
+        "source_id": "super_guarantee_settings",
+        "source_name": "Superannuation Guarantee public rate and contribution settings"
+      },
+      {
+        "access_class": "public_open",
+        "can_be_committed_to_repo": true,
+        "candidate_fields": [
+          "fiscal_trajectory_assumptions",
+          "transition_payment_assumptions",
+          "ael_arl_rate_settings"
+        ],
+        "candidate_modules": [
+          "fiscal_trajectory",
+          "transition_funding",
+          "release_candidate_pack"
+        ],
+        "claim_level": "sanity_check_only",
+        "data_status": "real_public_data_candidate",
+        "licence_or_access_notes": "Public budget aggregates only; no confidential Treasury material.",
+        "main_use": "Public fiscal aggregate sanity-check candidate",
+        "must_not_be_used_for": [
+          "Treasury modelling",
+          "official costing",
+          "calibration completed"
+        ],
+        "privacy_or_confidentiality_risk": "low_public_aggregate_only",
+        "public_url_required_later": true,
+        "publisher": "Treasury",
+        "requires_external_access_process": false,
+        "review_required": [
+          "treasury_methods_reviewer",
+          "economic_methods_reviewer"
+        ],
+        "source_category": "fiscal_public_aggregate",
+        "source_id": "treasury_budget_papers",
+        "source_name": "Budget papers and Treasury public fiscal aggregates"
+      }
+    ],
+    "status": "feasibility_and_calibration_intake_map_only_no_real_data_loaded",
+    "summary": {
+      "approval_claimed": false,
+      "build_27_ready_candidates": 8,
+      "fields_public_calibration_possible": 0,
+      "fields_public_sanity_check_possible": 26,
+      "fields_requiring_restricted_data": 14,
+      "firm_level_confidential_data_loaded": false,
+      "firm_level_liability_logic_modified": false,
+      "forbidden_repo_sources": 7,
+      "household_microdata_loaded": false,
+      "legal_sufficiency_claimed": false,
+      "official_status_claimed": false,
+      "operational_readiness_claimed": false,
+      "placeholders_labelled": true,
+      "public_data_pilot_ready": true,
+      "public_source_candidates": 15,
+      "real_calibration_completed": false,
+      "real_data_loaded": false,
+      "realistic_placeholders_created": true,
+      "restricted_data_loaded": false,
+      "restricted_source_candidates": 5,
+      "taxpayer_data_loaded": false,
+      "total_calibration_fields": 33,
+      "total_forbidden_data_rules": 17,
+      "total_public_data_pilot_candidates": 8,
+      "total_realistic_placeholders": 10,
+      "total_source_candidates": 20,
+      "validation_claimed": false
+    },
+    "warnings": [
+      "No real data has been loaded by Build 26.",
+      "Realistic placeholders remain labelled placeholders and are not calibrated data.",
+      "Build 25 sealed the prior RC state; a later sealed RC must rerun the integrity seal if Build 26 is included."
+    ]
+  },
+  "summary": {
+    "approval_claimed": false,
+    "build_27_ready_candidates": 8,
+    "fields_public_calibration_possible": 0,
+    "fields_public_sanity_check_possible": 26,
+    "fields_requiring_restricted_data": 14,
+    "firm_level_confidential_data_loaded": false,
+    "firm_level_liability_logic_modified": false,
+    "forbidden_repo_sources": 7,
+    "household_microdata_loaded": false,
+    "legal_sufficiency_claimed": false,
+    "official_status_claimed": false,
+    "operational_readiness_claimed": false,
+    "placeholders_labelled": true,
+    "public_data_pilot_ready": true,
+    "public_source_candidates": 15,
+    "real_calibration_completed": false,
+    "real_data_loaded": false,
+    "realistic_placeholders_created": true,
+    "restricted_data_loaded": false,
+    "restricted_source_candidates": 5,
+    "taxpayer_data_loaded": false,
+    "total_calibration_fields": 33,
+    "total_forbidden_data_rules": 17,
+    "total_public_data_pilot_candidates": 8,
+    "total_realistic_placeholders": 10,
+    "total_source_candidates": 20,
+    "validation_claimed": false
+  }
+}

@@ -28,7 +28,9 @@
     "reports/external_review_attack_pack.md",
     "reports/external_review_attack_pack.json",
     "reports/v1_5_final_rc_integrity_seal.md",
-    "reports/v1_5_final_rc_integrity_seal.json"
+    "reports/v1_5_final_rc_integrity_seal.json",
+    "reports/real_data_feasibility.md",
+    "reports/real_data_feasibility.json"
   ],
   "attack_pack_summary": {
     "review_tracks": 12,
@@ -48,6 +50,8 @@
     "welfare_validation_claimed": false,
     "statistical_validation_claimed": false,
     "official_status_claimed": false,
+    "real_calibration_completed": false,
+    "real_data_loaded": false,
     "firm_level_liability_logic_modified": false
   }
 }

@@ -163,6 +163,7 @@ Status: private research prototype.
 - How the V1.5 release-candidate pack should be kept current as the working paper, generated reports, release documents, calibration blockers, non-claim boundaries, and external-review routing change without implying approval, validation, readiness, official status, legal sufficiency, or operational readiness.
 - How external review attack-pack prompts should be kept current as new reports, release documents, blockers, and non-claim boundaries change without implying completed review, approval, validation, legal sufficiency, operational readiness, official status, or real-world readiness.
 - How the final RC integrity seal should be regenerated and checked whenever release documents, attack-pack documents, reports, manifests, scripts, CI runners, or non-claim boundaries change without implying approval, validation, external review completion, readiness, legal sufficiency, official status, or implementation readiness.
+- How the real-data feasibility map should guide a future public aggregate-data pilot without loading real datasets, completing calibration, weakening restricted-data boundaries, or implying CARSF works as a real tax model.
 - Whether software and digital platforms can be scheduled without resolving intangible asset and capital-base treatment.
 - Whether prototype review states are too permissive, too strict, or misleading to non-technical readers.
 - Open-source AI treatment.
@@ -202,3 +203,4 @@ Status: private research prototype.
 - Whether behavioural response simulation makes gaming pathways visible without implying observed conduct, behavioural elasticity, ATO audit logic, or real compliance-risk scoring.
 - Whether administrative workflow routing helps organise prototype review states without implying endorsed ATO processes, enforcement, statutory powers, notices, penalties, or compliance scoring.
 - Whether the calibration shell is missing datasets needed for credible policy modelling.
+- Whether the real-data feasibility and calibration-intake map correctly separates public aggregate candidates, restricted-data requirements, realistic placeholders, synthetic fixtures, forbidden repo data, and Build 27 pilot candidates without implying calibration, validation, official status, or firm-level liability changes.

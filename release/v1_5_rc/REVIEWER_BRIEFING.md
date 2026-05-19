@@ -87,3 +87,11 @@ The attack pack gives reviewer-specific challenge questions and failure modes. I
 Inspect next: `release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.md` and `reports/v1_5_final_rc_integrity_seal.md`.
 
 The integrity seal checks internal artefact presence, manifest alignment, report availability, non-claim boundaries, digest metadata, repo guardrail expectations, CI expectations, and false readiness/legal/validation flags. It is an internal integrity seal only and does not mean approval, validation, external review completion, operational readiness, legal sufficiency, legislative readiness, official status, a readiness score, a maturity score, or firm-level CARSF liability modification.
+
+## Real-Data Feasibility Reviewer
+
+Inspect next: `reports/real_data_feasibility.md`, `data/calibration/real_data_feasibility_map.yaml`, and `docs/real_data_feasibility.md`.
+
+Key risks: public-data candidates may be mistaken for loaded datasets; realistic placeholders may be mistaken for real data; restricted-data requirements may be mistaken for access approval. No real data has been loaded, no calibration has occurred, and Build 26 does not show that CARSF works as a real tax model.
+
+External review required: source licensing, privacy, statistical methods, legal, tax, Treasury methods, ATO methods, and forbidden-data guardrails.

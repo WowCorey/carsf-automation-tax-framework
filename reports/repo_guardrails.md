@@ -1,6 +1,6 @@
 # CARSF V1.5 Repository Guardrails
 
-Generated at: `2026-05-18T11:06:35+00:00`
+Generated at: `2026-05-19T00:03:12+00:00`
 
 ## A. Purpose
 
@@ -14,8 +14,8 @@ This report runs prototype repository-level guardrails for likely evidence leaks
 
 ## C. Files Scanned/Skipped
 
-- Files scanned: 438
-- Files skipped: 2468
+- Files scanned: 446
+- Files skipped: 2594
 - Clean: true
 
 ## D. Denied Findings
@@ -32,6 +32,7 @@ This report runs prototype repository-level guardrails for likely evidence leaks
 | CONTRIBUTING.md | low | documented_marker_example | N/A | Documentation/test file contains marker examples: API_KEY. |
 | README.md | low | documented_marker_example | N/A | Documentation/test file contains marker examples: REAL_TAXPAYER, SECRET. |
 | data/README.md | low | documented_marker_example | N/A | Documentation/test file contains marker examples: REAL_BUSINESS_RECORD, REAL_TAXPAYER, TAX_FILE_NUMBER. |
+| data/calibration/real_data_feasibility_map.yaml | low | documented_marker_example | N/A | Documentation/test file contains marker examples: ABN, PAYSLIP, SECRET, TAX_FILE_NUMBER, TFN. |
 | data/mock_ingestion_requests/allowed_mock_evidence_request.yaml | low | allowlisted_synthetic_marker | N/A | Synthetic mock fixture contains controlled marker terms: SECRET. |
 | data/mock_ingestion_requests/denied_non_synthetic_evidence_request.yaml | low | allowlisted_synthetic_marker | N/A | Synthetic mock fixture contains controlled marker terms: SECRET. |
 | data/mock_ingestion_requests/denied_real_business_record_request.yaml | low | allowlisted_synthetic_marker | N/A | Synthetic mock fixture contains controlled marker terms: ABN, SECRET. |

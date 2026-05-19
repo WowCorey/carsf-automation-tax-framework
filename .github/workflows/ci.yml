@@ -71,6 +71,9 @@ jobs:
       - name: Run V1.5 final RC integrity seal
         run: python scripts/run_v1_5_final_rc_integrity_seal.py
 
+      - name: Run real data feasibility
+        run: python scripts/run_real_data_feasibility.py
+
       - name: Run mock evidence workflow
         run: python scripts/run_evidence_workflow.py
 

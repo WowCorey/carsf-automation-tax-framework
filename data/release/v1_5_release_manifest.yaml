@@ -895,11 +895,57 @@ prototype_layers:
       - policy_reviewer
       - hostile_red_team_reviewer
     main_reason: Seal verifies internal artefact consistency only.
+  - layer_id: real_data_feasibility
+    layer_name: Real Data Feasibility and Calibration Intake Map
+    layer_group: calibration
+    summary: Feasibility map for public aggregate data candidates, restricted-data requirements, realistic placeholders, forbidden repo data, module needs, and Build 27 pilot candidates.
+    primary_files:
+      - model/carsf/real_data_feasibility.py
+      - data/calibration/real_data_feasibility_map.yaml
+      - scripts/run_real_data_feasibility.py
+      - docs/real_data_feasibility.md
+    primary_reports:
+      - reports/real_data_feasibility.md
+      - reports/real_data_feasibility.json
+    streamlit_pages: []
+    status_labels:
+      - prototype_only
+      - placeholder_only
+      - generated_report_available
+      - calibration_required
+      - external_review_required
+      - not_for_real_world_use
+    non_claim_flags:
+      - not_real_data
+      - not_calibrated
+      - not_statistical_validation
+      - not_operational_readiness
+      - not_official_status
+    calibration_blockers:
+      - No real data has been loaded and no calibration has occurred.
+      - Public-data candidates require licence, provenance, and aggregate-only review before any Build 27 pilot.
+    external_review_blockers:
+      - Technical, privacy, statistical, legal, tax, Treasury-methods, and ATO-methods review remain required.
+    must_not_be_used_for:
+      - real data loaded
+      - calibration completed
+      - validation
+      - official status
+      - actual tax payable
+    recommended_reviewer:
+      - technical_reviewer
+      - privacy_reviewer
+      - statistical_methods_reviewer
+      - treasury_methods_reviewer
+      - ato_methods_reviewer
+    main_reason: Build 26 maps feasibility only and does not load data.
 generated_reports:
   - {report_path: reports/v1_5_release_candidate_pack.md, layer_id: release_candidate_pack, generated_by: python scripts/run_v1_5_release_candidate_pack.py, what_it_shows: release-candidate pack summary, what_it_does_not_show: no readiness score or official status, primary_non_claim: release packaging only, recommended_reviewer: [policy_reviewer, technical_reviewer], suggested_read_order: 2, optional: true}
   - {report_path: reports/v1_5_release_candidate_pack.json, layer_id: release_candidate_pack, generated_by: python scripts/run_v1_5_release_candidate_pack.py, what_it_shows: release-candidate pack data, what_it_does_not_show: no readiness score or official status, primary_non_claim: release packaging only, recommended_reviewer: [technical_reviewer], suggested_read_order: 2, optional: true}
   - {report_path: reports/v1_5_final_rc_integrity_seal.md, layer_id: final_rc_integrity_seal, generated_by: python scripts/run_v1_5_final_rc_integrity_seal.py, what_it_shows: internal artefact integrity seal, what_it_does_not_show: approval validation external review completion readiness legal sufficiency official status or liability change, primary_non_claim: internal integrity seal only, recommended_reviewer: [technical_reviewer, policy_reviewer, hostile_red_team_reviewer], suggested_read_order: 3, optional: true}
   - {report_path: reports/v1_5_final_rc_integrity_seal.json, layer_id: final_rc_integrity_seal, generated_by: python scripts/run_v1_5_final_rc_integrity_seal.py, what_it_shows: machine-readable seal checks and false flags, what_it_does_not_show: approval validation external review completion readiness legal sufficiency official status or liability change, primary_non_claim: internal integrity seal only, recommended_reviewer: [technical_reviewer], suggested_read_order: 3, optional: true}
+  - {report_path: reports/real_data_feasibility.md, layer_id: real_data_feasibility, generated_by: python scripts/run_real_data_feasibility.py, what_it_shows: public data candidates restricted data needs placeholders forbidden repo data and pilot readiness, what_it_does_not_show: real data loaded calibration completed validation official status or tax model proof, primary_non_claim: feasibility map only, recommended_reviewer: [technical_reviewer, privacy_reviewer, statistical_methods_reviewer], suggested_read_order: 4, optional: true}
+  - {report_path: reports/real_data_feasibility.json, layer_id: real_data_feasibility, generated_by: python scripts/run_real_data_feasibility.py, what_it_shows: machine-readable feasibility registry and summary flags, what_it_does_not_show: real data loaded calibration completed validation official status or tax model proof, primary_non_claim: feasibility map only, recommended_reviewer: [technical_reviewer], suggested_read_order: 4, optional: true}
   - {report_path: reports/example_results.md, layer_id: worked_examples, generated_by: python scripts/run_examples.py, what_it_shows: worked example formula outputs, what_it_does_not_show: calibrated firm outcomes, primary_non_claim: prototype placeholders only, recommended_reviewer: [technical_reviewer, policy_reviewer], suggested_read_order: 5}
   - {report_path: reports/example_results.json, layer_id: worked_examples, generated_by: python scripts/run_examples.py, what_it_shows: machine-readable worked example outputs, what_it_does_not_show: calibrated firm outcomes, primary_non_claim: prototype placeholders only, recommended_reviewer: [technical_reviewer], suggested_read_order: 5}
   - {report_path: reports/grouped_entity_results.md, layer_id: worked_examples, generated_by: python scripts/run_examples.py, what_it_shows: grouped-entity preview outputs, what_it_does_not_show: legal grouping results, primary_non_claim: non-operative preview only, recommended_reviewer: [legal_reviewer, tax_reviewer], suggested_read_order: 6}

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-05-18T11:06:35+00:00",
+    "generated_at": "2026-05-19T00:03:12+00:00",
     "non_claims": [
       "These are prototype repository guardrails only. They are not a complete DLP system, secret scanner, cybersecurity control, legal/privacy audit, Treasury control, ATO control, or forensic validation.",
       "These are prototype repository guardrails only.",
@@ -82,8 +82,8 @@
   "result": {
     "clean": true,
     "denied_findings": [],
-    "files_scanned": 438,
-    "files_skipped": 2468,
+    "files_scanned": 446,
+    "files_skipped": 2594,
     "findings": [
       {
         "allowlisted": true,
@@ -126,6 +126,17 @@
         "line_number": null,
         "message": "Documentation/test file contains marker examples: REAL_BUSINESS_RECORD, REAL_TAXPAYER, TAX_FILE_NUMBER.",
         "path": "data/README.md",
+        "reason": "Allowed as documented scanner examples in docs/tests only.",
+        "severity": "low"
+      },
+      {
+        "allowlisted": true,
+        "deny": false,
+        "finding_id": "documented_marker_example:data/calibration/real_data_feasibility_map.yaml:0",
+        "finding_type": "documented_marker_example",
+        "line_number": null,
+        "message": "Documentation/test file contains marker examples: ABN, PAYSLIP, SECRET, TAX_FILE_NUMBER, TFN.",
+        "path": "data/calibration/real_data_feasibility_map.yaml",
         "reason": "Allowed as documented scanner examples in docs/tests only.",
         "severity": "low"
       },
@@ -715,6 +726,17 @@
         "line_number": null,
         "message": "Documentation/test file contains marker examples: REAL_BUSINESS_RECORD, REAL_TAXPAYER, TAX_FILE_NUMBER.",
         "path": "data/README.md",
+        "reason": "Allowed as documented scanner examples in docs/tests only.",
+        "severity": "low"
+      },
+      {
+        "allowlisted": true,
+        "deny": false,
+        "finding_id": "documented_marker_example:data/calibration/real_data_feasibility_map.yaml:0",
+        "finding_type": "documented_marker_example",
+        "line_number": null,
+        "message": "Documentation/test file contains marker examples: ABN, PAYSLIP, SECRET, TAX_FILE_NUMBER, TFN.",
+        "path": "data/calibration/real_data_feasibility_map.yaml",
         "reason": "Allowed as documented scanner examples in docs/tests only.",
         "severity": "low"
       },

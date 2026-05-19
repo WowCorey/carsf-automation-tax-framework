@@ -19,6 +19,7 @@ Suggested routing is review navigation only and is not an official process.
 | Parliamentary Counsel | legislative architecture skeleton and working paper | `reports/legislative_architecture.md`, `paper/CARSF_V1_5_WORKING.md` | Which areas must remain reserved for external drafting counsel? |
 | Cybersecurity / DLP / repository controls | ingestion controls and repo guardrails | `reports/secure_ingestion_controls.md`, `reports/repo_guardrails.md` | What external controls are required before any evidence-adjacent use? |
 | Hostile red-team | all boundary layers | `docs/known_risks.md`, `reports/executive_dashboard.md` | Where could a reader overclaim validation, readiness, official status, or real-world use? |
+| Real-data feasibility | data-source intake, forbidden-data rules, placeholder provenance, Build 27 pilot candidates | `reports/real_data_feasibility.md`, `docs/real_data_feasibility.md` | Are public-source licensing, aggregate-only handling, restricted-data exclusion, realistic-placeholder labels, and no-calibration boundaries strong enough? |
 
 ## Attack-Pack Routing Addendum
 
@@ -53,3 +54,9 @@ Required challenge:
 Non-claim:
 
 - The final RC integrity seal is not approval, not validation, not external review completion, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not a maturity score, not official status, and not an official review pathway. It does not determine actual tax payable or modify firm-level CARSF liability.
+
+## Build 26 Real-Data Feasibility Routing Addendum
+
+Build 26 does not load real data, does not complete calibration, and does not grant restricted-data access. Public-data candidates are not loaded datasets. Restricted-data requirements are not data access. Realistic placeholders are not real data and are not calibrated.
+
+Build 25 sealed the previous RC state. If Build 26 is included in a later sealed RC, the integrity seal must be regenerated for that later state rather than treated as already covering Build 26.

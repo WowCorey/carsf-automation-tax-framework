@@ -908,3 +908,30 @@ Limitations:
 - They are not approval, not validation, and do not mean external review has been completed.
 - They are not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not a maturity score, not official status, and not an official review pathway.
 - They do not determine actual tax payable, use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, or modify firm-level CARSF liability logic.
+
+## V1.5 Real Data Feasibility and Calibration Intake Map
+
+Branch: `v1.5-real-data-feasibility-calibration-intake-map`
+
+Baseline: Build 25 final RC integrity seal merged into `main`.
+
+Purpose of this build:
+
+- Add a real-data feasibility and calibration-intake map for the V1.5 release candidate.
+- Separate public aggregate data candidates, restricted-data requirements, realistic placeholders, synthetic fixtures, forbidden repo data, module data needs, calibration field needs, and public-data pilot candidates.
+- Add manifest, model validation, generated reports, tests, docs, and CI runner without loading real datasets or completing calibration.
+
+Reports generated:
+
+- `reports/real_data_feasibility.json`
+- `reports/real_data_feasibility.md`
+
+Limitations:
+
+- Real-data feasibility outputs are intake maps only.
+- No real data is loaded, no real datasets are committed, and no calibration has occurred.
+- Realistic placeholders are not real data and are not calibrated.
+- Public-data candidates are not loaded datasets; restricted-data requirements are not data access.
+- The build is not legal advice, tax advice, ATO guidance, Treasury modelling, economic validation, welfare validation, statistical validation, operational readiness, legal sufficiency, official status, or actual tax-payable determination.
+- It does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab microdata, HILDA microdata, DSS / Services Australia records, ATO taxpayer records, confidential Treasury/PBO material, or restricted government data.
+- It does not modify firm-level CARSF liability logic.

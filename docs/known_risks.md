@@ -88,4 +88,6 @@
 - The final RC integrity seal may create false comfort if readers treat internal artefact completeness, digest metadata, CI command expectations, or guardrail status as approval, validation, external review completion, operational readiness, legal sufficiency, official status, a readiness score, or implementation readiness.
 - Release-pack documents and manifests can become stale if generated reports, pages, blockers, or working-paper sections change without updating `data/release/v1_5_release_manifest.yaml` and `release/v1_5_rc/`.
 - Report maps and reviewer routing are navigation aids only and may omit reviewer needs that become visible during hostile external review.
+- The real-data feasibility map may create false comfort if readers treat public-data candidates as loaded datasets, realistic placeholders as real data, restricted-data requirements as access approval, or public aggregate sanity checks as calibration.
+- Build 25 sealed the previous RC state. Build 26 adds new artefacts; if those artefacts become part of a later sealed RC, the final RC integrity seal must be regenerated rather than described as already covering them.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.

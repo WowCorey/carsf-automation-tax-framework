@@ -37,8 +37,8 @@ x_common_questions:
     question_id: common_calibration_gap
     question: Are calibration blockers visible before numerical outputs are interpreted?
     attack_category: calibration_gap
-    target_layers: [core_formula_model, sector_schedules, uncertainty_ranges, calibration_shell]
-    target_reports: [reports/example_results.md, reports/sector_schedule_expansion.md, reports/uncertainty_ranges.md, reports/calibration_requirements.md]
+    target_layers: [core_formula_model, sector_schedules, uncertainty_ranges, calibration_shell, real_data_feasibility]
+    target_reports: [reports/example_results.md, reports/sector_schedule_expansion.md, reports/uncertainty_ranges.md, reports/calibration_requirements.md, reports/real_data_feasibility.md]
     why_it_matters: Placeholder values can look precise even when no external calibration has occurred.
     what_would_fail: Any report path where placeholders are easier to see than the missing calibration basis.
     required_evidence_or_review: Calibration-methods review, source-data plan, and blocker prominence review.
@@ -48,8 +48,8 @@ x_common_questions:
     question_id: common_real_data_boundary
     question: Does any path imply taxpayer-level, firm-level, industry, welfare, or government data was used?
     attack_category: data_access_gap
-    target_layers: [secure_ingestion, repo_guardrails, household_weighting, household_distributional]
-    target_reports: [reports/secure_ingestion_controls.md, reports/repo_guardrails.md, reports/household_weighting.md, reports/distributional_scenarios.md]
+    target_layers: [secure_ingestion, repo_guardrails, household_weighting, household_distributional, real_data_feasibility]
+    target_reports: [reports/secure_ingestion_controls.md, reports/repo_guardrails.md, reports/household_weighting.md, reports/distributional_scenarios.md, reports/real_data_feasibility.md]
     why_it_matters: The repository must remain synthetic-only and data-free.
     what_would_fail: Any committed artefact that looks like real evidence, restricted data, or government microdata.
     required_evidence_or_review: Repository guardrail review, secure-ingestion review, and privacy review.
@@ -140,6 +140,7 @@ prototype_layers:
   - uncertainty_ranges
   - reviewed_scenarios
   - calibration_shell
+  - real_data_feasibility
   - working_paper
   - status_risks_docs
 generated_reports:
@@ -189,6 +190,8 @@ generated_reports:
   - reports/uncertainty_ranges.json
   - reports/reviewed_scenarios.md
   - reports/reviewed_scenarios.json
+  - reports/real_data_feasibility.md
+  - reports/real_data_feasibility.json
 attack_categories:
   - overclaiming_risk
   - hidden_assumption_risk
@@ -301,8 +304,8 @@ review_tracks:
     reviewer_type: technical_reviewer
     purpose: Attack manifests, runners, generated artefacts, CI coverage, fail-closed tests, and guardrail bypasses.
     inspect_first: [data/release/v1_5_release_manifest.yaml, data/dashboard/executive_dashboard_manifest.yaml, .github/workflows/ci.yml]
-    relevant_layers: [repo_guardrails, executive_dashboard, release_candidate_pack, evidence_workflow, secure_ingestion]
-    relevant_reports: [reports/repo_guardrails.md, reports/executive_dashboard.md, reports/v1_5_release_candidate_pack.md, reports/secure_ingestion_controls.md]
+    relevant_layers: [repo_guardrails, executive_dashboard, release_candidate_pack, evidence_workflow, secure_ingestion, real_data_feasibility]
+    relevant_reports: [reports/repo_guardrails.md, reports/executive_dashboard.md, reports/v1_5_release_candidate_pack.md, reports/secure_ingestion_controls.md, reports/real_data_feasibility.md]
     core_attack_questions:
       - *q_overclaim
       - *q_calibration
@@ -711,8 +714,8 @@ review_tracks:
     reviewer_type: privacy_secrecy_reviewer
     purpose: Attack synthetic-only controls, secure ingestion, privacy/secrecy classification, retention, redaction, and restricted-data boundaries.
     inspect_first: [reports/secure_ingestion_controls.md, reports/repo_guardrails.md, docs/privacy_and_secrecy_classification.md]
-    relevant_layers: [secure_ingestion, repo_guardrails, evidence_workflow, household_weighting]
-    relevant_reports: [reports/secure_ingestion_controls.md, reports/repo_guardrails.md, reports/mock_evidence_workflow.md, reports/household_weighting.md]
+    relevant_layers: [secure_ingestion, repo_guardrails, evidence_workflow, household_weighting, real_data_feasibility]
+    relevant_reports: [reports/secure_ingestion_controls.md, reports/repo_guardrails.md, reports/mock_evidence_workflow.md, reports/household_weighting.md, reports/real_data_feasibility.md]
     core_attack_questions:
       - *q_overclaim
       - *q_calibration
@@ -793,8 +796,8 @@ review_tracks:
     reviewer_type: statistical_methods_reviewer
     purpose: Attack uncertainty ranges, weighting, subgroup metadata, reviewed-scenario suppression, and synthetic representativeness boundaries.
     inspect_first: [reports/uncertainty_ranges.md, reports/household_weighting.md, reports/reviewed_scenarios.md]
-    relevant_layers: [uncertainty_ranges, household_weighting, reviewed_scenarios, household_distributional]
-    relevant_reports: [reports/uncertainty_ranges.md, reports/household_weighting.md, reports/reviewed_scenarios.md, reports/distributional_scenarios.md]
+    relevant_layers: [uncertainty_ranges, household_weighting, reviewed_scenarios, household_distributional, real_data_feasibility]
+    relevant_reports: [reports/uncertainty_ranges.md, reports/household_weighting.md, reports/reviewed_scenarios.md, reports/distributional_scenarios.md, reports/real_data_feasibility.md]
     core_attack_questions:
       - *q_overclaim
       - *q_calibration
@@ -1281,8 +1284,8 @@ boundary_checks:
     boundary_question: Does any output imply real data was used?
     prohibited_affirmative_claims: [taxpayer-level real data, firm-level real data, industry real data]
     allowed_negative_warnings: [no taxpayer-level real data, no firm-level real data, no industry real data]
-    affected_layers: [secure_ingestion, repo_guardrails]
-    affected_reports: [reports/secure_ingestion_controls.md, reports/repo_guardrails.md]
+    affected_layers: [secure_ingestion, repo_guardrails, real_data_feasibility]
+    affected_reports: [reports/secure_ingestion_controls.md, reports/repo_guardrails.md, reports/real_data_feasibility.md]
     fail_closed_if_found: true
   - boundary_id: population_estimate_boundary
     boundary_question: Does any output imply population estimates?

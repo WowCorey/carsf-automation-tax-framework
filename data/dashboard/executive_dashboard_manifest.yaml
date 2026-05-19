@@ -876,6 +876,52 @@ layers:
       - approval
       - validation
       - operational readiness
+  - layer_id: real_data_feasibility
+    layer_name: Real Data Feasibility and Calibration Intake Map
+    layer_group: calibration
+    purpose: Feasibility map for public aggregate data candidates, restricted-data requirements, realistic placeholders, forbidden repo data, module needs, and Build 27 pilot candidates.
+    primary_files:
+      - model/carsf/real_data_feasibility.py
+      - data/calibration/real_data_feasibility_map.yaml
+      - scripts/run_real_data_feasibility.py
+      - docs/real_data_feasibility.md
+    primary_reports:
+      - reports/real_data_feasibility.md
+      - reports/real_data_feasibility.json
+    streamlit_pages: []
+    status_labels:
+      - implemented_prototype
+      - generated_report_available
+      - placeholder_only
+      - calibration_required
+      - external_review_required
+      - not_for_real_world_use
+    non_claim_flags:
+      - not_real_data
+      - not_statistical_validation
+      - not_economic_validation
+      - not_actual_tax_payable
+      - not_operational_readiness
+    calibration_blockers:
+      - No real data has been loaded and no calibration has occurred.
+      - Restricted-data requirements remain access blockers, not data access.
+    external_review_blockers:
+      - Public source licensing, aggregate-only handling, privacy, statistical methods, legal, tax, Treasury, and ATO-methods review remain required before Build 27 loading.
+    blocker_explanation: Feasibility mapping only; public-data candidates are not loaded datasets and realistic placeholders are not real data.
+    recommended_reviewer:
+      - technical_reviewer
+      - privacy_reviewer
+      - statistical_methods_reviewer
+      - treasury_methods_reviewer
+      - ato_methods_reviewer
+    read_order: 26
+    main_reason: Build 26 prepares a safe public-data pilot boundary without loading data.
+    must_not_be_used_for:
+      - real data loaded
+      - calibration completed
+      - validation
+      - official status
+      - actual tax payable
 report_entries:
   - report_path: reports/executive_dashboard.md
     layer_id: executive_dashboard
@@ -1199,6 +1245,22 @@ report_entries:
     must_not_be_used_for: [calibrated output, real-world validation, external data approval]
     linked_streamlit_page: simulator/pages/8_Evidence_and_Calibration.py
     recommended_read_order: 21
+  - report_path: reports/real_data_feasibility.md
+    layer_id: real_data_feasibility
+    report_type: markdown
+    generated_by: scripts/run_real_data_feasibility.py
+    interpretation_warning: Real-data feasibility is intake mapping only; no real data has been loaded and no calibration has occurred.
+    must_not_be_used_for: [real data loaded, calibration completed, validation, official status, actual tax payable]
+    linked_streamlit_page:
+    recommended_read_order: 26
+  - report_path: reports/real_data_feasibility.json
+    layer_id: real_data_feasibility
+    report_type: json
+    generated_by: scripts/run_real_data_feasibility.py
+    interpretation_warning: Machine-readable feasibility map only; public-data candidates are not loaded datasets.
+    must_not_be_used_for: [real data loaded, calibration completed, validation, official status, actual tax payable]
+    linked_streamlit_page:
+    recommended_read_order: 26
 forbidden_claims:
   - ready for government
   - ready for ATO
