@@ -935,3 +935,29 @@ Limitations:
 - The build is not legal advice, tax advice, ATO guidance, Treasury modelling, economic validation, welfare validation, statistical validation, operational readiness, legal sufficiency, official status, or actual tax-payable determination.
 - It does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab microdata, HILDA microdata, DSS / Services Australia records, ATO taxpayer records, confidential Treasury/PBO material, or restricted government data.
 - It does not modify firm-level CARSF liability logic.
+
+## V1.5 Public Data Pilot and Placeholder Anchor Layer
+
+Branch: `v1.5-public-data-pilot-placeholder-calibration-layer`
+
+Baseline: Build 26 real-data feasibility and calibration-intake map merged into `main`.
+
+Purpose of this build:
+
+- Add the first safe public aggregate-data pilot and realistic-placeholder anchor layer.
+- Separate loaded public aggregate extracts, source-reference-only records, realistic placeholders, synthetic fixtures, restricted-data blockers, and forbidden repo data.
+- Add source provenance, licence/access notes, field sanity checks, module sanity checks, digest metadata, reports, tests, docs, and CI runner.
+
+Reports generated:
+
+- `reports/public_data_pilot.json`
+- `reports/public_data_pilot.md`
+- `data/public_pilot/digests/public_data_pilot_digests.json`
+
+Limitations:
+
+- Public-data pilot outputs are sanity-check-only and placeholder-anchor-only records.
+- They are not calibration, public data extracts do not prove the model works, and realistic placeholders remain placeholders.
+- Source references are not loaded datasets and restricted-data requirements are not data access.
+- The build does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab microdata, HILDA microdata, DSS / Services Australia records, ATO taxpayer records, confidential Treasury/PBO material, restricted government data, real evidence, or unauthorised data.
+- It does not claim validation, approval, operational readiness, legal sufficiency, official status, or modify firm-level CARSF liability logic.

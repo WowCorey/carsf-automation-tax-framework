@@ -18,6 +18,10 @@ The generated attack-pack report builds the layer-by-layer matrix from the V1.5 
 
 `real_data_feasibility` is a layer attack target. Attack it for source classification drift, public-data pilot overread, restricted-data commit risk, realistic-placeholder provenance gaps, and any implication that feasibility mapping is complete, accepted, ready for operations, official, or a real tax model.
 
+## Build 27 Addition
+
+`public_data_pilot` is a layer attack target. Attack it for loaded-public-data provenance, source-reference-only boundaries, placeholder-anchor labelling, field/module sanity-check overread, restricted-data blockers, forbidden repo data protections, and digest metadata. It is not calibration, not validation, not approval, not actual tax payable, not official status, and not firm-level liability modification.
+
 ## What Not To Infer
 
 The matrix is not validation, not approval, not a maturity rating, and not official review.

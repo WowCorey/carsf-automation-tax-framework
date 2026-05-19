@@ -1,0 +1,41 @@
+{
+  "digests": [
+    {
+      "bytes": 23005,
+      "digest_scope": "public_data_pilot_integrity_metadata_only",
+      "path": "data/public_pilot/public_data_pilot_manifest.yaml",
+      "sha256": "423eca2ce99008084f4855bd627ab364ff0ed017196fb7b79df3b9e2a345ea55"
+    },
+    {
+      "bytes": 8071,
+      "digest_scope": "public_data_pilot_integrity_metadata_only",
+      "path": "data/public_pilot/extracts/public_aggregate_extracts.yaml",
+      "sha256": "f0326cd19adf509cf5dbde525f50329497bf864813950521ff3a0884fd0830d5"
+    },
+    {
+      "bytes": 9910,
+      "digest_scope": "public_data_pilot_integrity_metadata_only",
+      "path": "data/public_pilot/placeholders/realistic_placeholder_anchors.yaml",
+      "sha256": "5bee9f85eea80d3e60bb401b53edc6c856f30c7d0319d2dd3fecf5a7a947125f"
+    },
+    {
+      "bytes": 18074,
+      "digest_scope": "public_data_pilot_integrity_metadata_only",
+      "path": "reports/public_data_pilot.md",
+      "sha256": "71f2717bae35a52098e5c8fd32c8168f19f916ac12d7cbc62bda1511d76e00fd"
+    },
+    {
+      "bytes": 63370,
+      "digest_scope": "public_data_pilot_integrity_metadata_only",
+      "path": "reports/public_data_pilot.json",
+      "sha256": "6d6765a6d796685703ded91079a90a40f5ece6649fe988b99b2513d22f898447"
+    }
+  ],
+  "metadata": {
+    "digest_file_hashes_itself": false,
+    "non_claims": [
+      "Public-data pilot digests are integrity metadata only.",
+      "They are not signatures, not external attestation, not approval, not validation, and not calibration."
+    ]
+  }
+}

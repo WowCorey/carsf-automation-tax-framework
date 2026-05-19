@@ -14,7 +14,7 @@ Current status: private research/prototype.
 
 All sector values, schedule values, examples, caps, Fiscal Replacement Value values, AAVA settings, and behavioural assumptions are placeholders unless explicitly labelled as confirmed baseline figures from official sources.
 
-The current Build 26 layer adds a real-data feasibility and calibration-intake map. It identifies public aggregate data candidates, restricted-data needs, realistic placeholders, forbidden repo data, module data needs, and Build 27 pilot candidates without loading real datasets, completing calibration, implying validation, or changing firm-level liability.
+The current Build 27 layer adds a small public aggregate-data pilot and realistic-placeholder anchor map. It carries source-reference records and small public aggregate extracts that are explicitly separated from realistic placeholders, synthetic fixtures, restricted-data blockers, and forbidden repo data; it does not complete calibration, imply validation, determine actual tax payable, or change firm-level liability.
 
 ## Repository Structure
 
@@ -22,9 +22,10 @@ The current Build 26 layer adds a real-data feasibility and calibration-intake m
 - `release/v1_5_rc/` - V1.5 release-candidate pack with release notes, reviewer briefing, report map, calibration blockers, non-claim boundaries, external-review routing, and release manifest snapshot.
 - `release/v1_5_rc/attack_pack/` - V1.5 external review attack-pack documents for policy, technical, legal, tax, ATO methods, Treasury methods, privacy/secrecy, statistical, economic, welfare, Parliamentary Counsel, and hostile/red-team review.
 - `audits/` - review notes, responses, and red-team register.
-- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, repository guardrails, investment/incidence guardrails, national fiscal trajectory modelling, transition funding, payment interactions, synthetic distributional scenarios, synthetic household weighting, deterministic uncertainty ranges, reviewed scenario display-control classifications, metadata-only sector stress matrix review, synthetic behavioural response simulation, prototype administrative workflow routing, non-operative legislative architecture mapping, executive dashboard consolidation, release-candidate packaging, external review attack-pack validation, final RC integrity seal validation, and real-data feasibility intake mapping.
+- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, repository guardrails, investment/incidence guardrails, national fiscal trajectory modelling, transition funding, payment interactions, synthetic distributional scenarios, synthetic household weighting, deterministic uncertainty ranges, reviewed scenario display-control classifications, metadata-only sector stress matrix review, synthetic behavioural response simulation, prototype administrative workflow routing, non-operative legislative architecture mapping, executive dashboard consolidation, release-candidate packaging, external review attack-pack validation, final RC integrity seal validation, real-data feasibility intake mapping, and public aggregate-data pilot validation.
 - `model/tests/` - pytest coverage for formula bounds, caps, examples, and avoidance flags.
-- `data/` - source-category registry and placeholder policy; no datasets are committed.
+- `data/` - source-category registry, placeholder policy, and public-pilot source-reference records. Restricted, confidential, taxpayer-level, firm-level confidential, person-level, household microdata, real evidence, and unauthorised data are not committed.
+- `data/public_pilot/` - small public aggregate/source-reference records, realistic-placeholder anchors, and digest metadata for the Build 27 public-data pilot.
 - `data/mock_evidence/` - synthetic mock evidence packets for workflow testing only; no real evidence or personal data is committed.
 - `schedules/` - prototype sector schedules for automotive repair, logistics / warehousing, call centres / customer support, accounting / administration, retail self-checkout / fulfilment, and software / digital platforms.
 - `examples/` - illustrative placeholder firm cases.
@@ -42,6 +43,7 @@ The current Build 26 layer adds a real-data feasibility and calibration-intake m
 - `docs/v1_5_release_candidate_pack.md` - release-candidate pack notes and boundaries.
 - `docs/external_review_attack_pack.md` - external review attack-pack notes and boundaries.
 - `docs/final_rc_integrity_seal.md` - final RC internal integrity seal notes and boundaries.
+- `docs/public_data_pilot.md` - public aggregate-data pilot and realistic-placeholder anchor notes.
 - `simulator/` - Streamlit interface for policy review, tax model inputs, worked examples, red-team tests, and audit log.
 - `docs/` - data requirements, limitations, implementation notes, known risks, and V1.5 plan.
 
@@ -328,6 +330,20 @@ Generated feasibility reports:
 
 Real-data feasibility reports are feasibility and calibration-intake maps only. They do not load real data, do not complete calibration, do not replace placeholders with real values, do not validate CARSF as a real tax model, do not use taxpayer-level, firm-level confidential, household microdata, ABS DataLab, HILDA microdata, DSS / Services Australia records, ATO records, Treasury/PBO confidential material, or restricted government data, and do not modify firm-level CARSF liability logic.
 
+Run the public aggregate-data pilot and realistic-placeholder anchor layer:
+
+```powershell
+python scripts/run_public_data_pilot.py
+```
+
+Generated public-data pilot reports and digest metadata:
+
+- `reports/public_data_pilot.md`
+- `reports/public_data_pilot.json`
+- `data/public_pilot/digests/public_data_pilot_digests.json`
+
+Public-data pilot reports may include small public aggregate extracts or source-reference records only. They are not calibration, public data extracts do not prove the model works, realistic placeholders remain placeholders, source references are not loaded datasets, restricted-data requirements are not data access, and no taxpayer-level, firm-level confidential, household microdata, ABS DataLab, HILDA microdata, DSS / Services Australia records, ATO taxpayer records, confidential Treasury/PBO material, restricted government data, or real evidence is committed.
+
 ## Run the Simulator
 
 ```powershell
@@ -369,6 +385,7 @@ V1.5 is not just an examples update. It is V1.4 plus two prototype sector schedu
 - consolidate the full prototype stack into an executive dashboard and report index without creating a readiness score, official review pathway, validation claim, or liability change;
 - define a calibration shell and data source registry without collecting real data;
 - map real-data feasibility, restricted-data needs, realistic placeholder provenance, forbidden repo data, and public-data pilot candidates without loading datasets or completing calibration;
+- load a small public aggregate-data pilot and realistic-placeholder anchor layer for sanity-check-only and placeholder-anchor-only review without completing calibration, claiming validation, determining actual tax payable, or changing firm-level liability;
 - identify open-source AI and R&D Tax Incentive interaction questions without overclaiming.
 
 ## Not Yet Solved
@@ -394,4 +411,5 @@ Behavioural response outputs are deterministic synthetic pathway reviews. They d
 Administrative workflow outputs are deterministic synthetic pathway-routing reviews. They are not an operational ATO process, not enforcement, not notices, not penalties, not compliance scoring, and not usable for estimating actual tax payable.
 Legislative architecture outputs are non-operative mapping outputs. They are not a Bill, not legal drafting, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not Parliamentary Counsel drafting, not constitutionally reviewed, and not usable to create rights, obligations, powers, notices, penalties, enforcement, compliance scoring, or tax-payable determinations.
 Executive dashboard outputs are navigation and index outputs only. They are not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not a maturity score, not an official review pathway, not validation, and not a basis for determining actual tax payable.
-Real-data feasibility outputs are intake maps only. They do not load public data, restricted data, taxpayer data, firm-level confidential data, household microdata, ABS DataLab microdata, HILDA microdata, DSS / Services Australia records, ATO taxpayer records, or confidential Treasury/PBO material. They do not complete calibration, validate the model, or modify firm-level CARSF liability.
+Real-data feasibility outputs are intake maps only. Build 26 did not load public data, restricted data, taxpayer data, firm-level confidential data, household microdata, ABS DataLab microdata, HILDA microdata, DSS / Services Australia records, ATO taxpayer records, or confidential Treasury/PBO material. They do not complete calibration, validate the model, or modify firm-level CARSF liability.
+Public-data pilot outputs are sanity-check-only and placeholder-anchor-only records. They may carry small public aggregate extracts and source references, but they are not calibration, do not prove the model works, do not determine actual tax payable, do not use restricted or confidential data, and do not modify firm-level CARSF liability.

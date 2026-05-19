@@ -74,6 +74,9 @@ jobs:
       - name: Run real data feasibility
         run: python scripts/run_real_data_feasibility.py
 
+      - name: Run public data pilot
+        run: python scripts/run_public_data_pilot.py
+
       - name: Run mock evidence workflow
         run: python scripts/run_evidence_workflow.py
 

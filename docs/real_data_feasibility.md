@@ -34,3 +34,11 @@ python scripts/run_real_data_feasibility.py
 Build 27 may load a small public aggregate-data pilot only after public licence/source handling is checked. Loaded public aggregates must remain separate from realistic placeholders and restricted-data needs. The Build 26 map does not load datasets and does not create calibration values.
 
 Build 25 sealed the previous RC state. If Build 26 becomes part of a later sealed RC, the final RC integrity seal must be regenerated for that new state; the prior seal should not be described as covering Build 26.
+
+## Build 27 Update
+
+Build 27 adds `data/public_pilot/`, `model/carsf/public_data_pilot.py`, `scripts/run_public_data_pilot.py`, `reports/public_data_pilot.md`, `reports/public_data_pilot.json`, and `data/public_pilot/digests/public_data_pilot_digests.json`.
+
+The Build 27 pilot may include small public aggregate extracts and source-reference records, but it is not calibration. Calibration has not been completed. Public data extracts do not prove the model works. Realistic placeholders remain placeholders, source references are not loaded datasets, and restricted-data requirements are not data access. No taxpayer-level, firm-level confidential, household microdata, ABS DataLab, HILDA microdata, DSS/Services Australia records, ATO taxpayer records, confidential Treasury/PBO material, restricted government data, or real evidence is committed.
+
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Build 27 is included in a later sealed RC.

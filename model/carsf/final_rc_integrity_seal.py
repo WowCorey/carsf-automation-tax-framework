@@ -21,8 +21,9 @@ FINAL_RC_INTEGRITY_SEAL_WARNING = (
     "not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, "
     "not welfare validation, not statistical validation, not compliance scoring, not enforcement, not operational readiness, "
     "not legal sufficiency, not legislative readiness, not a readiness score, not a maturity score, not official status, "
-    "and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, "
-    "firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability."
+    "and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level data, "
+    "firm-level confidential data, household microdata, restricted government data, confidential Treasury/PBO material, "
+    "or unauthorised data, and does not modify firm-level CARSF liability."
 )
 
 FINAL_RC_INTEGRITY_SEAL_NON_CLAIMS = [

@@ -89,5 +89,7 @@
 - Release-pack documents and manifests can become stale if generated reports, pages, blockers, or working-paper sections change without updating `data/release/v1_5_release_manifest.yaml` and `release/v1_5_rc/`.
 - Report maps and reviewer routing are navigation aids only and may omit reviewer needs that become visible during hostile external review.
 - The real-data feasibility map may create false comfort if readers treat public-data candidates as loaded datasets, realistic placeholders as real data, restricted-data requirements as access approval, or public aggregate sanity checks as calibration.
-- Build 25 sealed the previous RC state. Build 26 adds new artefacts; if those artefacts become part of a later sealed RC, the final RC integrity seal must be regenerated rather than described as already covering them.
+- The public-data pilot may create false comfort if readers treat small public aggregate extracts as calibration, source references as loaded datasets, placeholder anchors as real data, or sanity checks as proof that CARSF works as a real tax model.
+- Public source references may become stale, and licence/access notes may be incomplete without source-owner, legal, tax, privacy, statistical, Treasury-methods, and ATO-methods review.
+- Build 25 sealed the previous RC state. Build 26 and Build 27 add new artefacts; if those artefacts become part of a later sealed RC, the final RC integrity seal must be regenerated rather than described as already covering them.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.

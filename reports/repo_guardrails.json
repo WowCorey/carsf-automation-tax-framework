@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-05-19T00:03:12+00:00",
+    "generated_at": "2026-05-19T04:39:43+00:00",
     "non_claims": [
       "These are prototype repository guardrails only. They are not a complete DLP system, secret scanner, cybersecurity control, legal/privacy audit, Treasury control, ATO control, or forensic validation.",
       "These are prototype repository guardrails only.",
@@ -82,8 +82,8 @@
   "result": {
     "clean": true,
     "denied_findings": [],
-    "files_scanned": 446,
-    "files_skipped": 2594,
+    "files_scanned": 457,
+    "files_skipped": 2723,
     "findings": [
       {
         "allowlisted": true,
@@ -489,6 +489,17 @@
         "line_number": null,
         "message": "Documentation/test file contains marker examples: API_KEY.",
         "path": "model/tests/test_ingestion_audit.py",
+        "reason": "Allowed as documented scanner examples in docs/tests only.",
+        "severity": "low"
+      },
+      {
+        "allowlisted": true,
+        "deny": false,
+        "finding_id": "documented_marker_example:model/tests/test_public_data_pilot.py:0",
+        "finding_type": "documented_marker_example",
+        "line_number": null,
+        "message": "Documentation/test file contains marker examples: PAYSLIP, TFN.",
+        "path": "model/tests/test_public_data_pilot.py",
         "reason": "Allowed as documented scanner examples in docs/tests only.",
         "severity": "low"
       },
@@ -1089,6 +1100,17 @@
         "line_number": null,
         "message": "Documentation/test file contains marker examples: API_KEY.",
         "path": "model/tests/test_ingestion_audit.py",
+        "reason": "Allowed as documented scanner examples in docs/tests only.",
+        "severity": "low"
+      },
+      {
+        "allowlisted": true,
+        "deny": false,
+        "finding_id": "documented_marker_example:model/tests/test_public_data_pilot.py:0",
+        "finding_type": "documented_marker_example",
+        "line_number": null,
+        "message": "Documentation/test file contains marker examples: PAYSLIP, TFN.",
+        "path": "model/tests/test_public_data_pilot.py",
         "reason": "Allowed as documented scanner examples in docs/tests only.",
         "severity": "low"
       },

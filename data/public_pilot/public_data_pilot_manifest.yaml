@@ -1,0 +1,241 @@
+pilot_id: carsf_v1_5_public_data_pilot_placeholder_anchor_layer
+pilot_name: CARSF V1.5 Public Data Pilot and Realistic Placeholder Anchor Layer
+status: public_data_pilot_placeholder_anchor_layer_only
+non_claims:
+  - This is a public aggregate-data pilot and realistic-placeholder anchor layer only. It may include small public aggregate extracts or source-reference records, but it is not calibration, calibration has not been completed, public data extracts do not prove the model works, realistic placeholders remain realistic placeholders, source references are not loaded datasets, and restricted-data requirements are not data access. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, or official status. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab, HILDA microdata, DSS/Services Australia records, ATO taxpayer records, Treasury/PBO confidential material, or restricted government data, and does not modify firm-level CARSF liability.
+  - Loaded public aggregate extracts are sanity-check-only or placeholder-anchor-only records, not completed calibration.
+  - Realistic placeholders anchored to public sources remain placeholders and must not be labelled as real data or calibrated.
+  - The pilot only tests whether small public aggregates can support sanity checks and placeholder anchors.
+public_aggregate_extracts: data/public_pilot/extracts/public_aggregate_extracts.yaml
+placeholder_anchors: data/public_pilot/placeholders/realistic_placeholder_anchors.yaml
+x_common_must_not: &common_must_not
+  - calibration completed
+  - validation
+  - official status
+  - actual tax payable
+  - operational readiness
+source_references:
+  - source_reference_id: fair_work_minimum_wage_2025
+    source_name: National minimum wage public wage anchor
+    publisher: Fair Work Ombudsman
+    source_kind: Fair_Work_public_wage_anchor
+    source_url: https://www.fairwork.gov.au/how-we-will-help/templates-and-guides/fact-sheets/minimum-workplace-entitlements/minimum-wages
+    publication_or_release_name: Minimum wages fact sheet
+    publication_date_or_year: "2025"
+    accessed_date: "2026-05-19"
+    access_class: public_open
+    licence_notes: Public webpage extract; only small threshold values are source-referenced in this repo.
+    raw_dataset_committed: false
+    extract_committed: true
+    candidate_modules: [core_formula_model, sector_schedules]
+    candidate_fields: [opfte_benchmarks, hle_assumptions, qlc_weights]
+    claim_level: placeholder_anchor_only
+    must_not_claim: *common_must_not
+    source_review_required: [legal_reviewer, statistical_methods_reviewer]
+  - source_reference_id: ato_corporate_tax_transparency_2022_23
+    source_name: Corporate tax transparency public aggregate
+    publisher: Australian Taxation Office
+    source_kind: ATO_public_aggregate
+    source_url: https://www.ato.gov.au/media-centre/ato-collects-100-billion-dollars-from-large-corporates
+    publication_or_release_name: ATO corporate transparency media release
+    publication_date_or_year: "2024"
+    accessed_date: "2026-05-19"
+    access_class: public_open
+    licence_notes: Public aggregate summary; not confidential tax material and not a CARSF liability input.
+    raw_dataset_committed: false
+    extract_committed: true
+    candidate_modules: [fiscal_trajectory, investment_incidence]
+    candidate_fields: [aava_deductibility_treatment, fiscal_trajectory_assumptions]
+    claim_level: sanity_check_only
+    must_not_claim: [firm-level liability, actual tax payable, compliance score, calibration completed]
+    source_review_required: [tax_reviewer, ato_methods_reviewer, privacy_reviewer]
+  - source_reference_id: ato_taxation_statistics_2022_23
+    source_name: ATO taxation statistics public aggregate
+    publisher: Australian Taxation Office
+    source_kind: ATO_public_aggregate
+    source_url: https://www.ato.gov.au/media-centre/2022-23-taxation-statistics-released
+    publication_or_release_name: Taxation statistics 2022-23 public summary
+    publication_date_or_year: "2024"
+    accessed_date: "2026-05-19"
+    access_class: public_open
+    licence_notes: Public aggregate summary; no unit records or restricted data are committed.
+    raw_dataset_committed: false
+    extract_committed: true
+    candidate_modules: [fiscal_trajectory, payment_interactions, transition_funding]
+    candidate_fields: [payg_erosion_assumptions, fiscal_trajectory_assumptions, superannuation_contribution_pressure]
+    claim_level: sanity_check_only
+    must_not_claim: [taxpayer-level inference, actual tax payable, calibration completed]
+    source_review_required: [tax_reviewer, treasury_methods_reviewer, ato_methods_reviewer]
+  - source_reference_id: treasury_budget_2026_27_bp1
+    source_name: Budget Paper No. 1 public fiscal aggregates
+    publisher: Australian Government Treasury
+    source_kind: Treasury_public_fiscal
+    source_url: https://budget.gov.au/content/bp1/
+    publication_or_release_name: Budget Paper No. 1 2026-27
+    publication_date_or_year: "2026"
+    accessed_date: "2026-05-19"
+    access_class: public_open
+    licence_notes: Public fiscal aggregate reference; not Treasury modelling or PBO costing.
+    raw_dataset_committed: false
+    extract_committed: true
+    candidate_modules: [fiscal_trajectory, transition_funding]
+    candidate_fields: [fiscal_trajectory_assumptions, transition_payment_assumptions]
+    claim_level: sanity_check_only
+    must_not_claim: [Treasury modelling, PBO costing, calibration completed]
+    source_review_required: [treasury_methods_reviewer, economic_methods_reviewer]
+  - source_reference_id: study_assist_help_thresholds_2025_26
+    source_name: HELP repayment public threshold source reference
+    publisher: Australian Government StudyAssist
+    source_kind: HELP_HECS_public_threshold
+    source_url: https://www.studyassist.gov.au/paying-back-your-loan/loan-repayment
+    publication_or_release_name: Loan repayment threshold public guidance
+    publication_date_or_year: "2025-26"
+    accessed_date: "2026-05-19"
+    access_class: public_open
+    licence_notes: Source reference only in Build 27; no borrower records and no individual repayment estimate.
+    raw_dataset_committed: false
+    extract_committed: true
+    candidate_modules: [payment_interactions, household_distributional]
+    candidate_fields: [help_hecs_repayment_pressure, welfare_payment_interaction_assumptions]
+    claim_level: source_reference_only
+    must_not_claim: [individual repayment estimate, welfare validation, calibration completed]
+    source_review_required: [welfare_policy_reviewer, legal_reviewer]
+  - source_reference_id: ato_super_guarantee_2025_26
+    source_name: Superannuation Guarantee public rate setting
+    publisher: Australian Taxation Office
+    source_kind: Super_Guarantee_public_setting
+    source_url: https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/super-guarantee
+    publication_or_release_name: Key superannuation rates and thresholds
+    publication_date_or_year: "2025-26"
+    accessed_date: "2026-05-19"
+    access_class: public_open
+    licence_notes: Public setting extract; no member records or payroll records are committed.
+    raw_dataset_committed: false
+    extract_committed: true
+    candidate_modules: [payment_interactions, transition_funding]
+    candidate_fields: [superannuation_contribution_pressure, transition_payment_assumptions]
+    claim_level: placeholder_anchor_only
+    must_not_claim: [ATO guidance, individual estimate, calibration completed]
+    source_review_required: [tax_reviewer, welfare_policy_reviewer]
+  - source_reference_id: qld_payroll_tax_threshold_2025_26
+    source_name: Queensland payroll tax public threshold source reference
+    publisher: Queensland Revenue Office
+    source_kind: State_payroll_tax_public_threshold
+    source_url: https://qro.qld.gov.au/payroll-tax/
+    publication_or_release_name: Payroll tax public thresholds
+    publication_date_or_year: "2025-26"
+    accessed_date: "2026-05-19"
+    access_class: public_open
+    licence_notes: Source reference only in Build 27; no employer records or private payroll records are committed.
+    raw_dataset_committed: false
+    extract_committed: true
+    candidate_modules: [payment_interactions, fiscal_trajectory]
+    candidate_fields: [state_payroll_tax_pressure, fiscal_trajectory_assumptions]
+    claim_level: source_reference_only
+    must_not_claim: [state tax advice, actual tax payable, calibration completed]
+    source_review_required: [tax_reviewer, treasury_methods_reviewer]
+  - source_reference_id: abs_labour_wage_aggregate_source_reference
+    source_name: ABS labour and wage aggregate source reference
+    publisher: Australian Bureau of Statistics
+    source_kind: ABS_public_aggregate
+    source_url: https://www.abs.gov.au/statistics/labour
+    publication_or_release_name: ABS labour statistics public landing page
+    publication_date_or_year: "2026"
+    accessed_date: "2026-05-19"
+    access_class: public_open
+    licence_notes: Source reference only in Build 27; no full ABS table is committed.
+    raw_dataset_committed: false
+    extract_committed: true
+    candidate_modules: [sector_schedules, sector_stress_matrix, core_formula_model]
+    candidate_fields: [opfte_benchmarks, qlc_weights, sector_schedule_values]
+    claim_level: source_reference_only
+    must_not_claim: [population estimate, official sector ranking, calibration completed]
+    source_review_required: [statistical_methods_reviewer, economic_methods_reviewer]
+field_sanity_checks:
+  - {check_id: check_opfte_public_wage_anchor, field_id: opfte_benchmarks, field_name: OPFTE benchmarks, public_extract_ids: [fair_work_minimum_wage_2025_extract], placeholder_anchor_ids: [anchor_opfte_minimum_wage], check_type: value_presence_check, check_status: passed, claim_level: placeholder_anchor_only, finding: A public wage threshold exists as a small placeholder anchor; it does not calibrate OPFTE., must_not_claim: *common_must_not}
+  - {check_id: check_hle_public_wage_anchor, field_id: hle_assumptions, field_name: HLE assumptions, public_extract_ids: [fair_work_minimum_wage_2025_extract], placeholder_anchor_ids: [anchor_hle_minimum_wage], check_type: range_plausibility_check, check_status: warning, claim_level: placeholder_anchor_only, finding: The public wage anchor can make HLE placeholders more realistic but cannot model actual human labour equivalents., must_not_claim: *common_must_not}
+  - {check_id: check_qlc_public_wage_anchor, field_id: qlc_weights, field_name: QLC weights, public_extract_ids: [fair_work_minimum_wage_2025_extract], placeholder_anchor_ids: [anchor_qlc_minimum_wage], check_type: value_presence_check, check_status: passed, claim_level: placeholder_anchor_only, finding: A public wage threshold can anchor QLC placeholder units only., must_not_claim: *common_must_not}
+  - {check_id: check_fiscal_public_aggregate, field_id: fiscal_trajectory_assumptions, field_name: Fiscal trajectory assumptions, public_extract_ids: [ato_taxation_statistics_2022_23_extract, treasury_budget_2026_27_receipts_extract], placeholder_anchor_ids: [anchor_fiscal_public_aggregates], check_type: value_presence_check, check_status: passed, claim_level: sanity_check_only, finding: Public aggregate values can sanity-check scale only and do not produce fiscal modelling., must_not_claim: *common_must_not}
+  - {check_id: check_payg_public_tax_stats, field_id: payg_erosion_assumptions, field_name: PAYG erosion assumptions, public_extract_ids: [ato_taxation_statistics_2022_23_extract], placeholder_anchor_ids: [anchor_payg_public_tax_stats], check_type: range_plausibility_check, check_status: warning, claim_level: sanity_check_only, finding: Public tax totals provide context but do not identify CARSF-related PAYG erosion., must_not_claim: *common_must_not}
+  - {check_id: check_super_public_threshold, field_id: superannuation_contribution_pressure, field_name: Superannuation contribution pressure, public_extract_ids: [super_guarantee_2025_26_extract], placeholder_anchor_ids: [anchor_super_guarantee_rate], check_type: value_presence_check, check_status: passed, claim_level: placeholder_anchor_only, finding: Public rate setting can anchor a placeholder pressure field only., must_not_claim: *common_must_not}
+  - {check_id: check_help_source_reference, field_id: help_hecs_repayment_pressure, field_name: HELP repayment pressure, public_extract_ids: [help_threshold_source_reference_extract], placeholder_anchor_ids: [anchor_help_source_reference], check_type: source_reference_check, check_status: warning, claim_level: source_reference_only, finding: HELP threshold source is referenced but not extracted as a loaded public value in this build., must_not_claim: *common_must_not}
+  - {check_id: check_payroll_tax_source_reference, field_id: state_payroll_tax_pressure, field_name: State payroll tax pressure, public_extract_ids: [qld_payroll_tax_source_reference_extract], placeholder_anchor_ids: [anchor_payroll_tax_source_reference], check_type: source_reference_check, check_status: warning, claim_level: source_reference_only, finding: State payroll threshold source is referenced but not used as a loaded value in this build., must_not_claim: *common_must_not}
+  - {check_id: check_household_microdata_blocked, field_id: household_weighting_assumptions, field_name: Household weighting assumptions, public_extract_ids: [], placeholder_anchor_ids: [], check_type: blocked_by_restricted_data_check, check_status: blocked, claim_level: blocked_by_restricted_data, finding: Household weighting cannot be calibrated without authorised microdata methods outside the repo., must_not_claim: [population estimate, real household estimate, calibration completed]}
+  - {check_id: check_uncertainty_microdata_blocked, field_id: uncertainty_range_assumptions, field_name: Uncertainty range assumptions, public_extract_ids: [], placeholder_anchor_ids: [anchor_uncertainty_source_reference_only], check_type: blocked_by_restricted_data_check, check_status: blocked, claim_level: blocked_by_restricted_data, finding: Public aggregates cannot create confidence intervals or calibrated uncertainty ranges., must_not_claim: [confidence interval, population estimate, calibration completed]}
+module_sanity_checks:
+  - {module_id: core_formula_model, module_name: Core formula model, public_extract_ids: [fair_work_minimum_wage_2025_extract], placeholder_anchor_ids: [anchor_opfte_minimum_wage, anchor_hle_minimum_wage, anchor_qlc_minimum_wage], sanity_check_possible: true, calibration_possible: false, blocked_by_restricted_data: true, result_status: placeholder_anchor_possible, claim_level: placeholder_anchor_only, main_blockers: [AAVA and firm inputs remain placeholder or restricted], must_not_claim: *common_must_not}
+  - {module_id: sector_schedules, module_name: Sector schedules, public_extract_ids: [fair_work_minimum_wage_2025_extract], placeholder_anchor_ids: [anchor_sector_schedule_source_reference], sanity_check_possible: true, calibration_possible: false, blocked_by_restricted_data: true, result_status: placeholder_anchor_possible, claim_level: placeholder_anchor_only, main_blockers: [schedule authority calibration and sector attribution remain unresolved], must_not_claim: *common_must_not}
+  - {module_id: sector_stress_matrix, module_name: Sector stress matrix, public_extract_ids: [abs_labour_source_reference_extract], placeholder_anchor_ids: [anchor_sector_schedule_source_reference], sanity_check_possible: true, calibration_possible: false, blocked_by_restricted_data: true, result_status: source_reference_only, claim_level: source_reference_only, main_blockers: [automation intensity remains metadata-only], must_not_claim: [official sector ranking, economic validation, calibration completed]}
+  - {module_id: fiscal_trajectory, module_name: Fiscal trajectory, public_extract_ids: [ato_taxation_statistics_2022_23_extract, treasury_budget_2026_27_receipts_extract], placeholder_anchor_ids: [anchor_fiscal_public_aggregates, anchor_payg_public_tax_stats], sanity_check_possible: true, calibration_possible: false, blocked_by_restricted_data: true, result_status: sanity_check_possible, claim_level: sanity_check_only, main_blockers: [CARSF revenue pathway is not calibrated], must_not_claim: *common_must_not}
+  - {module_id: transition_funding, module_name: Transition funding, public_extract_ids: [treasury_budget_2026_27_receipts_extract, super_guarantee_2025_26_extract], placeholder_anchor_ids: [anchor_transition_public_reference], sanity_check_possible: true, calibration_possible: false, blocked_by_restricted_data: true, result_status: placeholder_anchor_possible, claim_level: placeholder_anchor_only, main_blockers: [payment eligibility and fiscal design require external review], must_not_claim: *common_must_not}
+  - {module_id: payment_interactions, module_name: Payment interactions, public_extract_ids: [super_guarantee_2025_26_extract, help_threshold_source_reference_extract, qld_payroll_tax_source_reference_extract], placeholder_anchor_ids: [anchor_super_guarantee_rate, anchor_help_source_reference, anchor_payroll_tax_source_reference], sanity_check_possible: true, calibration_possible: false, blocked_by_restricted_data: true, result_status: placeholder_anchor_possible, claim_level: placeholder_anchor_only, main_blockers: [no person-level records and no eligibility law modelling], must_not_claim: [individual estimate, welfare validation, calibration completed]}
+  - {module_id: household_distributional, module_name: Household distributional scenarios, public_extract_ids: [], placeholder_anchor_ids: [], sanity_check_possible: false, calibration_possible: false, blocked_by_restricted_data: true, result_status: blocked_by_restricted_data, claim_level: blocked_by_restricted_data, main_blockers: [household microdata remains excluded], must_not_claim: [real household estimate, population estimate, calibration completed]}
+  - {module_id: household_weighting, module_name: Household weighting, public_extract_ids: [], placeholder_anchor_ids: [], sanity_check_possible: false, calibration_possible: false, blocked_by_restricted_data: true, result_status: blocked_by_restricted_data, claim_level: blocked_by_restricted_data, main_blockers: [weighted population inference remains blocked], must_not_claim: [population estimate, real household estimate, calibration completed]}
+  - {module_id: uncertainty_ranges, module_name: Uncertainty ranges, public_extract_ids: [], placeholder_anchor_ids: [anchor_uncertainty_source_reference_only], sanity_check_possible: false, calibration_possible: false, blocked_by_restricted_data: true, result_status: blocked_by_restricted_data, claim_level: blocked_by_restricted_data, main_blockers: [public aggregates cannot create confidence intervals], must_not_claim: [confidence interval, statistical validation, calibration completed]}
+  - {module_id: reviewed_scenarios, module_name: Reviewed scenarios, public_extract_ids: [ato_corporate_transparency_2022_23_extract], placeholder_anchor_ids: [], sanity_check_possible: true, calibration_possible: false, blocked_by_restricted_data: true, result_status: source_reference_only, claim_level: source_reference_only, main_blockers: [display controls remain review-state placeholders], must_not_claim: *common_must_not}
+  - {module_id: executive_dashboard, module_name: Executive dashboard, public_extract_ids: [], placeholder_anchor_ids: [], sanity_check_possible: true, calibration_possible: false, blocked_by_restricted_data: false, result_status: source_reference_only, claim_level: source_reference_only, main_blockers: [dashboard remains navigation only], must_not_claim: [readiness score, official status, validation]}
+restricted_data_blockers:
+  - {blocker_id: restricted_tax_records, blocker: Confidential tax records remain excluded, affected_modules: [core_formula_model, administrative_workflow, behavioural_response], claim_level: blocked_by_restricted_data}
+  - {blocker_id: restricted_household_microdata, blocker: Household microdata remains excluded, affected_modules: [household_distributional, household_weighting, uncertainty_ranges], claim_level: blocked_by_restricted_data}
+  - {blocker_id: restricted_welfare_records, blocker: Welfare and payment records remain excluded, affected_modules: [payment_interactions, transition_funding], claim_level: blocked_by_restricted_data}
+forbidden_data_rules:
+  - {rule_id: fd_tax_records, forbidden_data_type: confidential tax records, must_not_commit_to_repo: true, must_not_use_in_tests: true}
+  - {rule_id: fd_firm_confidential_records, forbidden_data_type: firm confidential records, must_not_commit_to_repo: true, must_not_use_in_tests: true}
+  - {rule_id: fd_person_level_records, forbidden_data_type: person-level records, must_not_commit_to_repo: true, must_not_use_in_tests: true}
+  - {rule_id: fd_household_microdata, forbidden_data_type: household microdata, must_not_commit_to_repo: true, must_not_use_in_tests: true}
+  - {rule_id: fd_restricted_government_data, forbidden_data_type: restricted government data, must_not_commit_to_repo: true, must_not_use_in_tests: true}
+build_27_flags:
+  public_data_pilot_created: true
+  real_public_data_loaded: true
+  source_references_created: true
+  realistic_placeholders_anchored: true
+  real_calibration_completed: false
+  restricted_data_loaded: false
+  taxpayer_data_loaded: false
+  firm_level_confidential_data_loaded: false
+  household_microdata_loaded: false
+  actual_tax_payable_determined: false
+  validation_claimed: false
+  approval_claimed: false
+  operational_readiness_claimed: false
+  legal_sufficiency_claimed: false
+  official_status_claimed: false
+  firm_level_liability_logic_modified: false
+future_build_28_requirements:
+  - Add reviewer-facing public-data evidence map without claiming calibration.
+  - Keep loaded public extracts separate from source references and placeholders.
+  - Preserve restricted-data blockers and forbidden repo data rules.
+forbidden_claims:
+  - calibrated
+  - calibration completed
+  - real calibration
+  - public data proves
+  - model works
+  - tax model works
+  - CARSF works
+  - ready for government
+  - ready for ATO
+  - ready for Treasury
+  - ready for Parliament
+  - ready for implementation
+  - ready for public release
+  - operationally ready
+  - legally sufficient
+  - official status
+  - official policy
+  - validated
+  - externally validated
+  - Treasury validated
+  - ATO validated
+  - PBO validated
+  - economic validation complete
+  - welfare validation complete
+  - statistical validation complete
+  - actual tax payable
+  - real household estimate
+  - population estimate
+  - official sector ranking
+  - compliance score
+  - readiness score
+  - maturity score
+  - approved

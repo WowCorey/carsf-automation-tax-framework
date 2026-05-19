@@ -3,7 +3,7 @@ release_name: CARSF V1.5 Release Candidate Pack
 release_status: private_research_prototype_release_candidate_pack
 release_date_placeholder: "2026-05-18 release-candidate packaging date"
 non_claims:
-  - This is a private research prototype and release-candidate pack only. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare advice, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.
+  - This is a private research prototype and release-candidate pack only. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare advice, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, restricted government data, confidential Treasury/PBO material, or unauthorised data, and does not modify firm-level CARSF liability.
   - The release-candidate pack only packages existing prototype reports, warnings, navigation, review blockers, and working-paper material for external review.
   - Suggested reviewer routing is review navigation only and is not an official process.
 x_core_non_claims: &core_non_claims
@@ -939,6 +939,52 @@ prototype_layers:
       - treasury_methods_reviewer
       - ato_methods_reviewer
     main_reason: Build 26 maps feasibility only and does not load data.
+  - layer_id: public_data_pilot
+    layer_name: Public Data Pilot and Placeholder Anchor Layer
+    layer_group: calibration
+    summary: Small public aggregate/source-reference pilot that anchors realistic placeholders while keeping calibration incomplete and restricted data excluded.
+    primary_files:
+      - model/carsf/public_data_pilot.py
+      - data/public_pilot/public_data_pilot_manifest.yaml
+      - data/public_pilot/extracts/public_aggregate_extracts.yaml
+      - data/public_pilot/placeholders/realistic_placeholder_anchors.yaml
+      - data/public_pilot/digests/public_data_pilot_digests.json
+      - scripts/run_public_data_pilot.py
+      - docs/public_data_pilot.md
+    primary_reports:
+      - reports/public_data_pilot.md
+      - reports/public_data_pilot.json
+    streamlit_pages: []
+    status_labels:
+      - prototype_only
+      - placeholder_only
+      - generated_report_available
+      - calibration_required
+      - external_review_required
+      - not_for_real_world_use
+    non_claim_flags:
+      - not_calibrated
+      - not_statistical_validation
+      - not_operational_readiness
+      - not_official_status
+    calibration_blockers:
+      - Public aggregate extracts support sanity checks and placeholder anchors only.
+      - Calibration has not been completed and restricted-data blockers remain.
+    external_review_blockers:
+      - Technical, privacy, statistical, legal, tax, Treasury-methods, and ATO-methods review remain required.
+    must_not_be_used_for:
+      - calibration completed
+      - validation
+      - official status
+      - actual tax payable
+      - readiness score
+    recommended_reviewer:
+      - technical_reviewer
+      - privacy_reviewer
+      - statistical_methods_reviewer
+      - treasury_methods_reviewer
+      - ato_methods_reviewer
+    main_reason: Build 27 tests safe public aggregate intake and placeholder anchoring without real calibration.
 generated_reports:
   - {report_path: reports/v1_5_release_candidate_pack.md, layer_id: release_candidate_pack, generated_by: python scripts/run_v1_5_release_candidate_pack.py, what_it_shows: release-candidate pack summary, what_it_does_not_show: no readiness score or official status, primary_non_claim: release packaging only, recommended_reviewer: [policy_reviewer, technical_reviewer], suggested_read_order: 2, optional: true}
   - {report_path: reports/v1_5_release_candidate_pack.json, layer_id: release_candidate_pack, generated_by: python scripts/run_v1_5_release_candidate_pack.py, what_it_shows: release-candidate pack data, what_it_does_not_show: no readiness score or official status, primary_non_claim: release packaging only, recommended_reviewer: [technical_reviewer], suggested_read_order: 2, optional: true}
@@ -946,6 +992,8 @@ generated_reports:
   - {report_path: reports/v1_5_final_rc_integrity_seal.json, layer_id: final_rc_integrity_seal, generated_by: python scripts/run_v1_5_final_rc_integrity_seal.py, what_it_shows: machine-readable seal checks and false flags, what_it_does_not_show: approval validation external review completion readiness legal sufficiency official status or liability change, primary_non_claim: internal integrity seal only, recommended_reviewer: [technical_reviewer], suggested_read_order: 3, optional: true}
   - {report_path: reports/real_data_feasibility.md, layer_id: real_data_feasibility, generated_by: python scripts/run_real_data_feasibility.py, what_it_shows: public data candidates restricted data needs placeholders forbidden repo data and pilot readiness, what_it_does_not_show: real data loaded calibration completed validation official status or tax model proof, primary_non_claim: feasibility map only, recommended_reviewer: [technical_reviewer, privacy_reviewer, statistical_methods_reviewer], suggested_read_order: 4, optional: true}
   - {report_path: reports/real_data_feasibility.json, layer_id: real_data_feasibility, generated_by: python scripts/run_real_data_feasibility.py, what_it_shows: machine-readable feasibility registry and summary flags, what_it_does_not_show: real data loaded calibration completed validation official status or tax model proof, primary_non_claim: feasibility map only, recommended_reviewer: [technical_reviewer], suggested_read_order: 4, optional: true}
+  - {report_path: reports/public_data_pilot.md, layer_id: public_data_pilot, generated_by: python scripts/run_public_data_pilot.py, what_it_shows: public source references public aggregate extracts placeholder anchors sanity checks and digest metadata, what_it_does_not_show: calibration completed validation official status tax-payable use or proof that CARSF works, primary_non_claim: public-data pilot only, recommended_reviewer: [technical_reviewer, privacy_reviewer, statistical_methods_reviewer], suggested_read_order: 5, optional: false}
+  - {report_path: reports/public_data_pilot.json, layer_id: public_data_pilot, generated_by: python scripts/run_public_data_pilot.py, what_it_shows: machine-readable public-data pilot registry and summary flags, what_it_does_not_show: calibration completed validation official status tax-payable use or proof that CARSF works, primary_non_claim: public-data pilot only, recommended_reviewer: [technical_reviewer], suggested_read_order: 5, optional: false}
   - {report_path: reports/example_results.md, layer_id: worked_examples, generated_by: python scripts/run_examples.py, what_it_shows: worked example formula outputs, what_it_does_not_show: calibrated firm outcomes, primary_non_claim: prototype placeholders only, recommended_reviewer: [technical_reviewer, policy_reviewer], suggested_read_order: 5}
   - {report_path: reports/example_results.json, layer_id: worked_examples, generated_by: python scripts/run_examples.py, what_it_shows: machine-readable worked example outputs, what_it_does_not_show: calibrated firm outcomes, primary_non_claim: prototype placeholders only, recommended_reviewer: [technical_reviewer], suggested_read_order: 5}
   - {report_path: reports/grouped_entity_results.md, layer_id: worked_examples, generated_by: python scripts/run_examples.py, what_it_shows: grouped-entity preview outputs, what_it_does_not_show: legal grouping results, primary_non_claim: non-operative preview only, recommended_reviewer: [legal_reviewer, tax_reviewer], suggested_read_order: 6}
