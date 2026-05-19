@@ -14,7 +14,7 @@ Current status: private research/prototype.
 
 All sector values, schedule values, examples, caps, Fiscal Replacement Value values, AAVA settings, and behavioural assumptions are placeholders unless explicitly labelled as confirmed baseline figures from official sources.
 
-The current Build 25 layer adds a V1.5 final RC integrity seal. It verifies release documents, attack-pack documents, generated reports, manifests, scripts, digest metadata, non-claim boundaries, repo guardrail expectations, CI expectations, and false readiness/legal/validation flags without implying approval, validation, external review completion, operational readiness, legal sufficiency, official status, or firm-level liability changes.
+The current Build 26 layer adds a real-data feasibility and calibration-intake map. It identifies public aggregate data candidates, restricted-data needs, realistic placeholders, forbidden repo data, module data needs, and Build 27 pilot candidates without loading real datasets, completing calibration, implying validation, or changing firm-level liability.
 
 ## Repository Structure
 
@@ -22,7 +22,7 @@ The current Build 25 layer adds a V1.5 final RC integrity seal. It verifies rele
 - `release/v1_5_rc/` - V1.5 release-candidate pack with release notes, reviewer briefing, report map, calibration blockers, non-claim boundaries, external-review routing, and release manifest snapshot.
 - `release/v1_5_rc/attack_pack/` - V1.5 external review attack-pack documents for policy, technical, legal, tax, ATO methods, Treasury methods, privacy/secrecy, statistical, economic, welfare, Parliamentary Counsel, and hostile/red-team review.
 - `audits/` - review notes, responses, and red-team register.
-- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, repository guardrails, investment/incidence guardrails, national fiscal trajectory modelling, transition funding, payment interactions, synthetic distributional scenarios, synthetic household weighting, deterministic uncertainty ranges, reviewed scenario display-control classifications, metadata-only sector stress matrix review, synthetic behavioural response simulation, prototype administrative workflow routing, non-operative legislative architecture mapping, executive dashboard consolidation, release-candidate packaging, external review attack-pack validation, and final RC integrity seal validation.
+- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, repository guardrails, investment/incidence guardrails, national fiscal trajectory modelling, transition funding, payment interactions, synthetic distributional scenarios, synthetic household weighting, deterministic uncertainty ranges, reviewed scenario display-control classifications, metadata-only sector stress matrix review, synthetic behavioural response simulation, prototype administrative workflow routing, non-operative legislative architecture mapping, executive dashboard consolidation, release-candidate packaging, external review attack-pack validation, final RC integrity seal validation, and real-data feasibility intake mapping.
 - `model/tests/` - pytest coverage for formula bounds, caps, examples, and avoidance flags.
 - `data/` - source-category registry and placeholder policy; no datasets are committed.
 - `data/mock_evidence/` - synthetic mock evidence packets for workflow testing only; no real evidence or personal data is committed.
@@ -315,6 +315,19 @@ Executive dashboard reports are prototype navigation and report-index outputs on
 Release-candidate pack reports are private research prototype packaging outputs only. They are not legal advice, tax advice, ATO guidance, Treasury modelling, economic validation, welfare advice, statistical validation, compliance scoring, enforcement, operational readiness, legal sufficiency, legislative readiness, a readiness score, official status, or an official review pathway. They do not determine actual tax payable, do not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and do not modify firm-level CARSF liability logic.
 External review attack-pack reports are challenge outputs only. They do not mean external review has been completed, do not mean approval has been granted, do not mean validation has occurred, and do not create a readiness score, maturity score, official review route, operational-readiness claim, legal-sufficiency claim, legislative-readiness claim, economic-validation claim, welfare-validation claim, statistical-validation claim, or firm-level liability change.
 
+Run the real-data feasibility and calibration-intake map:
+
+```powershell
+python scripts/run_real_data_feasibility.py
+```
+
+Generated feasibility reports:
+
+- `reports/real_data_feasibility.md`
+- `reports/real_data_feasibility.json`
+
+Real-data feasibility reports are feasibility and calibration-intake maps only. They do not load real data, do not complete calibration, do not replace placeholders with real values, do not validate CARSF as a real tax model, do not use taxpayer-level, firm-level confidential, household microdata, ABS DataLab, HILDA microdata, DSS / Services Australia records, ATO records, Treasury/PBO confidential material, or restricted government data, and do not modify firm-level CARSF liability logic.
+
 ## Run the Simulator
 
 ```powershell
@@ -355,6 +368,7 @@ V1.5 is not just an examples update. It is V1.4 plus two prototype sector schedu
 - map CARSF concepts into a non-operative legislative architecture skeleton with Parts, Divisions, definition placeholders, schedule placeholders, evidence/safeguard placeholders, regulation-making placeholders, commencement/transitional placeholders, and external-review blockers without drafting operative law or changing liability;
 - consolidate the full prototype stack into an executive dashboard and report index without creating a readiness score, official review pathway, validation claim, or liability change;
 - define a calibration shell and data source registry without collecting real data;
+- map real-data feasibility, restricted-data needs, realistic placeholder provenance, forbidden repo data, and public-data pilot candidates without loading datasets or completing calibration;
 - identify open-source AI and R&D Tax Incentive interaction questions without overclaiming.
 
 ## Not Yet Solved
@@ -380,3 +394,4 @@ Behavioural response outputs are deterministic synthetic pathway reviews. They d
 Administrative workflow outputs are deterministic synthetic pathway-routing reviews. They are not an operational ATO process, not enforcement, not notices, not penalties, not compliance scoring, and not usable for estimating actual tax payable.
 Legislative architecture outputs are non-operative mapping outputs. They are not a Bill, not legal drafting, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not Parliamentary Counsel drafting, not constitutionally reviewed, and not usable to create rights, obligations, powers, notices, penalties, enforcement, compliance scoring, or tax-payable determinations.
 Executive dashboard outputs are navigation and index outputs only. They are not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not a maturity score, not an official review pathway, not validation, and not a basis for determining actual tax payable.
+Real-data feasibility outputs are intake maps only. They do not load public data, restricted data, taxpayer data, firm-level confidential data, household microdata, ABS DataLab microdata, HILDA microdata, DSS / Services Australia records, ATO taxpayer records, or confidential Treasury/PBO material. They do not complete calibration, validate the model, or modify firm-level CARSF liability.

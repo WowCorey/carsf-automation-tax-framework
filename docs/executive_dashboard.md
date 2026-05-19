@@ -63,6 +63,8 @@ The suggested read order is review navigation only. It is not an official proces
 
 Future work should update this dashboard whenever a new generated report, Streamlit page, or major documentation layer is added.
 
+Build 26 adds `reports/real_data_feasibility.md` as a feasibility and calibration-intake map. It does not load real data, complete calibration, validate the model, or change firm-level liability. Dashboard and release indexes should treat it as a data-governance and pilot-planning layer only.
+
 ## Relationship to Release Candidate Pack
 
 Build 23 adds `release/v1_5_rc/` and `reports/v1_5_release_candidate_pack.*`. The executive dashboard remains the navigation entry point; the release-candidate pack packages the working paper, release notes, reviewer briefing, report map, calibration blockers, non-claim boundaries, and external-review routing for external review.

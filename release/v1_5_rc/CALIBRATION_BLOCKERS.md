@@ -22,11 +22,16 @@ This calibration blocker summary is for a private research prototype and release
 - Software / digital platform intangible treatment: capital-base and AASB 138 issues remain unresolved.
 - Open-source AI treatment: still requires legal, tax, policy, and technical review.
 - R&D Tax Incentive interaction: still requires policy, legal, tax, and Treasury review.
+- Real-data feasibility: public-data pilot source handling, licensing, provenance, aggregate-only controls, restricted-data exclusion, and realistic-placeholder labelling require technical, privacy, statistical, legal, tax, Treasury, and ATO-methods review.
 
 ## Consolidated Position
 
 No blocker is resolved by this release pack. The pack makes blockers easier to find; it does not remove calibration, external review, legal, tax, ATO, Treasury, privacy, statistical, economic, welfare, or Parliamentary Counsel dependencies.
 
+Build 26 maps feasibility only. No real data has been loaded and no calibration has occurred. Public-data candidates are not loaded datasets, restricted-data requirements are not data access, and realistic placeholders do not validate CARSF as a real tax model.
+
 ## Final RC Integrity Seal Note
 
 The final RC integrity seal checks that blocker documents, reports, manifests, attack-pack documents, non-claim boundaries, CI expectations, and guardrail expectations remain visible. It does not resolve any blocker and is not approval, validation, external review completion, legal sufficiency, operational readiness, legislative readiness, official status, a readiness score, a maturity score, or firm-level liability modification.
+
+Build 25 sealed the previous RC state. If Build 26 is included in a later sealed RC, the integrity seal must be regenerated for that later state.

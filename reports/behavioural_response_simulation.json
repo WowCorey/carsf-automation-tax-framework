@@ -1116,7 +1116,7 @@
     "behavioural_prediction_created": false,
     "compliance_scoring_created": false,
     "firm_level_liability_logic_modified": false,
-    "generated_at": "2026-05-18T11:03:52+00:00",
+    "generated_at": "2026-05-19T00:02:02+00:00",
     "non_claims": [
       "Behavioural response simulation is prototype-only deterministic placeholder scenario review. It does not predict taxpayer behaviour. It does not estimate behavioural elasticity. It is not ATO audit logic, Treasury modelling, ABS/ATO/DSS/PBO analysis, economic validation, compliance-risk scoring, legal advice, tax advice, or investment advice. It does not estimate actual tax payable, modify firm-level CARSF liability, implement penalties, or implement enforcement.",
       "The simulation does not use firm-level, taxpayer-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data.",

@@ -311,6 +311,14 @@ The final RC integrity seal requires maintenance review whenever release documen
 
 No such integrity check is calibration, validation, approval, legal sufficiency, operational readiness, legislative readiness, official status, external review completion, a readiness score, a maturity score, or an official review pathway. The seal only verifies internal artefact presence, manifest alignment, report availability, non-claim boundaries, guardrail status expectations, digest metadata, and false readiness/legal/validation flags. It does not modify firm-level CARSF liability logic.
 
+## Real Data Feasibility and Calibration Intake
+
+The real-data feasibility map identifies candidate public aggregate sources, restricted-data requirements, realistic placeholder provenance rules, forbidden repo data, module data needs, and Build 27 public-data pilot candidates.
+
+No real data has been loaded by this build. No calibration has occurred. Realistic placeholders are not real data and are not calibrated. Public-data candidates are not loaded datasets. Restricted-data requirements are not data access. The map does not use taxpayer-level, firm-level confidential, household microdata, ABS DataLab, HILDA microdata, DSS/Services Australia records, ATO records, Treasury/PBO confidential material, or restricted government data.
+
+Build 25 sealed the previous RC state. If Build 26 is included in a later sealed RC, the integrity seal must be regenerated for that state rather than treated as already covering the new feasibility artefacts.
+
 ## Non-Claims
 
 The calibration shell is not legal, tax, Treasury, ATO, ABS, Fair Work, OECD, BEPS, audit, forensic, or economic validation. It does not prove any model setting is correct.

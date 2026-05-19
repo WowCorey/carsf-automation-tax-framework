@@ -305,11 +305,13 @@
       {
         "affected_layers": [
           "secure_ingestion",
-          "repo_guardrails"
+          "repo_guardrails",
+          "real_data_feasibility"
         ],
         "affected_reports": [
           "reports/secure_ingestion_controls.md",
-          "reports/repo_guardrails.md"
+          "reports/repo_guardrails.md",
+          "reports/real_data_feasibility.md"
         ],
         "allowed_negative_warnings": [
           "no taxpayer-level real data",
@@ -419,13 +421,15 @@
           "core_formula_model",
           "sector_schedules",
           "uncertainty_ranges",
-          "calibration_shell"
+          "calibration_shell",
+          "real_data_feasibility"
         ],
         "target_reports": [
           "reports/example_results.md",
           "reports/sector_schedule_expansion.md",
           "reports/uncertainty_ranges.md",
-          "reports/calibration_requirements.md"
+          "reports/calibration_requirements.md",
+          "reports/real_data_feasibility.md"
         ],
         "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
         "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -523,13 +527,15 @@
           "secure_ingestion",
           "repo_guardrails",
           "household_weighting",
-          "household_distributional"
+          "household_distributional",
+          "real_data_feasibility"
         ],
         "target_reports": [
           "reports/secure_ingestion_controls.md",
           "reports/repo_guardrails.md",
           "reports/household_weighting.md",
-          "reports/distributional_scenarios.md"
+          "reports/distributional_scenarios.md",
+          "reports/real_data_feasibility.md"
         ],
         "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
         "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -564,6 +570,8 @@
       "reports/mock_evidence_workflow.md",
       "reports/payment_interactions.json",
       "reports/payment_interactions.md",
+      "reports/real_data_feasibility.json",
+      "reports/real_data_feasibility.md",
       "reports/repo_guardrails.json",
       "reports/repo_guardrails.md",
       "reports/reviewed_scenarios.json",
@@ -1266,6 +1274,61 @@
       },
       {
         "attack_categories": [
+          "calibration_gap",
+          "data_access_gap"
+        ],
+        "attack_tracks": [
+          "privacy_review",
+          "statistical_methods_review",
+          "technical_review"
+        ],
+        "failure_mode_ids": [],
+        "known_blockers": [
+          "No real data has been loaded and no calibration has occurred.",
+          "Public-data candidates require licence, provenance, and aggregate-only review before any Build 27 pilot.",
+          "Technical, privacy, statistical, legal, tax, Treasury-methods, and ATO-methods review remain required."
+        ],
+        "layer_id": "real_data_feasibility",
+        "layer_name": "Real Data Feasibility and Calibration Intake Map",
+        "locked_until_review": [
+          "CI coverage completeness",
+          "confidence treatment",
+          "fail-closed mutation coverage",
+          "generated-report traceability",
+          "guardrail allowlists",
+          "household representativeness",
+          "manifest drift controls",
+          "privacy classification",
+          "real-data ingestion",
+          "retention and IAM",
+          "reviewed-scenario suppression",
+          "secrecy handling"
+        ],
+        "missing_external_inputs": [
+          "CI run log",
+          "Calibration blocker list for the layer.",
+          "DLP review",
+          "External reviewer note separating challenge from validation.",
+          "Independent review memo with assumptions challenged.",
+          "Non-claim boundary check against the relevant report.",
+          "Source-report trace from manifest entry to generated report.",
+          "forecast boundary review",
+          "guardrail fixture review",
+          "manifest diff review",
+          "privacy impact review",
+          "report regeneration trace"
+        ],
+        "must_not_infer": [
+          "Do not infer any firm-level CARSF liability change.",
+          "Do not infer approval, validation, operational readiness, legal sufficiency, or official endorsement.",
+          "Do not infer completed external review.",
+          "Do not infer that any output determines actual tax payable.",
+          "Do not infer use of taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data."
+        ],
+        "not_validation_statement": "This layer attack row is a challenge prompt only and is not validation, approval, readiness, or an official review outcome."
+      },
+      {
+        "attack_categories": [
           "guardrail_coverage_gap",
           "hidden_assumption_risk",
           "manifest_drift_gap",
@@ -1953,6 +2016,7 @@
       "investment_incidence",
       "legislative_architecture",
       "payment_interactions",
+      "real_data_feasibility",
       "release_candidate_pack",
       "repo_guardrails",
       "reviewed_scenarios",
@@ -2845,6 +2909,62 @@
       },
       {
         "attack_question_ids": [
+          "common_calibration_gap",
+          "common_real_data_boundary"
+        ],
+        "calibration_or_review_blockers": [
+          "No real data has been loaded and no calibration has occurred.",
+          "Public-data candidates require licence, provenance, and aggregate-only review before any Build 27 pilot.",
+          "Technical, privacy, statistical, legal, tax, Treasury-methods, and ATO-methods review remain required."
+        ],
+        "layer_id": "real_data_feasibility",
+        "likely_overread_risk": "does not show: real data loaded calibration completed validation official status or tax model proof",
+        "must_not_be_used_for": [
+          "real data loaded",
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable"
+        ],
+        "not_validation_statement": "This report attack row is a challenge prompt only and is not validation, approval, readiness, or a finding of actual error.",
+        "primary_reviewer_tracks": [
+          "privacy_review",
+          "statistical_methods_review",
+          "technical_review"
+        ],
+        "report_path": "reports/real_data_feasibility.json",
+        "required_follow_up": "External reviewer should test the report against its non-claims, blockers, source runner, and generated JSON payload."
+      },
+      {
+        "attack_question_ids": [
+          "common_calibration_gap",
+          "common_real_data_boundary"
+        ],
+        "calibration_or_review_blockers": [
+          "No real data has been loaded and no calibration has occurred.",
+          "Public-data candidates require licence, provenance, and aggregate-only review before any Build 27 pilot.",
+          "Technical, privacy, statistical, legal, tax, Treasury-methods, and ATO-methods review remain required."
+        ],
+        "layer_id": "real_data_feasibility",
+        "likely_overread_risk": "does not show: real data loaded calibration completed validation official status or tax model proof",
+        "must_not_be_used_for": [
+          "real data loaded",
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable"
+        ],
+        "not_validation_statement": "This report attack row is a challenge prompt only and is not validation, approval, readiness, or a finding of actual error.",
+        "primary_reviewer_tracks": [
+          "privacy_review",
+          "statistical_methods_review",
+          "technical_review"
+        ],
+        "report_path": "reports/real_data_feasibility.md",
+        "required_follow_up": "External reviewer should test the report against its non-claims, blockers, source runner, and generated JSON payload."
+      },
+      {
+        "attack_question_ids": [
           "common_manifest_drift",
           "common_real_data_boundary",
           "privacy_real_data_exclusion",
@@ -3426,13 +3546,15 @@
               "core_formula_model",
               "sector_schedules",
               "uncertainty_ranges",
-              "calibration_shell"
+              "calibration_shell",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/example_results.md",
               "reports/sector_schedule_expansion.md",
               "reports/uncertainty_ranges.md",
-              "reports/calibration_requirements.md"
+              "reports/calibration_requirements.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -3448,13 +3570,15 @@
               "secure_ingestion",
               "repo_guardrails",
               "household_weighting",
-              "household_distributional"
+              "household_distributional",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
               "reports/repo_guardrails.md",
               "reports/household_weighting.md",
-              "reports/distributional_scenarios.md"
+              "reports/distributional_scenarios.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -3770,13 +3894,15 @@
               "core_formula_model",
               "sector_schedules",
               "uncertainty_ranges",
-              "calibration_shell"
+              "calibration_shell",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/example_results.md",
               "reports/sector_schedule_expansion.md",
               "reports/uncertainty_ranges.md",
-              "reports/calibration_requirements.md"
+              "reports/calibration_requirements.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -3792,13 +3918,15 @@
               "secure_ingestion",
               "repo_guardrails",
               "household_weighting",
-              "household_distributional"
+              "household_distributional",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
               "reports/repo_guardrails.md",
               "reports/household_weighting.md",
-              "reports/distributional_scenarios.md"
+              "reports/distributional_scenarios.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -4108,13 +4236,15 @@
               "core_formula_model",
               "sector_schedules",
               "uncertainty_ranges",
-              "calibration_shell"
+              "calibration_shell",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/example_results.md",
               "reports/sector_schedule_expansion.md",
               "reports/uncertainty_ranges.md",
-              "reports/calibration_requirements.md"
+              "reports/calibration_requirements.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -4130,13 +4260,15 @@
               "secure_ingestion",
               "repo_guardrails",
               "household_weighting",
-              "household_distributional"
+              "household_distributional",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
               "reports/repo_guardrails.md",
               "reports/household_weighting.md",
-              "reports/distributional_scenarios.md"
+              "reports/distributional_scenarios.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -4463,13 +4595,15 @@
               "core_formula_model",
               "sector_schedules",
               "uncertainty_ranges",
-              "calibration_shell"
+              "calibration_shell",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/example_results.md",
               "reports/sector_schedule_expansion.md",
               "reports/uncertainty_ranges.md",
-              "reports/calibration_requirements.md"
+              "reports/calibration_requirements.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -4485,13 +4619,15 @@
               "secure_ingestion",
               "repo_guardrails",
               "household_weighting",
-              "household_distributional"
+              "household_distributional",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
               "reports/repo_guardrails.md",
               "reports/household_weighting.md",
-              "reports/distributional_scenarios.md"
+              "reports/distributional_scenarios.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -4809,13 +4945,15 @@
               "core_formula_model",
               "sector_schedules",
               "uncertainty_ranges",
-              "calibration_shell"
+              "calibration_shell",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/example_results.md",
               "reports/sector_schedule_expansion.md",
               "reports/uncertainty_ranges.md",
-              "reports/calibration_requirements.md"
+              "reports/calibration_requirements.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -4831,13 +4969,15 @@
               "secure_ingestion",
               "repo_guardrails",
               "household_weighting",
-              "household_distributional"
+              "household_distributional",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
               "reports/repo_guardrails.md",
               "reports/household_weighting.md",
-              "reports/distributional_scenarios.md"
+              "reports/distributional_scenarios.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -5149,13 +5289,15 @@
               "core_formula_model",
               "sector_schedules",
               "uncertainty_ranges",
-              "calibration_shell"
+              "calibration_shell",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/example_results.md",
               "reports/sector_schedule_expansion.md",
               "reports/uncertainty_ranges.md",
-              "reports/calibration_requirements.md"
+              "reports/calibration_requirements.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -5171,13 +5313,15 @@
               "secure_ingestion",
               "repo_guardrails",
               "household_weighting",
-              "household_distributional"
+              "household_distributional",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
               "reports/repo_guardrails.md",
               "reports/household_weighting.md",
-              "reports/distributional_scenarios.md"
+              "reports/distributional_scenarios.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -5503,13 +5647,15 @@
               "core_formula_model",
               "sector_schedules",
               "uncertainty_ranges",
-              "calibration_shell"
+              "calibration_shell",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/example_results.md",
               "reports/sector_schedule_expansion.md",
               "reports/uncertainty_ranges.md",
-              "reports/calibration_requirements.md"
+              "reports/calibration_requirements.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -5525,13 +5671,15 @@
               "secure_ingestion",
               "repo_guardrails",
               "household_weighting",
-              "household_distributional"
+              "household_distributional",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
               "reports/repo_guardrails.md",
               "reports/household_weighting.md",
-              "reports/distributional_scenarios.md"
+              "reports/distributional_scenarios.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -5791,13 +5939,15 @@
           "secure_ingestion",
           "repo_guardrails",
           "evidence_workflow",
-          "household_weighting"
+          "household_weighting",
+          "real_data_feasibility"
         ],
         "relevant_reports": [
           "reports/secure_ingestion_controls.md",
           "reports/repo_guardrails.md",
           "reports/mock_evidence_workflow.md",
-          "reports/household_weighting.md"
+          "reports/household_weighting.md",
+          "reports/real_data_feasibility.md"
         ],
         "report_attack_questions": [
           "Does any report imply real data",
@@ -5853,13 +6003,15 @@
               "core_formula_model",
               "sector_schedules",
               "uncertainty_ranges",
-              "calibration_shell"
+              "calibration_shell",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/example_results.md",
               "reports/sector_schedule_expansion.md",
               "reports/uncertainty_ranges.md",
-              "reports/calibration_requirements.md"
+              "reports/calibration_requirements.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -5875,13 +6027,15 @@
               "secure_ingestion",
               "repo_guardrails",
               "household_weighting",
-              "household_distributional"
+              "household_distributional",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
               "reports/repo_guardrails.md",
               "reports/household_weighting.md",
-              "reports/distributional_scenarios.md"
+              "reports/distributional_scenarios.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -6135,13 +6289,15 @@
           "uncertainty_ranges",
           "household_weighting",
           "reviewed_scenarios",
-          "household_distributional"
+          "household_distributional",
+          "real_data_feasibility"
         ],
         "relevant_reports": [
           "reports/uncertainty_ranges.md",
           "reports/household_weighting.md",
           "reports/reviewed_scenarios.md",
-          "reports/distributional_scenarios.md"
+          "reports/distributional_scenarios.md",
+          "reports/real_data_feasibility.md"
         ],
         "report_attack_questions": [
           "Does the range imply probability",
@@ -6197,13 +6353,15 @@
               "core_formula_model",
               "sector_schedules",
               "uncertainty_ranges",
-              "calibration_shell"
+              "calibration_shell",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/example_results.md",
               "reports/sector_schedule_expansion.md",
               "reports/uncertainty_ranges.md",
-              "reports/calibration_requirements.md"
+              "reports/calibration_requirements.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -6219,13 +6377,15 @@
               "secure_ingestion",
               "repo_guardrails",
               "household_weighting",
-              "household_distributional"
+              "household_distributional",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
               "reports/repo_guardrails.md",
               "reports/household_weighting.md",
-              "reports/distributional_scenarios.md"
+              "reports/distributional_scenarios.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -6544,13 +6704,15 @@
               "core_formula_model",
               "sector_schedules",
               "uncertainty_ranges",
-              "calibration_shell"
+              "calibration_shell",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/example_results.md",
               "reports/sector_schedule_expansion.md",
               "reports/uncertainty_ranges.md",
-              "reports/calibration_requirements.md"
+              "reports/calibration_requirements.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -6566,13 +6728,15 @@
               "secure_ingestion",
               "repo_guardrails",
               "household_weighting",
-              "household_distributional"
+              "household_distributional",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
               "reports/repo_guardrails.md",
               "reports/household_weighting.md",
-              "reports/distributional_scenarios.md"
+              "reports/distributional_scenarios.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -6833,13 +6997,15 @@
           "executive_dashboard",
           "release_candidate_pack",
           "evidence_workflow",
-          "secure_ingestion"
+          "secure_ingestion",
+          "real_data_feasibility"
         ],
         "relevant_reports": [
           "reports/repo_guardrails.md",
           "reports/executive_dashboard.md",
           "reports/v1_5_release_candidate_pack.md",
-          "reports/secure_ingestion_controls.md"
+          "reports/secure_ingestion_controls.md",
+          "reports/real_data_feasibility.md"
         ],
         "report_attack_questions": [
           "Does the Markdown match JSON",
@@ -6894,13 +7060,15 @@
               "core_formula_model",
               "sector_schedules",
               "uncertainty_ranges",
-              "calibration_shell"
+              "calibration_shell",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/example_results.md",
               "reports/sector_schedule_expansion.md",
               "reports/uncertainty_ranges.md",
-              "reports/calibration_requirements.md"
+              "reports/calibration_requirements.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -6916,13 +7084,15 @@
               "secure_ingestion",
               "repo_guardrails",
               "household_weighting",
-              "household_distributional"
+              "household_distributional",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
               "reports/repo_guardrails.md",
               "reports/household_weighting.md",
-              "reports/distributional_scenarios.md"
+              "reports/distributional_scenarios.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -7236,13 +7406,15 @@
               "core_formula_model",
               "sector_schedules",
               "uncertainty_ranges",
-              "calibration_shell"
+              "calibration_shell",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/example_results.md",
               "reports/sector_schedule_expansion.md",
               "reports/uncertainty_ranges.md",
-              "reports/calibration_requirements.md"
+              "reports/calibration_requirements.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -7258,13 +7430,15 @@
               "secure_ingestion",
               "repo_guardrails",
               "household_weighting",
-              "household_distributional"
+              "household_distributional",
+              "real_data_feasibility"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
               "reports/repo_guardrails.md",
               "reports/household_weighting.md",
-              "reports/distributional_scenarios.md"
+              "reports/distributional_scenarios.md",
+              "reports/real_data_feasibility.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -7555,7 +7729,7 @@
     "summary": {
       "approval_claimed": false,
       "firm_level_liability_logic_modified": false,
-      "layers_referenced": 24,
+      "layers_referenced": 25,
       "legal_sufficiency_claimed": false,
       "legislative_readiness_claimed": false,
       "non_claims": [
@@ -7570,14 +7744,14 @@
       "release_documents_missing": 0,
       "release_documents_present": 17,
       "reports_missing": 0,
-      "reports_referenced": 46,
+      "reports_referenced": 48,
       "review_completed": false,
       "total_attack_questions": 126,
       "total_boundary_checks": 18,
       "total_failure_modes": 60,
-      "total_layer_attack_rows": 24,
+      "total_layer_attack_rows": 25,
       "total_release_documents": 17,
-      "total_report_attack_rows": 46,
+      "total_report_attack_rows": 48,
       "total_review_tracks": 12,
       "tracks_missing_required_question_count": 0,
       "tracks_with_required_question_count": 12,
@@ -7596,7 +7770,7 @@
   "metadata": {
     "approval_claimed": false,
     "firm_level_liability_logic_modified": false,
-    "generated_at": "2026-05-18T11:03:53+00:00",
+    "generated_at": "2026-05-19T00:02:04+00:00",
     "legal_sufficiency_claimed": false,
     "legislative_readiness_claimed": false,
     "non_claims": [
@@ -7616,7 +7790,7 @@
   "summary": {
     "approval_claimed": false,
     "firm_level_liability_logic_modified": false,
-    "layers_referenced": 24,
+    "layers_referenced": 25,
     "legal_sufficiency_claimed": false,
     "legislative_readiness_claimed": false,
     "non_claims": [
@@ -7631,14 +7805,14 @@
     "release_documents_missing": 0,
     "release_documents_present": 17,
     "reports_missing": 0,
-    "reports_referenced": 46,
+    "reports_referenced": 48,
     "review_completed": false,
     "total_attack_questions": 126,
     "total_boundary_checks": 18,
     "total_failure_modes": 60,
-    "total_layer_attack_rows": 24,
+    "total_layer_attack_rows": 25,
     "total_release_documents": 17,
-    "total_report_attack_rows": 46,
+    "total_report_attack_rows": 48,
     "total_review_tracks": 12,
     "tracks_missing_required_question_count": 0,
     "tracks_with_required_question_count": 12,

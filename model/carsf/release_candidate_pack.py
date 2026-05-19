@@ -51,6 +51,7 @@ REQUIRED_LAYER_IDS = {
     "uncertainty_ranges",
     "reviewed_scenarios",
     "calibration_shell",
+    "real_data_feasibility",
     "working_paper",
     "status_risks_docs",
 }
@@ -126,6 +127,8 @@ REQUIRED_REPORT_PATHS = {
     "reports/uncertainty_ranges.json",
     "reports/reviewed_scenarios.md",
     "reports/reviewed_scenarios.json",
+    "reports/real_data_feasibility.md",
+    "reports/real_data_feasibility.json",
 }
 
 REQUIRED_RELEASE_DOCUMENTS = {

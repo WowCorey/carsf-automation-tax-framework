@@ -14,6 +14,10 @@ The generated attack-pack report builds the layer-by-layer matrix from the V1.5 
 - Layer has must-not-use boundaries.
 - Layer has a discipline-specific attack track.
 
+## Build 26 Addition
+
+`real_data_feasibility` is a layer attack target. Attack it for source classification drift, public-data pilot overread, restricted-data commit risk, realistic-placeholder provenance gaps, and any implication that feasibility mapping is complete, accepted, ready for operations, official, or a real tax model.
+
 ## What Not To Infer
 
 The matrix is not validation, not approval, not a maturity rating, and not official review.

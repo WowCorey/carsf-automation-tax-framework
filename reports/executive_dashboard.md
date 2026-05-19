@@ -1,6 +1,6 @@
 # CARSF V1.5 Executive Dashboard Consolidation
 
-Generated at: `2026-05-18T11:03:52+00:00`
+Generated at: `2026-05-19T00:02:03+00:00`
 
 ## A. Purpose
 
@@ -19,22 +19,22 @@ Use this as a review navigation index. Read order is suggested review navigation
 
 ## D. Prototype Stack Overview
 
-- Total layers: 23
-- Total reports indexed: 40
-- Reports present: 40
+- Total layers: 24
+- Total reports indexed: 42
+- Reports present: 42
 - Reports missing: 0
-- Layers with generated reports: 22
+- Layers with generated reports: 23
 - Synthetic-only layers: 10
-- Placeholder-only layers: 19
+- Placeholder-only layers: 20
 - Non-operative layers: 3
-- External-review-required layers: 20
-- Calibration-required layers: 16
+- External-review-required layers: 21
+- Calibration-required layers: 17
 - Legal-review-required layers: 13
 - Tax-review-required layers: 10
-- ATO-methods-review-required layers: 10
-- Treasury-methods-review-required layers: 14
-- Privacy-review-required layers: 9
-- Statistical-methods-review-required layers: 5
+- ATO-methods-review-required layers: 11
+- Treasury-methods-review-required layers: 15
+- Privacy-review-required layers: 10
+- Statistical-methods-review-required layers: 6
 - real_data_used: False
 - readiness_score_created: False
 - operational_readiness_claimed: False
@@ -69,6 +69,7 @@ Use this as a review navigation index. Read order is suggested review navigation
 | 20 | investment_incidence | Investment / Incidence Guardrails | Placeholder investment and incidence guardrails that do not alter final liability. | False | Suggested review navigation only; not an official process. |
 | 20 | repo_guardrails | Repository Guardrails | Prototype repository-level scans for prohibited paths, markers, and generated-report non-claims. | False | Suggested review navigation only; not an official process. |
 | 21 | calibration_shell | Calibration Shell | Calibration requirements registry and external-data readiness shell. | False | Suggested review navigation only; not an official process. |
+| 26 | real_data_feasibility | Real Data Feasibility and Calibration Intake Map | Feasibility map for public aggregate data candidates, restricted-data requirements, realistic placeholders, forbidden repo data, module needs, and Build 27 pilot candidates. | False | Suggested review navigation only; not an official process. |
 
 ## F. Layer Index
 
@@ -97,6 +98,7 @@ Use this as a review navigation index. Read order is suggested review navigation
 | investment_incidence | Investment / Incidence Guardrails | investment_incidence | Placeholder investment and incidence guardrails that do not alter final liability. | implemented_prototype, generated_report_available, placeholder_only, calibration_required | reports/investment_guardrails.md, reports/investment_guardrails.json | simulator/pages/12_Investment_and_Incidence_Guardrails.py | economic_methods_reviewer, treasury_methods_reviewer, tax_reviewer | 20 | Incidence and investment warnings frame interpretation boundaries. |
 | repo_guardrails | Repository Guardrails | repo_guardrails | Prototype repository-level scans for prohibited paths, markers, and generated-report non-claims. | implemented_prototype, generated_report_available, placeholder_only | reports/repo_guardrails.md, reports/repo_guardrails.json | simulator/pages/11_Repository_Guardrails.py | technical_reviewer, privacy_reviewer, legal_reviewer | 20 | Guardrails help verify no-real-data discipline. |
 | calibration_shell | Calibration Shell | calibration | Calibration requirements registry and external-data readiness shell. | implemented_prototype, generated_report_available, placeholder_only, calibration_required, external_review_required | reports/calibration_requirements.md, reports/calibration_requirements.json | simulator/pages/8_Evidence_and_Calibration.py | statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer, privacy_reviewer | 21 | Calibration shell summarises unresolved data and methods needs. |
+| real_data_feasibility | Real Data Feasibility and Calibration Intake Map | calibration | Feasibility map for public aggregate data candidates, restricted-data requirements, realistic placeholders, forbidden repo data, module needs, and Build 27 pilot candidates. | implemented_prototype, generated_report_available, placeholder_only, calibration_required, external_review_required, not_for_real_world_use | reports/real_data_feasibility.md, reports/real_data_feasibility.json | None | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer | 26 | Build 26 prepares a safe public-data pilot boundary without loading data. |
 
 ## G. Report Index
 
@@ -142,6 +144,8 @@ Use this as a review navigation index. Read order is suggested review navigation
 | reports/repo_guardrails.md | repo_guardrails | True | scripts/run_repo_guardrails.py | Prototype repository guardrails only. | must not use for: complete DLP, cybersecurity validation, operational readiness | 20 |
 | reports/calibration_requirements.json | calibration_shell | True | scripts/run_examples.py | Calibration requirements are unmet placeholders. | must not use for: calibrated output, real-world validation, external data approval | 21 |
 | reports/calibration_requirements.md | calibration_shell | True | scripts/run_examples.py | Calibration requirements are unmet placeholders. | must not use for: calibrated output, real-world validation, external data approval | 21 |
+| reports/real_data_feasibility.json | real_data_feasibility | True | scripts/run_real_data_feasibility.py | Machine-readable feasibility map only; public-data candidates are not loaded datasets. | must not use for: real data loaded, calibration completed, validation, official status, actual tax payable | 26 |
+| reports/real_data_feasibility.md | real_data_feasibility | True | scripts/run_real_data_feasibility.py | Real-data feasibility is intake mapping only; no real data has been loaded and no calibration has occurred. | must not use for: real data loaded, calibration completed, validation, official status, actual tax payable | 26 |
 
 ## H. Streamlit Page Index
 
@@ -197,6 +201,7 @@ Use this as a review navigation index. Read order is suggested review navigation
 | calibration_shell | not_real_data, not_economic_validation, not_statistical_validation | must not use for: calibrated output, real-world validation, external data access approval | True |
 | working_paper | not_legal_advice, not_tax_advice, not_treasury_modelling, not_ato_guidance | must not use for: legal advice, tax advice, official policy | True |
 | status_risks_docs | not_legal_advice, not_tax_advice, not_economic_validation, not_operational_readiness | must not use for: approval, validation, operational readiness | True |
+| real_data_feasibility | not_real_data, not_statistical_validation, not_economic_validation, not_actual_tax_payable, not_operational_readiness | must not use for: real data loaded, calibration completed, validation, official status, actual tax payable | True |
 
 ## J. Calibration Blockers
 
@@ -224,6 +229,8 @@ Use this as a review navigation index. Read order is suggested review navigation
 | calibration_shell | calibration | Calibration requirements are listed but unmet. | False | Calibration shell summarises unresolved data and methods needs. |
 | working_paper | calibration | Working paper contains unresolved policy and calibration questions. | False | Working paper provides the main concept narrative before detailed reports. |
 | status_risks_docs | calibration | Known risks and status docs list unresolved calibration and review gaps. | False | Status and risks docs should be read before interpreting outputs. |
+| real_data_feasibility | calibration | No real data has been loaded and no calibration has occurred. | False | Build 26 prepares a safe public-data pilot boundary without loading data. |
+| real_data_feasibility | calibration | Restricted-data requirements remain access blockers, not data access. | False | Build 26 prepares a safe public-data pilot boundary without loading data. |
 
 ## K. External Review Blockers
 
@@ -252,12 +259,13 @@ Use this as a review navigation index. Read order is suggested review navigation
 | calibration_shell | external_review | External data governance, statistical methods, Treasury, ATO, legal, privacy, and policy review required. | True | Calibration shell summarises unresolved data and methods needs. |
 | working_paper | external_review | Policy, legal, tax, Treasury, ATO methods, and Parliamentary Counsel review required. | True | Working paper provides the main concept narrative before detailed reports. |
 | status_risks_docs | external_review | Cross-functional external review required before real use. | True | Status and risks docs should be read before interpreting outputs. |
+| real_data_feasibility | external_review | Public source licensing, aggregate-only handling, privacy, statistical methods, legal, tax, Treasury, and ATO-methods review remain required before Build 27 loading. | True | Build 26 prepares a safe public-data pilot boundary without loading data. |
 
 ## L. Guardrail / Safety Status
 
 | Source Report | Exists | Clean | Denied Findings | Warning Findings | Interpretation Warning |
 | --- | --- | --- | ---: | ---: | --- |
-| reports/repo_guardrails.json | True | True | 0 | 53 | Guardrail status is a prototype repository-safety signal only, not operational readiness or validation. |
+| reports/repo_guardrails.json | True | True | 0 | 54 | Guardrail status is a prototype repository-safety signal only, not operational readiness or validation. |
 | reports/secure_ingestion_controls.json | True | None | 0 | 0 | Guardrail status is a prototype repository-safety signal only, not operational readiness or validation. |
 | reports/investment_guardrails.json | True | None | 0 | 0 | Guardrail status is a prototype repository-safety signal only, not operational readiness or validation. |
 
@@ -284,16 +292,16 @@ Use this as a review navigation index. Read order is suggested review navigation
 
 | Reviewer | Layers |
 | --- | --- |
-| ato_methods_reviewer | working_paper, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, behavioural_response, administrative_workflow, legislative_architecture, evidence_workflow, calibration_shell |
+| ato_methods_reviewer | working_paper, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, behavioural_response, administrative_workflow, legislative_architecture, evidence_workflow, calibration_shell, real_data_feasibility |
 | economic_methods_reviewer | behavioural_response, fiscal_trajectory, investment_incidence |
 | legal_reviewer | working_paper, status_risks_docs, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, behavioural_response, administrative_workflow, legislative_architecture, payment_interactions, evidence_workflow, secure_ingestion, repo_guardrails |
 | parliamentary_counsel_reviewer | legislative_architecture |
 | policy_reviewer | executive_dashboard, working_paper, status_risks_docs, worked_examples, behavioural_response, fiscal_trajectory, transition_funding, household_weighting, uncertainty_ranges, reviewed_scenarios |
-| privacy_reviewer | administrative_workflow, legislative_architecture, household_distributional, household_weighting, evidence_workflow, secure_ingestion, repo_guardrails, calibration_shell |
-| statistical_methods_reviewer | household_distributional, household_weighting, uncertainty_ranges, reviewed_scenarios, calibration_shell |
+| privacy_reviewer | administrative_workflow, legislative_architecture, household_distributional, household_weighting, evidence_workflow, secure_ingestion, repo_guardrails, calibration_shell, real_data_feasibility |
+| statistical_methods_reviewer | household_distributional, household_weighting, uncertainty_ranges, reviewed_scenarios, calibration_shell, real_data_feasibility |
 | tax_reviewer | working_paper, status_risks_docs, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, behavioural_response, administrative_workflow, legislative_architecture, investment_incidence |
-| technical_reviewer | executive_dashboard, status_risks_docs, worked_examples, reviewed_scenarios, evidence_workflow, secure_ingestion, repo_guardrails |
-| treasury_methods_reviewer | working_paper, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, legislative_architecture, fiscal_trajectory, transition_funding, payment_interactions, investment_incidence, calibration_shell |
+| technical_reviewer | executive_dashboard, status_risks_docs, worked_examples, reviewed_scenarios, evidence_workflow, secure_ingestion, repo_guardrails, real_data_feasibility |
+| treasury_methods_reviewer | working_paper, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, legislative_architecture, fiscal_trajectory, transition_funding, payment_interactions, investment_incidence, calibration_shell, real_data_feasibility |
 | welfare_policy_reviewer | transition_funding, payment_interactions, household_distributional |
 
 ## R. Plain-English Interpretation

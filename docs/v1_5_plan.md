@@ -92,6 +92,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - V1.5 release-candidate pack reports can be generated with `python scripts/run_v1_5_release_candidate_pack.py`.
 - V1.5 external review attack-pack reports can be generated with `python scripts/run_external_review_attack_pack.py`.
 - V1.5 final RC integrity seal reports can be generated with `python scripts/run_v1_5_final_rc_integrity_seal.py`.
+- Real-data feasibility and calibration-intake reports can be generated with `python scripts/run_real_data_feasibility.py`.
 - Hybrid logistics stress variant demonstrates non-zero but intermediate NLTG.
 - V1.5 working paper contains TODO markers where policy drafting remains open.
 - Limitations document clearly blocks actual tax-payable claims.
@@ -121,3 +122,4 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Update the V1.5 working paper and release-candidate pack only after the dashboard exists, so the paper can point reviewers to the complete prototype stack without implying legal, economic, Treasury, ATO, welfare, or operational validation.
 - Create an external review attack pack after the V1.5 release-candidate pack exists, so legal, tax, Treasury, ATO methods, privacy, economic, statistical, welfare, Parliamentary Counsel, technical, and hostile reviewers can challenge the release candidate without implying validation, approval, legal sufficiency, operational readiness, or real-world policy readiness.
 - Create a final RC integrity seal after the external review attack pack exists, so release documents, attack-pack documents, report paths, manifests, scripts, false flags, digest metadata, CI expectations, and non-claim boundaries can be checked without implying approval, validation, external review completion, legal sufficiency, operational readiness, official status, or implementation readiness.
+- Add a real-data feasibility and calibration-intake map after the final RC seal exists, so public aggregate candidates, restricted-data needs, realistic placeholders, forbidden repo data, and Build 27 pilot candidates are visible without loading data, completing calibration, weakening non-claims, or changing firm-level liability.

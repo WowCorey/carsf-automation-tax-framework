@@ -224,6 +224,13 @@ def _is_documented_marker_example(path: str, text: str) -> bool:
     if documentation_paths:
         return True
     lowered = text.lower()
+    if (
+        normalised == "data/calibration/real_data_feasibility_map.yaml"
+        and "forbidden_data_rules:" in lowered
+        and "must_not_commit_to_repo: true" in lowered
+        and "no real data has been loaded" in lowered
+    ):
+        return True
     if normalised.startswith("schedules/") and (
         "status: placeholder_prototype" in lowered or "calibration_status: illustrative_placeholder" in lowered
     ):

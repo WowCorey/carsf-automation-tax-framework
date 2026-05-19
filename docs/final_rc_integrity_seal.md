@@ -51,3 +51,5 @@ Generated reports:
 `seal_passed: true` means only that required internal artefact checks passed at generation time. It does not mean approval, validation, external review completion, operational readiness, legal sufficiency, legislative readiness, official status, or implementation readiness.
 
 Digest entries are SHA-256 metadata for release artefacts. They are not signatures, legal seals, external attestations, approval, or validation.
+
+Build 25 sealed the previous RC state. Build 26 adds real-data feasibility and calibration-intake artefacts after that state. If Build 26 becomes part of a later sealed RC, the final RC integrity seal must be regenerated for that later state rather than treated as already covering Build 26.

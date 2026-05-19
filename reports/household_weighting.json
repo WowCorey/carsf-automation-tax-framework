@@ -1558,7 +1558,7 @@
     }
   ],
   "metadata": {
-    "generated_at": "2026-05-18T11:03:56+00:00",
+    "generated_at": "2026-05-19T00:02:07+00:00",
     "non_claims": [
       "These are synthetic household weighting outputs only. They are not population estimates, real distributional modelling, ABS/HILDA/Census analysis, DSS/Services Australia modelling, Treasury modelling, PBO costing, welfare advice, eligibility law, legal advice, tax advice, or economic validation.",
       "This is a prototype weighting and subgroup aggregation shell only; it is not a validated distributional model.",
