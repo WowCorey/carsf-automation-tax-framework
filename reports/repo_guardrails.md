@@ -1,6 +1,6 @@
 # CARSF V1.5 Repository Guardrails
 
-Generated at: `2026-05-19T04:39:43+00:00`
+Generated at: `2026-05-20T01:33:44+00:00`
 
 ## A. Purpose
 
@@ -15,7 +15,7 @@ This report runs prototype repository-level guardrails for likely evidence leaks
 ## C. Files Scanned/Skipped
 
 - Files scanned: 457
-- Files skipped: 2723
+- Files skipped: 1074
 - Clean: true
 
 ## D. Denied Findings

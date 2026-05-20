@@ -15,7 +15,7 @@
       "source_reference_only",
       "synthetic_fixture"
     ],
-    "generated_at": "2026-05-19T04:39:23+00:00",
+    "generated_at": "2026-05-20T01:33:43+00:00",
     "non_claims": [
       "This is a public aggregate-data pilot and realistic-placeholder anchor layer only. It may include small public aggregate extracts or source-reference records, but it is not calibration, calibration has not been completed, public data extracts do not prove the model works, realistic placeholders remain realistic placeholders, source references are not loaded datasets, and restricted-data requirements are not data access. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, or official status. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab, HILDA microdata, DSS/Services Australia records, ATO taxpayer records, Treasury/PBO confidential material, or restricted government data, and does not modify firm-level CARSF liability.",
       "Loaded public aggregate extracts are sanity-check-only or placeholder-anchor-only records, not completed calibration.",
@@ -955,10 +955,13 @@
         "raw_dataset_committed": false,
         "safe_to_commit": true,
         "source_kind": "Fair_Work_public_wage_anchor",
+        "source_locator": "Fair Work Ombudsman minimum wages fact sheet, national minimum wage paragraph for the 1 July 2025 rate and 38-hour week reference.",
         "source_note": "Small public wage threshold extract used only to anchor OPFTE, HLE, and QLC realistic placeholders.",
         "source_reference_id": "fair_work_minimum_wage_2025",
         "source_url": "https://www.fairwork.gov.au/how-we-will-help/templates-and-guides/fact-sheets/minimum-workplace-entitlements/minimum-wages",
+        "source_value_note": "Hourly value is source referenced; weekly value is stored as 24.95 multiplied by 38 ordinary hours for internal extract consistency and is not calibration.",
         "units": "AUD and percent",
+        "value_review_status": "maintainer_arithmetic_consistency_review_not_external_validation",
         "values": [
           {
             "source_field": "national minimum wage",
@@ -969,7 +972,7 @@
           {
             "source_field": "national minimum wage",
             "unit": "AUD_per_week",
-            "value": 948.0,
+            "value": 948.1,
             "value_id": "national_minimum_wage_weekly"
           },
           {
@@ -1000,10 +1003,13 @@
         "raw_dataset_committed": false,
         "safe_to_commit": true,
         "source_kind": "ATO_public_aggregate",
+        "source_locator": "ATO media-centre article \"ATO collects $100 billion dollars from large corporates\", public summary of 2022-23 corporate tax transparency results.",
         "source_note": "Public corporate tax transparency aggregate used only for fiscal scale context; no firm-level CARSF liability inference is allowed.",
         "source_reference_id": "ato_corporate_tax_transparency_2022_23",
         "source_url": "https://www.ato.gov.au/media-centre/ato-collects-100-billion-dollars-from-large-corporates",
+        "source_value_note": "Values are public aggregate/media-summary values only and do not support entity-level or firm-level CARSF inference.",
         "units": "AUD_billion and percent",
+        "value_review_status": "source_locator_recorded_not_external_validation",
         "values": [
           {
             "source_field": "income tax received from large corporates",
@@ -1038,10 +1044,13 @@
         "raw_dataset_committed": false,
         "safe_to_commit": true,
         "source_kind": "ATO_public_aggregate",
+        "source_locator": "ATO media-centre article \"2022-23 taxation statistics released\", public headline aggregate values.",
         "source_note": "Public ATO aggregate used for sanity-check-only fiscal scale context.",
         "source_reference_id": "ato_taxation_statistics_2022_23",
         "source_url": "https://www.ato.gov.au/media-centre/2022-23-taxation-statistics-released",
+        "source_value_note": "Values are public taxation-statistics summary values only and are not taxpayer-level data or calibration.",
         "units": "AUD_billion",
+        "value_review_status": "source_locator_recorded_not_external_validation",
         "values": [
           {
             "source_field": "total tax revenue collected",
@@ -1076,10 +1085,13 @@
         "raw_dataset_committed": false,
         "safe_to_commit": true,
         "source_kind": "Treasury_public_fiscal",
+        "source_locator": "Budget Paper No. 1 2026-27, Statement 5 Revenue, Table 5.1 Australian Government general government receipts, 2025-26 estimates.",
         "source_note": "Public budget aggregate used only for fiscal trajectory sanity-check context.",
         "source_reference_id": "treasury_budget_2026_27_bp1",
         "source_url": "https://budget.gov.au/content/bp1/",
+        "source_value_note": "Values are rounded from Table 5.1 public estimates for total receipts and total taxation receipts; this is not Treasury modelling by the repository.",
         "units": "AUD_billion",
+        "value_review_status": "exact_table_locator_recorded_not_external_validation",
         "values": [
           {
             "source_field": "total receipts estimate",
@@ -1114,10 +1126,13 @@
         "raw_dataset_committed": false,
         "safe_to_commit": true,
         "source_kind": "Super_Guarantee_public_setting",
+        "source_locator": "ATO key superannuation rates and thresholds page, super guarantee percentage table for the period from 1 July 2025.",
         "source_note": "Public rate setting used only to anchor a superannuation contribution pressure placeholder.",
         "source_reference_id": "ato_super_guarantee_2025_26",
         "source_url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/super-guarantee",
+        "source_value_note": "Value is a public rate-setting reference only and does not support individual, payroll, or taxpayer-level estimates.",
         "units": "percent",
+        "value_review_status": "source_locator_recorded_not_external_validation",
         "values": [
           {
             "source_field": "super guarantee percentage",
@@ -1146,10 +1161,13 @@
         "raw_dataset_committed": false,
         "safe_to_commit": true,
         "source_kind": "HELP_HECS_public_threshold",
+        "source_locator": "",
         "source_note": "Source-reference-only record; no threshold value is loaded in this build.",
         "source_reference_id": "study_assist_help_thresholds_2025_26",
         "source_url": "https://www.studyassist.gov.au/paying-back-your-loan/loan-repayment",
+        "source_value_note": "",
         "units": "source_reference_only",
+        "value_review_status": "",
         "values": []
       },
       {
@@ -1171,10 +1189,13 @@
         "raw_dataset_committed": false,
         "safe_to_commit": true,
         "source_kind": "State_payroll_tax_public_threshold",
+        "source_locator": "",
         "source_note": "Source-reference-only record; no payroll threshold value is loaded in this build.",
         "source_reference_id": "qld_payroll_tax_threshold_2025_26",
         "source_url": "https://qro.qld.gov.au/payroll-tax/",
+        "source_value_note": "",
         "units": "source_reference_only",
+        "value_review_status": "",
         "values": []
       },
       {
@@ -1196,10 +1217,13 @@
         "raw_dataset_committed": false,
         "safe_to_commit": true,
         "source_kind": "ABS_public_aggregate",
+        "source_locator": "",
         "source_note": "Source-reference-only record; no ABS aggregate table is loaded in this build.",
         "source_reference_id": "abs_labour_wage_aggregate_source_reference",
         "source_url": "https://www.abs.gov.au/statistics/labour",
+        "source_value_note": "",
         "units": "source_reference_only",
+        "value_review_status": "",
         "values": []
       }
     ],

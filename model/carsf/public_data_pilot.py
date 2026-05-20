@@ -180,6 +180,9 @@ class PublicAggregateExtract:
     values: list[dict[str, Any]]
     source_url: str
     source_note: str
+    source_locator: str
+    source_value_note: str
+    value_review_status: str
     licence_notes: str
     raw_dataset_committed: bool
     safe_to_commit: bool
@@ -480,6 +483,12 @@ def _extract_from_mapping(source: dict[str, Any], source_ids: set[str]) -> Publi
             raise ValueError(f"real_public_data_loaded extract lacks https source URL: {source['extract_id']}")
         if not _non_empty(source["source_note"], "extract.source_note"):
             raise ValueError(f"real_public_data_loaded extract lacks source note: {source['extract_id']}")
+        if not _non_empty(source.get("source_locator"), "extract.source_locator"):
+            raise ValueError(f"real_public_data_loaded extract lacks source locator: {source['extract_id']}")
+        if not _non_empty(source.get("source_value_note"), "extract.source_value_note"):
+            raise ValueError(f"real_public_data_loaded extract lacks source value note: {source['extract_id']}")
+        if not _non_empty(source.get("value_review_status"), "extract.value_review_status"):
+            raise ValueError(f"real_public_data_loaded extract lacks value review status: {source['extract_id']}")
         if not _non_empty(source["licence_notes"], "extract.licence_notes"):
             raise ValueError(f"real_public_data_loaded extract lacks licence notes: {source['extract_id']}")
         if _bool(source["safe_to_commit"], "extract.safe_to_commit") is not True:
@@ -487,6 +496,7 @@ def _extract_from_mapping(source: dict[str, Any], source_ids: set[str]) -> Publi
     values = source["values"]
     if not isinstance(values, list):
         raise ValueError(f"extract values must be a list: {source['extract_id']}")
+    _validate_wage_extract_consistency(str(source["extract_id"]), values)
     return PublicAggregateExtract(
         extract_id=_non_empty(source["extract_id"], "extract_id"),
         source_reference_id=source_reference_id,
@@ -501,6 +511,9 @@ def _extract_from_mapping(source: dict[str, Any], source_ids: set[str]) -> Publi
         values=[dict(item) for item in values],
         source_url=_non_empty(source["source_url"], "source_url"),
         source_note=_non_empty(source["source_note"], "source_note"),
+        source_locator=str(source.get("source_locator", "")),
+        source_value_note=str(source.get("source_value_note", "")),
+        value_review_status=str(source.get("value_review_status", "")),
         licence_notes=_non_empty(source["licence_notes"], "licence_notes"),
         raw_dataset_committed=_bool(source["raw_dataset_committed"], "raw_dataset_committed"),
         safe_to_commit=_bool(source["safe_to_commit"], "safe_to_commit"),
@@ -508,6 +521,29 @@ def _extract_from_mapping(source: dict[str, Any], source_ids: set[str]) -> Publi
         load_status=str(source.get("load_status", "loaded_public_extract")),
         blocker=str(source.get("blocker", "")),
     )
+
+
+def _extract_numeric_value(values: list[dict[str, Any]], value_id: str) -> float | None:
+    for item in values:
+        if item.get("value_id") == value_id:
+            value = item.get("value")
+            if isinstance(value, bool) or not isinstance(value, int | float):
+                raise ValueError(f"{value_id} must be numeric when present")
+            return float(value)
+    return None
+
+
+def _validate_wage_extract_consistency(extract_id: str, values: list[dict[str, Any]]) -> None:
+    hourly = _extract_numeric_value(values, "national_minimum_wage_hourly")
+    weekly = _extract_numeric_value(values, "national_minimum_wage_weekly")
+    if hourly is None or weekly is None:
+        return
+    expected_weekly = round(hourly * 38, 2)
+    if abs(weekly - expected_weekly) > 0.001:
+        raise ValueError(
+            f"minimum wage weekly value inconsistent in {extract_id}: "
+            f"expected {expected_weekly:.2f} from hourly * 38, got {weekly:.2f}"
+        )
 
 
 def _anchor_from_mapping(source: dict[str, Any], source_ids: set[str], extract_ids: set[str]) -> PlaceholderAnchorRecord:

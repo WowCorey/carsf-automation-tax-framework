@@ -90,6 +90,9 @@ def test_public_aggregate_extracts_have_status_source_and_commit_safety(repo_roo
         assert extract.safe_to_commit is True
         if extract.data_status == "real_public_data_loaded":
             assert extract.source_note
+            assert extract.source_locator
+            assert extract.source_value_note
+            assert extract.value_review_status
             assert extract.licence_notes
             assert extract.safe_to_commit is True
 
@@ -106,6 +109,15 @@ def test_source_reference_only_extracts_do_not_count_as_loaded_public_data(repo_
         item.data_status == "real_public_data_loaded" for item in result.public_aggregate_extracts
     )
     assert result.summary.real_public_data_loaded_extracts < result.summary.total_public_aggregate_extracts
+
+
+def test_minimum_wage_weekly_value_matches_hourly_times_38(repo_root) -> None:
+    result = build_result(repo_root)
+    wage_extract = next(item for item in result.public_aggregate_extracts if item.extract_id == "fair_work_minimum_wage_2025_extract")
+    values = {item["value_id"]: item["value"] for item in wage_extract.values}
+
+    assert values["national_minimum_wage_weekly"] == round(values["national_minimum_wage_hourly"] * 38, 2)
+    assert values["national_minimum_wage_weekly"] == 948.10
 
 
 def test_realistic_placeholder_anchors_remain_placeholders(repo_root) -> None:
@@ -239,6 +251,26 @@ def test_loaded_public_extract_without_commit_safety_fails_closed(repo_root) -> 
     extracts[0]["safe_to_commit"] = False
 
     with pytest.raises(ValueError, match="safe_to_commit"):
+        build_public_data_pilot_result(manifest, extracts, anchors, repo_root, 5, 5)
+
+
+def test_loaded_public_extract_without_source_locator_metadata_fails_closed(repo_root) -> None:
+    manifest = load_manifest(repo_root)
+    extracts = copy.deepcopy(load_extracts(repo_root))
+    anchors = load_anchors(repo_root)
+    extracts[0]["source_locator"] = ""
+
+    with pytest.raises(ValueError, match="source_locator"):
+        build_public_data_pilot_result(manifest, extracts, anchors, repo_root, 5, 5)
+
+
+def test_inconsistent_minimum_wage_weekly_value_fails_closed(repo_root) -> None:
+    manifest = load_manifest(repo_root)
+    extracts = copy.deepcopy(load_extracts(repo_root))
+    anchors = load_anchors(repo_root)
+    extracts[0]["values"][1]["value"] = 948.00
+
+    with pytest.raises(ValueError, match="minimum wage weekly value inconsistent"):
         build_public_data_pilot_result(manifest, extracts, anchors, repo_root, 5, 5)
 
 

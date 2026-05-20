@@ -10,10 +10,13 @@
   geography: Australia
   values:
     - {value_id: national_minimum_wage_hourly, value: 24.95, unit: AUD_per_hour, source_field: national minimum wage}
-    - {value_id: national_minimum_wage_weekly, value: 948.00, unit: AUD_per_week, source_field: national minimum wage}
+    - {value_id: national_minimum_wage_weekly, value: 948.10, unit: AUD_per_week, source_field: national minimum wage}
     - {value_id: casual_loading, value: 25.0, unit: percent, source_field: casual loading}
   source_url: https://www.fairwork.gov.au/how-we-will-help/templates-and-guides/fact-sheets/minimum-workplace-entitlements/minimum-wages
   source_note: Small public wage threshold extract used only to anchor OPFTE, HLE, and QLC realistic placeholders.
+  source_locator: Fair Work Ombudsman minimum wages fact sheet, national minimum wage paragraph for the 1 July 2025 rate and 38-hour week reference.
+  source_value_note: Hourly value is source referenced; weekly value is stored as 24.95 multiplied by 38 ordinary hours for internal extract consistency and is not calibration.
+  value_review_status: maintainer_arithmetic_consistency_review_not_external_validation
   licence_notes: Public webpage extract; raw page or full datasets are not committed.
   raw_dataset_committed: false
   safe_to_commit: true
@@ -34,6 +37,9 @@
     - {value_id: entities_with_no_income_tax_percent, value: 31.0, unit: percent, source_field: entities with no income tax payable in public report}
   source_url: https://www.ato.gov.au/media-centre/ato-collects-100-billion-dollars-from-large-corporates
   source_note: Public corporate tax transparency aggregate used only for fiscal scale context; no firm-level CARSF liability inference is allowed.
+  source_locator: ATO media-centre article "ATO collects $100 billion dollars from large corporates", public summary of 2022-23 corporate tax transparency results.
+  source_value_note: Values are public aggregate/media-summary values only and do not support entity-level or firm-level CARSF inference.
+  value_review_status: source_locator_recorded_not_external_validation
   licence_notes: Public ATO media-centre summary; no confidential tax material is committed.
   raw_dataset_committed: false
   safe_to_commit: true
@@ -54,6 +60,9 @@
     - {value_id: company_tax_revenue, value: 140.0, unit: AUD_billion, source_field: company tax revenue}
   source_url: https://www.ato.gov.au/media-centre/2022-23-taxation-statistics-released
   source_note: Public ATO aggregate used for sanity-check-only fiscal scale context.
+  source_locator: ATO media-centre article "2022-23 taxation statistics released", public headline aggregate values.
+  source_value_note: Values are public taxation-statistics summary values only and are not taxpayer-level data or calibration.
+  value_review_status: source_locator_recorded_not_external_validation
   licence_notes: Public aggregate summary; no unit records are committed.
   raw_dataset_committed: false
   safe_to_commit: true
@@ -74,6 +83,9 @@
     - {value_id: taxation_receipts_estimate, value: 699.5, unit: AUD_billion, source_field: taxation receipts estimate}
   source_url: https://budget.gov.au/content/bp1/
   source_note: Public budget aggregate used only for fiscal trajectory sanity-check context.
+  source_locator: Budget Paper No. 1 2026-27, Statement 5 Revenue, Table 5.1 Australian Government general government receipts, 2025-26 estimates.
+  source_value_note: Values are rounded from Table 5.1 public estimates for total receipts and total taxation receipts; this is not Treasury modelling by the repository.
+  value_review_status: exact_table_locator_recorded_not_external_validation
   licence_notes: Public budget paper reference; no confidential Treasury material is committed.
   raw_dataset_committed: false
   safe_to_commit: true
@@ -93,6 +105,9 @@
     - {value_id: super_guarantee_rate, value: 12.0, unit: percent, source_field: super guarantee percentage}
   source_url: https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/super-guarantee
   source_note: Public rate setting used only to anchor a superannuation contribution pressure placeholder.
+  source_locator: ATO key superannuation rates and thresholds page, super guarantee percentage table for the period from 1 July 2025.
+  source_value_note: Value is a public rate-setting reference only and does not support individual, payroll, or taxpayer-level estimates.
+  value_review_status: source_locator_recorded_not_external_validation
   licence_notes: Public ATO threshold reference; no member or payroll records are committed.
   raw_dataset_committed: false
   safe_to_commit: true

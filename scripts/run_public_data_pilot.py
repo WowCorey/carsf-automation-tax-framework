@@ -169,14 +169,15 @@ def _source_table(items: list[Any]) -> list[str]:
 
 def _extract_table(items: list[Any]) -> list[str]:
     lines = [
-        "| Extract ID | Source | Status | Claim Level | Period | Values | Safe To Commit | Source Note |",
-        "| --- | --- | --- | --- | --- | --- | --- | --- |",
+        "| Extract ID | Source | Status | Claim Level | Period | Values | Safe To Commit | Source Locator | Value Review Status | Source Note |",
+        "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for item in items:
         value_text = "; ".join(f"{value.get('value_id')}={value.get('value')} {value.get('unit')}" for value in item.values) or "source reference only"
         lines.append(
             f"| {item.extract_id} | {item.source_reference_id} | {item.data_status} | {item.claim_level} | "
-            f"{item.period} | {value_text} | {item.safe_to_commit} | {item.source_note} |"
+            f"{item.period} | {value_text} | {item.safe_to_commit} | {item.source_locator} | "
+            f"{item.value_review_status} | {item.source_note} |"
         )
     return lines
 

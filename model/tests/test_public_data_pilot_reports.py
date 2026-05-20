@@ -57,6 +57,15 @@ def test_public_data_pilot_report_includes_non_claims_and_flags(repo_root) -> No
     assert summary["source_references_created"] is True
     assert summary["real_public_data_loaded"] is True
     assert summary["realistic_placeholders_anchored"] is True
+    loaded_extracts = [
+        item
+        for item in payload["public_data_pilot"]["public_aggregate_extracts"]
+        if item["data_status"] == "real_public_data_loaded"
+    ]
+    assert loaded_extracts
+    assert all(item["source_locator"] for item in loaded_extracts)
+    assert all(item["source_value_note"] for item in loaded_extracts)
+    assert all(item["value_review_status"] for item in loaded_extracts)
     for key in [
         "real_calibration_completed",
         "restricted_data_loaded",

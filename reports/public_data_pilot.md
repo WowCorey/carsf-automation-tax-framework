@@ -1,6 +1,6 @@
 # CARSF V1.5 Public Data Pilot & Realistic Placeholder Anchor Layer
 
-Generated at: `2026-05-19T04:39:23+00:00`
+Generated at: `2026-05-20T01:33:43+00:00`
 
 ## A. Purpose
 
@@ -35,16 +35,16 @@ This report records the first small public aggregate-data pilot and realistic-pl
 
 ## E. Public Aggregate Extracts
 
-| Extract ID | Source | Status | Claim Level | Period | Values | Safe To Commit | Source Note |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| fair_work_minimum_wage_2025_extract | fair_work_minimum_wage_2025 | real_public_data_loaded | placeholder_anchor_only | from 2025-07-01 | national_minimum_wage_hourly=24.95 AUD_per_hour; national_minimum_wage_weekly=948.0 AUD_per_week; casual_loading=25.0 percent | True | Small public wage threshold extract used only to anchor OPFTE, HLE, and QLC realistic placeholders. |
-| ato_corporate_transparency_2022_23_extract | ato_corporate_tax_transparency_2022_23 | real_public_data_loaded | sanity_check_only | 2022-23 | income_tax_received_large_corporates=97.9 AUD_billion; entities_with_no_income_tax_percent=31.0 percent | True | Public corporate tax transparency aggregate used only for fiscal scale context; no firm-level CARSF liability inference is allowed. |
-| ato_taxation_statistics_2022_23_extract | ato_taxation_statistics_2022_23 | real_public_data_loaded | sanity_check_only | 2022-23 | total_tax_revenue_collected=577.4 AUD_billion; company_tax_revenue=140.0 AUD_billion | True | Public ATO aggregate used for sanity-check-only fiscal scale context. |
-| treasury_budget_2026_27_receipts_extract | treasury_budget_2026_27_bp1 | real_public_data_loaded | sanity_check_only | 2025-26 estimate in Budget Paper No. 1 2026-27 | total_receipts_estimate=759.8 AUD_billion; taxation_receipts_estimate=699.5 AUD_billion | True | Public budget aggregate used only for fiscal trajectory sanity-check context. |
-| super_guarantee_2025_26_extract | ato_super_guarantee_2025_26 | real_public_data_loaded | placeholder_anchor_only | from 2025-07-01 | super_guarantee_rate=12.0 percent | True | Public rate setting used only to anchor a superannuation contribution pressure placeholder. |
-| help_threshold_source_reference_extract | study_assist_help_thresholds_2025_26 | source_reference_only | source_reference_only | 2025-26 | source reference only | True | Source-reference-only record; no threshold value is loaded in this build. |
-| qld_payroll_tax_source_reference_extract | qld_payroll_tax_threshold_2025_26 | source_reference_only | source_reference_only | 2025-26 | source reference only | True | Source-reference-only record; no payroll threshold value is loaded in this build. |
-| abs_labour_source_reference_extract | abs_labour_wage_aggregate_source_reference | source_reference_only | source_reference_only | 2026 | source reference only | True | Source-reference-only record; no ABS aggregate table is loaded in this build. |
+| Extract ID | Source | Status | Claim Level | Period | Values | Safe To Commit | Source Locator | Value Review Status | Source Note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| fair_work_minimum_wage_2025_extract | fair_work_minimum_wage_2025 | real_public_data_loaded | placeholder_anchor_only | from 2025-07-01 | national_minimum_wage_hourly=24.95 AUD_per_hour; national_minimum_wage_weekly=948.1 AUD_per_week; casual_loading=25.0 percent | True | Fair Work Ombudsman minimum wages fact sheet, national minimum wage paragraph for the 1 July 2025 rate and 38-hour week reference. | maintainer_arithmetic_consistency_review_not_external_validation | Small public wage threshold extract used only to anchor OPFTE, HLE, and QLC realistic placeholders. |
+| ato_corporate_transparency_2022_23_extract | ato_corporate_tax_transparency_2022_23 | real_public_data_loaded | sanity_check_only | 2022-23 | income_tax_received_large_corporates=97.9 AUD_billion; entities_with_no_income_tax_percent=31.0 percent | True | ATO media-centre article "ATO collects $100 billion dollars from large corporates", public summary of 2022-23 corporate tax transparency results. | source_locator_recorded_not_external_validation | Public corporate tax transparency aggregate used only for fiscal scale context; no firm-level CARSF liability inference is allowed. |
+| ato_taxation_statistics_2022_23_extract | ato_taxation_statistics_2022_23 | real_public_data_loaded | sanity_check_only | 2022-23 | total_tax_revenue_collected=577.4 AUD_billion; company_tax_revenue=140.0 AUD_billion | True | ATO media-centre article "2022-23 taxation statistics released", public headline aggregate values. | source_locator_recorded_not_external_validation | Public ATO aggregate used for sanity-check-only fiscal scale context. |
+| treasury_budget_2026_27_receipts_extract | treasury_budget_2026_27_bp1 | real_public_data_loaded | sanity_check_only | 2025-26 estimate in Budget Paper No. 1 2026-27 | total_receipts_estimate=759.8 AUD_billion; taxation_receipts_estimate=699.5 AUD_billion | True | Budget Paper No. 1 2026-27, Statement 5 Revenue, Table 5.1 Australian Government general government receipts, 2025-26 estimates. | exact_table_locator_recorded_not_external_validation | Public budget aggregate used only for fiscal trajectory sanity-check context. |
+| super_guarantee_2025_26_extract | ato_super_guarantee_2025_26 | real_public_data_loaded | placeholder_anchor_only | from 2025-07-01 | super_guarantee_rate=12.0 percent | True | ATO key superannuation rates and thresholds page, super guarantee percentage table for the period from 1 July 2025. | source_locator_recorded_not_external_validation | Public rate setting used only to anchor a superannuation contribution pressure placeholder. |
+| help_threshold_source_reference_extract | study_assist_help_thresholds_2025_26 | source_reference_only | source_reference_only | 2025-26 | source reference only | True |  |  | Source-reference-only record; no threshold value is loaded in this build. |
+| qld_payroll_tax_source_reference_extract | qld_payroll_tax_threshold_2025_26 | source_reference_only | source_reference_only | 2025-26 | source reference only | True |  |  | Source-reference-only record; no payroll threshold value is loaded in this build. |
+| abs_labour_source_reference_extract | abs_labour_wage_aggregate_source_reference | source_reference_only | source_reference_only | 2026 | source reference only | True |  |  | Source-reference-only record; no ABS aggregate table is loaded in this build. |
 
 ## F. Realistic Placeholder Anchors
 

@@ -7,10 +7,10 @@
       "sha256": "423eca2ce99008084f4855bd627ab364ff0ed017196fb7b79df3b9e2a345ea55"
     },
     {
-      "bytes": 8071,
+      "bytes": 9909,
       "digest_scope": "public_data_pilot_integrity_metadata_only",
       "path": "data/public_pilot/extracts/public_aggregate_extracts.yaml",
-      "sha256": "f0326cd19adf509cf5dbde525f50329497bf864813950521ff3a0884fd0830d5"
+      "sha256": "ef7144ba22fe7d4ec70ba889e73053874e2f95a89493ee5b408913e01535fe19"
     },
     {
       "bytes": 9910,
@@ -19,16 +19,16 @@
       "sha256": "5bee9f85eea80d3e60bb401b53edc6c856f30c7d0319d2dd3fecf5a7a947125f"
     },
     {
-      "bytes": 18074,
+      "bytes": 19046,
       "digest_scope": "public_data_pilot_integrity_metadata_only",
       "path": "reports/public_data_pilot.md",
-      "sha256": "71f2717bae35a52098e5c8fd32c8168f19f916ac12d7cbc62bda1511d76e00fd"
+      "sha256": "a22756715e3b2147f01c63f97b4c5d4b2b7618720d99322b5253b23909d6336b"
     },
     {
-      "bytes": 63370,
+      "bytes": 65695,
       "digest_scope": "public_data_pilot_integrity_metadata_only",
       "path": "reports/public_data_pilot.json",
-      "sha256": "6d6765a6d796685703ded91079a90a40f5ece6649fe988b99b2513d22f898447"
+      "sha256": "74659e9a6bdfb84ac5608b07b35f7e913fa05eb89ba426227d98282fe6d92473"
     }
   ],
   "metadata": {
