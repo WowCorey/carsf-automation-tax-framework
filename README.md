@@ -14,7 +14,7 @@ Current status: private research/prototype.
 
 All sector values, schedule values, examples, caps, Fiscal Replacement Value values, AAVA settings, and behavioural assumptions are placeholders unless explicitly labelled as confirmed baseline figures from official sources.
 
-The current Build 29 layer adds an internal consistency audit and source-reconciliation map over the Build 27 public-data pilot and Build 28 evidence map. It loads no new data, adds no new public extracts, does not externally verify source values, keeps loaded public extracts, source-reference-only records, realistic placeholder anchors, sanity checks, and restricted blockers separate, and does not complete calibration, imply validation, determine actual tax payable, or change firm-level liability.
+The current Build 29.5 layer adds a source-locator verification pack over the Build 27-29 public-data pilot artefacts. It creates reviewer-facing source/value cards, source-reference-only cards, placeholder-anchor cards, restricted-blocker cards, and manual-review checklists. It loads no new data, adds no new public extracts, does not externally verify source values, keeps loaded public extracts, source-reference-only records, realistic placeholder anchors, sanity checks, and restricted blockers separate, and does not complete calibration, imply validation, determine actual tax payable, or change firm-level liability.
 
 ## Repository Structure
 
@@ -46,6 +46,7 @@ The current Build 29 layer adds an internal consistency audit and source-reconci
 - `docs/public_data_pilot.md` - public aggregate-data pilot and realistic-placeholder anchor notes.
 - `docs/public_data_evidence_map.md` - reviewer evidence map for public-data pilot outputs.
 - `docs/public_data_consistency_audit.md` - internal consistency audit and source-reconciliation notes for public-data pilot outputs.
+- `docs/source_locator_verification_pack.md` - source-locator card and manual-review checklist notes for public-data pilot outputs.
 - `simulator/` - Streamlit interface for policy review, tax model inputs, worked examples, red-team tests, and audit log.
 - `docs/` - data requirements, limitations, implementation notes, known risks, and V1.5 plan.
 
@@ -371,6 +372,19 @@ Generated public-data consistency-audit reports:
 - `reports/public_data_consistency_audit.json`
 
 Public-data consistency-audit reports are internal source-reconciliation maps only. No new data is loaded, no scraping or API call occurs, source values are not externally verified, calibration has not been completed, public data does not prove the model works, reconciled means internally consistent only, and no actual tax payable, validation, approval, legal sufficiency, operational readiness, official status, ATO guidance, Treasury modelling, PBO costing, or firm-level liability change is created.
+
+Run the public-data source-locator verification pack:
+
+```powershell
+python scripts/run_source_locator_verification_pack.py
+```
+
+Generated source-locator verification reports:
+
+- `reports/source_locator_verification_pack.md`
+- `reports/source_locator_verification_pack.json`
+
+Source-locator verification reports are manual-review packs only. No new data is loaded, no scraping or API call occurs, ready for manual review does not mean reviewed or externally verified, calibration has not been completed, public data does not prove the model works, realistic placeholders remain placeholders, and no actual tax payable, validation, approval, legal sufficiency, operational readiness, official status, ATO guidance, Treasury modelling, PBO costing, or firm-level liability change is created.
 
 ## Run the Simulator
 

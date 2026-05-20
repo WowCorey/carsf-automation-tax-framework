@@ -1,5 +1,24 @@
 # Build Log
 
+## V1.5 Public Data Source-Locator Verification Pack
+
+Branch: `v1.5-public-data-source-locator-verification-pack`
+
+Purpose of this build:
+
+- Add a source-locator verification pack over existing Build 27-29 public-data pilot artefacts.
+- Create loaded public value cards, source-reference-only cards, placeholder-anchor cards, restricted-blocker cards, and reviewer checklists.
+- Preserve the Fair Work arithmetic card for `24.95 * 38 = 948.10`.
+- Generate `reports/source_locator_verification_pack.md` and `reports/source_locator_verification_pack.json`.
+
+Limitations:
+
+- Source-locator verification pack only.
+- No new data loaded, no scraping, no API calls, and no external source verification claim.
+- Ready for manual review does not mean reviewed or externally verified.
+- Not calibration, validation, legal advice, tax advice, ATO guidance, Treasury modelling, PBO costing, economic validation, welfare validation, statistical validation, operational readiness, legal sufficiency, official status, or actual-tax-payable evidence.
+- Does not modify firm-level CARSF liability.
+
 ## V1.5 Public Data Pilot Consistency Audit and Source Reconciliation
 
 Branch: `v1.5-public-data-pilot-consistency-audit-source-reconciliation`

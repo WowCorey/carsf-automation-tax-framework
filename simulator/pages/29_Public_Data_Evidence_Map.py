@@ -9,6 +9,7 @@ import streamlit as st
 REPO_ROOT = Path(__file__).resolve().parents[2]
 REPORT_PATH = REPO_ROOT / "reports" / "public_data_evidence_map.json"
 CONSISTENCY_AUDIT_PATH = REPO_ROOT / "reports" / "public_data_consistency_audit.json"
+SOURCE_LOCATOR_PACK_PATH = REPO_ROOT / "reports" / "source_locator_verification_pack.json"
 WARNING = (
     "This is a reviewer evidence map and dashboard for the public data pilot only. No new data is loaded by this build. "
     "Build 27 public aggregate extracts remain sanity-check-only or placeholder-anchor-only. This is not calibration, "
@@ -53,6 +54,7 @@ if not report:
     st.stop()
     raise SystemExit(0)
 audit_report = load_report(CONSISTENCY_AUDIT_PATH)
+source_locator_report = load_report(SOURCE_LOCATOR_PACK_PATH)
 
 metadata = report.get("metadata", {})
 payload = report.get("public_data_evidence_map", {})
@@ -205,3 +207,86 @@ if audit_report:
     )
 else:
     st.info("Run `python scripts/run_public_data_consistency_audit.py` to generate the optional consistency-audit section.")
+
+st.markdown("### Source-Locator Verification Pack")
+st.caption(
+    "Manual-review pack only. Ready for manual review means locator metadata is present; it does not mean reviewed, "
+    "externally checked, calibrated, validated, official, legally sufficient, operationally ready, or tax-payable evidence."
+)
+if source_locator_report:
+    locator_payload = source_locator_report.get("source_locator_verification_pack", {})
+    locator_summary = source_locator_report.get("summary", {})
+    st.table(
+        [
+            {"Metric": key, "Value": str(value)}
+            for key, value in locator_summary.items()
+            if key
+            in {
+                "total_loaded_value_cards",
+                "complete_locator_cards",
+                "partial_locator_cards",
+                "source_reference_only_cards",
+                "placeholder_anchor_cards",
+                "restricted_blocker_cards",
+                "reviewer_checklist_items_total",
+                "fair_work_arithmetic_cards",
+                "cards_ready_for_manual_review",
+                "cards_source_locator_recorded_only",
+                "cards_source_reference_only_not_loaded",
+                "cards_placeholder_not_real_data",
+                "cards_blocked_until_authorised_access",
+                "forbidden_claim_findings",
+                "new_data_loaded",
+                "external_source_verification_claimed",
+                "manual_review_pack_only",
+                "real_calibration_completed",
+                "actual_tax_payable_determined",
+                "validation_claimed",
+                "approval_claimed",
+                "operational_readiness_claimed",
+                "legal_sufficiency_claimed",
+                "official_status_claimed",
+                "firm_level_liability_logic_modified",
+            }
+        ]
+    )
+    st.markdown("#### Loaded Value Cards")
+    st.table(
+        rows_with_lists(
+            locator_payload.get("loaded_value_cards", []),
+            [
+                "card_id",
+                "extract_id",
+                "publisher",
+                "locator_status",
+                "verification_status",
+                "values_summary",
+                "source_locator",
+                "arithmetic_check_summary",
+                "reviewer_must_not_infer",
+            ],
+        )
+    )
+    st.markdown("#### Source-Reference-Only Cards")
+    st.table(
+        rows_with_lists(
+            locator_payload.get("source_reference_only_cards", []),
+            ["card_id", "extract_id", "publisher", "locator_status", "verification_status", "why_not_loaded"],
+        )
+    )
+    st.markdown("#### Placeholder Anchor Cards")
+    st.table(
+        rows_with_lists(
+            locator_payload.get("placeholder_anchor_cards", []),
+            ["card_id", "anchor_id", "field_id", "anchor_strength", "verification_status", "reviewer_must_not_infer"],
+        )
+    )
+    st.markdown("#### Restricted Blocker Cards")
+    st.table(
+        rows_with_lists(
+            locator_payload.get("restricted_blocker_cards", []),
+            ["card_id", "blocker_id", "blocker_type", "locator_status", "verification_status", "description"],
+        )
+    )
+else:
+    st.info("Run `python scripts/run_source_locator_verification_pack.py` to generate the optional source-locator section.")

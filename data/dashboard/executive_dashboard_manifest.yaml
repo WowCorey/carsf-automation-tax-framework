@@ -1064,6 +1064,55 @@ layers:
       - official status
       - actual tax payable
       - readiness score
+  - layer_id: source_locator_verification_pack
+    layer_name: Public Data Source-Locator Verification Pack
+    layer_group: calibration
+    purpose: Reviewer-facing source-locator cards and manual-review checklists over existing Build 27-29 public-data artefacts.
+    primary_files:
+      - model/carsf/source_locator_verification_pack.py
+      - data/public_pilot/source_locator_verification_manifest.yaml
+      - scripts/run_source_locator_verification_pack.py
+      - simulator/pages/29_Public_Data_Evidence_Map.py
+      - docs/source_locator_verification_pack.md
+    primary_reports:
+      - reports/source_locator_verification_pack.md
+      - reports/source_locator_verification_pack.json
+    streamlit_pages:
+      - simulator/pages/29_Public_Data_Evidence_Map.py
+    status_labels:
+      - implemented_prototype
+      - generated_report_available
+      - placeholder_only
+      - calibration_required
+      - external_review_required
+      - not_for_real_world_use
+    non_claim_flags:
+      - not_external_source_verification
+      - not_calibrated
+      - not_statistical_validation
+      - not_actual_tax_payable
+      - not_operational_readiness
+    calibration_blockers:
+      - Source-locator cards are manual-review aids only and do not externally verify source values.
+      - Calibration has not been completed and restricted-data blockers remain.
+    external_review_blockers:
+      - Human reviewer inspection of source URLs, locators, units, periods, geography, and aggregate-only status remains required.
+    blocker_explanation: Build 29.5 packages locator metadata and checklists without adding data or claiming review completion.
+    recommended_reviewer:
+      - technical_reviewer
+      - privacy_reviewer
+      - statistical_methods_reviewer
+      - treasury_methods_reviewer
+      - ato_methods_reviewer
+    read_order: 30
+    main_reason: Build 29.5 makes source-locator metadata easier to inspect without creating source verification or calibration claims.
+    must_not_be_used_for:
+      - external source verification
+      - calibration completed
+      - validation
+      - official status
+      - actual tax payable
+      - readiness score
 report_entries:
   - report_path: reports/executive_dashboard.md
     layer_id: executive_dashboard
@@ -1451,6 +1500,22 @@ report_entries:
     must_not_be_used_for: [external source verification, calibration completed, validation, official status, actual tax payable, readiness score]
     linked_streamlit_page: simulator/pages/29_Public_Data_Evidence_Map.py
     recommended_read_order: 29
+  - report_path: reports/source_locator_verification_pack.md
+    layer_id: source_locator_verification_pack
+    report_type: markdown
+    generated_by: scripts/run_source_locator_verification_pack.py
+    interpretation_warning: Source-locator cards and manual-review checklists only; no new data is loaded and no external source verification is claimed.
+    must_not_be_used_for: [external source verification, calibration completed, validation, official status, actual tax payable, readiness score]
+    linked_streamlit_page: simulator/pages/29_Public_Data_Evidence_Map.py
+    recommended_read_order: 30
+  - report_path: reports/source_locator_verification_pack.json
+    layer_id: source_locator_verification_pack
+    report_type: json
+    generated_by: scripts/run_source_locator_verification_pack.py
+    interpretation_warning: Machine-readable source-locator card pack over existing public-pilot artefacts only.
+    must_not_be_used_for: [external source verification, calibration completed, validation, official status, actual tax payable, readiness score]
+    linked_streamlit_page: simulator/pages/29_Public_Data_Evidence_Map.py
+    recommended_read_order: 30
 forbidden_claims:
   - ready for government
   - ready for ATO

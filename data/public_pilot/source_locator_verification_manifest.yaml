@@ -1,0 +1,126 @@
+pack_id: carsf_v1_5_public_data_source_locator_verification_pack
+pack_name: CARSF V1.5 Public Data Source-Locator Verification Pack
+status: source_locator_verification_pack_only
+non_claims:
+  - This is a source-locator verification pack only. No new data is loaded by this build. This does not externally verify source values, does not scrape public sources, and does not call external APIs. Ready for manual review does not mean reviewed and does not mean externally verified. This is not calibration; calibration has not been completed. Public data does not prove the model works. Realistic placeholders remain placeholders, realistic placeholders are not real data, realistic placeholders are not calibrated, source references are not loaded datasets, and restricted-data requirements are not data access. This is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab, HILDA microdata, DSS/Services Australia records, ATO taxpayer records, Treasury/PBO confidential material, or restricted government data, and does not modify firm-level CARSF liability. It only packages locator metadata and manual-review checklists.
+  - Locator cards are manual-review aids only; they are not source verified, not externally verified, not validation, not approval, and not calibration.
+  - Loaded public value cards are copied from existing Build 27 extracts only and do not introduce new public values.
+  - Source-reference-only cards are not counted as loaded public data.
+  - Placeholder-anchor cards remain realistic placeholders and are not real data or calibrated values.
+input_artifacts:
+  - data/public_pilot/public_data_pilot_manifest.yaml
+  - data/public_pilot/extracts/public_aggregate_extracts.yaml
+  - data/public_pilot/placeholders/realistic_placeholder_anchors.yaml
+  - data/public_pilot/digests/public_data_pilot_digests.json
+  - data/public_pilot/reviewer_evidence_map_manifest.yaml
+  - data/public_pilot/consistency_audit_manifest.yaml
+  - reports/public_data_pilot.json
+  - reports/public_data_evidence_map.json
+  - reports/public_data_consistency_audit.json
+  - simulator/pages/29_Public_Data_Evidence_Map.py
+locator_status_taxonomy:
+  - complete_locator
+  - partial_locator
+  - source_reference_only
+  - placeholder_anchor_only
+  - blocked_by_restricted_data
+  - forbidden_for_repo_use
+verification_status_taxonomy:
+  - ready_for_manual_review
+  - arithmetic_checked_only
+  - source_locator_recorded_only
+  - source_reference_only_not_loaded
+  - placeholder_not_real_data
+  - blocked_until_authorised_access
+  - external_review_required
+reviewer_warning_taxonomy:
+  - not_external_verification
+  - not_calibration
+  - not_model_proof
+  - not_tax_payable
+  - not_legal_or_tax_advice
+  - not_official_status
+required_loaded_value_cards:
+  - fair_work_minimum_wage_2025_extract
+  - ato_corporate_transparency_2022_23_extract
+  - ato_taxation_statistics_2022_23_extract
+  - treasury_budget_2026_27_receipts_extract
+  - super_guarantee_2025_26_extract
+required_source_reference_only_cards:
+  - help_threshold_source_reference_extract
+  - qld_payroll_tax_source_reference_extract
+  - abs_labour_source_reference_extract
+required_placeholder_anchor_cards:
+  - anchor_opfte_minimum_wage
+  - anchor_hle_minimum_wage
+  - anchor_qlc_minimum_wage
+  - anchor_sector_schedule_source_reference
+  - anchor_fiscal_public_aggregates
+  - anchor_payg_public_tax_stats
+  - anchor_super_guarantee_rate
+  - anchor_help_source_reference
+  - anchor_payroll_tax_source_reference
+  - anchor_transition_public_reference
+  - anchor_uncertainty_source_reference_only
+required_restricted_blocker_cards:
+  - restricted_tax_records
+  - restricted_household_microdata
+  - restricted_welfare_records
+  - fd_tax_records
+  - fd_firm_confidential_records
+  - fd_person_level_records
+  - fd_household_microdata
+  - fd_restricted_government_data
+required_reviewer_checklists:
+  - loaded_value_source_url_check
+  - loaded_value_source_locator_check
+  - loaded_value_value_match_check
+  - loaded_value_unit_period_geography_check
+  - loaded_value_non_claim_check
+  - source_reference_only_not_loaded_check
+  - placeholder_not_real_data_check
+  - restricted_blocker_not_accessed_check
+forbidden_claims:
+  - calibrated
+  - calibration completed
+  - real calibration
+  - public data proves
+  - model works
+  - tax model works
+  - CARSF works
+  - ready for government
+  - ready for ATO
+  - ready for Treasury
+  - ready for Parliament
+  - ready for implementation
+  - ready for public release
+  - operationally ready
+  - legally sufficient
+  - official status
+  - official policy
+  - validated
+  - externally validated
+  - source verified
+  - externally verified
+  - Treasury validated
+  - ATO validated
+  - PBO validated
+  - economic validation complete
+  - welfare validation complete
+  - statistical validation complete
+  - actual tax payable
+  - real household estimate
+  - population estimate
+  - official sector ranking
+  - compliance score
+  - readiness score
+  - maturity score
+  - approved
+build_29_6_requirements:
+  - Create a red-team reviewer objections pack over the public-data pilot, evidence map, consistency audit, and source-locator cards.
+  - Keep every answer framed as objection handling only, not validation or approval.
+  - Do not load new public data or replace placeholders.
+build_30_requirements:
+  - Package the feasibility map, public-data pilot, evidence map, consistency audit, and source-locator cards into a reviewer handoff bundle.
+  - Keep source-locator cards as manual-review aids only.
+  - Preserve the no calibration, no validation, no actual tax payable, no official status, and no firm-level liability modification boundaries.

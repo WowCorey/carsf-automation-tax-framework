@@ -1,6 +1,6 @@
 # CARSF V1.5 Release Candidate Pack
 
-Generated at: `2026-05-20T07:07:44+00:00`
+Generated at: `2026-05-20T12:20:50+00:00`
 
 ## A. Purpose
 
@@ -15,22 +15,22 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 
 ## C. Release Pack Contents
 
-- Total layers: 29
-- Total reports indexed: 56
-- Reports present: 56
+- Total layers: 30
+- Total reports indexed: 58
+- Reports present: 58
 - Reports missing: 0
 - Total release documents: 10
 - Release documents present: 10
 - Release documents missing: 0
 - Paper files checked: 6
 - Working paper updated: True
-- Layers requiring calibration: 11
+- Layers requiring calibration: 12
 - Layers requiring legal review: 11
 - Layers requiring tax review: 8
-- Layers requiring ATO methods review: 9
-- Layers requiring Treasury methods review: 20
-- Layers requiring privacy review: 15
-- Layers requiring statistical review: 11
+- Layers requiring ATO methods review: 10
+- Layers requiring Treasury methods review: 21
+- Layers requiring privacy review: 16
+- Layers requiring statistical review: 12
 - Layers requiring economic review: 10
 - Layers requiring welfare review: 8
 - Layers requiring Parliamentary Counsel review: 3
@@ -79,6 +79,7 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | sector_schedules | Sector Schedules | sector_schedules | Placeholder YAML sector schedules for automotive, logistics, call centres, accounting, retail fulfilment, and software platforms. | prototype_only, placeholder_only, calibration_required | reports/sector_schedule_expansion.md | simulator/pages/20_Sector_Schedules.py | policy_reviewer, sector_methods_reviewer, legal_reviewer, tax_reviewer | Schedules are placeholders and not legal schedules. |
 | sector_stress_matrix | Sector Stress Matrix | sector_stress | Metadata-only cross-sector stress bands, display controls, and do-not-rank warnings. | prototype_only, placeholder_only, external_review_required | reports/sector_stress_matrix.md, reports/sector_stress_matrix.json | simulator/pages/21_Sector_Stress_Matrix.py | policy_reviewer, economic_methods_reviewer, sector_methods_reviewer | Matrix helps review fragility but does not rank sectors. |
 | secure_ingestion | Secure Ingestion Controls | secure_ingestion | Default-deny synthetic ingestion controls, marker scanning, redaction metadata, retention metadata, and audit records. | prototype_only, placeholder_only, privacy_review_required | reports/secure_ingestion_controls.md, reports/secure_ingestion_controls.json | simulator/pages/10_Secure_Ingestion_Controls.py | privacy_reviewer, cybersecurity_reviewer, technical_reviewer | Ingestion controls prevent real data from entering the repo. |
+| source_locator_verification_pack | Public Data Source-Locator Verification Pack | calibration | Reviewer-facing source-locator cards and manual-review checklists over existing Build 27-29 public-data pilot artefacts without loading new data. | prototype_only, placeholder_only, generated_report_available, calibration_required, external_review_required, not_for_real_world_use | reports/source_locator_verification_pack.md, reports/source_locator_verification_pack.json | simulator/pages/29_Public_Data_Evidence_Map.py | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer | Build 29.5 makes source-locator metadata easier to inspect without creating source verification or calibration claims. |
 | status_risks_docs | Status and Risk Documentation | documentation | Current status, known risks, plan, build log, and release-pack documentation. | prototype_only, documentation, external_review_required | None | None | policy_reviewer, hostile_red_team_reviewer, technical_reviewer | Documentation records blockers and should not be read as approval. |
 | transition_funding | Transition Funding | transition_funding | Placeholder transition-payment funding coverage and fiscal linkage previews. | prototype_only, placeholder_only, welfare_policy_review_required | reports/transition_funding.md, reports/transition_funding.json | simulator/pages/14_Transition_Funding.py | welfare_policy_reviewer, treasury_methods_reviewer, legal_reviewer | Transition funding is illustrative only. |
 | uncertainty_ranges | Uncertainty Ranges | uncertainty_ranges | Deterministic low/base/high placeholder ranges, stability bands, fragile-output flags, and calibration blockers. | prototype_only, placeholder_only, statistical_methods_review_required | reports/uncertainty_ranges.md, reports/uncertainty_ranges.json | simulator/pages/18_Uncertainty_Ranges.py | statistical_methods_reviewer, technical_reviewer | Ranges prevent false precision but are not calibrated uncertainty. |
@@ -111,6 +112,8 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | reports/transfer_pricing_results.md | worked_examples | True | python scripts/run_examples.py | transfer-pricing preview outputs | does not show: legal addbacks | non-operative preview only | tax_reviewer, legal_reviewer | 7 |
 | reports/sector_schedule_expansion.json | sector_schedule_expansion | True | python scripts/run_sector_schedule_expansion.py | schedule validation data | does not show: official schedule calibration | placeholder schedules only | technical_reviewer | 8 |
 | reports/sector_schedule_expansion.md | sector_schedule_expansion | True | python scripts/run_sector_schedule_expansion.py | schedule validation and coverage | does not show: official schedule calibration | placeholder schedules only | sector_methods_reviewer, legal_reviewer | 8 |
+| reports/source_locator_verification_pack.json | source_locator_verification_pack | True | python scripts/run_source_locator_verification_pack.py | machine-readable source-locator cards manual-review checklist and false flags | does not show: external source verification calibration completed validation official status or tax-payable use | source-locator verification pack only | technical_reviewer | 8 |
+| reports/source_locator_verification_pack.md | source_locator_verification_pack | True | python scripts/run_source_locator_verification_pack.py | source-locator cards source-reference-only cards placeholder cards blocker cards and reviewer checklists | does not show: external source verification calibration completed validation official status or tax-payable use | source-locator verification pack only | technical_reviewer, privacy_reviewer, statistical_methods_reviewer | 8 |
 | reports/sector_stress_matrix.json | sector_stress_matrix | True | python scripts/run_sector_stress_matrix.py | stress matrix data | does not show: real sector ranking | do-not-rank metadata only | technical_reviewer | 9 |
 | reports/sector_stress_matrix.md | sector_stress_matrix | True | python scripts/run_sector_stress_matrix.py | metadata-only sector stress bands | does not show: real sector ranking | do-not-rank metadata only | economic_methods_reviewer, policy_reviewer | 9 |
 | reports/behavioural_response_simulation.json | behavioural_response | True | python scripts/run_behavioural_response_simulation.py | response pathway data | does not show: behaviour prediction | do-not-predict synthetic pathways only | technical_reviewer | 10 |
@@ -215,6 +218,8 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | public_data_evidence_map | calibration | No new data is loaded and calibration remains incomplete. | calibration | Build 28 makes the public-data pilot reviewable without adding data or calibration claims. |
 | public_data_consistency_audit | calibration | Internal reconciliation is not external source verification and calibration remains incomplete. | calibration | Build 29 checks internal consistency across source records, reports, digests, dashboard source, and non-claim boundaries. |
 | public_data_consistency_audit | calibration | Restricted-data blockers and forbidden repo-data boundaries remain preserved. | calibration | Build 29 checks internal consistency across source records, reports, digests, dashboard source, and non-claim boundaries. |
+| source_locator_verification_pack | calibration | Source-locator cards are manual-review aids only and do not externally verify source values. | calibration | Build 29.5 makes source-locator metadata easier to inspect without creating source verification or calibration claims. |
+| source_locator_verification_pack | calibration | Calibration remains incomplete and restricted-data blockers remain. | calibration | Build 29.5 makes source-locator metadata easier to inspect without creating source verification or calibration claims. |
 
 ## J. External Review Blockers
 
@@ -249,6 +254,7 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | public_data_pilot | external_review | Technical, privacy, statistical, legal, tax, Treasury-methods, and ATO-methods review remain required. | external_review | Build 27 tests safe public aggregate intake and placeholder anchoring without real calibration. |
 | public_data_evidence_map | external_review | Source reconciliation, privacy, statistical, legal, tax, Treasury-methods, and ATO-methods review remain required. | external_review | Build 28 makes the public-data pilot reviewable without adding data or calibration claims. |
 | public_data_consistency_audit | external_review | Technical, privacy, statistical, legal, tax, Treasury-methods, and ATO-methods review remain required. | external_review | Build 29 checks internal consistency across source records, reports, digests, dashboard source, and non-claim boundaries. |
+| source_locator_verification_pack | external_review | Human reviewer inspection of source URLs, exact locators, value notes, units, periods, geography, and aggregate-only status remains required. | external_review | Build 29.5 makes source-locator metadata easier to inspect without creating source verification or calibration claims. |
 
 ## K. Guardrail / Safety Status
 

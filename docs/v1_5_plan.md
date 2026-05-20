@@ -55,6 +55,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Add a public aggregate-data pilot and realistic-placeholder anchor layer that keeps loaded public extracts, source-reference-only records, realistic placeholders, restricted-data blockers, and forbidden repo data separate without completing calibration or changing liability.
 - Add a public data pilot reviewer evidence map and dashboard that makes Build 27 source references, loaded extracts, source-reference-only rows, placeholder anchors, field sanity checks, module sanity checks, restricted blockers, and reviewer questions inspectable without loading new data, completing calibration, claiming validation, or changing liability.
 - Add a public data pilot consistency audit and source-reconciliation layer that checks existing Build 27 and Build 28 artefacts, digests, reports, dashboard source, non-claim boundaries, Fair Work wage arithmetic, and source-reference-only counting without loading new data, externally verifying source values, completing calibration, claiming validation, or changing liability.
+- Add a public data source-locator verification pack that packages existing Build 27-29 source URLs, locators, value notes, source-reference-only records, placeholder anchors, blocker cards, and manual-review checklists without loading new data, claiming external source verification, completing calibration, claiming validation, or changing liability.
 
 ## Data Separation
 
@@ -98,6 +99,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Real-data feasibility and calibration-intake reports can be generated with `python scripts/run_real_data_feasibility.py`.
 - Public data pilot and realistic-placeholder anchor reports can be generated with `python scripts/run_public_data_pilot.py`.
 - Public data pilot reviewer evidence-map reports can be generated with `python scripts/run_public_data_evidence_map.py`.
+- Public data source-locator verification-pack reports can be generated with `python scripts/run_source_locator_verification_pack.py`.
 - Hybrid logistics stress variant demonstrates non-zero but intermediate NLTG.
 - V1.5 working paper contains TODO markers where policy drafting remains open.
 - Limitations document clearly blocks actual tax-payable claims.

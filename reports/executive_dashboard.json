@@ -210,6 +210,20 @@
         "external_review_needed": false,
         "layer_id": "public_data_consistency_audit",
         "main_reason": "Build 29 checks internal consistency before reviewer handoff without adding data."
+      },
+      {
+        "blocker": "Source-locator cards are manual-review aids only and do not externally verify source values.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "source_locator_verification_pack",
+        "main_reason": "Build 29.5 makes source-locator metadata easier to inspect without creating source verification or calibration claims."
+      },
+      {
+        "blocker": "Calibration has not been completed and restricted-data blockers remain.",
+        "blocker_type": "calibration",
+        "external_review_needed": false,
+        "layer_id": "source_locator_verification_pack",
+        "main_reason": "Build 29.5 makes source-locator metadata easier to inspect without creating source verification or calibration claims."
       }
     ],
     "dashboard_id": "carsf_v1_5_executive_dashboard",
@@ -403,6 +417,13 @@
         "external_review_needed": true,
         "layer_id": "public_data_consistency_audit",
         "main_reason": "Build 29 checks internal consistency before reviewer handoff without adding data."
+      },
+      {
+        "blocker": "Human reviewer inspection of source URLs, locators, units, periods, geography, and aggregate-only status remains required.",
+        "blocker_type": "external_review",
+        "external_review_needed": true,
+        "layer_id": "source_locator_verification_pack",
+        "main_reason": "Build 29.5 makes source-locator metadata easier to inspect without creating source verification or calibration claims."
       }
     ],
     "guardrail_statuses": [
@@ -1815,6 +1836,66 @@
         "streamlit_pages": [
           "simulator/pages/29_Public_Data_Evidence_Map.py"
         ]
+      },
+      {
+        "blocker_explanation": "Build 29.5 packages locator metadata and checklists without adding data or claiming review completion.",
+        "calibration_blockers": [
+          "Source-locator cards are manual-review aids only and do not externally verify source values.",
+          "Calibration has not been completed and restricted-data blockers remain."
+        ],
+        "external_review_blockers": [
+          "Human reviewer inspection of source URLs, locators, units, periods, geography, and aggregate-only status remains required."
+        ],
+        "layer_group": "calibration",
+        "layer_id": "source_locator_verification_pack",
+        "layer_name": "Public Data Source-Locator Verification Pack",
+        "main_reason": "Build 29.5 makes source-locator metadata easier to inspect without creating source verification or calibration claims.",
+        "must_not_be_used_for": [
+          "external source verification",
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "readiness score"
+        ],
+        "non_claim_flags": [
+          "not_external_source_verification",
+          "not_calibrated",
+          "not_statistical_validation",
+          "not_actual_tax_payable",
+          "not_operational_readiness"
+        ],
+        "primary_files": [
+          "model/carsf/source_locator_verification_pack.py",
+          "data/public_pilot/source_locator_verification_manifest.yaml",
+          "scripts/run_source_locator_verification_pack.py",
+          "simulator/pages/29_Public_Data_Evidence_Map.py",
+          "docs/source_locator_verification_pack.md"
+        ],
+        "primary_reports": [
+          "reports/source_locator_verification_pack.md",
+          "reports/source_locator_verification_pack.json"
+        ],
+        "purpose": "Reviewer-facing source-locator cards and manual-review checklists over existing Build 27-29 public-data artefacts.",
+        "read_order": 30,
+        "recommended_reviewer": [
+          "technical_reviewer",
+          "privacy_reviewer",
+          "statistical_methods_reviewer",
+          "treasury_methods_reviewer",
+          "ato_methods_reviewer"
+        ],
+        "status_labels": [
+          "implemented_prototype",
+          "generated_report_available",
+          "placeholder_only",
+          "calibration_required",
+          "external_review_required",
+          "not_for_real_world_use"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/29_Public_Data_Evidence_Map.py"
+        ]
       }
     ],
     "missing_reports_or_navigation_gaps": [],
@@ -2251,6 +2332,25 @@
         "non_claim_flags": [
           "not_statistical_validation",
           "not_economic_validation",
+          "not_actual_tax_payable",
+          "not_operational_readiness"
+        ],
+        "not_for_real_world_use": true
+      },
+      {
+        "layer_id": "source_locator_verification_pack",
+        "must_not_be_used_for": [
+          "external source verification",
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "readiness score"
+        ],
+        "non_claim_flags": [
+          "not_external_source_verification",
+          "not_calibrated",
+          "not_statistical_validation",
           "not_actual_tax_payable",
           "not_operational_readiness"
         ],
@@ -3076,6 +3176,44 @@
         "recommended_read_order": 29,
         "report_path": "reports/public_data_consistency_audit.md",
         "report_type": "markdown"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_source_locator_verification_pack.py",
+        "interpretation_warning": "Machine-readable source-locator card pack over existing public-pilot artefacts only.",
+        "layer_id": "source_locator_verification_pack",
+        "linked_streamlit_page": "simulator/pages/29_Public_Data_Evidence_Map.py",
+        "must_not_be_used_for": [
+          "external source verification",
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "readiness score"
+        ],
+        "optional": false,
+        "recommended_read_order": 30,
+        "report_path": "reports/source_locator_verification_pack.json",
+        "report_type": "json"
+      },
+      {
+        "exists": true,
+        "generated_by": "scripts/run_source_locator_verification_pack.py",
+        "interpretation_warning": "Source-locator cards and manual-review checklists only; no new data is loaded and no external source verification is claimed.",
+        "layer_id": "source_locator_verification_pack",
+        "linked_streamlit_page": "simulator/pages/29_Public_Data_Evidence_Map.py",
+        "must_not_be_used_for": [
+          "external source verification",
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "readiness score"
+        ],
+        "optional": false,
+        "recommended_read_order": 30,
+        "report_path": "reports/source_locator_verification_pack.md",
+        "report_type": "markdown"
       }
     ],
     "status": "prototype_dashboard_report_index_only",
@@ -3320,15 +3458,23 @@
         "official_process": false,
         "purpose": "Internal source-reconciliation and consistency audit over Build 27 and Build 28 public-data pilot artefacts.",
         "read_order": 29
+      },
+      {
+        "layer_id": "source_locator_verification_pack",
+        "layer_name": "Public Data Source-Locator Verification Pack",
+        "main_reason": "Suggested review navigation only; not an official process.",
+        "official_process": false,
+        "purpose": "Reviewer-facing source-locator cards and manual-review checklists over existing Build 27-29 public-data artefacts.",
+        "read_order": 30
       }
     ],
     "summary": {
-      "ato_methods_review_required_layers": 14,
-      "calibration_required_layers": 20,
+      "ato_methods_review_required_layers": 15,
+      "calibration_required_layers": 21,
       "economic_validation_claimed": false,
-      "external_review_required_layers": 24,
+      "external_review_required_layers": 25,
       "firm_level_liability_logic_modified": false,
-      "layers_with_generated_reports": 26,
+      "layers_with_generated_reports": 27,
       "legal_review_required_layers": 13,
       "legal_sufficiency_claimed": false,
       "non_claims": [
@@ -3338,18 +3484,18 @@
       ],
       "non_operative_layers": 3,
       "operational_readiness_claimed": false,
-      "placeholder_only_layers": 23,
-      "privacy_review_required_layers": 13,
+      "placeholder_only_layers": 24,
+      "privacy_review_required_layers": 14,
       "readiness_score_created": false,
       "real_data_used": false,
       "reports_missing": 0,
-      "reports_present": 48,
-      "statistical_methods_review_required_layers": 9,
+      "reports_present": 50,
+      "statistical_methods_review_required_layers": 10,
       "synthetic_only_layers": 10,
       "tax_review_required_layers": 10,
-      "total_layers": 27,
-      "total_reports_indexed": 48,
-      "treasury_methods_review_required_layers": 18,
+      "total_layers": 28,
+      "total_reports_indexed": 50,
+      "treasury_methods_review_required_layers": 19,
       "warnings": [
         "Dashboard is navigation and consolidation only.",
         "No readiness score, maturity score, official review status, validation claim, or liability change is created."
@@ -3363,7 +3509,7 @@
   "metadata": {
     "economic_validation_claimed": false,
     "firm_level_liability_logic_modified": false,
-    "generated_at": "2026-05-20T07:07:44+00:00",
+    "generated_at": "2026-05-20T12:20:50+00:00",
     "legal_sufficiency_claimed": false,
     "maturity_score_created": false,
     "non_claims": [
@@ -3378,12 +3524,12 @@
     "version": "CARSF V1.5 prototype"
   },
   "summary": {
-    "ato_methods_review_required_layers": 14,
-    "calibration_required_layers": 20,
+    "ato_methods_review_required_layers": 15,
+    "calibration_required_layers": 21,
     "economic_validation_claimed": false,
-    "external_review_required_layers": 24,
+    "external_review_required_layers": 25,
     "firm_level_liability_logic_modified": false,
-    "layers_with_generated_reports": 26,
+    "layers_with_generated_reports": 27,
     "legal_review_required_layers": 13,
     "legal_sufficiency_claimed": false,
     "non_claims": [
@@ -3393,18 +3539,18 @@
     ],
     "non_operative_layers": 3,
     "operational_readiness_claimed": false,
-    "placeholder_only_layers": 23,
-    "privacy_review_required_layers": 13,
+    "placeholder_only_layers": 24,
+    "privacy_review_required_layers": 14,
     "readiness_score_created": false,
     "real_data_used": false,
     "reports_missing": 0,
-    "reports_present": 48,
-    "statistical_methods_review_required_layers": 9,
+    "reports_present": 50,
+    "statistical_methods_review_required_layers": 10,
     "synthetic_only_layers": 10,
     "tax_review_required_layers": 10,
-    "total_layers": 27,
-    "total_reports_indexed": 48,
-    "treasury_methods_review_required_layers": 18,
+    "total_layers": 28,
+    "total_reports_indexed": 50,
+    "treasury_methods_review_required_layers": 19,
     "warnings": [
       "Dashboard is navigation and consolidation only.",
       "No readiness score, maturity score, official review status, validation claim, or liability change is created."
