@@ -73,6 +73,8 @@ Build 29 adds `reports/public_data_consistency_audit.md` as an internal consiste
 
 Build 29.5 adds `reports/source_locator_verification_pack.md` as a source-locator card and manual-review checklist pack over existing Build 27-29 artefacts. It loads no new data, adds no values, does not scrape sources, does not call APIs, does not externally verify source values, and must not be read as reviewed, calibrated, validated, legally sufficient, operationally ready, official, ATO guidance, Treasury modelling, PBO costing, or actual tax-payable evidence.
 
+Build 29.6 adds `reports/red_team_reviewer_objections.md` as a likely reviewer-objection catalogue over existing Build 26-29.5 artefacts. It loads no new data, adds no values, does not scrape sources, does not call APIs, does not externally verify source values, does not resolve objections, and must not be read as calibrated, validated, legally sufficient, operationally ready, official, ATO guidance, Treasury modelling, PBO costing, or actual tax-payable evidence.
+
 ## Relationship to Release Candidate Pack
 
 Build 23 adds `release/v1_5_rc/` and `reports/v1_5_release_candidate_pack.*`. The executive dashboard remains the navigation entry point; the release-candidate pack packages the working paper, release notes, reviewer briefing, report map, calibration blockers, non-claim boundaries, and external-review routing for external review.

@@ -88,3 +88,11 @@ Build 29.5 adds a source-locator verification pack for the existing Build 27-29 
 No new data is loaded by Build 29.5. It does not add public values, externally verify source values, scrape public sources, call APIs, complete calibration, prove the model works, determine actual tax payable, claim validation, approval, legal sufficiency, operational readiness, official status, ATO guidance, Treasury modelling, PBO costing, or modify firm-level CARSF liability. Ready for manual review does not mean reviewed or externally verified.
 
 Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-29.5 are included in a later sealed RC.
+
+## Build 29.6 Red-Team Reviewer Objections Pack Addendum
+
+Build 29.6 adds a red-team reviewer objections pack for the existing Build 26-29.5 public-data pilot and reviewer materials. It lists likely reviewer criticisms, explains why each concern is valid, maps affected artefacts, gives bounded project responses, preserves unresolved blockers, and states what evidence would be needed to resolve each objection.
+
+No new data is loaded by Build 29.6. It does not add public values, externally verify source values, scrape public sources, call APIs, resolve objections, complete calibration, prove the model works, determine actual tax payable, claim validation, approval, legal sufficiency, operational readiness, official status, ATO guidance, Treasury modelling, PBO costing, or modify firm-level CARSF liability. Objections being acknowledged does not mean they are resolved, and partially mitigated does not mean solved.
+
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-29.6 are included in a later sealed RC.

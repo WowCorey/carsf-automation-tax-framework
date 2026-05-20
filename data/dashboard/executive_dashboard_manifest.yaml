@@ -1113,6 +1113,57 @@ layers:
       - official status
       - actual tax payable
       - readiness score
+  - layer_id: red_team_reviewer_objections
+    layer_name: Red-Team Reviewer Objections Pack
+    layer_group: calibration
+    purpose: Reviewer-facing objection catalogue for the Build 26-29.5 public-data pilot and reviewer materials.
+    primary_files:
+      - model/carsf/red_team_reviewer_objections.py
+      - data/public_pilot/red_team_reviewer_objections_manifest.yaml
+      - scripts/run_red_team_reviewer_objections.py
+      - simulator/pages/29_Public_Data_Evidence_Map.py
+      - docs/red_team_reviewer_objections.md
+    primary_reports:
+      - reports/red_team_reviewer_objections.md
+      - reports/red_team_reviewer_objections.json
+    streamlit_pages:
+      - simulator/pages/29_Public_Data_Evidence_Map.py
+    status_labels:
+      - implemented_prototype
+      - generated_report_available
+      - placeholder_only
+      - calibration_required
+      - external_review_required
+      - not_for_real_world_use
+    non_claim_flags:
+      - not_external_source_verification
+      - not_calibrated
+      - not_statistical_validation
+      - not_actual_tax_payable
+      - not_operational_readiness
+    calibration_blockers:
+      - Objections being acknowledged does not mean they are resolved.
+      - Public-data limitations, placeholder limits, restricted-data blockers, legal/tax/admin limits, statistical limits, and incidence limits remain visible.
+    external_review_blockers:
+      - External legal, tax, Treasury, ATO-methods, privacy, statistical, economic, welfare, and hostile reviewer inspection remains required.
+    blocker_explanation: Build 29.6 packages likely reviewer objections and honest responses without adding data or claiming validation.
+    recommended_reviewer:
+      - technical_reviewer
+      - privacy_reviewer
+      - statistical_methods_reviewer
+      - treasury_methods_reviewer
+      - ato_methods_reviewer
+      - hostile_red_team_reviewer
+    read_order: 31
+    main_reason: Build 29.6 makes known limitations easier to attack without resolving objections or claiming calibration.
+    must_not_be_used_for:
+      - objections resolved
+      - external source verification
+      - calibration completed
+      - validation
+      - official status
+      - actual tax payable
+      - readiness score
 report_entries:
   - report_path: reports/executive_dashboard.md
     layer_id: executive_dashboard
@@ -1516,6 +1567,22 @@ report_entries:
     must_not_be_used_for: [external source verification, calibration completed, validation, official status, actual tax payable, readiness score]
     linked_streamlit_page: simulator/pages/29_Public_Data_Evidence_Map.py
     recommended_read_order: 30
+  - report_path: reports/red_team_reviewer_objections.md
+    layer_id: red_team_reviewer_objections
+    report_type: markdown
+    generated_by: scripts/run_red_team_reviewer_objections.py
+    interpretation_warning: Red-team objections pack only; objections being acknowledged does not mean they are resolved.
+    must_not_be_used_for: [objections resolved, calibration completed, validation, official status, actual tax payable, readiness score]
+    linked_streamlit_page: simulator/pages/29_Public_Data_Evidence_Map.py
+    recommended_read_order: 31
+  - report_path: reports/red_team_reviewer_objections.json
+    layer_id: red_team_reviewer_objections
+    report_type: json
+    generated_by: scripts/run_red_team_reviewer_objections.py
+    interpretation_warning: Machine-readable red-team objections pack over existing public-pilot artefacts only.
+    must_not_be_used_for: [objections resolved, calibration completed, validation, official status, actual tax payable, readiness score]
+    linked_streamlit_page: simulator/pages/29_Public_Data_Evidence_Map.py
+    recommended_read_order: 31
 forbidden_claims:
   - ready for government
   - ready for ATO

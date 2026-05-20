@@ -351,6 +351,14 @@ No new data is loaded by Build 29.5. Ready for manual review does not mean revie
 
 Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-29.5 are included in a later sealed RC.
 
+## Red-Team Reviewer Objections Pack
+
+The red-team reviewer objections pack converts existing Build 26-29.5 public-data pilot and reviewer materials into likely reviewer objections, valid concern explanations, bounded project responses, unresolved blockers, evidence needed to resolve each objection, and must-not-claim boundaries.
+
+No new data is loaded by Build 29.6. The pack does not add public values, scrape sources, call APIs, externally verify source values, resolve objections, complete calibration, prove the model works, or determine actual tax payable. Objections being acknowledged does not mean they are resolved, and partially mitigated does not mean solved. It is not legal advice, tax advice, ATO guidance, Treasury modelling, PBO costing, economic validation, welfare validation, statistical validation, operational readiness, legal sufficiency, official status, or firm-level liability modification.
+
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-29.6 are included in a later sealed RC.
+
 ## Non-Claims
 
 The calibration shell is not legal, tax, Treasury, ATO, ABS, Fair Work, OECD, BEPS, audit, forensic, or economic validation. It does not prove any model setting is correct.

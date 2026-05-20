@@ -82,8 +82,10 @@ Build 29 adds an internal consistency audit and source-reconciliation layer for 
 
 Build 29.5 adds a source-locator verification pack for existing Build 27-29 artefacts. It loads no new data, adds no values, does not scrape sources, does not call APIs, does not externally verify source values, and only creates manual-review cards and checklists. Ready for manual review does not mean reviewed or externally verified. It is not calibration, validation, approval, actual tax payable, legal sufficiency, operational readiness, official status, ATO guidance, Treasury modelling, or PBO costing.
 
+Build 29.6 adds a red-team reviewer objections pack for existing Build 26-29.5 artefacts. It loads no new data, adds no public values, does not scrape sources, does not call APIs, does not externally verify source values, does not resolve objections, and only packages likely reviewer criticisms, valid concern explanations, bounded responses, unresolved blockers, evidence needs, and must-not-claim boundaries. It is not calibration, validation, approval, actual tax payable, legal sufficiency, operational readiness, official status, ATO guidance, Treasury modelling, or PBO costing.
+
 ## Final RC Integrity Seal Link
 
 The final RC integrity seal checks release documents, attack-pack documents, generated reports, manifests, scripts, digest metadata, non-claim boundaries, repo guardrail expectations, CI expectations, and false readiness/legal/validation flags. `seal_passed` is an internal integrity status only and must not be read as approval, validation, external review completion, operational readiness, legal sufficiency, legislative readiness, official status, or implementation readiness.
 
-Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-29.5 are included in a later sealed RC.
+Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-29.6 are included in a later sealed RC.

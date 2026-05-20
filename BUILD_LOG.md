@@ -1,5 +1,23 @@
 # Build Log
 
+## V1.5 Red-Team Reviewer Objections Pack
+
+Branch: `v1.5-red-team-reviewer-objections-pack`
+
+Purpose of this build:
+
+- Add a red-team reviewer objections pack over existing Build 26-29.5 public-data pilot and reviewer materials.
+- Catalogue likely reviewer criticisms, explain why each concern is valid, map affected artefacts, give bounded project responses, preserve unresolved blockers, and identify future evidence needed to resolve each objection.
+- Generate `reports/red_team_reviewer_objections.md` and `reports/red_team_reviewer_objections.json`.
+
+Limitations:
+
+- Red-team reviewer objections pack only.
+- No new data loaded, no new public values, no scraping, no API calls, and no external source verification claim.
+- Objections being acknowledged does not mean they are resolved, and partially mitigated does not mean solved.
+- Not calibration, validation, legal advice, tax advice, ATO guidance, Treasury modelling, PBO costing, economic validation, welfare validation, statistical validation, operational readiness, legal sufficiency, official status, or actual-tax-payable evidence.
+- Does not modify firm-level CARSF liability.
+
 ## V1.5 Public Data Source-Locator Verification Pack
 
 Branch: `v1.5-public-data-source-locator-verification-pack`

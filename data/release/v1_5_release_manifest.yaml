@@ -1123,6 +1123,55 @@ prototype_layers:
       - treasury_methods_reviewer
       - ato_methods_reviewer
     main_reason: Build 29.5 makes source-locator metadata easier to inspect without creating source verification or calibration claims.
+  - layer_id: red_team_reviewer_objections
+    layer_name: Red-Team Reviewer Objections Pack
+    layer_group: calibration
+    summary: Reviewer-facing objection catalogue for the Build 26-29.5 public-data pilot and reviewer materials without loading new data.
+    primary_files:
+      - model/carsf/red_team_reviewer_objections.py
+      - data/public_pilot/red_team_reviewer_objections_manifest.yaml
+      - scripts/run_red_team_reviewer_objections.py
+      - simulator/pages/29_Public_Data_Evidence_Map.py
+      - docs/red_team_reviewer_objections.md
+    primary_reports:
+      - reports/red_team_reviewer_objections.md
+      - reports/red_team_reviewer_objections.json
+    streamlit_pages:
+      - simulator/pages/29_Public_Data_Evidence_Map.py
+    status_labels:
+      - prototype_only
+      - placeholder_only
+      - generated_report_available
+      - calibration_required
+      - external_review_required
+      - not_for_real_world_use
+    non_claim_flags:
+      - not_external_source_verification
+      - not_calibrated
+      - not_statistical_validation
+      - not_operational_readiness
+      - not_official_status
+    calibration_blockers:
+      - Objections being acknowledged does not mean they are resolved.
+      - Calibration, legal, tax, statistical, economic, incidence, restricted-data, and dashboard interpretation limits remain visible.
+    external_review_blockers:
+      - External reviewer inspection remains required before any objection can be treated as addressed.
+    must_not_be_used_for:
+      - objections resolved
+      - external source verification
+      - calibration completed
+      - validation
+      - official status
+      - actual tax payable
+      - readiness score
+    recommended_reviewer:
+      - technical_reviewer
+      - privacy_reviewer
+      - statistical_methods_reviewer
+      - treasury_methods_reviewer
+      - ato_methods_reviewer
+      - hostile_red_team_reviewer
+    main_reason: Build 29.6 makes known public-data pilot weaknesses easier to inspect without resolving objections or claiming validation.
 generated_reports:
   - {report_path: reports/v1_5_release_candidate_pack.md, layer_id: release_candidate_pack, generated_by: python scripts/run_v1_5_release_candidate_pack.py, what_it_shows: release-candidate pack summary, what_it_does_not_show: no readiness score or official status, primary_non_claim: release packaging only, recommended_reviewer: [policy_reviewer, technical_reviewer], suggested_read_order: 2, optional: true}
   - {report_path: reports/v1_5_release_candidate_pack.json, layer_id: release_candidate_pack, generated_by: python scripts/run_v1_5_release_candidate_pack.py, what_it_shows: release-candidate pack data, what_it_does_not_show: no readiness score or official status, primary_non_claim: release packaging only, recommended_reviewer: [technical_reviewer], suggested_read_order: 2, optional: true}
@@ -1138,6 +1187,8 @@ generated_reports:
   - {report_path: reports/public_data_consistency_audit.json, layer_id: public_data_consistency_audit, generated_by: python scripts/run_public_data_consistency_audit.py, what_it_shows: machine-readable consistency audit and false flags, what_it_does_not_show: external source verification calibration completed validation official status or tax-payable use, primary_non_claim: internal consistency audit only, recommended_reviewer: [technical_reviewer], suggested_read_order: 7, optional: false}
   - {report_path: reports/source_locator_verification_pack.md, layer_id: source_locator_verification_pack, generated_by: python scripts/run_source_locator_verification_pack.py, what_it_shows: source-locator cards source-reference-only cards placeholder cards blocker cards and reviewer checklists, what_it_does_not_show: external source verification calibration completed validation official status or tax-payable use, primary_non_claim: source-locator verification pack only, recommended_reviewer: [technical_reviewer, privacy_reviewer, statistical_methods_reviewer], suggested_read_order: 8, optional: false}
   - {report_path: reports/source_locator_verification_pack.json, layer_id: source_locator_verification_pack, generated_by: python scripts/run_source_locator_verification_pack.py, what_it_shows: machine-readable source-locator cards manual-review checklist and false flags, what_it_does_not_show: external source verification calibration completed validation official status or tax-payable use, primary_non_claim: source-locator verification pack only, recommended_reviewer: [technical_reviewer], suggested_read_order: 8, optional: false}
+  - {report_path: reports/red_team_reviewer_objections.md, layer_id: red_team_reviewer_objections, generated_by: python scripts/run_red_team_reviewer_objections.py, what_it_shows: likely reviewer objections valid concern explanations current responses blockers evidence needs and must-not-claim boundaries, what_it_does_not_show: objections resolved calibration completed validation official status or tax-payable use, primary_non_claim: red-team objections pack only, recommended_reviewer: [technical_reviewer, privacy_reviewer, statistical_methods_reviewer, hostile_red_team_reviewer], suggested_read_order: 9, optional: false}
+  - {report_path: reports/red_team_reviewer_objections.json, layer_id: red_team_reviewer_objections, generated_by: python scripts/run_red_team_reviewer_objections.py, what_it_shows: machine-readable objection catalogue summary counts blockers evidence needs and false flags, what_it_does_not_show: objections resolved calibration completed validation official status or tax-payable use, primary_non_claim: red-team objections pack only, recommended_reviewer: [technical_reviewer], suggested_read_order: 9, optional: false}
   - {report_path: reports/example_results.md, layer_id: worked_examples, generated_by: python scripts/run_examples.py, what_it_shows: worked example formula outputs, what_it_does_not_show: calibrated firm outcomes, primary_non_claim: prototype placeholders only, recommended_reviewer: [technical_reviewer, policy_reviewer], suggested_read_order: 5}
   - {report_path: reports/example_results.json, layer_id: worked_examples, generated_by: python scripts/run_examples.py, what_it_shows: machine-readable worked example outputs, what_it_does_not_show: calibrated firm outcomes, primary_non_claim: prototype placeholders only, recommended_reviewer: [technical_reviewer], suggested_read_order: 5}
   - {report_path: reports/grouped_entity_results.md, layer_id: worked_examples, generated_by: python scripts/run_examples.py, what_it_shows: grouped-entity preview outputs, what_it_does_not_show: legal grouping results, primary_non_claim: non-operative preview only, recommended_reviewer: [legal_reviewer, tax_reviewer], suggested_read_order: 6}
