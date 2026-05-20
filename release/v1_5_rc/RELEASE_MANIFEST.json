@@ -35,7 +35,9 @@
     "reports/public_data_pilot.json",
     "data/public_pilot/digests/public_data_pilot_digests.json",
     "reports/public_data_evidence_map.md",
-    "reports/public_data_evidence_map.json"
+    "reports/public_data_evidence_map.json",
+    "reports/public_data_consistency_audit.md",
+    "reports/public_data_consistency_audit.json"
   ],
   "attack_pack_summary": {
     "review_tracks": 12,
@@ -58,6 +60,8 @@
     "real_calibration_completed": false,
     "real_public_data_loaded": true,
     "new_data_loaded_by_public_data_evidence_map": false,
+    "new_data_loaded_by_public_data_consistency_audit": false,
+    "external_source_verification_claimed": false,
     "restricted_data_loaded": false,
     "real_data_loaded": false,
     "actual_tax_payable_determined": false,

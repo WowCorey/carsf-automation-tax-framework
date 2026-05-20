@@ -80,6 +80,9 @@ jobs:
       - name: Run public data evidence map
         run: python scripts/run_public_data_evidence_map.py
 
+      - name: Run public data consistency audit
+        run: python scripts/run_public_data_consistency_audit.py
+
       - name: Run mock evidence workflow
         run: python scripts/run_evidence_workflow.py
 

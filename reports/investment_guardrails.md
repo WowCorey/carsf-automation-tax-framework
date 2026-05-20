@@ -1,6 +1,6 @@
 # CARSF V1.5 Investment and Tax-Incidence Guardrails
 
-Generated at: `2026-05-20T02:07:21+00:00`
+Generated at: `2026-05-20T07:07:48+00:00`
 
 ## A. Purpose
 

@@ -24,6 +24,8 @@ The generated attack-pack report builds the report-by-report matrix from the V1.
 
 `reports/public_data_evidence_map.md` and `reports/public_data_evidence_map.json` are attack targets for the reviewer evidence map. Attack them for Build 28 new-data leakage, source-reference-only records counted as loaded data, loaded extract rows without source locators or value-review status, missing Fair Work arithmetic representation, ATO/Treasury/Super overread, placeholder anchors labelled as real data, module sanity checks implying calibration, and any wording that could imply completed calibration, model proof, tax-payable use, validation, approval, official status, ATO guidance, Treasury modelling, PBO costing, or firm-level liability modification.
 
+`reports/public_data_consistency_audit.md` and `reports/public_data_consistency_audit.json` are attack targets for internal reconciliation overread. Attack them for source-reference-only counts being treated as loaded data, missing loaded-extract source metadata, stale digest metadata, missing Fair Work arithmetic reconciliation, dashboard/report disagreement, and any wording that could imply external source verification, completed calibration, model proof, tax-payable use, validation, approval, official status, ATO guidance, Treasury modelling, PBO costing, or firm-level liability modification.
+
 ## What Not To Infer
 
 The matrix is not validation, not approval, not a readiness metric, and not government endorsement.

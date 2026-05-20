@@ -2,7 +2,7 @@
   "metadata": {
     "economic_validation_claimed": false,
     "firm_level_liability_logic_modified": false,
-    "generated_at": "2026-05-20T02:07:18+00:00",
+    "generated_at": "2026-05-20T07:07:44+00:00",
     "legal_sufficiency_claimed": false,
     "legislative_readiness_claimed": false,
     "non_claims": [
@@ -237,6 +237,20 @@
         "layer_id": "public_data_evidence_map",
         "main_reason": "Build 28 makes the public-data pilot reviewable without adding data or calibration claims.",
         "review_needed": "calibration"
+      },
+      {
+        "blocker": "Internal reconciliation is not external source verification and calibration remains incomplete.",
+        "blocker_type": "calibration",
+        "layer_id": "public_data_consistency_audit",
+        "main_reason": "Build 29 checks internal consistency across source records, reports, digests, dashboard source, and non-claim boundaries.",
+        "review_needed": "calibration"
+      },
+      {
+        "blocker": "Restricted-data blockers and forbidden repo-data boundaries remain preserved.",
+        "blocker_type": "calibration",
+        "layer_id": "public_data_consistency_audit",
+        "main_reason": "Build 29 checks internal consistency across source records, reports, digests, dashboard source, and non-claim boundaries.",
+        "review_needed": "calibration"
       }
     ],
     "external_review_blockers": [
@@ -434,6 +448,13 @@
         "blocker_type": "external_review",
         "layer_id": "public_data_evidence_map",
         "main_reason": "Build 28 makes the public-data pilot reviewable without adding data or calibration claims.",
+        "review_needed": "external_review"
+      },
+      {
+        "blocker": "Technical, privacy, statistical, legal, tax, Treasury-methods, and ATO-methods review remain required.",
+        "blocker_type": "external_review",
+        "layer_id": "public_data_consistency_audit",
+        "main_reason": "Build 29 checks internal consistency across source records, reports, digests, dashboard source, and non-claim boundaries.",
         "review_needed": "external_review"
       }
     ],
@@ -673,6 +694,36 @@
         "suggested_read_order": 6,
         "what_it_does_not_show": "new data loaded calibration completed validation official status or tax-payable use",
         "what_it_shows": "reviewer evidence map over source references loaded extracts placeholders sanity checks blockers and questions"
+      },
+      {
+        "exists": true,
+        "generated_by": "python scripts/run_public_data_consistency_audit.py",
+        "layer_id": "public_data_consistency_audit",
+        "optional": false,
+        "primary_non_claim": "internal consistency audit only",
+        "recommended_reviewer": [
+          "technical_reviewer"
+        ],
+        "report_path": "reports/public_data_consistency_audit.json",
+        "suggested_read_order": 7,
+        "what_it_does_not_show": "external source verification calibration completed validation official status or tax-payable use",
+        "what_it_shows": "machine-readable consistency audit and false flags"
+      },
+      {
+        "exists": true,
+        "generated_by": "python scripts/run_public_data_consistency_audit.py",
+        "layer_id": "public_data_consistency_audit",
+        "optional": false,
+        "primary_non_claim": "internal consistency audit only",
+        "recommended_reviewer": [
+          "technical_reviewer",
+          "privacy_reviewer",
+          "statistical_methods_reviewer"
+        ],
+        "report_path": "reports/public_data_consistency_audit.md",
+        "suggested_read_order": 7,
+        "what_it_does_not_show": "external source verification calibration completed validation official status or tax-payable use",
+        "what_it_shows": "internal consistency audit over source references extracts evidence rows digests reports and dashboard source"
       },
       {
         "exists": true,
@@ -1663,6 +1714,23 @@
           "not_operational_readiness",
           "not_official_status"
         ]
+      },
+      {
+        "layer_id": "public_data_consistency_audit",
+        "must_not_be_used_for": [
+          "external source verification",
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "readiness score"
+        ],
+        "non_claim_flags": [
+          "not_calibrated",
+          "not_statistical_validation",
+          "not_operational_readiness",
+          "not_official_status"
+        ]
       }
     ],
     "non_claims": [
@@ -2287,6 +2355,63 @@
           "simulator/pages/15_Payment_Interactions.py"
         ],
         "summary": "Placeholder baseline transfer separation, targeting, phase rules, payment stacks, double-counting, and support-incidence previews."
+      },
+      {
+        "calibration_blockers": [
+          "Internal reconciliation is not external source verification and calibration remains incomplete.",
+          "Restricted-data blockers and forbidden repo-data boundaries remain preserved."
+        ],
+        "external_review_blockers": [
+          "Technical, privacy, statistical, legal, tax, Treasury-methods, and ATO-methods review remain required."
+        ],
+        "layer_group": "calibration",
+        "layer_id": "public_data_consistency_audit",
+        "layer_name": "Public Data Pilot Consistency Audit",
+        "main_reason": "Build 29 checks internal consistency across source records, reports, digests, dashboard source, and non-claim boundaries.",
+        "must_not_be_used_for": [
+          "external source verification",
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "readiness score"
+        ],
+        "non_claim_flags": [
+          "not_calibrated",
+          "not_statistical_validation",
+          "not_operational_readiness",
+          "not_official_status"
+        ],
+        "primary_files": [
+          "model/carsf/public_data_consistency_audit.py",
+          "data/public_pilot/consistency_audit_manifest.yaml",
+          "scripts/run_public_data_consistency_audit.py",
+          "simulator/pages/29_Public_Data_Evidence_Map.py",
+          "docs/public_data_consistency_audit.md"
+        ],
+        "primary_reports": [
+          "reports/public_data_consistency_audit.md",
+          "reports/public_data_consistency_audit.json"
+        ],
+        "recommended_reviewer": [
+          "technical_reviewer",
+          "privacy_reviewer",
+          "statistical_methods_reviewer",
+          "treasury_methods_reviewer",
+          "ato_methods_reviewer"
+        ],
+        "status_labels": [
+          "prototype_only",
+          "placeholder_only",
+          "generated_report_available",
+          "calibration_required",
+          "external_review_required",
+          "not_for_real_world_use"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/29_Public_Data_Evidence_Map.py"
+        ],
+        "summary": "Internal consistency and source-reconciliation audit over Build 27 and Build 28 public-data pilot artefacts without loading new data."
       },
       {
         "calibration_blockers": [
@@ -3324,15 +3449,15 @@
     "summary": {
       "economic_validation_claimed": false,
       "firm_level_liability_logic_modified": false,
-      "layers_requiring_ato_methods_review": 8,
-      "layers_requiring_calibration": 10,
+      "layers_requiring_ato_methods_review": 9,
+      "layers_requiring_calibration": 11,
       "layers_requiring_economic_review": 10,
       "layers_requiring_legal_review": 11,
       "layers_requiring_parliamentary_counsel_review": 3,
-      "layers_requiring_privacy_review": 14,
-      "layers_requiring_statistical_review": 10,
+      "layers_requiring_privacy_review": 15,
+      "layers_requiring_statistical_review": 11,
       "layers_requiring_tax_review": 8,
-      "layers_requiring_treasury_methods_review": 19,
+      "layers_requiring_treasury_methods_review": 20,
       "layers_requiring_welfare_review": 8,
       "legal_sufficiency_claimed": false,
       "legislative_readiness_claimed": false,
@@ -3349,11 +3474,11 @@
       "release_documents_missing": 0,
       "release_documents_present": 10,
       "reports_missing": 0,
-      "reports_present": 54,
+      "reports_present": 56,
       "statistical_validation_claimed": false,
-      "total_layers": 28,
+      "total_layers": 29,
       "total_release_documents": 10,
-      "total_reports_indexed": 54,
+      "total_reports_indexed": 56,
       "warnings": [
         "Release-candidate pack is packaging and review navigation only.",
         "No readiness score, official status, validation, legal sufficiency, operational readiness, or liability change is created."
@@ -3369,15 +3494,15 @@
   "summary": {
     "economic_validation_claimed": false,
     "firm_level_liability_logic_modified": false,
-    "layers_requiring_ato_methods_review": 8,
-    "layers_requiring_calibration": 10,
+    "layers_requiring_ato_methods_review": 9,
+    "layers_requiring_calibration": 11,
     "layers_requiring_economic_review": 10,
     "layers_requiring_legal_review": 11,
     "layers_requiring_parliamentary_counsel_review": 3,
-    "layers_requiring_privacy_review": 14,
-    "layers_requiring_statistical_review": 10,
+    "layers_requiring_privacy_review": 15,
+    "layers_requiring_statistical_review": 11,
     "layers_requiring_tax_review": 8,
-    "layers_requiring_treasury_methods_review": 19,
+    "layers_requiring_treasury_methods_review": 20,
     "layers_requiring_welfare_review": 8,
     "legal_sufficiency_claimed": false,
     "legislative_readiness_claimed": false,
@@ -3394,11 +3519,11 @@
     "release_documents_missing": 0,
     "release_documents_present": 10,
     "reports_missing": 0,
-    "reports_present": 54,
+    "reports_present": 56,
     "statistical_validation_claimed": false,
-    "total_layers": 28,
+    "total_layers": 29,
     "total_release_documents": 10,
-    "total_reports_indexed": 54,
+    "total_reports_indexed": 56,
     "warnings": [
       "Release-candidate pack is packaging and review navigation only.",
       "No readiness score, official status, validation, legal sufficiency, operational readiness, or liability change is created."

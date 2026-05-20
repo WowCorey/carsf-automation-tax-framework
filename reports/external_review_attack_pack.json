@@ -582,6 +582,8 @@
       "reports/mock_evidence_workflow.md",
       "reports/payment_interactions.json",
       "reports/payment_interactions.md",
+      "reports/public_data_consistency_audit.json",
+      "reports/public_data_consistency_audit.md",
       "reports/public_data_evidence_map.json",
       "reports/public_data_evidence_map.md",
       "reports/public_data_pilot.json",
@@ -1278,6 +1280,49 @@
           "household microsimulation review",
           "payment cliff review",
           "social licence review"
+        ],
+        "must_not_infer": [
+          "Do not infer any firm-level CARSF liability change.",
+          "Do not infer approval, validation, operational readiness, legal sufficiency, or official endorsement.",
+          "Do not infer completed external review.",
+          "Do not infer that any output determines actual tax payable.",
+          "Do not infer use of taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data."
+        ],
+        "not_validation_statement": "This layer attack row is a challenge prompt only and is not validation, approval, readiness, or an official review outcome."
+      },
+      {
+        "attack_categories": [
+          "overclaiming_risk"
+        ],
+        "attack_tracks": [
+          "hostile_red_team_review"
+        ],
+        "failure_mode_ids": [],
+        "known_blockers": [
+          "Internal reconciliation is not external source verification and calibration remains incomplete.",
+          "Restricted-data blockers and forbidden repo-data boundaries remain preserved.",
+          "Technical, privacy, statistical, legal, tax, Treasury-methods, and ATO-methods review remain required."
+        ],
+        "layer_id": "public_data_consistency_audit",
+        "layer_name": "Public Data Pilot Consistency Audit",
+        "locked_until_review": [
+          "all external-review claims",
+          "all firm-liability implications",
+          "all official-status language",
+          "all readiness language",
+          "all validation language"
+        ],
+        "missing_external_inputs": [
+          "Calibration blocker list for the layer.",
+          "External reviewer note separating challenge from validation.",
+          "Independent review memo with assumptions challenged.",
+          "Non-claim boundary check against the relevant report.",
+          "Source-report trace from manifest entry to generated report.",
+          "blocker coverage diff",
+          "forbidden phrase scan",
+          "heading review",
+          "hostile quote review",
+          "stale report trace"
         ],
         "must_not_infer": [
           "Do not infer any firm-level CARSF liability change.",
@@ -2143,6 +2188,7 @@
       "investment_incidence",
       "legislative_architecture",
       "payment_interactions",
+      "public_data_consistency_audit",
       "public_data_evidence_map",
       "public_data_pilot",
       "real_data_feasibility",
@@ -3034,6 +3080,54 @@
           "welfare_policy_review"
         ],
         "report_path": "reports/payment_interactions.md",
+        "required_follow_up": "External reviewer should test the report against its non-claims, blockers, source runner, and generated JSON payload."
+      },
+      {
+        "attack_question_ids": [],
+        "calibration_or_review_blockers": [
+          "Internal reconciliation is not external source verification and calibration remains incomplete.",
+          "Restricted-data blockers and forbidden repo-data boundaries remain preserved.",
+          "Technical, privacy, statistical, legal, tax, Treasury-methods, and ATO-methods review remain required."
+        ],
+        "layer_id": "public_data_consistency_audit",
+        "likely_overread_risk": "does not show: external source verification calibration completed validation official status or tax-payable use",
+        "must_not_be_used_for": [
+          "external source verification",
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "readiness score"
+        ],
+        "not_validation_statement": "This report attack row is a challenge prompt only and is not validation, approval, readiness, or a finding of actual error.",
+        "primary_reviewer_tracks": [
+          "hostile_red_team_review"
+        ],
+        "report_path": "reports/public_data_consistency_audit.json",
+        "required_follow_up": "External reviewer should test the report against its non-claims, blockers, source runner, and generated JSON payload."
+      },
+      {
+        "attack_question_ids": [],
+        "calibration_or_review_blockers": [
+          "Internal reconciliation is not external source verification and calibration remains incomplete.",
+          "Restricted-data blockers and forbidden repo-data boundaries remain preserved.",
+          "Technical, privacy, statistical, legal, tax, Treasury-methods, and ATO-methods review remain required."
+        ],
+        "layer_id": "public_data_consistency_audit",
+        "likely_overread_risk": "does not show: external source verification calibration completed validation official status or tax-payable use",
+        "must_not_be_used_for": [
+          "external source verification",
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "readiness score"
+        ],
+        "not_validation_statement": "This report attack row is a challenge prompt only and is not validation, approval, readiness, or a finding of actual error.",
+        "primary_reviewer_tracks": [
+          "hostile_red_team_review"
+        ],
+        "report_path": "reports/public_data_consistency_audit.md",
         "required_follow_up": "External reviewer should test the report against its non-claims, blockers, source runner, and generated JSON payload."
       },
       {
@@ -8082,7 +8176,7 @@
     "summary": {
       "approval_claimed": false,
       "firm_level_liability_logic_modified": false,
-      "layers_referenced": 27,
+      "layers_referenced": 28,
       "legal_sufficiency_claimed": false,
       "legislative_readiness_claimed": false,
       "non_claims": [
@@ -8097,14 +8191,14 @@
       "release_documents_missing": 0,
       "release_documents_present": 17,
       "reports_missing": 0,
-      "reports_referenced": 52,
+      "reports_referenced": 54,
       "review_completed": false,
       "total_attack_questions": 126,
       "total_boundary_checks": 18,
       "total_failure_modes": 60,
-      "total_layer_attack_rows": 27,
+      "total_layer_attack_rows": 28,
       "total_release_documents": 17,
-      "total_report_attack_rows": 52,
+      "total_report_attack_rows": 54,
       "total_review_tracks": 12,
       "tracks_missing_required_question_count": 0,
       "tracks_with_required_question_count": 12,
@@ -8123,7 +8217,7 @@
   "metadata": {
     "approval_claimed": false,
     "firm_level_liability_logic_modified": false,
-    "generated_at": "2026-05-20T02:07:19+00:00",
+    "generated_at": "2026-05-20T07:07:45+00:00",
     "legal_sufficiency_claimed": false,
     "legislative_readiness_claimed": false,
     "non_claims": [
@@ -8143,7 +8237,7 @@
   "summary": {
     "approval_claimed": false,
     "firm_level_liability_logic_modified": false,
-    "layers_referenced": 27,
+    "layers_referenced": 28,
     "legal_sufficiency_claimed": false,
     "legislative_readiness_claimed": false,
     "non_claims": [
@@ -8158,14 +8252,14 @@
     "release_documents_missing": 0,
     "release_documents_present": 17,
     "reports_missing": 0,
-    "reports_referenced": 52,
+    "reports_referenced": 54,
     "review_completed": false,
     "total_attack_questions": 126,
     "total_boundary_checks": 18,
     "total_failure_modes": 60,
-    "total_layer_attack_rows": 27,
+    "total_layer_attack_rows": 28,
     "total_release_documents": 17,
-    "total_report_attack_rows": 52,
+    "total_report_attack_rows": 54,
     "total_review_tracks": 12,
     "tracks_missing_required_question_count": 0,
     "tracks_with_required_question_count": 12,

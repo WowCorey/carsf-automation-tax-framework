@@ -1,0 +1,990 @@
+{
+  "metadata": {
+    "audit_status_values": [
+      "blocked",
+      "fail_closed",
+      "not_applicable",
+      "reconciled",
+      "warning"
+    ],
+    "audit_type_values": [
+      "arithmetic_consistency",
+      "dashboard_source_consistency",
+      "digest_consistency",
+      "extract_to_evidence_map",
+      "forbidden_claim_scan",
+      "forbidden_repo_data_preservation",
+      "module_calibration_boundary",
+      "non_claim_boundary",
+      "placeholder_boundary",
+      "report_json_consistency",
+      "restricted_blocker_preservation",
+      "source_reference_only_counting",
+      "source_reference_to_extract"
+    ],
+    "generated_at": "2026-05-20T07:07:47+00:00",
+    "non_claims": [
+      "This is an internal consistency audit and source-reconciliation map only. No new data is loaded by this build. This does not externally verify source values, does not scrape public sources, and does not call external APIs. This is not calibration; calibration has not been completed. Public data does not prove the model works. Reconciled means internally consistent only; reconciled does not mean validated, official, or ready. Realistic placeholders remain placeholders, realistic placeholders are not real data, realistic placeholders are not calibrated, source references are not loaded datasets, and restricted-data requirements are not data access. This is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab, HILDA microdata, DSS/Services Australia records, ATO taxpayer records, Treasury/PBO confidential material, or restricted government data, and does not modify firm-level CARSF liability. It only checks internal consistency across source records, extracts, reports, digests, dashboard source, and non-claim boundaries.",
+      "Audit statuses are internal consistency statuses only; they are not validation, approval, calibration, readiness, or official status.",
+      "Source locators and value notes are metadata for reviewer inspection only and do not mean external source verification has occurred.",
+      "Digest checks are repository integrity metadata only and are not signatures, external attestation, approval, validation, or calibration."
+    ],
+    "reconciliation_scope_values": [
+      "arithmetic_only",
+      "boundary_consistency_only",
+      "count_consistency_only",
+      "external_review_required",
+      "internal_repo_only",
+      "source_locator_metadata_only"
+    ],
+    "status": "internal_consistency_audit_only",
+    "version": "CARSF V1.5 prototype"
+  },
+  "public_data_consistency_audit": {
+    "arithmetic_audit": {
+      "actual_weekly_value": 948.1,
+      "expected_weekly_value": 948.1,
+      "finding": {
+        "audit_status": "reconciled",
+        "audit_type": "arithmetic_consistency",
+        "finding_id": "fair_work_wage_arithmetic",
+        "reconciliation_scope": "arithmetic_only",
+        "related_ids": [
+          "fair_work_minimum_wage_2025_extract"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "24.95 * 38 = 948.10, matching the weekly value.",
+        "what_reviewer_should_inspect_next": "Inspect the source locator and arithmetic if either wage value changes.",
+        "what_was_checked": "Fair Work hourly and weekly national minimum wage values in the loaded public extract."
+      },
+      "hourly_value": 24.95
+    },
+    "audit_id": "carsf_v1_5_public_data_pilot_consistency_audit",
+    "audit_name": "CARSF V1.5 Public Data Pilot Consistency Audit and Source Reconciliation",
+    "build_30_requirements": [
+      "Package the feasibility map, public-data pilot, evidence map, and consistency audit into a concise reviewer handoff bundle.",
+      "Do not add new data, source values, scraping, API calls, external source verification claims, calibration claims, validation claims, tax-payable claims, or official-status claims.",
+      "Preserve source-reference-only, placeholder, restricted-blocker, and forbidden-repo-data boundaries."
+    ],
+    "dashboard_source_consistency_audit": {
+      "checked_dashboard_path": "C:/Users/Corey/Documents/Codex/2026-05-13/files-mentioned-by-the-user-carsf/carsf-automation-tax-framework/simulator/pages/29_Public_Data_Evidence_Map.py",
+      "finding": {
+        "audit_status": "reconciled",
+        "audit_type": "dashboard_source_consistency",
+        "finding_id": "dashboard_source_consistency",
+        "reconciliation_scope": "internal_repo_only",
+        "related_ids": [
+          "C:/Users/Corey/Documents/Codex/2026-05-13/files-mentioned-by-the-user-carsf/carsf-automation-tax-framework/simulator/pages/29_Public_Data_Evidence_Map.py"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "Dashboard reads generated evidence-map JSON, does not read external sources, and does not create score-style metrics.",
+        "what_reviewer_should_inspect_next": "Inspect the Streamlit page whenever evidence-map or audit sections are changed.",
+        "what_was_checked": "Streamlit evidence-map page source for report source, external-source reads, and score-like widgets."
+      }
+    },
+    "digest_consistency_audit": {
+      "digest_paths": [
+        "data/public_pilot/public_data_pilot_manifest.yaml",
+        "data/public_pilot/extracts/public_aggregate_extracts.yaml",
+        "data/public_pilot/placeholders/realistic_placeholder_anchors.yaml",
+        "reports/public_data_pilot.md",
+        "reports/public_data_pilot.json"
+      ],
+      "finding": {
+        "audit_status": "reconciled",
+        "audit_type": "digest_consistency",
+        "finding_id": "digest_consistency",
+        "reconciliation_scope": "internal_repo_only",
+        "related_ids": [
+          "data/public_pilot/public_data_pilot_manifest.yaml",
+          "data/public_pilot/extracts/public_aggregate_extracts.yaml",
+          "data/public_pilot/placeholders/realistic_placeholder_anchors.yaml",
+          "reports/public_data_pilot.md",
+          "reports/public_data_pilot.json"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "Digest entries include sha256, target files exist, and the digest file does not hash itself.",
+        "what_reviewer_should_inspect_next": "Inspect digest entries after regenerating public-pilot reports.",
+        "what_was_checked": "Public-pilot digest entries, target paths, sha256 fields, and self-hash exclusion."
+      }
+    },
+    "extract_evidence_reconciliation": {
+      "checked_extract_ids": [
+        "abs_labour_source_reference_extract",
+        "ato_corporate_transparency_2022_23_extract",
+        "ato_taxation_statistics_2022_23_extract",
+        "fair_work_minimum_wage_2025_extract",
+        "help_threshold_source_reference_extract",
+        "qld_payroll_tax_source_reference_extract",
+        "super_guarantee_2025_26_extract",
+        "treasury_budget_2026_27_receipts_extract"
+      ],
+      "finding": {
+        "audit_status": "reconciled",
+        "audit_type": "extract_to_evidence_map",
+        "finding_id": "extract_to_evidence_map",
+        "reconciliation_scope": "internal_repo_only",
+        "related_ids": [
+          "abs_labour_source_reference_extract",
+          "ato_corporate_transparency_2022_23_extract",
+          "ato_taxation_statistics_2022_23_extract",
+          "fair_work_minimum_wage_2025_extract",
+          "help_threshold_source_reference_extract",
+          "qld_payroll_tax_source_reference_extract",
+          "super_guarantee_2025_26_extract",
+          "treasury_budget_2026_27_receipts_extract"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "Loaded extracts map to loaded public aggregate evidence and source-reference-only rows remain separate.",
+        "what_reviewer_should_inspect_next": "Inspect the evidence-map JSON before presenting loaded-public-extract counts.",
+        "what_was_checked": "Loaded and source-reference-only extract rows against evidence-map rows."
+      }
+    },
+    "findings": [
+      {
+        "audit_status": "reconciled",
+        "audit_type": "source_reference_to_extract",
+        "finding_id": "source_reference_to_extract",
+        "reconciliation_scope": "source_locator_metadata_only",
+        "related_ids": [
+          "fair_work_minimum_wage_2025_extract",
+          "ato_corporate_transparency_2022_23_extract",
+          "ato_taxation_statistics_2022_23_extract",
+          "treasury_budget_2026_27_receipts_extract",
+          "super_guarantee_2025_26_extract",
+          "help_threshold_source_reference_extract",
+          "qld_payroll_tax_source_reference_extract",
+          "abs_labour_source_reference_extract"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "All extract source_reference_id values are present and loaded extracts carry source locator metadata.",
+        "what_reviewer_should_inspect_next": "Inspect source locators and value review status text before relying on any row as a review input.",
+        "what_was_checked": "Every extract source reference and loaded-extract source metadata field."
+      },
+      {
+        "audit_status": "reconciled",
+        "audit_type": "extract_to_evidence_map",
+        "finding_id": "extract_to_evidence_map",
+        "reconciliation_scope": "internal_repo_only",
+        "related_ids": [
+          "abs_labour_source_reference_extract",
+          "ato_corporate_transparency_2022_23_extract",
+          "ato_taxation_statistics_2022_23_extract",
+          "fair_work_minimum_wage_2025_extract",
+          "help_threshold_source_reference_extract",
+          "qld_payroll_tax_source_reference_extract",
+          "super_guarantee_2025_26_extract",
+          "treasury_budget_2026_27_receipts_extract"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "Loaded extracts map to loaded public aggregate evidence and source-reference-only rows remain separate.",
+        "what_reviewer_should_inspect_next": "Inspect the evidence-map JSON before presenting loaded-public-extract counts.",
+        "what_was_checked": "Loaded and source-reference-only extract rows against evidence-map rows."
+      },
+      {
+        "audit_status": "reconciled",
+        "audit_type": "source_reference_only_counting",
+        "finding_id": "source_reference_only_counting",
+        "reconciliation_scope": "count_consistency_only",
+        "related_ids": [
+          "real_public_data_loaded_extracts",
+          "source_reference_only_extracts",
+          "total_field_sanity_checks",
+          "total_module_sanity_checks",
+          "total_placeholder_anchors",
+          "total_public_aggregate_extracts",
+          "total_source_references"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "Source-reference-only rows are excluded from loaded public data counts and JSON counts agree.",
+        "what_reviewer_should_inspect_next": "Inspect generated summaries whenever source files or report JSONs change.",
+        "what_was_checked": "Source counts against pilot JSON and evidence-map JSON summary counts."
+      },
+      {
+        "audit_status": "reconciled",
+        "audit_type": "arithmetic_consistency",
+        "finding_id": "fair_work_wage_arithmetic",
+        "reconciliation_scope": "arithmetic_only",
+        "related_ids": [
+          "fair_work_minimum_wage_2025_extract"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "24.95 * 38 = 948.10, matching the weekly value.",
+        "what_reviewer_should_inspect_next": "Inspect the source locator and arithmetic if either wage value changes.",
+        "what_was_checked": "Fair Work hourly and weekly national minimum wage values in the loaded public extract."
+      },
+      {
+        "audit_status": "reconciled",
+        "audit_type": "placeholder_boundary",
+        "finding_id": "placeholder_boundary",
+        "reconciliation_scope": "boundary_consistency_only",
+        "related_ids": [
+          "anchor_opfte_minimum_wage",
+          "anchor_hle_minimum_wage",
+          "anchor_qlc_minimum_wage",
+          "anchor_sector_schedule_source_reference",
+          "anchor_fiscal_public_aggregates",
+          "anchor_payg_public_tax_stats",
+          "anchor_super_guarantee_rate",
+          "anchor_help_source_reference",
+          "anchor_payroll_tax_source_reference",
+          "anchor_transition_public_reference",
+          "anchor_uncertainty_source_reference_only"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "All placeholder anchors remain realistic placeholders and are not labelled loaded public data.",
+        "what_reviewer_should_inspect_next": "Inspect placeholder evidence rows before using any anchor in a later calibration design.",
+        "what_was_checked": "Placeholder source rows and evidence rows for real-data or calibration overread."
+      },
+      {
+        "audit_status": "reconciled",
+        "audit_type": "module_calibration_boundary",
+        "finding_id": "module_calibration_boundary",
+        "reconciliation_scope": "boundary_consistency_only",
+        "related_ids": [
+          "core_formula_model",
+          "sector_schedules",
+          "sector_stress_matrix",
+          "fiscal_trajectory",
+          "transition_funding",
+          "payment_interactions",
+          "household_distributional",
+          "household_weighting",
+          "uncertainty_ranges",
+          "reviewed_scenarios",
+          "executive_dashboard"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "Every module sanity-check row keeps calibration_possible false and preserves blockers.",
+        "what_reviewer_should_inspect_next": "Inspect module rows before using public-pilot evidence as calibration input.",
+        "what_was_checked": "Module sanity-check rows and evidence rows for calibration_possible false and blocker visibility."
+      },
+      {
+        "audit_status": "reconciled",
+        "audit_type": "restricted_blocker_preservation",
+        "finding_id": "restricted_blocker_preservation",
+        "reconciliation_scope": "boundary_consistency_only",
+        "related_ids": [
+          "restricted_household_microdata",
+          "restricted_tax_records",
+          "restricted_welfare_records"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "Restricted tax, household microdata, and welfare/payment blockers remain visible and blocked.",
+        "what_reviewer_should_inspect_next": "Inspect blocker rows before planning any future data access process.",
+        "what_was_checked": "Restricted-data blocker IDs and evidence-map blocker rows."
+      },
+      {
+        "audit_status": "reconciled",
+        "audit_type": "forbidden_repo_data_preservation",
+        "finding_id": "forbidden_repo_data_preservation",
+        "reconciliation_scope": "boundary_consistency_only",
+        "related_ids": [
+          "fd_tax_records",
+          "fd_firm_confidential_records",
+          "fd_person_level_records",
+          "fd_household_microdata",
+          "fd_restricted_government_data"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "Forbidden categories remain excluded and marked forbidden for repo use.",
+        "what_reviewer_should_inspect_next": "Inspect forbidden data rules before adding any public-pilot file type.",
+        "what_was_checked": "Forbidden repo data rules and evidence-map forbidden rows."
+      },
+      {
+        "audit_status": "reconciled",
+        "audit_type": "digest_consistency",
+        "finding_id": "digest_consistency",
+        "reconciliation_scope": "internal_repo_only",
+        "related_ids": [
+          "data/public_pilot/public_data_pilot_manifest.yaml",
+          "data/public_pilot/extracts/public_aggregate_extracts.yaml",
+          "data/public_pilot/placeholders/realistic_placeholder_anchors.yaml",
+          "reports/public_data_pilot.md",
+          "reports/public_data_pilot.json"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "Digest entries include sha256, target files exist, and the digest file does not hash itself.",
+        "what_reviewer_should_inspect_next": "Inspect digest entries after regenerating public-pilot reports.",
+        "what_was_checked": "Public-pilot digest entries, target paths, sha256 fields, and self-hash exclusion."
+      },
+      {
+        "audit_status": "reconciled",
+        "audit_type": "report_json_consistency",
+        "finding_id": "report_json_consistency",
+        "reconciliation_scope": "internal_repo_only",
+        "related_ids": [
+          "reports/public_data_pilot.json",
+          "reports/public_data_evidence_map.json"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "JSON false flags remain false and Markdown reports retain non-claim warnings.",
+        "what_reviewer_should_inspect_next": "Inspect generated report JSON and Markdown together after any runner change.",
+        "what_was_checked": "Public-pilot and evidence-map JSON flags plus Markdown non-claim language."
+      },
+      {
+        "audit_status": "reconciled",
+        "audit_type": "dashboard_source_consistency",
+        "finding_id": "dashboard_source_consistency",
+        "reconciliation_scope": "internal_repo_only",
+        "related_ids": [
+          "C:/Users/Corey/Documents/Codex/2026-05-13/files-mentioned-by-the-user-carsf/carsf-automation-tax-framework/simulator/pages/29_Public_Data_Evidence_Map.py"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "Dashboard reads generated evidence-map JSON, does not read external sources, and does not create score-style metrics.",
+        "what_reviewer_should_inspect_next": "Inspect the Streamlit page whenever evidence-map or audit sections are changed.",
+        "what_was_checked": "Streamlit evidence-map page source for report source, external-source reads, and score-like widgets."
+      },
+      {
+        "audit_status": "reconciled",
+        "audit_type": "non_claim_boundary",
+        "finding_id": "non_claim_boundary",
+        "reconciliation_scope": "boundary_consistency_only",
+        "related_ids": [
+          "not calibration",
+          "calibration has not been completed",
+          "public data does not prove the model works",
+          "realistic placeholders remain placeholders",
+          "source references are not loaded datasets",
+          "restricted-data requirements are not data access",
+          "not legal advice",
+          "not tax advice",
+          "not ATO guidance",
+          "not Treasury modelling",
+          "not PBO costing",
+          "not economic validation",
+          "not welfare validation",
+          "not statistical validation",
+          "not operational readiness",
+          "not legal sufficiency",
+          "not official status",
+          "does not determine actual tax payable",
+          "does not modify firm-level CARSF liability"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "Required non-claim boundaries remain visible.",
+        "what_reviewer_should_inspect_next": "Inspect non-claim language before reviewer handoff.",
+        "what_was_checked": "Required non-claim phrases across generated public-data reports and dashboard text."
+      },
+      {
+        "audit_status": "reconciled",
+        "audit_type": "forbidden_claim_scan",
+        "finding_id": "forbidden_claim_scan",
+        "reconciliation_scope": "boundary_consistency_only",
+        "related_ids": [],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "No forbidden affirmative claims were found.",
+        "what_reviewer_should_inspect_next": "Inspect any finding manually for negative-warning context before changing the scanner.",
+        "what_was_checked": "Generated reports, manifest text, and dashboard source for forbidden affirmative public-data claims."
+      }
+    ],
+    "forbidden_claim_scan": {
+      "audit_status": "reconciled",
+      "audit_type": "forbidden_claim_scan",
+      "finding_id": "forbidden_claim_scan",
+      "reconciliation_scope": "boundary_consistency_only",
+      "related_ids": [],
+      "what_failed": "None",
+      "what_must_not_be_inferred": [
+        "external source verification",
+        "calibration",
+        "validation",
+        "actual tax payable",
+        "legal sufficiency",
+        "operational readiness",
+        "official status"
+      ],
+      "what_passed": "No forbidden affirmative claims were found.",
+      "what_reviewer_should_inspect_next": "Inspect any finding manually for negative-warning context before changing the scanner.",
+      "what_was_checked": "Generated reports, manifest text, and dashboard source for forbidden affirmative public-data claims."
+    },
+    "forbidden_repo_data_audit": {
+      "checked_rule_ids": [
+        "fd_tax_records",
+        "fd_firm_confidential_records",
+        "fd_person_level_records",
+        "fd_household_microdata",
+        "fd_restricted_government_data"
+      ],
+      "finding": {
+        "audit_status": "reconciled",
+        "audit_type": "forbidden_repo_data_preservation",
+        "finding_id": "forbidden_repo_data_preservation",
+        "reconciliation_scope": "boundary_consistency_only",
+        "related_ids": [
+          "fd_tax_records",
+          "fd_firm_confidential_records",
+          "fd_person_level_records",
+          "fd_household_microdata",
+          "fd_restricted_government_data"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "Forbidden categories remain excluded and marked forbidden for repo use.",
+        "what_reviewer_should_inspect_next": "Inspect forbidden data rules before adding any public-pilot file type.",
+        "what_was_checked": "Forbidden repo data rules and evidence-map forbidden rows."
+      }
+    },
+    "input_artifacts": [
+      "data/public_pilot/public_data_pilot_manifest.yaml",
+      "data/public_pilot/extracts/public_aggregate_extracts.yaml",
+      "data/public_pilot/placeholders/realistic_placeholder_anchors.yaml",
+      "data/public_pilot/digests/public_data_pilot_digests.json",
+      "data/public_pilot/reviewer_evidence_map_manifest.yaml",
+      "reports/public_data_pilot.md",
+      "reports/public_data_pilot.json",
+      "reports/public_data_evidence_map.md",
+      "reports/public_data_evidence_map.json",
+      "simulator/pages/29_Public_Data_Evidence_Map.py"
+    ],
+    "module_calibration_boundary_audit": {
+      "checked_module_ids": [
+        "core_formula_model",
+        "sector_schedules",
+        "sector_stress_matrix",
+        "fiscal_trajectory",
+        "transition_funding",
+        "payment_interactions",
+        "household_distributional",
+        "household_weighting",
+        "uncertainty_ranges",
+        "reviewed_scenarios",
+        "executive_dashboard"
+      ],
+      "finding": {
+        "audit_status": "reconciled",
+        "audit_type": "module_calibration_boundary",
+        "finding_id": "module_calibration_boundary",
+        "reconciliation_scope": "boundary_consistency_only",
+        "related_ids": [
+          "core_formula_model",
+          "sector_schedules",
+          "sector_stress_matrix",
+          "fiscal_trajectory",
+          "transition_funding",
+          "payment_interactions",
+          "household_distributional",
+          "household_weighting",
+          "uncertainty_ranges",
+          "reviewed_scenarios",
+          "executive_dashboard"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "Every module sanity-check row keeps calibration_possible false and preserves blockers.",
+        "what_reviewer_should_inspect_next": "Inspect module rows before using public-pilot evidence as calibration input.",
+        "what_was_checked": "Module sanity-check rows and evidence rows for calibration_possible false and blocker visibility."
+      }
+    },
+    "non_claim_boundary_audit": {
+      "checked_phrases": [
+        "not calibration",
+        "calibration has not been completed",
+        "public data does not prove the model works",
+        "realistic placeholders remain placeholders",
+        "source references are not loaded datasets",
+        "restricted-data requirements are not data access",
+        "not legal advice",
+        "not tax advice",
+        "not ATO guidance",
+        "not Treasury modelling",
+        "not PBO costing",
+        "not economic validation",
+        "not welfare validation",
+        "not statistical validation",
+        "not operational readiness",
+        "not legal sufficiency",
+        "not official status",
+        "does not determine actual tax payable",
+        "does not modify firm-level CARSF liability"
+      ],
+      "finding": {
+        "audit_status": "reconciled",
+        "audit_type": "non_claim_boundary",
+        "finding_id": "non_claim_boundary",
+        "reconciliation_scope": "boundary_consistency_only",
+        "related_ids": [
+          "not calibration",
+          "calibration has not been completed",
+          "public data does not prove the model works",
+          "realistic placeholders remain placeholders",
+          "source references are not loaded datasets",
+          "restricted-data requirements are not data access",
+          "not legal advice",
+          "not tax advice",
+          "not ATO guidance",
+          "not Treasury modelling",
+          "not PBO costing",
+          "not economic validation",
+          "not welfare validation",
+          "not statistical validation",
+          "not operational readiness",
+          "not legal sufficiency",
+          "not official status",
+          "does not determine actual tax payable",
+          "does not modify firm-level CARSF liability"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "Required non-claim boundaries remain visible.",
+        "what_reviewer_should_inspect_next": "Inspect non-claim language before reviewer handoff.",
+        "what_was_checked": "Required non-claim phrases across generated public-data reports and dashboard text."
+      }
+    },
+    "non_claims": [
+      "This is an internal consistency audit and source-reconciliation map only. No new data is loaded by this build. This does not externally verify source values, does not scrape public sources, and does not call external APIs. This is not calibration; calibration has not been completed. Public data does not prove the model works. Reconciled means internally consistent only; reconciled does not mean validated, official, or ready. Realistic placeholders remain placeholders, realistic placeholders are not real data, realistic placeholders are not calibrated, source references are not loaded datasets, and restricted-data requirements are not data access. This is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab, HILDA microdata, DSS/Services Australia records, ATO taxpayer records, Treasury/PBO confidential material, or restricted government data, and does not modify firm-level CARSF liability. It only checks internal consistency across source records, extracts, reports, digests, dashboard source, and non-claim boundaries.",
+      "Audit statuses are internal consistency statuses only; they are not validation, approval, calibration, readiness, or official status.",
+      "Source locators and value notes are metadata for reviewer inspection only and do not mean external source verification has occurred.",
+      "Digest checks are repository integrity metadata only and are not signatures, external attestation, approval, validation, or calibration."
+    ],
+    "placeholder_boundary_audit": {
+      "checked_anchor_ids": [
+        "anchor_opfte_minimum_wage",
+        "anchor_hle_minimum_wage",
+        "anchor_qlc_minimum_wage",
+        "anchor_sector_schedule_source_reference",
+        "anchor_fiscal_public_aggregates",
+        "anchor_payg_public_tax_stats",
+        "anchor_super_guarantee_rate",
+        "anchor_help_source_reference",
+        "anchor_payroll_tax_source_reference",
+        "anchor_transition_public_reference",
+        "anchor_uncertainty_source_reference_only"
+      ],
+      "finding": {
+        "audit_status": "reconciled",
+        "audit_type": "placeholder_boundary",
+        "finding_id": "placeholder_boundary",
+        "reconciliation_scope": "boundary_consistency_only",
+        "related_ids": [
+          "anchor_opfte_minimum_wage",
+          "anchor_hle_minimum_wage",
+          "anchor_qlc_minimum_wage",
+          "anchor_sector_schedule_source_reference",
+          "anchor_fiscal_public_aggregates",
+          "anchor_payg_public_tax_stats",
+          "anchor_super_guarantee_rate",
+          "anchor_help_source_reference",
+          "anchor_payroll_tax_source_reference",
+          "anchor_transition_public_reference",
+          "anchor_uncertainty_source_reference_only"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "All placeholder anchors remain realistic placeholders and are not labelled loaded public data.",
+        "what_reviewer_should_inspect_next": "Inspect placeholder evidence rows before using any anchor in a later calibration design.",
+        "what_was_checked": "Placeholder source rows and evidence rows for real-data or calibration overread."
+      }
+    },
+    "report_json_consistency_audit": {
+      "checked_reports": [
+        "reports/public_data_pilot.json",
+        "reports/public_data_evidence_map.json"
+      ],
+      "finding": {
+        "audit_status": "reconciled",
+        "audit_type": "report_json_consistency",
+        "finding_id": "report_json_consistency",
+        "reconciliation_scope": "internal_repo_only",
+        "related_ids": [
+          "reports/public_data_pilot.json",
+          "reports/public_data_evidence_map.json"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "JSON false flags remain false and Markdown reports retain non-claim warnings.",
+        "what_reviewer_should_inspect_next": "Inspect generated report JSON and Markdown together after any runner change.",
+        "what_was_checked": "Public-pilot and evidence-map JSON flags plus Markdown non-claim language."
+      }
+    },
+    "restricted_blocker_audit": {
+      "checked_blocker_ids": [
+        "restricted_household_microdata",
+        "restricted_tax_records",
+        "restricted_welfare_records"
+      ],
+      "finding": {
+        "audit_status": "reconciled",
+        "audit_type": "restricted_blocker_preservation",
+        "finding_id": "restricted_blocker_preservation",
+        "reconciliation_scope": "boundary_consistency_only",
+        "related_ids": [
+          "restricted_household_microdata",
+          "restricted_tax_records",
+          "restricted_welfare_records"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "Restricted tax, household microdata, and welfare/payment blockers remain visible and blocked.",
+        "what_reviewer_should_inspect_next": "Inspect blocker rows before planning any future data access process.",
+        "what_was_checked": "Restricted-data blocker IDs and evidence-map blocker rows."
+      }
+    },
+    "source_reference_only_count_audit": {
+      "expected_counts": {
+        "real_public_data_loaded_extracts": 5,
+        "source_reference_only_extracts": 3,
+        "total_field_sanity_checks": 10,
+        "total_module_sanity_checks": 11,
+        "total_placeholder_anchors": 11,
+        "total_public_aggregate_extracts": 8,
+        "total_source_references": 8
+      },
+      "finding": {
+        "audit_status": "reconciled",
+        "audit_type": "source_reference_only_counting",
+        "finding_id": "source_reference_only_counting",
+        "reconciliation_scope": "count_consistency_only",
+        "related_ids": [
+          "real_public_data_loaded_extracts",
+          "source_reference_only_extracts",
+          "total_field_sanity_checks",
+          "total_module_sanity_checks",
+          "total_placeholder_anchors",
+          "total_public_aggregate_extracts",
+          "total_source_references"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "Source-reference-only rows are excluded from loaded public data counts and JSON counts agree.",
+        "what_reviewer_should_inspect_next": "Inspect generated summaries whenever source files or report JSONs change.",
+        "what_was_checked": "Source counts against pilot JSON and evidence-map JSON summary counts."
+      }
+    },
+    "source_reference_reconciliation": {
+      "checked_extract_ids": [
+        "fair_work_minimum_wage_2025_extract",
+        "ato_corporate_transparency_2022_23_extract",
+        "ato_taxation_statistics_2022_23_extract",
+        "treasury_budget_2026_27_receipts_extract",
+        "super_guarantee_2025_26_extract",
+        "help_threshold_source_reference_extract",
+        "qld_payroll_tax_source_reference_extract",
+        "abs_labour_source_reference_extract"
+      ],
+      "finding": {
+        "audit_status": "reconciled",
+        "audit_type": "source_reference_to_extract",
+        "finding_id": "source_reference_to_extract",
+        "reconciliation_scope": "source_locator_metadata_only",
+        "related_ids": [
+          "fair_work_minimum_wage_2025_extract",
+          "ato_corporate_transparency_2022_23_extract",
+          "ato_taxation_statistics_2022_23_extract",
+          "treasury_budget_2026_27_receipts_extract",
+          "super_guarantee_2025_26_extract",
+          "help_threshold_source_reference_extract",
+          "qld_payroll_tax_source_reference_extract",
+          "abs_labour_source_reference_extract"
+        ],
+        "what_failed": "None",
+        "what_must_not_be_inferred": [
+          "external source verification",
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "legal sufficiency",
+          "operational readiness",
+          "official status"
+        ],
+        "what_passed": "All extract source_reference_id values are present and loaded extracts carry source locator metadata.",
+        "what_reviewer_should_inspect_next": "Inspect source locators and value review status text before relying on any row as a review input.",
+        "what_was_checked": "Every extract source reference and loaded-extract source metadata field."
+      }
+    },
+    "status": "internal_consistency_audit_only",
+    "summary": {
+      "actual_tax_payable_determined": false,
+      "approval_claimed": false,
+      "arithmetic_checks_reconciled": true,
+      "consistency_audit_created": true,
+      "dashboard_source_consistency_checked": true,
+      "digest_consistency_checked": true,
+      "digest_self_hash_findings": 0,
+      "digest_targets_total": 5,
+      "external_source_verification_claimed": false,
+      "extract_evidence_reconciled": true,
+      "field_sanity_checks_total": 10,
+      "findings_blocked": 0,
+      "findings_fail_closed": 0,
+      "findings_not_applicable": 0,
+      "findings_reconciled": 13,
+      "findings_warning": 0,
+      "firm_level_liability_logic_modified": false,
+      "forbidden_claim_findings": 0,
+      "forbidden_repo_data_items_total": 5,
+      "forbidden_repo_data_preserved": true,
+      "legal_sufficiency_claimed": false,
+      "loaded_public_extracts_total": 5,
+      "module_calibration_boundaries_preserved": true,
+      "module_sanity_checks_total": 11,
+      "new_data_loaded": false,
+      "non_claim_boundary_failures": 0,
+      "official_status_claimed": false,
+      "operational_readiness_claimed": false,
+      "placeholder_anchors_total": 11,
+      "placeholder_boundaries_preserved": true,
+      "real_calibration_completed": false,
+      "report_json_consistency_checked": true,
+      "restricted_blockers_preserved": true,
+      "restricted_blockers_total": 3,
+      "source_reference_only_counts_reconciled": true,
+      "source_reference_only_extracts_total": 3,
+      "source_references_reconciled": true,
+      "source_references_total": 8,
+      "total_audit_findings": 13,
+      "validation_claimed": false
+    }
+  },
+  "summary": {
+    "actual_tax_payable_determined": false,
+    "approval_claimed": false,
+    "arithmetic_checks_reconciled": true,
+    "consistency_audit_created": true,
+    "dashboard_source_consistency_checked": true,
+    "digest_consistency_checked": true,
+    "digest_self_hash_findings": 0,
+    "digest_targets_total": 5,
+    "external_source_verification_claimed": false,
+    "extract_evidence_reconciled": true,
+    "field_sanity_checks_total": 10,
+    "findings_blocked": 0,
+    "findings_fail_closed": 0,
+    "findings_not_applicable": 0,
+    "findings_reconciled": 13,
+    "findings_warning": 0,
+    "firm_level_liability_logic_modified": false,
+    "forbidden_claim_findings": 0,
+    "forbidden_repo_data_items_total": 5,
+    "forbidden_repo_data_preserved": true,
+    "legal_sufficiency_claimed": false,
+    "loaded_public_extracts_total": 5,
+    "module_calibration_boundaries_preserved": true,
+    "module_sanity_checks_total": 11,
+    "new_data_loaded": false,
+    "non_claim_boundary_failures": 0,
+    "official_status_claimed": false,
+    "operational_readiness_claimed": false,
+    "placeholder_anchors_total": 11,
+    "placeholder_boundaries_preserved": true,
+    "real_calibration_completed": false,
+    "report_json_consistency_checked": true,
+    "restricted_blockers_preserved": true,
+    "restricted_blockers_total": 3,
+    "source_reference_only_counts_reconciled": true,
+    "source_reference_only_extracts_total": 3,
+    "source_references_reconciled": true,
+    "source_references_total": 8,
+    "total_audit_findings": 13,
+    "validation_claimed": false
+  }
+}

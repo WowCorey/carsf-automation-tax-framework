@@ -16,7 +16,7 @@
       "source_reference_only",
       "synthetic_fixture"
     ],
-    "generated_at": "2026-05-20T02:07:20+00:00",
+    "generated_at": "2026-05-20T07:07:47+00:00",
     "non_claims": [
       "This is a reviewer evidence map and dashboard for the public data pilot only. No new data is loaded by this build. Build 27 public aggregate extracts remain sanity-check-only or placeholder-anchor-only. This is not calibration, calibration has not been completed, public data does not prove the model works, realistic placeholders remain placeholders, realistic placeholders are not real data, realistic placeholders are not calibrated, source references are not loaded datasets, and restricted-data requirements are not data access. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab, HILDA microdata, DSS/Services Australia records, ATO taxpayer records, Treasury/PBO confidential material, or restricted government data, and does not modify firm-level CARSF liability. It only maps evidence for reviewer inspection.",
       "Confidence labels are evidence classification labels only; they are not validation scores, not readiness scores, not maturity scores, and not approval.",

@@ -1,10 +1,10 @@
 {
   "digests": [
     {
-      "bytes": 23005,
+      "bytes": 23098,
       "digest_scope": "public_data_pilot_integrity_metadata_only",
       "path": "data/public_pilot/public_data_pilot_manifest.yaml",
-      "sha256": "423eca2ce99008084f4855bd627ab364ff0ed017196fb7b79df3b9e2a345ea55"
+      "sha256": "008533a126186ecc88a66a219f057c7b30802bd9629aab70773d0267ccab710d"
     },
     {
       "bytes": 9909,
@@ -19,16 +19,16 @@
       "sha256": "5bee9f85eea80d3e60bb401b53edc6c856f30c7d0319d2dd3fecf5a7a947125f"
     },
     {
-      "bytes": 19046,
+      "bytes": 19139,
       "digest_scope": "public_data_pilot_integrity_metadata_only",
       "path": "reports/public_data_pilot.md",
-      "sha256": "705d0f6fafd38bbde7b1fec653273de83a47fc9843e766f9e1576368055ad5f0"
+      "sha256": "b1e30e102a57a786767957fe3f008038def0db3395681b36732ff4d9d813fbb2"
     },
     {
-      "bytes": 65695,
+      "bytes": 65881,
       "digest_scope": "public_data_pilot_integrity_metadata_only",
       "path": "reports/public_data_pilot.json",
-      "sha256": "992e6fc671907ff5ab180b3fb6ea484e4d9d38ad2e99485b774fd0cd8c1ab887"
+      "sha256": "cbd10f68055e5359c42711b16473a6216dc12569d6f5c65542e7ca88922db079"
     }
   ],
   "metadata": {

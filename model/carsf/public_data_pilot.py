@@ -47,10 +47,11 @@ SOURCE_KIND_VALUES = {
 PUBLIC_DATA_PILOT_WARNING = (
     "This is a public aggregate-data pilot and realistic-placeholder anchor layer only. "
     "It may include small public aggregate extracts or source-reference records, but it is not calibration, "
-    "calibration has not been completed, public data extracts do not prove the model works, realistic placeholders "
+    "calibration has not been completed, public data extracts do not prove the model works, public data does not prove "
+    "the model works, realistic placeholders remain placeholders, realistic placeholders "
     "remain realistic placeholders, source references are not loaded datasets, and restricted-data requirements are "
     "not data access. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic "
-    "validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, or official "
+    "validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official "
     "status. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential "
     "data, household microdata, ABS DataLab, HILDA microdata, DSS/Services Australia records, ATO taxpayer records, "
     "Treasury/PBO confidential material, or restricted government data, and does not modify firm-level CARSF liability."

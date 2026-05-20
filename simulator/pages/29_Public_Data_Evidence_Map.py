@@ -8,12 +8,15 @@ import streamlit as st
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 REPORT_PATH = REPO_ROOT / "reports" / "public_data_evidence_map.json"
+CONSISTENCY_AUDIT_PATH = REPO_ROOT / "reports" / "public_data_consistency_audit.json"
 WARNING = (
     "This is a reviewer evidence map and dashboard for the public data pilot only. No new data is loaded by this build. "
     "Build 27 public aggregate extracts remain sanity-check-only or placeholder-anchor-only. This is not calibration, "
-    "not validation, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, "
-    "not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable "
-    "or modify firm-level CARSF liability."
+    "calibration has not been completed, public data does not prove the model works, realistic placeholders remain placeholders, "
+    "source references are not loaded datasets, and restricted-data requirements are not data access. It is not validation, "
+    "not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, "
+    "not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. "
+    "It does not determine actual tax payable and does not modify firm-level CARSF liability."
 )
 
 
@@ -49,6 +52,7 @@ if not report:
     st.info("Run `python scripts/run_public_data_evidence_map.py` to generate the evidence-map report.")
     st.stop()
     raise SystemExit(0)
+audit_report = load_report(CONSISTENCY_AUDIT_PATH)
 
 metadata = report.get("metadata", {})
 payload = report.get("public_data_evidence_map", {})
@@ -145,3 +149,59 @@ st.table(
 st.markdown("### What Cannot Be Claimed")
 for item in metadata.get("non_claims", [WARNING]):
     st.markdown(f"- {item}")
+
+st.markdown("### Consistency Audit / Source Reconciliation")
+st.caption(
+    "Internal consistency audit only. Reconciled means internally consistent only; it is not external source verification, "
+    "calibration, validation, legal sufficiency, operational readiness, official status, or actual tax-payable evidence."
+)
+if audit_report:
+    audit_payload = audit_report.get("public_data_consistency_audit", {})
+    audit_summary = audit_report.get("summary", {})
+    st.table(
+        [
+            {"Metric": key, "Value": str(value)}
+            for key, value in audit_summary.items()
+            if key
+            in {
+                "total_audit_findings",
+                "findings_reconciled",
+                "findings_warning",
+                "findings_blocked",
+                "findings_fail_closed",
+                "source_references_total",
+                "loaded_public_extracts_total",
+                "source_reference_only_extracts_total",
+                "digest_self_hash_findings",
+                "forbidden_claim_findings",
+                "non_claim_boundary_failures",
+                "new_data_loaded",
+                "external_source_verification_claimed",
+                "real_calibration_completed",
+                "actual_tax_payable_determined",
+                "validation_claimed",
+                "approval_claimed",
+                "operational_readiness_claimed",
+                "legal_sufficiency_claimed",
+                "official_status_claimed",
+                "firm_level_liability_logic_modified",
+            }
+        ]
+    )
+    st.markdown("#### Audit Findings")
+    st.table(
+        rows_with_lists(
+            audit_payload.get("findings", []),
+            [
+                "finding_id",
+                "audit_type",
+                "audit_status",
+                "reconciliation_scope",
+                "what_was_checked",
+                "what_failed",
+                "what_reviewer_should_inspect_next",
+            ],
+        )
+    )
+else:
+    st.info("Run `python scripts/run_public_data_consistency_audit.py` to generate the optional consistency-audit section.")

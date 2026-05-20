@@ -24,6 +24,7 @@ This calibration blocker summary is for a private research prototype and release
 - R&D Tax Incentive interaction: still requires policy, legal, tax, and Treasury review.
 - Real-data feasibility: public-data pilot source handling, licensing, provenance, aggregate-only controls, restricted-data exclusion, and realistic-placeholder labelling require technical, privacy, statistical, legal, tax, Treasury, and ATO-methods review.
 - Public-data evidence map: source-locator review, arithmetic-check review, source-reference-only counting, placeholder-anchor interpretation, restricted blocker preservation, reviewer-question coverage, and dashboard wording require technical, privacy, statistical, legal, tax, Treasury, ATO-methods, and hostile-review inspection.
+- Public-data consistency audit: internal reconciliation checks source references, extracts, evidence rows, digests, reports, dashboard source, and boundary language, but it does not externally verify source values or complete calibration.
 
 ## Consolidated Position
 
@@ -35,8 +36,10 @@ Build 27 adds small public aggregate/source-reference records and realistic-plac
 
 Build 28 maps the Build 27 records for reviewer inspection only. It loads no new data, adds no public extract values, does not complete calibration, does not prove the model works, does not determine actual tax payable, does not create validation, and does not remove restricted-data blockers.
 
+Build 29 reconciles existing public-data artefacts only. It loads no new data, does not externally verify source values, does not scrape sources, does not call APIs, does not complete calibration, does not prove the model works, does not determine actual tax payable, does not create validation, and does not remove restricted-data blockers. Reconciled means internally consistent only.
+
 ## Final RC Integrity Seal Note
 
 The final RC integrity seal checks that blocker documents, reports, manifests, attack-pack documents, non-claim boundaries, CI expectations, and guardrail expectations remain visible. It does not resolve any blocker and is not approval, validation, external review completion, legal sufficiency, operational readiness, legislative readiness, official status, a readiness score, a maturity score, or firm-level liability modification.
 
-Build 25 sealed the previous RC state. If Builds 26-28 are included in a later sealed RC, the integrity seal must be regenerated for that later state.
+Build 25 sealed the previous RC state. If Builds 26-29 are included in a later sealed RC, the integrity seal must be regenerated for that later state.

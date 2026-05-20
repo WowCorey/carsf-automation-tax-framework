@@ -34,15 +34,20 @@ Confidence labels are evidence classification labels only. They are not validati
 ```bash
 python scripts/run_public_data_pilot.py
 python scripts/run_public_data_evidence_map.py
+python scripts/run_public_data_consistency_audit.py
 ```
 
 Generated reports:
 
 - `reports/public_data_evidence_map.md`
 - `reports/public_data_evidence_map.json`
+- `reports/public_data_consistency_audit.md`
+- `reports/public_data_consistency_audit.json`
 
 Streamlit page:
 
 - `simulator/pages/29_Public_Data_Evidence_Map.py`
 
-Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-28 are included in a later sealed RC.
+Build 29 adds the optional "Consistency Audit / Source Reconciliation" section to the dashboard. It loads no new data, does not externally verify source values, and does not claim calibration, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, or firm-level liability changes.
+
+Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-29 are included in a later sealed RC.
