@@ -2,11 +2,11 @@
   "metadata": {
     "economic_validation_claimed": false,
     "firm_level_liability_logic_modified": false,
-    "generated_at": "2026-05-19T00:02:04+00:00",
+    "generated_at": "2026-05-19T04:39:21+00:00",
     "legal_sufficiency_claimed": false,
     "legislative_readiness_claimed": false,
     "non_claims": [
-      "This is a private research prototype and release-candidate pack only. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare advice, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.",
+      "This is a private research prototype and release-candidate pack only. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare advice, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, restricted government data, confidential Treasury/PBO material, or unauthorised data, and does not modify firm-level CARSF liability.",
       "The release-candidate pack only packages existing prototype reports, warnings, navigation, review blockers, and working-paper material for external review.",
       "Suggested reviewer routing is review navigation only and is not an official process."
     ],
@@ -209,6 +209,20 @@
         "layer_id": "real_data_feasibility",
         "main_reason": "Build 26 maps feasibility only and does not load data.",
         "review_needed": "calibration"
+      },
+      {
+        "blocker": "Public aggregate extracts support sanity checks and placeholder anchors only.",
+        "blocker_type": "calibration",
+        "layer_id": "public_data_pilot",
+        "main_reason": "Build 27 tests safe public aggregate intake and placeholder anchoring without real calibration.",
+        "review_needed": "calibration"
+      },
+      {
+        "blocker": "Calibration has not been completed and restricted-data blockers remain.",
+        "blocker_type": "calibration",
+        "layer_id": "public_data_pilot",
+        "main_reason": "Build 27 tests safe public aggregate intake and placeholder anchoring without real calibration.",
+        "review_needed": "calibration"
       }
     ],
     "external_review_blockers": [
@@ -393,6 +407,13 @@
         "layer_id": "real_data_feasibility",
         "main_reason": "Build 26 maps feasibility only and does not load data.",
         "review_needed": "external_review"
+      },
+      {
+        "blocker": "Technical, privacy, statistical, legal, tax, Treasury-methods, and ATO-methods review remain required.",
+        "blocker_type": "external_review",
+        "layer_id": "public_data_pilot",
+        "main_reason": "Build 27 tests safe public aggregate intake and placeholder anchoring without real calibration.",
+        "review_needed": "external_review"
       }
     ],
     "generated_reports": [
@@ -542,6 +563,36 @@
         "suggested_read_order": 5,
         "what_it_does_not_show": "calibrated firm outcomes",
         "what_it_shows": "worked example formula outputs"
+      },
+      {
+        "exists": true,
+        "generated_by": "python scripts/run_public_data_pilot.py",
+        "layer_id": "public_data_pilot",
+        "optional": false,
+        "primary_non_claim": "public-data pilot only",
+        "recommended_reviewer": [
+          "technical_reviewer"
+        ],
+        "report_path": "reports/public_data_pilot.json",
+        "suggested_read_order": 5,
+        "what_it_does_not_show": "calibration completed validation official status tax-payable use or proof that CARSF works",
+        "what_it_shows": "machine-readable public-data pilot registry and summary flags"
+      },
+      {
+        "exists": true,
+        "generated_by": "python scripts/run_public_data_pilot.py",
+        "layer_id": "public_data_pilot",
+        "optional": false,
+        "primary_non_claim": "public-data pilot only",
+        "recommended_reviewer": [
+          "technical_reviewer",
+          "privacy_reviewer",
+          "statistical_methods_reviewer"
+        ],
+        "report_path": "reports/public_data_pilot.md",
+        "suggested_read_order": 5,
+        "what_it_does_not_show": "calibration completed validation official status tax-payable use or proof that CARSF works",
+        "what_it_shows": "public source references public aggregate extracts placeholder anchors sanity checks and digest metadata"
       },
       {
         "exists": true,
@@ -1130,7 +1181,7 @@
       "exists": true,
       "interpretation_warning": "Guardrail status is a prototype repository-safety signal only, not validation or operational readiness.",
       "source_report": "reports/repo_guardrails.json",
-      "warning_findings": 54
+      "warning_findings": 55
     },
     "missing_items_or_release_gaps": [],
     "non_claim_profiles": [
@@ -1529,10 +1580,26 @@
           "not_operational_readiness",
           "not_official_status"
         ]
+      },
+      {
+        "layer_id": "public_data_pilot",
+        "must_not_be_used_for": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "readiness score"
+        ],
+        "non_claim_flags": [
+          "not_calibrated",
+          "not_statistical_validation",
+          "not_operational_readiness",
+          "not_official_status"
+        ]
       }
     ],
     "non_claims": [
-      "This is a private research prototype and release-candidate pack only. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare advice, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.",
+      "This is a private research prototype and release-candidate pack only. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare advice, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, restricted government data, confidential Treasury/PBO material, or unauthorised data, and does not modify firm-level CARSF liability.",
       "The release-candidate pack only packages existing prototype reports, warnings, navigation, review blockers, and working-paper material for external review.",
       "Suggested reviewer routing is review navigation only and is not an official process."
     ],
@@ -2153,6 +2220,62 @@
           "simulator/pages/15_Payment_Interactions.py"
         ],
         "summary": "Placeholder baseline transfer separation, targeting, phase rules, payment stacks, double-counting, and support-incidence previews."
+      },
+      {
+        "calibration_blockers": [
+          "Public aggregate extracts support sanity checks and placeholder anchors only.",
+          "Calibration has not been completed and restricted-data blockers remain."
+        ],
+        "external_review_blockers": [
+          "Technical, privacy, statistical, legal, tax, Treasury-methods, and ATO-methods review remain required."
+        ],
+        "layer_group": "calibration",
+        "layer_id": "public_data_pilot",
+        "layer_name": "Public Data Pilot and Placeholder Anchor Layer",
+        "main_reason": "Build 27 tests safe public aggregate intake and placeholder anchoring without real calibration.",
+        "must_not_be_used_for": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "readiness score"
+        ],
+        "non_claim_flags": [
+          "not_calibrated",
+          "not_statistical_validation",
+          "not_operational_readiness",
+          "not_official_status"
+        ],
+        "primary_files": [
+          "model/carsf/public_data_pilot.py",
+          "data/public_pilot/public_data_pilot_manifest.yaml",
+          "data/public_pilot/extracts/public_aggregate_extracts.yaml",
+          "data/public_pilot/placeholders/realistic_placeholder_anchors.yaml",
+          "data/public_pilot/digests/public_data_pilot_digests.json",
+          "scripts/run_public_data_pilot.py",
+          "docs/public_data_pilot.md"
+        ],
+        "primary_reports": [
+          "reports/public_data_pilot.md",
+          "reports/public_data_pilot.json"
+        ],
+        "recommended_reviewer": [
+          "technical_reviewer",
+          "privacy_reviewer",
+          "statistical_methods_reviewer",
+          "treasury_methods_reviewer",
+          "ato_methods_reviewer"
+        ],
+        "status_labels": [
+          "prototype_only",
+          "placeholder_only",
+          "generated_report_available",
+          "calibration_required",
+          "external_review_required",
+          "not_for_real_world_use"
+        ],
+        "streamlit_pages": [],
+        "summary": "Small public aggregate/source-reference pilot that anchors realistic placeholders while keeping calibration incomplete and restricted data excluded."
       },
       {
         "calibration_blockers": [
@@ -3078,20 +3201,20 @@
     "summary": {
       "economic_validation_claimed": false,
       "firm_level_liability_logic_modified": false,
-      "layers_requiring_ato_methods_review": 6,
-      "layers_requiring_calibration": 8,
+      "layers_requiring_ato_methods_review": 7,
+      "layers_requiring_calibration": 9,
       "layers_requiring_economic_review": 10,
       "layers_requiring_legal_review": 11,
       "layers_requiring_parliamentary_counsel_review": 3,
-      "layers_requiring_privacy_review": 12,
-      "layers_requiring_statistical_review": 8,
+      "layers_requiring_privacy_review": 13,
+      "layers_requiring_statistical_review": 9,
       "layers_requiring_tax_review": 8,
-      "layers_requiring_treasury_methods_review": 17,
+      "layers_requiring_treasury_methods_review": 18,
       "layers_requiring_welfare_review": 8,
       "legal_sufficiency_claimed": false,
       "legislative_readiness_claimed": false,
       "non_claims": [
-        "This is a private research prototype and release-candidate pack only. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare advice, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.",
+        "This is a private research prototype and release-candidate pack only. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare advice, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, restricted government data, confidential Treasury/PBO material, or unauthorised data, and does not modify firm-level CARSF liability.",
         "The release-candidate pack only packages existing prototype reports, warnings, navigation, review blockers, and working-paper material for external review.",
         "Suggested reviewer routing is review navigation only and is not an official process."
       ],
@@ -3103,11 +3226,11 @@
       "release_documents_missing": 0,
       "release_documents_present": 10,
       "reports_missing": 0,
-      "reports_present": 50,
+      "reports_present": 52,
       "statistical_validation_claimed": false,
-      "total_layers": 26,
+      "total_layers": 27,
       "total_release_documents": 10,
-      "total_reports_indexed": 50,
+      "total_reports_indexed": 52,
       "warnings": [
         "Release-candidate pack is packaging and review navigation only.",
         "No readiness score, official status, validation, legal sufficiency, operational readiness, or liability change is created."
@@ -3123,20 +3246,20 @@
   "summary": {
     "economic_validation_claimed": false,
     "firm_level_liability_logic_modified": false,
-    "layers_requiring_ato_methods_review": 6,
-    "layers_requiring_calibration": 8,
+    "layers_requiring_ato_methods_review": 7,
+    "layers_requiring_calibration": 9,
     "layers_requiring_economic_review": 10,
     "layers_requiring_legal_review": 11,
     "layers_requiring_parliamentary_counsel_review": 3,
-    "layers_requiring_privacy_review": 12,
-    "layers_requiring_statistical_review": 8,
+    "layers_requiring_privacy_review": 13,
+    "layers_requiring_statistical_review": 9,
     "layers_requiring_tax_review": 8,
-    "layers_requiring_treasury_methods_review": 17,
+    "layers_requiring_treasury_methods_review": 18,
     "layers_requiring_welfare_review": 8,
     "legal_sufficiency_claimed": false,
     "legislative_readiness_claimed": false,
     "non_claims": [
-      "This is a private research prototype and release-candidate pack only. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare advice, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.",
+      "This is a private research prototype and release-candidate pack only. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare advice, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, restricted government data, confidential Treasury/PBO material, or unauthorised data, and does not modify firm-level CARSF liability.",
       "The release-candidate pack only packages existing prototype reports, warnings, navigation, review blockers, and working-paper material for external review.",
       "Suggested reviewer routing is review navigation only and is not an official process."
     ],
@@ -3148,11 +3271,11 @@
     "release_documents_missing": 0,
     "release_documents_present": 10,
     "reports_missing": 0,
-    "reports_present": 50,
+    "reports_present": 52,
     "statistical_validation_claimed": false,
-    "total_layers": 26,
+    "total_layers": 27,
     "total_release_documents": 10,
-    "total_reports_indexed": 50,
+    "total_reports_indexed": 52,
     "warnings": [
       "Release-candidate pack is packaging and review navigation only.",
       "No readiness score, official status, validation, legal sufficiency, operational readiness, or liability change is created."

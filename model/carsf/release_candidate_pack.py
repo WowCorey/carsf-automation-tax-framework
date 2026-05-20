@@ -18,8 +18,8 @@ RELEASE_CANDIDATE_WARNING = (
     "not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare advice, not statistical "
     "validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative "
     "readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, "
-    "does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, "
-    "and does not modify firm-level CARSF liability."
+    "does not use taxpayer-level data, firm-level confidential data, household microdata, restricted government data, "
+    "confidential Treasury/PBO material, or unauthorised data, and does not modify firm-level CARSF liability."
 )
 
 RELEASE_CANDIDATE_NON_CLAIMS = [
@@ -52,6 +52,7 @@ REQUIRED_LAYER_IDS = {
     "reviewed_scenarios",
     "calibration_shell",
     "real_data_feasibility",
+    "public_data_pilot",
     "working_paper",
     "status_risks_docs",
 }
@@ -129,6 +130,8 @@ REQUIRED_REPORT_PATHS = {
     "reports/reviewed_scenarios.json",
     "reports/real_data_feasibility.md",
     "reports/real_data_feasibility.json",
+    "reports/public_data_pilot.md",
+    "reports/public_data_pilot.json",
 }
 
 REQUIRED_RELEASE_DOCUMENTS = {

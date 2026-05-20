@@ -2,7 +2,7 @@
 
 ## Non-Claims
 
-This briefing is for a private research prototype and release-candidate pack only. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare advice, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.
+This briefing is for a private research prototype and release-candidate pack only. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare advice, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, restricted government data, confidential Treasury/PBO material, or unauthorised data, and does not modify firm-level CARSF liability.
 
 ## Policy Reviewer
 
@@ -92,6 +92,6 @@ The integrity seal checks internal artefact presence, manifest alignment, report
 
 Inspect next: `reports/real_data_feasibility.md`, `data/calibration/real_data_feasibility_map.yaml`, and `docs/real_data_feasibility.md`.
 
-Key risks: public-data candidates may be mistaken for loaded datasets; realistic placeholders may be mistaken for real data; restricted-data requirements may be mistaken for access approval. No real data has been loaded, no calibration has occurred, and Build 26 does not show that CARSF works as a real tax model.
+Key risks: public-data candidates may be mistaken for loaded datasets; Build 27 public aggregate extracts may be mistaken for calibration; realistic placeholders may be mistaken for real data; restricted-data requirements may be mistaken for access approval. Calibration has not occurred, and the pilot does not show that CARSF works as a real tax model.
 
 External review required: source licensing, privacy, statistical methods, legal, tax, Treasury methods, ATO methods, and forbidden-data guardrails.

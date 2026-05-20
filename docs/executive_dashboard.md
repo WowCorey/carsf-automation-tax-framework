@@ -25,7 +25,7 @@ It does not add a new tax, fiscal, household, behavioural, legislative, or welfa
 - It is not a readiness score.
 - It is not an official review pathway.
 - It does not determine actual tax payable.
-- It does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data.
+- It does not use taxpayer-level data, firm-level confidential data, household microdata, restricted government data, confidential Treasury/PBO material, or unauthorised data.
 - It does not modify firm-level CARSF liability.
 
 ## Manifest
@@ -65,8 +65,10 @@ Future work should update this dashboard whenever a new generated report, Stream
 
 Build 26 adds `reports/real_data_feasibility.md` as a feasibility and calibration-intake map. It does not load real data, complete calibration, validate the model, or change firm-level liability. Dashboard and release indexes should treat it as a data-governance and pilot-planning layer only.
 
+Build 27 adds `reports/public_data_pilot.md` as a public aggregate-data pilot and realistic-placeholder anchor layer. It may include small public aggregate extracts and source-reference records, but it is not calibration, public data extracts do not prove the model works, realistic placeholders remain placeholders, and restricted-data blockers remain unresolved.
+
 ## Relationship to Release Candidate Pack
 
 Build 23 adds `release/v1_5_rc/` and `reports/v1_5_release_candidate_pack.*`. The executive dashboard remains the navigation entry point; the release-candidate pack packages the working paper, release notes, reviewer briefing, report map, calibration blockers, non-claim boundaries, and external-review routing for external review.
 
-The release-candidate pack is not legal advice, tax advice, ATO guidance, Treasury modelling, economic validation, welfare advice, statistical validation, compliance scoring, enforcement, operational readiness, legal sufficiency, legislative readiness, a readiness score, or an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.
+The release-candidate pack is not legal advice, tax advice, ATO guidance, Treasury modelling, economic validation, welfare advice, statistical validation, compliance scoring, enforcement, operational readiness, legal sufficiency, legislative readiness, a readiness score, or an official review pathway. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, restricted government data, confidential Treasury/PBO material, or unauthorised data, and does not modify firm-level CARSF liability.

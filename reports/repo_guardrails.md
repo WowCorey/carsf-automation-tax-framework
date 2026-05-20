@@ -1,6 +1,6 @@
 # CARSF V1.5 Repository Guardrails
 
-Generated at: `2026-05-19T00:03:12+00:00`
+Generated at: `2026-05-20T01:33:44+00:00`
 
 ## A. Purpose
 
@@ -14,8 +14,8 @@ This report runs prototype repository-level guardrails for likely evidence leaks
 
 ## C. Files Scanned/Skipped
 
-- Files scanned: 446
-- Files skipped: 2594
+- Files scanned: 457
+- Files skipped: 1074
 - Clean: true
 
 ## D. Denied Findings
@@ -65,6 +65,7 @@ This report runs prototype repository-level guardrails for likely evidence leaks
 | model/tests/test_decision_log.py | low | documented_marker_example | N/A | Documentation/test file contains marker examples: API_KEY, PASSWORD, SECRET. |
 | model/tests/test_evidence_packet.py | low | documented_marker_example | N/A | Documentation/test file contains marker examples: SECRET, TFN. |
 | model/tests/test_ingestion_audit.py | low | documented_marker_example | N/A | Documentation/test file contains marker examples: API_KEY. |
+| model/tests/test_public_data_pilot.py | low | documented_marker_example | N/A | Documentation/test file contains marker examples: PAYSLIP, TFN. |
 | model/tests/test_redaction.py | low | documented_marker_example | N/A | Documentation/test file contains marker examples: API_KEY. |
 | model/tests/test_repo_guardrail_script.py | low | documented_marker_example | N/A | Documentation/test file contains marker examples: SECRET. |
 | model/tests/test_repo_guardrails.py | low | documented_marker_example | N/A | Documentation/test file contains marker examples: SECRET. |

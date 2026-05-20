@@ -27,7 +27,7 @@ It verifies that release documents, attack-pack documents, generated reports, ma
 - This is not official status.
 - This is not an official review pathway.
 - It does not determine actual tax payable.
-- It does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data.
+- It does not use taxpayer-level data, firm-level confidential data, household microdata, restricted government data, confidential Treasury/PBO material, or unauthorised data.
 - It does not modify firm-level CARSF liability.
 
 ## Generated Artefacts
@@ -52,4 +52,4 @@ Generated reports:
 
 Digest entries are SHA-256 metadata for release artefacts. They are not signatures, legal seals, external attestations, approval, or validation.
 
-Build 25 sealed the previous RC state. Build 26 adds real-data feasibility and calibration-intake artefacts after that state. If Build 26 becomes part of a later sealed RC, the final RC integrity seal must be regenerated for that later state rather than treated as already covering Build 26.
+Build 25 sealed the previous RC state. Build 26 adds real-data feasibility and calibration-intake artefacts after that state, and Build 27 adds public aggregate-data pilot and realistic-placeholder anchor artefacts after that state. A new integrity seal must be regenerated if Build 27 is included in a later sealed RC.

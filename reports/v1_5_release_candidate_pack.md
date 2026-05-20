@@ -1,6 +1,6 @@
 # CARSF V1.5 Release Candidate Pack
 
-Generated at: `2026-05-19T00:02:04+00:00`
+Generated at: `2026-05-19T04:39:21+00:00`
 
 ## A. Purpose
 
@@ -8,29 +8,29 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 
 ## B. Non-Claims
 
-- This is a private research prototype and release-candidate pack only. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare advice, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.
+- This is a private research prototype and release-candidate pack only. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare advice, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, restricted government data, confidential Treasury/PBO material, or unauthorised data, and does not modify firm-level CARSF liability.
 - The release-candidate pack only packages existing prototype reports, warnings, navigation, review blockers, and working-paper material for external review.
 - Suggested reviewer routing is review navigation only and is not an official process.
 - It creates no readiness score, official status, validation claim, legal sufficiency, operational readiness, legislative readiness, enforcement pathway, or firm-level liability change.
 
 ## C. Release Pack Contents
 
-- Total layers: 26
-- Total reports indexed: 50
-- Reports present: 50
+- Total layers: 27
+- Total reports indexed: 52
+- Reports present: 52
 - Reports missing: 0
 - Total release documents: 10
 - Release documents present: 10
 - Release documents missing: 0
 - Paper files checked: 6
 - Working paper updated: True
-- Layers requiring calibration: 8
+- Layers requiring calibration: 9
 - Layers requiring legal review: 11
 - Layers requiring tax review: 8
-- Layers requiring ATO methods review: 6
-- Layers requiring Treasury methods review: 17
-- Layers requiring privacy review: 12
-- Layers requiring statistical review: 8
+- Layers requiring ATO methods review: 7
+- Layers requiring Treasury methods review: 18
+- Layers requiring privacy review: 13
+- Layers requiring statistical review: 9
 - Layers requiring economic review: 10
 - Layers requiring welfare review: 8
 - Layers requiring Parliamentary Counsel review: 3
@@ -68,6 +68,7 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | investment_incidence | Investment and Incidence Guardrails | investment_incidence | Placeholder burden, pass-through, investment, incidence, under-capture, and over-capture guardrails. | prototype_only, placeholder_only, economic_methods_review_required | reports/investment_guardrails.md, reports/investment_guardrails.json | simulator/pages/12_Investment_and_Incidence_Guardrails.py | economic_methods_reviewer, treasury_methods_reviewer, tax_reviewer | Guardrails flag sensitivity only. |
 | legislative_architecture | Legislative Architecture Skeleton | legislative_architecture | Non-operative architecture skeleton for proposed Parts, Divisions, definitions, schedules, safeguards, and placeholders. | prototype_only, non_operative, legal_review_required, parliamentary_counsel_review_required | reports/legislative_architecture.md, reports/legislative_architecture.json | simulator/pages/24_Legislative_Architecture.py | legal_reviewer, tax_reviewer, parliamentary_counsel_reviewer | Architecture maps conceptual locations only. |
 | payment_interactions | Payment Interactions | payment_interactions | Placeholder baseline transfer separation, targeting, phase rules, payment stacks, double-counting, and support-incidence previews. | prototype_only, placeholder_only, welfare_policy_review_required | reports/payment_interactions.md, reports/payment_interactions.json | simulator/pages/15_Payment_Interactions.py | welfare_policy_reviewer, legal_reviewer, treasury_methods_reviewer | Payment interaction outputs are placeholders only. |
+| public_data_pilot | Public Data Pilot and Placeholder Anchor Layer | calibration | Small public aggregate/source-reference pilot that anchors realistic placeholders while keeping calibration incomplete and restricted data excluded. | prototype_only, placeholder_only, generated_report_available, calibration_required, external_review_required, not_for_real_world_use | reports/public_data_pilot.md, reports/public_data_pilot.json | None | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer | Build 27 tests safe public aggregate intake and placeholder anchoring without real calibration. |
 | real_data_feasibility | Real Data Feasibility and Calibration Intake Map | calibration | Feasibility map for public aggregate data candidates, restricted-data requirements, realistic placeholders, forbidden repo data, module needs, and Build 27 pilot candidates. | prototype_only, placeholder_only, generated_report_available, calibration_required, external_review_required, not_for_real_world_use | reports/real_data_feasibility.md, reports/real_data_feasibility.json | None | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer | Build 26 maps feasibility only and does not load data. |
 | release_candidate_pack | V1.5 Release Candidate Pack | overview | Working-paper and release-document package that consolidates current prototype reports, non-claims, calibration blockers, and reviewer routing. | prototype_only, generated_report_available, not_for_real_world_use | None | simulator/pages/25_Executive_Dashboard.py | policy_reviewer, technical_reviewer, hostile_red_team_reviewer | Release pack consolidates existing materials only. |
 | repo_guardrails | Repository Guardrails | repo_guardrails | Repository scanning for prohibited paths, credential-like extensions, marker examples, report non-claims, and raw evidence payload markers. | prototype_only, generated_report_available | reports/repo_guardrails.md, reports/repo_guardrails.json | simulator/pages/11_Repository_Guardrails.py | technical_reviewer, privacy_reviewer, cybersecurity_reviewer | Guardrails are repository safety checks only. |
@@ -96,6 +97,8 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | reports/real_data_feasibility.md | real_data_feasibility | True | python scripts/run_real_data_feasibility.py | public data candidates restricted data needs placeholders forbidden repo data and pilot readiness | does not show: real data loaded calibration completed validation official status or tax model proof | feasibility map only | technical_reviewer, privacy_reviewer, statistical_methods_reviewer | 4 |
 | reports/example_results.json | worked_examples | True | python scripts/run_examples.py | machine-readable worked example outputs | does not show: calibrated firm outcomes | prototype placeholders only | technical_reviewer | 5 |
 | reports/example_results.md | worked_examples | True | python scripts/run_examples.py | worked example formula outputs | does not show: calibrated firm outcomes | prototype placeholders only | technical_reviewer, policy_reviewer | 5 |
+| reports/public_data_pilot.json | public_data_pilot | True | python scripts/run_public_data_pilot.py | machine-readable public-data pilot registry and summary flags | does not show: calibration completed validation official status tax-payable use or proof that CARSF works | public-data pilot only | technical_reviewer | 5 |
+| reports/public_data_pilot.md | public_data_pilot | True | python scripts/run_public_data_pilot.py | public source references public aggregate extracts placeholder anchors sanity checks and digest metadata | does not show: calibration completed validation official status tax-payable use or proof that CARSF works | public-data pilot only | technical_reviewer, privacy_reviewer, statistical_methods_reviewer | 5 |
 | reports/grouped_entity_results.json | worked_examples | True | python scripts/run_examples.py | grouped preview data | does not show: legal grouping results | non-operative preview only | technical_reviewer | 6 |
 | reports/grouped_entity_results.md | worked_examples | True | python scripts/run_examples.py | grouped-entity preview outputs | does not show: legal grouping results | non-operative preview only | legal_reviewer, tax_reviewer | 6 |
 | reports/transfer_pricing_results.json | worked_examples | True | python scripts/run_examples.py | transfer-pricing preview data | does not show: legal addbacks | non-operative preview only | technical_reviewer | 7 |
@@ -200,6 +203,8 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | final_rc_integrity_seal | calibration | Integrity checks do not calibrate model values or resolve any external review blocker. | calibration | Seal verifies internal artefact consistency only. |
 | real_data_feasibility | calibration | No real data has been loaded and no calibration has occurred. | calibration | Build 26 maps feasibility only and does not load data. |
 | real_data_feasibility | calibration | Public-data candidates require licence, provenance, and aggregate-only review before any Build 27 pilot. | calibration | Build 26 maps feasibility only and does not load data. |
+| public_data_pilot | calibration | Public aggregate extracts support sanity checks and placeholder anchors only. | calibration | Build 27 tests safe public aggregate intake and placeholder anchoring without real calibration. |
+| public_data_pilot | calibration | Calibration has not been completed and restricted-data blockers remain. | calibration | Build 27 tests safe public aggregate intake and placeholder anchoring without real calibration. |
 
 ## J. External Review Blockers
 
@@ -231,6 +236,7 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | status_risks_docs | external_review | Risk documentation requires hostile, legal, tax, privacy, policy, and methods review. | external_review | Documentation records blockers and should not be read as approval. |
 | final_rc_integrity_seal | external_review | The seal requires technical and hostile review so completeness checks are not mistaken for approval, validation, or readiness. | external_review | Seal verifies internal artefact consistency only. |
 | real_data_feasibility | external_review | Technical, privacy, statistical, legal, tax, Treasury-methods, and ATO-methods review remain required. | external_review | Build 26 maps feasibility only and does not load data. |
+| public_data_pilot | external_review | Technical, privacy, statistical, legal, tax, Treasury-methods, and ATO-methods review remain required. | external_review | Build 27 tests safe public aggregate intake and placeholder anchoring without real calibration. |
 
 ## K. Guardrail / Safety Status
 
@@ -238,7 +244,7 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 - Exists: True
 - Clean: True
 - Denied findings: 0
-- Warning findings: 54
+- Warning findings: 55
 - Interpretation warning: Guardrail status is a prototype repository-safety signal only, not validation or operational readiness.
 
 ## L. Legislative / Legal Boundary

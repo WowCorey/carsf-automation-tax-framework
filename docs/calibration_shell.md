@@ -183,7 +183,7 @@ The V1.5 release-candidate pack requires ongoing maintenance before any external
 - reviewer routing must remain suggested navigation only
 - calibration blockers must remain visible and unresolved unless an authorised external process resolves them
 
-No calibration has occurred because of the release-candidate pack. It is not legal advice, tax advice, ATO guidance, Treasury modelling, economic validation, welfare advice, statistical validation, compliance scoring, enforcement, operational readiness, legal sufficiency, legislative readiness, a readiness score, or an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.
+No calibration has occurred because of the release-candidate pack. It is not legal advice, tax advice, ATO guidance, Treasury modelling, economic validation, welfare advice, statistical validation, compliance scoring, enforcement, operational readiness, legal sufficiency, legislative readiness, a readiness score, or an official review pathway. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, restricted government data, confidential Treasury/PBO material, or unauthorised data, and does not modify firm-level CARSF liability.
 
 ## External Review Attack Pack Calibration Boundary
 
@@ -318,6 +318,14 @@ The real-data feasibility map identifies candidate public aggregate sources, res
 No real data has been loaded by this build. No calibration has occurred. Realistic placeholders are not real data and are not calibrated. Public-data candidates are not loaded datasets. Restricted-data requirements are not data access. The map does not use taxpayer-level, firm-level confidential, household microdata, ABS DataLab, HILDA microdata, DSS/Services Australia records, ATO records, Treasury/PBO confidential material, or restricted government data.
 
 Build 25 sealed the previous RC state. If Build 26 is included in a later sealed RC, the integrity seal must be regenerated for that state rather than treated as already covering the new feasibility artefacts.
+
+## Public Data Pilot and Placeholder Anchors
+
+The public-data pilot adds small public aggregate extracts and source-reference-only records for sanity-check-only and placeholder-anchor-only review. It keeps loaded public records, source references, realistic placeholders, synthetic fixtures, restricted-data blockers, and forbidden repo data separate.
+
+This is not calibration. Calibration has not been completed. Public data extracts do not prove the model works. Realistic placeholders remain realistic placeholders, are not real data, and are not calibrated. Source references are not loaded datasets. Restricted-data requirements are not data access. The pilot does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab microdata, HILDA microdata, DSS/Services Australia records, ATO taxpayer records, Treasury/PBO confidential material, restricted government data, real evidence packets, or unauthorised data, and does not modify firm-level CARSF liability.
+
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Build 27 is included in a later sealed RC.
 
 ## Non-Claims
 

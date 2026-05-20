@@ -109,6 +109,19 @@ from .payment_stack import PaymentStackComponent, PaymentStackResult, evaluate_p
 from .payment_cliffs import PaymentCliffInput, PaymentCliffResult, evaluate_payment_cliff
 from .phase_rules import PhaseRule, PhaseRuleYearResult, evaluate_phase_rule
 from .public_revenue import PublicRevenueInput, PublicRevenueResult, evaluate_public_revenue
+from .public_data_pilot import (
+    FieldSanityCheck,
+    ModuleSanityCheck,
+    PlaceholderAnchorRecord,
+    PublicAggregateExtract,
+    PublicDataBoundaryCheck,
+    PublicDataDigest,
+    PublicDataPilotResult,
+    PublicDataPilotSummary,
+    PublicDataSourceReference,
+    build_public_data_pilot_result,
+    find_forbidden_affirmative_public_data_claims,
+)
 from .qlc import qualified_labour_contribution_firm, qualified_labour_contribution_worker
 from .redaction import RedactionPlan, create_redaction_plan
 from .real_data_feasibility import (
@@ -255,6 +268,7 @@ __all__ = [
     "EvidenceRequestBundle",
     "ExampleResult",
     "ExampleRunnerError",
+    "FieldSanityCheck",
     "FiscalSensitivityPoint",
     "FiscalSensitivityResult",
     "FiscalTrajectoryInput",
@@ -283,6 +297,7 @@ __all__ = [
     "LiabilityAdjustmentPreview",
     "MixedUnitExposureResult",
     "ModuleDataNeed",
+    "ModuleSanityCheck",
     "PaymentInteractionInput",
     "PaymentInteractionResult",
     "PaymentPortfolioInput",
@@ -295,9 +310,16 @@ __all__ = [
     "PaymentStackResult",
     "PhaseRule",
     "PhaseRuleYearResult",
+    "PlaceholderAnchorRecord",
+    "PublicAggregateExtract",
+    "PublicDataBoundaryCheck",
+    "PublicDataDigest",
     "PublicRevenueInput",
     "PublicRevenueResult",
     "PublicDataPilotCandidate",
+    "PublicDataPilotResult",
+    "PublicDataPilotSummary",
+    "PublicDataSourceReference",
     "QLCWeights",
     "RelatedPartyTransaction",
     "RealisticPlaceholderSpec",
@@ -366,6 +388,7 @@ __all__ = [
     "automation_rent_levy",
     "australian_automated_value_added",
     "build_calibration_intake_result",
+    "build_public_data_pilot_result",
     "build_sector_stress_matrix",
     "calculate_liability",
     "cars_i",
@@ -416,6 +439,7 @@ __all__ = [
     "evaluate_unit_compatibility",
     "evaluate_weighted_uncertainty",
     "find_forbidden_affirmative_real_data_claims",
+    "find_forbidden_affirmative_public_data_claims",
     "format_coverage_ratio",
     "get_access_control_policy",
     "get_calibration_registry",

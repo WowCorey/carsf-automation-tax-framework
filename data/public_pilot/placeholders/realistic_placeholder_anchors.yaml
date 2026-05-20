@@ -1,0 +1,186 @@
+- anchor_id: anchor_opfte_minimum_wage
+  field_id: opfte_benchmarks
+  placeholder_name: OPFTE public wage anchor
+  anchor_source_reference_ids: [fair_work_minimum_wage_2025]
+  anchor_extract_ids: [fair_work_minimum_wage_2025_extract]
+  basis_type: public_wage_threshold_anchor
+  current_placeholder_status: realistic_placeholder
+  anchored_to_public_data: true
+  anchor_strength: moderate
+  blocked_by_restricted_data: true
+  missing_data_for_calibration: [occupation-specific hours, sector-specific labour requirements, schedule authority method]
+  must_be_labelled_realistic_placeholder: true
+  must_not_be_labelled_real_data: true
+  must_not_be_labelled_calibrated: true
+  must_not_claim: [calibration completed, validation, actual tax payable]
+  review_required_before_calibration: [statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer]
+
+- anchor_id: anchor_hle_minimum_wage
+  field_id: hle_assumptions
+  placeholder_name: HLE public wage anchor
+  anchor_source_reference_ids: [fair_work_minimum_wage_2025]
+  anchor_extract_ids: [fair_work_minimum_wage_2025_extract]
+  basis_type: public_wage_threshold_anchor
+  current_placeholder_status: realistic_placeholder
+  anchored_to_public_data: true
+  anchor_strength: weak
+  blocked_by_restricted_data: true
+  missing_data_for_calibration: [human labour equivalent method, occupation mix, worker-hour evidence]
+  must_be_labelled_realistic_placeholder: true
+  must_not_be_labelled_real_data: true
+  must_not_be_labelled_calibrated: true
+  must_not_claim: [calibration completed, validation, actual tax payable]
+  review_required_before_calibration: [statistical_methods_reviewer, legal_reviewer]
+
+- anchor_id: anchor_qlc_minimum_wage
+  field_id: qlc_weights
+  placeholder_name: QLC public wage anchor
+  anchor_source_reference_ids: [fair_work_minimum_wage_2025]
+  anchor_extract_ids: [fair_work_minimum_wage_2025_extract]
+  basis_type: public_wage_threshold_anchor
+  current_placeholder_status: realistic_placeholder
+  anchored_to_public_data: true
+  anchor_strength: weak
+  blocked_by_restricted_data: true
+  missing_data_for_calibration: [qualified labour contribution method, task allocation evidence, sector labour mix]
+  must_be_labelled_realistic_placeholder: true
+  must_not_be_labelled_real_data: true
+  must_not_be_labelled_calibrated: true
+  must_not_claim: [calibration completed, validation, actual tax payable]
+  review_required_before_calibration: [statistical_methods_reviewer, tax_reviewer]
+
+- anchor_id: anchor_sector_schedule_source_reference
+  field_id: sector_schedule_values
+  placeholder_name: Sector schedule public source-reference anchor
+  anchor_source_reference_ids: [abs_labour_wage_aggregate_source_reference, fair_work_minimum_wage_2025]
+  anchor_extract_ids: [abs_labour_source_reference_extract, fair_work_minimum_wage_2025_extract]
+  basis_type: public_industry_category_reference
+  current_placeholder_status: realistic_placeholder
+  anchored_to_public_data: true
+  anchor_strength: weak
+  blocked_by_restricted_data: true
+  missing_data_for_calibration: [sector schedule authority method, mixed-unit attribution, sector-specific output units]
+  must_be_labelled_realistic_placeholder: true
+  must_not_be_labelled_real_data: true
+  must_not_be_labelled_calibrated: true
+  must_not_claim: [official sector ranking, calibration completed, validation]
+  review_required_before_calibration: [statistical_methods_reviewer, policy_reviewer, ato_methods_reviewer]
+
+- anchor_id: anchor_fiscal_public_aggregates
+  field_id: fiscal_trajectory_assumptions
+  placeholder_name: Fiscal public aggregate sanity anchor
+  anchor_source_reference_ids: [ato_taxation_statistics_2022_23, treasury_budget_2026_27_bp1]
+  anchor_extract_ids: [ato_taxation_statistics_2022_23_extract, treasury_budget_2026_27_receipts_extract]
+  basis_type: public_fiscal_aggregate_anchor
+  current_placeholder_status: realistic_placeholder
+  anchored_to_public_data: true
+  anchor_strength: moderate
+  blocked_by_restricted_data: true
+  missing_data_for_calibration: [CARSF behavioural response method, revenue capture method, fiscal incidence method]
+  must_be_labelled_realistic_placeholder: true
+  must_not_be_labelled_real_data: true
+  must_not_be_labelled_calibrated: true
+  must_not_claim: [Treasury modelling, PBO costing, calibration completed]
+  review_required_before_calibration: [treasury_methods_reviewer, economic_methods_reviewer, tax_reviewer]
+
+- anchor_id: anchor_payg_public_tax_stats
+  field_id: payg_erosion_assumptions
+  placeholder_name: PAYG public tax-statistics sanity anchor
+  anchor_source_reference_ids: [ato_taxation_statistics_2022_23]
+  anchor_extract_ids: [ato_taxation_statistics_2022_23_extract]
+  basis_type: public_tax_aggregate_anchor
+  current_placeholder_status: realistic_placeholder
+  anchored_to_public_data: true
+  anchor_strength: weak
+  blocked_by_restricted_data: true
+  missing_data_for_calibration: [employment-tax pathway method, sector attribution, behavioural response method]
+  must_be_labelled_realistic_placeholder: true
+  must_not_be_labelled_real_data: true
+  must_not_be_labelled_calibrated: true
+  must_not_claim: [ATO guidance, calibration completed, actual tax payable]
+  review_required_before_calibration: [ato_methods_reviewer, tax_reviewer, treasury_methods_reviewer]
+
+- anchor_id: anchor_super_guarantee_rate
+  field_id: superannuation_contribution_pressure
+  placeholder_name: Superannuation Guarantee public setting anchor
+  anchor_source_reference_ids: [ato_super_guarantee_2025_26]
+  anchor_extract_ids: [super_guarantee_2025_26_extract]
+  basis_type: public_threshold_anchor
+  current_placeholder_status: realistic_placeholder
+  anchored_to_public_data: true
+  anchor_strength: moderate
+  blocked_by_restricted_data: true
+  missing_data_for_calibration: [wage base, employer contribution records, payment interaction method]
+  must_be_labelled_realistic_placeholder: true
+  must_not_be_labelled_real_data: true
+  must_not_be_labelled_calibrated: true
+  must_not_claim: [ATO guidance, individual estimate, calibration completed]
+  review_required_before_calibration: [tax_reviewer, welfare_policy_reviewer]
+
+- anchor_id: anchor_help_source_reference
+  field_id: help_hecs_repayment_pressure
+  placeholder_name: HELP threshold source-reference anchor
+  anchor_source_reference_ids: [study_assist_help_thresholds_2025_26]
+  anchor_extract_ids: [help_threshold_source_reference_extract]
+  basis_type: source_reference_only_threshold_anchor
+  current_placeholder_status: realistic_placeholder
+  anchored_to_public_data: false
+  anchor_strength: source_reference_only
+  blocked_by_restricted_data: true
+  missing_data_for_calibration: [income distribution, individual repayment records, eligibility law review]
+  must_be_labelled_realistic_placeholder: true
+  must_not_be_labelled_real_data: true
+  must_not_be_labelled_calibrated: true
+  must_not_claim: [individual repayment estimate, welfare validation, calibration completed]
+  review_required_before_calibration: [welfare_policy_reviewer, legal_reviewer, statistical_methods_reviewer]
+
+- anchor_id: anchor_payroll_tax_source_reference
+  field_id: state_payroll_tax_pressure
+  placeholder_name: State payroll threshold source-reference anchor
+  anchor_source_reference_ids: [qld_payroll_tax_threshold_2025_26]
+  anchor_extract_ids: [qld_payroll_tax_source_reference_extract]
+  basis_type: source_reference_only_threshold_anchor
+  current_placeholder_status: realistic_placeholder
+  anchored_to_public_data: false
+  anchor_strength: source_reference_only
+  blocked_by_restricted_data: true
+  missing_data_for_calibration: [jurisdiction-specific payroll base, employer records, tax-law review]
+  must_be_labelled_realistic_placeholder: true
+  must_not_be_labelled_real_data: true
+  must_not_be_labelled_calibrated: true
+  must_not_claim: [state tax advice, actual tax payable, calibration completed]
+  review_required_before_calibration: [tax_reviewer, treasury_methods_reviewer]
+
+- anchor_id: anchor_transition_public_reference
+  field_id: transition_payment_assumptions
+  placeholder_name: Transition funding public aggregate reference anchor
+  anchor_source_reference_ids: [treasury_budget_2026_27_bp1, ato_super_guarantee_2025_26]
+  anchor_extract_ids: [treasury_budget_2026_27_receipts_extract, super_guarantee_2025_26_extract]
+  basis_type: public_fiscal_and_threshold_anchor
+  current_placeholder_status: realistic_placeholder
+  anchored_to_public_data: true
+  anchor_strength: weak
+  blocked_by_restricted_data: true
+  missing_data_for_calibration: [transition eligibility method, payment administrative data, fiscal design review]
+  must_be_labelled_realistic_placeholder: true
+  must_not_be_labelled_real_data: true
+  must_not_be_labelled_calibrated: true
+  must_not_claim: [welfare validation, Treasury modelling, calibration completed]
+  review_required_before_calibration: [welfare_policy_reviewer, treasury_methods_reviewer]
+
+- anchor_id: anchor_uncertainty_source_reference_only
+  field_id: uncertainty_range_assumptions
+  placeholder_name: Uncertainty source-reference-only anchor
+  anchor_source_reference_ids: [abs_labour_wage_aggregate_source_reference, ato_taxation_statistics_2022_23]
+  anchor_extract_ids: [abs_labour_source_reference_extract, ato_taxation_statistics_2022_23_extract]
+  basis_type: source_reference_only_uncertainty_context
+  current_placeholder_status: realistic_placeholder
+  anchored_to_public_data: false
+  anchor_strength: source_reference_only
+  blocked_by_restricted_data: true
+  missing_data_for_calibration: [statistical sampling frame, confidence method, authorised microdata]
+  must_be_labelled_realistic_placeholder: true
+  must_not_be_labelled_real_data: true
+  must_not_be_labelled_calibrated: true
+  must_not_claim: [confidence interval, statistical validation, calibration completed]
+  review_required_before_calibration: [statistical_methods_reviewer, privacy_reviewer]

@@ -4,7 +4,7 @@ Status: private research prototype / release-candidate pack.
 
 ## Non-Claims
 
-This is a private research prototype and release-candidate pack only. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare advice, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.
+This is a private research prototype and release-candidate pack only. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare advice, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, restricted government data, confidential Treasury/PBO material, or unauthorised data, and does not modify firm-level CARSF liability.
 
 ## Release Name
 
@@ -29,7 +29,7 @@ The release candidate expects CI to run all existing report runners plus `python
 ## Known Limitations
 
 - Prototype only and placeholder only unless explicitly labelled otherwise.
-- No real data is added.
+- No restricted, confidential, taxpayer-level, firm-level confidential, household microdata, real evidence, or unauthorised data is added.
 - No readiness score, official status, policy approval, legal sufficiency, operational readiness, economic validation, welfare validation, statistical validation, enforcement, notices, penalties, or compliance scoring is created.
 - The pack only consolidates existing prototype reports, warnings, navigation, review blockers, and working-paper material for external review.
 
@@ -56,3 +56,11 @@ Build 26 adds a real-data feasibility and calibration-intake map that identifies
 No real data has been loaded by Build 26. No calibration has occurred. Realistic placeholders are not real data and are not calibrated. Public-data candidates are not loaded datasets. Restricted-data requirements are not data access. This is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, not official status, and does not determine actual tax payable or modify firm-level CARSF liability.
 
 Build 25 sealed the previous RC state. If Build 26 is included in a later sealed RC, the final RC integrity seal must be regenerated for that later state rather than described as already covering these feasibility artefacts.
+
+## Build 27 Public-Data Pilot Addendum
+
+Build 27 adds a public aggregate-data pilot and realistic-placeholder anchor layer. It may include small public aggregate extracts and source-reference records that are safe to commit, with source provenance, licence/access notes, field sanity checks, module sanity checks, restricted-data blockers, forbidden repo data rules, and digest metadata.
+
+This is not calibration. Calibration has not been completed. Public data extracts do not prove the model works. Realistic placeholders remain placeholders and are not real data or calibrated. Source references are not loaded datasets. Restricted-data requirements are not data access. The layer does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab microdata, HILDA microdata, DSS/Services Australia records, ATO taxpayer records, confidential Treasury/PBO material, restricted government data, real evidence, or unauthorised data, and does not modify firm-level CARSF liability.
+
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Build 27 is included in a later sealed RC.

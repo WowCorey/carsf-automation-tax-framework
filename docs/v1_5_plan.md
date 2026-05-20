@@ -52,6 +52,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Add a V1.5 working paper release-candidate pack that updates working-paper references and packages release notes, reviewer briefing, report map, calibration blockers, non-claim boundaries, external-review routing, and manifest metadata without creating official status, legal sufficiency, operational readiness, validation, or liability changes.
 - Add a V1.5 external review attack pack that gives discipline-specific reviewers challenge questions, failure modes, required external inputs, boundary checks, report attack matrices, and layer attack matrices without implying review completion, approval, validation, legal sufficiency, operational readiness, official status, or liability changes.
 - Add a V1.5 final RC integrity seal that checks release documents, attack-pack documents, generated reports, manifests, scripts, digest metadata, non-claim boundaries, repo guardrail expectations, CI expectations, and false readiness/legal/validation flags without implying approval, validation, external review completion, legal sufficiency, operational readiness, official status, or liability changes.
+- Add a public aggregate-data pilot and realistic-placeholder anchor layer that keeps loaded public extracts, source-reference-only records, realistic placeholders, restricted-data blockers, and forbidden repo data separate without completing calibration or changing liability.
 
 ## Data Separation
 
@@ -93,6 +94,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - V1.5 external review attack-pack reports can be generated with `python scripts/run_external_review_attack_pack.py`.
 - V1.5 final RC integrity seal reports can be generated with `python scripts/run_v1_5_final_rc_integrity_seal.py`.
 - Real-data feasibility and calibration-intake reports can be generated with `python scripts/run_real_data_feasibility.py`.
+- Public data pilot and realistic-placeholder anchor reports can be generated with `python scripts/run_public_data_pilot.py`.
 - Hybrid logistics stress variant demonstrates non-zero but intermediate NLTG.
 - V1.5 working paper contains TODO markers where policy drafting remains open.
 - Limitations document clearly blocks actual tax-payable claims.
@@ -123,3 +125,4 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Create an external review attack pack after the V1.5 release-candidate pack exists, so legal, tax, Treasury, ATO methods, privacy, economic, statistical, welfare, Parliamentary Counsel, technical, and hostile reviewers can challenge the release candidate without implying validation, approval, legal sufficiency, operational readiness, or real-world policy readiness.
 - Create a final RC integrity seal after the external review attack pack exists, so release documents, attack-pack documents, report paths, manifests, scripts, false flags, digest metadata, CI expectations, and non-claim boundaries can be checked without implying approval, validation, external review completion, legal sufficiency, operational readiness, official status, or implementation readiness.
 - Add a real-data feasibility and calibration-intake map after the final RC seal exists, so public aggregate candidates, restricted-data needs, realistic placeholders, forbidden repo data, and Build 27 pilot candidates are visible without loading data, completing calibration, weakening non-claims, or changing firm-level liability.
+- Add a public data pilot sanity-check dashboard / reviewer evidence map after the public-data pilot exists, so reviewers can see which assumptions are source-referenced, public-aggregate anchored, realistic-placeholder-only, or blocked by restricted data without implying calibration, validation, actual tax payable, official status, or implementation readiness.

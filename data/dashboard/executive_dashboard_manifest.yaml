@@ -2,7 +2,7 @@ dashboard_id: carsf_v1_5_executive_dashboard
 dashboard_name: CARSF V1.5 Executive Dashboard Consolidation
 status: prototype_dashboard_report_index_only
 non_claims:
-  - This is a prototype dashboard and report index only. It is not legal advice, tax advice, ATO guidance, Treasury modelling, economic validation, welfare advice, compliance scoring, enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.
+  - This is a prototype dashboard and report index only. It is not legal advice, tax advice, ATO guidance, Treasury modelling, economic validation, welfare advice, compliance scoring, enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, restricted government data, confidential Treasury/PBO material, or unauthorised data, and does not modify firm-level CARSF liability.
   - The dashboard only consolidates existing prototype reports, warnings, navigation, and review blockers.
   - Suggested review navigation is a reviewer convenience only and is not an official process.
 x_must_not_core: &must_not_core
@@ -922,6 +922,53 @@ layers:
       - validation
       - official status
       - actual tax payable
+  - layer_id: public_data_pilot
+    layer_name: Public Data Pilot and Placeholder Anchor Layer
+    layer_group: calibration
+    purpose: Small public aggregate/source-reference pilot that anchors realistic placeholders while keeping calibration incomplete and restricted data excluded.
+    primary_files:
+      - model/carsf/public_data_pilot.py
+      - data/public_pilot/public_data_pilot_manifest.yaml
+      - data/public_pilot/extracts/public_aggregate_extracts.yaml
+      - data/public_pilot/placeholders/realistic_placeholder_anchors.yaml
+      - scripts/run_public_data_pilot.py
+      - docs/public_data_pilot.md
+    primary_reports:
+      - reports/public_data_pilot.md
+      - reports/public_data_pilot.json
+    streamlit_pages: []
+    status_labels:
+      - implemented_prototype
+      - generated_report_available
+      - placeholder_only
+      - calibration_required
+      - external_review_required
+      - not_for_real_world_use
+    non_claim_flags:
+      - not_statistical_validation
+      - not_economic_validation
+      - not_actual_tax_payable
+      - not_operational_readiness
+    calibration_blockers:
+      - Public aggregate extracts support sanity checks and placeholder anchors only.
+      - Calibration has not been completed and restricted-data blockers remain.
+    external_review_blockers:
+      - Source licensing, public-data handling, privacy, statistical methods, legal, tax, Treasury, and ATO-methods review remain required before broader use.
+    blocker_explanation: Build 27 separates loaded public aggregates, source references, and realistic placeholders without claiming calibration.
+    recommended_reviewer:
+      - technical_reviewer
+      - privacy_reviewer
+      - statistical_methods_reviewer
+      - treasury_methods_reviewer
+      - ato_methods_reviewer
+    read_order: 27
+    main_reason: Build 27 tests safe public aggregate intake and placeholder anchoring without real calibration.
+    must_not_be_used_for:
+      - calibration completed
+      - validation
+      - official status
+      - actual tax payable
+      - readiness score
 report_entries:
   - report_path: reports/executive_dashboard.md
     layer_id: executive_dashboard
@@ -1261,6 +1308,22 @@ report_entries:
     must_not_be_used_for: [real data loaded, calibration completed, validation, official status, actual tax payable]
     linked_streamlit_page:
     recommended_read_order: 26
+  - report_path: reports/public_data_pilot.md
+    layer_id: public_data_pilot
+    report_type: markdown
+    generated_by: scripts/run_public_data_pilot.py
+    interpretation_warning: Public-data pilot is sanity-check-only and placeholder-anchor-only; it is not calibration.
+    must_not_be_used_for: [calibration completed, validation, official status, actual tax payable, readiness score]
+    linked_streamlit_page:
+    recommended_read_order: 27
+  - report_path: reports/public_data_pilot.json
+    layer_id: public_data_pilot
+    report_type: json
+    generated_by: scripts/run_public_data_pilot.py
+    interpretation_warning: Machine-readable public-data pilot registry; source references and placeholders remain separate.
+    must_not_be_used_for: [calibration completed, validation, official status, actual tax payable, readiness score]
+    linked_streamlit_page:
+    recommended_read_order: 27
 forbidden_claims:
   - ready for government
   - ready for ATO

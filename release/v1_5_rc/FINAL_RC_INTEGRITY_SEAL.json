@@ -1167,51 +1167,51 @@
       },
       {
         "artefact_path": "release/v1_5_rc/CALIBRATION_BLOCKERS.md",
-        "byte_count": 4806,
+        "byte_count": 5203,
         "exists": true,
-        "sha256": "ededda20e5ddcf66960b058c9d0c63b2b9839abd0a6f036274e5376add57f039",
+        "sha256": "170b1eed07ec1b8d311d6bf498e5886edf10c59e81013daaba63d16fd64bcb37",
         "status": "present"
       },
       {
         "artefact_path": "release/v1_5_rc/EXTERNAL_REVIEW_ROUTING.md",
-        "byte_count": 6307,
+        "byte_count": 6383,
         "exists": true,
-        "sha256": "fadbd9e3eb7921cada9f73850c0f813c37cb59faf692ea38f41d60ee47636a81",
+        "sha256": "9931c548ae9e93ee2d9abf7a236f09f844b22ed76a2359fe767b944ef89eecbc",
         "status": "present"
       },
       {
         "artefact_path": "release/v1_5_rc/NON_CLAIM_BOUNDARIES.md",
-        "byte_count": 2888,
+        "byte_count": 3391,
         "exists": true,
-        "sha256": "dad7e81739d9e870c78199f7ad8c6108044c3b5057812638870542c05b6de79e",
+        "sha256": "07637713a826430b24ba7879522aff2dbba631bba240f9d336da88d0117a8ca4",
         "status": "present"
       },
       {
         "artefact_path": "release/v1_5_rc/RELEASE_MANIFEST.json",
-        "byte_count": 2473,
+        "byte_count": 2799,
         "exists": true,
-        "sha256": "efbccb9f9325cff7d1837034f1a0223876473f31c46586c8b0a243da72addfd9",
+        "sha256": "e3ae88356a2b9abf3025671a699976b935421cb26b89b1b9d86fa89f802aa7a8",
         "status": "present"
       },
       {
         "artefact_path": "release/v1_5_rc/RELEASE_NOTES.md",
-        "byte_count": 5901,
+        "byte_count": 7267,
         "exists": true,
-        "sha256": "56c9b37ac4430a44f6f38f5f30c4e5610a477ec4183074809a5076b12b5230eb",
+        "sha256": "c2a2d924f57ad0802e43d6ebef5cee6ccb7b8ebd2f00b2a97592d5b81952e265",
         "status": "present"
       },
       {
         "artefact_path": "release/v1_5_rc/REPORT_MAP.md",
-        "byte_count": 6018,
+        "byte_count": 6602,
         "exists": true,
-        "sha256": "e0070bab7533af0cc504335b22707274dc56612c5ac34da3533cfe5fbc249706",
+        "sha256": "e67ee9b5fef8ca59a35f13a0dd1e259722f0d3a74174f84472ba0008cf3b4a6c",
         "status": "present"
       },
       {
         "artefact_path": "release/v1_5_rc/REVIEWER_BRIEFING.md",
-        "byte_count": 6765,
+        "byte_count": 6879,
         "exists": true,
-        "sha256": "f6121d5bce78f52ca4b5e19ce28392967a89736a3cd12321edd0fa6d157be496",
+        "sha256": "2202990045d5b44f998b54e5b5c10da0682980088dbc2183526fe324c1620f25",
         "status": "present"
       },
       {
@@ -1230,9 +1230,9 @@
       },
       {
         "artefact_path": "release/v1_5_rc/attack_pack/ATTACK_PACK_OVERVIEW.md",
-        "byte_count": 1963,
+        "byte_count": 2760,
         "exists": true,
-        "sha256": "16124ebd2944ef99705447cdd1299e33983c16973e700c8b3ee8e59ede11effa",
+        "sha256": "10e8967c3f5018af3616909796b584031e82edd57f68c6c8dbe24db79cd2f327",
         "status": "present"
       },
       {
@@ -1258,9 +1258,9 @@
       },
       {
         "artefact_path": "release/v1_5_rc/attack_pack/LAYER_ATTACK_MATRIX.md",
-        "byte_count": 1328,
+        "byte_count": 1771,
         "exists": true,
-        "sha256": "d2d8c38a30e08ecb5254b4b18c6844688fac49161b912898325961a7c5007fa8",
+        "sha256": "cacef268647b69224aebdc91027a936a46163217ed8ffab78198180e0d76e3aa",
         "status": "present"
       },
       {
@@ -1293,9 +1293,9 @@
       },
       {
         "artefact_path": "release/v1_5_rc/attack_pack/REPORT_ATTACK_MATRIX.md",
-        "byte_count": 1431,
+        "byte_count": 1994,
         "exists": true,
-        "sha256": "94534fa16b3af698dafac501439dfffd9473f18c2fd2860991ab23d3920dbcd5",
+        "sha256": "4cb355eb5336120b788f3c873332a68962a2ef4798a6b23175e83c45dcdb8646",
         "status": "present"
       },
       {
@@ -1337,98 +1337,98 @@
         "artefact_path": "reports/administrative_compliance_workflow.json",
         "byte_count": 223206,
         "exists": true,
-        "sha256": "94dc31c09641febad056ee6c9bfe49177b028854c2e314ec593697bd726e66ad",
+        "sha256": "32a4f86292498effec02621fa5c2aa5010976eacd3832a07919e561ec9dad315",
         "status": "present"
       },
       {
         "artefact_path": "reports/administrative_compliance_workflow.md",
         "byte_count": 32885,
         "exists": true,
-        "sha256": "e49171318d8c3434e6b6b9ace993ab29347e5426d182a0a89062b466dfd251f1",
+        "sha256": "4e69fbe63a5d792a15d7388f1d3efebc022a4724fa64339f856b9e388db270bb",
         "status": "present"
       },
       {
         "artefact_path": "reports/behavioural_response_simulation.json",
         "byte_count": 95790,
         "exists": true,
-        "sha256": "be5d16c7738c5123fe84adb34aab1f0080286a43bc2176594ddd1cbd9c4b493c",
+        "sha256": "bfaea9478f556893e6bb75601740a4f2c42b58de0d5f41b56654b7e8a8b2c296",
         "status": "present"
       },
       {
         "artefact_path": "reports/behavioural_response_simulation.md",
         "byte_count": 18118,
         "exists": true,
-        "sha256": "f1034ede96ca3ba876f695d20960c204a161a0f9a54b54ec72f2e312fd6c6fb0",
+        "sha256": "930222540c71a5c08a81e5735e2327ec7d24dabc427a697b7df9228b8632d470",
         "status": "present"
       },
       {
         "artefact_path": "reports/executive_dashboard.json",
-        "byte_count": 116791,
+        "byte_count": 123053,
         "exists": true,
-        "sha256": "b689e1ac4f5206685513a39d93abd28d62ca497b95351c2c016ccda91f01c62d",
+        "sha256": "4de5f1d6ce9376f3f83fffb2a1123332d45a520f879d9e4dfbb8ee166faa085d",
         "status": "present"
       },
       {
         "artefact_path": "reports/executive_dashboard.md",
-        "byte_count": 52437,
+        "byte_count": 55160,
         "exists": true,
-        "sha256": "e3023777f63ac7cc66d9fd82e324ea2207dd8a2e59a03a3842d29bf058bf7bb1",
+        "sha256": "a5b1452e5d4525bc7f51f1f3f152b0aacbd1ba3987ce0ed6752909755df118c6",
         "status": "present"
       },
       {
         "artefact_path": "reports/external_review_attack_pack.json",
-        "byte_count": 369493,
+        "byte_count": 377350,
         "exists": true,
-        "sha256": "6e04c3f72dcf0714e83e341c9dc2dcc32991a797e6de760541d942ad473f0613",
+        "sha256": "cfb7b1a0e9583846d54c88edc994fad69050a2f1512979a851affd97baa88742",
         "status": "present"
       },
       {
         "artefact_path": "reports/external_review_attack_pack.md",
-        "byte_count": 171115,
+        "byte_count": 175086,
         "exists": true,
-        "sha256": "1ffd7034adbf979cf6851cdb3fa26d78c336c036e01ef0237236bede07420c7a",
+        "sha256": "4e5cbbf237cedf1eb93d200e13b1f091818da31a2ff29cfd8596f0ce4bc16761",
         "status": "present"
       },
       {
         "artefact_path": "reports/legislative_architecture.json",
         "byte_count": 111506,
         "exists": true,
-        "sha256": "34d317953df10be42325b74ec39dad2b7d2717b928c3776562d87a67e41bbb11",
+        "sha256": "bbf5d806c957134cfb266ad9370fd4e29859bc8c9132288bea18c305d53a9d8f",
         "status": "present"
       },
       {
         "artefact_path": "reports/legislative_architecture.md",
         "byte_count": 58342,
         "exists": true,
-        "sha256": "20c2da704696ff5cc229a3999dc23493f9b4767cda1f241c172e4b5e1c25b74b",
+        "sha256": "94f1a08e9af775cf02595f17faeec8e4cffc922ad6a0695894e17decfcc9282b",
         "status": "present"
       },
       {
         "artefact_path": "reports/sector_stress_matrix.json",
         "byte_count": 41062,
         "exists": true,
-        "sha256": "15c8cd2eb99e1674f9ff4a3a0d177e69034b79ab8b84caca4f4c0fa43cc67d53",
+        "sha256": "54ad75d15085bdf6cfdf4443c9d8800d84d39ef0153349d1179bbe9b0ec7a90c",
         "status": "present"
       },
       {
         "artefact_path": "reports/sector_stress_matrix.md",
         "byte_count": 15896,
         "exists": true,
-        "sha256": "7bfeabb1372a5fd844614d10fe11447177d21a3ecceeca980ff3b978ab5395ec",
+        "sha256": "3ef73073cff8964ceba95d2ac6d00df3ead74aefd2858b45ac5869356a5c1a4d",
         "status": "present"
       },
       {
         "artefact_path": "reports/v1_5_release_candidate_pack.json",
-        "byte_count": 121539,
+        "byte_count": 127090,
         "exists": true,
-        "sha256": "57990e12459002ba605692050d8a794664f115e5ea3f386cc141972aa751abbc",
+        "sha256": "e135ba1baa7db5ce328d81c1207251ac90695047a1d063db67d4401bc8023a30",
         "status": "present"
       },
       {
         "artefact_path": "reports/v1_5_release_candidate_pack.md",
-        "byte_count": 48962,
+        "byte_count": 51144,
         "exists": true,
-        "sha256": "ee4770fda27c2d9c898f866ce4e84ea56873ee4103fd176427317f7a18885b29",
+        "sha256": "27933a592cc77ef65a76c1d14b4515fcc029a469e6c6f6b0ca067d951efb287c",
         "status": "present"
       }
     ],
@@ -2764,6 +2764,14 @@
       {
         "actual_value": false,
         "expected_value": false,
+        "flag_name": "actual_tax_payable_determined",
+        "main_reason": "Referenced JSON source preserves the false flag.",
+        "passed": true,
+        "source_path": "release/v1_5_rc/RELEASE_MANIFEST.json"
+      },
+      {
+        "actual_value": false,
+        "expected_value": false,
         "flag_name": "firm_level_liability_logic_modified",
         "main_reason": "Referenced JSON source preserves the false flag.",
         "passed": true,
@@ -3218,7 +3226,7 @@
       "readable": true,
       "source_report": "reports/repo_guardrails.json",
       "status": "clean",
-      "warning_findings": 54
+      "warning_findings": 55
     },
     "known_blockers_preserved": [
       "release/v1_5_rc/CALIBRATION_BLOCKERS.md remains part of the RC package and preserves unresolved blocker/non-claim material.",
@@ -3269,7 +3277,7 @@
     ],
     "missing_artefacts_or_seal_gaps": [],
     "non_claims": [
-      "This is an internal integrity seal only. It is not approval, not validation, not external review completion, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not a maturity score, not official status, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.",
+      "This is an internal integrity seal only. It is not approval, not validation, not external review completion, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not a maturity score, not official status, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, restricted government data, confidential Treasury/PBO material, or unauthorised data, and does not modify firm-level CARSF liability.",
       "The seal only verifies internal artefact presence, manifest alignment, report availability, non-claim boundaries, guardrail status expectations, digest metadata, and false readiness/legal/validation flags.",
       "Seal status is an internal integrity status only and is not approval, validation, legal sufficiency, operational readiness, legislative readiness, official status, or external review completion."
     ],
@@ -3364,7 +3372,7 @@
       "manifests_present": 5,
       "maturity_score_created": false,
       "non_claims": [
-        "This is an internal integrity seal only. It is not approval, not validation, not external review completion, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not a maturity score, not official status, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.",
+        "This is an internal integrity seal only. It is not approval, not validation, not external review completion, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not a maturity score, not official status, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, restricted government data, confidential Treasury/PBO material, or unauthorised data, and does not modify firm-level CARSF liability.",
         "The seal only verifies internal artefact presence, manifest alignment, report availability, non-claim boundaries, guardrail status expectations, digest metadata, and false readiness/legal/validation flags.",
         "Seal status is an internal integrity status only and is not approval, validation, legal sufficiency, operational readiness, legislative readiness, official status, or external review completion."
       ],
@@ -3407,12 +3415,12 @@
     "economic_validation_claimed": false,
     "enforcement_created": false,
     "firm_level_liability_logic_modified": false,
-    "generated_at": "2026-05-19T00:03:08+00:00",
+    "generated_at": "2026-05-20T01:33:44+00:00",
     "legal_sufficiency_claimed": false,
     "legislative_readiness_claimed": false,
     "maturity_score_created": false,
     "non_claims": [
-      "This is an internal integrity seal only. It is not approval, not validation, not external review completion, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not a maturity score, not official status, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.",
+      "This is an internal integrity seal only. It is not approval, not validation, not external review completion, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not a maturity score, not official status, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, restricted government data, confidential Treasury/PBO material, or unauthorised data, and does not modify firm-level CARSF liability.",
       "The seal only verifies internal artefact presence, manifest alignment, report availability, non-claim boundaries, guardrail status expectations, digest metadata, and false readiness/legal/validation flags.",
       "Seal status is an internal integrity status only and is not approval, validation, legal sufficiency, operational readiness, legislative readiness, official status, or external review completion."
     ],
@@ -3454,7 +3462,7 @@
     "manifests_present": 5,
     "maturity_score_created": false,
     "non_claims": [
-      "This is an internal integrity seal only. It is not approval, not validation, not external review completion, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not a maturity score, not official status, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.",
+      "This is an internal integrity seal only. It is not approval, not validation, not external review completion, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not a maturity score, not official status, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, restricted government data, confidential Treasury/PBO material, or unauthorised data, and does not modify firm-level CARSF liability.",
       "The seal only verifies internal artefact presence, manifest alignment, report availability, non-claim boundaries, guardrail status expectations, digest metadata, and false readiness/legal/validation flags.",
       "Seal status is an internal integrity status only and is not approval, validation, legal sufficiency, operational readiness, legislative readiness, official status, or external review completion."
     ],

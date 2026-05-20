@@ -2,7 +2,7 @@
 
 ## Non-Claims
 
-This calibration blocker summary is for a private research prototype and release-candidate pack only. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare advice, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.
+This calibration blocker summary is for a private research prototype and release-candidate pack only. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare advice, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, restricted government data, confidential Treasury/PBO material, or unauthorised data, and does not modify firm-level CARSF liability.
 
 ## Blocker Categories
 
@@ -30,8 +30,10 @@ No blocker is resolved by this release pack. The pack makes blockers easier to f
 
 Build 26 maps feasibility only. No real data has been loaded and no calibration has occurred. Public-data candidates are not loaded datasets, restricted-data requirements are not data access, and realistic placeholders do not validate CARSF as a real tax model.
 
+Build 27 adds small public aggregate/source-reference records and realistic-placeholder anchors only. Those records are sanity-check-only or placeholder-anchor-only. They do not complete calibration, prove the model works, determine actual tax payable, create validation, or remove restricted-data blockers.
+
 ## Final RC Integrity Seal Note
 
 The final RC integrity seal checks that blocker documents, reports, manifests, attack-pack documents, non-claim boundaries, CI expectations, and guardrail expectations remain visible. It does not resolve any blocker and is not approval, validation, external review completion, legal sufficiency, operational readiness, legislative readiness, official status, a readiness score, a maturity score, or firm-level liability modification.
 
-Build 25 sealed the previous RC state. If Build 26 is included in a later sealed RC, the integrity seal must be regenerated for that later state.
+Build 25 sealed the previous RC state. If Build 26 or Build 27 is included in a later sealed RC, the integrity seal must be regenerated for that later state.

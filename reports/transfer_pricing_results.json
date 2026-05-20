@@ -12,7 +12,7 @@
       "transfer_pricing_preview": "placeholder_only"
     },
     "example_id": "mixed_unit_platform_group",
-    "generated_at": "2026-05-19T00:02:01+00:00",
+    "generated_at": "2026-05-19T04:39:19+00:00",
     "limitations": [
       "Inputs are illustrative placeholders unless separately verified.",
       "Decision entries record model flow and review signals only."
@@ -74,7 +74,7 @@
     ]
   },
   "metadata": {
-    "generated_at": "2026-05-19T00:02:01+00:00",
+    "generated_at": "2026-05-19T04:39:19+00:00",
     "non_claims": [
       "Not transfer-pricing adjustments.",
       "Not ATO findings.",
@@ -213,7 +213,7 @@
         "transfer_pricing_preview": "placeholder_only"
       },
       "example_id": "related_party_ai_fee_structure",
-      "generated_at": "2026-05-19T00:02:01+00:00",
+      "generated_at": "2026-05-19T04:39:19+00:00",
       "limitations": [
         "Inputs are illustrative placeholders unless separately verified.",
         "Decision entries record model flow and review signals only."
@@ -485,7 +485,7 @@
         "transfer_pricing_preview": "placeholder_only"
       },
       "example_id": "robotics_leasing_structure",
-      "generated_at": "2026-05-19T00:02:01+00:00",
+      "generated_at": "2026-05-19T04:39:19+00:00",
       "limitations": [
         "Inputs are illustrative placeholders unless separately verified.",
         "Decision entries record model flow and review signals only."

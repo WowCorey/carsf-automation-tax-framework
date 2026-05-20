@@ -28,7 +28,7 @@ The V1.5 release-candidate pack consolidates the current CARSF prototype stack i
 - It is not validation.
 - External review has not been completed.
 - It does not determine actual tax payable.
-- It does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data.
+- It does not use taxpayer-level data, firm-level confidential data, household microdata, restricted government data, confidential Treasury/PBO material, or unauthorised data.
 - It does not modify firm-level CARSF liability.
 
 ## Files
@@ -44,6 +44,8 @@ The V1.5 release-candidate pack consolidates the current CARSF prototype stack i
 - `release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.md`
 - `release/v1_5_rc/FINAL_RC_INTEGRITY_SEAL.json`
 - `release/v1_5_rc/FINAL_RC_DIGESTS.json`
+- `reports/public_data_pilot.md`
+- `reports/public_data_pilot.json`
 
 ## Runner
 
@@ -67,6 +69,8 @@ The V1.5 working paper remains `paper/CARSF_V1_5_WORKING.md`. The release-candid
 ## Review Use
 
 Use the release pack after the executive dashboard. The pack is useful for routing external review, identifying calibration blockers, and checking report boundaries. It must not be used as a readiness finding, official review pathway, legal sufficiency claim, operational readiness claim, economic validation, welfare validation, statistical validation, or actual-tax-payable analysis.
+
+Build 27 adds a public aggregate-data pilot and realistic-placeholder anchor layer. It may include small public aggregate extracts and source-reference records, but it is not calibration, public data extracts do not prove the model works, realistic placeholders remain placeholders, source references are not loaded datasets, and restricted-data requirements are not data access.
 
 ## Final RC Integrity Seal Link
 

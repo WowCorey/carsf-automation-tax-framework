@@ -1,6 +1,6 @@
 # External Review Attack Pack
 
-This is an attack pack for external review. It does not mean external review has been completed, does not mean approval has been granted, and does not mean validation has occurred. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not official status, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data, and does not modify firm-level CARSF liability.
+This is an attack pack for external review. It does not mean external review has been completed, does not mean approval has been granted, and does not mean validation has occurred. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not economic validation, not welfare validation, not statistical validation, not compliance scoring, not enforcement, not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not official status, and not an official review pathway. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, restricted government data, confidential Treasury/PBO material, or unauthorised data, and does not modify firm-level CARSF liability.
 
 ## Purpose
 
@@ -41,6 +41,8 @@ The release-facing attack pack is under:
 - `release/v1_5_rc/attack_pack/`
 
 It includes reviewer-specific attack documents, report and layer matrices, boundary checks, and a manifest snapshot.
+
+Build 27 adds `public_data_pilot` to the review target set. Reviewers should attack source provenance, source-reference-only boundaries, placeholder-anchor labelling, field/module sanity-check overread, restricted-data blockers, forbidden repo data protections, and digest metadata without treating the pilot as calibration or validation.
 
 ## Boundaries
 

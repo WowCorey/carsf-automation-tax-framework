@@ -1,0 +1,174 @@
+- extract_id: fair_work_minimum_wage_2025_extract
+  source_reference_id: fair_work_minimum_wage_2025
+  publisher: Fair Work Ombudsman
+  source_kind: Fair_Work_public_wage_anchor
+  data_status: real_public_data_loaded
+  claim_level: placeholder_anchor_only
+  extract_type: public_threshold_values
+  units: AUD and percent
+  period: "from 2025-07-01"
+  geography: Australia
+  values:
+    - {value_id: national_minimum_wage_hourly, value: 24.95, unit: AUD_per_hour, source_field: national minimum wage}
+    - {value_id: national_minimum_wage_weekly, value: 948.10, unit: AUD_per_week, source_field: national minimum wage}
+    - {value_id: casual_loading, value: 25.0, unit: percent, source_field: casual loading}
+  source_url: https://www.fairwork.gov.au/how-we-will-help/templates-and-guides/fact-sheets/minimum-workplace-entitlements/minimum-wages
+  source_note: Small public wage threshold extract used only to anchor OPFTE, HLE, and QLC realistic placeholders.
+  source_locator: Fair Work Ombudsman minimum wages fact sheet, national minimum wage paragraph for the 1 July 2025 rate and 38-hour week reference.
+  source_value_note: Hourly value is source referenced; weekly value is stored as 24.95 multiplied by 38 ordinary hours for internal extract consistency and is not calibration.
+  value_review_status: maintainer_arithmetic_consistency_review_not_external_validation
+  licence_notes: Public webpage extract; raw page or full datasets are not committed.
+  raw_dataset_committed: false
+  safe_to_commit: true
+  must_not_claim: [calibration completed, validation, legal wage sufficiency, actual tax payable]
+
+- extract_id: ato_corporate_transparency_2022_23_extract
+  source_reference_id: ato_corporate_tax_transparency_2022_23
+  publisher: Australian Taxation Office
+  source_kind: ATO_public_aggregate
+  data_status: real_public_data_loaded
+  claim_level: sanity_check_only
+  extract_type: public_aggregate_summary_values
+  units: AUD_billion and percent
+  period: "2022-23"
+  geography: Australia
+  values:
+    - {value_id: income_tax_received_large_corporates, value: 97.9, unit: AUD_billion, source_field: income tax received from large corporates}
+    - {value_id: entities_with_no_income_tax_percent, value: 31.0, unit: percent, source_field: entities with no income tax payable in public report}
+  source_url: https://www.ato.gov.au/media-centre/ato-collects-100-billion-dollars-from-large-corporates
+  source_note: Public corporate tax transparency aggregate used only for fiscal scale context; no firm-level CARSF liability inference is allowed.
+  source_locator: ATO media-centre article "ATO collects $100 billion dollars from large corporates", public summary of 2022-23 corporate tax transparency results.
+  source_value_note: Values are public aggregate/media-summary values only and do not support entity-level or firm-level CARSF inference.
+  value_review_status: source_locator_recorded_not_external_validation
+  licence_notes: Public ATO media-centre summary; no confidential tax material is committed.
+  raw_dataset_committed: false
+  safe_to_commit: true
+  must_not_claim: [firm-level liability, actual tax payable, compliance score, calibration completed]
+
+- extract_id: ato_taxation_statistics_2022_23_extract
+  source_reference_id: ato_taxation_statistics_2022_23
+  publisher: Australian Taxation Office
+  source_kind: ATO_public_aggregate
+  data_status: real_public_data_loaded
+  claim_level: sanity_check_only
+  extract_type: public_aggregate_summary_values
+  units: AUD_billion
+  period: "2022-23"
+  geography: Australia
+  values:
+    - {value_id: total_tax_revenue_collected, value: 577.4, unit: AUD_billion, source_field: total tax revenue collected}
+    - {value_id: company_tax_revenue, value: 140.0, unit: AUD_billion, source_field: company tax revenue}
+  source_url: https://www.ato.gov.au/media-centre/2022-23-taxation-statistics-released
+  source_note: Public ATO aggregate used for sanity-check-only fiscal scale context.
+  source_locator: ATO media-centre article "2022-23 taxation statistics released", public headline aggregate values.
+  source_value_note: Values are public taxation-statistics summary values only and are not taxpayer-level data or calibration.
+  value_review_status: source_locator_recorded_not_external_validation
+  licence_notes: Public aggregate summary; no unit records are committed.
+  raw_dataset_committed: false
+  safe_to_commit: true
+  must_not_claim: [taxpayer-level inference, actual tax payable, calibration completed]
+
+- extract_id: treasury_budget_2026_27_receipts_extract
+  source_reference_id: treasury_budget_2026_27_bp1
+  publisher: Australian Government Treasury
+  source_kind: Treasury_public_fiscal
+  data_status: real_public_data_loaded
+  claim_level: sanity_check_only
+  extract_type: public_fiscal_aggregate_summary_values
+  units: AUD_billion
+  period: "2025-26 estimate in Budget Paper No. 1 2026-27"
+  geography: Australia
+  values:
+    - {value_id: total_receipts_estimate, value: 759.8, unit: AUD_billion, source_field: total receipts estimate}
+    - {value_id: taxation_receipts_estimate, value: 699.5, unit: AUD_billion, source_field: taxation receipts estimate}
+  source_url: https://budget.gov.au/content/bp1/
+  source_note: Public budget aggregate used only for fiscal trajectory sanity-check context.
+  source_locator: Budget Paper No. 1 2026-27, Statement 5 Revenue, Table 5.1 Australian Government general government receipts, 2025-26 estimates.
+  source_value_note: Values are rounded from Table 5.1 public estimates for total receipts and total taxation receipts; this is not Treasury modelling by the repository.
+  value_review_status: exact_table_locator_recorded_not_external_validation
+  licence_notes: Public budget paper reference; no confidential Treasury material is committed.
+  raw_dataset_committed: false
+  safe_to_commit: true
+  must_not_claim: [Treasury modelling, PBO costing, calibration completed]
+
+- extract_id: super_guarantee_2025_26_extract
+  source_reference_id: ato_super_guarantee_2025_26
+  publisher: Australian Taxation Office
+  source_kind: Super_Guarantee_public_setting
+  data_status: real_public_data_loaded
+  claim_level: placeholder_anchor_only
+  extract_type: public_rate_setting
+  units: percent
+  period: "from 2025-07-01"
+  geography: Australia
+  values:
+    - {value_id: super_guarantee_rate, value: 12.0, unit: percent, source_field: super guarantee percentage}
+  source_url: https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/super-guarantee
+  source_note: Public rate setting used only to anchor a superannuation contribution pressure placeholder.
+  source_locator: ATO key superannuation rates and thresholds page, super guarantee percentage table for the period from 1 July 2025.
+  source_value_note: Value is a public rate-setting reference only and does not support individual, payroll, or taxpayer-level estimates.
+  value_review_status: source_locator_recorded_not_external_validation
+  licence_notes: Public ATO threshold reference; no member or payroll records are committed.
+  raw_dataset_committed: false
+  safe_to_commit: true
+  must_not_claim: [ATO guidance, individual estimate, calibration completed]
+
+- extract_id: help_threshold_source_reference_extract
+  source_reference_id: study_assist_help_thresholds_2025_26
+  publisher: Australian Government StudyAssist
+  source_kind: HELP_HECS_public_threshold
+  data_status: source_reference_only
+  claim_level: source_reference_only
+  extract_type: source_reference_record
+  units: source_reference_only
+  period: "2025-26"
+  geography: Australia
+  values: []
+  source_url: https://www.studyassist.gov.au/paying-back-your-loan/loan-repayment
+  source_note: Source-reference-only record; no threshold value is loaded in this build.
+  licence_notes: Public source reference only; no borrower records are committed.
+  raw_dataset_committed: false
+  safe_to_commit: true
+  load_status: not_loaded
+  blocker: threshold value not extracted in Build 27 to avoid overread before source review
+  must_not_claim: [individual repayment estimate, welfare validation, calibration completed]
+
+- extract_id: qld_payroll_tax_source_reference_extract
+  source_reference_id: qld_payroll_tax_threshold_2025_26
+  publisher: Queensland Revenue Office
+  source_kind: State_payroll_tax_public_threshold
+  data_status: source_reference_only
+  claim_level: source_reference_only
+  extract_type: source_reference_record
+  units: source_reference_only
+  period: "2025-26"
+  geography: Queensland
+  values: []
+  source_url: https://qro.qld.gov.au/payroll-tax/
+  source_note: Source-reference-only record; no payroll threshold value is loaded in this build.
+  licence_notes: Public source reference only; no employer or payroll records are committed.
+  raw_dataset_committed: false
+  safe_to_commit: true
+  load_status: not_loaded
+  blocker: jurisdiction-specific value not extracted in Build 27 before tax-source review
+  must_not_claim: [state tax advice, actual tax payable, calibration completed]
+
+- extract_id: abs_labour_source_reference_extract
+  source_reference_id: abs_labour_wage_aggregate_source_reference
+  publisher: Australian Bureau of Statistics
+  source_kind: ABS_public_aggregate
+  data_status: source_reference_only
+  claim_level: source_reference_only
+  extract_type: source_reference_record
+  units: source_reference_only
+  period: "2026"
+  geography: Australia
+  values: []
+  source_url: https://www.abs.gov.au/statistics/labour
+  source_note: Source-reference-only record; no ABS aggregate table is loaded in this build.
+  licence_notes: Public source reference only; no ABS table, DataLab product, or unit record is committed.
+  raw_dataset_committed: false
+  safe_to_commit: true
+  load_status: not_loaded
+  blocker: full public aggregate table selection deferred to Build 28 evidence map
+  must_not_claim: [population estimate, official sector ranking, calibration completed]
