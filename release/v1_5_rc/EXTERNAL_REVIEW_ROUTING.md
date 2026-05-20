@@ -75,4 +75,10 @@ Build 29 loads no new data and adds no public aggregate extract values. It recon
 
 Suggested routing remains technical, privacy, statistical methods, legal, tax, Treasury-methods, ATO-methods, and hostile/red-team review. This is not an official review pathway, not external source verification, not calibration, not validation, not actual tax payable, not ATO guidance, not Treasury modelling, not PBO costing, not legal sufficiency, not operational readiness, not official status, and not a firm-level liability change.
 
-Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-29 are included in a later sealed RC.
+## Build 29.5 Source-Locator Verification Pack Routing Addendum
+
+Build 29.5 loads no new data and adds no public aggregate extract values. It packages existing source URLs, exact locator text, value notes, source-reference-only rows, placeholder anchors, restricted blockers, and manual-review checklists for reviewer inspection only.
+
+Suggested routing remains technical, privacy, statistical methods, legal, tax, Treasury-methods, ATO-methods, and hostile/red-team review. This is not an official review pathway, not external source verification, not calibration, not validation, not actual tax payable, not ATO guidance, not Treasury modelling, not PBO costing, not legal sufficiency, not operational readiness, not official status, and not a firm-level liability change. Ready for manual review does not mean reviewed or externally verified.
+
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-29.5 are included in a later sealed RC.

@@ -343,6 +343,14 @@ No new data is loaded by Build 29. The audit does not externally verify source v
 
 Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-29 are included in a later sealed RC.
 
+## Public Data Source-Locator Verification Pack
+
+The source-locator verification pack converts existing Build 27-29 public-pilot artefacts into source/value cards, source-reference-only cards, placeholder-anchor cards, restricted-blocker cards, and manual-review checklists.
+
+No new data is loaded by Build 29.5. Ready for manual review does not mean reviewed or externally verified. The pack is not calibration, calibration has not been completed, public data does not prove the model works, realistic placeholders remain placeholders, source references are not loaded datasets, restricted-data requirements are not data access, and no actual tax payable is determined. It is not legal advice, tax advice, ATO guidance, Treasury modelling, PBO costing, economic validation, welfare validation, statistical validation, operational readiness, legal sufficiency, official status, or firm-level liability modification.
+
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-29.5 are included in a later sealed RC.
+
 ## Non-Claims
 
 The calibration shell is not legal, tax, Treasury, ATO, ABS, Fair Work, OECD, BEPS, audit, forensic, or economic validation. It does not prove any model setting is correct.

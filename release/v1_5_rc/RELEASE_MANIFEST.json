@@ -37,7 +37,9 @@
     "reports/public_data_evidence_map.md",
     "reports/public_data_evidence_map.json",
     "reports/public_data_consistency_audit.md",
-    "reports/public_data_consistency_audit.json"
+    "reports/public_data_consistency_audit.json",
+    "reports/source_locator_verification_pack.md",
+    "reports/source_locator_verification_pack.json"
   ],
   "attack_pack_summary": {
     "review_tracks": 12,
@@ -61,6 +63,7 @@
     "real_public_data_loaded": true,
     "new_data_loaded_by_public_data_evidence_map": false,
     "new_data_loaded_by_public_data_consistency_audit": false,
+    "new_data_loaded_by_source_locator_verification_pack": false,
     "external_source_verification_claimed": false,
     "restricted_data_loaded": false,
     "real_data_loaded": false,

@@ -38,4 +38,8 @@ Dashboard section:
 
 - `simulator/pages/29_Public_Data_Evidence_Map.py`
 
-Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-29 are included in a later sealed RC.
+## Build 29.5 Source-Locator Pack
+
+Build 29.5 uses the consistency audit as an input to create source-locator cards and reviewer checklists. It does not load new data, add new public values, scrape sources, call APIs, externally verify source values, complete calibration, validate CARSF, determine actual tax payable, or modify firm-level CARSF liability.
+
+Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-29.5 are included in a later sealed RC.

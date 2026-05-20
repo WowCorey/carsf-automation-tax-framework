@@ -80,3 +80,11 @@ Build 29 adds an internal consistency audit and source-reconciliation layer for 
 No new data is loaded by Build 29. It does not externally verify source values, scrape public sources, call external APIs, complete calibration, prove the model works, determine actual tax payable, claim validation, approval, legal sufficiency, operational readiness, official status, ATO guidance, Treasury modelling, PBO costing, or modify firm-level CARSF liability. Reconciled means internally consistent only.
 
 Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-29 are included in a later sealed RC.
+
+## Build 29.5 Public-Data Source-Locator Verification Pack Addendum
+
+Build 29.5 adds a source-locator verification pack for the existing Build 27-29 public-data pilot artefacts. It creates reviewer-facing source/value cards, source-reference-only cards, placeholder-anchor cards, restricted-blocker cards, and manual-review checklists.
+
+No new data is loaded by Build 29.5. It does not add public values, externally verify source values, scrape public sources, call APIs, complete calibration, prove the model works, determine actual tax payable, claim validation, approval, legal sufficiency, operational readiness, official status, ATO guidance, Treasury modelling, PBO costing, or modify firm-level CARSF liability. Ready for manual review does not mean reviewed or externally verified.
+
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-29.5 are included in a later sealed RC.

@@ -1,6 +1,6 @@
 # CARSF V1.5 Executive Dashboard Consolidation
 
-Generated at: `2026-05-20T07:07:44+00:00`
+Generated at: `2026-05-20T12:20:50+00:00`
 
 ## A. Purpose
 
@@ -19,22 +19,22 @@ Use this as a review navigation index. Read order is suggested review navigation
 
 ## D. Prototype Stack Overview
 
-- Total layers: 27
-- Total reports indexed: 48
-- Reports present: 48
+- Total layers: 28
+- Total reports indexed: 50
+- Reports present: 50
 - Reports missing: 0
-- Layers with generated reports: 26
+- Layers with generated reports: 27
 - Synthetic-only layers: 10
-- Placeholder-only layers: 23
+- Placeholder-only layers: 24
 - Non-operative layers: 3
-- External-review-required layers: 24
-- Calibration-required layers: 20
+- External-review-required layers: 25
+- Calibration-required layers: 21
 - Legal-review-required layers: 13
 - Tax-review-required layers: 10
-- ATO-methods-review-required layers: 14
-- Treasury-methods-review-required layers: 18
-- Privacy-review-required layers: 13
-- Statistical-methods-review-required layers: 9
+- ATO-methods-review-required layers: 15
+- Treasury-methods-review-required layers: 19
+- Privacy-review-required layers: 14
+- Statistical-methods-review-required layers: 10
 - real_data_used: False
 - readiness_score_created: False
 - operational_readiness_claimed: False
@@ -73,6 +73,7 @@ Use this as a review navigation index. Read order is suggested review navigation
 | 27 | public_data_pilot | Public Data Pilot and Placeholder Anchor Layer | Small public aggregate/source-reference pilot that anchors realistic placeholders while keeping calibration incomplete and restricted data excluded. | False | Suggested review navigation only; not an official process. |
 | 28 | public_data_evidence_map | Public Data Pilot Reviewer Evidence Map | Reviewer-facing evidence map over Build 27 public-data pilot outputs without loading new data. | False | Suggested review navigation only; not an official process. |
 | 29 | public_data_consistency_audit | Public Data Pilot Consistency Audit | Internal source-reconciliation and consistency audit over Build 27 and Build 28 public-data pilot artefacts. | False | Suggested review navigation only; not an official process. |
+| 30 | source_locator_verification_pack | Public Data Source-Locator Verification Pack | Reviewer-facing source-locator cards and manual-review checklists over existing Build 27-29 public-data artefacts. | False | Suggested review navigation only; not an official process. |
 
 ## F. Layer Index
 
@@ -105,6 +106,7 @@ Use this as a review navigation index. Read order is suggested review navigation
 | public_data_pilot | Public Data Pilot and Placeholder Anchor Layer | calibration | Small public aggregate/source-reference pilot that anchors realistic placeholders while keeping calibration incomplete and restricted data excluded. | implemented_prototype, generated_report_available, placeholder_only, calibration_required, external_review_required, not_for_real_world_use | reports/public_data_pilot.md, reports/public_data_pilot.json | None | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer | 27 | Build 27 tests safe public aggregate intake and placeholder anchoring without real calibration. |
 | public_data_evidence_map | Public Data Pilot Reviewer Evidence Map | calibration | Reviewer-facing evidence map over Build 27 public-data pilot outputs without loading new data. | implemented_prototype, generated_report_available, placeholder_only, calibration_required, external_review_required, not_for_real_world_use | reports/public_data_evidence_map.md, reports/public_data_evidence_map.json | simulator/pages/29_Public_Data_Evidence_Map.py | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer | 28 | Build 28 makes the public-data pilot reviewable without adding data or calibration claims. |
 | public_data_consistency_audit | Public Data Pilot Consistency Audit | calibration | Internal source-reconciliation and consistency audit over Build 27 and Build 28 public-data pilot artefacts. | implemented_prototype, generated_report_available, placeholder_only, calibration_required, external_review_required, not_for_real_world_use | reports/public_data_consistency_audit.md, reports/public_data_consistency_audit.json | simulator/pages/29_Public_Data_Evidence_Map.py | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer | 29 | Build 29 checks internal consistency before reviewer handoff without adding data. |
+| source_locator_verification_pack | Public Data Source-Locator Verification Pack | calibration | Reviewer-facing source-locator cards and manual-review checklists over existing Build 27-29 public-data artefacts. | implemented_prototype, generated_report_available, placeholder_only, calibration_required, external_review_required, not_for_real_world_use | reports/source_locator_verification_pack.md, reports/source_locator_verification_pack.json | simulator/pages/29_Public_Data_Evidence_Map.py | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer | 30 | Build 29.5 makes source-locator metadata easier to inspect without creating source verification or calibration claims. |
 
 ## G. Report Index
 
@@ -158,6 +160,8 @@ Use this as a review navigation index. Read order is suggested review navigation
 | reports/public_data_evidence_map.md | public_data_evidence_map | True | scripts/run_public_data_evidence_map.py | Reviewer evidence map only; no new data is loaded and no calibration is completed. | must not use for: calibration completed, validation, official status, actual tax payable, readiness score | 28 |
 | reports/public_data_consistency_audit.json | public_data_consistency_audit | True | scripts/run_public_data_consistency_audit.py | Machine-readable consistency audit over Build 27 and Build 28 public-data artefacts only. | must not use for: external source verification, calibration completed, validation, official status, actual tax payable, readiness score | 29 |
 | reports/public_data_consistency_audit.md | public_data_consistency_audit | True | scripts/run_public_data_consistency_audit.py | Internal consistency audit only; no new data is loaded and no external source verification is claimed. | must not use for: external source verification, calibration completed, validation, official status, actual tax payable, readiness score | 29 |
+| reports/source_locator_verification_pack.json | source_locator_verification_pack | True | scripts/run_source_locator_verification_pack.py | Machine-readable source-locator card pack over existing public-pilot artefacts only. | must not use for: external source verification, calibration completed, validation, official status, actual tax payable, readiness score | 30 |
+| reports/source_locator_verification_pack.md | source_locator_verification_pack | True | scripts/run_source_locator_verification_pack.py | Source-locator cards and manual-review checklists only; no new data is loaded and no external source verification is claimed. | must not use for: external source verification, calibration completed, validation, official status, actual tax payable, readiness score | 30 |
 
 ## H. Streamlit Page Index
 
@@ -218,6 +222,7 @@ Use this as a review navigation index. Read order is suggested review navigation
 | public_data_pilot | not_statistical_validation, not_economic_validation, not_actual_tax_payable, not_operational_readiness | must not use for: calibration completed, validation, official status, actual tax payable, readiness score | True |
 | public_data_evidence_map | not_statistical_validation, not_economic_validation, not_actual_tax_payable, not_operational_readiness | must not use for: calibration completed, validation, official status, actual tax payable, readiness score | True |
 | public_data_consistency_audit | not_statistical_validation, not_economic_validation, not_actual_tax_payable, not_operational_readiness | must not use for: external source verification, calibration completed, validation, official status, actual tax payable, readiness score | True |
+| source_locator_verification_pack | not_external_source_verification, not_calibrated, not_statistical_validation, not_actual_tax_payable, not_operational_readiness | must not use for: external source verification, calibration completed, validation, official status, actual tax payable, readiness score | True |
 
 ## J. Calibration Blockers
 
@@ -253,6 +258,8 @@ Use this as a review navigation index. Read order is suggested review navigation
 | public_data_evidence_map | calibration | No new data is loaded and calibration remains incomplete. | False | Build 28 makes the public-data pilot reviewable without adding data or calibration claims. |
 | public_data_consistency_audit | calibration | Audit reconciliation is internal consistency only and does not externally verify public sources. | False | Build 29 checks internal consistency before reviewer handoff without adding data. |
 | public_data_consistency_audit | calibration | Calibration has not been completed and restricted-data blockers remain. | False | Build 29 checks internal consistency before reviewer handoff without adding data. |
+| source_locator_verification_pack | calibration | Source-locator cards are manual-review aids only and do not externally verify source values. | False | Build 29.5 makes source-locator metadata easier to inspect without creating source verification or calibration claims. |
+| source_locator_verification_pack | calibration | Calibration has not been completed and restricted-data blockers remain. | False | Build 29.5 makes source-locator metadata easier to inspect without creating source verification or calibration claims. |
 
 ## K. External Review Blockers
 
@@ -285,6 +292,7 @@ Use this as a review navigation index. Read order is suggested review navigation
 | public_data_pilot | external_review | Source licensing, public-data handling, privacy, statistical methods, legal, tax, Treasury, and ATO-methods review remain required before broader use. | True | Build 27 tests safe public aggregate intake and placeholder anchoring without real calibration. |
 | public_data_evidence_map | external_review | Source reconciliation, privacy, statistical methods, legal, tax, Treasury, and ATO-methods review remain required. | True | Build 28 makes the public-data pilot reviewable without adding data or calibration claims. |
 | public_data_consistency_audit | external_review | Source reconciliation, privacy, statistical methods, legal, tax, Treasury, and ATO-methods review remain required. | True | Build 29 checks internal consistency before reviewer handoff without adding data. |
+| source_locator_verification_pack | external_review | Human reviewer inspection of source URLs, locators, units, periods, geography, and aggregate-only status remains required. | True | Build 29.5 makes source-locator metadata easier to inspect without creating source verification or calibration claims. |
 
 ## L. Guardrail / Safety Status
 
@@ -317,16 +325,16 @@ Use this as a review navigation index. Read order is suggested review navigation
 
 | Reviewer | Layers |
 | --- | --- |
-| ato_methods_reviewer | working_paper, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, behavioural_response, administrative_workflow, legislative_architecture, evidence_workflow, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit |
+| ato_methods_reviewer | working_paper, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, behavioural_response, administrative_workflow, legislative_architecture, evidence_workflow, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack |
 | economic_methods_reviewer | behavioural_response, fiscal_trajectory, investment_incidence |
 | legal_reviewer | working_paper, status_risks_docs, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, behavioural_response, administrative_workflow, legislative_architecture, payment_interactions, evidence_workflow, secure_ingestion, repo_guardrails |
 | parliamentary_counsel_reviewer | legislative_architecture |
 | policy_reviewer | executive_dashboard, working_paper, status_risks_docs, worked_examples, behavioural_response, fiscal_trajectory, transition_funding, household_weighting, uncertainty_ranges, reviewed_scenarios |
-| privacy_reviewer | administrative_workflow, legislative_architecture, household_distributional, household_weighting, evidence_workflow, secure_ingestion, repo_guardrails, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit |
-| statistical_methods_reviewer | household_distributional, household_weighting, uncertainty_ranges, reviewed_scenarios, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit |
+| privacy_reviewer | administrative_workflow, legislative_architecture, household_distributional, household_weighting, evidence_workflow, secure_ingestion, repo_guardrails, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack |
+| statistical_methods_reviewer | household_distributional, household_weighting, uncertainty_ranges, reviewed_scenarios, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack |
 | tax_reviewer | working_paper, status_risks_docs, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, behavioural_response, administrative_workflow, legislative_architecture, investment_incidence |
-| technical_reviewer | executive_dashboard, status_risks_docs, worked_examples, reviewed_scenarios, evidence_workflow, secure_ingestion, repo_guardrails, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit |
-| treasury_methods_reviewer | working_paper, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, legislative_architecture, fiscal_trajectory, transition_funding, payment_interactions, investment_incidence, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit |
+| technical_reviewer | executive_dashboard, status_risks_docs, worked_examples, reviewed_scenarios, evidence_workflow, secure_ingestion, repo_guardrails, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack |
+| treasury_methods_reviewer | working_paper, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, legislative_architecture, fiscal_trajectory, transition_funding, payment_interactions, investment_incidence, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack |
 | welfare_policy_reviewer | transition_funding, payment_interactions, household_distributional |
 
 ## R. Plain-English Interpretation

@@ -52,4 +52,4 @@ Generated reports:
 
 Digest entries are SHA-256 metadata for release artefacts. They are not signatures, legal seals, external attestations, approval, or validation.
 
-Build 25 sealed the previous RC state. Build 26 adds real-data feasibility and calibration-intake artefacts after that state, Build 27 adds public aggregate-data pilot and realistic-placeholder anchor artefacts after that state, Build 28 adds a public-data reviewer evidence map after that state, and Build 29 adds a public-data consistency audit after that state. A new integrity seal must be regenerated if Builds 26-29 are included in a later sealed RC.
+Build 25 sealed the previous RC state. Build 26 adds real-data feasibility and calibration-intake artefacts after that state, Build 27 adds public aggregate-data pilot and realistic-placeholder anchor artefacts after that state, Build 28 adds a public-data reviewer evidence map after that state, Build 29 adds a public-data consistency audit after that state, and Build 29.5 adds a source-locator verification pack after that state. A new integrity seal must be regenerated if Builds 26-29.5 are included in a later sealed RC.
