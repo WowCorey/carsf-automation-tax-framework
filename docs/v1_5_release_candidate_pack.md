@@ -48,6 +48,8 @@ The V1.5 release-candidate pack consolidates the current CARSF prototype stack i
 - `reports/public_data_pilot.json`
 - `reports/public_data_evidence_map.md`
 - `reports/public_data_evidence_map.json`
+- `reports/public_data_consistency_audit.md`
+- `reports/public_data_consistency_audit.json`
 
 ## Runner
 
@@ -76,8 +78,10 @@ Build 27 adds a public aggregate-data pilot and realistic-placeholder anchor lay
 
 Build 28 adds a reviewer evidence map and dashboard for the public-data pilot. It loads no new data, adds no new public extracts, and only maps source references, loaded public extracts, source-reference-only rows, placeholder anchors, sanity checks, restricted blockers, forbidden repo data, and reviewer questions. It is not calibration, validation, approval, actual tax payable, legal sufficiency, operational readiness, official status, ATO guidance, Treasury modelling, or PBO costing.
 
+Build 29 adds an internal consistency audit and source-reconciliation layer for the public-data pilot and evidence map. It loads no new data, adds no new public extracts, does not externally verify source values, and only checks internal agreement across source records, extracts, evidence rows, placeholders, sanity checks, digests, reports, dashboard source, and non-claim boundaries. It is not calibration, validation, approval, actual tax payable, legal sufficiency, operational readiness, official status, ATO guidance, Treasury modelling, or PBO costing.
+
 ## Final RC Integrity Seal Link
 
 The final RC integrity seal checks release documents, attack-pack documents, generated reports, manifests, scripts, digest metadata, non-claim boundaries, repo guardrail expectations, CI expectations, and false readiness/legal/validation flags. `seal_passed` is an internal integrity status only and must not be read as approval, validation, external review completion, operational readiness, legal sufficiency, legislative readiness, official status, or implementation readiness.
 
-Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-28 are included in a later sealed RC.
+Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-29 are included in a later sealed RC.

@@ -1,5 +1,6 @@
 # Known Risks
 
+- Public-data consistency-audit rows may be mistaken for external source verification if readers ignore the non-claim boundary. Reconciled means internally consistent only, not calibrated, not validated, not official, and not actual tax-payable evidence.
 - The model may overstate fiscal damage if productivity dividends, consumer price reductions, or re-employment recovery are larger than expected.
 - The model may understate fiscal damage if wage scarring, underemployment, HELP loss, superannuation effects, or state costs are larger than expected.
 - AII components may be gamed through accounting classification, outsourcing, or related-party contracts.
@@ -92,5 +93,5 @@
 - The public-data pilot may create false comfort if readers treat small public aggregate extracts as calibration, source references as loaded datasets, placeholder anchors as real data, or sanity checks as proof that CARSF works as a real tax model.
 - The public-data reviewer evidence map may create false comfort if readers treat evidence classifications, confidence labels, arithmetic checks, or mapped reviewer questions as calibration, validation, approval, readiness, actual tax payable, legal sufficiency, official status, or proof that CARSF works as a real tax model.
 - Public source references may become stale, and licence/access notes may be incomplete without source-owner, legal, tax, privacy, statistical, Treasury-methods, and ATO-methods review.
-- Build 25 sealed the previous RC state. Builds 26-28 add new artefacts; if those artefacts become part of a later sealed RC, the final RC integrity seal must be regenerated rather than described as already covering them.
+- Build 25 sealed the previous RC state. Builds 26-29 add new artefacts; if those artefacts become part of a later sealed RC, the final RC integrity seal must be regenerated rather than described as already covering them.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.

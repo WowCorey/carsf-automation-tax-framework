@@ -21,6 +21,7 @@ Suggested routing is review navigation only and is not an official process.
 | Hostile red-team | all boundary layers | `docs/known_risks.md`, `reports/executive_dashboard.md` | Where could a reader overclaim validation, readiness, official status, or real-world use? |
 | Real-data feasibility | data-source intake, forbidden-data rules, placeholder provenance, Build 27 pilot candidates | `reports/real_data_feasibility.md`, `docs/real_data_feasibility.md` | Are public-source licensing, aggregate-only handling, restricted-data exclusion, realistic-placeholder labels, and no-calibration boundaries strong enough? |
 | Public-data evidence map | source references, loaded public extracts, source-reference-only rows, placeholder anchors, sanity checks, restricted blockers | `reports/public_data_evidence_map.md`, `simulator/pages/29_Public_Data_Evidence_Map.py` | Are evidence classifications, confidence labels, arithmetic checks, and reviewer questions clear without implying calibration, validation, tax-payable evidence, ATO guidance, Treasury modelling, or official status? |
+| Public-data consistency audit | source reconciliation, count checks, Fair Work arithmetic, digest metadata, report JSON agreement, dashboard source, non-claim boundaries | `reports/public_data_consistency_audit.md`, `simulator/pages/29_Public_Data_Evidence_Map.py` | Does the audit stay internal-only without implying external source verification, calibration, validation, tax-payable evidence, ATO guidance, Treasury modelling, or official status? |
 
 ## Attack-Pack Routing Addendum
 
@@ -68,4 +69,10 @@ Build 28 loads no new data and adds no new public aggregate extract values. It m
 
 It is not calibration, validation, approval, legal advice, tax advice, ATO guidance, Treasury modelling, PBO costing, economic validation, welfare validation, statistical validation, operational readiness, legal sufficiency, or official status. It does not determine actual tax payable and does not modify firm-level CARSF liability.
 
-Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-28 are included in a later sealed RC.
+## Build 29 Public-Data Consistency Audit Routing Addendum
+
+Build 29 loads no new data and adds no public aggregate extract values. It reconciles existing source references, loaded extracts, source-reference-only rows, placeholder anchors, field/module checks, digest metadata, reports, dashboard source, restricted blockers, forbidden repo data, and non-claim boundaries for reviewer inspection only.
+
+Suggested routing remains technical, privacy, statistical methods, legal, tax, Treasury-methods, ATO-methods, and hostile/red-team review. This is not an official review pathway, not external source verification, not calibration, not validation, not actual tax payable, not ATO guidance, not Treasury modelling, not PBO costing, not legal sufficiency, not operational readiness, not official status, and not a firm-level liability change.
+
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-29 are included in a later sealed RC.

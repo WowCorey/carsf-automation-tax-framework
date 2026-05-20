@@ -1,0 +1,148 @@
+audit_id: carsf_v1_5_public_data_pilot_consistency_audit
+audit_name: CARSF V1.5 Public Data Pilot Consistency Audit and Source Reconciliation
+status: internal_consistency_audit_only
+non_claims:
+  - This is an internal consistency audit and source-reconciliation map only. No new data is loaded by this build. This does not externally verify source values, does not scrape public sources, and does not call external APIs. This is not calibration; calibration has not been completed. Public data does not prove the model works. Reconciled means internally consistent only; reconciled does not mean validated, official, or ready. Realistic placeholders remain placeholders, realistic placeholders are not real data, realistic placeholders are not calibrated, source references are not loaded datasets, and restricted-data requirements are not data access. This is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab, HILDA microdata, DSS/Services Australia records, ATO taxpayer records, Treasury/PBO confidential material, or restricted government data, and does not modify firm-level CARSF liability. It only checks internal consistency across source records, extracts, reports, digests, dashboard source, and non-claim boundaries.
+  - Audit statuses are internal consistency statuses only; they are not validation, approval, calibration, readiness, or official status.
+  - Source locators and value notes are metadata for reviewer inspection only and do not mean external source verification has occurred.
+  - Digest checks are repository integrity metadata only and are not signatures, external attestation, approval, validation, or calibration.
+input_artifacts:
+  - data/public_pilot/public_data_pilot_manifest.yaml
+  - data/public_pilot/extracts/public_aggregate_extracts.yaml
+  - data/public_pilot/placeholders/realistic_placeholder_anchors.yaml
+  - data/public_pilot/digests/public_data_pilot_digests.json
+  - data/public_pilot/reviewer_evidence_map_manifest.yaml
+  - reports/public_data_pilot.md
+  - reports/public_data_pilot.json
+  - reports/public_data_evidence_map.md
+  - reports/public_data_evidence_map.json
+  - simulator/pages/29_Public_Data_Evidence_Map.py
+audit_status_taxonomy:
+  - reconciled
+  - warning
+  - blocked
+  - not_applicable
+  - fail_closed
+audit_type_taxonomy:
+  - source_reference_to_extract
+  - extract_to_evidence_map
+  - source_reference_only_counting
+  - arithmetic_consistency
+  - placeholder_boundary
+  - module_calibration_boundary
+  - restricted_blocker_preservation
+  - forbidden_repo_data_preservation
+  - digest_consistency
+  - report_json_consistency
+  - dashboard_source_consistency
+  - non_claim_boundary
+  - forbidden_claim_scan
+reconciliation_scope_taxonomy:
+  - internal_repo_only
+  - source_locator_metadata_only
+  - arithmetic_only
+  - count_consistency_only
+  - boundary_consistency_only
+  - external_review_required
+required_count_reconciliations:
+  - total source references must agree between source files, public-data pilot JSON, and evidence-map JSON.
+  - total public aggregate extracts must agree between source files and public-data pilot JSON.
+  - loaded public extracts must agree between source files, public-data pilot JSON, and evidence-map JSON.
+  - source-reference-only extracts must agree between source files, public-data pilot JSON, and evidence-map JSON.
+  - placeholder anchors, field sanity checks, and module sanity checks must agree between source files and generated JSON.
+required_source_reference_reconciliations:
+  - every extract source_reference_id exists in the source reference registry.
+  - every loaded public extract has source_url.
+  - every loaded public extract has source_locator.
+  - every loaded public extract has source_value_note.
+  - every loaded public extract has value_review_status.
+  - source-reference-only extracts do not carry loaded values.
+required_extract_reconciliations:
+  - every loaded public extract appears in the evidence map.
+  - loaded public extract evidence rows use evidence_status loaded_public_aggregate.
+  - Fair Work loaded extract uses confidence_label arithmetic_checked.
+  - ATO, Treasury/Budget, and Super Guarantee loaded extracts use confidence_label source_locator_recorded.
+  - source-reference-only extracts remain outside loaded-public-extract evidence rows.
+required_placeholder_reconciliations:
+  - every placeholder anchor remains current_placeholder_status realistic_placeholder.
+  - every placeholder anchor keeps must_be_labelled_realistic_placeholder true.
+  - every placeholder anchor keeps must_not_be_labelled_real_data true.
+  - every placeholder anchor keeps must_not_be_labelled_calibrated true.
+  - no placeholder evidence row is labelled loaded_public_aggregate.
+required_module_boundary_checks:
+  - every module sanity check keeps calibration_possible false.
+  - every module evidence row keeps calibration_possible false.
+  - module evidence rows preserve blockers where provided.
+required_digest_checks:
+  - digest manifest exists.
+  - digest manifest does not hash itself.
+  - digest entries include sha256.
+  - digest target files exist.
+  - digest metadata is not external attestation, signature, approval, validation, or calibration.
+required_report_json_checks:
+  - public-data pilot JSON exists and keeps false flags false.
+  - public-data evidence-map JSON exists and keeps false flags false.
+  - Markdown reports include non-claim warnings.
+required_dashboard_checks:
+  - dashboard reads reports/public_data_evidence_map.json.
+  - dashboard optionally reads reports/public_data_consistency_audit.json when present.
+  - dashboard does not read raw external sources.
+  - dashboard does not create readiness, calibration, or validation score widgets.
+required_non_claim_checks:
+  - not calibration
+  - calibration has not been completed
+  - public data does not prove the model works
+  - realistic placeholders remain placeholders
+  - source references are not loaded datasets
+  - restricted-data requirements are not data access
+  - not legal advice
+  - not tax advice
+  - not ATO guidance
+  - not Treasury modelling
+  - not PBO costing
+  - not economic validation
+  - not welfare validation
+  - not statistical validation
+  - not operational readiness
+  - not legal sufficiency
+  - not official status
+  - does not determine actual tax payable
+  - does not modify firm-level CARSF liability
+forbidden_claims:
+  - calibrated
+  - calibration completed
+  - real calibration
+  - public data proves
+  - model works
+  - tax model works
+  - CARSF works
+  - ready for government
+  - ready for ATO
+  - ready for Treasury
+  - ready for Parliament
+  - ready for implementation
+  - ready for public release
+  - operationally ready
+  - legally sufficient
+  - official status
+  - official policy
+  - validated
+  - externally validated
+  - Treasury validated
+  - ATO validated
+  - PBO validated
+  - economic validation complete
+  - welfare validation complete
+  - statistical validation complete
+  - actual tax payable
+  - real household estimate
+  - population estimate
+  - official sector ranking
+  - compliance score
+  - readiness score
+  - maturity score
+  - approved
+build_30_requirements:
+  - Package the feasibility map, public-data pilot, evidence map, and consistency audit into a concise reviewer handoff bundle.
+  - Do not add new data, source values, scraping, API calls, external source verification claims, calibration claims, validation claims, tax-payable claims, or official-status claims.
+  - Preserve source-reference-only, placeholder, restricted-blocker, and forbidden-repo-data boundaries.

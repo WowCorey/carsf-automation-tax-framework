@@ -1,6 +1,6 @@
 # Public Data Pilot and Placeholder Anchor Layer
 
-This is a public aggregate-data pilot and realistic-placeholder anchor layer only. It may include small public aggregate extracts or source-reference records. It is not calibration, calibration has not been completed, public data extracts do not prove the model works, realistic placeholders remain realistic placeholders, source references are not loaded datasets, and restricted-data requirements are not data access.
+This is a public aggregate-data pilot and realistic-placeholder anchor layer only. It may include small public aggregate extracts or source-reference records. It is not calibration, calibration has not been completed, public data extracts do not prove the model works, public data does not prove the model works, realistic placeholders remain placeholders, realistic placeholders remain realistic placeholders, source references are not loaded datasets, and restricted-data requirements are not data access.
 
 This is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab microdata, HILDA microdata, DSS/Services Australia records, ATO taxpayer records, Treasury/PBO confidential material, or restricted government data. It does not modify firm-level CARSF liability.
 
@@ -18,6 +18,8 @@ The layer writes:
 - `reports/public_data_pilot.md`
 - `reports/public_data_pilot.json`
 - `data/public_pilot/digests/public_data_pilot_digests.json`
+
+Build 29 adds an internal consistency audit over these artefacts at `reports/public_data_consistency_audit.md` and `reports/public_data_consistency_audit.json`. The audit loads no new data, does not externally verify source values, and does not claim calibration, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, or firm-level liability changes.
 
 ## Public Sources
 
@@ -44,4 +46,4 @@ The following remain blocked outside this repository:
 
 Build 28 exposes the public-data pilot outputs in a reviewer-facing evidence map and Streamlit dashboard. It shows which assumptions are source-referenced, which are public-aggregate anchored, which remain realistic placeholders, and which remain blocked by restricted data without loading new data or claiming calibration, validation, approval, readiness, actual tax payable, legal sufficiency, official status, or implementation readiness.
 
-Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-28 are included in a later sealed RC.
+Build 29 adds source-reconciliation and internal consistency checks across the public-data pilot and evidence-map reports. Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-29 are included in a later sealed RC.

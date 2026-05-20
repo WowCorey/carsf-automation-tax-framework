@@ -54,6 +54,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Add a V1.5 final RC integrity seal that checks release documents, attack-pack documents, generated reports, manifests, scripts, digest metadata, non-claim boundaries, repo guardrail expectations, CI expectations, and false readiness/legal/validation flags without implying approval, validation, external review completion, legal sufficiency, operational readiness, official status, or liability changes.
 - Add a public aggregate-data pilot and realistic-placeholder anchor layer that keeps loaded public extracts, source-reference-only records, realistic placeholders, restricted-data blockers, and forbidden repo data separate without completing calibration or changing liability.
 - Add a public data pilot reviewer evidence map and dashboard that makes Build 27 source references, loaded extracts, source-reference-only rows, placeholder anchors, field sanity checks, module sanity checks, restricted blockers, and reviewer questions inspectable without loading new data, completing calibration, claiming validation, or changing liability.
+- Add a public data pilot consistency audit and source-reconciliation layer that checks existing Build 27 and Build 28 artefacts, digests, reports, dashboard source, non-claim boundaries, Fair Work wage arithmetic, and source-reference-only counting without loading new data, externally verifying source values, completing calibration, claiming validation, or changing liability.
 
 ## Data Separation
 

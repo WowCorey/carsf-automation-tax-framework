@@ -1,7 +1,7 @@
 {
   "metadata": {
     "firm_level_liability_logic_modified": false,
-    "generated_at": "2026-05-20T02:07:17+00:00",
+    "generated_at": "2026-05-20T07:07:43+00:00",
     "non_claims": [
       "The sector stress matrix is prototype metadata review only. It is not calibrated. It is not a real-world ranking of sectors. It is not Treasury modelling. It is not ATO guidance. It is not ABS/ATO/DSS/PBO analysis. It does not use real industry data. It does not estimate actual tax payable.",
       "The sector stress matrix does not modify firm-level CARSF liability logic.",

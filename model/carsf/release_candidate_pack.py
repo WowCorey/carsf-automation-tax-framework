@@ -54,6 +54,7 @@ REQUIRED_LAYER_IDS = {
     "real_data_feasibility",
     "public_data_pilot",
     "public_data_evidence_map",
+    "public_data_consistency_audit",
     "working_paper",
     "status_risks_docs",
 }
@@ -135,6 +136,8 @@ REQUIRED_REPORT_PATHS = {
     "reports/public_data_pilot.json",
     "reports/public_data_evidence_map.md",
     "reports/public_data_evidence_map.json",
+    "reports/public_data_consistency_audit.md",
+    "reports/public_data_consistency_audit.json",
 }
 
 REQUIRED_RELEASE_DOCUMENTS = {
@@ -220,6 +223,9 @@ NEGATIVE_CONTEXT_MARKERS = [
     "what_it_does_not_show",
     "primary_non_claim",
     "non-claim",
+    "must not use for",
+    "must_not_be_used_for",
+    "forbidden_claims",
 ]
 
 
@@ -424,7 +430,9 @@ def find_forbidden_affirmative_release_claims(text: str) -> list[str]:
             index = lowered.find(phrase, start)
             if index == -1:
                 break
-            context = lowered[max(0, index - 180) : index]
+            context_start = max(0, index - 320)
+            context_end = min(len(lowered), index + len(phrase) + 80)
+            context = lowered[context_start:context_end]
             if not any(marker in context for marker in NEGATIVE_CONTEXT_MARKERS):
                 findings.append(phrase)
                 break

@@ -1016,6 +1016,54 @@ layers:
       - official status
       - actual tax payable
       - readiness score
+  - layer_id: public_data_consistency_audit
+    layer_name: Public Data Pilot Consistency Audit
+    layer_group: calibration
+    purpose: Internal source-reconciliation and consistency audit over Build 27 and Build 28 public-data pilot artefacts.
+    primary_files:
+      - model/carsf/public_data_consistency_audit.py
+      - data/public_pilot/consistency_audit_manifest.yaml
+      - scripts/run_public_data_consistency_audit.py
+      - simulator/pages/29_Public_Data_Evidence_Map.py
+      - docs/public_data_consistency_audit.md
+    primary_reports:
+      - reports/public_data_consistency_audit.md
+      - reports/public_data_consistency_audit.json
+    streamlit_pages:
+      - simulator/pages/29_Public_Data_Evidence_Map.py
+    status_labels:
+      - implemented_prototype
+      - generated_report_available
+      - placeholder_only
+      - calibration_required
+      - external_review_required
+      - not_for_real_world_use
+    non_claim_flags:
+      - not_statistical_validation
+      - not_economic_validation
+      - not_actual_tax_payable
+      - not_operational_readiness
+    calibration_blockers:
+      - Audit reconciliation is internal consistency only and does not externally verify public sources.
+      - Calibration has not been completed and restricted-data blockers remain.
+    external_review_blockers:
+      - Source reconciliation, privacy, statistical methods, legal, tax, Treasury, and ATO-methods review remain required.
+    blocker_explanation: Build 29 reconciles existing public-pilot artefacts without adding data or claiming validation.
+    recommended_reviewer:
+      - technical_reviewer
+      - privacy_reviewer
+      - statistical_methods_reviewer
+      - treasury_methods_reviewer
+      - ato_methods_reviewer
+    read_order: 29
+    main_reason: Build 29 checks internal consistency before reviewer handoff without adding data.
+    must_not_be_used_for:
+      - external source verification
+      - calibration completed
+      - validation
+      - official status
+      - actual tax payable
+      - readiness score
 report_entries:
   - report_path: reports/executive_dashboard.md
     layer_id: executive_dashboard
@@ -1387,6 +1435,22 @@ report_entries:
     must_not_be_used_for: [calibration completed, validation, official status, actual tax payable, readiness score]
     linked_streamlit_page: simulator/pages/29_Public_Data_Evidence_Map.py
     recommended_read_order: 28
+  - report_path: reports/public_data_consistency_audit.md
+    layer_id: public_data_consistency_audit
+    report_type: markdown
+    generated_by: scripts/run_public_data_consistency_audit.py
+    interpretation_warning: Internal consistency audit only; no new data is loaded and no external source verification is claimed.
+    must_not_be_used_for: [external source verification, calibration completed, validation, official status, actual tax payable, readiness score]
+    linked_streamlit_page: simulator/pages/29_Public_Data_Evidence_Map.py
+    recommended_read_order: 29
+  - report_path: reports/public_data_consistency_audit.json
+    layer_id: public_data_consistency_audit
+    report_type: json
+    generated_by: scripts/run_public_data_consistency_audit.py
+    interpretation_warning: Machine-readable consistency audit over Build 27 and Build 28 public-data artefacts only.
+    must_not_be_used_for: [external source verification, calibration completed, validation, official status, actual tax payable, readiness score]
+    linked_streamlit_page: simulator/pages/29_Public_Data_Evidence_Map.py
+    recommended_read_order: 29
 forbidden_claims:
   - ready for government
   - ready for ATO

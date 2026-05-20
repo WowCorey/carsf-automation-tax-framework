@@ -24,6 +24,8 @@ The generated attack-pack report builds the layer-by-layer matrix from the V1.5 
 
 `public_data_evidence_map` is a layer attack target. Attack it for evidence-classification drift, confidence-label overread, source-reference-only counting, source-locator gaps, missing value-review status, missing arithmetic representation, placeholder-anchor overread, restricted blocker loss, and dashboard wording that could imply calibration, validation, actual tax payable, ATO guidance, Treasury modelling, PBO costing, official status, or firm-level liability modification.
 
+`public_data_consistency_audit` is a layer attack target. Attack it for internal-consistency overread, missing fail-closed behaviour, source-reference-only count drift, digest self-hashing, dashboard/report disagreement, missing non-claim boundaries, and wording that could imply external source verification, calibration, validation, actual tax payable, ATO guidance, Treasury modelling, PBO costing, official status, or firm-level liability modification.
+
 ## What Not To Infer
 
 The matrix is not validation, not approval, not a maturity rating, and not official review.

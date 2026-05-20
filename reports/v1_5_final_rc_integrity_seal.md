@@ -1,6 +1,6 @@
 # CARSF V1.5 Final RC Integrity Seal
 
-Generated at: `2026-05-20T02:07:19+00:00`
+Generated at: `2026-05-20T07:07:45+00:00`
 
 ## A. Purpose
 
@@ -184,44 +184,44 @@ This report records an internal final release-candidate integrity check for the 
 | Artefact | Exists | SHA-256 | Bytes | Status |
 | --- | --- | --- | ---: | --- |
 | paper/CARSF_V1_5_WORKING.md | True | a443122c40d0a2e8b578548b2ae120bd92878e832f418a8e37db49229a971395 | 58611 | present |
-| release/v1_5_rc/CALIBRATION_BLOCKERS.md | True | d7f50d9c5b2f1ce2276182d92658fafa66f84c9fa1c9a8a97ee2251c8d4870a1 | 5823 | present |
-| release/v1_5_rc/EXTERNAL_REVIEW_ROUTING.md | True | 59fa0655a442f2bb10d9c1046028e8a315bac3229bc6ecc0b9cae5b77934abda | 7732 | present |
-| release/v1_5_rc/NON_CLAIM_BOUNDARIES.md | True | 31e0e90e6e6fbe2bb8df9cc103fb8395fb7aff7b5c0050cc3b601ce3b3657794 | 3725 | present |
-| release/v1_5_rc/RELEASE_MANIFEST.json | True | 23ab4080c2a2b8b21be748fb1a8a6c98401bac245be396ce2d1847954d5c4585 | 2945 | present |
-| release/v1_5_rc/RELEASE_NOTES.md | True | 58038266a1e81824ef06efb9d0e8c98b7b3085ddfb0acd11cff5a71180be8dd9 | 8382 | present |
-| release/v1_5_rc/REPORT_MAP.md | True | 2b561ccc726ebf83831accd147faba410778c5df3729176e1b8b6c930bb1944a | 7224 | present |
+| release/v1_5_rc/CALIBRATION_BLOCKERS.md | True | f1ba84aec819bf162cc98e14f188415440b0bb48dec252b716e1f9fd7d0a6f3f | 6451 | present |
+| release/v1_5_rc/EXTERNAL_REVIEW_ROUTING.md | True | 72bf0ee0552c9a79661405baaebc81a4cef5aebfb1f360287bf93c20e4c66bf2 | 9028 | present |
+| release/v1_5_rc/NON_CLAIM_BOUNDARIES.md | True | a21cbd92dad27e47574927d1a1c3f1f047a39a4a928aecd0a8ef9d9abb94a034 | 4066 | present |
+| release/v1_5_rc/RELEASE_MANIFEST.json | True | d633c30922e8daba575213d89fa389619cc583b8c3d46e22e31f29f2cdcf87e4 | 3157 | present |
+| release/v1_5_rc/RELEASE_NOTES.md | True | f4915f88ec7fa544c43c61c400cf04bbc1d69149c3c8b905527796364790a519 | 9395 | present |
+| release/v1_5_rc/REPORT_MAP.md | True | c6f8bff277fb4052c800871a20dff6f671f9352f21abae7af035ef32922d0f2a | 7872 | present |
 | release/v1_5_rc/REVIEWER_BRIEFING.md | True | 2202990045d5b44f998b54e5b5c10da0682980088dbc2183526fe324c1620f25 | 6879 | present |
 | release/v1_5_rc/attack_pack/ATO_METHODS_REVIEW_ATTACKS.md | True | f75cdc89e4ff4f88585ba51841cbd62116b0de84f713608034253c1e27eaa977 | 1811 | present |
 | release/v1_5_rc/attack_pack/ATTACK_PACK_MANIFEST.json | True | 0aa959dc996b788c37a080e58166417c0266f26eb871daf401010dfca95268d6 | 1882 | present |
-| release/v1_5_rc/attack_pack/ATTACK_PACK_OVERVIEW.md | True | 7df8bb332766117f5c2ca8d86a5e2bda16352b1eb9b6c9bff5c07fe0faa0f0e2 | 3226 | present |
+| release/v1_5_rc/attack_pack/ATTACK_PACK_OVERVIEW.md | True | 3ad019fc85d7181652d94637bdbf3fe9bcbc6291252c800f1c6d9d9822db874e | 3668 | present |
 | release/v1_5_rc/attack_pack/BOUNDARY_CHECKS.md | True | 8dcc3cdb6f8d34b319741a4eb547fb85ef3d56d950b4034fa9ddf7f5264ac41e | 1220 | present |
 | release/v1_5_rc/attack_pack/ECONOMIC_METHODS_REVIEW_ATTACKS.md | True | 660ce2f822efa0f1fb65399d405ff599335d51a9ebc16c8a54d7a87e6974f1eb | 1835 | present |
 | release/v1_5_rc/attack_pack/HOSTILE_RED_TEAM_ATTACKS.md | True | e4072aba49bd7408f3b451c4ced5f33c6a7027efdc2991bf5ec765bc6a2a8080 | 1758 | present |
-| release/v1_5_rc/attack_pack/LAYER_ATTACK_MATRIX.md | True | 9bc37eca50ecaed84c2eb48afff24705aca73f889d331ec4c4eede2ab0c208a4 | 2254 | present |
+| release/v1_5_rc/attack_pack/LAYER_ATTACK_MATRIX.md | True | c135d6538aa175314b052616514247b449a0348e661a41804ac539bc9a9eab73 | 2712 | present |
 | release/v1_5_rc/attack_pack/LEGAL_REVIEW_ATTACKS.md | True | 912b1b017fda8c97bd55c3c62d91e665cd620700bf07b4470fa34da65f4425e9 | 1911 | present |
 | release/v1_5_rc/attack_pack/PARLIAMENTARY_COUNSEL_REVIEW_ATTACKS.md | True | 5157533f37fba8e9954014fb2aaa2c4b9ed56f17f4569d019b0c573b43754e5c | 1855 | present |
 | release/v1_5_rc/attack_pack/POLICY_REVIEW_ATTACKS.md | True | 08cff88973da73f9bd3aba326cf325a30247df6363d0d194c3d6ca1a18bf8d93 | 1996 | present |
 | release/v1_5_rc/attack_pack/PRIVACY_SECRECY_REVIEW_ATTACKS.md | True | 46877332e286c259c89438c5f35786c7693f6f09cb643f34b038b336ab0df33d | 1887 | present |
-| release/v1_5_rc/attack_pack/REPORT_ATTACK_MATRIX.md | True | 4b6e21d95103cb0058e02f9e5c75659cfb8e8f38fc76ac570bf41fe7a9fab850 | 2662 | present |
+| release/v1_5_rc/attack_pack/REPORT_ATTACK_MATRIX.md | True | 1b65a0ee47ab4a0d31fb33e6f958eaa4a495fb07b407bca4f92471411af930d5 | 3266 | present |
 | release/v1_5_rc/attack_pack/STATISTICAL_METHODS_REVIEW_ATTACKS.md | True | da0528b82643009bbb1f18b3eb0d00c21a09da9f29aa8b4b56e24d91e8dcddb6 | 1896 | present |
 | release/v1_5_rc/attack_pack/TAX_REVIEW_ATTACKS.md | True | be77c32d4ca3a50344d27b8737b6a5f15c429685d389e7da7fa9e9cf8882250f | 1908 | present |
 | release/v1_5_rc/attack_pack/TECHNICAL_REVIEW_ATTACKS.md | True | cab7dbaca24e87e94e4de2c5b74ad258b419f52575ae60c8889f2c4c35ba8d41 | 1822 | present |
 | release/v1_5_rc/attack_pack/TREASURY_METHODS_REVIEW_ATTACKS.md | True | c15005361a5aab9014851a3ecc92aec1785e97f6c6e2a8f0ad1dcd6d0d693fe3 | 1856 | present |
 | release/v1_5_rc/attack_pack/WELFARE_POLICY_REVIEW_ATTACKS.md | True | 924e16840d2e4478f4bb3b91ed72cb4fe47598f829b2461e1cd1ac7ddd512741 | 1902 | present |
-| reports/administrative_compliance_workflow.json | True | 8c438c6c6d7ace28506a1a9d0e921dc8aa4c6f27a0999f1c3af59e73ee0a77c5 | 223206 | present |
-| reports/administrative_compliance_workflow.md | True | fec6a447e4dc103d5ab3f0ff147ac9edf457b820ec633d12e0f128c2c44dcea5 | 32885 | present |
-| reports/behavioural_response_simulation.json | True | 243f5f5eee3d5e1f17a6bc179daec754f37ee36741ee5ea31c318ba25b65a4b0 | 95790 | present |
-| reports/behavioural_response_simulation.md | True | eb81ebe0fde18e2fd61f5da905d49302d7cbe7ff5c634340213c13a5ed7e6fd3 | 18118 | present |
-| reports/executive_dashboard.json | True | 5659db3c7a4c866c24e308fe4ad2e2f6363a08975a85767db8396ea6837e679a | 128997 | present |
-| reports/executive_dashboard.md | True | a382297866aafdfbf90257e1bcd358a4061452538ddc43576b47feefe4d82ee6 | 57809 | present |
-| reports/external_review_attack_pack.json | True | 70949d4e363c38ef4e163c06ca34ba27d50d1305436bda53b1a8063cfc89a4cd | 385858 | present |
-| reports/external_review_attack_pack.md | True | 184ff4474fb77b072eb8ae50735373e56a5b4f8a9505f6c972384ed94a6a4276 | 179419 | present |
-| reports/legislative_architecture.json | True | 12bdd945715dcb2bcf3e0609ad7f901eacb78c46ed54bb7d3ae8e9aa2f759f22 | 111506 | present |
-| reports/legislative_architecture.md | True | 9a92057904e58130aefed856513bfabd11aeed51eee8008ee4b730340f24421f | 58342 | present |
-| reports/sector_stress_matrix.json | True | da29a816f7e3a0bf4226741c6c3b26a0259740cabd30bec67f0aaa7a4d0ef22a | 41062 | present |
-| reports/sector_stress_matrix.md | True | fbddb49ce6d8a1e943b75d426950799ee737c6295b074af11bc0cca9e8a9b20b | 15896 | present |
-| reports/v1_5_release_candidate_pack.json | True | ae3b563afd9e6f9a0221b46e917ff9d0a064c4567d1403c60263593e5834b083 | 132290 | present |
-| reports/v1_5_release_candidate_pack.md | True | 46b9f10721396c326b0b9e87c1bc7d48f3065c471953fa1c91da912e8950c517 | 53284 | present |
+| reports/administrative_compliance_workflow.json | True | 5c8e83d83d2766e7c306cfb64079e778c1c4662c1c4ef9a310f426e1b22a5f57 | 223206 | present |
+| reports/administrative_compliance_workflow.md | True | d41de13c09b7b3e0117817882bd7672b37fad8241fc4d2a45e991cd99a19bb00 | 32885 | present |
+| reports/behavioural_response_simulation.json | True | be98100e392eee6f5f30351f5e8a9dfb59e0da1c43ce5f66dff86665a0f54b1f | 95790 | present |
+| reports/behavioural_response_simulation.md | True | 3081543fa3f4b445cdbb4899eef1c36b9ed82478bfcfd454fdabf1ca926e8c4c | 18118 | present |
+| reports/executive_dashboard.json | True | ae8da71e9474f3853bafd3e3e382c938209a4025544b949b63bada39f45b5c4d | 135222 | present |
+| reports/executive_dashboard.md | True | 2ae9a87df0381e0632498d9c6c5eeff30348325b8f2575559f70bfbd3d19d141 | 60655 | present |
+| reports/external_review_attack_pack.json | True | 882aec65a1e0c519559a57f759ccbd99604a189d1f12d9c99cc201cdb291fe93 | 390818 | present |
+| reports/external_review_attack_pack.md | True | 88f785495c2e0225e6e6154282ea8ded04a3d6f050a8b0eb3ff373b165f69e65 | 182585 | present |
+| reports/legislative_architecture.json | True | c3f83300345d72593c9c1ff263a0ebd067a8b92b6c763dd127a085411bded334 | 111506 | present |
+| reports/legislative_architecture.md | True | 4cfa732a0ea20829e3ec946d41bb53d8c15e7bd46273d9dc6574152ca65ad8b6 | 58342 | present |
+| reports/sector_stress_matrix.json | True | ebd7eb34e4234e073c64a47f387487b2b6d0a0153860f2d9c4d9951c8744691a | 41062 | present |
+| reports/sector_stress_matrix.md | True | 43b42f44c04347ee653c2467f39c4f351611682b5dd097561f301c39dd7b1d45 | 15896 | present |
+| reports/v1_5_release_candidate_pack.json | True | da1b50b75aa28c98034ece82a457110a8c269bd5e794113dfbbf17326bb81fcb | 137909 | present |
+| reports/v1_5_release_candidate_pack.md | True | 7574409f948caa69dd593e7fc87a5699a6b98abcbf1ba048e62287c7b0fa9fce | 55711 | present |
 
 ## I. False Flag Verification
 

@@ -6,6 +6,8 @@ Status: V1.5 prototype calibration scaffolding.
 
 The calibration shell identifies the datasets and review pathways needed before CARSF parameters could be calibrated. It does not contain real calibration values.
 
+Build 29 adds `reports/public_data_consistency_audit.md` and `reports/public_data_consistency_audit.json` as an internal consistency audit over the public-data pilot. It loads no new data, does not externally verify source values, does not scrape public sources, does not call external APIs, and does not complete calibration. Reconciled means internally consistent only.
+
 ## Required Data Categories
 
 Future calibration would require source categories including:
@@ -333,7 +335,13 @@ The public-data evidence map makes the Build 27 pilot easier for reviewers to in
 
 No new data is loaded by Build 28. The evidence map is not calibration, calibration has not been completed, public data does not prove the model works, confidence labels are not validation scores, realistic placeholders remain placeholders, source references are not loaded datasets, restricted-data requirements are not data access, and no actual tax payable is determined. It is not legal advice, tax advice, ATO guidance, Treasury modelling, PBO costing, economic validation, welfare validation, statistical validation, operational readiness, legal sufficiency, official status, or firm-level liability modification.
 
-Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-28 are included in a later sealed RC.
+## Public Data Consistency Audit
+
+The public-data consistency audit reconciles the Build 27 pilot and Build 28 evidence map. It checks source-reference-to-extract mapping, loaded-public-extract metadata, source-reference-only counting, Fair Work wage arithmetic, placeholder boundaries, module calibration boundaries, restricted blockers, forbidden repo data, digest metadata, report JSON agreement, dashboard source, non-claim boundaries, and forbidden affirmative claims.
+
+No new data is loaded by Build 29. The audit does not externally verify source values, does not scrape public sources, does not call external APIs, is not calibration, calibration has not been completed, public data does not prove the model works, and reconciled means internally consistent only. It does not determine actual tax payable, claim validation, approval, legal sufficiency, operational readiness, official status, ATO guidance, Treasury modelling, PBO costing, or firm-level liability modification.
+
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-29 are included in a later sealed RC.
 
 ## Non-Claims
 

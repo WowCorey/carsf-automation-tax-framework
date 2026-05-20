@@ -1,5 +1,23 @@
 # Build Log
 
+## V1.5 Public Data Pilot Consistency Audit and Source Reconciliation
+
+Branch: `v1.5-public-data-pilot-consistency-audit-source-reconciliation`
+
+Purpose of this build:
+
+- Add an internal consistency audit over Build 27 and Build 28 public-data pilot artefacts.
+- Reconcile source references, loaded public extracts, source-reference-only rows, placeholder anchors, field/module sanity checks, digest metadata, generated reports, dashboard source, restricted blockers, forbidden repo data, and non-claim boundaries.
+- Preserve Fair Work arithmetic consistency for `24.95 * 38 = 948.10`.
+- Generate `reports/public_data_consistency_audit.md` and `reports/public_data_consistency_audit.json`.
+
+Limitations:
+
+- Internal consistency audit only.
+- No new data loaded, no scraping, no API calls, and no external source verification claim.
+- Not calibration, validation, legal advice, tax advice, ATO guidance, Treasury modelling, PBO costing, economic validation, welfare validation, statistical validation, operational readiness, legal sufficiency, official status, or actual tax-payable evidence.
+- Does not modify firm-level CARSF liability.
+
 ## V1.5 Working Paper Release Candidate Pack
 
 Branch: `v1.5-working-paper-release-candidate-pack`

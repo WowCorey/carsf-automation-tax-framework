@@ -1030,6 +1030,52 @@ prototype_layers:
       - treasury_methods_reviewer
       - ato_methods_reviewer
     main_reason: Build 28 makes the public-data pilot reviewable without adding data or calibration claims.
+  - layer_id: public_data_consistency_audit
+    layer_name: Public Data Pilot Consistency Audit
+    layer_group: calibration
+    summary: Internal consistency and source-reconciliation audit over Build 27 and Build 28 public-data pilot artefacts without loading new data.
+    primary_files:
+      - model/carsf/public_data_consistency_audit.py
+      - data/public_pilot/consistency_audit_manifest.yaml
+      - scripts/run_public_data_consistency_audit.py
+      - simulator/pages/29_Public_Data_Evidence_Map.py
+      - docs/public_data_consistency_audit.md
+    primary_reports:
+      - reports/public_data_consistency_audit.md
+      - reports/public_data_consistency_audit.json
+    streamlit_pages:
+      - simulator/pages/29_Public_Data_Evidence_Map.py
+    status_labels:
+      - prototype_only
+      - placeholder_only
+      - generated_report_available
+      - calibration_required
+      - external_review_required
+      - not_for_real_world_use
+    non_claim_flags:
+      - not_calibrated
+      - not_statistical_validation
+      - not_operational_readiness
+      - not_official_status
+    calibration_blockers:
+      - Internal reconciliation is not external source verification and calibration remains incomplete.
+      - Restricted-data blockers and forbidden repo-data boundaries remain preserved.
+    external_review_blockers:
+      - Technical, privacy, statistical, legal, tax, Treasury-methods, and ATO-methods review remain required.
+    must_not_be_used_for:
+      - external source verification
+      - calibration completed
+      - validation
+      - official status
+      - actual tax payable
+      - readiness score
+    recommended_reviewer:
+      - technical_reviewer
+      - privacy_reviewer
+      - statistical_methods_reviewer
+      - treasury_methods_reviewer
+      - ato_methods_reviewer
+    main_reason: Build 29 checks internal consistency across source records, reports, digests, dashboard source, and non-claim boundaries.
 generated_reports:
   - {report_path: reports/v1_5_release_candidate_pack.md, layer_id: release_candidate_pack, generated_by: python scripts/run_v1_5_release_candidate_pack.py, what_it_shows: release-candidate pack summary, what_it_does_not_show: no readiness score or official status, primary_non_claim: release packaging only, recommended_reviewer: [policy_reviewer, technical_reviewer], suggested_read_order: 2, optional: true}
   - {report_path: reports/v1_5_release_candidate_pack.json, layer_id: release_candidate_pack, generated_by: python scripts/run_v1_5_release_candidate_pack.py, what_it_shows: release-candidate pack data, what_it_does_not_show: no readiness score or official status, primary_non_claim: release packaging only, recommended_reviewer: [technical_reviewer], suggested_read_order: 2, optional: true}
@@ -1041,6 +1087,8 @@ generated_reports:
   - {report_path: reports/public_data_pilot.json, layer_id: public_data_pilot, generated_by: python scripts/run_public_data_pilot.py, what_it_shows: machine-readable public-data pilot registry and summary flags, what_it_does_not_show: calibration completed validation official status tax-payable use or proof that CARSF works, primary_non_claim: public-data pilot only, recommended_reviewer: [technical_reviewer], suggested_read_order: 5, optional: false}
   - {report_path: reports/public_data_evidence_map.md, layer_id: public_data_evidence_map, generated_by: python scripts/run_public_data_evidence_map.py, what_it_shows: reviewer evidence map over source references loaded extracts placeholders sanity checks blockers and questions, what_it_does_not_show: new data loaded calibration completed validation official status or tax-payable use, primary_non_claim: reviewer evidence map only, recommended_reviewer: [technical_reviewer, privacy_reviewer, statistical_methods_reviewer], suggested_read_order: 6, optional: false}
   - {report_path: reports/public_data_evidence_map.json, layer_id: public_data_evidence_map, generated_by: python scripts/run_public_data_evidence_map.py, what_it_shows: machine-readable evidence map and summary flags, what_it_does_not_show: new data loaded calibration completed validation official status or tax-payable use, primary_non_claim: reviewer evidence map only, recommended_reviewer: [technical_reviewer], suggested_read_order: 6, optional: false}
+  - {report_path: reports/public_data_consistency_audit.md, layer_id: public_data_consistency_audit, generated_by: python scripts/run_public_data_consistency_audit.py, what_it_shows: internal consistency audit over source references extracts evidence rows digests reports and dashboard source, what_it_does_not_show: external source verification calibration completed validation official status or tax-payable use, primary_non_claim: internal consistency audit only, recommended_reviewer: [technical_reviewer, privacy_reviewer, statistical_methods_reviewer], suggested_read_order: 7, optional: false}
+  - {report_path: reports/public_data_consistency_audit.json, layer_id: public_data_consistency_audit, generated_by: python scripts/run_public_data_consistency_audit.py, what_it_shows: machine-readable consistency audit and false flags, what_it_does_not_show: external source verification calibration completed validation official status or tax-payable use, primary_non_claim: internal consistency audit only, recommended_reviewer: [technical_reviewer], suggested_read_order: 7, optional: false}
   - {report_path: reports/example_results.md, layer_id: worked_examples, generated_by: python scripts/run_examples.py, what_it_shows: worked example formula outputs, what_it_does_not_show: calibrated firm outcomes, primary_non_claim: prototype placeholders only, recommended_reviewer: [technical_reviewer, policy_reviewer], suggested_read_order: 5}
   - {report_path: reports/example_results.json, layer_id: worked_examples, generated_by: python scripts/run_examples.py, what_it_shows: machine-readable worked example outputs, what_it_does_not_show: calibrated firm outcomes, primary_non_claim: prototype placeholders only, recommended_reviewer: [technical_reviewer], suggested_read_order: 5}
   - {report_path: reports/grouped_entity_results.md, layer_id: worked_examples, generated_by: python scripts/run_examples.py, what_it_shows: grouped-entity preview outputs, what_it_does_not_show: legal grouping results, primary_non_claim: non-operative preview only, recommended_reviewer: [legal_reviewer, tax_reviewer], suggested_read_order: 6}

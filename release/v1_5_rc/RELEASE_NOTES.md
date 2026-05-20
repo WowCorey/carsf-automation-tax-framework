@@ -71,4 +71,12 @@ Build 28 adds a reviewer evidence map and Streamlit dashboard for the Build 27 p
 
 No new data is loaded by Build 28. Build 27 public aggregate extracts remain sanity-check-only or placeholder-anchor-only. This is not calibration, calibration has not been completed, public data does not prove the model works, realistic placeholders remain placeholders, source references are not loaded datasets, and restricted-data requirements are not data access. The layer does not determine actual tax payable, does not claim validation, approval, legal sufficiency, operational readiness, official status, ATO guidance, Treasury modelling, PBO costing, or modify firm-level CARSF liability.
 
-Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-28 are included in a later sealed RC.
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-29 are included in a later sealed RC.
+
+## Build 29 Public-Data Consistency Audit Addendum
+
+Build 29 adds an internal consistency audit and source-reconciliation layer for the Build 27 public-data pilot and Build 28 evidence map. It reconciles source references, loaded public extracts, source-reference-only records, placeholder anchors, field sanity checks, module sanity checks, digest metadata, generated reports, dashboard source, restricted blockers, forbidden repo data, and non-claim boundaries.
+
+No new data is loaded by Build 29. It does not externally verify source values, scrape public sources, call external APIs, complete calibration, prove the model works, determine actual tax payable, claim validation, approval, legal sufficiency, operational readiness, official status, ATO guidance, Treasury modelling, PBO costing, or modify firm-level CARSF liability. Reconciled means internally consistent only.
+
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-29 are included in a later sealed RC.

@@ -143,6 +143,7 @@ prototype_layers:
   - real_data_feasibility
   - public_data_pilot
   - public_data_evidence_map
+  - public_data_consistency_audit
   - working_paper
   - status_risks_docs
 generated_reports:
@@ -198,6 +199,8 @@ generated_reports:
   - reports/public_data_pilot.json
   - reports/public_data_evidence_map.md
   - reports/public_data_evidence_map.json
+  - reports/public_data_consistency_audit.md
+  - reports/public_data_consistency_audit.json
 attack_categories:
   - overclaiming_risk
   - hidden_assumption_risk
