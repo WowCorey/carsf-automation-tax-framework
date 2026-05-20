@@ -67,6 +67,8 @@ Build 26 adds `reports/real_data_feasibility.md` as a feasibility and calibratio
 
 Build 27 adds `reports/public_data_pilot.md` as a public aggregate-data pilot and realistic-placeholder anchor layer. It may include small public aggregate extracts and source-reference records, but it is not calibration, public data extracts do not prove the model works, realistic placeholders remain placeholders, and restricted-data blockers remain unresolved.
 
+Build 28 adds `reports/public_data_evidence_map.md` and `simulator/pages/29_Public_Data_Evidence_Map.py` as a reviewer evidence map over the Build 27 pilot. It loads no new data, adds no public extract values, and must not be read as calibration, validation, legal sufficiency, operational readiness, official status, ATO guidance, Treasury modelling, PBO costing, or actual tax-payable evidence.
+
 ## Relationship to Release Candidate Pack
 
 Build 23 adds `release/v1_5_rc/` and `reports/v1_5_release_candidate_pack.*`. The executive dashboard remains the navigation entry point; the release-candidate pack packages the working paper, release notes, reviewer briefing, report map, calibration blockers, non-claim boundaries, and external-review routing for external review.

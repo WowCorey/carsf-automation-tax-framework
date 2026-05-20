@@ -43,6 +43,9 @@ It does not determine actual tax payable, does not use taxpayer-level data, firm
 - Realistic placeholders are not real data and are not calibrated.
 - Build 27 public aggregate extracts are sanity-check-only or placeholder-anchor-only records.
 - Build 27 public aggregate extracts do not prove the model works and do not complete calibration.
+- Build 28 public-data evidence-map outputs load no new data.
+- Build 28 confidence labels are not validation scores, readiness scores, maturity scores, approval, or calibration.
+- Build 28 reviewer questions are not completed review, validation, official status, legal sufficiency, operational readiness, or actual tax-payable evidence.
 - Source references are not loaded datasets.
 
 ## Interpretation Rule
@@ -55,4 +58,4 @@ The final RC integrity seal is an internal artefact check only. It verifies rele
 
 It does not mean approval, validation, external review completion, operational readiness, legal sufficiency, legislative readiness, official status, implementation readiness, or firm-level CARSF liability modification.
 
-Build 25 sealed the previous RC state. Build 26 and Build 27 add artefacts after that seal; a later sealed RC must regenerate the integrity seal if Build 27 is included.
+Build 25 sealed the previous RC state. Builds 26-28 add artefacts after that seal; a later sealed RC must regenerate the integrity seal if those builds are included.

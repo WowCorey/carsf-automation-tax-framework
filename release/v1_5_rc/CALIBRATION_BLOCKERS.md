@@ -23,6 +23,7 @@ This calibration blocker summary is for a private research prototype and release
 - Open-source AI treatment: still requires legal, tax, policy, and technical review.
 - R&D Tax Incentive interaction: still requires policy, legal, tax, and Treasury review.
 - Real-data feasibility: public-data pilot source handling, licensing, provenance, aggregate-only controls, restricted-data exclusion, and realistic-placeholder labelling require technical, privacy, statistical, legal, tax, Treasury, and ATO-methods review.
+- Public-data evidence map: source-locator review, arithmetic-check review, source-reference-only counting, placeholder-anchor interpretation, restricted blocker preservation, reviewer-question coverage, and dashboard wording require technical, privacy, statistical, legal, tax, Treasury, ATO-methods, and hostile-review inspection.
 
 ## Consolidated Position
 
@@ -32,8 +33,10 @@ Build 26 maps feasibility only. No real data has been loaded and no calibration 
 
 Build 27 adds small public aggregate/source-reference records and realistic-placeholder anchors only. Those records are sanity-check-only or placeholder-anchor-only. They do not complete calibration, prove the model works, determine actual tax payable, create validation, or remove restricted-data blockers.
 
+Build 28 maps the Build 27 records for reviewer inspection only. It loads no new data, adds no public extract values, does not complete calibration, does not prove the model works, does not determine actual tax payable, does not create validation, and does not remove restricted-data blockers.
+
 ## Final RC Integrity Seal Note
 
 The final RC integrity seal checks that blocker documents, reports, manifests, attack-pack documents, non-claim boundaries, CI expectations, and guardrail expectations remain visible. It does not resolve any blocker and is not approval, validation, external review completion, legal sufficiency, operational readiness, legislative readiness, official status, a readiness score, a maturity score, or firm-level liability modification.
 
-Build 25 sealed the previous RC state. If Build 26 or Build 27 is included in a later sealed RC, the integrity seal must be regenerated for that later state.
+Build 25 sealed the previous RC state. If Builds 26-28 are included in a later sealed RC, the integrity seal must be regenerated for that later state.

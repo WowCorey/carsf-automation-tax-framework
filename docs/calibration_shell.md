@@ -327,6 +327,14 @@ This is not calibration. Calibration has not been completed. Public data extract
 
 Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Build 27 is included in a later sealed RC.
 
+## Public Data Reviewer Evidence Map
+
+The public-data evidence map makes the Build 27 pilot easier for reviewers to inspect. It maps source references, loaded public aggregate extract evidence rows, source-reference-only rows, realistic placeholder anchors, field sanity checks, module sanity checks, restricted-data blockers, forbidden repo data, and reviewer questions.
+
+No new data is loaded by Build 28. The evidence map is not calibration, calibration has not been completed, public data does not prove the model works, confidence labels are not validation scores, realistic placeholders remain placeholders, source references are not loaded datasets, restricted-data requirements are not data access, and no actual tax payable is determined. It is not legal advice, tax advice, ATO guidance, Treasury modelling, PBO costing, economic validation, welfare validation, statistical validation, operational readiness, legal sufficiency, official status, or firm-level liability modification.
+
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-28 are included in a later sealed RC.
+
 ## Non-Claims
 
 The calibration shell is not legal, tax, Treasury, ATO, ABS, Fair Work, OECD, BEPS, audit, forensic, or economic validation. It does not prove any model setting is correct.

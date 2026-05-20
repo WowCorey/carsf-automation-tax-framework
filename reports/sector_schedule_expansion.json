@@ -1,7 +1,7 @@
 {
   "metadata": {
     "firm_level_liability_logic_modified": false,
-    "generated_at": "2026-05-19T04:39:19+00:00",
+    "generated_at": "2026-05-20T02:07:16+00:00",
     "non_claims": [
       "Sector schedules are prototype placeholders only. They are not calibrated. They are not legal schedules. They are not Treasury schedules. They are not ATO guidance. They are not ABS/ATO/DSS/PBO analysis. They do not contain real industry data. They must not be used to estimate actual tax payable.",
       "Sector schedules do not modify firm-level CARSF liability logic.",

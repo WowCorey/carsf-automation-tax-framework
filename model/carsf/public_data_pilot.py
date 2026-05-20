@@ -127,6 +127,7 @@ NEGATIVE_CONTEXT_MARKERS = [
     "does_not_show",
     "claim_level",
     "what it does not",
+    "must not infer",
 ]
 
 FORBIDDEN_PUBLIC_PILOT_PATH_PARTS = {
@@ -382,9 +383,11 @@ def _inside_claim_inventory(text: str, index: int) -> bool:
         or "must_not_claim" in line
         or "must not claim" in line
         or "must_not_be_used_for" in line
+        or "must not infer" in line
         or '"must_not_claim"' in preceding
         or "forbidden_claims" in preceding
         or "must not claim" in preceding
+        or "must not infer" in preceding
     )
 
 

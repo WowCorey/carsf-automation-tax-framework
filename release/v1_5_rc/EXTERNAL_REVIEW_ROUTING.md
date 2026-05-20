@@ -20,6 +20,7 @@ Suggested routing is review navigation only and is not an official process.
 | Cybersecurity / DLP / repository controls | ingestion controls and repo guardrails | `reports/secure_ingestion_controls.md`, `reports/repo_guardrails.md` | What external controls are required before any evidence-adjacent use? |
 | Hostile red-team | all boundary layers | `docs/known_risks.md`, `reports/executive_dashboard.md` | Where could a reader overclaim validation, readiness, official status, or real-world use? |
 | Real-data feasibility | data-source intake, forbidden-data rules, placeholder provenance, Build 27 pilot candidates | `reports/real_data_feasibility.md`, `docs/real_data_feasibility.md` | Are public-source licensing, aggregate-only handling, restricted-data exclusion, realistic-placeholder labels, and no-calibration boundaries strong enough? |
+| Public-data evidence map | source references, loaded public extracts, source-reference-only rows, placeholder anchors, sanity checks, restricted blockers | `reports/public_data_evidence_map.md`, `simulator/pages/29_Public_Data_Evidence_Map.py` | Are evidence classifications, confidence labels, arithmetic checks, and reviewer questions clear without implying calibration, validation, tax-payable evidence, ATO guidance, Treasury modelling, or official status? |
 
 ## Attack-Pack Routing Addendum
 
@@ -60,3 +61,11 @@ Non-claim:
 Build 26 does not load real data, does not complete calibration, and does not grant restricted-data access. Public-data candidates are not loaded datasets. Restricted-data requirements are not data access. Realistic placeholders are not real data and are not calibrated.
 
 Build 25 sealed the previous RC state. If Build 26 is included in a later sealed RC, the integrity seal must be regenerated for that later state rather than treated as already covering Build 26.
+
+## Build 28 Public-Data Evidence Map Routing Addendum
+
+Build 28 loads no new data and adds no new public aggregate extract values. It maps the Build 27 pilot for reviewer inspection only, including source references, loaded public extract evidence rows, source-reference-only rows, realistic placeholder anchors, field sanity checks, module sanity checks, restricted blockers, forbidden repo data, and reviewer questions.
+
+It is not calibration, validation, approval, legal advice, tax advice, ATO guidance, Treasury modelling, PBO costing, economic validation, welfare validation, statistical validation, operational readiness, legal sufficiency, or official status. It does not determine actual tax payable and does not modify firm-level CARSF liability.
+
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-28 are included in a later sealed RC.
