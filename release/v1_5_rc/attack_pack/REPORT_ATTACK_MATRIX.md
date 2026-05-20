@@ -22,6 +22,8 @@ The generated attack-pack report builds the report-by-report matrix from the V1.
 
 `reports/public_data_pilot.md`, `reports/public_data_pilot.json`, and `data/public_pilot/digests/public_data_pilot_digests.json` are attack targets for the public aggregate-data pilot. Attack them for source provenance gaps, source-reference-only counting errors, realistic-placeholder labelling failure, digest self-hash or drift, restricted-data boundary failure, and any wording that could imply completed calibration, model proof, actual tax payable, validation, approval, official status, or firm-level liability modification.
 
+`reports/public_data_evidence_map.md` and `reports/public_data_evidence_map.json` are attack targets for the reviewer evidence map. Attack them for Build 28 new-data leakage, source-reference-only records counted as loaded data, loaded extract rows without source locators or value-review status, missing Fair Work arithmetic representation, ATO/Treasury/Super overread, placeholder anchors labelled as real data, module sanity checks implying calibration, and any wording that could imply completed calibration, model proof, tax-payable use, validation, approval, official status, ATO guidance, Treasury modelling, PBO costing, or firm-level liability modification.
+
 ## What Not To Infer
 
 The matrix is not validation, not approval, not a readiness metric, and not government endorsement.

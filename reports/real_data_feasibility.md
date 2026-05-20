@@ -249,4 +249,4 @@ Behavioural response pressure bands, administrative workflow routing, anti-avoid
 - Build 26 loads no real datasets and creates no calibration values.
 - Realistic placeholders must remain labelled as placeholders and must not be described as real data.
 - Build 25 sealed the previous RC state; if Build 26 is included in a later sealed RC, the integrity seal should be regenerated for that state.
-- Report generated at: 2026-05-19T04:39:23+00:00
+- Report generated at: 2026-05-20T02:07:20+00:00

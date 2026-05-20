@@ -77,6 +77,9 @@ jobs:
       - name: Run public data pilot
         run: python scripts/run_public_data_pilot.py
 
+      - name: Run public data evidence map
+        run: python scripts/run_public_data_evidence_map.py
+
       - name: Run mock evidence workflow
         run: python scripts/run_evidence_workflow.py
 

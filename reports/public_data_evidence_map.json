@@ -1,0 +1,2361 @@
+{
+  "metadata": {
+    "confidence_label_values": [
+      "arithmetic_checked",
+      "blocked_until_restricted_data_access",
+      "external_review_required",
+      "placeholder_anchor_only",
+      "source_locator_recorded",
+      "source_reference_only"
+    ],
+    "evidence_status_values": [
+      "blocked_by_restricted_data",
+      "forbidden_for_repo_use",
+      "loaded_public_aggregate",
+      "realistic_placeholder_anchor",
+      "source_reference_only",
+      "synthetic_fixture"
+    ],
+    "generated_at": "2026-05-20T02:07:20+00:00",
+    "non_claims": [
+      "This is a reviewer evidence map and dashboard for the public data pilot only. No new data is loaded by this build. Build 27 public aggregate extracts remain sanity-check-only or placeholder-anchor-only. This is not calibration, calibration has not been completed, public data does not prove the model works, realistic placeholders remain placeholders, realistic placeholders are not real data, realistic placeholders are not calibrated, source references are not loaded datasets, and restricted-data requirements are not data access. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab, HILDA microdata, DSS/Services Australia records, ATO taxpayer records, Treasury/PBO confidential material, or restricted government data, and does not modify firm-level CARSF liability. It only maps evidence for reviewer inspection.",
+      "Confidence labels are evidence classification labels only; they are not validation scores, not readiness scores, not maturity scores, and not approval.",
+      "Source-reference-only records are mapped for review but are not counted as loaded public data.",
+      "Reviewer questions are prompts for inspection and do not mean external review has occurred."
+    ],
+    "reviewer_interpretation_values": [
+      "inspect_arithmetic",
+      "inspect_blocker",
+      "inspect_non_claim_boundary",
+      "inspect_placeholder_basis",
+      "inspect_source",
+      "not_evidence_for_calibration",
+      "not_evidence_for_tax_payable",
+      "not_evidence_for_validation"
+    ],
+    "status": "reviewer_evidence_map_only",
+    "version": "CARSF V1.5 prototype"
+  },
+  "public_data_evidence_map": {
+    "build_29_requirements": [
+      "Source-reconciliation audit should check source locator metadata against public source references without loading new data.",
+      "Source-reference-only records should remain excluded from loaded public data counts.",
+      "Placeholder anchors should remain labelled as placeholders until external review and authorised calibration design.",
+      "Restricted-data blockers and forbidden repo data rules should remain visible."
+    ],
+    "evidence_map_id": "carsf_v1_5_public_data_pilot_reviewer_evidence_map",
+    "evidence_map_name": "CARSF V1.5 Public Data Pilot Reviewer Evidence Map",
+    "field_sanity_evidence": [
+      {
+        "check_id": "check_opfte_public_wage_anchor",
+        "check_status": "passed",
+        "check_type": "value_presence_check",
+        "claim_level": "placeholder_anchor_only",
+        "confidence_label": "arithmetic_checked",
+        "evidence_id": "field_check_opfte_public_wage_anchor",
+        "evidence_status": "loaded_public_aggregate",
+        "field_id": "opfte_benchmarks",
+        "field_name": "OPFTE benchmarks",
+        "finding": "A public wage threshold exists as a small placeholder anchor; it does not calibrate OPFTE.",
+        "linked_anchor_ids": [
+          "anchor_opfte_minimum_wage"
+        ],
+        "linked_extract_ids": [
+          "fair_work_minimum_wage_2025_extract"
+        ],
+        "reviewer_interpretation": [
+          "inspect_arithmetic",
+          "not_evidence_for_calibration"
+        ],
+        "reviewer_questions": [
+          "Does the linked extract remain source-located or source-reference-only?",
+          "Is the finding being read only as a sanity-check map?"
+        ],
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "actual tax payable"
+        ]
+      },
+      {
+        "check_id": "check_hle_public_wage_anchor",
+        "check_status": "warning",
+        "check_type": "range_plausibility_check",
+        "claim_level": "placeholder_anchor_only",
+        "confidence_label": "arithmetic_checked",
+        "evidence_id": "field_check_hle_public_wage_anchor",
+        "evidence_status": "loaded_public_aggregate",
+        "field_id": "hle_assumptions",
+        "field_name": "HLE assumptions",
+        "finding": "The public wage anchor can make HLE placeholders more realistic but cannot model actual human labour equivalents.",
+        "linked_anchor_ids": [
+          "anchor_hle_minimum_wage"
+        ],
+        "linked_extract_ids": [
+          "fair_work_minimum_wage_2025_extract"
+        ],
+        "reviewer_interpretation": [
+          "inspect_arithmetic",
+          "not_evidence_for_calibration"
+        ],
+        "reviewer_questions": [
+          "Does the linked extract remain source-located or source-reference-only?",
+          "Is the finding being read only as a sanity-check map?"
+        ],
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "actual tax payable"
+        ]
+      },
+      {
+        "check_id": "check_qlc_public_wage_anchor",
+        "check_status": "passed",
+        "check_type": "value_presence_check",
+        "claim_level": "placeholder_anchor_only",
+        "confidence_label": "arithmetic_checked",
+        "evidence_id": "field_check_qlc_public_wage_anchor",
+        "evidence_status": "loaded_public_aggregate",
+        "field_id": "qlc_weights",
+        "field_name": "QLC weights",
+        "finding": "A public wage threshold can anchor QLC placeholder units only.",
+        "linked_anchor_ids": [
+          "anchor_qlc_minimum_wage"
+        ],
+        "linked_extract_ids": [
+          "fair_work_minimum_wage_2025_extract"
+        ],
+        "reviewer_interpretation": [
+          "inspect_arithmetic",
+          "not_evidence_for_calibration"
+        ],
+        "reviewer_questions": [
+          "Does the linked extract remain source-located or source-reference-only?",
+          "Is the finding being read only as a sanity-check map?"
+        ],
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "actual tax payable"
+        ]
+      },
+      {
+        "check_id": "check_fiscal_public_aggregate",
+        "check_status": "passed",
+        "check_type": "value_presence_check",
+        "claim_level": "sanity_check_only",
+        "confidence_label": "source_locator_recorded",
+        "evidence_id": "field_check_fiscal_public_aggregate",
+        "evidence_status": "loaded_public_aggregate",
+        "field_id": "fiscal_trajectory_assumptions",
+        "field_name": "Fiscal trajectory assumptions",
+        "finding": "Public aggregate values can sanity-check scale only and do not produce fiscal modelling.",
+        "linked_anchor_ids": [
+          "anchor_fiscal_public_aggregates"
+        ],
+        "linked_extract_ids": [
+          "ato_taxation_statistics_2022_23_extract",
+          "treasury_budget_2026_27_receipts_extract"
+        ],
+        "reviewer_interpretation": [
+          "inspect_source",
+          "not_evidence_for_calibration"
+        ],
+        "reviewer_questions": [
+          "Does the linked extract remain source-located or source-reference-only?",
+          "Is the finding being read only as a sanity-check map?"
+        ],
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "actual tax payable"
+        ]
+      },
+      {
+        "check_id": "check_payg_public_tax_stats",
+        "check_status": "warning",
+        "check_type": "range_plausibility_check",
+        "claim_level": "sanity_check_only",
+        "confidence_label": "source_locator_recorded",
+        "evidence_id": "field_check_payg_public_tax_stats",
+        "evidence_status": "loaded_public_aggregate",
+        "field_id": "payg_erosion_assumptions",
+        "field_name": "PAYG erosion assumptions",
+        "finding": "Public tax totals provide context but do not identify CARSF-related PAYG erosion.",
+        "linked_anchor_ids": [
+          "anchor_payg_public_tax_stats"
+        ],
+        "linked_extract_ids": [
+          "ato_taxation_statistics_2022_23_extract"
+        ],
+        "reviewer_interpretation": [
+          "inspect_source",
+          "not_evidence_for_calibration"
+        ],
+        "reviewer_questions": [
+          "Does the linked extract remain source-located or source-reference-only?",
+          "Is the finding being read only as a sanity-check map?"
+        ],
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "actual tax payable"
+        ]
+      },
+      {
+        "check_id": "check_super_public_threshold",
+        "check_status": "passed",
+        "check_type": "value_presence_check",
+        "claim_level": "placeholder_anchor_only",
+        "confidence_label": "source_locator_recorded",
+        "evidence_id": "field_check_super_public_threshold",
+        "evidence_status": "loaded_public_aggregate",
+        "field_id": "superannuation_contribution_pressure",
+        "field_name": "Superannuation contribution pressure",
+        "finding": "Public rate setting can anchor a placeholder pressure field only.",
+        "linked_anchor_ids": [
+          "anchor_super_guarantee_rate"
+        ],
+        "linked_extract_ids": [
+          "super_guarantee_2025_26_extract"
+        ],
+        "reviewer_interpretation": [
+          "inspect_source",
+          "not_evidence_for_calibration"
+        ],
+        "reviewer_questions": [
+          "Does the linked extract remain source-located or source-reference-only?",
+          "Is the finding being read only as a sanity-check map?"
+        ],
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "actual tax payable"
+        ]
+      },
+      {
+        "check_id": "check_help_source_reference",
+        "check_status": "warning",
+        "check_type": "source_reference_check",
+        "claim_level": "source_reference_only",
+        "confidence_label": "source_reference_only",
+        "evidence_id": "field_check_help_source_reference",
+        "evidence_status": "source_reference_only",
+        "field_id": "help_hecs_repayment_pressure",
+        "field_name": "HELP repayment pressure",
+        "finding": "HELP threshold source is referenced but not extracted as a loaded public value in this build.",
+        "linked_anchor_ids": [
+          "anchor_help_source_reference"
+        ],
+        "linked_extract_ids": [
+          "help_threshold_source_reference_extract"
+        ],
+        "reviewer_interpretation": [
+          "inspect_source",
+          "not_evidence_for_calibration"
+        ],
+        "reviewer_questions": [
+          "Does the linked extract remain source-located or source-reference-only?",
+          "Is the finding being read only as a sanity-check map?"
+        ],
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "actual tax payable"
+        ]
+      },
+      {
+        "check_id": "check_payroll_tax_source_reference",
+        "check_status": "warning",
+        "check_type": "source_reference_check",
+        "claim_level": "source_reference_only",
+        "confidence_label": "source_reference_only",
+        "evidence_id": "field_check_payroll_tax_source_reference",
+        "evidence_status": "source_reference_only",
+        "field_id": "state_payroll_tax_pressure",
+        "field_name": "State payroll tax pressure",
+        "finding": "State payroll threshold source is referenced but not used as a loaded value in this build.",
+        "linked_anchor_ids": [
+          "anchor_payroll_tax_source_reference"
+        ],
+        "linked_extract_ids": [
+          "qld_payroll_tax_source_reference_extract"
+        ],
+        "reviewer_interpretation": [
+          "inspect_source",
+          "not_evidence_for_calibration"
+        ],
+        "reviewer_questions": [
+          "Does the linked extract remain source-located or source-reference-only?",
+          "Is the finding being read only as a sanity-check map?"
+        ],
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "actual tax payable"
+        ]
+      },
+      {
+        "check_id": "check_household_microdata_blocked",
+        "check_status": "blocked",
+        "check_type": "blocked_by_restricted_data_check",
+        "claim_level": "blocked_by_restricted_data",
+        "confidence_label": "blocked_until_restricted_data_access",
+        "evidence_id": "field_check_household_microdata_blocked",
+        "evidence_status": "blocked_by_restricted_data",
+        "field_id": "household_weighting_assumptions",
+        "field_name": "Household weighting assumptions",
+        "finding": "Household weighting cannot be calibrated without authorised microdata methods outside the repo.",
+        "linked_anchor_ids": [],
+        "linked_extract_ids": [],
+        "reviewer_interpretation": [
+          "inspect_blocker",
+          "not_evidence_for_calibration"
+        ],
+        "reviewer_questions": [
+          "Does the linked extract remain source-located or source-reference-only?",
+          "Is the finding being read only as a sanity-check map?"
+        ],
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "actual tax payable"
+        ]
+      },
+      {
+        "check_id": "check_uncertainty_microdata_blocked",
+        "check_status": "blocked",
+        "check_type": "blocked_by_restricted_data_check",
+        "claim_level": "blocked_by_restricted_data",
+        "confidence_label": "blocked_until_restricted_data_access",
+        "evidence_id": "field_check_uncertainty_microdata_blocked",
+        "evidence_status": "blocked_by_restricted_data",
+        "field_id": "uncertainty_range_assumptions",
+        "field_name": "Uncertainty range assumptions",
+        "finding": "Public aggregates cannot create confidence intervals or calibrated uncertainty ranges.",
+        "linked_anchor_ids": [
+          "anchor_uncertainty_source_reference_only"
+        ],
+        "linked_extract_ids": [],
+        "reviewer_interpretation": [
+          "inspect_blocker",
+          "not_evidence_for_calibration"
+        ],
+        "reviewer_questions": [
+          "Does the linked extract remain source-located or source-reference-only?",
+          "Is the finding being read only as a sanity-check map?"
+        ],
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "actual tax payable"
+        ]
+      }
+    ],
+    "forbidden_repo_data_evidence": [
+      {
+        "affected_fields": [],
+        "affected_modules": [],
+        "blocker_id": "fd_tax_records",
+        "blocker_type": "forbidden_repo_data",
+        "confidence_label": "external_review_required",
+        "description": "confidential tax records",
+        "evidence_id": "forbidden_fd_tax_records",
+        "evidence_status": "forbidden_for_repo_use",
+        "required_access_or_review": [
+          "external system design if ever authorised",
+          "legal and privacy review"
+        ],
+        "what_reviewer_must_not_infer": [
+          "data access",
+          "safe repository use",
+          "calibration"
+        ],
+        "what_reviewer_should_check": [
+          "Check that forbidden data remains excluded from the repository."
+        ]
+      },
+      {
+        "affected_fields": [],
+        "affected_modules": [],
+        "blocker_id": "fd_firm_confidential_records",
+        "blocker_type": "forbidden_repo_data",
+        "confidence_label": "external_review_required",
+        "description": "firm confidential records",
+        "evidence_id": "forbidden_fd_firm_confidential_records",
+        "evidence_status": "forbidden_for_repo_use",
+        "required_access_or_review": [
+          "external system design if ever authorised",
+          "legal and privacy review"
+        ],
+        "what_reviewer_must_not_infer": [
+          "data access",
+          "safe repository use",
+          "calibration"
+        ],
+        "what_reviewer_should_check": [
+          "Check that forbidden data remains excluded from the repository."
+        ]
+      },
+      {
+        "affected_fields": [],
+        "affected_modules": [],
+        "blocker_id": "fd_person_level_records",
+        "blocker_type": "forbidden_repo_data",
+        "confidence_label": "external_review_required",
+        "description": "person-level records",
+        "evidence_id": "forbidden_fd_person_level_records",
+        "evidence_status": "forbidden_for_repo_use",
+        "required_access_or_review": [
+          "external system design if ever authorised",
+          "legal and privacy review"
+        ],
+        "what_reviewer_must_not_infer": [
+          "data access",
+          "safe repository use",
+          "calibration"
+        ],
+        "what_reviewer_should_check": [
+          "Check that forbidden data remains excluded from the repository."
+        ]
+      },
+      {
+        "affected_fields": [],
+        "affected_modules": [],
+        "blocker_id": "fd_household_microdata",
+        "blocker_type": "forbidden_repo_data",
+        "confidence_label": "external_review_required",
+        "description": "household microdata",
+        "evidence_id": "forbidden_fd_household_microdata",
+        "evidence_status": "forbidden_for_repo_use",
+        "required_access_or_review": [
+          "external system design if ever authorised",
+          "legal and privacy review"
+        ],
+        "what_reviewer_must_not_infer": [
+          "data access",
+          "safe repository use",
+          "calibration"
+        ],
+        "what_reviewer_should_check": [
+          "Check that forbidden data remains excluded from the repository."
+        ]
+      },
+      {
+        "affected_fields": [],
+        "affected_modules": [],
+        "blocker_id": "fd_restricted_government_data",
+        "blocker_type": "forbidden_repo_data",
+        "confidence_label": "external_review_required",
+        "description": "restricted government data",
+        "evidence_id": "forbidden_fd_restricted_government_data",
+        "evidence_status": "forbidden_for_repo_use",
+        "required_access_or_review": [
+          "external system design if ever authorised",
+          "legal and privacy review"
+        ],
+        "what_reviewer_must_not_infer": [
+          "data access",
+          "safe repository use",
+          "calibration"
+        ],
+        "what_reviewer_should_check": [
+          "Check that forbidden data remains excluded from the repository."
+        ]
+      }
+    ],
+    "input_artifacts": [
+      "data/public_pilot/public_data_pilot_manifest.yaml",
+      "data/public_pilot/extracts/public_aggregate_extracts.yaml",
+      "data/public_pilot/placeholders/realistic_placeholder_anchors.yaml",
+      "reports/public_data_pilot.json",
+      "reports/public_data_pilot.md",
+      "data/public_pilot/digests/public_data_pilot_digests.json"
+    ],
+    "loaded_extract_evidence": [
+      {
+        "arithmetic_check_status": "hourly_times_38_matches_weekly",
+        "claim_level": "placeholder_anchor_only",
+        "confidence_label": "arithmetic_checked",
+        "data_status": "real_public_data_loaded",
+        "evidence_id": "extract_fair_work_minimum_wage_2025_extract",
+        "evidence_status": "loaded_public_aggregate",
+        "extract_id": "fair_work_minimum_wage_2025_extract",
+        "reviewer_interpretation": [
+          "inspect_arithmetic",
+          "inspect_source",
+          "not_evidence_for_calibration"
+        ],
+        "safe_to_commit": true,
+        "source_locator": "Fair Work Ombudsman minimum wages fact sheet, national minimum wage paragraph for the 1 July 2025 rate and 38-hour week reference.",
+        "source_reference_id": "fair_work_minimum_wage_2025",
+        "source_value_note": "Hourly value is source referenced; weekly value is stored as 24.95 multiplied by 38 ordinary hours for internal extract consistency and is not calibration.",
+        "value_review_status": "maintainer_arithmetic_consistency_review_not_external_validation",
+        "values_summary": "national_minimum_wage_hourly=24.95 AUD_per_hour; national_minimum_wage_weekly=948.1 AUD_per_week; casual_loading=25.0 percent",
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "ATO guidance",
+          "Treasury modelling",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check the source locator and value note before interpreting the row.",
+          "Check that the row is still labelled sanity-check-only or placeholder-anchor-only."
+        ]
+      },
+      {
+        "arithmetic_check_status": "source_locator_recorded_not_recalculated",
+        "claim_level": "sanity_check_only",
+        "confidence_label": "source_locator_recorded",
+        "data_status": "real_public_data_loaded",
+        "evidence_id": "extract_ato_corporate_transparency_2022_23_extract",
+        "evidence_status": "loaded_public_aggregate",
+        "extract_id": "ato_corporate_transparency_2022_23_extract",
+        "reviewer_interpretation": [
+          "inspect_source",
+          "not_evidence_for_calibration",
+          "not_evidence_for_tax_payable"
+        ],
+        "safe_to_commit": true,
+        "source_locator": "ATO media-centre article \"ATO collects $100 billion dollars from large corporates\", public summary of 2022-23 corporate tax transparency results.",
+        "source_reference_id": "ato_corporate_tax_transparency_2022_23",
+        "source_value_note": "Values are public aggregate/media-summary values only and do not support entity-level or firm-level CARSF inference.",
+        "value_review_status": "source_locator_recorded_not_external_validation",
+        "values_summary": "income_tax_received_large_corporates=97.9 AUD_billion; entities_with_no_income_tax_percent=31.0 percent",
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "ATO guidance",
+          "Treasury modelling",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check the source locator and value note before interpreting the row.",
+          "Check that the row is still labelled sanity-check-only or placeholder-anchor-only."
+        ]
+      },
+      {
+        "arithmetic_check_status": "source_locator_recorded_not_recalculated",
+        "claim_level": "sanity_check_only",
+        "confidence_label": "source_locator_recorded",
+        "data_status": "real_public_data_loaded",
+        "evidence_id": "extract_ato_taxation_statistics_2022_23_extract",
+        "evidence_status": "loaded_public_aggregate",
+        "extract_id": "ato_taxation_statistics_2022_23_extract",
+        "reviewer_interpretation": [
+          "inspect_source",
+          "not_evidence_for_calibration",
+          "not_evidence_for_tax_payable"
+        ],
+        "safe_to_commit": true,
+        "source_locator": "ATO media-centre article \"2022-23 taxation statistics released\", public headline aggregate values.",
+        "source_reference_id": "ato_taxation_statistics_2022_23",
+        "source_value_note": "Values are public taxation-statistics summary values only and are not taxpayer-level data or calibration.",
+        "value_review_status": "source_locator_recorded_not_external_validation",
+        "values_summary": "total_tax_revenue_collected=577.4 AUD_billion; company_tax_revenue=140.0 AUD_billion",
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "ATO guidance",
+          "Treasury modelling",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check the source locator and value note before interpreting the row.",
+          "Check that the row is still labelled sanity-check-only or placeholder-anchor-only."
+        ]
+      },
+      {
+        "arithmetic_check_status": "source_locator_recorded_not_recalculated",
+        "claim_level": "sanity_check_only",
+        "confidence_label": "source_locator_recorded",
+        "data_status": "real_public_data_loaded",
+        "evidence_id": "extract_treasury_budget_2026_27_receipts_extract",
+        "evidence_status": "loaded_public_aggregate",
+        "extract_id": "treasury_budget_2026_27_receipts_extract",
+        "reviewer_interpretation": [
+          "inspect_source",
+          "not_evidence_for_calibration",
+          "not_evidence_for_tax_payable"
+        ],
+        "safe_to_commit": true,
+        "source_locator": "Budget Paper No. 1 2026-27, Statement 5 Revenue, Table 5.1 Australian Government general government receipts, 2025-26 estimates.",
+        "source_reference_id": "treasury_budget_2026_27_bp1",
+        "source_value_note": "Values are rounded from Table 5.1 public estimates for total receipts and total taxation receipts; this is not Treasury modelling by the repository.",
+        "value_review_status": "exact_table_locator_recorded_not_external_validation",
+        "values_summary": "total_receipts_estimate=759.8 AUD_billion; taxation_receipts_estimate=699.5 AUD_billion",
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "ATO guidance",
+          "Treasury modelling",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check the source locator and value note before interpreting the row.",
+          "Check that the row is still labelled sanity-check-only or placeholder-anchor-only."
+        ]
+      },
+      {
+        "arithmetic_check_status": "source_locator_recorded_not_recalculated",
+        "claim_level": "placeholder_anchor_only",
+        "confidence_label": "source_locator_recorded",
+        "data_status": "real_public_data_loaded",
+        "evidence_id": "extract_super_guarantee_2025_26_extract",
+        "evidence_status": "loaded_public_aggregate",
+        "extract_id": "super_guarantee_2025_26_extract",
+        "reviewer_interpretation": [
+          "inspect_source",
+          "not_evidence_for_calibration",
+          "not_evidence_for_tax_payable"
+        ],
+        "safe_to_commit": true,
+        "source_locator": "ATO key superannuation rates and thresholds page, super guarantee percentage table for the period from 1 July 2025.",
+        "source_reference_id": "ato_super_guarantee_2025_26",
+        "source_value_note": "Value is a public rate-setting reference only and does not support individual, payroll, or taxpayer-level estimates.",
+        "value_review_status": "source_locator_recorded_not_external_validation",
+        "values_summary": "super_guarantee_rate=12.0 percent",
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "ATO guidance",
+          "Treasury modelling",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check the source locator and value note before interpreting the row.",
+          "Check that the row is still labelled sanity-check-only or placeholder-anchor-only."
+        ]
+      }
+    ],
+    "module_sanity_evidence": [
+      {
+        "blocked_by_restricted_data": true,
+        "calibration_possible": false,
+        "claim_level": "placeholder_anchor_only",
+        "confidence_label": "blocked_until_restricted_data_access",
+        "evidence_id": "module_core_formula_model",
+        "evidence_status": "blocked_by_restricted_data",
+        "linked_anchor_ids": [
+          "anchor_opfte_minimum_wage",
+          "anchor_hle_minimum_wage",
+          "anchor_qlc_minimum_wage"
+        ],
+        "linked_extract_ids": [
+          "fair_work_minimum_wage_2025_extract"
+        ],
+        "main_blockers": [
+          "AAVA and firm inputs remain placeholder or restricted"
+        ],
+        "module_id": "core_formula_model",
+        "module_name": "Core formula model",
+        "result_status": "placeholder_anchor_possible",
+        "reviewer_questions": [
+          "Does this module remain sanity-check-only or placeholder-anchor-only?",
+          "Are restricted-data blockers still preserved?"
+        ],
+        "sanity_check_possible": true,
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "model proof",
+          "operational readiness"
+        ]
+      },
+      {
+        "blocked_by_restricted_data": true,
+        "calibration_possible": false,
+        "claim_level": "placeholder_anchor_only",
+        "confidence_label": "blocked_until_restricted_data_access",
+        "evidence_id": "module_sector_schedules",
+        "evidence_status": "blocked_by_restricted_data",
+        "linked_anchor_ids": [
+          "anchor_sector_schedule_source_reference"
+        ],
+        "linked_extract_ids": [
+          "fair_work_minimum_wage_2025_extract"
+        ],
+        "main_blockers": [
+          "schedule authority calibration and sector attribution remain unresolved"
+        ],
+        "module_id": "sector_schedules",
+        "module_name": "Sector schedules",
+        "result_status": "placeholder_anchor_possible",
+        "reviewer_questions": [
+          "Does this module remain sanity-check-only or placeholder-anchor-only?",
+          "Are restricted-data blockers still preserved?"
+        ],
+        "sanity_check_possible": true,
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "model proof",
+          "operational readiness"
+        ]
+      },
+      {
+        "blocked_by_restricted_data": true,
+        "calibration_possible": false,
+        "claim_level": "source_reference_only",
+        "confidence_label": "blocked_until_restricted_data_access",
+        "evidence_id": "module_sector_stress_matrix",
+        "evidence_status": "blocked_by_restricted_data",
+        "linked_anchor_ids": [
+          "anchor_sector_schedule_source_reference"
+        ],
+        "linked_extract_ids": [
+          "abs_labour_source_reference_extract"
+        ],
+        "main_blockers": [
+          "automation intensity remains metadata-only"
+        ],
+        "module_id": "sector_stress_matrix",
+        "module_name": "Sector stress matrix",
+        "result_status": "source_reference_only",
+        "reviewer_questions": [
+          "Does this module remain sanity-check-only or placeholder-anchor-only?",
+          "Are restricted-data blockers still preserved?"
+        ],
+        "sanity_check_possible": true,
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "model proof",
+          "operational readiness"
+        ]
+      },
+      {
+        "blocked_by_restricted_data": true,
+        "calibration_possible": false,
+        "claim_level": "sanity_check_only",
+        "confidence_label": "blocked_until_restricted_data_access",
+        "evidence_id": "module_fiscal_trajectory",
+        "evidence_status": "blocked_by_restricted_data",
+        "linked_anchor_ids": [
+          "anchor_fiscal_public_aggregates",
+          "anchor_payg_public_tax_stats"
+        ],
+        "linked_extract_ids": [
+          "ato_taxation_statistics_2022_23_extract",
+          "treasury_budget_2026_27_receipts_extract"
+        ],
+        "main_blockers": [
+          "CARSF revenue pathway is not calibrated"
+        ],
+        "module_id": "fiscal_trajectory",
+        "module_name": "Fiscal trajectory",
+        "result_status": "sanity_check_possible",
+        "reviewer_questions": [
+          "Does this module remain sanity-check-only or placeholder-anchor-only?",
+          "Are restricted-data blockers still preserved?"
+        ],
+        "sanity_check_possible": true,
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "model proof",
+          "operational readiness"
+        ]
+      },
+      {
+        "blocked_by_restricted_data": true,
+        "calibration_possible": false,
+        "claim_level": "placeholder_anchor_only",
+        "confidence_label": "blocked_until_restricted_data_access",
+        "evidence_id": "module_transition_funding",
+        "evidence_status": "blocked_by_restricted_data",
+        "linked_anchor_ids": [
+          "anchor_transition_public_reference"
+        ],
+        "linked_extract_ids": [
+          "treasury_budget_2026_27_receipts_extract",
+          "super_guarantee_2025_26_extract"
+        ],
+        "main_blockers": [
+          "payment eligibility and fiscal design require external review"
+        ],
+        "module_id": "transition_funding",
+        "module_name": "Transition funding",
+        "result_status": "placeholder_anchor_possible",
+        "reviewer_questions": [
+          "Does this module remain sanity-check-only or placeholder-anchor-only?",
+          "Are restricted-data blockers still preserved?"
+        ],
+        "sanity_check_possible": true,
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "model proof",
+          "operational readiness"
+        ]
+      },
+      {
+        "blocked_by_restricted_data": true,
+        "calibration_possible": false,
+        "claim_level": "placeholder_anchor_only",
+        "confidence_label": "blocked_until_restricted_data_access",
+        "evidence_id": "module_payment_interactions",
+        "evidence_status": "blocked_by_restricted_data",
+        "linked_anchor_ids": [
+          "anchor_super_guarantee_rate",
+          "anchor_help_source_reference",
+          "anchor_payroll_tax_source_reference"
+        ],
+        "linked_extract_ids": [
+          "super_guarantee_2025_26_extract",
+          "help_threshold_source_reference_extract",
+          "qld_payroll_tax_source_reference_extract"
+        ],
+        "main_blockers": [
+          "no person-level records and no eligibility law modelling"
+        ],
+        "module_id": "payment_interactions",
+        "module_name": "Payment interactions",
+        "result_status": "placeholder_anchor_possible",
+        "reviewer_questions": [
+          "Does this module remain sanity-check-only or placeholder-anchor-only?",
+          "Are restricted-data blockers still preserved?"
+        ],
+        "sanity_check_possible": true,
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "model proof",
+          "operational readiness"
+        ]
+      },
+      {
+        "blocked_by_restricted_data": true,
+        "calibration_possible": false,
+        "claim_level": "blocked_by_restricted_data",
+        "confidence_label": "blocked_until_restricted_data_access",
+        "evidence_id": "module_household_distributional",
+        "evidence_status": "blocked_by_restricted_data",
+        "linked_anchor_ids": [],
+        "linked_extract_ids": [],
+        "main_blockers": [
+          "household microdata remains excluded"
+        ],
+        "module_id": "household_distributional",
+        "module_name": "Household distributional scenarios",
+        "result_status": "blocked_by_restricted_data",
+        "reviewer_questions": [
+          "Does this module remain sanity-check-only or placeholder-anchor-only?",
+          "Are restricted-data blockers still preserved?"
+        ],
+        "sanity_check_possible": false,
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "model proof",
+          "operational readiness"
+        ]
+      },
+      {
+        "blocked_by_restricted_data": true,
+        "calibration_possible": false,
+        "claim_level": "blocked_by_restricted_data",
+        "confidence_label": "blocked_until_restricted_data_access",
+        "evidence_id": "module_household_weighting",
+        "evidence_status": "blocked_by_restricted_data",
+        "linked_anchor_ids": [],
+        "linked_extract_ids": [],
+        "main_blockers": [
+          "weighted population inference remains blocked"
+        ],
+        "module_id": "household_weighting",
+        "module_name": "Household weighting",
+        "result_status": "blocked_by_restricted_data",
+        "reviewer_questions": [
+          "Does this module remain sanity-check-only or placeholder-anchor-only?",
+          "Are restricted-data blockers still preserved?"
+        ],
+        "sanity_check_possible": false,
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "model proof",
+          "operational readiness"
+        ]
+      },
+      {
+        "blocked_by_restricted_data": true,
+        "calibration_possible": false,
+        "claim_level": "blocked_by_restricted_data",
+        "confidence_label": "blocked_until_restricted_data_access",
+        "evidence_id": "module_uncertainty_ranges",
+        "evidence_status": "blocked_by_restricted_data",
+        "linked_anchor_ids": [
+          "anchor_uncertainty_source_reference_only"
+        ],
+        "linked_extract_ids": [],
+        "main_blockers": [
+          "public aggregates cannot create confidence intervals"
+        ],
+        "module_id": "uncertainty_ranges",
+        "module_name": "Uncertainty ranges",
+        "result_status": "blocked_by_restricted_data",
+        "reviewer_questions": [
+          "Does this module remain sanity-check-only or placeholder-anchor-only?",
+          "Are restricted-data blockers still preserved?"
+        ],
+        "sanity_check_possible": false,
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "model proof",
+          "operational readiness"
+        ]
+      },
+      {
+        "blocked_by_restricted_data": true,
+        "calibration_possible": false,
+        "claim_level": "source_reference_only",
+        "confidence_label": "blocked_until_restricted_data_access",
+        "evidence_id": "module_reviewed_scenarios",
+        "evidence_status": "blocked_by_restricted_data",
+        "linked_anchor_ids": [],
+        "linked_extract_ids": [
+          "ato_corporate_transparency_2022_23_extract"
+        ],
+        "main_blockers": [
+          "display controls remain review-state placeholders"
+        ],
+        "module_id": "reviewed_scenarios",
+        "module_name": "Reviewed scenarios",
+        "result_status": "source_reference_only",
+        "reviewer_questions": [
+          "Does this module remain sanity-check-only or placeholder-anchor-only?",
+          "Are restricted-data blockers still preserved?"
+        ],
+        "sanity_check_possible": true,
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "model proof",
+          "operational readiness"
+        ]
+      },
+      {
+        "blocked_by_restricted_data": false,
+        "calibration_possible": false,
+        "claim_level": "source_reference_only",
+        "confidence_label": "source_reference_only",
+        "evidence_id": "module_executive_dashboard",
+        "evidence_status": "source_reference_only",
+        "linked_anchor_ids": [],
+        "linked_extract_ids": [],
+        "main_blockers": [
+          "dashboard remains navigation only"
+        ],
+        "module_id": "executive_dashboard",
+        "module_name": "Executive dashboard",
+        "result_status": "source_reference_only",
+        "reviewer_questions": [
+          "Does this module remain sanity-check-only or placeholder-anchor-only?",
+          "Are restricted-data blockers still preserved?"
+        ],
+        "sanity_check_possible": true,
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "model proof",
+          "operational readiness"
+        ]
+      }
+    ],
+    "non_claims": [
+      "This is a reviewer evidence map and dashboard for the public data pilot only. No new data is loaded by this build. Build 27 public aggregate extracts remain sanity-check-only or placeholder-anchor-only. This is not calibration, calibration has not been completed, public data does not prove the model works, realistic placeholders remain placeholders, realistic placeholders are not real data, realistic placeholders are not calibrated, source references are not loaded datasets, and restricted-data requirements are not data access. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab, HILDA microdata, DSS/Services Australia records, ATO taxpayer records, Treasury/PBO confidential material, or restricted government data, and does not modify firm-level CARSF liability. It only maps evidence for reviewer inspection.",
+      "Confidence labels are evidence classification labels only; they are not validation scores, not readiness scores, not maturity scores, and not approval.",
+      "Source-reference-only records are mapped for review but are not counted as loaded public data.",
+      "Reviewer questions are prompts for inspection and do not mean external review has occurred."
+    ],
+    "placeholder_evidence": [
+      {
+        "anchor_id": "anchor_opfte_minimum_wage",
+        "anchor_strength": "moderate",
+        "anchored_to_public_data": true,
+        "blocked_by_restricted_data": true,
+        "confidence_label": "placeholder_anchor_only",
+        "evidence_id": "placeholder_anchor_opfte_minimum_wage",
+        "evidence_status": "realistic_placeholder_anchor",
+        "field_id": "opfte_benchmarks",
+        "missing_data_for_calibration": [
+          "occupation-specific hours",
+          "sector-specific labour requirements",
+          "schedule authority method"
+        ],
+        "placeholder_name": "OPFTE public wage anchor",
+        "review_required_before_calibration": [
+          "statistical_methods_reviewer",
+          "treasury_methods_reviewer",
+          "ato_methods_reviewer"
+        ],
+        "what_reviewer_must_not_infer": [
+          "real data replacement",
+          "calibration",
+          "validation",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check whether the anchor source supports only placeholder review.",
+          "Check whether missing data for calibration is still explicit."
+        ]
+      },
+      {
+        "anchor_id": "anchor_hle_minimum_wage",
+        "anchor_strength": "weak",
+        "anchored_to_public_data": true,
+        "blocked_by_restricted_data": true,
+        "confidence_label": "placeholder_anchor_only",
+        "evidence_id": "placeholder_anchor_hle_minimum_wage",
+        "evidence_status": "realistic_placeholder_anchor",
+        "field_id": "hle_assumptions",
+        "missing_data_for_calibration": [
+          "human labour equivalent method",
+          "occupation mix",
+          "worker-hour evidence"
+        ],
+        "placeholder_name": "HLE public wage anchor",
+        "review_required_before_calibration": [
+          "statistical_methods_reviewer",
+          "legal_reviewer"
+        ],
+        "what_reviewer_must_not_infer": [
+          "real data replacement",
+          "calibration",
+          "validation",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check whether the anchor source supports only placeholder review.",
+          "Check whether missing data for calibration is still explicit."
+        ]
+      },
+      {
+        "anchor_id": "anchor_qlc_minimum_wage",
+        "anchor_strength": "weak",
+        "anchored_to_public_data": true,
+        "blocked_by_restricted_data": true,
+        "confidence_label": "placeholder_anchor_only",
+        "evidence_id": "placeholder_anchor_qlc_minimum_wage",
+        "evidence_status": "realistic_placeholder_anchor",
+        "field_id": "qlc_weights",
+        "missing_data_for_calibration": [
+          "qualified labour contribution method",
+          "task allocation evidence",
+          "sector labour mix"
+        ],
+        "placeholder_name": "QLC public wage anchor",
+        "review_required_before_calibration": [
+          "statistical_methods_reviewer",
+          "tax_reviewer"
+        ],
+        "what_reviewer_must_not_infer": [
+          "real data replacement",
+          "calibration",
+          "validation",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check whether the anchor source supports only placeholder review.",
+          "Check whether missing data for calibration is still explicit."
+        ]
+      },
+      {
+        "anchor_id": "anchor_sector_schedule_source_reference",
+        "anchor_strength": "weak",
+        "anchored_to_public_data": true,
+        "blocked_by_restricted_data": true,
+        "confidence_label": "placeholder_anchor_only",
+        "evidence_id": "placeholder_anchor_sector_schedule_source_reference",
+        "evidence_status": "realistic_placeholder_anchor",
+        "field_id": "sector_schedule_values",
+        "missing_data_for_calibration": [
+          "sector schedule authority method",
+          "mixed-unit attribution",
+          "sector-specific output units"
+        ],
+        "placeholder_name": "Sector schedule public source-reference anchor",
+        "review_required_before_calibration": [
+          "statistical_methods_reviewer",
+          "policy_reviewer",
+          "ato_methods_reviewer"
+        ],
+        "what_reviewer_must_not_infer": [
+          "real data replacement",
+          "calibration",
+          "validation",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check whether the anchor source supports only placeholder review.",
+          "Check whether missing data for calibration is still explicit."
+        ]
+      },
+      {
+        "anchor_id": "anchor_fiscal_public_aggregates",
+        "anchor_strength": "moderate",
+        "anchored_to_public_data": true,
+        "blocked_by_restricted_data": true,
+        "confidence_label": "placeholder_anchor_only",
+        "evidence_id": "placeholder_anchor_fiscal_public_aggregates",
+        "evidence_status": "realistic_placeholder_anchor",
+        "field_id": "fiscal_trajectory_assumptions",
+        "missing_data_for_calibration": [
+          "CARSF behavioural response method",
+          "revenue capture method",
+          "fiscal incidence method"
+        ],
+        "placeholder_name": "Fiscal public aggregate sanity anchor",
+        "review_required_before_calibration": [
+          "treasury_methods_reviewer",
+          "economic_methods_reviewer",
+          "tax_reviewer"
+        ],
+        "what_reviewer_must_not_infer": [
+          "real data replacement",
+          "calibration",
+          "validation",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check whether the anchor source supports only placeholder review.",
+          "Check whether missing data for calibration is still explicit."
+        ]
+      },
+      {
+        "anchor_id": "anchor_payg_public_tax_stats",
+        "anchor_strength": "weak",
+        "anchored_to_public_data": true,
+        "blocked_by_restricted_data": true,
+        "confidence_label": "placeholder_anchor_only",
+        "evidence_id": "placeholder_anchor_payg_public_tax_stats",
+        "evidence_status": "realistic_placeholder_anchor",
+        "field_id": "payg_erosion_assumptions",
+        "missing_data_for_calibration": [
+          "employment-tax pathway method",
+          "sector attribution",
+          "behavioural response method"
+        ],
+        "placeholder_name": "PAYG public tax-statistics sanity anchor",
+        "review_required_before_calibration": [
+          "ato_methods_reviewer",
+          "tax_reviewer",
+          "treasury_methods_reviewer"
+        ],
+        "what_reviewer_must_not_infer": [
+          "real data replacement",
+          "calibration",
+          "validation",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check whether the anchor source supports only placeholder review.",
+          "Check whether missing data for calibration is still explicit."
+        ]
+      },
+      {
+        "anchor_id": "anchor_super_guarantee_rate",
+        "anchor_strength": "moderate",
+        "anchored_to_public_data": true,
+        "blocked_by_restricted_data": true,
+        "confidence_label": "placeholder_anchor_only",
+        "evidence_id": "placeholder_anchor_super_guarantee_rate",
+        "evidence_status": "realistic_placeholder_anchor",
+        "field_id": "superannuation_contribution_pressure",
+        "missing_data_for_calibration": [
+          "wage base",
+          "employer contribution records",
+          "payment interaction method"
+        ],
+        "placeholder_name": "Superannuation Guarantee public setting anchor",
+        "review_required_before_calibration": [
+          "tax_reviewer",
+          "welfare_policy_reviewer"
+        ],
+        "what_reviewer_must_not_infer": [
+          "real data replacement",
+          "calibration",
+          "validation",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check whether the anchor source supports only placeholder review.",
+          "Check whether missing data for calibration is still explicit."
+        ]
+      },
+      {
+        "anchor_id": "anchor_help_source_reference",
+        "anchor_strength": "source_reference_only",
+        "anchored_to_public_data": false,
+        "blocked_by_restricted_data": true,
+        "confidence_label": "source_reference_only",
+        "evidence_id": "placeholder_anchor_help_source_reference",
+        "evidence_status": "realistic_placeholder_anchor",
+        "field_id": "help_hecs_repayment_pressure",
+        "missing_data_for_calibration": [
+          "income distribution",
+          "individual repayment records",
+          "eligibility law review"
+        ],
+        "placeholder_name": "HELP threshold source-reference anchor",
+        "review_required_before_calibration": [
+          "welfare_policy_reviewer",
+          "legal_reviewer",
+          "statistical_methods_reviewer"
+        ],
+        "what_reviewer_must_not_infer": [
+          "real data replacement",
+          "calibration",
+          "validation",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check whether the anchor source supports only placeholder review.",
+          "Check whether missing data for calibration is still explicit."
+        ]
+      },
+      {
+        "anchor_id": "anchor_payroll_tax_source_reference",
+        "anchor_strength": "source_reference_only",
+        "anchored_to_public_data": false,
+        "blocked_by_restricted_data": true,
+        "confidence_label": "source_reference_only",
+        "evidence_id": "placeholder_anchor_payroll_tax_source_reference",
+        "evidence_status": "realistic_placeholder_anchor",
+        "field_id": "state_payroll_tax_pressure",
+        "missing_data_for_calibration": [
+          "jurisdiction-specific payroll base",
+          "employer records",
+          "tax-law review"
+        ],
+        "placeholder_name": "State payroll threshold source-reference anchor",
+        "review_required_before_calibration": [
+          "tax_reviewer",
+          "treasury_methods_reviewer"
+        ],
+        "what_reviewer_must_not_infer": [
+          "real data replacement",
+          "calibration",
+          "validation",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check whether the anchor source supports only placeholder review.",
+          "Check whether missing data for calibration is still explicit."
+        ]
+      },
+      {
+        "anchor_id": "anchor_transition_public_reference",
+        "anchor_strength": "weak",
+        "anchored_to_public_data": true,
+        "blocked_by_restricted_data": true,
+        "confidence_label": "placeholder_anchor_only",
+        "evidence_id": "placeholder_anchor_transition_public_reference",
+        "evidence_status": "realistic_placeholder_anchor",
+        "field_id": "transition_payment_assumptions",
+        "missing_data_for_calibration": [
+          "transition eligibility method",
+          "payment administrative data",
+          "fiscal design review"
+        ],
+        "placeholder_name": "Transition funding public aggregate reference anchor",
+        "review_required_before_calibration": [
+          "welfare_policy_reviewer",
+          "treasury_methods_reviewer"
+        ],
+        "what_reviewer_must_not_infer": [
+          "real data replacement",
+          "calibration",
+          "validation",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check whether the anchor source supports only placeholder review.",
+          "Check whether missing data for calibration is still explicit."
+        ]
+      },
+      {
+        "anchor_id": "anchor_uncertainty_source_reference_only",
+        "anchor_strength": "source_reference_only",
+        "anchored_to_public_data": false,
+        "blocked_by_restricted_data": true,
+        "confidence_label": "source_reference_only",
+        "evidence_id": "placeholder_anchor_uncertainty_source_reference_only",
+        "evidence_status": "realistic_placeholder_anchor",
+        "field_id": "uncertainty_range_assumptions",
+        "missing_data_for_calibration": [
+          "statistical sampling frame",
+          "confidence method",
+          "authorised microdata"
+        ],
+        "placeholder_name": "Uncertainty source-reference-only anchor",
+        "review_required_before_calibration": [
+          "statistical_methods_reviewer",
+          "privacy_reviewer"
+        ],
+        "what_reviewer_must_not_infer": [
+          "real data replacement",
+          "calibration",
+          "validation",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check whether the anchor source supports only placeholder review.",
+          "Check whether missing data for calibration is still explicit."
+        ]
+      }
+    ],
+    "restricted_blocker_evidence": [
+      {
+        "affected_fields": [],
+        "affected_modules": [
+          "core_formula_model",
+          "administrative_workflow",
+          "behavioural_response"
+        ],
+        "blocker_id": "restricted_tax_records",
+        "blocker_type": "restricted_data_blocker",
+        "confidence_label": "blocked_until_restricted_data_access",
+        "description": "Confidential tax records remain excluded",
+        "evidence_id": "restricted_restricted_tax_records",
+        "evidence_status": "blocked_by_restricted_data",
+        "required_access_or_review": [
+          "authorised external data access process",
+          "privacy and legal review"
+        ],
+        "what_reviewer_must_not_infer": [
+          "data access",
+          "calibration",
+          "validation"
+        ],
+        "what_reviewer_should_check": [
+          "Check that the blocker remains visible and unresolved."
+        ]
+      },
+      {
+        "affected_fields": [],
+        "affected_modules": [
+          "household_distributional",
+          "household_weighting",
+          "uncertainty_ranges"
+        ],
+        "blocker_id": "restricted_household_microdata",
+        "blocker_type": "restricted_data_blocker",
+        "confidence_label": "blocked_until_restricted_data_access",
+        "description": "Household microdata remains excluded",
+        "evidence_id": "restricted_restricted_household_microdata",
+        "evidence_status": "blocked_by_restricted_data",
+        "required_access_or_review": [
+          "authorised external data access process",
+          "privacy and legal review"
+        ],
+        "what_reviewer_must_not_infer": [
+          "data access",
+          "calibration",
+          "validation"
+        ],
+        "what_reviewer_should_check": [
+          "Check that the blocker remains visible and unresolved."
+        ]
+      },
+      {
+        "affected_fields": [],
+        "affected_modules": [
+          "payment_interactions",
+          "transition_funding"
+        ],
+        "blocker_id": "restricted_welfare_records",
+        "blocker_type": "restricted_data_blocker",
+        "confidence_label": "blocked_until_restricted_data_access",
+        "description": "Welfare and payment records remain excluded",
+        "evidence_id": "restricted_restricted_welfare_records",
+        "evidence_status": "blocked_by_restricted_data",
+        "required_access_or_review": [
+          "authorised external data access process",
+          "privacy and legal review"
+        ],
+        "what_reviewer_must_not_infer": [
+          "data access",
+          "calibration",
+          "validation"
+        ],
+        "what_reviewer_should_check": [
+          "Check that the blocker remains visible and unresolved."
+        ]
+      }
+    ],
+    "reviewer_questions": [
+      {
+        "category": "Source verification",
+        "must_not_infer": [
+          "calibration",
+          "validation",
+          "official status"
+        ],
+        "question": "Can the source URL and source locator be independently found?",
+        "question_id": "source_001",
+        "reviewer_interpretation": "inspect_source",
+        "target_evidence_status": "source_reference_only"
+      },
+      {
+        "category": "Source verification",
+        "must_not_infer": [
+          "taxpayer data",
+          "firm confidential data",
+          "household microdata"
+        ],
+        "question": "Does the source reference remain aggregate-only or source-reference-only?",
+        "question_id": "source_002",
+        "reviewer_interpretation": "inspect_source",
+        "target_evidence_status": "source_reference_only"
+      },
+      {
+        "category": "Source verification",
+        "must_not_infer": [
+          "approval",
+          "validation",
+          "calibration"
+        ],
+        "question": "Is the source release name specific enough for a reviewer to locate it?",
+        "question_id": "source_003",
+        "reviewer_interpretation": "inspect_source",
+        "target_evidence_status": "source_reference_only"
+      },
+      {
+        "category": "Source verification",
+        "must_not_infer": [
+          "loaded data",
+          "calibration",
+          "validation"
+        ],
+        "question": "Are source-reference-only records excluded from loaded public data counts?",
+        "question_id": "source_004",
+        "reviewer_interpretation": "inspect_source",
+        "target_evidence_status": "source_reference_only"
+      },
+      {
+        "category": "Source verification",
+        "must_not_infer": [
+          "ATO guidance",
+          "Treasury modelling",
+          "PBO costing"
+        ],
+        "question": "Is the source being overread as official guidance or methods approval?",
+        "question_id": "source_005",
+        "reviewer_interpretation": "inspect_non_claim_boundary",
+        "target_evidence_status": "source_reference_only"
+      },
+      {
+        "category": "Value arithmetic",
+        "must_not_infer": [
+          "calibration",
+          "validation",
+          "legal advice"
+        ],
+        "question": "Does the Fair Work weekly wage row equal hourly value times 38?",
+        "question_id": "arithmetic_001",
+        "reviewer_interpretation": "inspect_arithmetic",
+        "target_evidence_status": "loaded_public_aggregate"
+      },
+      {
+        "category": "Value arithmetic",
+        "must_not_infer": [
+          "validation score",
+          "readiness score",
+          "maturity score"
+        ],
+        "question": "Does the evidence row show arithmetic_checked only for the wage arithmetic check?",
+        "question_id": "arithmetic_002",
+        "reviewer_interpretation": "inspect_arithmetic",
+        "target_evidence_status": "loaded_public_aggregate"
+      },
+      {
+        "category": "Value arithmetic",
+        "must_not_infer": [
+          "precision",
+          "forecast",
+          "actual tax payable"
+        ],
+        "question": "Are rounded values clearly marked as source summaries or arithmetic checks?",
+        "question_id": "arithmetic_003",
+        "reviewer_interpretation": "inspect_arithmetic",
+        "target_evidence_status": "loaded_public_aggregate"
+      },
+      {
+        "category": "Value arithmetic",
+        "must_not_infer": [
+          "calibration",
+          "validation",
+          "official status"
+        ],
+        "question": "Are value notes visible before interpreting each loaded row?",
+        "question_id": "arithmetic_004",
+        "reviewer_interpretation": "inspect_source",
+        "target_evidence_status": "loaded_public_aggregate"
+      },
+      {
+        "category": "Value arithmetic",
+        "must_not_infer": [
+          "model proof",
+          "economic validation",
+          "statistical validation"
+        ],
+        "question": "Is any arithmetic check being overread as model evidence?",
+        "question_id": "arithmetic_005",
+        "reviewer_interpretation": "inspect_non_claim_boundary",
+        "target_evidence_status": "loaded_public_aggregate"
+      },
+      {
+        "category": "Placeholder anchoring",
+        "must_not_infer": [
+          "real data",
+          "calibration",
+          "validation"
+        ],
+        "question": "Is each placeholder clearly labelled as a realistic placeholder?",
+        "question_id": "placeholder_001",
+        "reviewer_interpretation": "inspect_placeholder_basis",
+        "target_evidence_status": "realistic_placeholder_anchor"
+      },
+      {
+        "category": "Placeholder anchoring",
+        "must_not_infer": [
+          "calibration",
+          "actual tax payable",
+          "official status"
+        ],
+        "question": "Does the anchor strength match the source record actually available?",
+        "question_id": "placeholder_002",
+        "reviewer_interpretation": "inspect_placeholder_basis",
+        "target_evidence_status": "realistic_placeholder_anchor"
+      },
+      {
+        "category": "Placeholder anchoring",
+        "must_not_infer": [
+          "calibration completed",
+          "validation",
+          "readiness"
+        ],
+        "question": "Are missing data for calibration still listed?",
+        "question_id": "placeholder_003",
+        "reviewer_interpretation": "inspect_placeholder_basis",
+        "target_evidence_status": "realistic_placeholder_anchor"
+      },
+      {
+        "category": "Placeholder anchoring",
+        "must_not_infer": [
+          "real data replacement",
+          "calibrated value",
+          "model proof"
+        ],
+        "question": "Does any placeholder anchor imply replacement of a placeholder?",
+        "question_id": "placeholder_004",
+        "reviewer_interpretation": "inspect_non_claim_boundary",
+        "target_evidence_status": "realistic_placeholder_anchor"
+      },
+      {
+        "category": "Placeholder anchoring",
+        "must_not_infer": [
+          "approval",
+          "validation",
+          "official status"
+        ],
+        "question": "Are reviewer tracks listed before any future replacement?",
+        "question_id": "placeholder_005",
+        "reviewer_interpretation": "inspect_placeholder_basis",
+        "target_evidence_status": "realistic_placeholder_anchor"
+      },
+      {
+        "category": "Restricted-data blockers",
+        "must_not_infer": [
+          "data access",
+          "calibration",
+          "actual tax payable"
+        ],
+        "question": "Are taxpayer-level data blockers still visible?",
+        "question_id": "blocker_001",
+        "reviewer_interpretation": "inspect_blocker",
+        "target_evidence_status": "blocked_by_restricted_data"
+      },
+      {
+        "category": "Restricted-data blockers",
+        "must_not_infer": [
+          "firm-level liability",
+          "confidential data use",
+          "validation"
+        ],
+        "question": "Are firm-confidential blockers still visible?",
+        "question_id": "blocker_002",
+        "reviewer_interpretation": "inspect_blocker",
+        "target_evidence_status": "blocked_by_restricted_data"
+      },
+      {
+        "category": "Restricted-data blockers",
+        "must_not_infer": [
+          "population estimate",
+          "real household estimate",
+          "welfare validation"
+        ],
+        "question": "Are household microdata blockers still visible?",
+        "question_id": "blocker_003",
+        "reviewer_interpretation": "inspect_blocker",
+        "target_evidence_status": "blocked_by_restricted_data"
+      },
+      {
+        "category": "Restricted-data blockers",
+        "must_not_infer": [
+          "restricted access",
+          "official status",
+          "approval"
+        ],
+        "question": "Are restricted government data blockers preserved in the report?",
+        "question_id": "blocker_004",
+        "reviewer_interpretation": "inspect_blocker",
+        "target_evidence_status": "blocked_by_restricted_data"
+      },
+      {
+        "category": "Restricted-data blockers",
+        "must_not_infer": [
+          "safe repo use",
+          "data access",
+          "calibration"
+        ],
+        "question": "Is forbidden repo data still explicitly forbidden?",
+        "question_id": "blocker_005",
+        "reviewer_interpretation": "inspect_blocker",
+        "target_evidence_status": "forbidden_for_repo_use"
+      },
+      {
+        "category": "Field sanity checks",
+        "must_not_infer": [
+          "calibration",
+          "validation",
+          "actual tax payable"
+        ],
+        "question": "Which field checks are mapped as warning rather than blocked?",
+        "question_id": "field_001",
+        "reviewer_interpretation": "inspect_source",
+        "target_evidence_status": "loaded_public_aggregate"
+      },
+      {
+        "category": "Field sanity checks",
+        "must_not_infer": [
+          "loaded data",
+          "calibration",
+          "validation"
+        ],
+        "question": "Which field checks depend on source-reference-only records?",
+        "question_id": "field_002",
+        "reviewer_interpretation": "inspect_source",
+        "target_evidence_status": "source_reference_only"
+      },
+      {
+        "category": "Field sanity checks",
+        "must_not_infer": [
+          "data access",
+          "calibration",
+          "official status"
+        ],
+        "question": "Which field checks remain blocked by restricted data?",
+        "question_id": "field_003",
+        "reviewer_interpretation": "inspect_blocker",
+        "target_evidence_status": "blocked_by_restricted_data"
+      },
+      {
+        "category": "Field sanity checks",
+        "must_not_infer": [
+          "model proof",
+          "economic validation",
+          "statistical validation"
+        ],
+        "question": "Are field findings written as review prompts rather than conclusions?",
+        "question_id": "field_004",
+        "reviewer_interpretation": "inspect_non_claim_boundary",
+        "target_evidence_status": "realistic_placeholder_anchor"
+      },
+      {
+        "category": "Field sanity checks",
+        "must_not_infer": [
+          "tax payable",
+          "calibration",
+          "validation"
+        ],
+        "question": "Are linked extracts and anchors traceable from each field row?",
+        "question_id": "field_005",
+        "reviewer_interpretation": "inspect_source",
+        "target_evidence_status": "loaded_public_aggregate"
+      },
+      {
+        "category": "Module sanity checks",
+        "must_not_infer": [
+          "calibration",
+          "readiness",
+          "validation"
+        ],
+        "question": "Does every module keep calibration_possible false?",
+        "question_id": "module_001",
+        "reviewer_interpretation": "inspect_non_claim_boundary",
+        "target_evidence_status": "realistic_placeholder_anchor"
+      },
+      {
+        "category": "Module sanity checks",
+        "must_not_infer": [
+          "model proof",
+          "actual tax payable",
+          "operational readiness"
+        ],
+        "question": "Which modules are only placeholder-anchor possible?",
+        "question_id": "module_002",
+        "reviewer_interpretation": "inspect_placeholder_basis",
+        "target_evidence_status": "realistic_placeholder_anchor"
+      },
+      {
+        "category": "Module sanity checks",
+        "must_not_infer": [
+          "data access",
+          "calibration",
+          "validation"
+        ],
+        "question": "Which modules remain blocked by restricted data?",
+        "question_id": "module_003",
+        "reviewer_interpretation": "inspect_blocker",
+        "target_evidence_status": "blocked_by_restricted_data"
+      },
+      {
+        "category": "Module sanity checks",
+        "must_not_infer": [
+          "loaded data",
+          "calibration",
+          "validation"
+        ],
+        "question": "Are source-reference-only modules separated from loaded-public-extract modules?",
+        "question_id": "module_004",
+        "reviewer_interpretation": "inspect_source",
+        "target_evidence_status": "source_reference_only"
+      },
+      {
+        "category": "Module sanity checks",
+        "must_not_infer": [
+          "operational readiness",
+          "official status",
+          "government readiness"
+        ],
+        "question": "Does any module text imply operational use?",
+        "question_id": "module_005",
+        "reviewer_interpretation": "inspect_non_claim_boundary",
+        "target_evidence_status": "realistic_placeholder_anchor"
+      },
+      {
+        "category": "Non-claim boundary",
+        "must_not_infer": [
+          "calibration completed",
+          "validation",
+          "readiness"
+        ],
+        "question": "Does any output imply calibration is complete?",
+        "question_id": "boundary_001",
+        "reviewer_interpretation": "inspect_non_claim_boundary",
+        "target_evidence_status": "realistic_placeholder_anchor"
+      },
+      {
+        "category": "Non-claim boundary",
+        "must_not_infer": [
+          "model proof",
+          "economic validation",
+          "statistical validation"
+        ],
+        "question": "Does any output imply public data proves the model works?",
+        "question_id": "boundary_002",
+        "reviewer_interpretation": "inspect_non_claim_boundary",
+        "target_evidence_status": "loaded_public_aggregate"
+      },
+      {
+        "category": "Non-claim boundary",
+        "must_not_infer": [
+          "actual tax payable",
+          "tax advice",
+          "legal advice"
+        ],
+        "question": "Does any output imply actual tax payable?",
+        "question_id": "boundary_003",
+        "reviewer_interpretation": "inspect_non_claim_boundary",
+        "target_evidence_status": "loaded_public_aggregate"
+      },
+      {
+        "category": "Non-claim boundary",
+        "must_not_infer": [
+          "ATO guidance",
+          "Treasury modelling",
+          "PBO costing"
+        ],
+        "question": "Does any output imply ATO guidance or Treasury modelling?",
+        "question_id": "boundary_004",
+        "reviewer_interpretation": "inspect_non_claim_boundary",
+        "target_evidence_status": "source_reference_only"
+      },
+      {
+        "category": "Non-claim boundary",
+        "must_not_infer": [
+          "official status",
+          "approval",
+          "validation"
+        ],
+        "question": "Does any output imply official status or approval?",
+        "question_id": "boundary_005",
+        "reviewer_interpretation": "inspect_non_claim_boundary",
+        "target_evidence_status": "realistic_placeholder_anchor"
+      },
+      {
+        "category": "External review route",
+        "must_not_infer": [
+          "statistical validation",
+          "calibration",
+          "confidence interval"
+        ],
+        "question": "Which fields require statistical methods review?",
+        "question_id": "route_001",
+        "reviewer_interpretation": "inspect_blocker",
+        "target_evidence_status": "blocked_by_restricted_data"
+      },
+      {
+        "category": "External review route",
+        "must_not_infer": [
+          "economic validation",
+          "forecast",
+          "policy result"
+        ],
+        "question": "Which fields require economic methods review?",
+        "question_id": "route_002",
+        "reviewer_interpretation": "inspect_blocker",
+        "target_evidence_status": "blocked_by_restricted_data"
+      },
+      {
+        "category": "External review route",
+        "must_not_infer": [
+          "legal sufficiency",
+          "tax advice",
+          "operative law"
+        ],
+        "question": "Which fields require legal or tax review?",
+        "question_id": "route_003",
+        "reviewer_interpretation": "inspect_blocker",
+        "target_evidence_status": "blocked_by_restricted_data"
+      },
+      {
+        "category": "External review route",
+        "must_not_infer": [
+          "approval",
+          "validation",
+          "official pathway"
+        ],
+        "question": "Which source rows require source review before Build 29 reconciliation?",
+        "question_id": "route_004",
+        "reviewer_interpretation": "inspect_source",
+        "target_evidence_status": "source_reference_only"
+      },
+      {
+        "category": "External review route",
+        "must_not_infer": [
+          "official review pathway",
+          "approval",
+          "validation"
+        ],
+        "question": "Are review routes framed as suggested review prompts only?",
+        "question_id": "route_005",
+        "reviewer_interpretation": "inspect_non_claim_boundary",
+        "target_evidence_status": "realistic_placeholder_anchor"
+      },
+      {
+        "category": "Build 29 readiness",
+        "must_not_infer": [
+          "validation",
+          "calibration",
+          "approval"
+        ],
+        "question": "Are source locators present for loaded public extracts?",
+        "question_id": "build29_001",
+        "reviewer_interpretation": "inspect_source",
+        "target_evidence_status": "loaded_public_aggregate"
+      },
+      {
+        "category": "Build 29 readiness",
+        "must_not_infer": [
+          "model proof",
+          "validation",
+          "readiness"
+        ],
+        "question": "Are arithmetic checks represented without claiming model evidence?",
+        "question_id": "build29_002",
+        "reviewer_interpretation": "inspect_arithmetic",
+        "target_evidence_status": "loaded_public_aggregate"
+      },
+      {
+        "category": "Build 29 readiness",
+        "must_not_infer": [
+          "loaded data",
+          "calibration",
+          "validation"
+        ],
+        "question": "Are source-reference-only rows preserved for reconciliation?",
+        "question_id": "build29_003",
+        "reviewer_interpretation": "inspect_source",
+        "target_evidence_status": "source_reference_only"
+      },
+      {
+        "category": "Build 29 readiness",
+        "must_not_infer": [
+          "external attestation",
+          "approval",
+          "validation"
+        ],
+        "question": "Are digest and report paths visible for later reconciliation?",
+        "question_id": "build29_004",
+        "reviewer_interpretation": "inspect_source",
+        "target_evidence_status": "loaded_public_aggregate"
+      },
+      {
+        "category": "Build 29 readiness",
+        "must_not_infer": [
+          "readiness",
+          "official status",
+          "legal sufficiency"
+        ],
+        "question": "Are non-claim boundaries visible before any source reconciliation audit?",
+        "question_id": "build29_005",
+        "reviewer_interpretation": "inspect_non_claim_boundary",
+        "target_evidence_status": "realistic_placeholder_anchor"
+      }
+    ],
+    "source_evidence": [
+      {
+        "claim_level": "placeholder_anchor_only",
+        "confidence_label": "source_locator_recorded",
+        "data_status": "source_reference",
+        "evidence_id": "source_fair_work_minimum_wage_2025",
+        "evidence_status": "source_reference_only",
+        "linked_extract_ids": [
+          "fair_work_minimum_wage_2025_extract"
+        ],
+        "linked_placeholder_anchor_ids": [
+          "anchor_opfte_minimum_wage",
+          "anchor_hle_minimum_wage",
+          "anchor_qlc_minimum_wage",
+          "anchor_sector_schedule_source_reference"
+        ],
+        "publication_or_release_name": "Minimum wages fact sheet",
+        "publisher": "Fair Work Ombudsman",
+        "reviewer_interpretation": [
+          "inspect_source",
+          "not_evidence_for_calibration"
+        ],
+        "source_kind": "Fair_Work_public_wage_anchor",
+        "source_reference_id": "fair_work_minimum_wage_2025",
+        "source_url": "https://www.fairwork.gov.au/how-we-will-help/templates-and-guides/fact-sheets/minimum-workplace-entitlements/minimum-wages",
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "official status",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check that the source URL and release name can be independently found.",
+          "Check whether linked extract rows remain aggregate-only or source-reference-only."
+        ]
+      },
+      {
+        "claim_level": "sanity_check_only",
+        "confidence_label": "source_locator_recorded",
+        "data_status": "source_reference",
+        "evidence_id": "source_ato_corporate_tax_transparency_2022_23",
+        "evidence_status": "source_reference_only",
+        "linked_extract_ids": [
+          "ato_corporate_transparency_2022_23_extract"
+        ],
+        "linked_placeholder_anchor_ids": [],
+        "publication_or_release_name": "ATO corporate transparency media release",
+        "publisher": "Australian Taxation Office",
+        "reviewer_interpretation": [
+          "inspect_source",
+          "not_evidence_for_calibration"
+        ],
+        "source_kind": "ATO_public_aggregate",
+        "source_reference_id": "ato_corporate_tax_transparency_2022_23",
+        "source_url": "https://www.ato.gov.au/media-centre/ato-collects-100-billion-dollars-from-large-corporates",
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "official status",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check that the source URL and release name can be independently found.",
+          "Check whether linked extract rows remain aggregate-only or source-reference-only."
+        ]
+      },
+      {
+        "claim_level": "sanity_check_only",
+        "confidence_label": "source_locator_recorded",
+        "data_status": "source_reference",
+        "evidence_id": "source_ato_taxation_statistics_2022_23",
+        "evidence_status": "source_reference_only",
+        "linked_extract_ids": [
+          "ato_taxation_statistics_2022_23_extract"
+        ],
+        "linked_placeholder_anchor_ids": [
+          "anchor_fiscal_public_aggregates",
+          "anchor_payg_public_tax_stats",
+          "anchor_uncertainty_source_reference_only"
+        ],
+        "publication_or_release_name": "Taxation statistics 2022-23 public summary",
+        "publisher": "Australian Taxation Office",
+        "reviewer_interpretation": [
+          "inspect_source",
+          "not_evidence_for_calibration"
+        ],
+        "source_kind": "ATO_public_aggregate",
+        "source_reference_id": "ato_taxation_statistics_2022_23",
+        "source_url": "https://www.ato.gov.au/media-centre/2022-23-taxation-statistics-released",
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "official status",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check that the source URL and release name can be independently found.",
+          "Check whether linked extract rows remain aggregate-only or source-reference-only."
+        ]
+      },
+      {
+        "claim_level": "sanity_check_only",
+        "confidence_label": "source_locator_recorded",
+        "data_status": "source_reference",
+        "evidence_id": "source_treasury_budget_2026_27_bp1",
+        "evidence_status": "source_reference_only",
+        "linked_extract_ids": [
+          "treasury_budget_2026_27_receipts_extract"
+        ],
+        "linked_placeholder_anchor_ids": [
+          "anchor_fiscal_public_aggregates",
+          "anchor_transition_public_reference"
+        ],
+        "publication_or_release_name": "Budget Paper No. 1 2026-27",
+        "publisher": "Australian Government Treasury",
+        "reviewer_interpretation": [
+          "inspect_source",
+          "not_evidence_for_calibration"
+        ],
+        "source_kind": "Treasury_public_fiscal",
+        "source_reference_id": "treasury_budget_2026_27_bp1",
+        "source_url": "https://budget.gov.au/content/bp1/",
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "official status",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check that the source URL and release name can be independently found.",
+          "Check whether linked extract rows remain aggregate-only or source-reference-only."
+        ]
+      },
+      {
+        "claim_level": "source_reference_only",
+        "confidence_label": "source_locator_recorded",
+        "data_status": "source_reference",
+        "evidence_id": "source_study_assist_help_thresholds_2025_26",
+        "evidence_status": "source_reference_only",
+        "linked_extract_ids": [
+          "help_threshold_source_reference_extract"
+        ],
+        "linked_placeholder_anchor_ids": [
+          "anchor_help_source_reference"
+        ],
+        "publication_or_release_name": "Loan repayment threshold public guidance",
+        "publisher": "Australian Government StudyAssist",
+        "reviewer_interpretation": [
+          "inspect_source",
+          "not_evidence_for_calibration"
+        ],
+        "source_kind": "HELP_HECS_public_threshold",
+        "source_reference_id": "study_assist_help_thresholds_2025_26",
+        "source_url": "https://www.studyassist.gov.au/paying-back-your-loan/loan-repayment",
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "official status",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check that the source URL and release name can be independently found.",
+          "Check whether linked extract rows remain aggregate-only or source-reference-only."
+        ]
+      },
+      {
+        "claim_level": "placeholder_anchor_only",
+        "confidence_label": "source_locator_recorded",
+        "data_status": "source_reference",
+        "evidence_id": "source_ato_super_guarantee_2025_26",
+        "evidence_status": "source_reference_only",
+        "linked_extract_ids": [
+          "super_guarantee_2025_26_extract"
+        ],
+        "linked_placeholder_anchor_ids": [
+          "anchor_super_guarantee_rate",
+          "anchor_transition_public_reference"
+        ],
+        "publication_or_release_name": "Key superannuation rates and thresholds",
+        "publisher": "Australian Taxation Office",
+        "reviewer_interpretation": [
+          "inspect_source",
+          "not_evidence_for_calibration"
+        ],
+        "source_kind": "Super_Guarantee_public_setting",
+        "source_reference_id": "ato_super_guarantee_2025_26",
+        "source_url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/super-guarantee",
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "official status",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check that the source URL and release name can be independently found.",
+          "Check whether linked extract rows remain aggregate-only or source-reference-only."
+        ]
+      },
+      {
+        "claim_level": "source_reference_only",
+        "confidence_label": "source_locator_recorded",
+        "data_status": "source_reference",
+        "evidence_id": "source_qld_payroll_tax_threshold_2025_26",
+        "evidence_status": "source_reference_only",
+        "linked_extract_ids": [
+          "qld_payroll_tax_source_reference_extract"
+        ],
+        "linked_placeholder_anchor_ids": [
+          "anchor_payroll_tax_source_reference"
+        ],
+        "publication_or_release_name": "Payroll tax public thresholds",
+        "publisher": "Queensland Revenue Office",
+        "reviewer_interpretation": [
+          "inspect_source",
+          "not_evidence_for_calibration"
+        ],
+        "source_kind": "State_payroll_tax_public_threshold",
+        "source_reference_id": "qld_payroll_tax_threshold_2025_26",
+        "source_url": "https://qro.qld.gov.au/payroll-tax/",
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "official status",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check that the source URL and release name can be independently found.",
+          "Check whether linked extract rows remain aggregate-only or source-reference-only."
+        ]
+      },
+      {
+        "claim_level": "source_reference_only",
+        "confidence_label": "source_locator_recorded",
+        "data_status": "source_reference",
+        "evidence_id": "source_abs_labour_wage_aggregate_source_reference",
+        "evidence_status": "source_reference_only",
+        "linked_extract_ids": [
+          "abs_labour_source_reference_extract"
+        ],
+        "linked_placeholder_anchor_ids": [
+          "anchor_sector_schedule_source_reference",
+          "anchor_uncertainty_source_reference_only"
+        ],
+        "publication_or_release_name": "ABS labour statistics public landing page",
+        "publisher": "Australian Bureau of Statistics",
+        "reviewer_interpretation": [
+          "inspect_source",
+          "not_evidence_for_calibration"
+        ],
+        "source_kind": "ABS_public_aggregate",
+        "source_reference_id": "abs_labour_wage_aggregate_source_reference",
+        "source_url": "https://www.abs.gov.au/statistics/labour",
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "official status",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check that the source URL and release name can be independently found.",
+          "Check whether linked extract rows remain aggregate-only or source-reference-only."
+        ]
+      }
+    ],
+    "source_reference_only_evidence": [
+      {
+        "arithmetic_check_status": "not_recalculated",
+        "claim_level": "source_reference_only",
+        "confidence_label": "source_reference_only",
+        "data_status": "source_reference_only",
+        "evidence_id": "extract_help_threshold_source_reference_extract",
+        "evidence_status": "source_reference_only",
+        "extract_id": "help_threshold_source_reference_extract",
+        "reviewer_interpretation": [
+          "inspect_source",
+          "not_evidence_for_calibration",
+          "not_evidence_for_tax_payable"
+        ],
+        "safe_to_commit": true,
+        "source_locator": "",
+        "source_reference_id": "study_assist_help_thresholds_2025_26",
+        "source_value_note": "",
+        "value_review_status": "",
+        "values_summary": "source reference only",
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "ATO guidance",
+          "Treasury modelling",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check the source locator and value note before interpreting the row.",
+          "Check that the row is still labelled sanity-check-only or placeholder-anchor-only."
+        ]
+      },
+      {
+        "arithmetic_check_status": "not_recalculated",
+        "claim_level": "source_reference_only",
+        "confidence_label": "source_reference_only",
+        "data_status": "source_reference_only",
+        "evidence_id": "extract_qld_payroll_tax_source_reference_extract",
+        "evidence_status": "source_reference_only",
+        "extract_id": "qld_payroll_tax_source_reference_extract",
+        "reviewer_interpretation": [
+          "inspect_source",
+          "not_evidence_for_calibration",
+          "not_evidence_for_tax_payable"
+        ],
+        "safe_to_commit": true,
+        "source_locator": "",
+        "source_reference_id": "qld_payroll_tax_threshold_2025_26",
+        "source_value_note": "",
+        "value_review_status": "",
+        "values_summary": "source reference only",
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "ATO guidance",
+          "Treasury modelling",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check the source locator and value note before interpreting the row.",
+          "Check that the row is still labelled sanity-check-only or placeholder-anchor-only."
+        ]
+      },
+      {
+        "arithmetic_check_status": "not_recalculated",
+        "claim_level": "source_reference_only",
+        "confidence_label": "source_reference_only",
+        "data_status": "source_reference_only",
+        "evidence_id": "extract_abs_labour_source_reference_extract",
+        "evidence_status": "source_reference_only",
+        "extract_id": "abs_labour_source_reference_extract",
+        "reviewer_interpretation": [
+          "inspect_source",
+          "not_evidence_for_calibration",
+          "not_evidence_for_tax_payable"
+        ],
+        "safe_to_commit": true,
+        "source_locator": "",
+        "source_reference_id": "abs_labour_wage_aggregate_source_reference",
+        "source_value_note": "",
+        "value_review_status": "",
+        "values_summary": "source reference only",
+        "what_reviewer_must_not_infer": [
+          "calibration",
+          "validation",
+          "ATO guidance",
+          "Treasury modelling",
+          "actual tax payable"
+        ],
+        "what_reviewer_should_check": [
+          "Check the source locator and value note before interpreting the row.",
+          "Check that the row is still labelled sanity-check-only or placeholder-anchor-only."
+        ]
+      }
+    ],
+    "status": "reviewer_evidence_map_only",
+    "summary": {
+      "actual_tax_payable_determined": false,
+      "approval_claimed": false,
+      "evidence_map_created": true,
+      "field_sanity_blocked": 2,
+      "field_sanity_passed": 4,
+      "field_sanity_warning": 4,
+      "firm_level_liability_logic_modified": false,
+      "forbidden_claim_findings": 0,
+      "legal_sufficiency_claimed": false,
+      "loaded_public_extracts_mapped": true,
+      "modules_blocked_by_restricted_data": 10,
+      "modules_placeholder_anchor_possible": 4,
+      "modules_sanity_check_possible": 1,
+      "new_data_loaded": false,
+      "official_status_claimed": false,
+      "operational_readiness_claimed": false,
+      "real_calibration_completed": false,
+      "real_public_data_loaded_from_build_27_only": true,
+      "realistic_placeholders_mapped": true,
+      "restricted_blockers_mapped": true,
+      "source_reference_only_records_mapped": true,
+      "source_references_mapped": true,
+      "total_field_sanity_evidence_items": 10,
+      "total_forbidden_repo_data_items": 5,
+      "total_loaded_public_extract_evidence_items": 5,
+      "total_module_sanity_evidence_items": 11,
+      "total_placeholder_evidence_items": 11,
+      "total_restricted_blocker_items": 3,
+      "total_reviewer_questions": 45,
+      "total_source_evidence_items": 8,
+      "total_source_reference_only_evidence_items": 3,
+      "validation_claimed": false
+    }
+  },
+  "summary": {
+    "actual_tax_payable_determined": false,
+    "approval_claimed": false,
+    "evidence_map_created": true,
+    "field_sanity_blocked": 2,
+    "field_sanity_passed": 4,
+    "field_sanity_warning": 4,
+    "firm_level_liability_logic_modified": false,
+    "forbidden_claim_findings": 0,
+    "legal_sufficiency_claimed": false,
+    "loaded_public_extracts_mapped": true,
+    "modules_blocked_by_restricted_data": 10,
+    "modules_placeholder_anchor_possible": 4,
+    "modules_sanity_check_possible": 1,
+    "new_data_loaded": false,
+    "official_status_claimed": false,
+    "operational_readiness_claimed": false,
+    "real_calibration_completed": false,
+    "real_public_data_loaded_from_build_27_only": true,
+    "realistic_placeholders_mapped": true,
+    "restricted_blockers_mapped": true,
+    "source_reference_only_records_mapped": true,
+    "source_references_mapped": true,
+    "total_field_sanity_evidence_items": 10,
+    "total_forbidden_repo_data_items": 5,
+    "total_loaded_public_extract_evidence_items": 5,
+    "total_module_sanity_evidence_items": 11,
+    "total_placeholder_evidence_items": 11,
+    "total_restricted_blocker_items": 3,
+    "total_reviewer_questions": 45,
+    "total_source_evidence_items": 8,
+    "total_source_reference_only_evidence_items": 3,
+    "validation_claimed": false
+  }
+}

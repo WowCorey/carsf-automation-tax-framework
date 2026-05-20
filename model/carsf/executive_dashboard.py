@@ -50,6 +50,7 @@ REQUIRED_LAYER_IDS = {
     "calibration_shell",
     "real_data_feasibility",
     "public_data_pilot",
+    "public_data_evidence_map",
     "working_paper",
     "status_risks_docs",
 }
@@ -97,6 +98,8 @@ REQUIRED_REPORT_PATHS = {
     "reports/real_data_feasibility.json",
     "reports/public_data_pilot.md",
     "reports/public_data_pilot.json",
+    "reports/public_data_evidence_map.md",
+    "reports/public_data_evidence_map.json",
 }
 
 FORBIDDEN_AFFIRMATIVE_DASHBOARD_CLAIMS = [

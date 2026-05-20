@@ -29,4 +29,6 @@ This does not mean real data has been loaded, calibration has occurred, validati
 
 Reviewers should attack `reports/public_data_pilot.md` for source provenance gaps, licence/access note weakness, source-reference-only overread, realistic-placeholder labelling failure, digest drift, restricted-data boundary failure, and any wording that could imply calibration, validation, actual tax payable, official status, or a firm-level CARSF liability change.
 
+Reviewers should attack `reports/public_data_evidence_map.md` for source-reference-only counting errors, loaded-public-extract locator gaps, missing value-review status, missing Fair Work arithmetic representation, placeholder-anchor overread, confidence-label overread, dashboard wording drift, and any wording that could imply calibration, validation, actual tax payable, ATO guidance, Treasury modelling, official status, or a firm-level CARSF liability change.
+
 The public-data pilot is not calibration. Public data extracts do not prove the model works. Realistic placeholders remain placeholders. Source references are not loaded datasets. Build 25 sealed the previous RC state, so a new integrity seal must be regenerated if Build 27 is included in a later sealed RC.

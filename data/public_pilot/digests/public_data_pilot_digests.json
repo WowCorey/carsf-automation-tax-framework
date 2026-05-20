@@ -22,13 +22,13 @@
       "bytes": 19046,
       "digest_scope": "public_data_pilot_integrity_metadata_only",
       "path": "reports/public_data_pilot.md",
-      "sha256": "a22756715e3b2147f01c63f97b4c5d4b2b7618720d99322b5253b23909d6336b"
+      "sha256": "705d0f6fafd38bbde7b1fec653273de83a47fc9843e766f9e1576368055ad5f0"
     },
     {
       "bytes": 65695,
       "digest_scope": "public_data_pilot_integrity_metadata_only",
       "path": "reports/public_data_pilot.json",
-      "sha256": "74659e9a6bdfb84ac5608b07b35f7e913fa05eb89ba426227d98282fe6d92473"
+      "sha256": "992e6fc671907ff5ab180b3fb6ea484e4d9d38ad2e99485b774fd0cd8c1ab887"
     }
   ],
   "metadata": {

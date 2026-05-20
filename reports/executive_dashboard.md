@@ -1,6 +1,6 @@
 # CARSF V1.5 Executive Dashboard Consolidation
 
-Generated at: `2026-05-19T04:39:21+00:00`
+Generated at: `2026-05-20T02:07:18+00:00`
 
 ## A. Purpose
 
@@ -19,22 +19,22 @@ Use this as a review navigation index. Read order is suggested review navigation
 
 ## D. Prototype Stack Overview
 
-- Total layers: 25
-- Total reports indexed: 44
-- Reports present: 44
+- Total layers: 26
+- Total reports indexed: 46
+- Reports present: 46
 - Reports missing: 0
-- Layers with generated reports: 24
+- Layers with generated reports: 25
 - Synthetic-only layers: 10
-- Placeholder-only layers: 21
+- Placeholder-only layers: 22
 - Non-operative layers: 3
-- External-review-required layers: 22
-- Calibration-required layers: 18
+- External-review-required layers: 23
+- Calibration-required layers: 19
 - Legal-review-required layers: 13
 - Tax-review-required layers: 10
-- ATO-methods-review-required layers: 12
-- Treasury-methods-review-required layers: 16
-- Privacy-review-required layers: 11
-- Statistical-methods-review-required layers: 7
+- ATO-methods-review-required layers: 13
+- Treasury-methods-review-required layers: 17
+- Privacy-review-required layers: 12
+- Statistical-methods-review-required layers: 8
 - real_data_used: False
 - readiness_score_created: False
 - operational_readiness_claimed: False
@@ -71,6 +71,7 @@ Use this as a review navigation index. Read order is suggested review navigation
 | 21 | calibration_shell | Calibration Shell | Calibration requirements registry and external-data readiness shell. | False | Suggested review navigation only; not an official process. |
 | 26 | real_data_feasibility | Real Data Feasibility and Calibration Intake Map | Feasibility map for public aggregate data candidates, restricted-data requirements, realistic placeholders, forbidden repo data, module needs, and Build 27 pilot candidates. | False | Suggested review navigation only; not an official process. |
 | 27 | public_data_pilot | Public Data Pilot and Placeholder Anchor Layer | Small public aggregate/source-reference pilot that anchors realistic placeholders while keeping calibration incomplete and restricted data excluded. | False | Suggested review navigation only; not an official process. |
+| 28 | public_data_evidence_map | Public Data Pilot Reviewer Evidence Map | Reviewer-facing evidence map over Build 27 public-data pilot outputs without loading new data. | False | Suggested review navigation only; not an official process. |
 
 ## F. Layer Index
 
@@ -101,6 +102,7 @@ Use this as a review navigation index. Read order is suggested review navigation
 | calibration_shell | Calibration Shell | calibration | Calibration requirements registry and external-data readiness shell. | implemented_prototype, generated_report_available, placeholder_only, calibration_required, external_review_required | reports/calibration_requirements.md, reports/calibration_requirements.json | simulator/pages/8_Evidence_and_Calibration.py | statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer, privacy_reviewer | 21 | Calibration shell summarises unresolved data and methods needs. |
 | real_data_feasibility | Real Data Feasibility and Calibration Intake Map | calibration | Feasibility map for public aggregate data candidates, restricted-data requirements, realistic placeholders, forbidden repo data, module needs, and Build 27 pilot candidates. | implemented_prototype, generated_report_available, placeholder_only, calibration_required, external_review_required, not_for_real_world_use | reports/real_data_feasibility.md, reports/real_data_feasibility.json | None | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer | 26 | Build 26 prepares a safe public-data pilot boundary without loading data. |
 | public_data_pilot | Public Data Pilot and Placeholder Anchor Layer | calibration | Small public aggregate/source-reference pilot that anchors realistic placeholders while keeping calibration incomplete and restricted data excluded. | implemented_prototype, generated_report_available, placeholder_only, calibration_required, external_review_required, not_for_real_world_use | reports/public_data_pilot.md, reports/public_data_pilot.json | None | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer | 27 | Build 27 tests safe public aggregate intake and placeholder anchoring without real calibration. |
+| public_data_evidence_map | Public Data Pilot Reviewer Evidence Map | calibration | Reviewer-facing evidence map over Build 27 public-data pilot outputs without loading new data. | implemented_prototype, generated_report_available, placeholder_only, calibration_required, external_review_required, not_for_real_world_use | reports/public_data_evidence_map.md, reports/public_data_evidence_map.json | simulator/pages/29_Public_Data_Evidence_Map.py | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer | 28 | Build 28 makes the public-data pilot reviewable without adding data or calibration claims. |
 
 ## G. Report Index
 
@@ -150,6 +152,8 @@ Use this as a review navigation index. Read order is suggested review navigation
 | reports/real_data_feasibility.md | real_data_feasibility | True | scripts/run_real_data_feasibility.py | Real-data feasibility is intake mapping only; no real data has been loaded and no calibration has occurred. | must not use for: real data loaded, calibration completed, validation, official status, actual tax payable | 26 |
 | reports/public_data_pilot.json | public_data_pilot | True | scripts/run_public_data_pilot.py | Machine-readable public-data pilot registry; source references and placeholders remain separate. | must not use for: calibration completed, validation, official status, actual tax payable, readiness score | 27 |
 | reports/public_data_pilot.md | public_data_pilot | True | scripts/run_public_data_pilot.py | Public-data pilot is sanity-check-only and placeholder-anchor-only; it is not calibration. | must not use for: calibration completed, validation, official status, actual tax payable, readiness score | 27 |
+| reports/public_data_evidence_map.json | public_data_evidence_map | True | scripts/run_public_data_evidence_map.py | Machine-readable evidence map over Build 27 public-data pilot outputs only. | must not use for: calibration completed, validation, official status, actual tax payable, readiness score | 28 |
+| reports/public_data_evidence_map.md | public_data_evidence_map | True | scripts/run_public_data_evidence_map.py | Reviewer evidence map only; no new data is loaded and no calibration is completed. | must not use for: calibration completed, validation, official status, actual tax payable, readiness score | 28 |
 
 ## H. Streamlit Page Index
 
@@ -173,6 +177,7 @@ Use this as a review navigation index. Read order is suggested review navigation
 | simulator/pages/23_Administrative_Workflow.py |
 | simulator/pages/24_Legislative_Architecture.py |
 | simulator/pages/25_Executive_Dashboard.py |
+| simulator/pages/29_Public_Data_Evidence_Map.py |
 | simulator/pages/2_Tax_Model.py |
 | simulator/pages/3_Worked_Examples.py |
 | simulator/pages/8_Evidence_and_Calibration.py |
@@ -207,6 +212,7 @@ Use this as a review navigation index. Read order is suggested review navigation
 | status_risks_docs | not_legal_advice, not_tax_advice, not_economic_validation, not_operational_readiness | must not use for: approval, validation, operational readiness | True |
 | real_data_feasibility | not_real_data, not_statistical_validation, not_economic_validation, not_actual_tax_payable, not_operational_readiness | must not use for: real data loaded, calibration completed, validation, official status, actual tax payable | True |
 | public_data_pilot | not_statistical_validation, not_economic_validation, not_actual_tax_payable, not_operational_readiness | must not use for: calibration completed, validation, official status, actual tax payable, readiness score | True |
+| public_data_evidence_map | not_statistical_validation, not_economic_validation, not_actual_tax_payable, not_operational_readiness | must not use for: calibration completed, validation, official status, actual tax payable, readiness score | True |
 
 ## J. Calibration Blockers
 
@@ -238,6 +244,8 @@ Use this as a review navigation index. Read order is suggested review navigation
 | real_data_feasibility | calibration | Restricted-data requirements remain access blockers, not data access. | False | Build 26 prepares a safe public-data pilot boundary without loading data. |
 | public_data_pilot | calibration | Public aggregate extracts support sanity checks and placeholder anchors only. | False | Build 27 tests safe public aggregate intake and placeholder anchoring without real calibration. |
 | public_data_pilot | calibration | Calibration has not been completed and restricted-data blockers remain. | False | Build 27 tests safe public aggregate intake and placeholder anchoring without real calibration. |
+| public_data_evidence_map | calibration | Evidence map exposes Build 27 rows for reviewer inspection only. | False | Build 28 makes the public-data pilot reviewable without adding data or calibration claims. |
+| public_data_evidence_map | calibration | No new data is loaded and calibration remains incomplete. | False | Build 28 makes the public-data pilot reviewable without adding data or calibration claims. |
 
 ## K. External Review Blockers
 
@@ -268,6 +276,7 @@ Use this as a review navigation index. Read order is suggested review navigation
 | status_risks_docs | external_review | Cross-functional external review required before real use. | True | Status and risks docs should be read before interpreting outputs. |
 | real_data_feasibility | external_review | Public source licensing, aggregate-only handling, privacy, statistical methods, legal, tax, Treasury, and ATO-methods review remain required before Build 27 loading. | True | Build 26 prepares a safe public-data pilot boundary without loading data. |
 | public_data_pilot | external_review | Source licensing, public-data handling, privacy, statistical methods, legal, tax, Treasury, and ATO-methods review remain required before broader use. | True | Build 27 tests safe public aggregate intake and placeholder anchoring without real calibration. |
+| public_data_evidence_map | external_review | Source reconciliation, privacy, statistical methods, legal, tax, Treasury, and ATO-methods review remain required. | True | Build 28 makes the public-data pilot reviewable without adding data or calibration claims. |
 
 ## L. Guardrail / Safety Status
 
@@ -300,16 +309,16 @@ Use this as a review navigation index. Read order is suggested review navigation
 
 | Reviewer | Layers |
 | --- | --- |
-| ato_methods_reviewer | working_paper, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, behavioural_response, administrative_workflow, legislative_architecture, evidence_workflow, calibration_shell, real_data_feasibility, public_data_pilot |
+| ato_methods_reviewer | working_paper, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, behavioural_response, administrative_workflow, legislative_architecture, evidence_workflow, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map |
 | economic_methods_reviewer | behavioural_response, fiscal_trajectory, investment_incidence |
 | legal_reviewer | working_paper, status_risks_docs, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, behavioural_response, administrative_workflow, legislative_architecture, payment_interactions, evidence_workflow, secure_ingestion, repo_guardrails |
 | parliamentary_counsel_reviewer | legislative_architecture |
 | policy_reviewer | executive_dashboard, working_paper, status_risks_docs, worked_examples, behavioural_response, fiscal_trajectory, transition_funding, household_weighting, uncertainty_ranges, reviewed_scenarios |
-| privacy_reviewer | administrative_workflow, legislative_architecture, household_distributional, household_weighting, evidence_workflow, secure_ingestion, repo_guardrails, calibration_shell, real_data_feasibility, public_data_pilot |
-| statistical_methods_reviewer | household_distributional, household_weighting, uncertainty_ranges, reviewed_scenarios, calibration_shell, real_data_feasibility, public_data_pilot |
+| privacy_reviewer | administrative_workflow, legislative_architecture, household_distributional, household_weighting, evidence_workflow, secure_ingestion, repo_guardrails, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map |
+| statistical_methods_reviewer | household_distributional, household_weighting, uncertainty_ranges, reviewed_scenarios, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map |
 | tax_reviewer | working_paper, status_risks_docs, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, behavioural_response, administrative_workflow, legislative_architecture, investment_incidence |
-| technical_reviewer | executive_dashboard, status_risks_docs, worked_examples, reviewed_scenarios, evidence_workflow, secure_ingestion, repo_guardrails, real_data_feasibility, public_data_pilot |
-| treasury_methods_reviewer | working_paper, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, legislative_architecture, fiscal_trajectory, transition_funding, payment_interactions, investment_incidence, calibration_shell, real_data_feasibility, public_data_pilot |
+| technical_reviewer | executive_dashboard, status_risks_docs, worked_examples, reviewed_scenarios, evidence_workflow, secure_ingestion, repo_guardrails, real_data_feasibility, public_data_pilot, public_data_evidence_map |
+| treasury_methods_reviewer | working_paper, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, legislative_architecture, fiscal_trajectory, transition_funding, payment_interactions, investment_incidence, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map |
 | welfare_policy_reviewer | transition_funding, payment_interactions, household_distributional |
 
 ## R. Plain-English Interpretation

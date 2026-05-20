@@ -64,3 +64,11 @@ Build 27 adds a public aggregate-data pilot and realistic-placeholder anchor lay
 This is not calibration. Calibration has not been completed. Public data extracts do not prove the model works. Realistic placeholders remain placeholders and are not real data or calibrated. Source references are not loaded datasets. Restricted-data requirements are not data access. The layer does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab microdata, HILDA microdata, DSS/Services Australia records, ATO taxpayer records, confidential Treasury/PBO material, restricted government data, real evidence, or unauthorised data, and does not modify firm-level CARSF liability.
 
 Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Build 27 is included in a later sealed RC.
+
+## Build 28 Public-Data Evidence Map Addendum
+
+Build 28 adds a reviewer evidence map and Streamlit dashboard for the Build 27 public-data pilot. It maps source references, loaded public aggregate extracts, source-reference-only records, realistic placeholder anchors, field sanity checks, module sanity checks, restricted-data blockers, forbidden repo data, and reviewer questions.
+
+No new data is loaded by Build 28. Build 27 public aggregate extracts remain sanity-check-only or placeholder-anchor-only. This is not calibration, calibration has not been completed, public data does not prove the model works, realistic placeholders remain placeholders, source references are not loaded datasets, and restricted-data requirements are not data access. The layer does not determine actual tax payable, does not claim validation, approval, legal sufficiency, operational readiness, official status, ATO guidance, Treasury modelling, PBO costing, or modify firm-level CARSF liability.
+
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-28 are included in a later sealed RC.

@@ -969,6 +969,53 @@ layers:
       - official status
       - actual tax payable
       - readiness score
+  - layer_id: public_data_evidence_map
+    layer_name: Public Data Pilot Reviewer Evidence Map
+    layer_group: calibration
+    purpose: Reviewer-facing evidence map over Build 27 public-data pilot outputs without loading new data.
+    primary_files:
+      - model/carsf/public_data_evidence_map.py
+      - data/public_pilot/reviewer_evidence_map_manifest.yaml
+      - scripts/run_public_data_evidence_map.py
+      - simulator/pages/29_Public_Data_Evidence_Map.py
+      - docs/public_data_evidence_map.md
+    primary_reports:
+      - reports/public_data_evidence_map.md
+      - reports/public_data_evidence_map.json
+    streamlit_pages:
+      - simulator/pages/29_Public_Data_Evidence_Map.py
+    status_labels:
+      - implemented_prototype
+      - generated_report_available
+      - placeholder_only
+      - calibration_required
+      - external_review_required
+      - not_for_real_world_use
+    non_claim_flags:
+      - not_statistical_validation
+      - not_economic_validation
+      - not_actual_tax_payable
+      - not_operational_readiness
+    calibration_blockers:
+      - Evidence map exposes Build 27 rows for reviewer inspection only.
+      - No new data is loaded and calibration remains incomplete.
+    external_review_blockers:
+      - Source reconciliation, privacy, statistical methods, legal, tax, Treasury, and ATO-methods review remain required.
+    blocker_explanation: Build 28 maps source references, loaded extracts, placeholders, sanity checks, and blockers without claiming validation.
+    recommended_reviewer:
+      - technical_reviewer
+      - privacy_reviewer
+      - statistical_methods_reviewer
+      - treasury_methods_reviewer
+      - ato_methods_reviewer
+    read_order: 28
+    main_reason: Build 28 makes the public-data pilot reviewable without adding data or calibration claims.
+    must_not_be_used_for:
+      - calibration completed
+      - validation
+      - official status
+      - actual tax payable
+      - readiness score
 report_entries:
   - report_path: reports/executive_dashboard.md
     layer_id: executive_dashboard
@@ -1324,6 +1371,22 @@ report_entries:
     must_not_be_used_for: [calibration completed, validation, official status, actual tax payable, readiness score]
     linked_streamlit_page:
     recommended_read_order: 27
+  - report_path: reports/public_data_evidence_map.md
+    layer_id: public_data_evidence_map
+    report_type: markdown
+    generated_by: scripts/run_public_data_evidence_map.py
+    interpretation_warning: Reviewer evidence map only; no new data is loaded and no calibration is completed.
+    must_not_be_used_for: [calibration completed, validation, official status, actual tax payable, readiness score]
+    linked_streamlit_page: simulator/pages/29_Public_Data_Evidence_Map.py
+    recommended_read_order: 28
+  - report_path: reports/public_data_evidence_map.json
+    layer_id: public_data_evidence_map
+    report_type: json
+    generated_by: scripts/run_public_data_evidence_map.py
+    interpretation_warning: Machine-readable evidence map over Build 27 public-data pilot outputs only.
+    must_not_be_used_for: [calibration completed, validation, official status, actual tax payable, readiness score]
+    linked_streamlit_page: simulator/pages/29_Public_Data_Evidence_Map.py
+    recommended_read_order: 28
 forbidden_claims:
   - ready for government
   - ready for ATO

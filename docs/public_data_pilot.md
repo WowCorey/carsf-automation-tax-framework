@@ -42,4 +42,6 @@ The following remain blocked outside this repository:
 
 ## Next Step
 
-Build 28 should expose the public-data pilot outputs in a reviewer-facing evidence map. It should show which assumptions are source-referenced, which are public-aggregate anchored, which remain realistic placeholders, and which remain blocked by restricted data without claiming calibration, validation, approval, readiness, actual tax payable, legal sufficiency, official status, or implementation readiness.
+Build 28 exposes the public-data pilot outputs in a reviewer-facing evidence map and Streamlit dashboard. It shows which assumptions are source-referenced, which are public-aggregate anchored, which remain realistic placeholders, and which remain blocked by restricted data without loading new data or claiming calibration, validation, approval, readiness, actual tax payable, legal sufficiency, official status, or implementation readiness.
+
+Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-28 are included in a later sealed RC.

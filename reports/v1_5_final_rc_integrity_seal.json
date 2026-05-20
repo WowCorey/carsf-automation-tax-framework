@@ -1167,44 +1167,44 @@
       },
       {
         "artefact_path": "release/v1_5_rc/CALIBRATION_BLOCKERS.md",
-        "byte_count": 5203,
+        "byte_count": 5823,
         "exists": true,
-        "sha256": "170b1eed07ec1b8d311d6bf498e5886edf10c59e81013daaba63d16fd64bcb37",
+        "sha256": "d7f50d9c5b2f1ce2276182d92658fafa66f84c9fa1c9a8a97ee2251c8d4870a1",
         "status": "present"
       },
       {
         "artefact_path": "release/v1_5_rc/EXTERNAL_REVIEW_ROUTING.md",
-        "byte_count": 6383,
+        "byte_count": 7732,
         "exists": true,
-        "sha256": "9931c548ae9e93ee2d9abf7a236f09f844b22ed76a2359fe767b944ef89eecbc",
+        "sha256": "59fa0655a442f2bb10d9c1046028e8a315bac3229bc6ecc0b9cae5b77934abda",
         "status": "present"
       },
       {
         "artefact_path": "release/v1_5_rc/NON_CLAIM_BOUNDARIES.md",
-        "byte_count": 3391,
+        "byte_count": 3725,
         "exists": true,
-        "sha256": "07637713a826430b24ba7879522aff2dbba631bba240f9d336da88d0117a8ca4",
+        "sha256": "31e0e90e6e6fbe2bb8df9cc103fb8395fb7aff7b5c0050cc3b601ce3b3657794",
         "status": "present"
       },
       {
         "artefact_path": "release/v1_5_rc/RELEASE_MANIFEST.json",
-        "byte_count": 2799,
+        "byte_count": 2945,
         "exists": true,
-        "sha256": "e3ae88356a2b9abf3025671a699976b935421cb26b89b1b9d86fa89f802aa7a8",
+        "sha256": "23ab4080c2a2b8b21be748fb1a8a6c98401bac245be396ce2d1847954d5c4585",
         "status": "present"
       },
       {
         "artefact_path": "release/v1_5_rc/RELEASE_NOTES.md",
-        "byte_count": 7267,
+        "byte_count": 8382,
         "exists": true,
-        "sha256": "c2a2d924f57ad0802e43d6ebef5cee6ccb7b8ebd2f00b2a97592d5b81952e265",
+        "sha256": "58038266a1e81824ef06efb9d0e8c98b7b3085ddfb0acd11cff5a71180be8dd9",
         "status": "present"
       },
       {
         "artefact_path": "release/v1_5_rc/REPORT_MAP.md",
-        "byte_count": 6602,
+        "byte_count": 7224,
         "exists": true,
-        "sha256": "e67ee9b5fef8ca59a35f13a0dd1e259722f0d3a74174f84472ba0008cf3b4a6c",
+        "sha256": "2b561ccc726ebf83831accd147faba410778c5df3729176e1b8b6c930bb1944a",
         "status": "present"
       },
       {
@@ -1230,9 +1230,9 @@
       },
       {
         "artefact_path": "release/v1_5_rc/attack_pack/ATTACK_PACK_OVERVIEW.md",
-        "byte_count": 2760,
+        "byte_count": 3226,
         "exists": true,
-        "sha256": "10e8967c3f5018af3616909796b584031e82edd57f68c6c8dbe24db79cd2f327",
+        "sha256": "7df8bb332766117f5c2ca8d86a5e2bda16352b1eb9b6c9bff5c07fe0faa0f0e2",
         "status": "present"
       },
       {
@@ -1258,9 +1258,9 @@
       },
       {
         "artefact_path": "release/v1_5_rc/attack_pack/LAYER_ATTACK_MATRIX.md",
-        "byte_count": 1771,
+        "byte_count": 2254,
         "exists": true,
-        "sha256": "cacef268647b69224aebdc91027a936a46163217ed8ffab78198180e0d76e3aa",
+        "sha256": "9bc37eca50ecaed84c2eb48afff24705aca73f889d331ec4c4eede2ab0c208a4",
         "status": "present"
       },
       {
@@ -1293,9 +1293,9 @@
       },
       {
         "artefact_path": "release/v1_5_rc/attack_pack/REPORT_ATTACK_MATRIX.md",
-        "byte_count": 1994,
+        "byte_count": 2662,
         "exists": true,
-        "sha256": "4cb355eb5336120b788f3c873332a68962a2ef4798a6b23175e83c45dcdb8646",
+        "sha256": "4b6e21d95103cb0058e02f9e5c75659cfb8e8f38fc76ac570bf41fe7a9fab850",
         "status": "present"
       },
       {
@@ -1337,98 +1337,98 @@
         "artefact_path": "reports/administrative_compliance_workflow.json",
         "byte_count": 223206,
         "exists": true,
-        "sha256": "32a4f86292498effec02621fa5c2aa5010976eacd3832a07919e561ec9dad315",
+        "sha256": "8c438c6c6d7ace28506a1a9d0e921dc8aa4c6f27a0999f1c3af59e73ee0a77c5",
         "status": "present"
       },
       {
         "artefact_path": "reports/administrative_compliance_workflow.md",
         "byte_count": 32885,
         "exists": true,
-        "sha256": "4e69fbe63a5d792a15d7388f1d3efebc022a4724fa64339f856b9e388db270bb",
+        "sha256": "fec6a447e4dc103d5ab3f0ff147ac9edf457b820ec633d12e0f128c2c44dcea5",
         "status": "present"
       },
       {
         "artefact_path": "reports/behavioural_response_simulation.json",
         "byte_count": 95790,
         "exists": true,
-        "sha256": "bfaea9478f556893e6bb75601740a4f2c42b58de0d5f41b56654b7e8a8b2c296",
+        "sha256": "243f5f5eee3d5e1f17a6bc179daec754f37ee36741ee5ea31c318ba25b65a4b0",
         "status": "present"
       },
       {
         "artefact_path": "reports/behavioural_response_simulation.md",
         "byte_count": 18118,
         "exists": true,
-        "sha256": "930222540c71a5c08a81e5735e2327ec7d24dabc427a697b7df9228b8632d470",
+        "sha256": "eb81ebe0fde18e2fd61f5da905d49302d7cbe7ff5c634340213c13a5ed7e6fd3",
         "status": "present"
       },
       {
         "artefact_path": "reports/executive_dashboard.json",
-        "byte_count": 123053,
+        "byte_count": 128997,
         "exists": true,
-        "sha256": "4de5f1d6ce9376f3f83fffb2a1123332d45a520f879d9e4dfbb8ee166faa085d",
+        "sha256": "5659db3c7a4c866c24e308fe4ad2e2f6363a08975a85767db8396ea6837e679a",
         "status": "present"
       },
       {
         "artefact_path": "reports/executive_dashboard.md",
-        "byte_count": 55160,
+        "byte_count": 57809,
         "exists": true,
-        "sha256": "a5b1452e5d4525bc7f51f1f3f152b0aacbd1ba3987ce0ed6752909755df118c6",
+        "sha256": "a382297866aafdfbf90257e1bcd358a4061452538ddc43576b47feefe4d82ee6",
         "status": "present"
       },
       {
         "artefact_path": "reports/external_review_attack_pack.json",
-        "byte_count": 377350,
+        "byte_count": 385858,
         "exists": true,
-        "sha256": "cfb7b1a0e9583846d54c88edc994fad69050a2f1512979a851affd97baa88742",
+        "sha256": "70949d4e363c38ef4e163c06ca34ba27d50d1305436bda53b1a8063cfc89a4cd",
         "status": "present"
       },
       {
         "artefact_path": "reports/external_review_attack_pack.md",
-        "byte_count": 175086,
+        "byte_count": 179419,
         "exists": true,
-        "sha256": "4e5cbbf237cedf1eb93d200e13b1f091818da31a2ff29cfd8596f0ce4bc16761",
+        "sha256": "184ff4474fb77b072eb8ae50735373e56a5b4f8a9505f6c972384ed94a6a4276",
         "status": "present"
       },
       {
         "artefact_path": "reports/legislative_architecture.json",
         "byte_count": 111506,
         "exists": true,
-        "sha256": "bbf5d806c957134cfb266ad9370fd4e29859bc8c9132288bea18c305d53a9d8f",
+        "sha256": "12bdd945715dcb2bcf3e0609ad7f901eacb78c46ed54bb7d3ae8e9aa2f759f22",
         "status": "present"
       },
       {
         "artefact_path": "reports/legislative_architecture.md",
         "byte_count": 58342,
         "exists": true,
-        "sha256": "94f1a08e9af775cf02595f17faeec8e4cffc922ad6a0695894e17decfcc9282b",
+        "sha256": "9a92057904e58130aefed856513bfabd11aeed51eee8008ee4b730340f24421f",
         "status": "present"
       },
       {
         "artefact_path": "reports/sector_stress_matrix.json",
         "byte_count": 41062,
         "exists": true,
-        "sha256": "54ad75d15085bdf6cfdf4443c9d8800d84d39ef0153349d1179bbe9b0ec7a90c",
+        "sha256": "da29a816f7e3a0bf4226741c6c3b26a0259740cabd30bec67f0aaa7a4d0ef22a",
         "status": "present"
       },
       {
         "artefact_path": "reports/sector_stress_matrix.md",
         "byte_count": 15896,
         "exists": true,
-        "sha256": "3ef73073cff8964ceba95d2ac6d00df3ead74aefd2858b45ac5869356a5c1a4d",
+        "sha256": "fbddb49ce6d8a1e943b75d426950799ee737c6295b074af11bc0cca9e8a9b20b",
         "status": "present"
       },
       {
         "artefact_path": "reports/v1_5_release_candidate_pack.json",
-        "byte_count": 127090,
+        "byte_count": 132290,
         "exists": true,
-        "sha256": "e135ba1baa7db5ce328d81c1207251ac90695047a1d063db67d4401bc8023a30",
+        "sha256": "ae3b563afd9e6f9a0221b46e917ff9d0a064c4567d1403c60263593e5834b083",
         "status": "present"
       },
       {
         "artefact_path": "reports/v1_5_release_candidate_pack.md",
-        "byte_count": 51144,
+        "byte_count": 53284,
         "exists": true,
-        "sha256": "27933a592cc77ef65a76c1d14b4515fcc029a469e6c6f6b0ca067d951efb287c",
+        "sha256": "46b9f10721396c326b0b9e87c1bc7d48f3065c471953fa1c91da912e8950c517",
         "status": "present"
       }
     ],
@@ -3415,7 +3415,7 @@
     "economic_validation_claimed": false,
     "enforcement_created": false,
     "firm_level_liability_logic_modified": false,
-    "generated_at": "2026-05-20T01:33:44+00:00",
+    "generated_at": "2026-05-20T02:07:19+00:00",
     "legal_sufficiency_claimed": false,
     "legislative_readiness_claimed": false,
     "maturity_score_created": false,

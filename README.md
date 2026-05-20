@@ -14,7 +14,7 @@ Current status: private research/prototype.
 
 All sector values, schedule values, examples, caps, Fiscal Replacement Value values, AAVA settings, and behavioural assumptions are placeholders unless explicitly labelled as confirmed baseline figures from official sources.
 
-The current Build 27 layer adds a small public aggregate-data pilot and realistic-placeholder anchor map. It carries source-reference records and small public aggregate extracts that are explicitly separated from realistic placeholders, synthetic fixtures, restricted-data blockers, and forbidden repo data; it does not complete calibration, imply validation, determine actual tax payable, or change firm-level liability.
+The current Build 28 layer adds a reviewer-facing evidence map and Streamlit dashboard over the Build 27 public-data pilot. It loads no new data, adds no new public extracts, keeps loaded public extracts, source-reference-only records, realistic placeholder anchors, sanity checks, and restricted blockers separate, and does not complete calibration, imply validation, determine actual tax payable, or change firm-level liability.
 
 ## Repository Structure
 
@@ -22,7 +22,7 @@ The current Build 27 layer adds a small public aggregate-data pilot and realisti
 - `release/v1_5_rc/` - V1.5 release-candidate pack with release notes, reviewer briefing, report map, calibration blockers, non-claim boundaries, external-review routing, and release manifest snapshot.
 - `release/v1_5_rc/attack_pack/` - V1.5 external review attack-pack documents for policy, technical, legal, tax, ATO methods, Treasury methods, privacy/secrecy, statistical, economic, welfare, Parliamentary Counsel, and hostile/red-team review.
 - `audits/` - review notes, responses, and red-team register.
-- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, repository guardrails, investment/incidence guardrails, national fiscal trajectory modelling, transition funding, payment interactions, synthetic distributional scenarios, synthetic household weighting, deterministic uncertainty ranges, reviewed scenario display-control classifications, metadata-only sector stress matrix review, synthetic behavioural response simulation, prototype administrative workflow routing, non-operative legislative architecture mapping, executive dashboard consolidation, release-candidate packaging, external review attack-pack validation, final RC integrity seal validation, real-data feasibility intake mapping, and public aggregate-data pilot validation.
+- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, repository guardrails, investment/incidence guardrails, national fiscal trajectory modelling, transition funding, payment interactions, synthetic distributional scenarios, synthetic household weighting, deterministic uncertainty ranges, reviewed scenario display-control classifications, metadata-only sector stress matrix review, synthetic behavioural response simulation, prototype administrative workflow routing, non-operative legislative architecture mapping, executive dashboard consolidation, release-candidate packaging, external review attack-pack validation, final RC integrity seal validation, real-data feasibility intake mapping, public aggregate-data pilot validation, and public-data reviewer evidence mapping.
 - `model/tests/` - pytest coverage for formula bounds, caps, examples, and avoidance flags.
 - `data/` - source-category registry, placeholder policy, and public-pilot source-reference records. Restricted, confidential, taxpayer-level, firm-level confidential, person-level, household microdata, real evidence, and unauthorised data are not committed.
 - `data/public_pilot/` - small public aggregate/source-reference records, realistic-placeholder anchors, and digest metadata for the Build 27 public-data pilot.
@@ -44,6 +44,7 @@ The current Build 27 layer adds a small public aggregate-data pilot and realisti
 - `docs/external_review_attack_pack.md` - external review attack-pack notes and boundaries.
 - `docs/final_rc_integrity_seal.md` - final RC internal integrity seal notes and boundaries.
 - `docs/public_data_pilot.md` - public aggregate-data pilot and realistic-placeholder anchor notes.
+- `docs/public_data_evidence_map.md` - reviewer evidence map for public-data pilot outputs.
 - `simulator/` - Streamlit interface for policy review, tax model inputs, worked examples, red-team tests, and audit log.
 - `docs/` - data requirements, limitations, implementation notes, known risks, and V1.5 plan.
 
@@ -343,6 +344,19 @@ Generated public-data pilot reports and digest metadata:
 - `data/public_pilot/digests/public_data_pilot_digests.json`
 
 Public-data pilot reports may include small public aggregate extracts or source-reference records only. They are not calibration, public data extracts do not prove the model works, realistic placeholders remain placeholders, source references are not loaded datasets, restricted-data requirements are not data access, and no taxpayer-level, firm-level confidential, household microdata, ABS DataLab, HILDA microdata, DSS / Services Australia records, ATO taxpayer records, confidential Treasury/PBO material, restricted government data, or real evidence is committed.
+
+Run the public-data pilot reviewer evidence map:
+
+```powershell
+python scripts/run_public_data_evidence_map.py
+```
+
+Generated public-data evidence-map reports:
+
+- `reports/public_data_evidence_map.md`
+- `reports/public_data_evidence_map.json`
+
+Public-data evidence-map reports are reviewer maps only. No new data is loaded by this build. Build 27 public aggregate extracts remain sanity-check-only or placeholder-anchor-only. They are not calibration, do not prove the model works, do not determine actual tax payable, do not create validation, approval, legal sufficiency, operational readiness, official status, ATO guidance, Treasury modelling, PBO costing, or firm-level liability changes.
 
 ## Run the Simulator
 

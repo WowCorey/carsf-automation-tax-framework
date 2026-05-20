@@ -961,3 +961,27 @@ Limitations:
 - Source references are not loaded datasets and restricted-data requirements are not data access.
 - The build does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab microdata, HILDA microdata, DSS / Services Australia records, ATO taxpayer records, confidential Treasury/PBO material, restricted government data, real evidence, or unauthorised data.
 - It does not claim validation, approval, operational readiness, legal sufficiency, official status, or modify firm-level CARSF liability logic.
+
+## V1.5 Public Data Pilot Reviewer Evidence Map
+
+Branch: `v1.5-public-data-pilot-reviewer-evidence-map`
+
+Baseline: Build 27 public data pilot and placeholder anchor layer merged into `main`.
+
+Purpose of this build:
+
+- Add a reviewer-facing evidence map and Streamlit dashboard over the Build 27 public-data pilot outputs.
+- Map source references, loaded public aggregate extracts, source-reference-only records, realistic placeholder anchors, field sanity checks, module sanity checks, restricted-data blockers, forbidden repo data, and reviewer questions.
+- Add evidence status taxonomy, reviewer interpretation taxonomy, confidence labels, model validation, generated reports, tests, documentation, and CI runner without loading new data or adding public extract values.
+
+Reports generated:
+
+- `reports/public_data_evidence_map.json`
+- `reports/public_data_evidence_map.md`
+
+Limitations:
+
+- Public-data evidence-map outputs are reviewer navigation and evidence-classification outputs only.
+- No new data is loaded, calibration has not been completed, public data does not prove the model works, realistic placeholders remain placeholders, source references are not loaded datasets, and restricted-data requirements are not data access.
+- The build does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab microdata, HILDA microdata, DSS / Services Australia records, ATO taxpayer records, confidential Treasury/PBO material, restricted government data, real evidence, or unauthorised data.
+- It does not claim validation, approval, operational readiness, legal sufficiency, official status, ATO guidance, Treasury modelling, PBO costing, or modify firm-level CARSF liability logic.

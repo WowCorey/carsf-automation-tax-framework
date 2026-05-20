@@ -1,0 +1,139 @@
+evidence_map_id: carsf_v1_5_public_data_pilot_reviewer_evidence_map
+evidence_map_name: CARSF V1.5 Public Data Pilot Reviewer Evidence Map
+status: reviewer_evidence_map_only
+non_claims:
+  - This is a reviewer evidence map and dashboard for the public data pilot only. No new data is loaded by this build. Build 27 public aggregate extracts remain sanity-check-only or placeholder-anchor-only. This is not calibration, calibration has not been completed, public data does not prove the model works, realistic placeholders remain placeholders, realistic placeholders are not real data, realistic placeholders are not calibrated, source references are not loaded datasets, and restricted-data requirements are not data access. It is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab, HILDA microdata, DSS/Services Australia records, ATO taxpayer records, Treasury/PBO confidential material, or restricted government data, and does not modify firm-level CARSF liability. It only maps evidence for reviewer inspection.
+  - Confidence labels are evidence classification labels only; they are not validation scores, not readiness scores, not maturity scores, and not approval.
+  - Source-reference-only records are mapped for review but are not counted as loaded public data.
+  - Reviewer questions are prompts for inspection and do not mean external review has occurred.
+input_artifacts:
+  - data/public_pilot/public_data_pilot_manifest.yaml
+  - data/public_pilot/extracts/public_aggregate_extracts.yaml
+  - data/public_pilot/placeholders/realistic_placeholder_anchors.yaml
+  - reports/public_data_pilot.json
+  - reports/public_data_pilot.md
+  - data/public_pilot/digests/public_data_pilot_digests.json
+evidence_status_taxonomy:
+  - loaded_public_aggregate
+  - source_reference_only
+  - realistic_placeholder_anchor
+  - synthetic_fixture
+  - blocked_by_restricted_data
+  - forbidden_for_repo_use
+reviewer_interpretation_taxonomy:
+  - inspect_source
+  - inspect_arithmetic
+  - inspect_placeholder_basis
+  - inspect_blocker
+  - inspect_non_claim_boundary
+  - not_evidence_for_calibration
+  - not_evidence_for_tax_payable
+  - not_evidence_for_validation
+confidence_label_taxonomy:
+  - source_locator_recorded
+  - arithmetic_checked
+  - source_reference_only
+  - placeholder_anchor_only
+  - blocked_until_restricted_data_access
+  - external_review_required
+source_evidence_rules:
+  - Source evidence rows are derived from Build 27 source references only.
+  - Source evidence rows must not introduce new values.
+extract_evidence_rules:
+  - Loaded public extract rows are derived from Build 27 extracts only.
+  - Source-reference-only extracts must not count as loaded public data.
+  - Loaded extract rows must expose source locator, source value note, and value review status.
+placeholder_evidence_rules:
+  - Placeholder evidence rows must remain realistic_placeholder_anchor evidence.
+  - Placeholder evidence rows must not be labelled real data or calibrated.
+field_sanity_evidence_rules:
+  - Field sanity rows map Build 27 field checks without changing check status.
+module_sanity_evidence_rules:
+  - Module sanity rows must keep calibration_possible false.
+restricted_blocker_rules:
+  - Restricted blockers and forbidden repo data rules must remain visible.
+reviewer_questions:
+  - {question_id: source_001, category: Source verification, question: "Can the source URL and source locator be independently found?", reviewer_interpretation: inspect_source, target_evidence_status: source_reference_only, must_not_infer: [calibration, validation, official status]}
+  - {question_id: source_002, category: Source verification, question: "Does the source reference remain aggregate-only or source-reference-only?", reviewer_interpretation: inspect_source, target_evidence_status: source_reference_only, must_not_infer: [taxpayer data, firm confidential data, household microdata]}
+  - {question_id: source_003, category: Source verification, question: "Is the source release name specific enough for a reviewer to locate it?", reviewer_interpretation: inspect_source, target_evidence_status: source_reference_only, must_not_infer: [approval, validation, calibration]}
+  - {question_id: source_004, category: Source verification, question: "Are source-reference-only records excluded from loaded public data counts?", reviewer_interpretation: inspect_source, target_evidence_status: source_reference_only, must_not_infer: [loaded data, calibration, validation]}
+  - {question_id: source_005, category: Source verification, question: "Is the source being overread as official guidance or methods approval?", reviewer_interpretation: inspect_non_claim_boundary, target_evidence_status: source_reference_only, must_not_infer: [ATO guidance, Treasury modelling, PBO costing]}
+  - {question_id: arithmetic_001, category: Value arithmetic, question: "Does the Fair Work weekly wage row equal hourly value times 38?", reviewer_interpretation: inspect_arithmetic, target_evidence_status: loaded_public_aggregate, must_not_infer: [calibration, validation, legal advice]}
+  - {question_id: arithmetic_002, category: Value arithmetic, question: "Does the evidence row show arithmetic_checked only for the wage arithmetic check?", reviewer_interpretation: inspect_arithmetic, target_evidence_status: loaded_public_aggregate, must_not_infer: [validation score, readiness score, maturity score]}
+  - {question_id: arithmetic_003, category: Value arithmetic, question: "Are rounded values clearly marked as source summaries or arithmetic checks?", reviewer_interpretation: inspect_arithmetic, target_evidence_status: loaded_public_aggregate, must_not_infer: [precision, forecast, actual tax payable]}
+  - {question_id: arithmetic_004, category: Value arithmetic, question: "Are value notes visible before interpreting each loaded row?", reviewer_interpretation: inspect_source, target_evidence_status: loaded_public_aggregate, must_not_infer: [calibration, validation, official status]}
+  - {question_id: arithmetic_005, category: Value arithmetic, question: "Is any arithmetic check being overread as model evidence?", reviewer_interpretation: inspect_non_claim_boundary, target_evidence_status: loaded_public_aggregate, must_not_infer: [model proof, economic validation, statistical validation]}
+  - {question_id: placeholder_001, category: Placeholder anchoring, question: "Is each placeholder clearly labelled as a realistic placeholder?", reviewer_interpretation: inspect_placeholder_basis, target_evidence_status: realistic_placeholder_anchor, must_not_infer: [real data, calibration, validation]}
+  - {question_id: placeholder_002, category: Placeholder anchoring, question: "Does the anchor strength match the source record actually available?", reviewer_interpretation: inspect_placeholder_basis, target_evidence_status: realistic_placeholder_anchor, must_not_infer: [calibration, actual tax payable, official status]}
+  - {question_id: placeholder_003, category: Placeholder anchoring, question: "Are missing data for calibration still listed?", reviewer_interpretation: inspect_placeholder_basis, target_evidence_status: realistic_placeholder_anchor, must_not_infer: [calibration completed, validation, readiness]}
+  - {question_id: placeholder_004, category: Placeholder anchoring, question: "Does any placeholder anchor imply replacement of a placeholder?", reviewer_interpretation: inspect_non_claim_boundary, target_evidence_status: realistic_placeholder_anchor, must_not_infer: [real data replacement, calibrated value, model proof]}
+  - {question_id: placeholder_005, category: Placeholder anchoring, question: "Are reviewer tracks listed before any future replacement?", reviewer_interpretation: inspect_placeholder_basis, target_evidence_status: realistic_placeholder_anchor, must_not_infer: [approval, validation, official status]}
+  - {question_id: blocker_001, category: Restricted-data blockers, question: "Are taxpayer-level data blockers still visible?", reviewer_interpretation: inspect_blocker, target_evidence_status: blocked_by_restricted_data, must_not_infer: [data access, calibration, actual tax payable]}
+  - {question_id: blocker_002, category: Restricted-data blockers, question: "Are firm-confidential blockers still visible?", reviewer_interpretation: inspect_blocker, target_evidence_status: blocked_by_restricted_data, must_not_infer: [firm-level liability, confidential data use, validation]}
+  - {question_id: blocker_003, category: Restricted-data blockers, question: "Are household microdata blockers still visible?", reviewer_interpretation: inspect_blocker, target_evidence_status: blocked_by_restricted_data, must_not_infer: [population estimate, real household estimate, welfare validation]}
+  - {question_id: blocker_004, category: Restricted-data blockers, question: "Are restricted government data blockers preserved in the report?", reviewer_interpretation: inspect_blocker, target_evidence_status: blocked_by_restricted_data, must_not_infer: [restricted access, official status, approval]}
+  - {question_id: blocker_005, category: Restricted-data blockers, question: "Is forbidden repo data still explicitly forbidden?", reviewer_interpretation: inspect_blocker, target_evidence_status: forbidden_for_repo_use, must_not_infer: [safe repo use, data access, calibration]}
+  - {question_id: field_001, category: Field sanity checks, question: "Which field checks are mapped as warning rather than blocked?", reviewer_interpretation: inspect_source, target_evidence_status: loaded_public_aggregate, must_not_infer: [calibration, validation, actual tax payable]}
+  - {question_id: field_002, category: Field sanity checks, question: "Which field checks depend on source-reference-only records?", reviewer_interpretation: inspect_source, target_evidence_status: source_reference_only, must_not_infer: [loaded data, calibration, validation]}
+  - {question_id: field_003, category: Field sanity checks, question: "Which field checks remain blocked by restricted data?", reviewer_interpretation: inspect_blocker, target_evidence_status: blocked_by_restricted_data, must_not_infer: [data access, calibration, official status]}
+  - {question_id: field_004, category: Field sanity checks, question: "Are field findings written as review prompts rather than conclusions?", reviewer_interpretation: inspect_non_claim_boundary, target_evidence_status: realistic_placeholder_anchor, must_not_infer: [model proof, economic validation, statistical validation]}
+  - {question_id: field_005, category: Field sanity checks, question: "Are linked extracts and anchors traceable from each field row?", reviewer_interpretation: inspect_source, target_evidence_status: loaded_public_aggregate, must_not_infer: [tax payable, calibration, validation]}
+  - {question_id: module_001, category: Module sanity checks, question: "Does every module keep calibration_possible false?", reviewer_interpretation: inspect_non_claim_boundary, target_evidence_status: realistic_placeholder_anchor, must_not_infer: [calibration, readiness, validation]}
+  - {question_id: module_002, category: Module sanity checks, question: "Which modules are only placeholder-anchor possible?", reviewer_interpretation: inspect_placeholder_basis, target_evidence_status: realistic_placeholder_anchor, must_not_infer: [model proof, actual tax payable, operational readiness]}
+  - {question_id: module_003, category: Module sanity checks, question: "Which modules remain blocked by restricted data?", reviewer_interpretation: inspect_blocker, target_evidence_status: blocked_by_restricted_data, must_not_infer: [data access, calibration, validation]}
+  - {question_id: module_004, category: Module sanity checks, question: "Are source-reference-only modules separated from loaded-public-extract modules?", reviewer_interpretation: inspect_source, target_evidence_status: source_reference_only, must_not_infer: [loaded data, calibration, validation]}
+  - {question_id: module_005, category: Module sanity checks, question: "Does any module text imply operational use?", reviewer_interpretation: inspect_non_claim_boundary, target_evidence_status: realistic_placeholder_anchor, must_not_infer: [operational readiness, official status, government readiness]}
+  - {question_id: boundary_001, category: Non-claim boundary, question: "Does any output imply calibration is complete?", reviewer_interpretation: inspect_non_claim_boundary, target_evidence_status: realistic_placeholder_anchor, must_not_infer: [calibration completed, validation, readiness]}
+  - {question_id: boundary_002, category: Non-claim boundary, question: "Does any output imply public data proves the model works?", reviewer_interpretation: inspect_non_claim_boundary, target_evidence_status: loaded_public_aggregate, must_not_infer: [model proof, economic validation, statistical validation]}
+  - {question_id: boundary_003, category: Non-claim boundary, question: "Does any output imply actual tax payable?", reviewer_interpretation: inspect_non_claim_boundary, target_evidence_status: loaded_public_aggregate, must_not_infer: [actual tax payable, tax advice, legal advice]}
+  - {question_id: boundary_004, category: Non-claim boundary, question: "Does any output imply ATO guidance or Treasury modelling?", reviewer_interpretation: inspect_non_claim_boundary, target_evidence_status: source_reference_only, must_not_infer: [ATO guidance, Treasury modelling, PBO costing]}
+  - {question_id: boundary_005, category: Non-claim boundary, question: "Does any output imply official status or approval?", reviewer_interpretation: inspect_non_claim_boundary, target_evidence_status: realistic_placeholder_anchor, must_not_infer: [official status, approval, validation]}
+  - {question_id: route_001, category: External review route, question: "Which fields require statistical methods review?", reviewer_interpretation: inspect_blocker, target_evidence_status: blocked_by_restricted_data, must_not_infer: [statistical validation, calibration, confidence interval]}
+  - {question_id: route_002, category: External review route, question: "Which fields require economic methods review?", reviewer_interpretation: inspect_blocker, target_evidence_status: blocked_by_restricted_data, must_not_infer: [economic validation, forecast, policy result]}
+  - {question_id: route_003, category: External review route, question: "Which fields require legal or tax review?", reviewer_interpretation: inspect_blocker, target_evidence_status: blocked_by_restricted_data, must_not_infer: [legal sufficiency, tax advice, operative law]}
+  - {question_id: route_004, category: External review route, question: "Which source rows require source review before Build 29 reconciliation?", reviewer_interpretation: inspect_source, target_evidence_status: source_reference_only, must_not_infer: [approval, validation, official pathway]}
+  - {question_id: route_005, category: External review route, question: "Are review routes framed as suggested review prompts only?", reviewer_interpretation: inspect_non_claim_boundary, target_evidence_status: realistic_placeholder_anchor, must_not_infer: [official review pathway, approval, validation]}
+  - {question_id: build29_001, category: Build 29 readiness, question: "Are source locators present for loaded public extracts?", reviewer_interpretation: inspect_source, target_evidence_status: loaded_public_aggregate, must_not_infer: [validation, calibration, approval]}
+  - {question_id: build29_002, category: Build 29 readiness, question: "Are arithmetic checks represented without claiming model evidence?", reviewer_interpretation: inspect_arithmetic, target_evidence_status: loaded_public_aggregate, must_not_infer: [model proof, validation, readiness]}
+  - {question_id: build29_003, category: Build 29 readiness, question: "Are source-reference-only rows preserved for reconciliation?", reviewer_interpretation: inspect_source, target_evidence_status: source_reference_only, must_not_infer: [loaded data, calibration, validation]}
+  - {question_id: build29_004, category: Build 29 readiness, question: "Are digest and report paths visible for later reconciliation?", reviewer_interpretation: inspect_source, target_evidence_status: loaded_public_aggregate, must_not_infer: [external attestation, approval, validation]}
+  - {question_id: build29_005, category: Build 29 readiness, question: "Are non-claim boundaries visible before any source reconciliation audit?", reviewer_interpretation: inspect_non_claim_boundary, target_evidence_status: realistic_placeholder_anchor, must_not_infer: [readiness, official status, legal sufficiency]}
+forbidden_claims:
+  - calibrated
+  - calibration completed
+  - real calibration
+  - public data proves
+  - model works
+  - tax model works
+  - CARSF works
+  - ready for government
+  - ready for ATO
+  - ready for Treasury
+  - ready for Parliament
+  - ready for implementation
+  - ready for public release
+  - operationally ready
+  - legally sufficient
+  - official status
+  - official policy
+  - validated
+  - externally validated
+  - Treasury validated
+  - ATO validated
+  - PBO validated
+  - economic validation complete
+  - welfare validation complete
+  - statistical validation complete
+  - actual tax payable
+  - real household estimate
+  - population estimate
+  - official sector ranking
+  - compliance score
+  - readiness score
+  - maturity score
+  - approved
+build_29_requirements:
+  - Source-reconciliation audit should check source locator metadata against public source references without loading new data.
+  - Source-reference-only records should remain excluded from loaded public data counts.
+  - Placeholder anchors should remain labelled as placeholders until external review and authorised calibration design.
+  - Restricted-data blockers and forbidden repo data rules should remain visible.
