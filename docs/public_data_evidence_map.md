@@ -60,3 +60,7 @@ Build 25 sealed the earlier RC state. A new integrity seal must be regenerated i
 ## Build 32 Dashboard Follow-On
 
 The evidence-map dashboard now includes an optional public data placeholder replacement map section. It loads `reports/public_data_placeholder_replacement_map.json` only. The section does not load new data, does not show a readiness score, calibration score, validation score, tax payable estimate, or liability estimate, and does not convert public aggregate anchors into calibration or validation.
+
+## Build 33 Dashboard Follow-On
+
+The evidence-map dashboard now includes an optional public aggregate calibration-boundary map section. It loads `reports/public_aggregate_calibration_boundary_map.json` only. The section does not load new data, does not show a readiness score, calibration score, validation score, tax payable estimate, or liability estimate, and does not convert boundary mapping into calibration, validation, legal sufficiency, official status, or firm-level CARSF liability.

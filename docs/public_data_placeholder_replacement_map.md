@@ -26,4 +26,6 @@ This is a public data placeholder replacement map only. No new data is loaded by
 
 ## Integrity Boundary
 
-Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-32 are included in a later sealed RC.
+Build 33 adds a public aggregate calibration-boundary map over these replacement decisions. It defines allowed uses for sanity checks, anchors, bounds, context, placeholder narrowing, and reviewer traceability only. It does not load new data, perform calibration, claim validation, determine actual tax payable, or modify firm-level CARSF liability.
+
+Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-33 are included in a later sealed RC.

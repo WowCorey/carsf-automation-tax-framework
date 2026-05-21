@@ -47,7 +47,9 @@
     "data/public_real/parsed/public_real_aggregate_values.json",
     "data/public_real/digests/public_real_data_digests.json",
     "reports/public_data_placeholder_replacement_map.md",
-    "reports/public_data_placeholder_replacement_map.json"
+    "reports/public_data_placeholder_replacement_map.json",
+    "reports/public_aggregate_calibration_boundary_map.md",
+    "reports/public_aggregate_calibration_boundary_map.json"
   ],
   "attack_pack_summary": {
     "review_tracks": 12,
@@ -78,6 +80,9 @@
     "placeholder_replacement_map_created_by_build_32": true,
     "new_data_loaded_by_placeholder_replacement_map": false,
     "public_source_candidates_treated_as_loaded_by_build_32": false,
+    "public_aggregate_calibration_boundary_map_created_by_build_33": true,
+    "new_data_loaded_by_calibration_boundary_map": false,
+    "public_source_candidates_treated_as_loaded_by_build_33": false,
     "external_source_verification_claimed": false,
     "restricted_data_loaded": false,
     "real_data_loaded": false,

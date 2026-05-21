@@ -1082,3 +1082,29 @@ Limitations:
 - Public aggregate data does not equal calibration, replacement by public aggregate anchor does not mean validation, and narrowing by public aggregate anchor does not mean statistical estimation.
 - The build does not determine actual tax payable, does not use restricted, personal, taxpayer-level, firm-confidential, household microdata, ABS DataLab, HILDA, DSS / Services Australia, ATO taxpayer, confidential Treasury / PBO, bank, payroll-document, pay-record, or tax-file-identifier data.
 - It does not claim validation, approval, operational readiness, legal sufficiency, official status, ATO guidance, Treasury modelling, PBO costing, or modify firm-level CARSF liability logic.
+
+## V1.5 Public Aggregate Calibration Boundary Map
+
+Branch: `v1.5-public-aggregate-calibration-boundary-map`
+
+Baseline: Build 32 public data placeholder replacement map merged into `main`.
+
+Purpose of this build:
+
+- Add a public aggregate calibration-boundary map for CARSF V1.5.
+- Define module-level and field-level allowed uses for Build 31 public aggregate values and Build 32 placeholder replacement decisions.
+- Keep allowed uses limited to sanity checks, public aggregate anchors, public aggregate bounds, contextual references, placeholder narrowing, and reviewer traceability.
+- Add manifest, model validation, generated reports, tests, docs, Streamlit dashboard section, and CI runner without loading new data.
+
+Reports generated:
+
+- `reports/public_aggregate_calibration_boundary_map.json`
+- `reports/public_aggregate_calibration_boundary_map.md`
+
+Limitations:
+
+- The calibration-boundary map loads no new data and performs no calibration.
+- Public aggregate data does not equal calibration, boundary mapping does not mean validation, and boundary mapping does not mean statistical estimation.
+- Source candidates not loaded remain not loaded, restricted-data blockers remain blockers, and modules requiring external review are boundary-limited rather than fully blocked for every allowed use.
+- The build does not determine actual tax payable, does not use restricted, personal, taxpayer-level, firm-confidential, household microdata, ABS DataLab, HILDA, DSS / Services Australia, ATO taxpayer, confidential Treasury / PBO, bank, payroll-document, pay-record, or tax-file-identifier data.
+- It does not claim validation, approval, operational readiness, legal sufficiency, official status, ATO guidance, Treasury modelling, PBO costing, or modify firm-level CARSF liability logic.

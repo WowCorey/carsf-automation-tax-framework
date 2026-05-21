@@ -1,0 +1,2261 @@
+{
+  "metadata": {
+    "allowed_use_type_values": [
+      "contextual_reference_only",
+      "placeholder_narrowing_only",
+      "public_aggregate_anchor_only",
+      "public_aggregate_bound_only",
+      "reviewer_traceability_only",
+      "sanity_check_only"
+    ],
+    "blocker_type_values": [
+      "behavioural_elasticity_required",
+      "economic_review_required",
+      "external_domain_review_required",
+      "firm_confidential_data_required",
+      "household_microdata_required",
+      "legal_review_required",
+      "public_aggregate_data_insufficient",
+      "restricted_tax_data_required",
+      "statistical_review_required",
+      "tax_review_required",
+      "welfare_payment_records_required"
+    ],
+    "boundary_status_values": [
+      "allowed_as_anchor_only",
+      "allowed_as_boundary_only",
+      "allowed_as_context_only",
+      "blocked_for_calibration",
+      "forbidden_for_claim",
+      "requires_external_review",
+      "requires_restricted_data"
+    ],
+    "claim_level_values": [
+      "contextual_public_reference",
+      "no_calibration_claim_allowed",
+      "no_validation_claim_allowed",
+      "placeholder_boundary_only",
+      "public_aggregate_anchor",
+      "public_aggregate_bound",
+      "public_aggregate_sanity_check"
+    ],
+    "forbidden_use_type_values": [
+      "actual_tax_payable",
+      "calibration_completed",
+      "causal_inference",
+      "firm_liability_determination",
+      "household_population_estimate",
+      "implementation_readiness",
+      "legal_sufficiency",
+      "model_validation",
+      "official_policy_status",
+      "statistical_validation",
+      "taxpayer_behaviour_estimate"
+    ],
+    "generated_at": "2026-05-21T05:59:37+00:00",
+    "non_claims": [
+      "This is a public aggregate calibration-boundary map only. No new data is loaded by this build. Public aggregate data can support sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability only. Public aggregate data does not calibrate the model. Calibration has not been completed. Public data does not prove the model works. Boundary mapping does not mean validation, statistical estimation, legal sufficiency, or implementation readiness. Source candidates not loaded remain not loaded. Restricted-data blockers remain blockers. This is not validation, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable and does not modify firm-level CARSF liability.",
+      "Build 33 uses existing Build 31 public aggregate values and Build 32 placeholder replacement decisions only.",
+      "Allowed-use labels are boundary labels only; they are not calibration, validation, legal sufficiency, readiness, or liability determinations.",
+      "Source candidates not loaded in Build 31 remain not loaded and future-only."
+    ],
+    "status": "public_aggregate_calibration_boundary_map_only",
+    "version": "CARSF V1.5 prototype"
+  },
+  "public_aggregate_calibration_boundary_map": {
+    "allowed_use_decisions": [
+      {
+        "decision_id": "allowed_contextual_reference_only",
+        "explanation": "Public aggregate data may be used for contextual_reference_only only when non-claim boundaries remain visible.",
+        "use_type": "contextual_reference_only"
+      },
+      {
+        "decision_id": "allowed_placeholder_narrowing_only",
+        "explanation": "Public aggregate data may be used for placeholder_narrowing_only only when non-claim boundaries remain visible.",
+        "use_type": "placeholder_narrowing_only"
+      },
+      {
+        "decision_id": "allowed_public_aggregate_anchor_only",
+        "explanation": "Public aggregate data may be used for public_aggregate_anchor_only only when non-claim boundaries remain visible.",
+        "use_type": "public_aggregate_anchor_only"
+      },
+      {
+        "decision_id": "allowed_public_aggregate_bound_only",
+        "explanation": "Public aggregate data may be used for public_aggregate_bound_only only when non-claim boundaries remain visible.",
+        "use_type": "public_aggregate_bound_only"
+      },
+      {
+        "decision_id": "allowed_reviewer_traceability_only",
+        "explanation": "Public aggregate data may be used for reviewer_traceability_only only when non-claim boundaries remain visible.",
+        "use_type": "reviewer_traceability_only"
+      },
+      {
+        "decision_id": "allowed_sanity_check_only",
+        "explanation": "Public aggregate data may be used for sanity_check_only only when non-claim boundaries remain visible.",
+        "use_type": "sanity_check_only"
+      }
+    ],
+    "calibration_boundary_blockers": [
+      {
+        "blocker": "legal_review_required remains unresolved for Administrative compliance workflow",
+        "blocker_id": "administrative_compliance_workflow_legal_review_required",
+        "blocker_type": "legal_review_required",
+        "target_id": "administrative_compliance_workflow"
+      },
+      {
+        "blocker": "tax_review_required remains unresolved for Administrative compliance workflow",
+        "blocker_id": "administrative_compliance_workflow_tax_review_required",
+        "blocker_type": "tax_review_required",
+        "target_id": "administrative_compliance_workflow"
+      },
+      {
+        "blocker": "external_domain_review_required remains unresolved for Administrative compliance workflow",
+        "blocker_id": "administrative_compliance_workflow_external_domain_review_required",
+        "blocker_type": "external_domain_review_required",
+        "target_id": "administrative_compliance_workflow"
+      },
+      {
+        "blocker": "behavioural_elasticity_required remains unresolved for Behavioural response / gaming simulation",
+        "blocker_id": "behavioural_response_gaming_simulation_behavioural_elasticity_required",
+        "blocker_type": "behavioural_elasticity_required",
+        "target_id": "behavioural_response_gaming_simulation"
+      },
+      {
+        "blocker": "restricted_tax_data_required remains unresolved for Behavioural response / gaming simulation",
+        "blocker_id": "behavioural_response_gaming_simulation_restricted_tax_data_required",
+        "blocker_type": "restricted_tax_data_required",
+        "target_id": "behavioural_response_gaming_simulation"
+      },
+      {
+        "blocker": "economic_review_required remains unresolved for Behavioural response / gaming simulation",
+        "blocker_id": "behavioural_response_gaming_simulation_economic_review_required",
+        "blocker_type": "economic_review_required",
+        "target_id": "behavioural_response_gaming_simulation"
+      },
+      {
+        "blocker": "external_domain_review_required remains unresolved for Executive dashboard consolidation",
+        "blocker_id": "executive_dashboard_consolidation_external_domain_review_required",
+        "blocker_type": "external_domain_review_required",
+        "target_id": "executive_dashboard_consolidation"
+      },
+      {
+        "blocker": "public_aggregate_data_insufficient remains unresolved for Executive dashboard consolidation",
+        "blocker_id": "executive_dashboard_consolidation_public_aggregate_data_insufficient",
+        "blocker_type": "public_aggregate_data_insufficient",
+        "target_id": "executive_dashboard_consolidation"
+      },
+      {
+        "blocker": "economic_review_required remains unresolved for Fiscal trajectory assumptions",
+        "blocker_id": "fiscal_trajectory_assumptions_economic_review_required",
+        "blocker_type": "economic_review_required",
+        "target_id": "fiscal_trajectory_assumptions"
+      },
+      {
+        "blocker": "restricted_tax_data_required remains unresolved for Fiscal trajectory assumptions",
+        "blocker_id": "fiscal_trajectory_assumptions_restricted_tax_data_required",
+        "blocker_type": "restricted_tax_data_required",
+        "target_id": "fiscal_trajectory_assumptions"
+      },
+      {
+        "blocker": "behavioural_elasticity_required remains unresolved for Fiscal trajectory assumptions",
+        "blocker_id": "fiscal_trajectory_assumptions_behavioural_elasticity_required",
+        "blocker_type": "behavioural_elasticity_required",
+        "target_id": "fiscal_trajectory_assumptions"
+      },
+      {
+        "blocker": "behavioural_elasticity_required remains unresolved for HLE assumptions module",
+        "blocker_id": "hle_assumptions_module_behavioural_elasticity_required",
+        "blocker_type": "behavioural_elasticity_required",
+        "target_id": "hle_assumptions_module"
+      },
+      {
+        "blocker": "statistical_review_required remains unresolved for HLE assumptions module",
+        "blocker_id": "hle_assumptions_module_statistical_review_required",
+        "blocker_type": "statistical_review_required",
+        "target_id": "hle_assumptions_module"
+      },
+      {
+        "blocker": "public_aggregate_data_insufficient remains unresolved for HLE assumptions module",
+        "blocker_id": "hle_assumptions_module_public_aggregate_data_insufficient",
+        "blocker_type": "public_aggregate_data_insufficient",
+        "target_id": "hle_assumptions_module"
+      },
+      {
+        "blocker": "household_microdata_required remains unresolved for Household distributional scenarios",
+        "blocker_id": "household_distributional_scenarios_household_microdata_required",
+        "blocker_type": "household_microdata_required",
+        "target_id": "household_distributional_scenarios"
+      },
+      {
+        "blocker": "welfare_payment_records_required remains unresolved for Household distributional scenarios",
+        "blocker_id": "household_distributional_scenarios_welfare_payment_records_required",
+        "blocker_type": "welfare_payment_records_required",
+        "target_id": "household_distributional_scenarios"
+      },
+      {
+        "blocker": "statistical_review_required remains unresolved for Household distributional scenarios",
+        "blocker_id": "household_distributional_scenarios_statistical_review_required",
+        "blocker_type": "statistical_review_required",
+        "target_id": "household_distributional_scenarios"
+      },
+      {
+        "blocker": "household_microdata_required remains unresolved for Household weighting",
+        "blocker_id": "household_weighting_household_microdata_required",
+        "blocker_type": "household_microdata_required",
+        "target_id": "household_weighting"
+      },
+      {
+        "blocker": "statistical_review_required remains unresolved for Household weighting",
+        "blocker_id": "household_weighting_statistical_review_required",
+        "blocker_type": "statistical_review_required",
+        "target_id": "household_weighting"
+      },
+      {
+        "blocker": "public_aggregate_data_insufficient remains unresolved for Household weighting",
+        "blocker_id": "household_weighting_public_aggregate_data_insufficient",
+        "blocker_type": "public_aggregate_data_insufficient",
+        "target_id": "household_weighting"
+      },
+      {
+        "blocker": "legal_review_required remains unresolved for Legislative architecture skeleton",
+        "blocker_id": "legislative_architecture_skeleton_legal_review_required",
+        "blocker_type": "legal_review_required",
+        "target_id": "legislative_architecture_skeleton"
+      },
+      {
+        "blocker": "tax_review_required remains unresolved for Legislative architecture skeleton",
+        "blocker_id": "legislative_architecture_skeleton_tax_review_required",
+        "blocker_type": "tax_review_required",
+        "target_id": "legislative_architecture_skeleton"
+      },
+      {
+        "blocker": "external_domain_review_required remains unresolved for Legislative architecture skeleton",
+        "blocker_id": "legislative_architecture_skeleton_external_domain_review_required",
+        "blocker_type": "external_domain_review_required",
+        "target_id": "legislative_architecture_skeleton"
+      },
+      {
+        "blocker": "statistical_review_required remains unresolved for OPFTE benchmark module",
+        "blocker_id": "opfte_benchmark_module_statistical_review_required",
+        "blocker_type": "statistical_review_required",
+        "target_id": "opfte_benchmark_module"
+      },
+      {
+        "blocker": "restricted_tax_data_required remains unresolved for OPFTE benchmark module",
+        "blocker_id": "opfte_benchmark_module_restricted_tax_data_required",
+        "blocker_type": "restricted_tax_data_required",
+        "target_id": "opfte_benchmark_module"
+      },
+      {
+        "blocker": "public_aggregate_data_insufficient remains unresolved for OPFTE benchmark module",
+        "blocker_id": "opfte_benchmark_module_public_aggregate_data_insufficient",
+        "blocker_type": "public_aggregate_data_insufficient",
+        "target_id": "opfte_benchmark_module"
+      },
+      {
+        "blocker": "restricted_tax_data_required remains unresolved for PAYG erosion assumptions",
+        "blocker_id": "payg_erosion_assumptions_restricted_tax_data_required",
+        "blocker_type": "restricted_tax_data_required",
+        "target_id": "payg_erosion_assumptions"
+      },
+      {
+        "blocker": "statistical_review_required remains unresolved for PAYG erosion assumptions",
+        "blocker_id": "payg_erosion_assumptions_statistical_review_required",
+        "blocker_type": "statistical_review_required",
+        "target_id": "payg_erosion_assumptions"
+      },
+      {
+        "blocker": "public_aggregate_data_insufficient remains unresolved for PAYG erosion assumptions",
+        "blocker_id": "payg_erosion_assumptions_public_aggregate_data_insufficient",
+        "blocker_type": "public_aggregate_data_insufficient",
+        "target_id": "payg_erosion_assumptions"
+      },
+      {
+        "blocker": "external_domain_review_required remains unresolved for Public data evidence map",
+        "blocker_id": "public_data_evidence_map_external_domain_review_required",
+        "blocker_type": "external_domain_review_required",
+        "target_id": "public_data_evidence_map"
+      },
+      {
+        "blocker": "statistical_review_required remains unresolved for Public data evidence map",
+        "blocker_id": "public_data_evidence_map_statistical_review_required",
+        "blocker_type": "statistical_review_required",
+        "target_id": "public_data_evidence_map"
+      },
+      {
+        "blocker": "restricted_tax_data_required remains unresolved for Public data placeholder replacement map",
+        "blocker_id": "public_data_placeholder_replacement_map_restricted_tax_data_required",
+        "blocker_type": "restricted_tax_data_required",
+        "target_id": "public_data_placeholder_replacement_map"
+      },
+      {
+        "blocker": "statistical_review_required remains unresolved for Public data placeholder replacement map",
+        "blocker_id": "public_data_placeholder_replacement_map_statistical_review_required",
+        "blocker_type": "statistical_review_required",
+        "target_id": "public_data_placeholder_replacement_map"
+      },
+      {
+        "blocker": "external_domain_review_required remains unresolved for Public data placeholder replacement map",
+        "blocker_id": "public_data_placeholder_replacement_map_external_domain_review_required",
+        "blocker_type": "external_domain_review_required",
+        "target_id": "public_data_placeholder_replacement_map"
+      },
+      {
+        "blocker": "statistical_review_required remains unresolved for QLC weights module",
+        "blocker_id": "qlc_weights_module_statistical_review_required",
+        "blocker_type": "statistical_review_required",
+        "target_id": "qlc_weights_module"
+      },
+      {
+        "blocker": "tax_review_required remains unresolved for QLC weights module",
+        "blocker_id": "qlc_weights_module_tax_review_required",
+        "blocker_type": "tax_review_required",
+        "target_id": "qlc_weights_module"
+      },
+      {
+        "blocker": "public_aggregate_data_insufficient remains unresolved for QLC weights module",
+        "blocker_id": "qlc_weights_module_public_aggregate_data_insufficient",
+        "blocker_type": "public_aggregate_data_insufficient",
+        "target_id": "qlc_weights_module"
+      },
+      {
+        "blocker": "statistical_review_required remains unresolved for Reviewed scenario comparison layer",
+        "blocker_id": "reviewed_scenario_comparison_layer_statistical_review_required",
+        "blocker_type": "statistical_review_required",
+        "target_id": "reviewed_scenario_comparison_layer"
+      },
+      {
+        "blocker": "economic_review_required remains unresolved for Reviewed scenario comparison layer",
+        "blocker_id": "reviewed_scenario_comparison_layer_economic_review_required",
+        "blocker_type": "economic_review_required",
+        "target_id": "reviewed_scenario_comparison_layer"
+      },
+      {
+        "blocker": "external_domain_review_required remains unresolved for Reviewed scenario comparison layer",
+        "blocker_id": "reviewed_scenario_comparison_layer_external_domain_review_required",
+        "blocker_type": "external_domain_review_required",
+        "target_id": "reviewed_scenario_comparison_layer"
+      },
+      {
+        "blocker": "statistical_review_required remains unresolved for Sector schedule values",
+        "blocker_id": "sector_schedule_values_statistical_review_required",
+        "blocker_type": "statistical_review_required",
+        "target_id": "sector_schedule_values"
+      },
+      {
+        "blocker": "legal_review_required remains unresolved for Sector schedule values",
+        "blocker_id": "sector_schedule_values_legal_review_required",
+        "blocker_type": "legal_review_required",
+        "target_id": "sector_schedule_values"
+      },
+      {
+        "blocker": "public_aggregate_data_insufficient remains unresolved for Sector schedule values",
+        "blocker_id": "sector_schedule_values_public_aggregate_data_insufficient",
+        "blocker_type": "public_aggregate_data_insufficient",
+        "target_id": "sector_schedule_values"
+      },
+      {
+        "blocker": "economic_review_required remains unresolved for Sector stress matrix",
+        "blocker_id": "sector_stress_matrix_economic_review_required",
+        "blocker_type": "economic_review_required",
+        "target_id": "sector_stress_matrix"
+      },
+      {
+        "blocker": "statistical_review_required remains unresolved for Sector stress matrix",
+        "blocker_id": "sector_stress_matrix_statistical_review_required",
+        "blocker_type": "statistical_review_required",
+        "target_id": "sector_stress_matrix"
+      },
+      {
+        "blocker": "public_aggregate_data_insufficient remains unresolved for Sector stress matrix",
+        "blocker_id": "sector_stress_matrix_public_aggregate_data_insufficient",
+        "blocker_type": "public_aggregate_data_insufficient",
+        "target_id": "sector_stress_matrix"
+      },
+      {
+        "blocker": "firm_confidential_data_required remains unresolved for Superannuation contribution pressure",
+        "blocker_id": "superannuation_contribution_pressure_firm_confidential_data_required",
+        "blocker_type": "firm_confidential_data_required",
+        "target_id": "superannuation_contribution_pressure"
+      },
+      {
+        "blocker": "tax_review_required remains unresolved for Superannuation contribution pressure",
+        "blocker_id": "superannuation_contribution_pressure_tax_review_required",
+        "blocker_type": "tax_review_required",
+        "target_id": "superannuation_contribution_pressure"
+      },
+      {
+        "blocker": "public_aggregate_data_insufficient remains unresolved for Superannuation contribution pressure",
+        "blocker_id": "superannuation_contribution_pressure_public_aggregate_data_insufficient",
+        "blocker_type": "public_aggregate_data_insufficient",
+        "target_id": "superannuation_contribution_pressure"
+      },
+      {
+        "blocker": "welfare_payment_records_required remains unresolved for Transition funding assumptions",
+        "blocker_id": "transition_funding_assumptions_welfare_payment_records_required",
+        "blocker_type": "welfare_payment_records_required",
+        "target_id": "transition_funding_assumptions"
+      },
+      {
+        "blocker": "economic_review_required remains unresolved for Transition funding assumptions",
+        "blocker_id": "transition_funding_assumptions_economic_review_required",
+        "blocker_type": "economic_review_required",
+        "target_id": "transition_funding_assumptions"
+      },
+      {
+        "blocker": "legal_review_required remains unresolved for Transition funding assumptions",
+        "blocker_id": "transition_funding_assumptions_legal_review_required",
+        "blocker_type": "legal_review_required",
+        "target_id": "transition_funding_assumptions"
+      },
+      {
+        "blocker": "statistical_review_required remains unresolved for Uncertainty ranges",
+        "blocker_id": "uncertainty_ranges_statistical_review_required",
+        "blocker_type": "statistical_review_required",
+        "target_id": "uncertainty_ranges"
+      },
+      {
+        "blocker": "public_aggregate_data_insufficient remains unresolved for Uncertainty ranges",
+        "blocker_id": "uncertainty_ranges_public_aggregate_data_insufficient",
+        "blocker_type": "public_aggregate_data_insufficient",
+        "target_id": "uncertainty_ranges"
+      }
+    ],
+    "field_boundary_decisions": [
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "public_aggregate_bound_only",
+          "placeholder_narrowing_only",
+          "sanity_check_only"
+        ],
+        "boundary_status": "allowed_as_boundary_only",
+        "calibration_blockers_remaining": [
+          "economic_review_required",
+          "restricted_tax_data_required",
+          "behavioural_elasticity_required"
+        ],
+        "calibration_completed": false,
+        "claim_level": "public_aggregate_bound",
+        "decision_id": "field_boundary_anchor_fiscal_public_aggregates",
+        "evidence_needed_before_calibration": [
+          "CARSF behavioural response method",
+          "revenue capture method",
+          "fiscal incidence method"
+        ],
+        "field_id": "fiscal_trajectory_assumptions",
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "ato_large_corporate_income_tax_received_2022_23",
+          "ato_large_corporate_entities_no_income_tax_percent_2022_23",
+          "ato_total_tax_revenue_collected_2022_23",
+          "ato_company_tax_revenue_2022_23",
+          "treasury_total_receipts_2025_26_estimate",
+          "treasury_taxation_receipts_2025_26_estimate"
+        ],
+        "placeholder_id": "anchor_fiscal_public_aggregates",
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use the linked public aggregate value as a boundary or narrowing reference only.",
+        "what_public_data_cannot_support": "Public aggregate data cannot turn this field into calibration, validation, actual tax payable, official status, legal sufficiency, or firm-level CARSF liability."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "reviewer_traceability_only"
+        ],
+        "boundary_status": "requires_restricted_data",
+        "calibration_blockers_remaining": [
+          "welfare_payment_records_required",
+          "household_microdata_required",
+          "legal_review_required"
+        ],
+        "calibration_completed": false,
+        "claim_level": "no_calibration_claim_allowed",
+        "decision_id": "field_boundary_anchor_help_source_reference",
+        "evidence_needed_before_calibration": [
+          "income distribution",
+          "individual repayment records",
+          "eligibility law review"
+        ],
+        "field_id": "help_hecs_repayment_pressure",
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [],
+        "placeholder_id": "anchor_help_source_reference",
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use the field boundary only to show that restricted data remains required.",
+        "what_public_data_cannot_support": "Public aggregate data cannot turn this field into calibration, validation, actual tax payable, official status, legal sufficiency, or firm-level CARSF liability."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "public_aggregate_bound_only",
+          "placeholder_narrowing_only",
+          "sanity_check_only"
+        ],
+        "boundary_status": "allowed_as_boundary_only",
+        "calibration_blockers_remaining": [
+          "statistical_review_required",
+          "behavioural_elasticity_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "calibration_completed": false,
+        "claim_level": "public_aggregate_bound",
+        "decision_id": "field_boundary_anchor_hle_minimum_wage",
+        "evidence_needed_before_calibration": [
+          "human labour equivalent method",
+          "occupation mix",
+          "worker-hour evidence"
+        ],
+        "field_id": "hle_assumptions",
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_national_minimum_wage_weekly_2025",
+          "fair_work_casual_loading_2025"
+        ],
+        "placeholder_id": "anchor_hle_minimum_wage",
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use the linked public aggregate value as a boundary or narrowing reference only.",
+        "what_public_data_cannot_support": "Public aggregate data cannot turn this field into calibration, validation, actual tax payable, official status, legal sufficiency, or firm-level CARSF liability."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "public_aggregate_anchor_only",
+          "sanity_check_only",
+          "reviewer_traceability_only"
+        ],
+        "boundary_status": "allowed_as_anchor_only",
+        "calibration_blockers_remaining": [
+          "statistical_review_required",
+          "restricted_tax_data_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "calibration_completed": false,
+        "claim_level": "public_aggregate_anchor",
+        "decision_id": "field_boundary_anchor_opfte_minimum_wage",
+        "evidence_needed_before_calibration": [
+          "occupation-specific hours",
+          "sector-specific labour requirements",
+          "schedule authority method"
+        ],
+        "field_id": "opfte_benchmarks",
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_national_minimum_wage_weekly_2025"
+        ],
+        "placeholder_id": "anchor_opfte_minimum_wage",
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use the linked public aggregate value as an anchor for placeholder review only.",
+        "what_public_data_cannot_support": "Public aggregate data cannot turn this field into calibration, validation, actual tax payable, official status, legal sufficiency, or firm-level CARSF liability."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "contextual_reference_only",
+          "reviewer_traceability_only"
+        ],
+        "boundary_status": "allowed_as_context_only",
+        "calibration_blockers_remaining": [
+          "restricted_tax_data_required",
+          "statistical_review_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "calibration_completed": false,
+        "claim_level": "contextual_public_reference",
+        "decision_id": "field_boundary_anchor_payg_public_tax_stats",
+        "evidence_needed_before_calibration": [
+          "employment-tax pathway method",
+          "sector attribution",
+          "behavioural response method"
+        ],
+        "field_id": "payg_erosion_assumptions",
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "ato_total_tax_revenue_collected_2022_23",
+          "ato_company_tax_revenue_2022_23"
+        ],
+        "placeholder_id": "anchor_payg_public_tax_stats",
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use the linked public aggregate value as contextual reference only.",
+        "what_public_data_cannot_support": "Public aggregate data cannot turn this field into calibration, validation, actual tax payable, official status, legal sufficiency, or firm-level CARSF liability."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "reviewer_traceability_only"
+        ],
+        "boundary_status": "requires_external_review",
+        "calibration_blockers_remaining": [
+          "firm_confidential_data_required",
+          "tax_review_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "calibration_completed": false,
+        "claim_level": "no_validation_claim_allowed",
+        "decision_id": "field_boundary_anchor_payroll_tax_source_reference",
+        "evidence_needed_before_calibration": [
+          "jurisdiction-specific payroll base",
+          "employer records",
+          "tax-law review"
+        ],
+        "field_id": "state_payroll_tax_pressure",
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [],
+        "placeholder_id": "anchor_payroll_tax_source_reference",
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use the field boundary only to show that external review remains required.",
+        "what_public_data_cannot_support": "Public aggregate data cannot turn this field into calibration, validation, actual tax payable, official status, legal sufficiency, or firm-level CARSF liability."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "public_aggregate_bound_only",
+          "placeholder_narrowing_only",
+          "sanity_check_only"
+        ],
+        "boundary_status": "allowed_as_boundary_only",
+        "calibration_blockers_remaining": [
+          "statistical_review_required",
+          "tax_review_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "calibration_completed": false,
+        "claim_level": "public_aggregate_bound",
+        "decision_id": "field_boundary_anchor_qlc_minimum_wage",
+        "evidence_needed_before_calibration": [
+          "qualified labour contribution method",
+          "task allocation evidence",
+          "sector labour mix"
+        ],
+        "field_id": "qlc_weights",
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_national_minimum_wage_weekly_2025"
+        ],
+        "placeholder_id": "anchor_qlc_minimum_wage",
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use the linked public aggregate value as a boundary or narrowing reference only.",
+        "what_public_data_cannot_support": "Public aggregate data cannot turn this field into calibration, validation, actual tax payable, official status, legal sufficiency, or firm-level CARSF liability."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "contextual_reference_only",
+          "reviewer_traceability_only"
+        ],
+        "boundary_status": "allowed_as_context_only",
+        "calibration_blockers_remaining": [
+          "statistical_review_required",
+          "legal_review_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "calibration_completed": false,
+        "claim_level": "contextual_public_reference",
+        "decision_id": "field_boundary_anchor_sector_schedule_source_reference",
+        "evidence_needed_before_calibration": [
+          "ABS public aggregate table extraction",
+          "sector schedule authority method",
+          "mixed-unit attribution"
+        ],
+        "field_id": "sector_schedule_values",
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_casual_loading_2025"
+        ],
+        "placeholder_id": "anchor_sector_schedule_source_reference",
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use the linked public aggregate value as contextual reference only.",
+        "what_public_data_cannot_support": "Public aggregate data cannot turn this field into calibration, validation, actual tax payable, official status, legal sufficiency, or firm-level CARSF liability."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "public_aggregate_anchor_only",
+          "sanity_check_only",
+          "reviewer_traceability_only"
+        ],
+        "boundary_status": "allowed_as_anchor_only",
+        "calibration_blockers_remaining": [
+          "firm_confidential_data_required",
+          "welfare_payment_records_required",
+          "tax_review_required"
+        ],
+        "calibration_completed": false,
+        "claim_level": "public_aggregate_anchor",
+        "decision_id": "field_boundary_anchor_super_guarantee_rate",
+        "evidence_needed_before_calibration": [
+          "wage base",
+          "employer contribution records",
+          "payment interaction method"
+        ],
+        "field_id": "superannuation_contribution_pressure",
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "ato_super_guarantee_rate_2025_26"
+        ],
+        "placeholder_id": "anchor_super_guarantee_rate",
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use the linked public aggregate value as an anchor for placeholder review only.",
+        "what_public_data_cannot_support": "Public aggregate data cannot turn this field into calibration, validation, actual tax payable, official status, legal sufficiency, or firm-level CARSF liability."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "contextual_reference_only",
+          "reviewer_traceability_only"
+        ],
+        "boundary_status": "allowed_as_context_only",
+        "calibration_blockers_remaining": [
+          "welfare_payment_records_required",
+          "economic_review_required",
+          "legal_review_required"
+        ],
+        "calibration_completed": false,
+        "claim_level": "contextual_public_reference",
+        "decision_id": "field_boundary_anchor_transition_public_reference",
+        "evidence_needed_before_calibration": [
+          "transition eligibility method",
+          "payment administrative data",
+          "fiscal design review"
+        ],
+        "field_id": "transition_payment_assumptions",
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "treasury_total_receipts_2025_26_estimate",
+          "treasury_taxation_receipts_2025_26_estimate",
+          "ato_super_guarantee_rate_2025_26"
+        ],
+        "placeholder_id": "anchor_transition_public_reference",
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use the linked public aggregate value as contextual reference only.",
+        "what_public_data_cannot_support": "Public aggregate data cannot turn this field into calibration, validation, actual tax payable, official status, legal sufficiency, or firm-level CARSF liability."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "contextual_reference_only",
+          "reviewer_traceability_only"
+        ],
+        "boundary_status": "blocked_for_calibration",
+        "calibration_blockers_remaining": [
+          "household_microdata_required",
+          "statistical_review_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "calibration_completed": false,
+        "claim_level": "placeholder_boundary_only",
+        "decision_id": "field_boundary_anchor_uncertainty_source_reference_only",
+        "evidence_needed_before_calibration": [
+          "statistical sampling frame",
+          "confidence method",
+          "authorised microdata"
+        ],
+        "field_id": "uncertainty_range_assumptions",
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "ato_total_tax_revenue_collected_2022_23",
+          "ato_company_tax_revenue_2022_23"
+        ],
+        "placeholder_id": "anchor_uncertainty_source_reference_only",
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use the field boundary only to show that public aggregate data is structurally insufficient.",
+        "what_public_data_cannot_support": "Public aggregate data cannot turn this field into calibration, validation, actual tax payable, official status, legal sufficiency, or firm-level CARSF liability."
+      }
+    ],
+    "forbidden_use_decisions": [
+      {
+        "decision_id": "forbidden_actual_tax_payable",
+        "explanation": "Public aggregate data must not be used for actual_tax_payable.",
+        "use_type": "actual_tax_payable"
+      },
+      {
+        "decision_id": "forbidden_calibration_completed",
+        "explanation": "Public aggregate data must not be used for calibration_completed.",
+        "use_type": "calibration_completed"
+      },
+      {
+        "decision_id": "forbidden_causal_inference",
+        "explanation": "Public aggregate data must not be used for causal_inference.",
+        "use_type": "causal_inference"
+      },
+      {
+        "decision_id": "forbidden_firm_liability_determination",
+        "explanation": "Public aggregate data must not be used for firm_liability_determination.",
+        "use_type": "firm_liability_determination"
+      },
+      {
+        "decision_id": "forbidden_household_population_estimate",
+        "explanation": "Public aggregate data must not be used for household_population_estimate.",
+        "use_type": "household_population_estimate"
+      },
+      {
+        "decision_id": "forbidden_implementation_readiness",
+        "explanation": "Public aggregate data must not be used for implementation_readiness.",
+        "use_type": "implementation_readiness"
+      },
+      {
+        "decision_id": "forbidden_legal_sufficiency",
+        "explanation": "Public aggregate data must not be used for legal_sufficiency.",
+        "use_type": "legal_sufficiency"
+      },
+      {
+        "decision_id": "forbidden_model_validation",
+        "explanation": "Public aggregate data must not be used for model_validation.",
+        "use_type": "model_validation"
+      },
+      {
+        "decision_id": "forbidden_official_policy_status",
+        "explanation": "Public aggregate data must not be used for official_policy_status.",
+        "use_type": "official_policy_status"
+      },
+      {
+        "decision_id": "forbidden_statistical_validation",
+        "explanation": "Public aggregate data must not be used for statistical_validation.",
+        "use_type": "statistical_validation"
+      },
+      {
+        "decision_id": "forbidden_taxpayer_behaviour_estimate",
+        "explanation": "Public aggregate data must not be used for taxpayer_behaviour_estimate.",
+        "use_type": "taxpayer_behaviour_estimate"
+      }
+    ],
+    "future_build_34_requirements": [
+      "Constrain scenario outputs using the Build 33 allowed-use and forbidden-use taxonomies.",
+      "Flag or suppress any scenario output that would imply calibration, validation, actual tax payable, firm liability, official status, or implementation readiness.",
+      "Preserve source-candidate-not-loaded, restricted-data blocker, external-review, no-readiness-score, and no-liability-change boundaries."
+    ],
+    "map_id": "carsf_v1_5_public_aggregate_calibration_boundary_map",
+    "map_name": "CARSF V1.5 Public Aggregate Calibration Boundary Map",
+    "module_boundary_decisions": [
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "reviewer_traceability_only",
+          "contextual_reference_only"
+        ],
+        "boundary_status": "requires_external_review",
+        "calibration_blockers_remaining": [
+          "legal_review_required",
+          "tax_review_required",
+          "external_domain_review_required"
+        ],
+        "calibration_completed": false,
+        "claim_level": "no_validation_claim_allowed",
+        "decision_id": "boundary_administrative_compliance_workflow",
+        "evidence_needed_before_calibration": [
+          "ATO methods review",
+          "legal review",
+          "secure operational design"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "ato_total_tax_revenue_collected_2022_23"
+        ],
+        "module_id": "administrative_compliance_workflow",
+        "module_name": "Administrative compliance workflow",
+        "official_status_claimed": false,
+        "related_placeholder_ids": [
+          "anchor_payg_public_tax_stats"
+        ],
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_restricted_data": false,
+        "requires_statistical_review": false,
+        "requires_tax_review": true,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use public aggregates only to show source traceability around administrative scale context.",
+        "what_public_data_cannot_support": "Cannot create compliance scoring, ATO guidance, notices, enforcement, or operational workflow readiness."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "contextual_reference_only",
+          "reviewer_traceability_only"
+        ],
+        "boundary_status": "blocked_for_calibration",
+        "calibration_blockers_remaining": [
+          "behavioural_elasticity_required",
+          "restricted_tax_data_required",
+          "economic_review_required"
+        ],
+        "calibration_completed": false,
+        "claim_level": "no_calibration_claim_allowed",
+        "decision_id": "boundary_behavioural_response_gaming_simulation",
+        "evidence_needed_before_calibration": [
+          "behavioural elasticity evidence",
+          "authorised administrative data",
+          "economic review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "ato_total_tax_revenue_collected_2022_23",
+          "ato_company_tax_revenue_2022_23"
+        ],
+        "module_id": "behavioural_response_gaming_simulation",
+        "module_name": "Behavioural response / gaming simulation",
+        "official_status_claimed": false,
+        "related_placeholder_ids": [
+          "anchor_uncertainty_source_reference_only"
+        ],
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use public aggregates only as traceable context for why behavioural calibration remains blocked.",
+        "what_public_data_cannot_support": "Cannot estimate behavioural elasticity, avoidance, gaming, causal response, or taxpayer behaviour."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "reviewer_traceability_only",
+          "contextual_reference_only"
+        ],
+        "boundary_status": "allowed_as_context_only",
+        "calibration_blockers_remaining": [
+          "external_domain_review_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "calibration_completed": false,
+        "claim_level": "contextual_public_reference",
+        "decision_id": "boundary_executive_dashboard_consolidation",
+        "evidence_needed_before_calibration": [
+          "reviewer feedback",
+          "dashboard interpretation testing",
+          "guardrail review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [],
+        "module_id": "executive_dashboard_consolidation",
+        "module_name": "Executive dashboard consolidation",
+        "official_status_claimed": false,
+        "related_placeholder_ids": [],
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_restricted_data": false,
+        "requires_statistical_review": false,
+        "requires_tax_review": true,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_public_data_can_support": "Surface boundary labels, source traceability, and non-claim warnings for reviewers.",
+        "what_public_data_cannot_support": "Cannot create a readiness score, calibration score, validation score, tax payable estimate, or liability estimate."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "sanity_check_only",
+          "public_aggregate_bound_only",
+          "contextual_reference_only",
+          "reviewer_traceability_only"
+        ],
+        "boundary_status": "allowed_as_context_only",
+        "calibration_blockers_remaining": [
+          "economic_review_required",
+          "restricted_tax_data_required",
+          "behavioural_elasticity_required"
+        ],
+        "calibration_completed": false,
+        "claim_level": "contextual_public_reference",
+        "decision_id": "boundary_fiscal_trajectory_assumptions",
+        "evidence_needed_before_calibration": [
+          "revenue incidence method",
+          "behavioural response method",
+          "economic review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "ato_large_corporate_income_tax_received_2022_23",
+          "ato_large_corporate_entities_no_income_tax_percent_2022_23",
+          "ato_total_tax_revenue_collected_2022_23",
+          "ato_company_tax_revenue_2022_23",
+          "treasury_total_receipts_2025_26_estimate",
+          "treasury_taxation_receipts_2025_26_estimate"
+        ],
+        "module_id": "fiscal_trajectory_assumptions",
+        "module_name": "Fiscal trajectory assumptions",
+        "official_status_claimed": false,
+        "related_placeholder_ids": [
+          "anchor_fiscal_public_aggregates"
+        ],
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use ATO and Budget receipt values as fiscal scale context and public aggregate bounds.",
+        "what_public_data_cannot_support": "Cannot create Treasury modelling, PBO costing, fiscal sufficiency, CARSF revenue estimates, or implementation readiness."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "sanity_check_only",
+          "public_aggregate_bound_only",
+          "placeholder_narrowing_only",
+          "reviewer_traceability_only"
+        ],
+        "boundary_status": "allowed_as_boundary_only",
+        "calibration_blockers_remaining": [
+          "behavioural_elasticity_required",
+          "statistical_review_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "calibration_completed": false,
+        "claim_level": "public_aggregate_bound",
+        "decision_id": "boundary_hle_assumptions_module",
+        "evidence_needed_before_calibration": [
+          "human labour equivalent method",
+          "occupation mix evidence",
+          "behavioural elasticity review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_national_minimum_wage_weekly_2025",
+          "fair_work_casual_loading_2025"
+        ],
+        "module_id": "hle_assumptions_module",
+        "module_name": "HLE assumptions module",
+        "official_status_claimed": false,
+        "related_placeholder_ids": [
+          "anchor_hle_minimum_wage"
+        ],
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use wage and casual-loading values as boundary checks and narrowing context for HLE placeholders.",
+        "what_public_data_cannot_support": "Cannot estimate representative labour costs, occupation-specific wage models, or automation substitution calibration."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "contextual_reference_only",
+          "reviewer_traceability_only"
+        ],
+        "boundary_status": "requires_restricted_data",
+        "calibration_blockers_remaining": [
+          "household_microdata_required",
+          "welfare_payment_records_required",
+          "statistical_review_required"
+        ],
+        "calibration_completed": false,
+        "claim_level": "no_calibration_claim_allowed",
+        "decision_id": "boundary_household_distributional_scenarios",
+        "evidence_needed_before_calibration": [
+          "authorised household microdata",
+          "welfare payment evidence",
+          "statistical review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "treasury_total_receipts_2025_26_estimate"
+        ],
+        "module_id": "household_distributional_scenarios",
+        "module_name": "Household distributional scenarios",
+        "official_status_claimed": false,
+        "related_placeholder_ids": [
+          "anchor_help_source_reference",
+          "anchor_transition_public_reference"
+        ],
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use public fiscal context only to show that household placeholders remain boundary-limited.",
+        "what_public_data_cannot_support": "Cannot produce real household estimates, population estimates, welfare impacts, or distributional calibration."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "reviewer_traceability_only"
+        ],
+        "boundary_status": "requires_restricted_data",
+        "calibration_blockers_remaining": [
+          "household_microdata_required",
+          "statistical_review_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "calibration_completed": false,
+        "claim_level": "no_calibration_claim_allowed",
+        "decision_id": "boundary_household_weighting",
+        "evidence_needed_before_calibration": [
+          "authorised household sample frame",
+          "weighting method",
+          "statistical review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [],
+        "module_id": "household_weighting",
+        "module_name": "Household weighting",
+        "official_status_claimed": false,
+        "related_placeholder_ids": [
+          "anchor_help_source_reference"
+        ],
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use the boundary map to show that public aggregate values do not support representative household weighting.",
+        "what_public_data_cannot_support": "Cannot create household population estimates, real subgroup weights, or statistical validation."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "reviewer_traceability_only"
+        ],
+        "boundary_status": "forbidden_for_claim",
+        "calibration_blockers_remaining": [
+          "legal_review_required",
+          "tax_review_required",
+          "external_domain_review_required"
+        ],
+        "calibration_completed": false,
+        "claim_level": "no_validation_claim_allowed",
+        "decision_id": "boundary_legislative_architecture_skeleton",
+        "evidence_needed_before_calibration": [
+          "legal drafting review",
+          "tax review",
+          "Parliamentary Counsel review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [],
+        "module_id": "legislative_architecture_skeleton",
+        "module_name": "Legislative architecture skeleton",
+        "official_status_claimed": false,
+        "related_placeholder_ids": [],
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_restricted_data": false,
+        "requires_statistical_review": false,
+        "requires_tax_review": true,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use public data references only to identify where legal review would be required.",
+        "what_public_data_cannot_support": "Cannot support legal sufficiency, operative law, drafting readiness, or official policy status."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "sanity_check_only",
+          "public_aggregate_anchor_only",
+          "public_aggregate_bound_only",
+          "reviewer_traceability_only"
+        ],
+        "boundary_status": "allowed_as_anchor_only",
+        "calibration_blockers_remaining": [
+          "statistical_review_required",
+          "restricted_tax_data_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "calibration_completed": false,
+        "claim_level": "public_aggregate_anchor",
+        "decision_id": "boundary_opfte_benchmark_module",
+        "evidence_needed_before_calibration": [
+          "occupation-specific labour evidence",
+          "sector schedule authority method",
+          "statistical review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_national_minimum_wage_weekly_2025"
+        ],
+        "module_id": "opfte_benchmark_module",
+        "module_name": "OPFTE benchmark module",
+        "official_status_claimed": false,
+        "related_placeholder_ids": [
+          "anchor_opfte_minimum_wage"
+        ],
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use Fair Work wage thresholds as public aggregate anchors and visible bounds for OPFTE placeholder inspection.",
+        "what_public_data_cannot_support": "Cannot calibrate OPFTE, estimate representative labour costs, determine firm liability, or determine tax payable."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "sanity_check_only",
+          "contextual_reference_only",
+          "reviewer_traceability_only"
+        ],
+        "boundary_status": "requires_restricted_data",
+        "calibration_blockers_remaining": [
+          "restricted_tax_data_required",
+          "statistical_review_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "calibration_completed": false,
+        "claim_level": "no_calibration_claim_allowed",
+        "decision_id": "boundary_payg_erosion_assumptions",
+        "evidence_needed_before_calibration": [
+          "taxpayer behaviour evidence",
+          "employment tax pathway method",
+          "authorised tax data governance"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "ato_total_tax_revenue_collected_2022_23",
+          "ato_company_tax_revenue_2022_23"
+        ],
+        "module_id": "payg_erosion_assumptions",
+        "module_name": "PAYG erosion assumptions",
+        "official_status_claimed": false,
+        "related_placeholder_ids": [
+          "anchor_payg_public_tax_stats"
+        ],
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use public tax aggregates as scale context only.",
+        "what_public_data_cannot_support": "Cannot calibrate PAYG erosion, infer taxpayer behaviour, or estimate CARSF revenue."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "reviewer_traceability_only",
+          "contextual_reference_only"
+        ],
+        "boundary_status": "allowed_as_context_only",
+        "calibration_blockers_remaining": [
+          "external_domain_review_required",
+          "statistical_review_required"
+        ],
+        "calibration_completed": false,
+        "claim_level": "contextual_public_reference",
+        "decision_id": "boundary_public_data_evidence_map",
+        "evidence_needed_before_calibration": [
+          "manual reviewer inspection",
+          "statistical review where relevant"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [],
+        "module_id": "public_data_evidence_map",
+        "module_name": "Public data evidence map",
+        "official_status_claimed": false,
+        "related_placeholder_ids": [],
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": false,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_public_data_can_support": "Show reviewers which values, anchors, and blockers are traceable.",
+        "what_public_data_cannot_support": "Cannot turn source traceability into calibration, validation, source verification, or official status."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "public_aggregate_anchor_only",
+          "public_aggregate_bound_only",
+          "placeholder_narrowing_only",
+          "reviewer_traceability_only"
+        ],
+        "boundary_status": "allowed_as_boundary_only",
+        "calibration_blockers_remaining": [
+          "restricted_tax_data_required",
+          "statistical_review_required",
+          "external_domain_review_required"
+        ],
+        "calibration_completed": false,
+        "claim_level": "placeholder_boundary_only",
+        "decision_id": "boundary_public_data_placeholder_replacement_map",
+        "evidence_needed_before_calibration": [
+          "reviewer inspection",
+          "restricted-data governance",
+          "statistical review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_national_minimum_wage_weekly_2025",
+          "fair_work_casual_loading_2025",
+          "ato_company_tax_revenue_2022_23",
+          "ato_super_guarantee_rate_2025_26"
+        ],
+        "module_id": "public_data_placeholder_replacement_map",
+        "module_name": "Public data placeholder replacement map",
+        "official_status_claimed": false,
+        "related_placeholder_ids": [
+          "anchor_opfte_minimum_wage",
+          "anchor_hle_minimum_wage",
+          "anchor_qlc_minimum_wage",
+          "anchor_fiscal_public_aggregates",
+          "anchor_super_guarantee_rate"
+        ],
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_public_data_can_support": "Define which placeholder decisions are anchors, bounds, context, or blocked.",
+        "what_public_data_cannot_support": "Cannot represent replacement mapping as calibration, validation, statistical estimation, or liability determination."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "sanity_check_only",
+          "public_aggregate_bound_only",
+          "placeholder_narrowing_only"
+        ],
+        "boundary_status": "allowed_as_boundary_only",
+        "calibration_blockers_remaining": [
+          "statistical_review_required",
+          "tax_review_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "calibration_completed": false,
+        "claim_level": "placeholder_boundary_only",
+        "decision_id": "boundary_qlc_weights_module",
+        "evidence_needed_before_calibration": [
+          "QLC weighting method",
+          "sector labour evidence",
+          "tax-method review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_national_minimum_wage_weekly_2025"
+        ],
+        "module_id": "qlc_weights_module",
+        "module_name": "QLC weights module",
+        "official_status_claimed": false,
+        "related_placeholder_ids": [
+          "anchor_qlc_minimum_wage"
+        ],
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use wage thresholds as bounded context for QLC wage components.",
+        "what_public_data_cannot_support": "Cannot set QLC weights, validate labour quality, or establish legal attribution."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "sanity_check_only",
+          "contextual_reference_only",
+          "reviewer_traceability_only"
+        ],
+        "boundary_status": "requires_external_review",
+        "calibration_blockers_remaining": [
+          "statistical_review_required",
+          "economic_review_required",
+          "external_domain_review_required"
+        ],
+        "calibration_completed": false,
+        "claim_level": "placeholder_boundary_only",
+        "decision_id": "boundary_reviewed_scenario_comparison_layer",
+        "evidence_needed_before_calibration": [
+          "scenario review protocol",
+          "statistical review",
+          "economic review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "ato_total_tax_revenue_collected_2022_23"
+        ],
+        "module_id": "reviewed_scenario_comparison_layer",
+        "module_name": "Reviewed scenario comparison layer",
+        "official_status_claimed": false,
+        "related_placeholder_ids": [
+          "anchor_uncertainty_source_reference_only"
+        ],
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": false,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use public aggregates to help label scenario comparisons as bounded or contextual.",
+        "what_public_data_cannot_support": "Cannot validate scenarios, produce official rankings, or imply policy readiness."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "sanity_check_only",
+          "contextual_reference_only",
+          "reviewer_traceability_only"
+        ],
+        "boundary_status": "requires_external_review",
+        "calibration_blockers_remaining": [
+          "statistical_review_required",
+          "legal_review_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "calibration_completed": false,
+        "claim_level": "contextual_public_reference",
+        "decision_id": "boundary_sector_schedule_values",
+        "evidence_needed_before_calibration": [
+          "sector-specific public aggregates",
+          "schedule authority method",
+          "legal review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_casual_loading_2025"
+        ],
+        "module_id": "sector_schedule_values",
+        "module_name": "Sector schedule values",
+        "official_status_claimed": false,
+        "related_placeholder_ids": [
+          "anchor_sector_schedule_source_reference"
+        ],
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use wage anchors as limited labour-cost context for sector schedule review.",
+        "what_public_data_cannot_support": "Cannot produce official sector rankings, schedule calibration, or legal attribution rules."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "sanity_check_only",
+          "contextual_reference_only"
+        ],
+        "boundary_status": "requires_external_review",
+        "calibration_blockers_remaining": [
+          "economic_review_required",
+          "statistical_review_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "calibration_completed": false,
+        "claim_level": "placeholder_boundary_only",
+        "decision_id": "boundary_sector_stress_matrix",
+        "evidence_needed_before_calibration": [
+          "sector exposure evidence",
+          "economic incidence review",
+          "statistical review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "ato_total_tax_revenue_collected_2022_23"
+        ],
+        "module_id": "sector_stress_matrix",
+        "module_name": "Sector stress matrix",
+        "official_status_claimed": false,
+        "related_placeholder_ids": [
+          "anchor_sector_schedule_source_reference",
+          "anchor_uncertainty_source_reference_only"
+        ],
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use public aggregates as review context for visible stress assumptions.",
+        "what_public_data_cannot_support": "Cannot establish sector stress calibration, ranking, incidence, or population estimates."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "sanity_check_only",
+          "public_aggregate_anchor_only",
+          "contextual_reference_only"
+        ],
+        "boundary_status": "allowed_as_anchor_only",
+        "calibration_blockers_remaining": [
+          "firm_confidential_data_required",
+          "tax_review_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "calibration_completed": false,
+        "claim_level": "public_aggregate_anchor",
+        "decision_id": "boundary_superannuation_contribution_pressure",
+        "evidence_needed_before_calibration": [
+          "wage base evidence",
+          "employer contribution behaviour evidence",
+          "tax review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "ato_super_guarantee_rate_2025_26"
+        ],
+        "module_id": "superannuation_contribution_pressure",
+        "module_name": "Superannuation contribution pressure",
+        "official_status_claimed": false,
+        "related_placeholder_ids": [
+          "anchor_super_guarantee_rate"
+        ],
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": true,
+        "requires_statistical_review": false,
+        "requires_tax_review": true,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use the public superannuation guarantee rate as an anchor for payment-interaction review.",
+        "what_public_data_cannot_support": "Cannot estimate individual super, employer behaviour, payroll amounts, or ATO guidance."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "sanity_check_only",
+          "public_aggregate_bound_only",
+          "contextual_reference_only"
+        ],
+        "boundary_status": "requires_external_review",
+        "calibration_blockers_remaining": [
+          "welfare_payment_records_required",
+          "economic_review_required",
+          "legal_review_required"
+        ],
+        "calibration_completed": false,
+        "claim_level": "contextual_public_reference",
+        "decision_id": "boundary_transition_funding_assumptions",
+        "evidence_needed_before_calibration": [
+          "transition design review",
+          "welfare payment evidence",
+          "economic review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "treasury_total_receipts_2025_26_estimate",
+          "treasury_taxation_receipts_2025_26_estimate",
+          "ato_super_guarantee_rate_2025_26"
+        ],
+        "module_id": "transition_funding_assumptions",
+        "module_name": "Transition funding assumptions",
+        "official_status_claimed": false,
+        "related_placeholder_ids": [
+          "anchor_transition_public_reference"
+        ],
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use public receipt and rate values as scale context for transition-funding placeholder review.",
+        "what_public_data_cannot_support": "Cannot prove fiscal sufficiency, payment eligibility, welfare effects, or policy readiness."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_use_types": [
+          "contextual_reference_only",
+          "reviewer_traceability_only"
+        ],
+        "boundary_status": "requires_external_review",
+        "calibration_blockers_remaining": [
+          "statistical_review_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "calibration_completed": false,
+        "claim_level": "placeholder_boundary_only",
+        "decision_id": "boundary_uncertainty_ranges",
+        "evidence_needed_before_calibration": [
+          "uncertainty method",
+          "sample design",
+          "statistical review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_use_types": [
+          "calibration_completed",
+          "statistical_validation",
+          "model_validation",
+          "causal_inference",
+          "actual_tax_payable",
+          "firm_liability_determination",
+          "taxpayer_behaviour_estimate",
+          "household_population_estimate",
+          "official_policy_status",
+          "legal_sufficiency",
+          "implementation_readiness"
+        ],
+        "linked_public_value_ids": [
+          "ato_total_tax_revenue_collected_2022_23",
+          "ato_company_tax_revenue_2022_23"
+        ],
+        "module_id": "uncertainty_ranges",
+        "module_name": "Uncertainty ranges",
+        "official_status_claimed": false,
+        "related_placeholder_ids": [
+          "anchor_uncertainty_source_reference_only"
+        ],
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_public_data_can_support": "Use public aggregates as context for non-statistical placeholder ranges only.",
+        "what_public_data_cannot_support": "Cannot produce confidence intervals, statistical estimation, or real uncertainty quantification."
+      }
+    ],
+    "non_claims": [
+      "This is a public aggregate calibration-boundary map only. No new data is loaded by this build. Public aggregate data can support sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability only. Public aggregate data does not calibrate the model. Calibration has not been completed. Public data does not prove the model works. Boundary mapping does not mean validation, statistical estimation, legal sufficiency, or implementation readiness. Source candidates not loaded remain not loaded. Restricted-data blockers remain blockers. This is not validation, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable and does not modify firm-level CARSF liability.",
+      "Build 33 uses Build 31 public aggregate values and Build 32 placeholder replacement decisions only; it does not add public values, scrape sources, call APIs, or load restricted, personal, taxpayer-level, firm-confidential, household microdata, ABS DataLab, HILDA, DSS / Services Australia, ATO taxpayer, confidential Treasury / PBO, bank, payroll-document, pay-record, or tax-file-identifier data.",
+      "Allowed-use labels are boundary labels only; they are not calibration, validation, legal sufficiency, official status, implementation readiness, or liability determinations."
+    ],
+    "public_aggregate_values": [
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "geography": "Australia",
+        "metric_name": "National minimum wage hourly rate",
+        "period": "from 2025-07-01",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "fair_work_minimum_wage_2025",
+        "unit": "AUD_per_hour",
+        "value": 24.95,
+        "value_id": "fair_work_national_minimum_wage_hourly_2025"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "geography": "Australia",
+        "metric_name": "National minimum wage weekly rate",
+        "period": "from 2025-07-01",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "fair_work_minimum_wage_2025",
+        "unit": "AUD_per_week",
+        "value": 948.1,
+        "value_id": "fair_work_national_minimum_wage_weekly_2025"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "geography": "Australia",
+        "metric_name": "Casual loading percentage",
+        "period": "from 2025-07-01",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "fair_work_minimum_wage_2025",
+        "unit": "percent",
+        "value": 25.0,
+        "value_id": "fair_work_casual_loading_2025"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "geography": "Australia",
+        "metric_name": "Income tax received from large corporates",
+        "period": "2022-23",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "ato_corporate_tax_transparency_2022_23",
+        "unit": "AUD_billion",
+        "value": 97.9,
+        "value_id": "ato_large_corporate_income_tax_received_2022_23"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "geography": "Australia",
+        "metric_name": "Entities with no income tax payable in public report",
+        "period": "2022-23",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "ato_corporate_tax_transparency_2022_23",
+        "unit": "percent",
+        "value": 31.0,
+        "value_id": "ato_large_corporate_entities_no_income_tax_percent_2022_23"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "geography": "Australia",
+        "metric_name": "Total tax revenue collected",
+        "period": "2022-23",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "ato_taxation_statistics_2022_23",
+        "unit": "AUD_billion",
+        "value": 577.4,
+        "value_id": "ato_total_tax_revenue_collected_2022_23"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "geography": "Australia",
+        "metric_name": "Company tax revenue",
+        "period": "2022-23",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "ato_taxation_statistics_2022_23",
+        "unit": "AUD_billion",
+        "value": 140.0,
+        "value_id": "ato_company_tax_revenue_2022_23"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "geography": "Australia",
+        "metric_name": "Total receipts estimate",
+        "period": "2025-26 estimate in Budget Paper No. 1 2026-27",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "treasury_budget_2026_27_bp1",
+        "unit": "AUD_billion",
+        "value": 759.8,
+        "value_id": "treasury_total_receipts_2025_26_estimate"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "geography": "Australia",
+        "metric_name": "Taxation receipts estimate",
+        "period": "2025-26 estimate in Budget Paper No. 1 2026-27",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "treasury_budget_2026_27_bp1",
+        "unit": "AUD_billion",
+        "value": 699.5,
+        "value_id": "treasury_taxation_receipts_2025_26_estimate"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "geography": "Australia",
+        "metric_name": "Super guarantee percentage",
+        "period": "from 2025-07-01",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "ato_super_guarantee_2025_26",
+        "unit": "percent",
+        "value": 12.0,
+        "value_id": "ato_super_guarantee_rate_2025_26"
+      }
+    ],
+    "source_candidates_not_loaded": [
+      {
+        "loaded_status": "source_candidate_not_loaded",
+        "publisher": "Australian Government StudyAssist",
+        "reason_if_not_loaded": "Exact public threshold value was not safely recorded in local Build 31 source metadata.",
+        "source_id": "study_assist_help_thresholds_2025_26",
+        "source_name": "HELP repayment public threshold source",
+        "treated_as_loaded": false
+      },
+      {
+        "loaded_status": "source_candidate_not_loaded",
+        "publisher": "Queensland Revenue Office",
+        "reason_if_not_loaded": "Exact jurisdiction threshold value was not safely recorded in local Build 31 source metadata.",
+        "source_id": "qld_payroll_tax_threshold_2025_26",
+        "source_name": "Queensland payroll tax public threshold source",
+        "treated_as_loaded": false
+      },
+      {
+        "loaded_status": "source_candidate_not_loaded",
+        "publisher": "Australian Bureau of Statistics",
+        "reason_if_not_loaded": "Exact public aggregate table selection remains deferred until a later loader expansion.",
+        "source_id": "abs_labour_wage_aggregate_source_reference",
+        "source_name": "ABS labour aggregate source candidate",
+        "treated_as_loaded": false
+      }
+    ],
+    "status": "public_aggregate_calibration_boundary_map_only",
+    "summary": {
+      "actual_tax_payable_determined": false,
+      "calibration_completed": false,
+      "field_boundaries_mapped": 11,
+      "firm_confidential_data_loaded": false,
+      "firm_level_liability_logic_modified": false,
+      "forbidden_claim_findings": 0,
+      "household_microdata_loaded": false,
+      "loaded_public_values_used": 10,
+      "module_boundaries_mapped": 19,
+      "modules_allowed_anchor_only": 3,
+      "modules_allowed_bound_only": 6,
+      "modules_allowed_context_only": 13,
+      "modules_allowed_sanity_check_only": 10,
+      "modules_blocked_for_calibration": 11,
+      "modules_requiring_external_review": 19,
+      "modules_requiring_restricted_data": 14,
+      "new_data_loaded": false,
+      "official_status_claimed": false,
+      "personal_data_loaded": false,
+      "public_aggregate_calibration_boundary_map_created": true,
+      "public_source_candidates_treated_as_loaded": false,
+      "restricted_data_loaded": false,
+      "taxpayer_level_data_loaded": false,
+      "validation_claimed": false
+    }
+  },
+  "summary": {
+    "actual_tax_payable_determined": false,
+    "calibration_completed": false,
+    "field_boundaries_mapped": 11,
+    "firm_confidential_data_loaded": false,
+    "firm_level_liability_logic_modified": false,
+    "forbidden_claim_findings": 0,
+    "household_microdata_loaded": false,
+    "loaded_public_values_used": 10,
+    "module_boundaries_mapped": 19,
+    "modules_allowed_anchor_only": 3,
+    "modules_allowed_bound_only": 6,
+    "modules_allowed_context_only": 13,
+    "modules_allowed_sanity_check_only": 10,
+    "modules_blocked_for_calibration": 11,
+    "modules_requiring_external_review": 19,
+    "modules_requiring_restricted_data": 14,
+    "new_data_loaded": false,
+    "official_status_claimed": false,
+    "personal_data_loaded": false,
+    "public_aggregate_calibration_boundary_map_created": true,
+    "public_source_candidates_treated_as_loaded": false,
+    "restricted_data_loaded": false,
+    "taxpayer_level_data_loaded": false,
+    "validation_claimed": false
+  }
+}

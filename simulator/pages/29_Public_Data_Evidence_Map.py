@@ -13,6 +13,7 @@ SOURCE_LOCATOR_PACK_PATH = REPO_ROOT / "reports" / "source_locator_verification_
 RED_TEAM_OBJECTIONS_PATH = REPO_ROOT / "reports" / "red_team_reviewer_objections.json"
 PUBLIC_REAL_DATA_LOADER_PATH = REPO_ROOT / "reports" / "public_real_data_loader.json"
 PLACEHOLDER_REPLACEMENT_MAP_PATH = REPO_ROOT / "reports" / "public_data_placeholder_replacement_map.json"
+CALIBRATION_BOUNDARY_MAP_PATH = REPO_ROOT / "reports" / "public_aggregate_calibration_boundary_map.json"
 WARNING = (
     "This is a reviewer evidence map and dashboard for the public data pilot only. No new data is loaded by this build. "
     "Build 27 public aggregate extracts remain sanity-check-only or placeholder-anchor-only. This is not calibration, "
@@ -61,6 +62,7 @@ source_locator_report = load_report(SOURCE_LOCATOR_PACK_PATH)
 red_team_report = load_report(RED_TEAM_OBJECTIONS_PATH)
 public_real_report = load_report(PUBLIC_REAL_DATA_LOADER_PATH)
 placeholder_replacement_report = load_report(PLACEHOLDER_REPLACEMENT_MAP_PATH)
+calibration_boundary_report = load_report(CALIBRATION_BOUNDARY_MAP_PATH)
 
 metadata = report.get("metadata", {})
 payload = report.get("public_data_evidence_map", {})
@@ -496,3 +498,87 @@ if placeholder_replacement_report:
     )
 else:
     st.info("Run `python scripts/run_public_data_placeholder_replacement_map.py` to generate the optional placeholder replacement map section.")
+
+st.markdown("### Public Aggregate Calibration Boundary Map")
+st.caption(
+    "Calibration-boundary map only. No new data is loaded. Public aggregate values may support sanity checks, "
+    "anchors, bounds, context, placeholder narrowing, or reviewer traceability only; they do not calibrate the "
+    "model, validate CARSF, determine tax payable, create legal sufficiency, create official status, or modify "
+    "firm-level CARSF liability logic."
+)
+if calibration_boundary_report:
+    boundary_payload = calibration_boundary_report.get("public_aggregate_calibration_boundary_map", {})
+    boundary_summary = calibration_boundary_report.get("summary", {})
+    st.table(
+        [
+            {"Metric": key, "Value": str(value)}
+            for key, value in boundary_summary.items()
+            if key
+            in {
+                "public_aggregate_calibration_boundary_map_created",
+                "new_data_loaded",
+                "loaded_public_values_used",
+                "module_boundaries_mapped",
+                "field_boundaries_mapped",
+                "modules_allowed_sanity_check_only",
+                "modules_allowed_anchor_only",
+                "modules_allowed_bound_only",
+                "modules_allowed_context_only",
+                "modules_blocked_for_calibration",
+                "modules_requiring_restricted_data",
+                "modules_requiring_external_review",
+                "public_source_candidates_treated_as_loaded",
+                "restricted_data_loaded",
+                "personal_data_loaded",
+                "taxpayer_level_data_loaded",
+                "firm_confidential_data_loaded",
+                "household_microdata_loaded",
+                "calibration_completed",
+                "validation_claimed",
+                "actual_tax_payable_determined",
+                "official_status_claimed",
+                "firm_level_liability_logic_modified",
+            }
+        ]
+    )
+    st.markdown("#### Module Boundary Decisions")
+    st.table(
+        rows_with_lists(
+            boundary_payload.get("module_boundary_decisions", []),
+            [
+                "module_id",
+                "boundary_status",
+                "claim_level",
+                "allowed_use_types",
+                "forbidden_use_types",
+                "linked_public_value_ids",
+                "what_public_data_can_support",
+                "what_public_data_cannot_support",
+                "calibration_blockers_remaining",
+            ],
+        )
+    )
+    st.markdown("#### Field Boundary Decisions")
+    st.table(
+        rows_with_lists(
+            boundary_payload.get("field_boundary_decisions", []),
+            [
+                "field_id",
+                "placeholder_id",
+                "boundary_status",
+                "claim_level",
+                "allowed_use_types",
+                "linked_public_value_ids",
+                "evidence_needed_before_calibration",
+            ],
+        )
+    )
+    st.markdown("#### Source Candidates Not Loaded")
+    st.table(
+        rows(
+            boundary_payload.get("source_candidates_not_loaded", []),
+            ["source_id", "publisher", "source_name", "loaded_status", "treated_as_loaded"],
+        )
+    )
+else:
+    st.info("Run `python scripts/run_public_aggregate_calibration_boundary_map.py` to generate the optional calibration-boundary map section.")

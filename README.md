@@ -424,6 +424,13 @@ Generated public data placeholder replacement-map reports:
 
 The placeholder replacement map uses Build 31 public aggregate values to classify existing realistic placeholders as public aggregate anchors, bounds, context, still-blocked placeholders, restricted-data blockers, or external-review blockers. It loads no new data. Public aggregate data does not equal calibration, replacement by public aggregate anchor does not mean validation, narrowing by public aggregate anchor does not mean statistical estimation, and the map does not determine actual tax payable, create official status, or modify firm-level CARSF liability.
 
+Generated public aggregate calibration-boundary reports:
+
+- `reports/public_aggregate_calibration_boundary_map.md`
+- `reports/public_aggregate_calibration_boundary_map.json`
+
+The calibration-boundary map defines where public aggregate values may be used for sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability. It loads no new data and does not perform calibration. Boundary mapping does not mean validation, statistical estimation, legal sufficiency, implementation readiness, official status, actual tax payable, or firm-level CARSF liability change.
+
 ## Run the Simulator
 
 ```powershell
@@ -467,6 +474,7 @@ V1.5 is not just an examples update. It is V1.4 plus two prototype sector schedu
 - map real-data feasibility, restricted-data needs, realistic placeholder provenance, forbidden repo data, and public-data pilot candidates without loading datasets or completing calibration;
 - load a small public aggregate-data pilot and realistic-placeholder anchor layer for sanity-check-only and placeholder-anchor-only review without completing calibration, claiming validation, determining actual tax payable, or changing firm-level liability;
 - map loaded public aggregate values to existing placeholder anchors without loading new data, completing calibration, claiming validation, determining actual tax payable, or changing firm-level liability;
+- define public aggregate calibration boundaries so public values can be used only for sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability without calibration, validation, tax-payable, official-status, or liability claims;
 - identify open-source AI and R&D Tax Incentive interaction questions without overclaiming.
 
 ## Not Yet Solved
@@ -495,3 +503,4 @@ Executive dashboard outputs are navigation and index outputs only. They are not 
 Real-data feasibility outputs are intake maps only. Build 26 did not load public data, restricted data, taxpayer data, firm-level confidential data, household microdata, ABS DataLab microdata, HILDA microdata, DSS / Services Australia records, ATO taxpayer records, or confidential Treasury/PBO material. They do not complete calibration, validate the model, or modify firm-level CARSF liability.
 Public-data pilot outputs are sanity-check-only and placeholder-anchor-only records. They may carry small public aggregate extracts and source references, but they are not calibration, do not prove the model works, do not determine actual tax payable, do not use restricted or confidential data, and do not modify firm-level CARSF liability.
 Public data placeholder replacement-map outputs load no new data. Public aggregate anchors can replace, narrow, or inform placeholders only as mapping labels; they do not complete calibration, prove the model works, determine actual tax payable, validate CARSF, create official status, or modify firm-level liability.
+Public aggregate calibration-boundary outputs load no new data. Public aggregate values can support only sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability; they do not calibrate CARSF, validate CARSF, create statistical estimates, determine actual tax payable, create legal sufficiency, create official status, or modify firm-level liability.

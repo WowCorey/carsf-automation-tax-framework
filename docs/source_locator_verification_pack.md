@@ -32,3 +32,7 @@ Build 31 adds a controlled public real aggregate-data loader using source-locate
 ## Build 32 Placeholder Replacement Follow-On
 
 Build 32 uses the source-located Build 31 public aggregate values to map placeholder replacement, narrowing, and context decisions. It does not add new values or treat source-locator metadata as external source verification. Replacement by public aggregate anchor does not mean validation, narrowing does not mean statistical estimation, and the map does not complete calibration, determine actual tax payable, create official status, or modify firm-level CARSF liability.
+
+## Build 33 Calibration Boundary Follow-On
+
+Build 33 uses the same source-located public aggregate values and Build 32 decisions to define calibration boundaries. It does not add values or treat source-locator metadata as external source verification. Public aggregate values may support only sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability; they do not complete calibration, validate CARSF, determine actual tax payable, create official status, or modify firm-level CARSF liability.

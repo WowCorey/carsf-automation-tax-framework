@@ -112,3 +112,11 @@ Build 32 adds a public data placeholder replacement map over the Build 31 loaded
 No new data is loaded by Build 32. Public aggregate data can anchor or narrow some placeholders, but it does not calibrate the model. Replaced by public aggregate anchor does not mean validated. Narrowed by public aggregate anchor does not mean statistically estimated. Informed by public aggregate anchor does not mean representative. Placeholder-only items remain placeholders and restricted-data blockers remain blockers. This is not validation, legal advice, tax advice, ATO guidance, Treasury modelling, PBO costing, economic validation, welfare validation, statistical validation, operational readiness, legal sufficiency, official status, actual tax payable, or firm-level CARSF liability modification.
 
 Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-32 are included in a later sealed RC.
+
+## Build 33 Public Aggregate Calibration Boundary Map Addendum
+
+Build 33 adds a public aggregate calibration-boundary map over Build 31 public aggregate values and Build 32 placeholder replacement decisions. It defines module-level and field-level allowed uses for public aggregate values: sanity checks, public aggregate anchors, public aggregate bounds, contextual references, placeholder narrowing, and reviewer traceability.
+
+No new data is loaded by Build 33. Public aggregate data does not calibrate the model. Calibration has not been completed. Public data does not prove the model works. Boundary mapping does not mean validation, statistical estimation, legal sufficiency, implementation readiness, official status, actual tax payable, or firm-level CARSF liability modification. Source candidates not loaded remain not loaded and restricted-data blockers remain blockers.
+
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-33 are included in a later sealed RC.

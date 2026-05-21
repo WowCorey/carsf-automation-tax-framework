@@ -58,3 +58,7 @@ Build 25 sealed the earlier RC state. A new integrity seal must be regenerated i
 ## Build 32 Placeholder Replacement Follow-On
 
 Build 32 maps Build 31 loaded public aggregate values back to the public-pilot placeholder anchors. It loads no new data and does not change the Build 27 boundary: public aggregate values can support anchor, bound, or context labels only. They do not complete calibration, validate CARSF, prove the model works, determine actual tax payable, create official status, or modify firm-level CARSF liability.
+
+## Build 33 Calibration Boundary Follow-On
+
+Build 33 defines module-level and field-level boundaries for the same public aggregate values and placeholder decisions. It loads no new data and keeps public aggregate uses limited to sanity checks, anchors, bounds, context, placeholder narrowing, and reviewer traceability. It does not complete calibration, validate CARSF, determine actual tax payable, create legal sufficiency, create official status, or modify firm-level CARSF liability.

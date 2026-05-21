@@ -53,3 +53,7 @@ Build 25 sealed the previous RC state. A new integrity seal must be regenerated 
 ## Build 32 Feasibility Follow-On
 
 Build 32 maps Build 31 public aggregate values to realistic placeholders, but it remains feasibility and placeholder-mapping work only. No new data is loaded, source candidates not loaded remain future-only, public aggregate anchors do not complete calibration, and the map does not claim validation, actual tax payable, official status, legal sufficiency, ATO guidance, Treasury modelling, PBO costing, or firm-level CARSF liability changes.
+
+## Build 33 Feasibility Follow-On
+
+Build 33 defines public aggregate calibration boundaries, but it remains boundary-mapping work only. No new data is loaded, source candidates not loaded remain future-only, public aggregate values can support only sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability, and the map does not perform calibration, claim validation, determine actual tax payable, create official status, or modify firm-level CARSF liability.
