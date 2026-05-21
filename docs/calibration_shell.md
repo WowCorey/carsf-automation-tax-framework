@@ -362,3 +362,6 @@ Build 25 sealed the previous RC state. A new integrity seal must be regenerated 
 ## Non-Claims
 
 The calibration shell is not legal, tax, Treasury, ATO, ABS, Fair Work, OECD, BEPS, audit, forensic, or economic validation. It does not prove any model setting is correct.
+## Build 32 Placeholder Replacement Boundary
+
+Build 32 maps Build 31 public aggregate values to realistic placeholders, but this is still calibration-shell work only. No new data is loaded. Public aggregate values can anchor, narrow, or inform placeholders without completing calibration, validating the model, determining actual tax payable, creating ATO guidance, Treasury modelling, PBO costing, legal sufficiency, official status, or firm-level CARSF liability changes.

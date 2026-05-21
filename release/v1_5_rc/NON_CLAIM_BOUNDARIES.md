@@ -62,6 +62,12 @@ It does not determine actual tax payable, does not use taxpayer-level data, firm
 - Build 31 does not load restricted data, personal data, taxpayer-level data, firm-confidential data, household microdata, raw downloaded datasets, or confidential source material.
 - Build 31 public aggregate data does not equal calibration, validation, proof that the model works, actual tax payable, official status, legal sufficiency, operational readiness, ATO guidance, Treasury modelling, PBO costing, or firm-level liability evidence.
 - Build 31 source candidates not loaded are not loaded data.
+- Build 32 public data placeholder replacement map outputs load no new data.
+- Build 32 replaced by public aggregate anchor does not mean validation.
+- Build 32 narrowed by public aggregate anchor does not mean statistical estimation.
+- Build 32 informed by public aggregate anchor does not mean representative.
+- Build 32 placeholder-only items remain placeholders and restricted-data blockers remain blockers.
+- Build 32 outputs are not calibration, validation, legal advice, tax advice, ATO guidance, Treasury modelling, PBO costing, operational readiness, legal sufficiency, official status, actual tax payable, or firm-level CARSF liability evidence.
 - Source references are not loaded datasets.
 
 ## Interpretation Rule
@@ -74,4 +80,4 @@ The final RC integrity seal is an internal artefact check only. It verifies rele
 
 It does not mean approval, validation, external review completion, operational readiness, legal sufficiency, legislative readiness, official status, implementation readiness, or firm-level CARSF liability modification.
 
-Build 25 sealed the previous RC state. Builds 26-31 add artefacts after that seal; a later sealed RC must regenerate the integrity seal if those builds are included.
+Build 25 sealed the previous RC state. Builds 26-32 add artefacts after that seal; a later sealed RC must regenerate the integrity seal if those builds are included.

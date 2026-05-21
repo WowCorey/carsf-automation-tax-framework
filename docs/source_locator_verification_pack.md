@@ -29,3 +29,6 @@ Build 29.6 adds a red-team reviewer objections pack using this pack as one input
 Build 30 can use this pack as a handoff input, but the handoff must preserve the same boundaries: no new data, no calibration completion, no validation, no actual tax payable, no official status, and no firm-level liability modification.
 
 Build 31 adds a controlled public real aggregate-data loader using source-located values already represented in the public-pilot chain. The loader records public aggregate values and source candidates not loaded; it does not complete calibration, externally verify source values, prove the model works, determine actual tax payable, create official status, or modify firm-level liability.
+## Build 32 Placeholder Replacement Follow-On
+
+Build 32 uses the source-located Build 31 public aggregate values to map placeholder replacement, narrowing, and context decisions. It does not add new values or treat source-locator metadata as external source verification. Replacement by public aggregate anchor does not mean validation, narrowing does not mean statistical estimation, and the map does not complete calibration, determine actual tax payable, create official status, or modify firm-level CARSF liability.

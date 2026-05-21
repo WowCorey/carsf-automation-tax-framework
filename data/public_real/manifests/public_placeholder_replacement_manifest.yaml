@@ -1,0 +1,114 @@
+map_id: carsf_v1_5_public_data_placeholder_replacement_map
+map_name: CARSF V1.5 Public Data Placeholder Replacement Map
+status: public_data_placeholder_replacement_map_only
+non_claims:
+  - This is a public data placeholder replacement map only. No new data is loaded by this build. Public aggregate data can anchor or narrow some placeholders, but does not calibrate the model. Replaced by public aggregate anchor does not mean validated. Narrowed by public aggregate anchor does not mean statistically estimated. Informed by public aggregate anchor does not mean representative. Placeholder-only items remain placeholders. Restricted-data blockers remain blockers. Calibration has not been completed. Public data does not prove the model works. This is not validation, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable and does not modify firm-level CARSF liability.
+  - Build 32 uses Build 31 loaded public aggregate values only and does not add public values, scrape sources, call APIs, or load restricted, personal, taxpayer-level, firm-confidential, household microdata, ABS DataLab, HILDA, DSS / Services Australia, ATO taxpayer, confidential Treasury / PBO, bank, payroll-document, pay-record, or tax-file-identifier data.
+  - Replacement, narrowing, and context labels are mapping labels only; they are not calibration, validation, legal sufficiency, official status, readiness, or liability determinations.
+input_artifacts:
+  - data/public_real/parsed/public_real_aggregate_values.json
+  - data/public_real/manifests/public_real_data_sources.yaml
+  - reports/public_real_data_loader.json
+  - reports/public_data_pilot.json
+  - reports/public_data_evidence_map.json
+  - reports/public_data_consistency_audit.json
+  - reports/source_locator_verification_pack.json
+  - reports/red_team_reviewer_objections.json
+  - data/public_pilot/placeholders/realistic_placeholder_anchors.yaml
+  - data/public_pilot/public_data_pilot_manifest.yaml
+replacement_status_taxonomy:
+  - replaced_by_public_aggregate_anchor
+  - narrowed_by_public_aggregate_anchor
+  - informed_by_public_aggregate_anchor
+  - still_placeholder_only
+  - blocked_until_restricted_data
+  - blocked_until_external_review
+  - cannot_replace_with_public_aggregate_data
+replacement_confidence_taxonomy:
+  - direct_public_aggregate_anchor
+  - public_aggregate_bound_only
+  - contextual_public_aggregate_only
+  - placeholder_only
+  - blocked_by_required_restricted_data
+  - external_review_required
+blocker_type_taxonomy:
+  - restricted_tax_data_required
+  - firm_confidential_data_required
+  - household_microdata_required
+  - welfare_payment_records_required
+  - behavioural_elasticity_required
+  - legal_review_required
+  - tax_review_required
+  - economic_review_required
+  - statistical_review_required
+  - public_aggregate_data_insufficient
+claim_level_taxonomy:
+  - public_aggregate_anchor_only
+  - placeholder_narrowing_only
+  - contextual_anchor_only
+  - blocked_placeholder
+  - cannot_support_replacement
+required_mapping_rules:
+  - Use only Build 31 loaded public aggregate values.
+  - Treat source_candidate_not_loaded records as not loaded and future-only.
+  - Keep every decision bounded by no-calibration, no-validation, no-tax-payable, no-official-status, and no-liability-change flags.
+  - Require explicit what_changed, what_did_not_change, what_must_not_be_claimed, remaining_blockers, and evidence_needed_before_calibration fields.
+  - Keep restricted-data and external-review blockers visible rather than treating public aggregates as sufficient.
+required_placeholder_coverage:
+  - anchor_opfte_minimum_wage
+  - anchor_hle_minimum_wage
+  - anchor_qlc_minimum_wage
+  - anchor_sector_schedule_source_reference
+  - anchor_fiscal_public_aggregates
+  - anchor_payg_public_tax_stats
+  - anchor_super_guarantee_rate
+  - anchor_help_source_reference
+  - anchor_payroll_tax_source_reference
+  - anchor_transition_public_reference
+  - anchor_uncertainty_source_reference_only
+required_public_value_coverage:
+  - fair_work_national_minimum_wage_hourly_2025
+  - fair_work_national_minimum_wage_weekly_2025
+  - fair_work_casual_loading_2025
+  - ato_large_corporate_income_tax_received_2022_23
+  - ato_large_corporate_entities_no_income_tax_percent_2022_23
+  - ato_total_tax_revenue_collected_2022_23
+  - ato_company_tax_revenue_2022_23
+  - treasury_total_receipts_2025_26_estimate
+  - treasury_taxation_receipts_2025_26_estimate
+  - ato_super_guarantee_rate_2025_26
+forbidden_claims:
+  - calibrated
+  - calibration completed
+  - model works
+  - public data proves
+  - actual tax payable
+  - validated
+  - externally validated
+  - source verified
+  - official policy
+  - official status
+  - ready for government
+  - ready for ATO
+  - ready for Treasury
+  - ready for Parliament
+  - ready for implementation
+  - operationally ready
+  - legally sufficient
+  - Treasury modelling
+  - PBO costing
+  - ATO guidance
+  - economic validation complete
+  - welfare validation complete
+  - statistical validation complete
+  - readiness score
+  - maturity score
+  - approved
+  - representative estimate
+  - population estimate
+  - firm liability
+  - CARSF liability determined
+build_33_requirements:
+  - Define public aggregate calibration boundaries separately from placeholder replacement mapping.
+  - Keep public aggregate values limited to anchors, bounds, context, or sanity checks unless external review and restricted-data governance exist.
+  - Preserve no-calibration, no-validation, no-tax-payable, no-official-status, no-legal-sufficiency, no-readiness-score, and no-liability-change boundaries.

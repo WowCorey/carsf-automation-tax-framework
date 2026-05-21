@@ -12,6 +12,7 @@ CONSISTENCY_AUDIT_PATH = REPO_ROOT / "reports" / "public_data_consistency_audit.
 SOURCE_LOCATOR_PACK_PATH = REPO_ROOT / "reports" / "source_locator_verification_pack.json"
 RED_TEAM_OBJECTIONS_PATH = REPO_ROOT / "reports" / "red_team_reviewer_objections.json"
 PUBLIC_REAL_DATA_LOADER_PATH = REPO_ROOT / "reports" / "public_real_data_loader.json"
+PLACEHOLDER_REPLACEMENT_MAP_PATH = REPO_ROOT / "reports" / "public_data_placeholder_replacement_map.json"
 WARNING = (
     "This is a reviewer evidence map and dashboard for the public data pilot only. No new data is loaded by this build. "
     "Build 27 public aggregate extracts remain sanity-check-only or placeholder-anchor-only. This is not calibration, "
@@ -59,6 +60,7 @@ audit_report = load_report(CONSISTENCY_AUDIT_PATH)
 source_locator_report = load_report(SOURCE_LOCATOR_PACK_PATH)
 red_team_report = load_report(RED_TEAM_OBJECTIONS_PATH)
 public_real_report = load_report(PUBLIC_REAL_DATA_LOADER_PATH)
+placeholder_replacement_report = load_report(PLACEHOLDER_REPLACEMENT_MAP_PATH)
 
 metadata = report.get("metadata", {})
 payload = report.get("public_data_evidence_map", {})
@@ -426,3 +428,71 @@ if public_real_report:
     st.table(rows(real_payload.get("guardrail_findings", []), ["finding_id", "guardrail", "status", "finding"]))
 else:
     st.info("Run `python scripts/run_public_real_data_loader.py` to generate the optional public-real-data loader section.")
+
+st.markdown("### Public Data Placeholder Replacement Map")
+st.caption(
+    "Placeholder replacement map only. No new data is loaded. Public aggregate anchors can replace, narrow, or inform "
+    "some placeholders, but this is not calibration, validation, legal advice, tax advice, ATO guidance, Treasury "
+    "modelling, PBO costing, operational readiness, legal sufficiency, official status, actual tax payable, or "
+    "firm-level CARSF liability logic."
+)
+if placeholder_replacement_report:
+    replacement_payload = placeholder_replacement_report.get("public_data_placeholder_replacement_map", {})
+    replacement_summary = placeholder_replacement_report.get("summary", {})
+    st.table(
+        [
+            {"Metric": key, "Value": str(value)}
+            for key, value in replacement_summary.items()
+            if key
+            in {
+                "placeholder_replacement_map_created",
+                "new_data_loaded",
+                "loaded_public_values_used",
+                "placeholders_mapped",
+                "placeholders_replaced_by_public_anchor",
+                "placeholders_narrowed_by_public_anchor",
+                "placeholders_informed_by_public_anchor",
+                "placeholders_still_placeholder_only",
+                "placeholders_blocked_until_restricted_data",
+                "placeholders_blocked_until_external_review",
+                "placeholders_cannot_replace_with_public_aggregate_data",
+                "public_source_candidates_treated_as_loaded",
+                "restricted_data_loaded",
+                "personal_data_loaded",
+                "taxpayer_level_data_loaded",
+                "firm_confidential_data_loaded",
+                "household_microdata_loaded",
+                "calibration_completed",
+                "validation_claimed",
+                "actual_tax_payable_determined",
+                "official_status_claimed",
+                "firm_level_liability_logic_modified",
+            }
+        ]
+    )
+    st.markdown("#### Replacement Decisions")
+    st.table(
+        rows_with_lists(
+            replacement_payload.get("replacement_decisions", []),
+            [
+                "placeholder_id",
+                "field_id",
+                "replacement_status",
+                "replacement_confidence",
+                "claim_level",
+                "linked_public_value_ids",
+                "what_changed",
+                "what_did_not_change",
+                "remaining_blockers",
+            ],
+        )
+    )
+    st.markdown("#### Source Candidates Not Loaded")
+    st.table(
+        rows(
+            replacement_payload.get("source_candidates_not_loaded", []),
+            ["source_id", "publisher", "source_name", "loaded_status", "treated_as_loaded"],
+        )
+    )
+else:
+    st.info("Run `python scripts/run_public_data_placeholder_replacement_map.py` to generate the optional placeholder replacement map section.")

@@ -189,6 +189,12 @@ Status: private research prototype.
 - R&D Tax Incentive interaction.
 - Legal, privacy, international tax, trade, incidence, and behavioural elasticity review.
 
+## Build 32 Public Data Placeholder Replacement Map
+
+Build 32 maps Build 31 loaded public aggregate values to existing realistic placeholders. It classifies placeholders as public aggregate anchors, public aggregate bounds, contextual anchors, still-blocked placeholders, restricted-data blockers, external-review blockers, or unable to be replaced by public aggregate data.
+
+This is a placeholder replacement map only. No new data is loaded, calibration has not been completed, public data does not prove the model works, replacement by public aggregate anchor does not mean validation, narrowing by public aggregate anchor does not mean statistical estimation, and the map does not determine actual tax payable, create official status, or modify firm-level CARSF liability. Build 25 sealed the earlier RC state; a new integrity seal must be regenerated if Builds 26-32 are included in a later sealed RC.
+
 ## Next Claude Review Should Attack
 
 - Whether the example runner hides any policy assumptions inside code defaults.

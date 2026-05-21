@@ -1,6 +1,6 @@
 # CARSF V1.5 Executive Dashboard Consolidation
 
-Generated at: `2026-05-21T00:28:58+00:00`
+Generated at: `2026-05-21T01:21:04+00:00`
 
 ## A. Purpose
 
@@ -19,22 +19,22 @@ Use this as a review navigation index. Read order is suggested review navigation
 
 ## D. Prototype Stack Overview
 
-- Total layers: 30
-- Total reports indexed: 54
-- Reports present: 54
+- Total layers: 31
+- Total reports indexed: 56
+- Reports present: 56
 - Reports missing: 0
-- Layers with generated reports: 29
+- Layers with generated reports: 30
 - Synthetic-only layers: 10
 - Placeholder-only layers: 25
 - Non-operative layers: 3
-- External-review-required layers: 27
-- Calibration-required layers: 23
+- External-review-required layers: 28
+- Calibration-required layers: 24
 - Legal-review-required layers: 13
 - Tax-review-required layers: 10
 - ATO-methods-review-required layers: 17
-- Treasury-methods-review-required layers: 21
-- Privacy-review-required layers: 16
-- Statistical-methods-review-required layers: 12
+- Treasury-methods-review-required layers: 22
+- Privacy-review-required layers: 17
+- Statistical-methods-review-required layers: 13
 - real_data_used: False
 - readiness_score_created: False
 - operational_readiness_claimed: False
@@ -76,6 +76,7 @@ Use this as a review navigation index. Read order is suggested review navigation
 | 30 | source_locator_verification_pack | Public Data Source-Locator Verification Pack | Reviewer-facing source-locator cards and manual-review checklists over existing Build 27-29 public-data artefacts. | False | Suggested review navigation only; not an official process. |
 | 31 | red_team_reviewer_objections | Red-Team Reviewer Objections Pack | Reviewer-facing objection catalogue for the Build 26-29.5 public-data pilot and reviewer materials. | False | Suggested review navigation only; not an official process. |
 | 32 | public_real_data_loader | Public Real Aggregate Data Loader | Controlled public aggregate-data loader over existing public-pilot source records, parsed values, source candidates not loaded, guardrails, and digest metadata. | False | Suggested review navigation only; not an official process. |
+| 33 | public_data_placeholder_replacement_map | Public Data Placeholder Replacement Map | Maps Build 31 public aggregate values to existing realistic placeholders as anchors, bounds, context, blockers, or public-aggregate-insufficient items. | False | Suggested review navigation only; not an official process. |
 
 ## F. Layer Index
 
@@ -111,6 +112,7 @@ Use this as a review navigation index. Read order is suggested review navigation
 | source_locator_verification_pack | Public Data Source-Locator Verification Pack | calibration | Reviewer-facing source-locator cards and manual-review checklists over existing Build 27-29 public-data artefacts. | implemented_prototype, generated_report_available, placeholder_only, calibration_required, external_review_required, not_for_real_world_use | reports/source_locator_verification_pack.md, reports/source_locator_verification_pack.json | simulator/pages/29_Public_Data_Evidence_Map.py | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer | 30 | Build 29.5 makes source-locator metadata easier to inspect without creating source verification or calibration claims. |
 | red_team_reviewer_objections | Red-Team Reviewer Objections Pack | calibration | Reviewer-facing objection catalogue for the Build 26-29.5 public-data pilot and reviewer materials. | implemented_prototype, generated_report_available, placeholder_only, calibration_required, external_review_required, not_for_real_world_use | reports/red_team_reviewer_objections.md, reports/red_team_reviewer_objections.json | simulator/pages/29_Public_Data_Evidence_Map.py | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer, hostile_red_team_reviewer | 31 | Build 29.6 makes known limitations easier to attack without resolving objections or claiming calibration. |
 | public_real_data_loader | Public Real Aggregate Data Loader | calibration | Controlled public aggregate-data loader over existing public-pilot source records, parsed values, source candidates not loaded, guardrails, and digest metadata. | implemented_prototype, generated_report_available, public_aggregate_only, calibration_required, external_review_required, not_for_real_world_use | reports/public_real_data_loader.md, reports/public_real_data_loader.json | simulator/pages/29_Public_Data_Evidence_Map.py | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer | 32 | Build 31 makes source-located public aggregate values reproducible from local repo files while preserving non-claim boundaries. |
+| public_data_placeholder_replacement_map | Public Data Placeholder Replacement Map | calibration | Maps Build 31 public aggregate values to existing realistic placeholders as anchors, bounds, context, blockers, or public-aggregate-insufficient items. | implemented_prototype, generated_report_available, placeholder_mapping_only, calibration_required, external_review_required, not_for_real_world_use | reports/public_data_placeholder_replacement_map.md, reports/public_data_placeholder_replacement_map.json | simulator/pages/29_Public_Data_Evidence_Map.py | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, hostile_red_team_reviewer | 33 | Build 32 makes placeholder status changes explicit while preserving non-claim boundaries. |
 
 ## G. Report Index
 
@@ -170,6 +172,8 @@ Use this as a review navigation index. Read order is suggested review navigation
 | reports/red_team_reviewer_objections.md | red_team_reviewer_objections | True | scripts/run_red_team_reviewer_objections.py | Red-team objections pack only; objections being acknowledged does not mean they are resolved. | must not use for: objections resolved, calibration completed, validation, official status, actual tax payable, readiness score | 31 |
 | reports/public_real_data_loader.json | public_real_data_loader | True | scripts/run_public_real_data_loader.py | Machine-readable public aggregate source registry, parsed values, source candidates, guardrails, and false flags only. | must not use for: calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score | 32 |
 | reports/public_real_data_loader.md | public_real_data_loader | True | scripts/run_public_real_data_loader.py | Public real aggregate-data loader only; public aggregate data does not equal calibration. | must not use for: calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score | 32 |
+| reports/public_data_placeholder_replacement_map.json | public_data_placeholder_replacement_map | True | scripts/run_public_data_placeholder_replacement_map.py | Machine-readable placeholder replacement decisions over Build 31 public aggregate values only; no new data is loaded. | must not use for: calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score, firm-level liability | 33 |
+| reports/public_data_placeholder_replacement_map.md | public_data_placeholder_replacement_map | True | scripts/run_public_data_placeholder_replacement_map.py | Placeholder replacement map only; public aggregate anchors can replace, narrow, or inform placeholders but do not calibrate or validate CARSF. | must not use for: calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score, firm-level liability | 33 |
 
 ## H. Streamlit Page Index
 
@@ -233,6 +237,7 @@ Use this as a review navigation index. Read order is suggested review navigation
 | source_locator_verification_pack | not_external_source_verification, not_calibrated, not_statistical_validation, not_actual_tax_payable, not_operational_readiness | must not use for: external source verification, calibration completed, validation, official status, actual tax payable, readiness score | True |
 | red_team_reviewer_objections | not_external_source_verification, not_calibrated, not_statistical_validation, not_actual_tax_payable, not_operational_readiness | must not use for: objections resolved, external source verification, calibration completed, validation, official status, actual tax payable, readiness score | True |
 | public_real_data_loader | not_calibrated, not_validation, not_actual_tax_payable, not_operational_readiness, not_official_status | must not use for: calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score | True |
+| public_data_placeholder_replacement_map | no_new_data_loaded, not_calibrated, not_validation, not_actual_tax_payable, not_operational_readiness, not_official_status | must not use for: calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score | True |
 
 ## J. Calibration Blockers
 
@@ -275,6 +280,9 @@ Use this as a review navigation index. Read order is suggested review navigation
 | public_real_data_loader | calibration | Public aggregate data does not equal calibration. | False | Build 31 makes source-located public aggregate values reproducible from local repo files while preserving non-claim boundaries. |
 | public_real_data_loader | calibration | Source candidates remain not loaded where exact safe local values are unavailable. | False | Build 31 makes source-located public aggregate values reproducible from local repo files while preserving non-claim boundaries. |
 | public_real_data_loader | calibration | Restricted-data, legal, tax, Treasury, ATO-methods, statistical, economic, and welfare blockers remain. | False | Build 31 makes source-located public aggregate values reproducible from local repo files while preserving non-claim boundaries. |
+| public_data_placeholder_replacement_map | calibration | Public aggregate anchors can replace, narrow, or inform placeholders but do not complete calibration. | False | Build 32 makes placeholder status changes explicit while preserving non-claim boundaries. |
+| public_data_placeholder_replacement_map | calibration | Source candidates not loaded remain future-only. | False | Build 32 makes placeholder status changes explicit while preserving non-claim boundaries. |
+| public_data_placeholder_replacement_map | calibration | Restricted-data, legal, tax, Treasury, ATO-methods, statistical, economic, and welfare blockers remain. | False | Build 32 makes placeholder status changes explicit while preserving non-claim boundaries. |
 
 ## K. External Review Blockers
 
@@ -310,6 +318,7 @@ Use this as a review navigation index. Read order is suggested review navigation
 | source_locator_verification_pack | external_review | Human reviewer inspection of source URLs, locators, units, periods, geography, and aggregate-only status remains required. | True | Build 29.5 makes source-locator metadata easier to inspect without creating source verification or calibration claims. |
 | red_team_reviewer_objections | external_review | External legal, tax, Treasury, ATO-methods, privacy, statistical, economic, welfare, and hostile reviewer inspection remains required. | True | Build 29.6 makes known limitations easier to attack without resolving objections or claiming calibration. |
 | public_real_data_loader | external_review | External reviewer inspection remains required before any loaded public aggregate value can support calibration design. | True | Build 31 makes source-located public aggregate values reproducible from local repo files while preserving non-claim boundaries. |
+| public_data_placeholder_replacement_map | external_review | External reviewer inspection remains required before replacement decisions can support calibration design. | True | Build 32 makes placeholder status changes explicit while preserving non-claim boundaries. |
 
 ## L. Guardrail / Safety Status
 
@@ -344,15 +353,15 @@ Use this as a review navigation index. Read order is suggested review navigation
 | --- | --- |
 | ato_methods_reviewer | working_paper, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, behavioural_response, administrative_workflow, legislative_architecture, evidence_workflow, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack, red_team_reviewer_objections, public_real_data_loader |
 | economic_methods_reviewer | behavioural_response, fiscal_trajectory, investment_incidence |
-| hostile_red_team_reviewer | red_team_reviewer_objections |
+| hostile_red_team_reviewer | red_team_reviewer_objections, public_data_placeholder_replacement_map |
 | legal_reviewer | working_paper, status_risks_docs, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, behavioural_response, administrative_workflow, legislative_architecture, payment_interactions, evidence_workflow, secure_ingestion, repo_guardrails |
 | parliamentary_counsel_reviewer | legislative_architecture |
 | policy_reviewer | executive_dashboard, working_paper, status_risks_docs, worked_examples, behavioural_response, fiscal_trajectory, transition_funding, household_weighting, uncertainty_ranges, reviewed_scenarios |
-| privacy_reviewer | administrative_workflow, legislative_architecture, household_distributional, household_weighting, evidence_workflow, secure_ingestion, repo_guardrails, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack, red_team_reviewer_objections, public_real_data_loader |
-| statistical_methods_reviewer | household_distributional, household_weighting, uncertainty_ranges, reviewed_scenarios, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack, red_team_reviewer_objections, public_real_data_loader |
+| privacy_reviewer | administrative_workflow, legislative_architecture, household_distributional, household_weighting, evidence_workflow, secure_ingestion, repo_guardrails, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack, red_team_reviewer_objections, public_real_data_loader, public_data_placeholder_replacement_map |
+| statistical_methods_reviewer | household_distributional, household_weighting, uncertainty_ranges, reviewed_scenarios, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack, red_team_reviewer_objections, public_real_data_loader, public_data_placeholder_replacement_map |
 | tax_reviewer | working_paper, status_risks_docs, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, behavioural_response, administrative_workflow, legislative_architecture, investment_incidence |
-| technical_reviewer | executive_dashboard, status_risks_docs, worked_examples, reviewed_scenarios, evidence_workflow, secure_ingestion, repo_guardrails, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack, red_team_reviewer_objections, public_real_data_loader |
-| treasury_methods_reviewer | working_paper, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, legislative_architecture, fiscal_trajectory, transition_funding, payment_interactions, investment_incidence, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack, red_team_reviewer_objections, public_real_data_loader |
+| technical_reviewer | executive_dashboard, status_risks_docs, worked_examples, reviewed_scenarios, evidence_workflow, secure_ingestion, repo_guardrails, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack, red_team_reviewer_objections, public_real_data_loader, public_data_placeholder_replacement_map |
+| treasury_methods_reviewer | working_paper, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, legislative_architecture, fiscal_trajectory, transition_funding, payment_interactions, investment_incidence, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack, red_team_reviewer_objections, public_real_data_loader, public_data_placeholder_replacement_map |
 | welfare_policy_reviewer | transition_funding, payment_interactions, household_distributional |
 
 ## R. Plain-English Interpretation

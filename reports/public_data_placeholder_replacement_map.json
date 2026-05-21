@@ -1,0 +1,1161 @@
+{
+  "metadata": {
+    "blocker_type_values": [
+      "behavioural_elasticity_required",
+      "economic_review_required",
+      "firm_confidential_data_required",
+      "household_microdata_required",
+      "legal_review_required",
+      "public_aggregate_data_insufficient",
+      "restricted_tax_data_required",
+      "statistical_review_required",
+      "tax_review_required",
+      "welfare_payment_records_required"
+    ],
+    "claim_level_values": [
+      "blocked_placeholder",
+      "cannot_support_replacement",
+      "contextual_anchor_only",
+      "placeholder_narrowing_only",
+      "public_aggregate_anchor_only"
+    ],
+    "generated_at": "2026-05-21T05:10:33+00:00",
+    "non_claims": [
+      "This is a public data placeholder replacement map only. No new data is loaded by this build. Public aggregate data can anchor or narrow some placeholders, but does not calibrate the model. Replaced by public aggregate anchor does not mean validated. Narrowed by public aggregate anchor does not mean statistically estimated. Informed by public aggregate anchor does not mean representative. Placeholder-only items remain placeholders. Restricted-data blockers remain blockers. Calibration has not been completed. Public data does not prove the model works. This is not validation, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable and does not modify firm-level CARSF liability.",
+      "Build 32 uses Build 31 loaded public aggregate values only and does not add new public source values.",
+      "Replacement, narrowing, and context labels are mapping labels only; they are not calibration or validation.",
+      "Source candidates not loaded in Build 31 remain not loaded and future-only."
+    ],
+    "replacement_confidence_values": [
+      "blocked_by_required_restricted_data",
+      "contextual_public_aggregate_only",
+      "direct_public_aggregate_anchor",
+      "external_review_required",
+      "placeholder_only",
+      "public_aggregate_bound_only"
+    ],
+    "replacement_status_values": [
+      "blocked_until_external_review",
+      "blocked_until_restricted_data",
+      "cannot_replace_with_public_aggregate_data",
+      "informed_by_public_aggregate_anchor",
+      "narrowed_by_public_aggregate_anchor",
+      "replaced_by_public_aggregate_anchor",
+      "still_placeholder_only"
+    ],
+    "status": "public_data_placeholder_replacement_map_only",
+    "version": "CARSF V1.5 prototype"
+  },
+  "public_data_placeholder_replacement_map": {
+    "future_build_33_requirements": [
+      "Define public aggregate calibration boundaries separately from placeholder replacement mapping.",
+      "Keep public aggregate values limited to anchors, bounds, context, or sanity checks unless external review and restricted-data governance exist.",
+      "Preserve no-calibration, no-validation, no-tax-payable, no-official-status, no-legal-sufficiency, no-readiness-score, and no-liability-change boundaries."
+    ],
+    "map_id": "carsf_v1_5_public_data_placeholder_replacement_map",
+    "map_name": "CARSF V1.5 Public Data Placeholder Replacement Map",
+    "non_claims": [
+      "This is a public data placeholder replacement map only. No new data is loaded by this build. Public aggregate data can anchor or narrow some placeholders, but does not calibrate the model. Replaced by public aggregate anchor does not mean validated. Narrowed by public aggregate anchor does not mean statistically estimated. Informed by public aggregate anchor does not mean representative. Placeholder-only items remain placeholders. Restricted-data blockers remain blockers. Calibration has not been completed. Public data does not prove the model works. This is not validation, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable and does not modify firm-level CARSF liability.",
+      "Build 32 uses Build 31 loaded public aggregate values only and does not add public values, scrape sources, call APIs, or load restricted, personal, taxpayer-level, firm-confidential, household microdata, ABS DataLab, HILDA, DSS / Services Australia, ATO taxpayer, confidential Treasury / PBO, bank, payroll-document, pay-record, or tax-file-identifier data.",
+      "Replacement, narrowing, and context labels are mapping labels only; they are not calibration, validation, legal sufficiency, official status, readiness, or liability determinations."
+    ],
+    "placeholder_candidates": [
+      {
+        "anchor_strength": "moderate",
+        "blocked_by_restricted_data": true,
+        "candidate_extract_ids": [
+          "fair_work_minimum_wage_2025_extract"
+        ],
+        "candidate_source_reference_ids": [
+          "fair_work_minimum_wage_2025"
+        ],
+        "current_placeholder_status": "realistic_placeholder",
+        "field_id": "opfte_benchmarks",
+        "placeholder_id": "anchor_opfte_minimum_wage",
+        "placeholder_name": "OPFTE public wage anchor"
+      },
+      {
+        "anchor_strength": "weak",
+        "blocked_by_restricted_data": true,
+        "candidate_extract_ids": [
+          "fair_work_minimum_wage_2025_extract"
+        ],
+        "candidate_source_reference_ids": [
+          "fair_work_minimum_wage_2025"
+        ],
+        "current_placeholder_status": "realistic_placeholder",
+        "field_id": "hle_assumptions",
+        "placeholder_id": "anchor_hle_minimum_wage",
+        "placeholder_name": "HLE public wage anchor"
+      },
+      {
+        "anchor_strength": "weak",
+        "blocked_by_restricted_data": true,
+        "candidate_extract_ids": [
+          "fair_work_minimum_wage_2025_extract"
+        ],
+        "candidate_source_reference_ids": [
+          "fair_work_minimum_wage_2025"
+        ],
+        "current_placeholder_status": "realistic_placeholder",
+        "field_id": "qlc_weights",
+        "placeholder_id": "anchor_qlc_minimum_wage",
+        "placeholder_name": "QLC public wage anchor"
+      },
+      {
+        "anchor_strength": "weak",
+        "blocked_by_restricted_data": true,
+        "candidate_extract_ids": [
+          "abs_labour_source_reference_extract",
+          "fair_work_minimum_wage_2025_extract"
+        ],
+        "candidate_source_reference_ids": [
+          "abs_labour_wage_aggregate_source_reference",
+          "fair_work_minimum_wage_2025"
+        ],
+        "current_placeholder_status": "realistic_placeholder",
+        "field_id": "sector_schedule_values",
+        "placeholder_id": "anchor_sector_schedule_source_reference",
+        "placeholder_name": "Sector schedule public source-reference anchor"
+      },
+      {
+        "anchor_strength": "moderate",
+        "blocked_by_restricted_data": true,
+        "candidate_extract_ids": [
+          "ato_taxation_statistics_2022_23_extract",
+          "treasury_budget_2026_27_receipts_extract"
+        ],
+        "candidate_source_reference_ids": [
+          "ato_taxation_statistics_2022_23",
+          "treasury_budget_2026_27_bp1"
+        ],
+        "current_placeholder_status": "realistic_placeholder",
+        "field_id": "fiscal_trajectory_assumptions",
+        "placeholder_id": "anchor_fiscal_public_aggregates",
+        "placeholder_name": "Fiscal public aggregate sanity anchor"
+      },
+      {
+        "anchor_strength": "weak",
+        "blocked_by_restricted_data": true,
+        "candidate_extract_ids": [
+          "ato_taxation_statistics_2022_23_extract"
+        ],
+        "candidate_source_reference_ids": [
+          "ato_taxation_statistics_2022_23"
+        ],
+        "current_placeholder_status": "realistic_placeholder",
+        "field_id": "payg_erosion_assumptions",
+        "placeholder_id": "anchor_payg_public_tax_stats",
+        "placeholder_name": "PAYG public tax-statistics sanity anchor"
+      },
+      {
+        "anchor_strength": "moderate",
+        "blocked_by_restricted_data": true,
+        "candidate_extract_ids": [
+          "super_guarantee_2025_26_extract"
+        ],
+        "candidate_source_reference_ids": [
+          "ato_super_guarantee_2025_26"
+        ],
+        "current_placeholder_status": "realistic_placeholder",
+        "field_id": "superannuation_contribution_pressure",
+        "placeholder_id": "anchor_super_guarantee_rate",
+        "placeholder_name": "Superannuation Guarantee public setting anchor"
+      },
+      {
+        "anchor_strength": "source_reference_only",
+        "blocked_by_restricted_data": true,
+        "candidate_extract_ids": [
+          "help_threshold_source_reference_extract"
+        ],
+        "candidate_source_reference_ids": [
+          "study_assist_help_thresholds_2025_26"
+        ],
+        "current_placeholder_status": "realistic_placeholder",
+        "field_id": "help_hecs_repayment_pressure",
+        "placeholder_id": "anchor_help_source_reference",
+        "placeholder_name": "HELP threshold source-reference anchor"
+      },
+      {
+        "anchor_strength": "source_reference_only",
+        "blocked_by_restricted_data": true,
+        "candidate_extract_ids": [
+          "qld_payroll_tax_source_reference_extract"
+        ],
+        "candidate_source_reference_ids": [
+          "qld_payroll_tax_threshold_2025_26"
+        ],
+        "current_placeholder_status": "realistic_placeholder",
+        "field_id": "state_payroll_tax_pressure",
+        "placeholder_id": "anchor_payroll_tax_source_reference",
+        "placeholder_name": "State payroll threshold source-reference anchor"
+      },
+      {
+        "anchor_strength": "weak",
+        "blocked_by_restricted_data": true,
+        "candidate_extract_ids": [
+          "treasury_budget_2026_27_receipts_extract",
+          "super_guarantee_2025_26_extract"
+        ],
+        "candidate_source_reference_ids": [
+          "treasury_budget_2026_27_bp1",
+          "ato_super_guarantee_2025_26"
+        ],
+        "current_placeholder_status": "realistic_placeholder",
+        "field_id": "transition_payment_assumptions",
+        "placeholder_id": "anchor_transition_public_reference",
+        "placeholder_name": "Transition funding public aggregate reference anchor"
+      },
+      {
+        "anchor_strength": "source_reference_only",
+        "blocked_by_restricted_data": true,
+        "candidate_extract_ids": [
+          "abs_labour_source_reference_extract",
+          "ato_taxation_statistics_2022_23_extract"
+        ],
+        "candidate_source_reference_ids": [
+          "abs_labour_wage_aggregate_source_reference",
+          "ato_taxation_statistics_2022_23"
+        ],
+        "current_placeholder_status": "realistic_placeholder",
+        "field_id": "uncertainty_range_assumptions",
+        "placeholder_id": "anchor_uncertainty_source_reference_only",
+        "placeholder_name": "Uncertainty source-reference-only anchor"
+      }
+    ],
+    "public_aggregate_anchors": [
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "geography": "Australia",
+        "metric_name": "National minimum wage hourly rate",
+        "period": "from 2025-07-01",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "fair_work_minimum_wage_2025",
+        "source_locator": "Fair Work Ombudsman minimum wages fact sheet, national minimum wage paragraph for the 1 July 2025 rate and 38-hour week reference.",
+        "unit": "AUD_per_hour",
+        "value": 24.95,
+        "value_id": "fair_work_national_minimum_wage_hourly_2025"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "geography": "Australia",
+        "metric_name": "National minimum wage weekly rate",
+        "period": "from 2025-07-01",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "fair_work_minimum_wage_2025",
+        "source_locator": "Fair Work Ombudsman minimum wages fact sheet, national minimum wage paragraph for the 1 July 2025 rate and 38-hour week reference.",
+        "unit": "AUD_per_week",
+        "value": 948.1,
+        "value_id": "fair_work_national_minimum_wage_weekly_2025"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "geography": "Australia",
+        "metric_name": "Casual loading percentage",
+        "period": "from 2025-07-01",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "fair_work_minimum_wage_2025",
+        "source_locator": "Fair Work Ombudsman minimum wages fact sheet, national minimum wage paragraph for the 1 July 2025 rate and 38-hour week reference.",
+        "unit": "percent",
+        "value": 25.0,
+        "value_id": "fair_work_casual_loading_2025"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "geography": "Australia",
+        "metric_name": "Income tax received from large corporates",
+        "period": "2022-23",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "ato_corporate_tax_transparency_2022_23",
+        "source_locator": "ATO media-centre article \"ATO collects $100 billion dollars from large corporates\", public summary of 2022-23 corporate tax transparency results.",
+        "unit": "AUD_billion",
+        "value": 97.9,
+        "value_id": "ato_large_corporate_income_tax_received_2022_23"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "geography": "Australia",
+        "metric_name": "Entities with no income tax payable in public report",
+        "period": "2022-23",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "ato_corporate_tax_transparency_2022_23",
+        "source_locator": "ATO media-centre article \"ATO collects $100 billion dollars from large corporates\", public summary of 2022-23 corporate tax transparency results.",
+        "unit": "percent",
+        "value": 31.0,
+        "value_id": "ato_large_corporate_entities_no_income_tax_percent_2022_23"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "geography": "Australia",
+        "metric_name": "Total tax revenue collected",
+        "period": "2022-23",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "ato_taxation_statistics_2022_23",
+        "source_locator": "ATO media-centre article \"2022-23 taxation statistics released\", public headline aggregate values.",
+        "unit": "AUD_billion",
+        "value": 577.4,
+        "value_id": "ato_total_tax_revenue_collected_2022_23"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "geography": "Australia",
+        "metric_name": "Company tax revenue",
+        "period": "2022-23",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "ato_taxation_statistics_2022_23",
+        "source_locator": "ATO media-centre article \"2022-23 taxation statistics released\", public headline aggregate values.",
+        "unit": "AUD_billion",
+        "value": 140.0,
+        "value_id": "ato_company_tax_revenue_2022_23"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "geography": "Australia",
+        "metric_name": "Total receipts estimate",
+        "period": "2025-26 estimate in Budget Paper No. 1 2026-27",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "treasury_budget_2026_27_bp1",
+        "source_locator": "Budget Paper No. 1 2026-27, Statement 5 Revenue, Table 5.1 Australian Government general government receipts, 2025-26 estimates.",
+        "unit": "AUD_billion",
+        "value": 759.8,
+        "value_id": "treasury_total_receipts_2025_26_estimate"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "geography": "Australia",
+        "metric_name": "Taxation receipts estimate",
+        "period": "2025-26 estimate in Budget Paper No. 1 2026-27",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "treasury_budget_2026_27_bp1",
+        "source_locator": "Budget Paper No. 1 2026-27, Statement 5 Revenue, Table 5.1 Australian Government general government receipts, 2025-26 estimates.",
+        "unit": "AUD_billion",
+        "value": 699.5,
+        "value_id": "treasury_taxation_receipts_2025_26_estimate"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "geography": "Australia",
+        "metric_name": "Super guarantee percentage",
+        "period": "from 2025-07-01",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "ato_super_guarantee_2025_26",
+        "source_locator": "ATO key superannuation rates and thresholds page, super guarantee percentage table for the period from 1 July 2025.",
+        "unit": "percent",
+        "value": 12.0,
+        "value_id": "ato_super_guarantee_rate_2025_26"
+      }
+    ],
+    "replacement_blockers": [
+      {
+        "blocker": "economic_review_required remains unresolved for anchor_fiscal_public_aggregates",
+        "blocker_id": "anchor_fiscal_public_aggregates_economic_review_required",
+        "blocker_type": "economic_review_required",
+        "placeholder_id": "anchor_fiscal_public_aggregates"
+      },
+      {
+        "blocker": "restricted_tax_data_required remains unresolved for anchor_fiscal_public_aggregates",
+        "blocker_id": "anchor_fiscal_public_aggregates_restricted_tax_data_required",
+        "blocker_type": "restricted_tax_data_required",
+        "placeholder_id": "anchor_fiscal_public_aggregates"
+      },
+      {
+        "blocker": "behavioural_elasticity_required remains unresolved for anchor_fiscal_public_aggregates",
+        "blocker_id": "anchor_fiscal_public_aggregates_behavioural_elasticity_required",
+        "blocker_type": "behavioural_elasticity_required",
+        "placeholder_id": "anchor_fiscal_public_aggregates"
+      },
+      {
+        "blocker": "welfare_payment_records_required remains unresolved for anchor_help_source_reference",
+        "blocker_id": "anchor_help_source_reference_welfare_payment_records_required",
+        "blocker_type": "welfare_payment_records_required",
+        "placeholder_id": "anchor_help_source_reference"
+      },
+      {
+        "blocker": "household_microdata_required remains unresolved for anchor_help_source_reference",
+        "blocker_id": "anchor_help_source_reference_household_microdata_required",
+        "blocker_type": "household_microdata_required",
+        "placeholder_id": "anchor_help_source_reference"
+      },
+      {
+        "blocker": "legal_review_required remains unresolved for anchor_help_source_reference",
+        "blocker_id": "anchor_help_source_reference_legal_review_required",
+        "blocker_type": "legal_review_required",
+        "placeholder_id": "anchor_help_source_reference"
+      },
+      {
+        "blocker": "statistical_review_required remains unresolved for anchor_hle_minimum_wage",
+        "blocker_id": "anchor_hle_minimum_wage_statistical_review_required",
+        "blocker_type": "statistical_review_required",
+        "placeholder_id": "anchor_hle_minimum_wage"
+      },
+      {
+        "blocker": "behavioural_elasticity_required remains unresolved for anchor_hle_minimum_wage",
+        "blocker_id": "anchor_hle_minimum_wage_behavioural_elasticity_required",
+        "blocker_type": "behavioural_elasticity_required",
+        "placeholder_id": "anchor_hle_minimum_wage"
+      },
+      {
+        "blocker": "public_aggregate_data_insufficient remains unresolved for anchor_hle_minimum_wage",
+        "blocker_id": "anchor_hle_minimum_wage_public_aggregate_data_insufficient",
+        "blocker_type": "public_aggregate_data_insufficient",
+        "placeholder_id": "anchor_hle_minimum_wage"
+      },
+      {
+        "blocker": "statistical_review_required remains unresolved for anchor_opfte_minimum_wage",
+        "blocker_id": "anchor_opfte_minimum_wage_statistical_review_required",
+        "blocker_type": "statistical_review_required",
+        "placeholder_id": "anchor_opfte_minimum_wage"
+      },
+      {
+        "blocker": "restricted_tax_data_required remains unresolved for anchor_opfte_minimum_wage",
+        "blocker_id": "anchor_opfte_minimum_wage_restricted_tax_data_required",
+        "blocker_type": "restricted_tax_data_required",
+        "placeholder_id": "anchor_opfte_minimum_wage"
+      },
+      {
+        "blocker": "public_aggregate_data_insufficient remains unresolved for anchor_opfte_minimum_wage",
+        "blocker_id": "anchor_opfte_minimum_wage_public_aggregate_data_insufficient",
+        "blocker_type": "public_aggregate_data_insufficient",
+        "placeholder_id": "anchor_opfte_minimum_wage"
+      },
+      {
+        "blocker": "restricted_tax_data_required remains unresolved for anchor_payg_public_tax_stats",
+        "blocker_id": "anchor_payg_public_tax_stats_restricted_tax_data_required",
+        "blocker_type": "restricted_tax_data_required",
+        "placeholder_id": "anchor_payg_public_tax_stats"
+      },
+      {
+        "blocker": "statistical_review_required remains unresolved for anchor_payg_public_tax_stats",
+        "blocker_id": "anchor_payg_public_tax_stats_statistical_review_required",
+        "blocker_type": "statistical_review_required",
+        "placeholder_id": "anchor_payg_public_tax_stats"
+      },
+      {
+        "blocker": "public_aggregate_data_insufficient remains unresolved for anchor_payg_public_tax_stats",
+        "blocker_id": "anchor_payg_public_tax_stats_public_aggregate_data_insufficient",
+        "blocker_type": "public_aggregate_data_insufficient",
+        "placeholder_id": "anchor_payg_public_tax_stats"
+      },
+      {
+        "blocker": "firm_confidential_data_required remains unresolved for anchor_payroll_tax_source_reference",
+        "blocker_id": "anchor_payroll_tax_source_reference_firm_confidential_data_required",
+        "blocker_type": "firm_confidential_data_required",
+        "placeholder_id": "anchor_payroll_tax_source_reference"
+      },
+      {
+        "blocker": "tax_review_required remains unresolved for anchor_payroll_tax_source_reference",
+        "blocker_id": "anchor_payroll_tax_source_reference_tax_review_required",
+        "blocker_type": "tax_review_required",
+        "placeholder_id": "anchor_payroll_tax_source_reference"
+      },
+      {
+        "blocker": "public_aggregate_data_insufficient remains unresolved for anchor_payroll_tax_source_reference",
+        "blocker_id": "anchor_payroll_tax_source_reference_public_aggregate_data_insufficient",
+        "blocker_type": "public_aggregate_data_insufficient",
+        "placeholder_id": "anchor_payroll_tax_source_reference"
+      },
+      {
+        "blocker": "statistical_review_required remains unresolved for anchor_qlc_minimum_wage",
+        "blocker_id": "anchor_qlc_minimum_wage_statistical_review_required",
+        "blocker_type": "statistical_review_required",
+        "placeholder_id": "anchor_qlc_minimum_wage"
+      },
+      {
+        "blocker": "tax_review_required remains unresolved for anchor_qlc_minimum_wage",
+        "blocker_id": "anchor_qlc_minimum_wage_tax_review_required",
+        "blocker_type": "tax_review_required",
+        "placeholder_id": "anchor_qlc_minimum_wage"
+      },
+      {
+        "blocker": "public_aggregate_data_insufficient remains unresolved for anchor_qlc_minimum_wage",
+        "blocker_id": "anchor_qlc_minimum_wage_public_aggregate_data_insufficient",
+        "blocker_type": "public_aggregate_data_insufficient",
+        "placeholder_id": "anchor_qlc_minimum_wage"
+      },
+      {
+        "blocker": "statistical_review_required remains unresolved for anchor_sector_schedule_source_reference",
+        "blocker_id": "anchor_sector_schedule_source_reference_statistical_review_required",
+        "blocker_type": "statistical_review_required",
+        "placeholder_id": "anchor_sector_schedule_source_reference"
+      },
+      {
+        "blocker": "legal_review_required remains unresolved for anchor_sector_schedule_source_reference",
+        "blocker_id": "anchor_sector_schedule_source_reference_legal_review_required",
+        "blocker_type": "legal_review_required",
+        "placeholder_id": "anchor_sector_schedule_source_reference"
+      },
+      {
+        "blocker": "public_aggregate_data_insufficient remains unresolved for anchor_sector_schedule_source_reference",
+        "blocker_id": "anchor_sector_schedule_source_reference_public_aggregate_data_insufficient",
+        "blocker_type": "public_aggregate_data_insufficient",
+        "placeholder_id": "anchor_sector_schedule_source_reference"
+      },
+      {
+        "blocker": "firm_confidential_data_required remains unresolved for anchor_super_guarantee_rate",
+        "blocker_id": "anchor_super_guarantee_rate_firm_confidential_data_required",
+        "blocker_type": "firm_confidential_data_required",
+        "placeholder_id": "anchor_super_guarantee_rate"
+      },
+      {
+        "blocker": "welfare_payment_records_required remains unresolved for anchor_super_guarantee_rate",
+        "blocker_id": "anchor_super_guarantee_rate_welfare_payment_records_required",
+        "blocker_type": "welfare_payment_records_required",
+        "placeholder_id": "anchor_super_guarantee_rate"
+      },
+      {
+        "blocker": "tax_review_required remains unresolved for anchor_super_guarantee_rate",
+        "blocker_id": "anchor_super_guarantee_rate_tax_review_required",
+        "blocker_type": "tax_review_required",
+        "placeholder_id": "anchor_super_guarantee_rate"
+      },
+      {
+        "blocker": "welfare_payment_records_required remains unresolved for anchor_transition_public_reference",
+        "blocker_id": "anchor_transition_public_reference_welfare_payment_records_required",
+        "blocker_type": "welfare_payment_records_required",
+        "placeholder_id": "anchor_transition_public_reference"
+      },
+      {
+        "blocker": "economic_review_required remains unresolved for anchor_transition_public_reference",
+        "blocker_id": "anchor_transition_public_reference_economic_review_required",
+        "blocker_type": "economic_review_required",
+        "placeholder_id": "anchor_transition_public_reference"
+      },
+      {
+        "blocker": "legal_review_required remains unresolved for anchor_transition_public_reference",
+        "blocker_id": "anchor_transition_public_reference_legal_review_required",
+        "blocker_type": "legal_review_required",
+        "placeholder_id": "anchor_transition_public_reference"
+      },
+      {
+        "blocker": "household_microdata_required remains unresolved for anchor_uncertainty_source_reference_only",
+        "blocker_id": "anchor_uncertainty_source_reference_only_household_microdata_required",
+        "blocker_type": "household_microdata_required",
+        "placeholder_id": "anchor_uncertainty_source_reference_only"
+      },
+      {
+        "blocker": "statistical_review_required remains unresolved for anchor_uncertainty_source_reference_only",
+        "blocker_id": "anchor_uncertainty_source_reference_only_statistical_review_required",
+        "blocker_type": "statistical_review_required",
+        "placeholder_id": "anchor_uncertainty_source_reference_only"
+      },
+      {
+        "blocker": "public_aggregate_data_insufficient remains unresolved for anchor_uncertainty_source_reference_only",
+        "blocker_id": "anchor_uncertainty_source_reference_only_public_aggregate_data_insufficient",
+        "blocker_type": "public_aggregate_data_insufficient",
+        "placeholder_id": "anchor_uncertainty_source_reference_only"
+      }
+    ],
+    "replacement_decisions": [
+      {
+        "actual_tax_payable_determined": false,
+        "calibration_completed": false,
+        "claim_level": "placeholder_narrowing_only",
+        "current_placeholder_status": "realistic_placeholder",
+        "decision_id": "decision_anchor_fiscal_public_aggregates",
+        "evidence_needed_before_calibration": [
+          "CARSF behavioural response method",
+          "revenue capture method",
+          "fiscal incidence method"
+        ],
+        "field_id": "fiscal_trajectory_assumptions",
+        "firm_level_liability_logic_modified": false,
+        "linked_public_value_ids": [
+          "ato_large_corporate_income_tax_received_2022_23",
+          "ato_large_corporate_entities_no_income_tax_percent_2022_23",
+          "ato_total_tax_revenue_collected_2022_23",
+          "ato_company_tax_revenue_2022_23",
+          "treasury_total_receipts_2025_26_estimate",
+          "treasury_taxation_receipts_2025_26_estimate"
+        ],
+        "linked_source_ids": [
+          "ato_corporate_tax_transparency_2022_23",
+          "ato_taxation_statistics_2022_23",
+          "treasury_budget_2026_27_bp1"
+        ],
+        "placeholder_id": "anchor_fiscal_public_aggregates",
+        "placeholder_name": "Fiscal public aggregate sanity anchor",
+        "remaining_blockers": [
+          "economic_review_required",
+          "restricted_tax_data_required",
+          "behavioural_elasticity_required"
+        ],
+        "replacement_confidence": "public_aggregate_bound_only",
+        "replacement_status": "narrowed_by_public_aggregate_anchor",
+        "requires_external_review": true,
+        "requires_restricted_data": true,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_can_now_be_said": "Public aggregate revenue values can bound fiscal-scale placeholder discussion.",
+        "what_changed": "Fiscal placeholders now link to loaded ATO and Budget receipt scale anchors.",
+        "what_did_not_change": "The fiscal trajectory remains a placeholder; no CARSF revenue pathway, fiscal incidence, Treasury modelling, or PBO costing is created.",
+        "what_must_not_be_claimed": [
+          "calibration completed",
+          "validation",
+          "model works",
+          "actual tax payable",
+          "official status",
+          "firm-level CARSF liability modification"
+        ]
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "calibration_completed": false,
+        "claim_level": "blocked_placeholder",
+        "current_placeholder_status": "realistic_placeholder",
+        "decision_id": "decision_anchor_help_source_reference",
+        "evidence_needed_before_calibration": [
+          "income distribution",
+          "individual repayment records",
+          "eligibility law review"
+        ],
+        "field_id": "help_hecs_repayment_pressure",
+        "firm_level_liability_logic_modified": false,
+        "linked_public_value_ids": [],
+        "linked_source_ids": [],
+        "placeholder_id": "anchor_help_source_reference",
+        "placeholder_name": "HELP threshold source-reference anchor",
+        "remaining_blockers": [
+          "welfare_payment_records_required",
+          "household_microdata_required",
+          "legal_review_required"
+        ],
+        "replacement_confidence": "blocked_by_required_restricted_data",
+        "replacement_status": "blocked_until_restricted_data",
+        "requires_external_review": true,
+        "requires_restricted_data": true,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_can_now_be_said": "The field remains blocked until safe public extraction and authorised welfare or repayment evidence are available.",
+        "what_changed": "No Build 31 public HELP value was loaded; the HELP threshold source remains future-only.",
+        "what_did_not_change": "HELP repayment pressure remains placeholder-only and cannot estimate individual repayment pressure.",
+        "what_must_not_be_claimed": [
+          "calibration completed",
+          "validation",
+          "model works",
+          "actual tax payable",
+          "official status",
+          "firm-level CARSF liability modification"
+        ]
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "calibration_completed": false,
+        "claim_level": "placeholder_narrowing_only",
+        "current_placeholder_status": "realistic_placeholder",
+        "decision_id": "decision_anchor_hle_minimum_wage",
+        "evidence_needed_before_calibration": [
+          "human labour equivalent method",
+          "occupation mix",
+          "worker-hour evidence"
+        ],
+        "field_id": "hle_assumptions",
+        "firm_level_liability_logic_modified": false,
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_national_minimum_wage_weekly_2025",
+          "fair_work_casual_loading_2025"
+        ],
+        "linked_source_ids": [
+          "fair_work_minimum_wage_2025"
+        ],
+        "placeholder_id": "anchor_hle_minimum_wage",
+        "placeholder_name": "HLE public wage anchor",
+        "remaining_blockers": [
+          "statistical_review_required",
+          "behavioural_elasticity_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "replacement_confidence": "public_aggregate_bound_only",
+        "replacement_status": "narrowed_by_public_aggregate_anchor",
+        "requires_external_review": true,
+        "requires_restricted_data": true,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_can_now_be_said": "Public wage and casual-loading anchors can narrow the visible labour-cost placeholder context.",
+        "what_changed": "The HLE labour-cost placeholder can be bounded by loaded wage and casual-loading public anchors.",
+        "what_did_not_change": "The HLE method remains unresolved and does not model actual human labour equivalents.",
+        "what_must_not_be_claimed": [
+          "calibration completed",
+          "validation",
+          "model works",
+          "actual tax payable",
+          "official status",
+          "firm-level CARSF liability modification"
+        ]
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "calibration_completed": false,
+        "claim_level": "public_aggregate_anchor_only",
+        "current_placeholder_status": "realistic_placeholder",
+        "decision_id": "decision_anchor_opfte_minimum_wage",
+        "evidence_needed_before_calibration": [
+          "occupation-specific hours",
+          "sector-specific labour requirements",
+          "schedule authority method"
+        ],
+        "field_id": "opfte_benchmarks",
+        "firm_level_liability_logic_modified": false,
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_national_minimum_wage_weekly_2025"
+        ],
+        "linked_source_ids": [
+          "fair_work_minimum_wage_2025"
+        ],
+        "placeholder_id": "anchor_opfte_minimum_wage",
+        "placeholder_name": "OPFTE public wage anchor",
+        "remaining_blockers": [
+          "statistical_review_required",
+          "restricted_tax_data_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "replacement_confidence": "direct_public_aggregate_anchor",
+        "replacement_status": "replaced_by_public_aggregate_anchor",
+        "requires_external_review": true,
+        "requires_restricted_data": true,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_can_now_be_said": "A public wage threshold is available as a direct aggregate anchor for OPFTE placeholder review.",
+        "what_changed": "The OPFTE wage placeholder is now linked to loaded public hourly and weekly national minimum wage anchors.",
+        "what_did_not_change": "OPFTE remains a placeholder benchmark; occupation mix, sector labour requirements, and schedule authority methods remain unresolved.",
+        "what_must_not_be_claimed": [
+          "calibration completed",
+          "validation",
+          "model works",
+          "actual tax payable",
+          "official status",
+          "firm-level CARSF liability modification"
+        ]
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "calibration_completed": false,
+        "claim_level": "contextual_anchor_only",
+        "current_placeholder_status": "realistic_placeholder",
+        "decision_id": "decision_anchor_payg_public_tax_stats",
+        "evidence_needed_before_calibration": [
+          "employment-tax pathway method",
+          "sector attribution",
+          "behavioural response method"
+        ],
+        "field_id": "payg_erosion_assumptions",
+        "firm_level_liability_logic_modified": false,
+        "linked_public_value_ids": [
+          "ato_total_tax_revenue_collected_2022_23",
+          "ato_company_tax_revenue_2022_23"
+        ],
+        "linked_source_ids": [
+          "ato_taxation_statistics_2022_23"
+        ],
+        "placeholder_id": "anchor_payg_public_tax_stats",
+        "placeholder_name": "PAYG public tax-statistics sanity anchor",
+        "remaining_blockers": [
+          "restricted_tax_data_required",
+          "statistical_review_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "replacement_confidence": "contextual_public_aggregate_only",
+        "replacement_status": "informed_by_public_aggregate_anchor",
+        "requires_external_review": true,
+        "requires_restricted_data": true,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_can_now_be_said": "Public tax aggregates provide context for PAYG erosion placeholder review.",
+        "what_changed": "PAYG erosion placeholders now reference loaded public tax aggregate context.",
+        "what_did_not_change": "Public tax totals do not identify AI-related PAYG erosion, taxpayer behaviour, or CARSF revenue.",
+        "what_must_not_be_claimed": [
+          "calibration completed",
+          "validation",
+          "model works",
+          "actual tax payable",
+          "official status",
+          "firm-level CARSF liability modification"
+        ]
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "calibration_completed": false,
+        "claim_level": "blocked_placeholder",
+        "current_placeholder_status": "realistic_placeholder",
+        "decision_id": "decision_anchor_payroll_tax_source_reference",
+        "evidence_needed_before_calibration": [
+          "jurisdiction-specific payroll base",
+          "employer records",
+          "tax-law review"
+        ],
+        "field_id": "state_payroll_tax_pressure",
+        "firm_level_liability_logic_modified": false,
+        "linked_public_value_ids": [],
+        "linked_source_ids": [],
+        "placeholder_id": "anchor_payroll_tax_source_reference",
+        "placeholder_name": "State payroll threshold source-reference anchor",
+        "remaining_blockers": [
+          "firm_confidential_data_required",
+          "tax_review_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "replacement_confidence": "external_review_required",
+        "replacement_status": "blocked_until_external_review",
+        "requires_external_review": true,
+        "requires_restricted_data": true,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_can_now_be_said": "The field remains a visible future replacement candidate only.",
+        "what_changed": "No Build 31 public state payroll threshold value was loaded; the source remains future-only.",
+        "what_did_not_change": "State payroll tax pressure remains placeholder-only and does not provide state tax advice or employer incidence.",
+        "what_must_not_be_claimed": [
+          "calibration completed",
+          "validation",
+          "model works",
+          "actual tax payable",
+          "official status",
+          "firm-level CARSF liability modification"
+        ]
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "calibration_completed": false,
+        "claim_level": "placeholder_narrowing_only",
+        "current_placeholder_status": "realistic_placeholder",
+        "decision_id": "decision_anchor_qlc_minimum_wage",
+        "evidence_needed_before_calibration": [
+          "qualified labour contribution method",
+          "task allocation evidence",
+          "sector labour mix"
+        ],
+        "field_id": "qlc_weights",
+        "firm_level_liability_logic_modified": false,
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_national_minimum_wage_weekly_2025"
+        ],
+        "linked_source_ids": [
+          "fair_work_minimum_wage_2025"
+        ],
+        "placeholder_id": "anchor_qlc_minimum_wage",
+        "placeholder_name": "QLC public wage anchor",
+        "remaining_blockers": [
+          "statistical_review_required",
+          "tax_review_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "replacement_confidence": "public_aggregate_bound_only",
+        "replacement_status": "narrowed_by_public_aggregate_anchor",
+        "requires_external_review": true,
+        "requires_restricted_data": true,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_can_now_be_said": "Public wage thresholds can narrow the QLC wage-anchor placeholder context.",
+        "what_changed": "The QLC wage component can be bounded by loaded public wage thresholds.",
+        "what_did_not_change": "QLC weighting remains a realistic placeholder and does not establish task allocation, sector labour mix, or tax treatment.",
+        "what_must_not_be_claimed": [
+          "calibration completed",
+          "validation",
+          "model works",
+          "actual tax payable",
+          "official status",
+          "firm-level CARSF liability modification"
+        ]
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "calibration_completed": false,
+        "claim_level": "contextual_anchor_only",
+        "current_placeholder_status": "realistic_placeholder",
+        "decision_id": "decision_anchor_sector_schedule_source_reference",
+        "evidence_needed_before_calibration": [
+          "ABS public aggregate table extraction",
+          "sector schedule authority method",
+          "mixed-unit attribution"
+        ],
+        "field_id": "sector_schedule_values",
+        "firm_level_liability_logic_modified": false,
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_casual_loading_2025"
+        ],
+        "linked_source_ids": [
+          "fair_work_minimum_wage_2025"
+        ],
+        "placeholder_id": "anchor_sector_schedule_source_reference",
+        "placeholder_name": "Sector schedule public source-reference anchor",
+        "remaining_blockers": [
+          "statistical_review_required",
+          "legal_review_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "replacement_confidence": "contextual_public_aggregate_only",
+        "replacement_status": "informed_by_public_aggregate_anchor",
+        "requires_external_review": true,
+        "requires_restricted_data": true,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_can_now_be_said": "Public wage anchors provide limited context for sector schedule placeholder review.",
+        "what_changed": "Loaded wage anchors give sector-schedule placeholders labour-cost context.",
+        "what_did_not_change": "ABS labour source remains not loaded and sector schedules are not official rankings, calibrated schedules, or legal attribution rules.",
+        "what_must_not_be_claimed": [
+          "calibration completed",
+          "validation",
+          "model works",
+          "actual tax payable",
+          "official status",
+          "firm-level CARSF liability modification"
+        ]
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "calibration_completed": false,
+        "claim_level": "public_aggregate_anchor_only",
+        "current_placeholder_status": "realistic_placeholder",
+        "decision_id": "decision_anchor_super_guarantee_rate",
+        "evidence_needed_before_calibration": [
+          "wage base",
+          "employer contribution records",
+          "payment interaction method"
+        ],
+        "field_id": "superannuation_contribution_pressure",
+        "firm_level_liability_logic_modified": false,
+        "linked_public_value_ids": [
+          "ato_super_guarantee_rate_2025_26"
+        ],
+        "linked_source_ids": [
+          "ato_super_guarantee_2025_26"
+        ],
+        "placeholder_id": "anchor_super_guarantee_rate",
+        "placeholder_name": "Superannuation Guarantee public setting anchor",
+        "remaining_blockers": [
+          "firm_confidential_data_required",
+          "welfare_payment_records_required",
+          "tax_review_required"
+        ],
+        "replacement_confidence": "direct_public_aggregate_anchor",
+        "replacement_status": "replaced_by_public_aggregate_anchor",
+        "requires_external_review": true,
+        "requires_restricted_data": true,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_can_now_be_said": "A public superannuation guarantee rate is available as a direct aggregate anchor for payment-interaction placeholder review.",
+        "what_changed": "The superannuation guarantee placeholder now links to a loaded public rate setting.",
+        "what_did_not_change": "The field does not estimate individual superannuation, payroll, employer behaviour, or ATO guidance.",
+        "what_must_not_be_claimed": [
+          "calibration completed",
+          "validation",
+          "model works",
+          "actual tax payable",
+          "official status",
+          "firm-level CARSF liability modification"
+        ]
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "calibration_completed": false,
+        "claim_level": "contextual_anchor_only",
+        "current_placeholder_status": "realistic_placeholder",
+        "decision_id": "decision_anchor_transition_public_reference",
+        "evidence_needed_before_calibration": [
+          "transition eligibility method",
+          "payment administrative data",
+          "fiscal design review"
+        ],
+        "field_id": "transition_payment_assumptions",
+        "firm_level_liability_logic_modified": false,
+        "linked_public_value_ids": [
+          "treasury_total_receipts_2025_26_estimate",
+          "treasury_taxation_receipts_2025_26_estimate",
+          "ato_super_guarantee_rate_2025_26"
+        ],
+        "linked_source_ids": [
+          "ato_super_guarantee_2025_26",
+          "treasury_budget_2026_27_bp1"
+        ],
+        "placeholder_id": "anchor_transition_public_reference",
+        "placeholder_name": "Transition funding public aggregate reference anchor",
+        "remaining_blockers": [
+          "welfare_payment_records_required",
+          "economic_review_required",
+          "legal_review_required"
+        ],
+        "replacement_confidence": "contextual_public_aggregate_only",
+        "replacement_status": "informed_by_public_aggregate_anchor",
+        "requires_external_review": true,
+        "requires_restricted_data": true,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_can_now_be_said": "Public receipt and threshold values can inform transition-funding placeholder discussion.",
+        "what_changed": "Transition funding placeholders now link to loaded fiscal receipt and superannuation context anchors.",
+        "what_did_not_change": "Transition eligibility, payment design, welfare effects, and fiscal sufficiency remain unresolved.",
+        "what_must_not_be_claimed": [
+          "calibration completed",
+          "validation",
+          "model works",
+          "actual tax payable",
+          "official status",
+          "firm-level CARSF liability modification"
+        ]
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "calibration_completed": false,
+        "claim_level": "cannot_support_replacement",
+        "current_placeholder_status": "realistic_placeholder",
+        "decision_id": "decision_anchor_uncertainty_source_reference_only",
+        "evidence_needed_before_calibration": [
+          "statistical sampling frame",
+          "confidence method",
+          "authorised microdata"
+        ],
+        "field_id": "uncertainty_range_assumptions",
+        "firm_level_liability_logic_modified": false,
+        "linked_public_value_ids": [
+          "ato_total_tax_revenue_collected_2022_23",
+          "ato_company_tax_revenue_2022_23"
+        ],
+        "linked_source_ids": [
+          "ato_taxation_statistics_2022_23"
+        ],
+        "placeholder_id": "anchor_uncertainty_source_reference_only",
+        "placeholder_name": "Uncertainty source-reference-only anchor",
+        "remaining_blockers": [
+          "household_microdata_required",
+          "statistical_review_required",
+          "public_aggregate_data_insufficient"
+        ],
+        "replacement_confidence": "blocked_by_required_restricted_data",
+        "replacement_status": "cannot_replace_with_public_aggregate_data",
+        "requires_external_review": true,
+        "requires_restricted_data": true,
+        "safe_for_repo_use": true,
+        "validation_claimed": false,
+        "what_can_now_be_said": "Public aggregates are structurally insufficient for uncertainty replacement without reviewed statistical methods.",
+        "what_changed": "Public aggregate tax values provide context but cannot replace uncertainty placeholders.",
+        "what_did_not_change": "Uncertainty ranges remain deterministic placeholders and are not confidence intervals or statistical estimates.",
+        "what_must_not_be_claimed": [
+          "calibration completed",
+          "validation",
+          "model works",
+          "actual tax payable",
+          "official status",
+          "firm-level CARSF liability modification"
+        ]
+      }
+    ],
+    "source_candidates_not_loaded": [
+      {
+        "loaded_status": "source_candidate_not_loaded",
+        "publisher": "Australian Government StudyAssist",
+        "reason_if_not_loaded": "Exact public threshold value was not safely recorded in local Build 31 source metadata.",
+        "source_id": "study_assist_help_thresholds_2025_26",
+        "source_name": "HELP repayment public threshold source",
+        "treated_as_loaded": false
+      },
+      {
+        "loaded_status": "source_candidate_not_loaded",
+        "publisher": "Queensland Revenue Office",
+        "reason_if_not_loaded": "Exact jurisdiction threshold value was not safely recorded in local Build 31 source metadata.",
+        "source_id": "qld_payroll_tax_threshold_2025_26",
+        "source_name": "Queensland payroll tax public threshold source",
+        "treated_as_loaded": false
+      },
+      {
+        "loaded_status": "source_candidate_not_loaded",
+        "publisher": "Australian Bureau of Statistics",
+        "reason_if_not_loaded": "Exact public aggregate table selection remains deferred until a later loader expansion.",
+        "source_id": "abs_labour_wage_aggregate_source_reference",
+        "source_name": "ABS labour aggregate source candidate",
+        "treated_as_loaded": false
+      }
+    ],
+    "status": "public_data_placeholder_replacement_map_only",
+    "summary": {
+      "actual_tax_payable_determined": false,
+      "calibration_completed": false,
+      "firm_confidential_data_loaded": false,
+      "firm_level_liability_logic_modified": false,
+      "forbidden_claim_findings": 0,
+      "household_microdata_loaded": false,
+      "loaded_public_values_used": 10,
+      "new_data_loaded": false,
+      "official_status_claimed": false,
+      "personal_data_loaded": false,
+      "placeholder_replacement_map_created": true,
+      "placeholders_blocked_until_external_review": 1,
+      "placeholders_blocked_until_restricted_data": 1,
+      "placeholders_cannot_replace_with_public_aggregate_data": 1,
+      "placeholders_informed_by_public_anchor": 3,
+      "placeholders_mapped": 11,
+      "placeholders_narrowed_by_public_anchor": 3,
+      "placeholders_replaced_by_public_anchor": 2,
+      "placeholders_still_placeholder_only": 0,
+      "public_source_candidates_treated_as_loaded": false,
+      "restricted_data_loaded": false,
+      "taxpayer_level_data_loaded": false,
+      "validation_claimed": false
+    }
+  },
+  "summary": {
+    "actual_tax_payable_determined": false,
+    "calibration_completed": false,
+    "firm_confidential_data_loaded": false,
+    "firm_level_liability_logic_modified": false,
+    "forbidden_claim_findings": 0,
+    "household_microdata_loaded": false,
+    "loaded_public_values_used": 10,
+    "new_data_loaded": false,
+    "official_status_claimed": false,
+    "personal_data_loaded": false,
+    "placeholder_replacement_map_created": true,
+    "placeholders_blocked_until_external_review": 1,
+    "placeholders_blocked_until_restricted_data": 1,
+    "placeholders_cannot_replace_with_public_aggregate_data": 1,
+    "placeholders_informed_by_public_anchor": 3,
+    "placeholders_mapped": 11,
+    "placeholders_narrowed_by_public_anchor": 3,
+    "placeholders_replaced_by_public_anchor": 2,
+    "placeholders_still_placeholder_only": 0,
+    "public_source_candidates_treated_as_loaded": false,
+    "restricted_data_loaded": false,
+    "taxpayer_level_data_loaded": false,
+    "validation_claimed": false
+  }
+}
