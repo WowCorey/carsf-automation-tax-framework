@@ -14,7 +14,7 @@ Current status: private research/prototype.
 
 All sector values, schedule values, examples, caps, Fiscal Replacement Value values, AAVA settings, and behavioural assumptions are placeholders unless explicitly labelled as confirmed baseline figures from official sources.
 
-The current Build 29.6 layer adds a red-team reviewer objections pack over the Build 26-29.5 public-data pilot and reviewer artefacts. It lists likely reviewer criticisms, explains why each concern is valid, maps affected artefacts, gives bounded project responses, preserves unresolved blockers, and identifies evidence needed to resolve each objection. It loads no new data, adds no public values, does not scrape sources, does not call APIs, does not externally verify source values, does not complete calibration, does not imply validation, does not determine actual tax payable, does not claim objections are resolved, and does not change firm-level liability.
+The current Build 31 layer adds a controlled public real aggregate-data loader over existing public-pilot source records. It records only source-located, public, aggregate-level, non-personal, non-confidential values that are safe for repository use, keeps source candidates not loaded where exact safe local values are unavailable, and writes parsed values plus digest metadata. It does not load restricted data, personal data, taxpayer-level data, firm-confidential data, or household microdata; it does not complete calibration, imply validation, prove the model works, determine actual tax payable, claim official status, or change firm-level liability.
 
 ## Repository Structure
 
@@ -22,10 +22,11 @@ The current Build 29.6 layer adds a red-team reviewer objections pack over the B
 - `release/v1_5_rc/` - V1.5 release-candidate pack with release notes, reviewer briefing, report map, calibration blockers, non-claim boundaries, external-review routing, and release manifest snapshot.
 - `release/v1_5_rc/attack_pack/` - V1.5 external review attack-pack documents for policy, technical, legal, tax, ATO methods, Treasury methods, privacy/secrecy, statistical, economic, welfare, Parliamentary Counsel, and hostile/red-team review.
 - `audits/` - review notes, responses, and red-team register.
-- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, repository guardrails, investment/incidence guardrails, national fiscal trajectory modelling, transition funding, payment interactions, synthetic distributional scenarios, synthetic household weighting, deterministic uncertainty ranges, reviewed scenario display-control classifications, metadata-only sector stress matrix review, synthetic behavioural response simulation, prototype administrative workflow routing, non-operative legislative architecture mapping, executive dashboard consolidation, release-candidate packaging, external review attack-pack validation, final RC integrity seal validation, real-data feasibility intake mapping, public aggregate-data pilot validation, public-data reviewer evidence mapping, public-data consistency auditing, source-locator pack generation, and red-team reviewer objection packaging.
+- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, repository guardrails, investment/incidence guardrails, national fiscal trajectory modelling, transition funding, payment interactions, synthetic distributional scenarios, synthetic household weighting, deterministic uncertainty ranges, reviewed scenario display-control classifications, metadata-only sector stress matrix review, synthetic behavioural response simulation, prototype administrative workflow routing, non-operative legislative architecture mapping, executive dashboard consolidation, release-candidate packaging, external review attack-pack validation, final RC integrity seal validation, real-data feasibility intake mapping, public aggregate-data pilot validation, public-data reviewer evidence mapping, public-data consistency auditing, source-locator pack generation, red-team reviewer objection packaging, and public real aggregate-data loader validation.
 - `model/tests/` - pytest coverage for formula bounds, caps, examples, and avoidance flags.
 - `data/` - source-category registry, placeholder policy, and public-pilot source-reference records. Restricted, confidential, taxpayer-level, firm-level confidential, person-level, household microdata, real evidence, and unauthorised data are not committed.
 - `data/public_pilot/` - small public aggregate/source-reference records, realistic-placeholder anchors, and digest metadata for the Build 27 public-data pilot.
+- `data/public_real/` - controlled Build 31 public aggregate source manifest, parsed values, raw-data staging note, and digest metadata. It must not contain restricted, personal, taxpayer-level, firm-confidential, household microdata, or confidential source material.
 - `data/mock_evidence/` - synthetic mock evidence packets for workflow testing only; no real evidence or personal data is committed.
 - `schedules/` - prototype sector schedules for automotive repair, logistics / warehousing, call centres / customer support, accounting / administration, retail self-checkout / fulfilment, and software / digital platforms.
 - `examples/` - illustrative placeholder firm cases.
@@ -48,6 +49,7 @@ The current Build 29.6 layer adds a red-team reviewer objections pack over the B
 - `docs/public_data_consistency_audit.md` - internal consistency audit and source-reconciliation notes for public-data pilot outputs.
 - `docs/source_locator_verification_pack.md` - source-locator card and manual-review checklist notes for public-data pilot outputs.
 - `docs/red_team_reviewer_objections.md` - red-team reviewer objection catalogue notes for public-data pilot and reviewer materials.
+- `docs/public_real_data_loader.md` - controlled real public aggregate-data loader notes and boundaries.
 - `simulator/` - Streamlit interface for policy review, tax model inputs, worked examples, red-team tests, and audit log.
 - `docs/` - data requirements, limitations, implementation notes, known risks, and V1.5 plan.
 
@@ -399,6 +401,21 @@ Generated red-team reviewer objections reports:
 - `reports/red_team_reviewer_objections.json`
 
 Red-team reviewer objection reports are objection catalogues only. No new data is loaded, no scraping or API call occurs, source values are not externally verified, objections being acknowledged does not mean they are resolved, partially mitigated does not mean solved, calibration has not been completed, public data does not prove the model works, and no actual tax payable, validation, approval, legal sufficiency, operational readiness, official status, ATO guidance, Treasury modelling, PBO costing, or firm-level liability change is created.
+
+Run the controlled public real aggregate-data loader:
+
+```powershell
+python scripts/run_public_real_data_loader.py
+```
+
+Generated public real-data loader reports and artefacts:
+
+- `reports/public_real_data_loader.md`
+- `reports/public_real_data_loader.json`
+- `data/public_real/parsed/public_real_aggregate_values.json`
+- `data/public_real/digests/public_real_data_digests.json`
+
+Public real-data loader outputs contain source-located public aggregate values only. They do not load restricted data, personal data, taxpayer-level data, firm-confidential data, household microdata, raw downloaded datasets, or confidential source material. Public aggregate data does not equal calibration, does not prove the model works, does not determine actual tax payable, does not create validation, official status, ATO guidance, Treasury modelling, PBO costing, legal sufficiency, operational readiness, or firm-level liability changes.
 
 ## Run the Simulator
 

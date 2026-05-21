@@ -1164,6 +1164,60 @@ layers:
       - official status
       - actual tax payable
       - readiness score
+  - layer_id: public_real_data_loader
+    layer_name: Public Real Aggregate Data Loader
+    layer_group: calibration
+    purpose: Controlled public aggregate-data loader over existing public-pilot source records, parsed values, source candidates not loaded, guardrails, and digest metadata.
+    primary_files:
+      - model/carsf/public_real_data_loader.py
+      - data/public_real/manifests/public_real_data_sources.yaml
+      - data/public_real/parsed/public_real_aggregate_values.json
+      - data/public_real/digests/public_real_data_digests.json
+      - scripts/run_public_real_data_loader.py
+      - simulator/pages/29_Public_Data_Evidence_Map.py
+      - docs/public_real_data_loader.md
+    primary_reports:
+      - reports/public_real_data_loader.md
+      - reports/public_real_data_loader.json
+    streamlit_pages:
+      - simulator/pages/29_Public_Data_Evidence_Map.py
+    status_labels:
+      - implemented_prototype
+      - generated_report_available
+      - public_aggregate_only
+      - calibration_required
+      - external_review_required
+      - not_for_real_world_use
+    non_claim_flags:
+      - not_calibrated
+      - not_validation
+      - not_actual_tax_payable
+      - not_operational_readiness
+      - not_official_status
+    calibration_blockers:
+      - Public aggregate data does not equal calibration.
+      - Source candidates remain not loaded where exact safe local values are unavailable.
+      - Restricted-data, legal, tax, Treasury, ATO-methods, statistical, economic, and welfare blockers remain.
+    external_review_blockers:
+      - External reviewer inspection remains required before any loaded public aggregate value can support calibration design.
+    blocker_explanation: Build 31 records controlled public aggregate values without loading restricted data or changing liability.
+    recommended_reviewer:
+      - technical_reviewer
+      - privacy_reviewer
+      - statistical_methods_reviewer
+      - treasury_methods_reviewer
+      - ato_methods_reviewer
+    read_order: 32
+    main_reason: Build 31 makes source-located public aggregate values reproducible from local repo files while preserving non-claim boundaries.
+    must_not_be_used_for:
+      - calibration completed
+      - validation
+      - official status
+      - actual tax payable
+      - ATO guidance
+      - Treasury modelling
+      - PBO costing
+      - readiness score
 report_entries:
   - report_path: reports/executive_dashboard.md
     layer_id: executive_dashboard
@@ -1583,6 +1637,22 @@ report_entries:
     must_not_be_used_for: [objections resolved, calibration completed, validation, official status, actual tax payable, readiness score]
     linked_streamlit_page: simulator/pages/29_Public_Data_Evidence_Map.py
     recommended_read_order: 31
+  - report_path: reports/public_real_data_loader.md
+    layer_id: public_real_data_loader
+    report_type: markdown
+    generated_by: scripts/run_public_real_data_loader.py
+    interpretation_warning: Public real aggregate-data loader only; public aggregate data does not equal calibration.
+    must_not_be_used_for: [calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score]
+    linked_streamlit_page: simulator/pages/29_Public_Data_Evidence_Map.py
+    recommended_read_order: 32
+  - report_path: reports/public_real_data_loader.json
+    layer_id: public_real_data_loader
+    report_type: json
+    generated_by: scripts/run_public_real_data_loader.py
+    interpretation_warning: Machine-readable public aggregate source registry, parsed values, source candidates, guardrails, and false flags only.
+    must_not_be_used_for: [calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score]
+    linked_streamlit_page: simulator/pages/29_Public_Data_Evidence_Map.py
+    recommended_read_order: 32
 forbidden_claims:
   - ready for government
   - ready for ATO

@@ -2,7 +2,7 @@
   "metadata": {
     "economic_validation_claimed": false,
     "firm_level_liability_logic_modified": false,
-    "generated_at": "2026-05-20T13:43:48+00:00",
+    "generated_at": "2026-05-21T00:28:58+00:00",
     "legal_sufficiency_claimed": false,
     "legislative_readiness_claimed": false,
     "non_claims": [
@@ -279,6 +279,27 @@
         "layer_id": "red_team_reviewer_objections",
         "main_reason": "Build 29.6 makes known public-data pilot weaknesses easier to inspect without resolving objections or claiming validation.",
         "review_needed": "calibration"
+      },
+      {
+        "blocker": "Public aggregate data does not equal calibration.",
+        "blocker_type": "calibration",
+        "layer_id": "public_real_data_loader",
+        "main_reason": "Build 31 records controlled public aggregate values without loading restricted data or changing liability.",
+        "review_needed": "calibration"
+      },
+      {
+        "blocker": "Source candidates remain not loaded where exact safe local values are unavailable.",
+        "blocker_type": "calibration",
+        "layer_id": "public_real_data_loader",
+        "main_reason": "Build 31 records controlled public aggregate values without loading restricted data or changing liability.",
+        "review_needed": "calibration"
+      },
+      {
+        "blocker": "Restricted-data, legal, tax, Treasury, ATO-methods, statistical, economic, and welfare blockers remain.",
+        "blocker_type": "calibration",
+        "layer_id": "public_real_data_loader",
+        "main_reason": "Build 31 records controlled public aggregate values without loading restricted data or changing liability.",
+        "review_needed": "calibration"
       }
     ],
     "external_review_blockers": [
@@ -497,6 +518,13 @@
         "blocker_type": "external_review",
         "layer_id": "red_team_reviewer_objections",
         "main_reason": "Build 29.6 makes known public-data pilot weaknesses easier to inspect without resolving objections or claiming validation.",
+        "review_needed": "external_review"
+      },
+      {
+        "blocker": "External reviewer inspection remains required before any loaded public aggregate value can support calibration design.",
+        "blocker_type": "external_review",
+        "layer_id": "public_real_data_loader",
+        "main_reason": "Build 31 records controlled public aggregate values without loading restricted data or changing liability.",
         "review_needed": "external_review"
       }
     ],
@@ -944,6 +972,36 @@
         "suggested_read_order": 10,
         "what_it_does_not_show": "behaviour prediction",
         "what_it_shows": "synthetic response pathways"
+      },
+      {
+        "exists": true,
+        "generated_by": "python scripts/run_public_real_data_loader.py",
+        "layer_id": "public_real_data_loader",
+        "optional": false,
+        "primary_non_claim": "public real aggregate-data loader only",
+        "recommended_reviewer": [
+          "technical_reviewer"
+        ],
+        "report_path": "reports/public_real_data_loader.json",
+        "suggested_read_order": 10,
+        "what_it_does_not_show": "calibration completed validation official status tax-payable use restricted data or proof that CARSF works",
+        "what_it_shows": "machine-readable public aggregate values source candidates guardrails summary flags and digest summary"
+      },
+      {
+        "exists": true,
+        "generated_by": "python scripts/run_public_real_data_loader.py",
+        "layer_id": "public_real_data_loader",
+        "optional": false,
+        "primary_non_claim": "public real aggregate-data loader only",
+        "recommended_reviewer": [
+          "technical_reviewer",
+          "privacy_reviewer",
+          "statistical_methods_reviewer"
+        ],
+        "report_path": "reports/public_real_data_loader.md",
+        "suggested_read_order": 10,
+        "what_it_does_not_show": "calibration completed validation official status tax-payable use restricted data or proof that CARSF works",
+        "what_it_shows": "controlled public aggregate source registry parsed values source candidates not loaded guardrails and digest metadata"
       },
       {
         "exists": true,
@@ -1871,6 +1929,26 @@
           "not_operational_readiness",
           "not_official_status"
         ]
+      },
+      {
+        "layer_id": "public_real_data_loader",
+        "must_not_be_used_for": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "ATO guidance",
+          "Treasury modelling",
+          "PBO costing",
+          "readiness score"
+        ],
+        "non_claim_flags": [
+          "not_calibrated",
+          "not_validation",
+          "not_actual_tax_payable",
+          "not_operational_readiness",
+          "not_official_status"
+        ]
       }
     ],
     "non_claims": [
@@ -2664,6 +2742,69 @@
         ],
         "streamlit_pages": [],
         "summary": "Small public aggregate/source-reference pilot that anchors realistic placeholders while keeping calibration incomplete and restricted data excluded."
+      },
+      {
+        "calibration_blockers": [
+          "Public aggregate data does not equal calibration.",
+          "Source candidates remain not loaded where exact safe local values are unavailable.",
+          "Restricted-data, legal, tax, Treasury, ATO-methods, statistical, economic, and welfare blockers remain."
+        ],
+        "external_review_blockers": [
+          "External reviewer inspection remains required before any loaded public aggregate value can support calibration design."
+        ],
+        "layer_group": "calibration",
+        "layer_id": "public_real_data_loader",
+        "layer_name": "Public Real Aggregate Data Loader",
+        "main_reason": "Build 31 records controlled public aggregate values without loading restricted data or changing liability.",
+        "must_not_be_used_for": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "ATO guidance",
+          "Treasury modelling",
+          "PBO costing",
+          "readiness score"
+        ],
+        "non_claim_flags": [
+          "not_calibrated",
+          "not_validation",
+          "not_actual_tax_payable",
+          "not_operational_readiness",
+          "not_official_status"
+        ],
+        "primary_files": [
+          "model/carsf/public_real_data_loader.py",
+          "data/public_real/manifests/public_real_data_sources.yaml",
+          "data/public_real/parsed/public_real_aggregate_values.json",
+          "data/public_real/digests/public_real_data_digests.json",
+          "scripts/run_public_real_data_loader.py",
+          "simulator/pages/29_Public_Data_Evidence_Map.py",
+          "docs/public_real_data_loader.md"
+        ],
+        "primary_reports": [
+          "reports/public_real_data_loader.md",
+          "reports/public_real_data_loader.json"
+        ],
+        "recommended_reviewer": [
+          "technical_reviewer",
+          "privacy_reviewer",
+          "statistical_methods_reviewer",
+          "treasury_methods_reviewer",
+          "ato_methods_reviewer"
+        ],
+        "status_labels": [
+          "prototype_only",
+          "generated_report_available",
+          "public_aggregate_only",
+          "calibration_required",
+          "external_review_required",
+          "not_for_real_world_use"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/29_Public_Data_Evidence_Map.py"
+        ],
+        "summary": "Controlled public aggregate-data loader over existing public-pilot source records, with parsed values, source candidates not loaded, guardrails, and digest metadata."
       },
       {
         "calibration_blockers": [
@@ -3707,16 +3848,16 @@
     "summary": {
       "economic_validation_claimed": false,
       "firm_level_liability_logic_modified": false,
-      "layers_requiring_ato_methods_review": 11,
-      "layers_requiring_calibration": 13,
-      "layers_requiring_economic_review": 11,
+      "layers_requiring_ato_methods_review": 12,
+      "layers_requiring_calibration": 14,
+      "layers_requiring_economic_review": 12,
       "layers_requiring_legal_review": 11,
       "layers_requiring_parliamentary_counsel_review": 3,
-      "layers_requiring_privacy_review": 17,
-      "layers_requiring_statistical_review": 13,
+      "layers_requiring_privacy_review": 18,
+      "layers_requiring_statistical_review": 14,
       "layers_requiring_tax_review": 8,
-      "layers_requiring_treasury_methods_review": 22,
-      "layers_requiring_welfare_review": 8,
+      "layers_requiring_treasury_methods_review": 23,
+      "layers_requiring_welfare_review": 9,
       "legal_sufficiency_claimed": false,
       "legislative_readiness_claimed": false,
       "non_claims": [
@@ -3732,11 +3873,11 @@
       "release_documents_missing": 0,
       "release_documents_present": 10,
       "reports_missing": 0,
-      "reports_present": 60,
+      "reports_present": 62,
       "statistical_validation_claimed": false,
-      "total_layers": 31,
+      "total_layers": 32,
       "total_release_documents": 10,
-      "total_reports_indexed": 60,
+      "total_reports_indexed": 62,
       "warnings": [
         "Release-candidate pack is packaging and review navigation only.",
         "No readiness score, official status, validation, legal sufficiency, operational readiness, or liability change is created."
@@ -3752,16 +3893,16 @@
   "summary": {
     "economic_validation_claimed": false,
     "firm_level_liability_logic_modified": false,
-    "layers_requiring_ato_methods_review": 11,
-    "layers_requiring_calibration": 13,
-    "layers_requiring_economic_review": 11,
+    "layers_requiring_ato_methods_review": 12,
+    "layers_requiring_calibration": 14,
+    "layers_requiring_economic_review": 12,
     "layers_requiring_legal_review": 11,
     "layers_requiring_parliamentary_counsel_review": 3,
-    "layers_requiring_privacy_review": 17,
-    "layers_requiring_statistical_review": 13,
+    "layers_requiring_privacy_review": 18,
+    "layers_requiring_statistical_review": 14,
     "layers_requiring_tax_review": 8,
-    "layers_requiring_treasury_methods_review": 22,
-    "layers_requiring_welfare_review": 8,
+    "layers_requiring_treasury_methods_review": 23,
+    "layers_requiring_welfare_review": 9,
     "legal_sufficiency_claimed": false,
     "legislative_readiness_claimed": false,
     "non_claims": [
@@ -3777,11 +3918,11 @@
     "release_documents_missing": 0,
     "release_documents_present": 10,
     "reports_missing": 0,
-    "reports_present": 60,
+    "reports_present": 62,
     "statistical_validation_claimed": false,
-    "total_layers": 31,
+    "total_layers": 32,
     "total_release_documents": 10,
-    "total_reports_indexed": 60,
+    "total_reports_indexed": 62,
     "warnings": [
       "Release-candidate pack is packaging and review navigation only.",
       "No readiness score, official status, validation, legal sufficiency, operational readiness, or liability change is created."

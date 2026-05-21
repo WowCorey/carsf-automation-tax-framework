@@ -57,6 +57,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Add a public data pilot consistency audit and source-reconciliation layer that checks existing Build 27 and Build 28 artefacts, digests, reports, dashboard source, non-claim boundaries, Fair Work wage arithmetic, and source-reference-only counting without loading new data, externally verifying source values, completing calibration, claiming validation, or changing liability.
 - Add a public data source-locator verification pack that packages existing Build 27-29 source URLs, locators, value notes, source-reference-only records, placeholder anchors, blocker cards, and manual-review checklists without loading new data, claiming external source verification, completing calibration, claiming validation, or changing liability.
 - Add a red-team reviewer objections pack that packages likely reviewer criticisms, valid concern explanations, bounded project responses, unresolved blockers, evidence needs, and must-not-claim boundaries without loading new data, resolving objections, completing calibration, claiming validation, or changing liability.
+- Add a controlled public real aggregate-data loader that records source-located public aggregate values already represented in the public-pilot chain, separates source candidates not loaded, writes parsed values and digest metadata, and preserves no-calibration, no-validation, no-tax-payable, no-official-status, and no-liability-change boundaries.
 
 ## Data Separation
 
@@ -102,6 +103,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 - Public data pilot reviewer evidence-map reports can be generated with `python scripts/run_public_data_evidence_map.py`.
 - Public data source-locator verification-pack reports can be generated with `python scripts/run_source_locator_verification_pack.py`.
 - Red-team reviewer objections reports can be generated with `python scripts/run_red_team_reviewer_objections.py`.
+- Public real aggregate-data loader reports can be generated with `python scripts/run_public_real_data_loader.py`.
 - Hybrid logistics stress variant demonstrates non-zero but intermediate NLTG.
 - V1.5 working paper contains TODO markers where policy drafting remains open.
 - Limitations document clearly blocks actual tax-payable claims.

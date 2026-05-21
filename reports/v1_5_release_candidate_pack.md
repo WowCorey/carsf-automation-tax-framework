@@ -1,6 +1,6 @@
 # CARSF V1.5 Release Candidate Pack
 
-Generated at: `2026-05-20T13:43:48+00:00`
+Generated at: `2026-05-21T00:28:58+00:00`
 
 ## A. Purpose
 
@@ -15,24 +15,24 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 
 ## C. Release Pack Contents
 
-- Total layers: 31
-- Total reports indexed: 60
-- Reports present: 60
+- Total layers: 32
+- Total reports indexed: 62
+- Reports present: 62
 - Reports missing: 0
 - Total release documents: 10
 - Release documents present: 10
 - Release documents missing: 0
 - Paper files checked: 6
 - Working paper updated: True
-- Layers requiring calibration: 13
+- Layers requiring calibration: 14
 - Layers requiring legal review: 11
 - Layers requiring tax review: 8
-- Layers requiring ATO methods review: 11
-- Layers requiring Treasury methods review: 22
-- Layers requiring privacy review: 17
-- Layers requiring statistical review: 13
-- Layers requiring economic review: 11
-- Layers requiring welfare review: 8
+- Layers requiring ATO methods review: 12
+- Layers requiring Treasury methods review: 23
+- Layers requiring privacy review: 18
+- Layers requiring statistical review: 14
+- Layers requiring economic review: 12
+- Layers requiring welfare review: 9
 - Layers requiring Parliamentary Counsel review: 3
 - real_data_used: False
 - readiness_score_created: False
@@ -71,6 +71,7 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | public_data_consistency_audit | Public Data Pilot Consistency Audit | calibration | Internal consistency and source-reconciliation audit over Build 27 and Build 28 public-data pilot artefacts without loading new data. | prototype_only, placeholder_only, generated_report_available, calibration_required, external_review_required, not_for_real_world_use | reports/public_data_consistency_audit.md, reports/public_data_consistency_audit.json | simulator/pages/29_Public_Data_Evidence_Map.py | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer | Build 29 checks internal consistency across source records, reports, digests, dashboard source, and non-claim boundaries. |
 | public_data_evidence_map | Public Data Pilot Reviewer Evidence Map | calibration | Reviewer-facing evidence map over Build 27 public-data pilot outputs without loading new data. | prototype_only, placeholder_only, generated_report_available, calibration_required, external_review_required, not_for_real_world_use | reports/public_data_evidence_map.md, reports/public_data_evidence_map.json | simulator/pages/29_Public_Data_Evidence_Map.py | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer | Build 28 makes the public-data pilot reviewable without adding data or calibration claims. |
 | public_data_pilot | Public Data Pilot and Placeholder Anchor Layer | calibration | Small public aggregate/source-reference pilot that anchors realistic placeholders while keeping calibration incomplete and restricted data excluded. | prototype_only, placeholder_only, generated_report_available, calibration_required, external_review_required, not_for_real_world_use | reports/public_data_pilot.md, reports/public_data_pilot.json | None | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer | Build 27 tests safe public aggregate intake and placeholder anchoring without real calibration. |
+| public_real_data_loader | Public Real Aggregate Data Loader | calibration | Controlled public aggregate-data loader over existing public-pilot source records, with parsed values, source candidates not loaded, guardrails, and digest metadata. | prototype_only, generated_report_available, public_aggregate_only, calibration_required, external_review_required, not_for_real_world_use | reports/public_real_data_loader.md, reports/public_real_data_loader.json | simulator/pages/29_Public_Data_Evidence_Map.py | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer | Build 31 records controlled public aggregate values without loading restricted data or changing liability. |
 | real_data_feasibility | Real Data Feasibility and Calibration Intake Map | calibration | Feasibility map for public aggregate data candidates, restricted-data requirements, realistic placeholders, forbidden repo data, module needs, and Build 27 pilot candidates. | prototype_only, placeholder_only, generated_report_available, calibration_required, external_review_required, not_for_real_world_use | reports/real_data_feasibility.md, reports/real_data_feasibility.json | None | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer | Build 26 maps feasibility only and does not load data. |
 | red_team_reviewer_objections | Red-Team Reviewer Objections Pack | calibration | Reviewer-facing objection catalogue for the Build 26-29.5 public-data pilot and reviewer materials without loading new data. | prototype_only, placeholder_only, generated_report_available, calibration_required, external_review_required, not_for_real_world_use | reports/red_team_reviewer_objections.md, reports/red_team_reviewer_objections.json | simulator/pages/29_Public_Data_Evidence_Map.py | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer, hostile_red_team_reviewer | Build 29.6 makes known public-data pilot weaknesses easier to inspect without resolving objections or claiming validation. |
 | release_candidate_pack | V1.5 Release Candidate Pack | overview | Working-paper and release-document package that consolidates current prototype reports, non-claims, calibration blockers, and reviewer routing. | prototype_only, generated_report_available, not_for_real_world_use | None | simulator/pages/25_Executive_Dashboard.py | policy_reviewer, technical_reviewer, hostile_red_team_reviewer | Release pack consolidates existing materials only. |
@@ -121,6 +122,8 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | reports/sector_stress_matrix.md | sector_stress_matrix | True | python scripts/run_sector_stress_matrix.py | metadata-only sector stress bands | does not show: real sector ranking | do-not-rank metadata only | economic_methods_reviewer, policy_reviewer | 9 |
 | reports/behavioural_response_simulation.json | behavioural_response | True | python scripts/run_behavioural_response_simulation.py | response pathway data | does not show: behaviour prediction | do-not-predict synthetic pathways only | technical_reviewer | 10 |
 | reports/behavioural_response_simulation.md | behavioural_response | True | python scripts/run_behavioural_response_simulation.py | synthetic response pathways | does not show: behaviour prediction | do-not-predict synthetic pathways only | legal_reviewer, tax_reviewer, hostile_red_team_reviewer | 10 |
+| reports/public_real_data_loader.json | public_real_data_loader | True | python scripts/run_public_real_data_loader.py | machine-readable public aggregate values source candidates guardrails summary flags and digest summary | does not show: calibration completed validation official status tax-payable use restricted data or proof that CARSF works | public real aggregate-data loader only | technical_reviewer | 10 |
+| reports/public_real_data_loader.md | public_real_data_loader | True | python scripts/run_public_real_data_loader.py | controlled public aggregate source registry parsed values source candidates not loaded guardrails and digest metadata | does not show: calibration completed validation official status tax-payable use restricted data or proof that CARSF works | public real aggregate-data loader only | technical_reviewer, privacy_reviewer, statistical_methods_reviewer | 10 |
 | reports/administrative_compliance_workflow.json | administrative_workflow | True | python scripts/run_administrative_compliance_workflow.py | workflow routing data | does not show: ATO enforcement or audit logic | no-enforcement workflow shell only | technical_reviewer | 11 |
 | reports/administrative_compliance_workflow.md | administrative_workflow | True | python scripts/run_administrative_compliance_workflow.py | synthetic workflow routing | does not show: ATO enforcement or audit logic | no-enforcement workflow shell only | ato_methods_reviewer, legal_reviewer, privacy_reviewer | 11 |
 | reports/legislative_architecture.json | legislative_architecture | True | python scripts/run_legislative_architecture.py | architecture skeleton data | does not show: operative law or legal sufficiency | non-operative skeleton only | technical_reviewer | 12 |
@@ -225,6 +228,9 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | source_locator_verification_pack | calibration | Calibration remains incomplete and restricted-data blockers remain. | calibration | Build 29.5 makes source-locator metadata easier to inspect without creating source verification or calibration claims. |
 | red_team_reviewer_objections | calibration | Objections being acknowledged does not mean they are resolved. | calibration | Build 29.6 makes known public-data pilot weaknesses easier to inspect without resolving objections or claiming validation. |
 | red_team_reviewer_objections | calibration | Calibration, legal, tax, statistical, economic, incidence, restricted-data, and dashboard interpretation limits remain visible. | calibration | Build 29.6 makes known public-data pilot weaknesses easier to inspect without resolving objections or claiming validation. |
+| public_real_data_loader | calibration | Public aggregate data does not equal calibration. | calibration | Build 31 records controlled public aggregate values without loading restricted data or changing liability. |
+| public_real_data_loader | calibration | Source candidates remain not loaded where exact safe local values are unavailable. | calibration | Build 31 records controlled public aggregate values without loading restricted data or changing liability. |
+| public_real_data_loader | calibration | Restricted-data, legal, tax, Treasury, ATO-methods, statistical, economic, and welfare blockers remain. | calibration | Build 31 records controlled public aggregate values without loading restricted data or changing liability. |
 
 ## J. External Review Blockers
 
@@ -261,6 +267,7 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | public_data_consistency_audit | external_review | Technical, privacy, statistical, legal, tax, Treasury-methods, and ATO-methods review remain required. | external_review | Build 29 checks internal consistency across source records, reports, digests, dashboard source, and non-claim boundaries. |
 | source_locator_verification_pack | external_review | Human reviewer inspection of source URLs, exact locators, value notes, units, periods, geography, and aggregate-only status remains required. | external_review | Build 29.5 makes source-locator metadata easier to inspect without creating source verification or calibration claims. |
 | red_team_reviewer_objections | external_review | External reviewer inspection remains required before any objection can be treated as addressed. | external_review | Build 29.6 makes known public-data pilot weaknesses easier to inspect without resolving objections or claiming validation. |
+| public_real_data_loader | external_review | External reviewer inspection remains required before any loaded public aggregate value can support calibration design. | external_review | Build 31 records controlled public aggregate values without loading restricted data or changing liability. |
 
 ## K. Guardrail / Safety Status
 

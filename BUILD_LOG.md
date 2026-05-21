@@ -1,5 +1,23 @@
 # Build Log
 
+## V1.5 Public Real Aggregate Data Loader
+
+Branch: `v1.5-public-data-expansion-real-aggregate-loader`
+
+Purpose of this build:
+
+- Add a controlled public real aggregate-data loader over existing public-pilot source records.
+- Record source-located, public, aggregate-level, non-personal, non-confidential values that are safe for repository use.
+- Keep source candidates not loaded where exact safe local values are unavailable.
+- Generate `reports/public_real_data_loader.md`, `reports/public_real_data_loader.json`, `data/public_real/parsed/public_real_aggregate_values.json`, and `data/public_real/digests/public_real_data_digests.json`.
+
+Limitations:
+
+- Public aggregate data only.
+- No restricted data, personal data, taxpayer-level data, firm-confidential data, household microdata, scraping, API calls, or raw downloaded datasets.
+- Not calibration, validation, legal advice, tax advice, ATO guidance, Treasury modelling, PBO costing, economic validation, welfare validation, statistical validation, operational readiness, legal sufficiency, official status, or actual-tax-payable evidence.
+- Does not modify firm-level CARSF liability.
+
 ## V1.5 Red-Team Reviewer Objections Pack
 
 Branch: `v1.5-red-team-reviewer-objections-pack`

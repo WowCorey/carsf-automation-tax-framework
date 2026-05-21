@@ -1,0 +1,866 @@
+{
+  "digest_manifest_summary": {
+    "digest_file_hashes_itself": false,
+    "digest_manifest_path": "data/public_real/digests/public_real_data_digests.json",
+    "digest_targets_total": 5,
+    "digests_written": 5
+  },
+  "metadata": {
+    "claim_level_values": [
+      "blocked_restricted_data",
+      "placeholder_anchor_only",
+      "real_public_aggregate_data",
+      "source_reference_only"
+    ],
+    "generated_at": "2026-05-21T00:29:02+00:00",
+    "guardrail_status_values": [
+      "blocked",
+      "clean",
+      "fail_closed",
+      "warning"
+    ],
+    "non_claims": [
+      "This loads real public aggregate data only. This does not load restricted data, personal data, taxpayer-level data, firm-confidential data, or household microdata. Public aggregate data does not equal calibration; calibration has not been completed. Public data does not prove the model works. This is not validation, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable and does not modify firm-level CARSF liability.",
+      "Loaded records are public aggregate/source-located values only and do not create a calibrated model.",
+      "Source candidates without safe local values remain source_candidate_not_loaded and are not counted as loaded data.",
+      "The loader only supports sanity-check context and placeholder replacement review; it does not replace legal, tax, Treasury, ATO, statistical, welfare, or economic review."
+    ],
+    "source_load_status_values": [
+      "blocked",
+      "loaded",
+      "rejected",
+      "source_candidate_not_loaded"
+    ],
+    "status": "public_real_aggregate_data_loader_only",
+    "value_review_status_values": [
+      "arithmetic_checked_only",
+      "loaded_from_public_aggregate_file",
+      "manually_recorded_public_source_value",
+      "not_loaded",
+      "source_locator_recorded_only"
+    ],
+    "version": "CARSF V1.5 prototype"
+  },
+  "public_real_data_loader": {
+    "future_build_32_requirements": [
+      "Map which placeholders can be narrowed using loaded public aggregate values.",
+      "Keep all replacement candidates labelled as public aggregate anchors until external review and calibration design are complete.",
+      "Preserve no-restricted-data, no-personal-data, no-taxpayer-data, no-firm-confidential-data, no-household-microdata, no-tax-payable, and no-liability-change boundaries."
+    ],
+    "guardrail_findings": [
+      {
+        "finding": "no restricted public-real paths found",
+        "finding_id": "public_real_restricted_path_scan",
+        "guardrail": "No restricted/private public-real paths are present.",
+        "status": "clean"
+      },
+      {
+        "finding": "no unapproved raw dataset-like files found",
+        "finding_id": "public_real_dataset_extension_scan",
+        "guardrail": "No raw dataset file types are committed in Build 31.",
+        "status": "clean"
+      }
+    ],
+    "loaded_public_aggregate_values": [
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "extraction_method": "manually_recorded_from_existing_public_pilot_locator",
+        "geography": "Australia",
+        "industry_or_sector": "all_award_free_national_minimum_wage_reference",
+        "metric_name": "National minimum wage hourly rate",
+        "must_not_infer": [
+          "not_calibration",
+          "not_validation",
+          "not_actual_tax_payable",
+          "not_official_status"
+        ],
+        "not_used_for": [
+          "calibration_completed",
+          "actual_tax_payable",
+          "legal_wage_sufficiency",
+          "validation"
+        ],
+        "period": "from 2025-07-01",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Fair Work Ombudsman",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "fair_work_minimum_wage_2025",
+        "source_locator": "Fair Work Ombudsman minimum wages fact sheet, national minimum wage paragraph for the 1 July 2025 rate and 38-hour week reference.",
+        "source_name": "National minimum wage public threshold",
+        "source_url": "https://www.fairwork.gov.au/how-we-will-help/templates-and-guides/fact-sheets/minimum-workplace-entitlements/minimum-wages",
+        "unit": "AUD_per_hour",
+        "used_for": [
+          "opfTE_hle_qlc_placeholder_anchor_context"
+        ],
+        "value": 24.95,
+        "value_id": "fair_work_national_minimum_wage_hourly_2025",
+        "value_review_status": "manually_recorded_public_source_value"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "extraction_method": "arithmetic_from_hourly_rate_times_38_hours",
+        "geography": "Australia",
+        "industry_or_sector": "all_award_free_national_minimum_wage_reference",
+        "metric_name": "National minimum wage weekly rate",
+        "must_not_infer": [
+          "not_calibration",
+          "not_validation",
+          "not_actual_tax_payable",
+          "not_official_status"
+        ],
+        "not_used_for": [
+          "calibration_completed",
+          "actual_tax_payable",
+          "legal_wage_sufficiency",
+          "validation"
+        ],
+        "period": "from 2025-07-01",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Fair Work Ombudsman",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "fair_work_minimum_wage_2025",
+        "source_locator": "Fair Work Ombudsman minimum wages fact sheet, national minimum wage paragraph for the 1 July 2025 rate and 38-hour week reference.",
+        "source_name": "National minimum wage public threshold",
+        "source_url": "https://www.fairwork.gov.au/how-we-will-help/templates-and-guides/fact-sheets/minimum-workplace-entitlements/minimum-wages",
+        "unit": "AUD_per_week",
+        "used_for": [
+          "opfTE_hle_qlc_placeholder_anchor_context"
+        ],
+        "value": 948.1,
+        "value_id": "fair_work_national_minimum_wage_weekly_2025",
+        "value_review_status": "arithmetic_checked_only"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "extraction_method": "manually_recorded_from_existing_public_pilot_locator",
+        "geography": "Australia",
+        "industry_or_sector": "all_award_free_national_minimum_wage_reference",
+        "metric_name": "Casual loading percentage",
+        "must_not_infer": [
+          "not_calibration",
+          "not_validation",
+          "not_actual_tax_payable",
+          "not_official_status"
+        ],
+        "not_used_for": [
+          "calibration_completed",
+          "actual_tax_payable",
+          "legal_wage_sufficiency",
+          "validation"
+        ],
+        "period": "from 2025-07-01",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Fair Work Ombudsman",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "fair_work_minimum_wage_2025",
+        "source_locator": "Fair Work Ombudsman minimum wages fact sheet, national minimum wage paragraph for the 1 July 2025 rate and 38-hour week reference.",
+        "source_name": "National minimum wage public threshold",
+        "source_url": "https://www.fairwork.gov.au/how-we-will-help/templates-and-guides/fact-sheets/minimum-workplace-entitlements/minimum-wages",
+        "unit": "percent",
+        "used_for": [
+          "labour_cost_placeholder_anchor_context"
+        ],
+        "value": 25.0,
+        "value_id": "fair_work_casual_loading_2025",
+        "value_review_status": "manually_recorded_public_source_value"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "extraction_method": "manually_recorded_from_existing_public_pilot_locator",
+        "geography": "Australia",
+        "industry_or_sector": "large_corporate_public_aggregate",
+        "metric_name": "Income tax received from large corporates",
+        "must_not_infer": [
+          "not_firm_liability",
+          "not_actual_tax_payable",
+          "not_compliance_score",
+          "not_calibration"
+        ],
+        "not_used_for": [
+          "firm_level_liability",
+          "actual_tax_payable",
+          "compliance_score",
+          "calibration_completed",
+          "ato_validation"
+        ],
+        "period": "2022-23",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Australian Taxation Office",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "ato_corporate_tax_transparency_2022_23",
+        "source_locator": "ATO media-centre article \"ATO collects $100 billion dollars from large corporates\", public summary of 2022-23 corporate tax transparency results.",
+        "source_name": "Corporate tax transparency public aggregate summary",
+        "source_url": "https://www.ato.gov.au/media-centre/ato-collects-100-billion-dollars-from-large-corporates",
+        "unit": "AUD_billion",
+        "used_for": [
+          "fiscal_trajectory_sanity_context",
+          "corporate_tax_scale_context"
+        ],
+        "value": 97.9,
+        "value_id": "ato_large_corporate_income_tax_received_2022_23",
+        "value_review_status": "manually_recorded_public_source_value"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "extraction_method": "manually_recorded_from_existing_public_pilot_locator",
+        "geography": "Australia",
+        "industry_or_sector": "large_corporate_public_aggregate",
+        "metric_name": "Entities with no income tax payable in public report",
+        "must_not_infer": [
+          "not_firm_liability",
+          "not_actual_tax_payable",
+          "not_compliance_score",
+          "not_calibration"
+        ],
+        "not_used_for": [
+          "firm_level_liability",
+          "actual_tax_payable",
+          "compliance_score",
+          "calibration_completed",
+          "ato_validation"
+        ],
+        "period": "2022-23",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Australian Taxation Office",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "ato_corporate_tax_transparency_2022_23",
+        "source_locator": "ATO media-centre article \"ATO collects $100 billion dollars from large corporates\", public summary of 2022-23 corporate tax transparency results.",
+        "source_name": "Corporate tax transparency public aggregate summary",
+        "source_url": "https://www.ato.gov.au/media-centre/ato-collects-100-billion-dollars-from-large-corporates",
+        "unit": "percent",
+        "used_for": [
+          "corporate_tax_scale_context"
+        ],
+        "value": 31.0,
+        "value_id": "ato_large_corporate_entities_no_income_tax_percent_2022_23",
+        "value_review_status": "manually_recorded_public_source_value"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "extraction_method": "manually_recorded_from_existing_public_pilot_locator",
+        "geography": "Australia",
+        "industry_or_sector": "taxation_statistics_public_aggregate",
+        "metric_name": "Total tax revenue collected",
+        "must_not_infer": [
+          "not_taxpayer_level_inference",
+          "not_actual_tax_payable",
+          "not_calibration",
+          "not_validation"
+        ],
+        "not_used_for": [
+          "taxpayer_level_inference",
+          "actual_tax_payable",
+          "calibration_completed",
+          "validation"
+        ],
+        "period": "2022-23",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Australian Taxation Office",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "ato_taxation_statistics_2022_23",
+        "source_locator": "ATO media-centre article \"2022-23 taxation statistics released\", public headline aggregate values.",
+        "source_name": "Taxation statistics public aggregate summary",
+        "source_url": "https://www.ato.gov.au/media-centre/2022-23-taxation-statistics-released",
+        "unit": "AUD_billion",
+        "used_for": [
+          "fiscal_trajectory_sanity_context"
+        ],
+        "value": 577.4,
+        "value_id": "ato_total_tax_revenue_collected_2022_23",
+        "value_review_status": "manually_recorded_public_source_value"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "extraction_method": "manually_recorded_from_existing_public_pilot_locator",
+        "geography": "Australia",
+        "industry_or_sector": "taxation_statistics_public_aggregate",
+        "metric_name": "Company tax revenue",
+        "must_not_infer": [
+          "not_taxpayer_level_inference",
+          "not_actual_tax_payable",
+          "not_calibration",
+          "not_validation"
+        ],
+        "not_used_for": [
+          "taxpayer_level_inference",
+          "actual_tax_payable",
+          "calibration_completed",
+          "validation"
+        ],
+        "period": "2022-23",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Australian Taxation Office",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "ato_taxation_statistics_2022_23",
+        "source_locator": "ATO media-centre article \"2022-23 taxation statistics released\", public headline aggregate values.",
+        "source_name": "Taxation statistics public aggregate summary",
+        "source_url": "https://www.ato.gov.au/media-centre/2022-23-taxation-statistics-released",
+        "unit": "AUD_billion",
+        "used_for": [
+          "fiscal_trajectory_sanity_context",
+          "corporate_tax_scale_context"
+        ],
+        "value": 140.0,
+        "value_id": "ato_company_tax_revenue_2022_23",
+        "value_review_status": "manually_recorded_public_source_value"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "extraction_method": "manually_recorded_from_existing_public_pilot_locator",
+        "geography": "Australia",
+        "industry_or_sector": "australian_government_general_government_receipts",
+        "metric_name": "Total receipts estimate",
+        "must_not_infer": [
+          "not_treasury_modelling",
+          "not_pbo_costing",
+          "not_calibration",
+          "not_actual_tax_payable"
+        ],
+        "not_used_for": [
+          "treasury_modelling",
+          "pbo_costing",
+          "calibration_completed",
+          "validation",
+          "actual_tax_payable"
+        ],
+        "period": "2025-26 estimate in Budget Paper No. 1 2026-27",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Australian Government Treasury",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "treasury_budget_2026_27_bp1",
+        "source_locator": "Budget Paper No. 1 2026-27, Statement 5 Revenue, Table 5.1 Australian Government general government receipts, 2025-26 estimates.",
+        "source_name": "Budget Paper No. 1 public receipts aggregate",
+        "source_url": "https://budget.gov.au/content/bp1/",
+        "unit": "AUD_billion",
+        "used_for": [
+          "fiscal_trajectory_sanity_context",
+          "transition_funding_context"
+        ],
+        "value": 759.8,
+        "value_id": "treasury_total_receipts_2025_26_estimate",
+        "value_review_status": "manually_recorded_public_source_value"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "extraction_method": "manually_recorded_from_existing_public_pilot_locator",
+        "geography": "Australia",
+        "industry_or_sector": "australian_government_general_government_receipts",
+        "metric_name": "Taxation receipts estimate",
+        "must_not_infer": [
+          "not_treasury_modelling",
+          "not_pbo_costing",
+          "not_calibration",
+          "not_actual_tax_payable"
+        ],
+        "not_used_for": [
+          "treasury_modelling",
+          "pbo_costing",
+          "calibration_completed",
+          "validation",
+          "actual_tax_payable"
+        ],
+        "period": "2025-26 estimate in Budget Paper No. 1 2026-27",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Australian Government Treasury",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "treasury_budget_2026_27_bp1",
+        "source_locator": "Budget Paper No. 1 2026-27, Statement 5 Revenue, Table 5.1 Australian Government general government receipts, 2025-26 estimates.",
+        "source_name": "Budget Paper No. 1 public receipts aggregate",
+        "source_url": "https://budget.gov.au/content/bp1/",
+        "unit": "AUD_billion",
+        "used_for": [
+          "fiscal_trajectory_sanity_context",
+          "transition_funding_context"
+        ],
+        "value": 699.5,
+        "value_id": "treasury_taxation_receipts_2025_26_estimate",
+        "value_review_status": "manually_recorded_public_source_value"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "extraction_method": "manually_recorded_from_existing_public_pilot_locator",
+        "geography": "Australia",
+        "industry_or_sector": "superannuation_guarantee_public_rate_setting",
+        "metric_name": "Super guarantee percentage",
+        "must_not_infer": [
+          "not_ato_guidance",
+          "not_individual_estimate",
+          "not_calibration",
+          "not_actual_tax_payable"
+        ],
+        "not_used_for": [
+          "ato_guidance",
+          "individual_estimate",
+          "calibration_completed",
+          "actual_tax_payable"
+        ],
+        "period": "from 2025-07-01",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Australian Taxation Office",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "ato_super_guarantee_2025_26",
+        "source_locator": "ATO key superannuation rates and thresholds page, super guarantee percentage table for the period from 1 July 2025.",
+        "source_name": "Super guarantee public rate setting",
+        "source_url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/super-guarantee",
+        "unit": "percent",
+        "used_for": [
+          "superannuation_contribution_pressure_placeholder_context"
+        ],
+        "value": 12.0,
+        "value_id": "ato_super_guarantee_rate_2025_26",
+        "value_review_status": "manually_recorded_public_source_value"
+      }
+    ],
+    "manifest_id": "carsf_v1_5_public_real_aggregate_data_loader",
+    "manifest_name": "CARSF V1.5 Public Real Aggregate Data Loader",
+    "non_claims": [
+      "This loads real public aggregate data only. This does not load restricted data, personal data, taxpayer-level data, firm-confidential data, or household microdata. Public aggregate data does not equal calibration; calibration has not been completed. Public data does not prove the model works. This is not validation, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable and does not modify firm-level CARSF liability.",
+      "Loaded records are public aggregate/source-located values only and do not create a calibrated model.",
+      "Source candidates without safe local values remain source_candidate_not_loaded and are not counted as loaded data.",
+      "The loader only supports sanity-check context and placeholder replacement review; it does not replace legal, tax, Treasury, ATO, statistical, welfare, or economic review."
+    ],
+    "source_candidates_not_loaded": [
+      {
+        "access_date": "2026-05-21",
+        "access_method": "existing_public_pilot_source_reference_no_external_call",
+        "allowed_use": [
+          "source_candidate_review"
+        ],
+        "firm_confidential_data": false,
+        "household_microdata": false,
+        "licence_or_access_note": "Public source reference only; no borrower records are committed.",
+        "loaded_status": "source_candidate_not_loaded",
+        "must_not_infer": [
+          "not_loaded_data",
+          "not_individual_repayment_estimate",
+          "not_calibration",
+          "not_tax_advice"
+        ],
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Australian Government StudyAssist",
+        "reason_if_not_loaded": "Exact public threshold value was not safely recorded in local Build 31 source metadata.",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_file_name": "not_loaded",
+        "source_file_type": "source_candidate_record_only",
+        "source_id": "study_assist_help_thresholds_2025_26",
+        "source_locator": "Source page only; exact threshold value is not loaded in Build 31.",
+        "source_name": "HELP repayment public threshold source",
+        "source_url": "https://www.studyassist.gov.au/paying-back-your-loan/loan-repayment",
+        "taxpayer_level_data": false
+      },
+      {
+        "access_date": "2026-05-21",
+        "access_method": "existing_public_pilot_source_reference_no_external_call",
+        "allowed_use": [
+          "source_candidate_review"
+        ],
+        "firm_confidential_data": false,
+        "household_microdata": false,
+        "licence_or_access_note": "Public source reference only; no employer or payroll records are committed.",
+        "loaded_status": "source_candidate_not_loaded",
+        "must_not_infer": [
+          "not_loaded_data",
+          "not_state_tax_advice",
+          "not_actual_tax_payable",
+          "not_calibration"
+        ],
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Queensland Revenue Office",
+        "reason_if_not_loaded": "Exact jurisdiction threshold value was not safely recorded in local Build 31 source metadata.",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_file_name": "not_loaded",
+        "source_file_type": "source_candidate_record_only",
+        "source_id": "qld_payroll_tax_threshold_2025_26",
+        "source_locator": "Source page only; exact threshold value is not loaded in Build 31.",
+        "source_name": "Queensland payroll tax public threshold source",
+        "source_url": "https://qro.qld.gov.au/payroll-tax/",
+        "taxpayer_level_data": false
+      },
+      {
+        "access_date": "2026-05-21",
+        "access_method": "existing_public_pilot_source_reference_no_external_call",
+        "allowed_use": [
+          "source_candidate_review"
+        ],
+        "firm_confidential_data": false,
+        "household_microdata": false,
+        "licence_or_access_note": "Public source reference only; no ABS table, DataLab product, or unit record is committed.",
+        "loaded_status": "source_candidate_not_loaded",
+        "must_not_infer": [
+          "not_loaded_data",
+          "not_population_estimate",
+          "not_sector_ranking",
+          "not_calibration"
+        ],
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Australian Bureau of Statistics",
+        "reason_if_not_loaded": "Exact public aggregate table selection remains deferred until a later loader expansion.",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_file_name": "not_loaded",
+        "source_file_type": "source_candidate_record_only",
+        "source_id": "abs_labour_wage_aggregate_source_reference",
+        "source_locator": "ABS labour statistics landing source only; no selected aggregate table is loaded in Build 31.",
+        "source_name": "ABS labour aggregate source candidate",
+        "source_url": "https://www.abs.gov.au/statistics/labour",
+        "taxpayer_level_data": false
+      }
+    ],
+    "sources": [
+      {
+        "access_date": "2026-05-21",
+        "access_method": "existing_public_pilot_source_metadata_no_external_call",
+        "allowed_use": [
+          "sanity_check_context",
+          "placeholder_anchor_review"
+        ],
+        "firm_confidential_data": false,
+        "household_microdata": false,
+        "licence_or_access_note": "Public webpage extract; raw page or full datasets are not committed.",
+        "loaded_status": "loaded",
+        "must_not_infer": [
+          "not_calibration",
+          "not_validation",
+          "not_legal_advice",
+          "not_tax_advice",
+          "not_tax_payable",
+          "not_official_status"
+        ],
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Fair Work Ombudsman",
+        "reason_if_not_loaded": "",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_file_name": "public_real_data_sources.yaml",
+        "source_file_type": "repo_manifest_manual_public_source_record",
+        "source_id": "fair_work_minimum_wage_2025",
+        "source_locator": "Fair Work Ombudsman minimum wages fact sheet, national minimum wage paragraph for the 1 July 2025 rate and 38-hour week reference.",
+        "source_name": "National minimum wage public threshold",
+        "source_url": "https://www.fairwork.gov.au/how-we-will-help/templates-and-guides/fact-sheets/minimum-workplace-entitlements/minimum-wages",
+        "taxpayer_level_data": false
+      },
+      {
+        "access_date": "2026-05-21",
+        "access_method": "existing_public_pilot_source_metadata_no_external_call",
+        "allowed_use": [
+          "sanity_check_context",
+          "fiscal_scale_context"
+        ],
+        "firm_confidential_data": false,
+        "household_microdata": false,
+        "licence_or_access_note": "Public ATO media-centre summary; no confidential tax material is committed.",
+        "loaded_status": "loaded",
+        "must_not_infer": [
+          "not_ato_validation",
+          "not_firm_liability",
+          "not_actual_tax_payable",
+          "not_calibration",
+          "not_official_status"
+        ],
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Australian Taxation Office",
+        "reason_if_not_loaded": "",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_file_name": "public_real_data_sources.yaml",
+        "source_file_type": "repo_manifest_manual_public_source_record",
+        "source_id": "ato_corporate_tax_transparency_2022_23",
+        "source_locator": "ATO media-centre article \"ATO collects $100 billion dollars from large corporates\", public summary of 2022-23 corporate tax transparency results.",
+        "source_name": "Corporate tax transparency public aggregate summary",
+        "source_url": "https://www.ato.gov.au/media-centre/ato-collects-100-billion-dollars-from-large-corporates",
+        "taxpayer_level_data": false
+      },
+      {
+        "access_date": "2026-05-21",
+        "access_method": "existing_public_pilot_source_metadata_no_external_call",
+        "allowed_use": [
+          "sanity_check_context",
+          "fiscal_scale_context"
+        ],
+        "firm_confidential_data": false,
+        "household_microdata": false,
+        "licence_or_access_note": "Public aggregate summary; no unit records are committed.",
+        "loaded_status": "loaded",
+        "must_not_infer": [
+          "not_taxpayer_level_inference",
+          "not_actual_tax_payable",
+          "not_calibration",
+          "not_validation"
+        ],
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Australian Taxation Office",
+        "reason_if_not_loaded": "",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_file_name": "public_real_data_sources.yaml",
+        "source_file_type": "repo_manifest_manual_public_source_record",
+        "source_id": "ato_taxation_statistics_2022_23",
+        "source_locator": "ATO media-centre article \"2022-23 taxation statistics released\", public headline aggregate values.",
+        "source_name": "Taxation statistics public aggregate summary",
+        "source_url": "https://www.ato.gov.au/media-centre/2022-23-taxation-statistics-released",
+        "taxpayer_level_data": false
+      },
+      {
+        "access_date": "2026-05-21",
+        "access_method": "existing_public_pilot_source_metadata_no_external_call",
+        "allowed_use": [
+          "sanity_check_context",
+          "fiscal_scale_context",
+          "transition_funding_context"
+        ],
+        "firm_confidential_data": false,
+        "household_microdata": false,
+        "licence_or_access_note": "Public budget paper reference; no confidential Treasury material is committed.",
+        "loaded_status": "loaded",
+        "must_not_infer": [
+          "not_treasury_modelling",
+          "not_pbo_costing",
+          "not_calibration",
+          "not_validation",
+          "not_official_status"
+        ],
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Australian Government Treasury",
+        "reason_if_not_loaded": "",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_file_name": "public_real_data_sources.yaml",
+        "source_file_type": "repo_manifest_manual_public_source_record",
+        "source_id": "treasury_budget_2026_27_bp1",
+        "source_locator": "Budget Paper No. 1 2026-27, Statement 5 Revenue, Table 5.1 Australian Government general government receipts, 2025-26 estimates.",
+        "source_name": "Budget Paper No. 1 public receipts aggregate",
+        "source_url": "https://budget.gov.au/content/bp1/",
+        "taxpayer_level_data": false
+      },
+      {
+        "access_date": "2026-05-21",
+        "access_method": "existing_public_pilot_source_metadata_no_external_call",
+        "allowed_use": [
+          "placeholder_anchor_review",
+          "payment_interaction_context"
+        ],
+        "firm_confidential_data": false,
+        "household_microdata": false,
+        "licence_or_access_note": "Public ATO threshold reference; no member or payroll records are committed.",
+        "loaded_status": "loaded",
+        "must_not_infer": [
+          "not_ato_guidance",
+          "not_individual_estimate",
+          "not_calibration",
+          "not_actual_tax_payable"
+        ],
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Australian Taxation Office",
+        "reason_if_not_loaded": "",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_file_name": "public_real_data_sources.yaml",
+        "source_file_type": "repo_manifest_manual_public_source_record",
+        "source_id": "ato_super_guarantee_2025_26",
+        "source_locator": "ATO key superannuation rates and thresholds page, super guarantee percentage table for the period from 1 July 2025.",
+        "source_name": "Super guarantee public rate setting",
+        "source_url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/super-guarantee",
+        "taxpayer_level_data": false
+      },
+      {
+        "access_date": "2026-05-21",
+        "access_method": "existing_public_pilot_source_reference_no_external_call",
+        "allowed_use": [
+          "source_candidate_review"
+        ],
+        "firm_confidential_data": false,
+        "household_microdata": false,
+        "licence_or_access_note": "Public source reference only; no borrower records are committed.",
+        "loaded_status": "source_candidate_not_loaded",
+        "must_not_infer": [
+          "not_loaded_data",
+          "not_individual_repayment_estimate",
+          "not_calibration",
+          "not_tax_advice"
+        ],
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Australian Government StudyAssist",
+        "reason_if_not_loaded": "Exact public threshold value was not safely recorded in local Build 31 source metadata.",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_file_name": "not_loaded",
+        "source_file_type": "source_candidate_record_only",
+        "source_id": "study_assist_help_thresholds_2025_26",
+        "source_locator": "Source page only; exact threshold value is not loaded in Build 31.",
+        "source_name": "HELP repayment public threshold source",
+        "source_url": "https://www.studyassist.gov.au/paying-back-your-loan/loan-repayment",
+        "taxpayer_level_data": false
+      },
+      {
+        "access_date": "2026-05-21",
+        "access_method": "existing_public_pilot_source_reference_no_external_call",
+        "allowed_use": [
+          "source_candidate_review"
+        ],
+        "firm_confidential_data": false,
+        "household_microdata": false,
+        "licence_or_access_note": "Public source reference only; no employer or payroll records are committed.",
+        "loaded_status": "source_candidate_not_loaded",
+        "must_not_infer": [
+          "not_loaded_data",
+          "not_state_tax_advice",
+          "not_actual_tax_payable",
+          "not_calibration"
+        ],
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Queensland Revenue Office",
+        "reason_if_not_loaded": "Exact jurisdiction threshold value was not safely recorded in local Build 31 source metadata.",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_file_name": "not_loaded",
+        "source_file_type": "source_candidate_record_only",
+        "source_id": "qld_payroll_tax_threshold_2025_26",
+        "source_locator": "Source page only; exact threshold value is not loaded in Build 31.",
+        "source_name": "Queensland payroll tax public threshold source",
+        "source_url": "https://qro.qld.gov.au/payroll-tax/",
+        "taxpayer_level_data": false
+      },
+      {
+        "access_date": "2026-05-21",
+        "access_method": "existing_public_pilot_source_reference_no_external_call",
+        "allowed_use": [
+          "source_candidate_review"
+        ],
+        "firm_confidential_data": false,
+        "household_microdata": false,
+        "licence_or_access_note": "Public source reference only; no ABS table, DataLab product, or unit record is committed.",
+        "loaded_status": "source_candidate_not_loaded",
+        "must_not_infer": [
+          "not_loaded_data",
+          "not_population_estimate",
+          "not_sector_ranking",
+          "not_calibration"
+        ],
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Australian Bureau of Statistics",
+        "reason_if_not_loaded": "Exact public aggregate table selection remains deferred until a later loader expansion.",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_file_name": "not_loaded",
+        "source_file_type": "source_candidate_record_only",
+        "source_id": "abs_labour_wage_aggregate_source_reference",
+        "source_locator": "ABS labour statistics landing source only; no selected aggregate table is loaded in Build 31.",
+        "source_name": "ABS labour aggregate source candidate",
+        "source_url": "https://www.abs.gov.au/statistics/labour",
+        "taxpayer_level_data": false
+      }
+    ],
+    "status": "public_real_aggregate_data_loader_only",
+    "summary": {
+      "actual_tax_payable_determined": false,
+      "blocked_sources": 0,
+      "calibration_completed": false,
+      "digest_targets_total": 5,
+      "digests_written": 5,
+      "firm_confidential_data_loaded": false,
+      "firm_level_liability_logic_modified": false,
+      "forbidden_claim_findings": 0,
+      "guardrail_fail_closed_findings": 0,
+      "guardrail_findings_total": 2,
+      "household_microdata_loaded": false,
+      "loaded_sources": 5,
+      "loaded_value_geographies_present": 10,
+      "loaded_value_periods_present": 10,
+      "loaded_value_units_present": 10,
+      "loaded_values_total": 10,
+      "new_public_aggregate_values_loaded": 10,
+      "official_status_claimed": false,
+      "personal_data_loaded": false,
+      "public_real_data_loader_created": true,
+      "real_public_aggregate_data_loaded": true,
+      "rejected_sources": 0,
+      "restricted_data_loaded": false,
+      "source_candidates_not_loaded": 3,
+      "taxpayer_level_data_loaded": false,
+      "total_sources": 8,
+      "validation_claimed": false,
+      "warnings": [
+        "Loaded values are public aggregate/source-located records only.",
+        "Source candidates without exact safe values remain not loaded.",
+        "Calibration, validation, model-proof, official-status, and tax-payable claims remain false."
+      ]
+    }
+  },
+  "summary": {
+    "actual_tax_payable_determined": false,
+    "blocked_sources": 0,
+    "calibration_completed": false,
+    "digest_targets_total": 5,
+    "digests_written": 5,
+    "firm_confidential_data_loaded": false,
+    "firm_level_liability_logic_modified": false,
+    "forbidden_claim_findings": 0,
+    "guardrail_fail_closed_findings": 0,
+    "guardrail_findings_total": 2,
+    "household_microdata_loaded": false,
+    "loaded_sources": 5,
+    "loaded_value_geographies_present": 10,
+    "loaded_value_periods_present": 10,
+    "loaded_value_units_present": 10,
+    "loaded_values_total": 10,
+    "new_public_aggregate_values_loaded": 10,
+    "official_status_claimed": false,
+    "personal_data_loaded": false,
+    "public_real_data_loader_created": true,
+    "real_public_aggregate_data_loaded": true,
+    "rejected_sources": 0,
+    "restricted_data_loaded": false,
+    "source_candidates_not_loaded": 3,
+    "taxpayer_level_data_loaded": false,
+    "total_sources": 8,
+    "validation_claimed": false,
+    "warnings": [
+      "Loaded values are public aggregate/source-located records only.",
+      "Source candidates without exact safe values remain not loaded.",
+      "Calibration, validation, model-proof, official-status, and tax-payable claims remain false."
+    ]
+  }
+}

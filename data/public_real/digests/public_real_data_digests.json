@@ -1,0 +1,41 @@
+{
+  "digests": [
+    {
+      "bytes": 20183,
+      "digest_scope": "public_real_data_loader_integrity_metadata_only",
+      "path": "data/public_real/manifests/public_real_data_sources.yaml",
+      "sha256": "12dcc4104e8db0cac043ebd516e54d00d33234b08e750145de93397523a206f6"
+    },
+    {
+      "bytes": 1018,
+      "digest_scope": "public_real_data_loader_integrity_metadata_only",
+      "path": "data/public_real/raw/README.md",
+      "sha256": "4d8e90d334f64bab74855f96bc7c0646cede5eded01353d90a7fc71b04fbc3c1"
+    },
+    {
+      "bytes": 17355,
+      "digest_scope": "public_real_data_loader_integrity_metadata_only",
+      "path": "data/public_real/parsed/public_real_aggregate_values.json",
+      "sha256": "3ee65df5e19051be94aa1315333f61431da898825cb2e2cb98b68a4e7b90ef76"
+    },
+    {
+      "bytes": 12146,
+      "digest_scope": "public_real_data_loader_integrity_metadata_only",
+      "path": "reports/public_real_data_loader.md",
+      "sha256": "1f4530daa1fd718c13bace7175181c7a83cbd161af3e4bbc4c71ff8dbb3d647d"
+    },
+    {
+      "bytes": 39834,
+      "digest_scope": "public_real_data_loader_integrity_metadata_only",
+      "path": "reports/public_real_data_loader.json",
+      "sha256": "3f8f71ff8f2abf73bf0ecab731ea4c9558449fb1d1ba8450ee626d747de10b3c"
+    }
+  ],
+  "metadata": {
+    "digest_file_hashes_itself": false,
+    "non_claims": [
+      "Public real-data loader digests are integrity metadata only.",
+      "They are not signatures, not external attestation, not approval, not validation, and not calibration."
+    ]
+  }
+}
