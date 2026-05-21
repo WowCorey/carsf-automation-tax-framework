@@ -104,3 +104,11 @@ Build 31 adds a controlled public real aggregate-data loader over existing publi
 This loads real public aggregate data only. It does not load restricted data, personal data, taxpayer-level data, firm-confidential data, household microdata, raw downloaded datasets, confidential source material, scrape public sources, or call external APIs. Public aggregate data does not equal calibration. Calibration has not been completed. Public data does not prove the model works. This is not validation, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable and does not modify firm-level CARSF liability.
 
 Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-31 are included in a later sealed RC.
+
+## Build 32 Public Data Placeholder Replacement Map Addendum
+
+Build 32 adds a public data placeholder replacement map over the Build 31 loaded public aggregate values. It classifies existing realistic placeholders as replaced by public aggregate anchor, narrowed by public aggregate anchor, informed by public aggregate anchor, still placeholder-only, blocked until restricted data, blocked until external review, or unable to be replaced by public aggregate data.
+
+No new data is loaded by Build 32. Public aggregate data can anchor or narrow some placeholders, but it does not calibrate the model. Replaced by public aggregate anchor does not mean validated. Narrowed by public aggregate anchor does not mean statistically estimated. Informed by public aggregate anchor does not mean representative. Placeholder-only items remain placeholders and restricted-data blockers remain blockers. This is not validation, legal advice, tax advice, ATO guidance, Treasury modelling, PBO costing, economic validation, welfare validation, statistical validation, operational readiness, legal sufficiency, official status, actual tax payable, or firm-level CARSF liability modification.
+
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-32 are included in a later sealed RC.

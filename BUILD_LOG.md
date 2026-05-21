@@ -1058,3 +1058,27 @@ Limitations:
 - No new data is loaded, calibration has not been completed, public data does not prove the model works, realistic placeholders remain placeholders, source references are not loaded datasets, and restricted-data requirements are not data access.
 - The build does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab microdata, HILDA microdata, DSS / Services Australia records, ATO taxpayer records, confidential Treasury/PBO material, restricted government data, real evidence, or unauthorised data.
 - It does not claim validation, approval, operational readiness, legal sufficiency, official status, ATO guidance, Treasury modelling, PBO costing, or modify firm-level CARSF liability logic.
+
+## V1.5 Public Data Placeholder Replacement Map
+
+Branch: `v1.5-public-data-placeholder-replacement-map`
+
+Baseline: Build 31 public real aggregate-data loader merged into `main`.
+
+Purpose of this build:
+
+- Add a public data placeholder replacement map for CARSF V1.5.
+- Use Build 31 public aggregate values only to classify existing realistic placeholders as replaced by public aggregate anchor, narrowed by public aggregate anchor, informed by public aggregate anchor, still placeholder-only, blocked until restricted data, blocked until external review, or unable to be replaced by public aggregate data.
+- Add manifest, model validation, generated reports, tests, docs, Streamlit dashboard section, and CI runner without loading new data.
+
+Reports generated:
+
+- `reports/public_data_placeholder_replacement_map.json`
+- `reports/public_data_placeholder_replacement_map.md`
+
+Limitations:
+
+- The placeholder replacement map loads no new data.
+- Public aggregate data does not equal calibration, replacement by public aggregate anchor does not mean validation, and narrowing by public aggregate anchor does not mean statistical estimation.
+- The build does not determine actual tax payable, does not use restricted, personal, taxpayer-level, firm-confidential, household microdata, ABS DataLab, HILDA, DSS / Services Australia, ATO taxpayer, confidential Treasury / PBO, bank, payroll-document, pay-record, or tax-file-identifier data.
+- It does not claim validation, approval, operational readiness, legal sufficiency, official status, ATO guidance, Treasury modelling, PBO costing, or modify firm-level CARSF liability logic.

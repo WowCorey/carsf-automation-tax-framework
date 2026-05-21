@@ -57,3 +57,6 @@ Build 29.6 adds an optional "Red-Team Reviewer Objections" section to the dashbo
 Build 31 adds an optional "Real Public Aggregate Data Loader" section to the dashboard when `reports/public_real_data_loader.json` exists. It displays loaded public aggregate value counts, source candidates not loaded, guardrail status, loaded values, and source candidates. Public aggregate data does not equal calibration, validation, proof that the model works, actual tax payable, official status, or firm-level liability evidence.
 
 Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-31 are included in a later sealed RC.
+## Build 32 Dashboard Follow-On
+
+The evidence-map dashboard now includes an optional public data placeholder replacement map section. It loads `reports/public_data_placeholder_replacement_map.json` only. The section does not load new data, does not show a readiness score, calibration score, validation score, tax payable estimate, or liability estimate, and does not convert public aggregate anchors into calibration or validation.

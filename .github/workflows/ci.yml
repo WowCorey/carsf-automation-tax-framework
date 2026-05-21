@@ -92,6 +92,9 @@ jobs:
       - name: Run public real data loader
         run: python scripts/run_public_real_data_loader.py
 
+      - name: Run public data placeholder replacement map
+        run: python scripts/run_public_data_placeholder_replacement_map.py
+
       - name: Run mock evidence workflow
         run: python scripts/run_evidence_workflow.py
 

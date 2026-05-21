@@ -47,3 +47,6 @@ Build 29.6 uses the consistency audit as one input to create likely reviewer obj
 Build 31 adds a controlled public real aggregate-data loader over source-located values already represented in the public-pilot chain. It does not complete calibration, validate CARSF, determine actual tax payable, create official status, or modify firm-level CARSF liability.
 
 Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-31 are included in a later sealed RC.
+## Build 32 Consistency Boundary
+
+Build 32 consumes the Build 31 public aggregate values and existing placeholder anchors to create replacement decisions. It does not add new values and does not turn the Build 29 consistency audit into external source verification. Public aggregate replacement, narrowing, or context labels remain internal mapping labels only and do not complete calibration, validate CARSF, determine actual tax payable, create official status, or modify firm-level CARSF liability.

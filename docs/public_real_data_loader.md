@@ -34,4 +34,6 @@ python scripts/run_public_real_data_loader.py
 
 The loader is not a calibrated model. It does not externally verify source values, does not scrape sources, does not call external APIs, does not determine actual tax payable, does not create official status, and does not change firm-level CARSF liability.
 
-Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-31 are included in a later sealed RC.
+Build 32 uses these loaded public aggregate values to map placeholder replacement, narrowing, and context decisions. It loads no new data and does not convert public aggregate anchors into calibration, validation, actual tax payable, official status, legal sufficiency, Treasury modelling, ATO guidance, PBO costing, or firm-level CARSF liability logic.
+
+Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-32 are included in a later sealed RC.

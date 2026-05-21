@@ -98,3 +98,8 @@
 - Public source references may become stale, and licence/access notes may be incomplete without source-owner, legal, tax, privacy, statistical, Treasury-methods, and ATO-methods review.
 - Build 25 sealed the previous RC state. Builds 26-31 add new artefacts; if those artefacts become part of a later sealed RC, the final RC integrity seal must be regenerated rather than described as already covering them.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.
+## Build 32 Public Data Placeholder Replacement Risks
+
+The public data placeholder replacement map can make some placeholders look more settled than they are. It loads no new data and does not complete calibration. Public aggregate anchors can replace, narrow, or inform placeholders only as mapping labels; replacement by public aggregate anchor does not mean validation, narrowing does not mean statistical estimation, and context does not mean representativeness. Restricted-data, legal, tax, Treasury, ATO-methods, statistical, economic, welfare, and hostile-review blockers remain.
+
+Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-32 are included in a later sealed RC.

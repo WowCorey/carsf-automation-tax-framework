@@ -417,6 +417,13 @@ Generated public real-data loader reports and artefacts:
 
 Public real-data loader outputs contain source-located public aggregate values only. They do not load restricted data, personal data, taxpayer-level data, firm-confidential data, household microdata, raw downloaded datasets, or confidential source material. Public aggregate data does not equal calibration, does not prove the model works, does not determine actual tax payable, does not create validation, official status, ATO guidance, Treasury modelling, PBO costing, legal sufficiency, operational readiness, or firm-level liability changes.
 
+Generated public data placeholder replacement-map reports:
+
+- `reports/public_data_placeholder_replacement_map.md`
+- `reports/public_data_placeholder_replacement_map.json`
+
+The placeholder replacement map uses Build 31 public aggregate values to classify existing realistic placeholders as public aggregate anchors, bounds, context, still-blocked placeholders, restricted-data blockers, or external-review blockers. It loads no new data. Public aggregate data does not equal calibration, replacement by public aggregate anchor does not mean validation, narrowing by public aggregate anchor does not mean statistical estimation, and the map does not determine actual tax payable, create official status, or modify firm-level CARSF liability.
+
 ## Run the Simulator
 
 ```powershell
@@ -459,6 +466,7 @@ V1.5 is not just an examples update. It is V1.4 plus two prototype sector schedu
 - define a calibration shell and data source registry without collecting real data;
 - map real-data feasibility, restricted-data needs, realistic placeholder provenance, forbidden repo data, and public-data pilot candidates without loading datasets or completing calibration;
 - load a small public aggregate-data pilot and realistic-placeholder anchor layer for sanity-check-only and placeholder-anchor-only review without completing calibration, claiming validation, determining actual tax payable, or changing firm-level liability;
+- map loaded public aggregate values to existing placeholder anchors without loading new data, completing calibration, claiming validation, determining actual tax payable, or changing firm-level liability;
 - identify open-source AI and R&D Tax Incentive interaction questions without overclaiming.
 
 ## Not Yet Solved
@@ -486,3 +494,4 @@ Legislative architecture outputs are non-operative mapping outputs. They are not
 Executive dashboard outputs are navigation and index outputs only. They are not operational readiness, not legal sufficiency, not legislative readiness, not a readiness score, not a maturity score, not an official review pathway, not validation, and not a basis for determining actual tax payable.
 Real-data feasibility outputs are intake maps only. Build 26 did not load public data, restricted data, taxpayer data, firm-level confidential data, household microdata, ABS DataLab microdata, HILDA microdata, DSS / Services Australia records, ATO taxpayer records, or confidential Treasury/PBO material. They do not complete calibration, validate the model, or modify firm-level CARSF liability.
 Public-data pilot outputs are sanity-check-only and placeholder-anchor-only records. They may carry small public aggregate extracts and source references, but they are not calibration, do not prove the model works, do not determine actual tax payable, do not use restricted or confidential data, and do not modify firm-level CARSF liability.
+Public data placeholder replacement-map outputs load no new data. Public aggregate anchors can replace, narrow, or inform placeholders only as mapping labels; they do not complete calibration, prove the model works, determine actual tax payable, validate CARSF, create official status, or modify firm-level liability.

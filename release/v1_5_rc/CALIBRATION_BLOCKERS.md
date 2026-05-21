@@ -44,8 +44,10 @@ Build 29.6 packages likely reviewer objections and honest responses only. It loa
 
 Build 31 records source-located public aggregate values only. It does not load restricted data, personal data, taxpayer-level data, firm-confidential data, household microdata, raw downloaded datasets, or confidential source material. Public aggregate data does not equal calibration, does not prove the model works, does not determine actual tax payable, and does not remove restricted-data, legal, tax, Treasury, ATO, statistical, economic, welfare, or Parliamentary Counsel blockers.
 
+Build 32 maps Build 31 public aggregate values to existing realistic placeholders only. It does not load new data, complete calibration, validate CARSF, prove the model works, determine actual tax payable, modify firm-level liability logic, or remove restricted-data, legal, tax, Treasury, ATO, statistical, economic, welfare, or Parliamentary Counsel blockers. Replaced by public aggregate anchor does not mean validated, and narrowed by public aggregate anchor does not mean statistically estimated.
+
 ## Final RC Integrity Seal Note
 
 The final RC integrity seal checks that blocker documents, reports, manifests, attack-pack documents, non-claim boundaries, CI expectations, and guardrail expectations remain visible. It does not resolve any blocker and is not approval, validation, external review completion, legal sufficiency, operational readiness, legislative readiness, official status, a readiness score, a maturity score, or firm-level liability modification.
 
-Build 25 sealed the previous RC state. If Builds 26-31 are included in a later sealed RC, the integrity seal must be regenerated for that later state.
+Build 25 sealed the previous RC state. If Builds 26-32 are included in a later sealed RC, the integrity seal must be regenerated for that later state.

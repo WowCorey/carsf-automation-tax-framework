@@ -44,3 +44,6 @@ The existing public-data evidence dashboard can display the red-team objection s
 The pack is intentionally an objections catalogue, not a defence brief. It does not resolve objections and does not add evidence. A future reviewer handoff pack can use it to show external reviewers what to inspect first and what remains unresolved.
 
 Build 31 adds a controlled public real aggregate-data loader over existing source-located public-pilot values. It does not resolve the objections in this pack. Public aggregate data does not equal calibration, does not prove the model works, does not determine actual tax payable, does not create official status, and does not modify firm-level CARSF liability.
+## Build 32 Placeholder Replacement Objection Boundary
+
+Build 32 may make public aggregate anchors look more concrete, but it remains a placeholder replacement map only. No new data is loaded, no objection is resolved, public aggregate replacement does not mean validation, public aggregate narrowing does not mean statistical estimation, and the map does not complete calibration, prove the model works, determine actual tax payable, create official status, or modify firm-level CARSF liability.

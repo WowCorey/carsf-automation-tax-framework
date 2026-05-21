@@ -55,3 +55,6 @@ Build 29.6 adds a red-team reviewer objections pack over existing Build 26-29.5 
 Build 31 adds a controlled public real aggregate-data loader over existing source-located public-pilot values. It records parsed public aggregate values and digest metadata only. Public aggregate data does not equal calibration, does not prove the model works, does not determine actual tax payable, and does not modify firm-level CARSF liability.
 
 Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-31 are included in a later sealed RC.
+## Build 32 Placeholder Replacement Follow-On
+
+Build 32 maps Build 31 loaded public aggregate values back to the public-pilot placeholder anchors. It loads no new data and does not change the Build 27 boundary: public aggregate values can support anchor, bound, or context labels only. They do not complete calibration, validate CARSF, prove the model works, determine actual tax payable, create official status, or modify firm-level CARSF liability.

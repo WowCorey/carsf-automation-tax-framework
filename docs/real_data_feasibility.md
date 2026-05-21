@@ -50,3 +50,6 @@ Build 31 adds `data/public_real/`, `model/carsf/public_real_data_loader.py`, `sc
 The Build 31 loader records source-located public aggregate values only. It does not load restricted data, personal data, taxpayer-level data, firm-confidential data, household microdata, raw downloaded datasets, or confidential source material. Public aggregate data does not equal calibration, does not prove the model works, does not determine actual tax payable, and does not modify firm-level CARSF liability.
 
 Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-31 are included in a later sealed RC.
+## Build 32 Feasibility Follow-On
+
+Build 32 maps Build 31 public aggregate values to realistic placeholders, but it remains feasibility and placeholder-mapping work only. No new data is loaded, source candidates not loaded remain future-only, public aggregate anchors do not complete calibration, and the map does not claim validation, actual tax payable, official status, legal sufficiency, ATO guidance, Treasury modelling, PBO costing, or firm-level CARSF liability changes.
