@@ -89,6 +89,9 @@ jobs:
       - name: Run red-team reviewer objections
         run: python scripts/run_red_team_reviewer_objections.py
 
+      - name: Run public real data loader
+        run: python scripts/run_public_real_data_loader.py
+
       - name: Run mock evidence workflow
         run: python scripts/run_evidence_workflow.py
 

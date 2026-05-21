@@ -96,3 +96,11 @@ Build 29.6 adds a red-team reviewer objections pack for the existing Build 26-29
 No new data is loaded by Build 29.6. It does not add public values, externally verify source values, scrape public sources, call APIs, resolve objections, complete calibration, prove the model works, determine actual tax payable, claim validation, approval, legal sufficiency, operational readiness, official status, ATO guidance, Treasury modelling, PBO costing, or modify firm-level CARSF liability. Objections being acknowledged does not mean they are resolved, and partially mitigated does not mean solved.
 
 Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-29.6 are included in a later sealed RC.
+
+## Build 31 Public Real Aggregate Data Loader Addendum
+
+Build 31 adds a controlled public real aggregate-data loader over existing public-pilot source records. It records source-located, public, aggregate-level, non-personal, non-confidential values that are safe for repository use, writes parsed values and digest metadata, and keeps source candidates not loaded where exact safe local values are unavailable.
+
+This loads real public aggregate data only. It does not load restricted data, personal data, taxpayer-level data, firm-confidential data, household microdata, raw downloaded datasets, confidential source material, scrape public sources, or call external APIs. Public aggregate data does not equal calibration. Calibration has not been completed. Public data does not prove the model works. This is not validation, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable and does not modify firm-level CARSF liability.
+
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-31 are included in a later sealed RC.

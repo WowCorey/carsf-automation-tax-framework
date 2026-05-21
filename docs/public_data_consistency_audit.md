@@ -44,4 +44,6 @@ Build 29.5 uses the consistency audit as an input to create source-locator cards
 
 Build 29.6 uses the consistency audit as one input to create likely reviewer objections and honest responses. It does not load new data, add new public values, scrape sources, call APIs, externally verify source values, complete calibration, validate CARSF, determine actual tax payable, claim objections are resolved, or modify firm-level CARSF liability.
 
-Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-29.6 are included in a later sealed RC.
+Build 31 adds a controlled public real aggregate-data loader over source-located values already represented in the public-pilot chain. It does not complete calibration, validate CARSF, determine actual tax payable, create official status, or modify firm-level CARSF liability.
+
+Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-31 are included in a later sealed RC.

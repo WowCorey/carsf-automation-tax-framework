@@ -6,7 +6,7 @@ Status: V1.5 prototype calibration scaffolding.
 
 The calibration shell identifies the datasets and review pathways needed before CARSF parameters could be calibrated. It does not contain real calibration values.
 
-Build 29 adds `reports/public_data_consistency_audit.md` and `reports/public_data_consistency_audit.json` as an internal consistency audit over the public-data pilot. It loads no new data, does not externally verify source values, does not scrape public sources, does not call external APIs, and does not complete calibration. Reconciled means internally consistent only.
+Build 31 adds `reports/public_real_data_loader.md` and `reports/public_real_data_loader.json` as a controlled public aggregate-data loader over existing public-pilot source records. It records source-located public aggregate values only and keeps source candidates not loaded where exact safe local values are unavailable. Public aggregate data does not equal calibration; calibration has not been completed.
 
 ## Required Data Categories
 

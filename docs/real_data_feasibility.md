@@ -42,3 +42,11 @@ Build 27 adds `data/public_pilot/`, `model/carsf/public_data_pilot.py`, `scripts
 The Build 27 pilot may include small public aggregate extracts and source-reference records, but it is not calibration. Calibration has not been completed. Public data extracts do not prove the model works. Realistic placeholders remain placeholders, source references are not loaded datasets, and restricted-data requirements are not data access. No taxpayer-level, firm-level confidential, household microdata, ABS DataLab, HILDA microdata, DSS/Services Australia records, ATO taxpayer records, confidential Treasury/PBO material, restricted government data, or real evidence is committed.
 
 Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Build 27 is included in a later sealed RC.
+
+## Build 31 Update
+
+Build 31 adds `data/public_real/`, `model/carsf/public_real_data_loader.py`, `scripts/run_public_real_data_loader.py`, `reports/public_real_data_loader.md`, `reports/public_real_data_loader.json`, `data/public_real/parsed/public_real_aggregate_values.json`, and `data/public_real/digests/public_real_data_digests.json`.
+
+The Build 31 loader records source-located public aggregate values only. It does not load restricted data, personal data, taxpayer-level data, firm-confidential data, household microdata, raw downloaded datasets, or confidential source material. Public aggregate data does not equal calibration, does not prove the model works, does not determine actual tax payable, and does not modify firm-level CARSF liability.
+
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-31 are included in a later sealed RC.

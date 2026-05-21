@@ -1,5 +1,6 @@
 # Known Risks
 
+- The public real aggregate-data loader may create false comfort if readers treat source-located public aggregate values as calibration, validation, proof that CARSF works, actual tax payable, official status, ATO guidance, Treasury modelling, PBO costing, legal sufficiency, operational readiness, or firm-level liability evidence.
 - Public-data consistency-audit rows may be mistaken for external source verification if readers ignore the non-claim boundary. Reconciled means internally consistent only, not calibrated, not validated, not official, and not actual tax-payable evidence.
 - The model may overstate fiscal damage if productivity dividends, consumer price reductions, or re-employment recovery are larger than expected.
 - The model may understate fiscal damage if wage scarring, underemployment, HELP loss, superannuation effects, or state costs are larger than expected.
@@ -95,5 +96,5 @@
 - The source-locator verification pack may create false comfort if readers treat ready-for-manual-review cards, source locators, value notes, or checklists as completed manual review, external source verification, calibration, validation, approval, actual tax payable, legal sufficiency, official status, Treasury modelling, ATO guidance, or PBO costing.
 - The red-team reviewer objections pack may create false comfort if readers treat acknowledged objections as resolved, partially mitigated objections as solved, or bounded responses as calibration, validation, approval, actual tax payable, legal sufficiency, official status, Treasury modelling, ATO guidance, PBO costing, or evidence that CARSF works as a real tax model.
 - Public source references may become stale, and licence/access notes may be incomplete without source-owner, legal, tax, privacy, statistical, Treasury-methods, and ATO-methods review.
-- Build 25 sealed the previous RC state. Builds 26-29.6 add new artefacts; if those artefacts become part of a later sealed RC, the final RC integrity seal must be regenerated rather than described as already covering them.
+- Build 25 sealed the previous RC state. Builds 26-31 add new artefacts; if those artefacts become part of a later sealed RC, the final RC integrity seal must be regenerated rather than described as already covering them.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.

@@ -52,4 +52,6 @@ Build 29.5 adds a source-locator verification pack over existing Build 27-29 art
 
 Build 29.6 adds a red-team reviewer objections pack over existing Build 26-29.5 artefacts. It lists likely reviewer criticisms and honest responses only. It loads no new data, adds no public values, does not externally verify source values, does not complete calibration, does not prove the model works, does not determine actual tax payable, does not claim objections are resolved, and does not modify firm-level CARSF liability.
 
-Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-29.6 are included in a later sealed RC.
+Build 31 adds a controlled public real aggregate-data loader over existing source-located public-pilot values. It records parsed public aggregate values and digest metadata only. Public aggregate data does not equal calibration, does not prove the model works, does not determine actual tax payable, and does not modify firm-level CARSF liability.
+
+Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-31 are included in a later sealed RC.

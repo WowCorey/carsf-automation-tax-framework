@@ -11,6 +11,7 @@ REPORT_PATH = REPO_ROOT / "reports" / "public_data_evidence_map.json"
 CONSISTENCY_AUDIT_PATH = REPO_ROOT / "reports" / "public_data_consistency_audit.json"
 SOURCE_LOCATOR_PACK_PATH = REPO_ROOT / "reports" / "source_locator_verification_pack.json"
 RED_TEAM_OBJECTIONS_PATH = REPO_ROOT / "reports" / "red_team_reviewer_objections.json"
+PUBLIC_REAL_DATA_LOADER_PATH = REPO_ROOT / "reports" / "public_real_data_loader.json"
 WARNING = (
     "This is a reviewer evidence map and dashboard for the public data pilot only. No new data is loaded by this build. "
     "Build 27 public aggregate extracts remain sanity-check-only or placeholder-anchor-only. This is not calibration, "
@@ -57,6 +58,7 @@ if not report:
 audit_report = load_report(CONSISTENCY_AUDIT_PATH)
 source_locator_report = load_report(SOURCE_LOCATOR_PACK_PATH)
 red_team_report = load_report(RED_TEAM_OBJECTIONS_PATH)
+public_real_report = load_report(PUBLIC_REAL_DATA_LOADER_PATH)
 
 metadata = report.get("metadata", {})
 payload = report.get("public_data_evidence_map", {})
@@ -361,3 +363,66 @@ if red_team_report:
     st.table(rows_with_lists(red_payload.get("responses", []), ["objection_id", "must_not_claim"]))
 else:
     st.info("Run `python scripts/run_red_team_reviewer_objections.py` to generate the optional red-team objections section.")
+
+st.markdown("### Real Public Aggregate Data Loader")
+st.caption(
+    "Controlled public aggregate loader only. Loaded public aggregate data does not equal calibration, validation, "
+    "legal advice, tax advice, ATO guidance, Treasury modelling, PBO costing, operational readiness, legal sufficiency, "
+    "official status, actual tax payable, or firm-level CARSF liability logic."
+)
+if public_real_report:
+    real_payload = public_real_report.get("public_real_data_loader", {})
+    real_summary = public_real_report.get("summary", {})
+    st.table(
+        [
+            {"Metric": key, "Value": str(value)}
+            for key, value in real_summary.items()
+            if key
+            in {
+                "loaded_sources",
+                "source_candidates_not_loaded",
+                "loaded_values_total",
+                "new_public_aggregate_values_loaded",
+                "guardrail_fail_closed_findings",
+                "real_public_aggregate_data_loaded",
+                "restricted_data_loaded",
+                "personal_data_loaded",
+                "taxpayer_level_data_loaded",
+                "firm_confidential_data_loaded",
+                "household_microdata_loaded",
+                "calibration_completed",
+                "validation_claimed",
+                "actual_tax_payable_determined",
+                "official_status_claimed",
+                "firm_level_liability_logic_modified",
+            }
+        ]
+    )
+    st.markdown("#### Loaded Public Aggregate Values")
+    st.table(
+        rows_with_lists(
+            real_payload.get("loaded_public_aggregate_values", []),
+            [
+                "value_id",
+                "source_id",
+                "metric_name",
+                "value",
+                "unit",
+                "period",
+                "geography",
+                "value_review_status",
+                "must_not_infer",
+            ],
+        )
+    )
+    st.markdown("#### Source Candidates Not Loaded")
+    st.table(
+        rows_with_lists(
+            real_payload.get("source_candidates_not_loaded", []),
+            ["source_id", "publisher", "source_name", "loaded_status", "reason_if_not_loaded", "must_not_infer"],
+        )
+    )
+    st.markdown("#### Public Real Data Guardrails")
+    st.table(rows(real_payload.get("guardrail_findings", []), ["finding_id", "guardrail", "status", "finding"]))
+else:
+    st.info("Run `python scripts/run_public_real_data_loader.py` to generate the optional public-real-data loader section.")

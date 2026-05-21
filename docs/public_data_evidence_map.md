@@ -54,4 +54,6 @@ Build 29.5 adds an optional "Source-Locator Verification Pack" section to the da
 
 Build 29.6 adds an optional "Red-Team Reviewer Objections" section to the dashboard when `reports/red_team_reviewer_objections.json` exists. It displays objection counts, critical/high objections, category coverage, unresolved blockers, what the project can say, and what the project must not claim. The section acknowledges weaknesses; it does not resolve objections, complete calibration, prove the model works, determine actual tax payable, claim validation, claim legal sufficiency, claim operational readiness, claim official status, or change firm-level liability.
 
-Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-29.6 are included in a later sealed RC.
+Build 31 adds an optional "Real Public Aggregate Data Loader" section to the dashboard when `reports/public_real_data_loader.json` exists. It displays loaded public aggregate value counts, source candidates not loaded, guardrail status, loaded values, and source candidates. Public aggregate data does not equal calibration, validation, proof that the model works, actual tax payable, official status, or firm-level liability evidence.
+
+Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-31 are included in a later sealed RC.

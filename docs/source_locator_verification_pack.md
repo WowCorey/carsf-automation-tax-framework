@@ -27,3 +27,5 @@ The pack is not source verified, not externally verified, not calibration, not v
 Build 29.6 adds a red-team reviewer objections pack using this pack as one input. The objections pack acknowledges likely criticisms and unresolved blockers; it does not load new data, add values, externally verify source values, complete calibration, prove the model works, determine actual tax payable, resolve objections, or modify firm-level liability.
 
 Build 30 can use this pack as a handoff input, but the handoff must preserve the same boundaries: no new data, no calibration completion, no validation, no actual tax payable, no official status, and no firm-level liability modification.
+
+Build 31 adds a controlled public real aggregate-data loader using source-located values already represented in the public-pilot chain. The loader records public aggregate values and source candidates not loaded; it does not complete calibration, externally verify source values, prove the model works, determine actual tax payable, create official status, or modify firm-level liability.

@@ -22,7 +22,7 @@
       "source_reference_only_counting",
       "source_reference_to_extract"
     ],
-    "generated_at": "2026-05-20T07:07:47+00:00",
+    "generated_at": "2026-05-21T00:31:24+00:00",
     "non_claims": [
       "This is an internal consistency audit and source-reconciliation map only. No new data is loaded by this build. This does not externally verify source values, does not scrape public sources, and does not call external APIs. This is not calibration; calibration has not been completed. Public data does not prove the model works. Reconciled means internally consistent only; reconciled does not mean validated, official, or ready. Realistic placeholders remain placeholders, realistic placeholders are not real data, realistic placeholders are not calibrated, source references are not loaded datasets, and restricted-data requirements are not data access. This is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab, HILDA microdata, DSS/Services Australia records, ATO taxpayer records, Treasury/PBO confidential material, or restricted government data, and does not modify firm-level CARSF liability. It only checks internal consistency across source records, extracts, reports, digests, dashboard source, and non-claim boundaries.",
       "Audit statuses are internal consistency statuses only; they are not validation, approval, calibration, readiness, or official status.",

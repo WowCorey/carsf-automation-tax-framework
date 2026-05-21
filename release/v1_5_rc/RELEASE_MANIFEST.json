@@ -41,7 +41,11 @@
     "reports/source_locator_verification_pack.md",
     "reports/source_locator_verification_pack.json",
     "reports/red_team_reviewer_objections.md",
-    "reports/red_team_reviewer_objections.json"
+    "reports/red_team_reviewer_objections.json",
+    "reports/public_real_data_loader.md",
+    "reports/public_real_data_loader.json",
+    "data/public_real/parsed/public_real_aggregate_values.json",
+    "data/public_real/digests/public_real_data_digests.json"
   ],
   "attack_pack_summary": {
     "review_tracks": 12,
@@ -67,6 +71,8 @@
     "new_data_loaded_by_public_data_consistency_audit": false,
     "new_data_loaded_by_source_locator_verification_pack": false,
     "new_data_loaded_by_red_team_reviewer_objections": false,
+    "public_real_aggregate_data_loaded_by_build_31": true,
+    "new_public_aggregate_values_loaded_by_build_31": 10,
     "external_source_verification_claimed": false,
     "restricted_data_loaded": false,
     "real_data_loaded": false,
