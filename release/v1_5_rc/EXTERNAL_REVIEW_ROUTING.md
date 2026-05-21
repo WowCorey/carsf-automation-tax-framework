@@ -81,4 +81,10 @@ Build 29.5 loads no new data and adds no public aggregate extract values. It pac
 
 Suggested routing remains technical, privacy, statistical methods, legal, tax, Treasury-methods, ATO-methods, and hostile/red-team review. This is not an official review pathway, not external source verification, not calibration, not validation, not actual tax payable, not ATO guidance, not Treasury modelling, not PBO costing, not legal sufficiency, not operational readiness, not official status, and not a firm-level liability change. Ready for manual review does not mean reviewed or externally verified.
 
-Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-29.5 are included in a later sealed RC.
+## Build 29.6 Red-Team Reviewer Objections Routing Addendum
+
+Build 29.6 loads no new data and adds no public aggregate extract values. It packages likely reviewer objections, why each concern is valid, current bounded project responses, unresolved blockers, evidence needed to resolve each objection, and what the project must not claim.
+
+Suggested routing remains technical, privacy, statistical methods, legal, tax, Treasury-methods, ATO-methods, economic, welfare, and hostile/red-team review. This is not an official review pathway, not external source verification, not calibration, not validation, not actual tax payable, not ATO guidance, not Treasury modelling, not PBO costing, not legal sufficiency, not operational readiness, not official status, and not a firm-level liability change. Objections being acknowledged does not mean they are resolved, and partially mitigated does not mean solved.
+
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-29.6 are included in a later sealed RC.

@@ -52,4 +52,6 @@ Build 29 adds the optional "Consistency Audit / Source Reconciliation" section t
 
 Build 29.5 adds an optional "Source-Locator Verification Pack" section to the dashboard when `reports/source_locator_verification_pack.json` exists. It displays loaded value cards, source-reference-only cards, placeholder-anchor cards, restricted-blocker cards, and checklist summaries. Ready for manual review does not mean reviewed or externally verified, and the section does not claim calibration, validation, actual tax payable, legal sufficiency, operational readiness, official status, ATO guidance, Treasury modelling, PBO costing, or firm-level liability changes.
 
-Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-29.5 are included in a later sealed RC.
+Build 29.6 adds an optional "Red-Team Reviewer Objections" section to the dashboard when `reports/red_team_reviewer_objections.json` exists. It displays objection counts, critical/high objections, category coverage, unresolved blockers, what the project can say, and what the project must not claim. The section acknowledges weaknesses; it does not resolve objections, complete calibration, prove the model works, determine actual tax payable, claim validation, claim legal sufficiency, claim operational readiness, claim official status, or change firm-level liability.
+
+Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-29.6 are included in a later sealed RC.

@@ -1,0 +1,4079 @@
+{
+  "metadata": {
+    "generated_at": "2026-05-20T13:43:51+00:00",
+    "non_claims": [
+      "This is a red-team reviewer objections pack only. No new data is loaded by this build. This does not externally verify source values, does not scrape public sources, and does not call external APIs. Objections being acknowledged does not mean they are resolved. Partially mitigated does not mean solved. This is not calibration; calibration has not been completed. Public data does not prove the model works. Realistic placeholders remain placeholders, realistic placeholders are not real data, realistic placeholders are not calibrated, source references are not loaded datasets, and restricted-data requirements are not data access. This is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab, HILDA microdata, DSS/Services Australia records, ATO taxpayer records, Treasury/PBO confidential material, or restricted government data, and does not modify firm-level CARSF liability. It only packages likely reviewer objections and honest responses.",
+      "This pack acknowledges weaknesses and does not claim objections are resolved.",
+      "Every response is an objection-handling note only, not a defence brief, validation result, approval, or calibration.",
+      "The pack adds no public values and uses only existing Build 26-29.5 artefacts."
+    ],
+    "objection_category_values": [
+      "administrative_feasibility_limitations",
+      "calibration_limitations",
+      "dashboard_interpretation_risk",
+      "economic_incidence_limitations",
+      "external_review_required",
+      "legal_and_tax_limitations",
+      "non_claim_boundary_risk",
+      "placeholder_limitations",
+      "public_data_limitations",
+      "restricted_data_blockers",
+      "reviewer_misinterpretation_risk",
+      "source_reference_limitations",
+      "statistical_limitations"
+    ],
+    "objection_status_values": [
+      "acknowledged",
+      "blocked_by_restricted_data",
+      "cannot_be_resolved_inside_repo",
+      "partially_mitigated",
+      "requires_economic_review",
+      "requires_external_review",
+      "requires_legal_review",
+      "requires_statistical_review",
+      "unresolved"
+    ],
+    "severity_values": [
+      "critical",
+      "high",
+      "informational",
+      "low",
+      "medium"
+    ],
+    "status": "red_team_reviewer_objections_pack_only",
+    "version": "CARSF V1.5 prototype"
+  },
+  "red_team_reviewer_objections": {
+    "build_30_requirements": [
+      "Package the feasibility map, public-data pilot, evidence map, consistency audit, source-locator pack, and red-team objections into a reviewer handoff bundle.",
+      "Identify what reviewers should inspect, what evidence exists, what remains placeholder-only, what remains blocked, and what must not be inferred.",
+      "Do not load new data or claim calibration, validation, actual tax payable, legal sufficiency, operational readiness, official status, or implementation readiness."
+    ],
+    "category_summaries": [
+      {
+        "count": 1,
+        "objection_category": "administrative_feasibility_limitations"
+      },
+      {
+        "count": 2,
+        "objection_category": "calibration_limitations"
+      },
+      {
+        "count": 2,
+        "objection_category": "dashboard_interpretation_risk"
+      },
+      {
+        "count": 5,
+        "objection_category": "economic_incidence_limitations"
+      },
+      {
+        "count": 1,
+        "objection_category": "external_review_required"
+      },
+      {
+        "count": 4,
+        "objection_category": "legal_and_tax_limitations"
+      },
+      {
+        "count": 1,
+        "objection_category": "non_claim_boundary_risk"
+      },
+      {
+        "count": 4,
+        "objection_category": "placeholder_limitations"
+      },
+      {
+        "count": 8,
+        "objection_category": "public_data_limitations"
+      },
+      {
+        "count": 6,
+        "objection_category": "restricted_data_blockers"
+      },
+      {
+        "count": 2,
+        "objection_category": "reviewer_misinterpretation_risk"
+      },
+      {
+        "count": 1,
+        "objection_category": "source_reference_limitations"
+      },
+      {
+        "count": 4,
+        "objection_category": "statistical_limitations"
+      }
+    ],
+    "forbidden_claims": [],
+    "future_evidence_needs": [
+      {
+        "affected_objection_ids": [
+          "obj_020_no_abs_restricted_lab_microdata"
+        ],
+        "evidence_need": "ABS access process"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_005_ato_statistics_not_ai_displacement"
+        ],
+        "evidence_need": "AI adoption measures"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_016_no_taxpayer_ato_data"
+        ],
+        "evidence_need": "ATO and legal access process"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_029_admin_workflow_not_ato_guidance"
+        ],
+        "evidence_need": "ATO methods review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_036_fiscal_sufficiency_not_proven"
+        ],
+        "evidence_need": "PBO-style costing process"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_028_legislative_architecture_non_operative",
+          "obj_030_no_legal_sufficiency_review",
+          "obj_032_anti_avoidance_drafting_review"
+        ],
+        "evidence_need": "Parliamentary Counsel review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_006_budget_aggregates_not_fiscal_impact",
+          "obj_036_fiscal_sufficiency_not_proven"
+        ],
+        "evidence_need": "Treasury methods review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_029_admin_workflow_not_ato_guidance"
+        ],
+        "evidence_need": "administrative law review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_013_public_anchors_not_validated"
+        ],
+        "evidence_need": "anchor relevance review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_011_placeholders_remain_placeholders"
+        ],
+        "evidence_need": "authorised data access"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_004_ato_transparency_not_liability"
+        ],
+        "evidence_need": "authorised data governance"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_031_no_tax_payable_determination"
+        ],
+        "evidence_need": "authorised data process"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_014_household_scenarios_synthetic"
+        ],
+        "evidence_need": "authorised household microdata process"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_002_public_extracts_not_calibration"
+        ],
+        "evidence_need": "authorised restricted data access"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_018_no_dss_services_records"
+        ],
+        "evidence_need": "authorised secure data process"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_017_no_firm_confidential_data"
+        ],
+        "evidence_need": "authorised secure environment"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_003_minimum_wage_not_labour_costs"
+        ],
+        "evidence_need": "award and occupation review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_025_no_behavioural_elasticity"
+        ],
+        "evidence_need": "behavioural economics review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_024_no_confidence_intervals"
+        ],
+        "evidence_need": "calibration data"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_012_placeholder_anchors_not_calibration"
+        ],
+        "evidence_need": "calibration method design"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_002_public_extracts_not_calibration",
+          "obj_022_sanity_check_only"
+        ],
+        "evidence_need": "calibration protocol"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_026_no_causal_relationship"
+        ],
+        "evidence_need": "causal design"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_005_ato_statistics_not_ai_displacement"
+        ],
+        "evidence_need": "causal identification design"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_017_no_firm_confidential_data"
+        ],
+        "evidence_need": "confidential data governance"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_021_restricted_blockers_prevent_calibration"
+        ],
+        "evidence_need": "data access governance"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_027_no_external_validation"
+        ],
+        "evidence_need": "documented review findings"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_040_locator_metadata_not_source_verification"
+        ],
+        "evidence_need": "documented source check"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_013_public_anchors_not_validated"
+        ],
+        "evidence_need": "domain expert review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_025_no_behavioural_elasticity"
+        ],
+        "evidence_need": "econometric methods design"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_009_payroll_tax_state_variation"
+        ],
+        "evidence_need": "economic incidence review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_033_economic_incidence_not_proven"
+        ],
+        "evidence_need": "economic incidence study"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_034_pass_through_not_estimated"
+        ],
+        "evidence_need": "economic methods review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_035_labour_displacement_not_calibrated"
+        ],
+        "evidence_need": "economic/statistical review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_009_payroll_tax_state_variation"
+        ],
+        "evidence_need": "employer payroll evidence governance"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_033_economic_incidence_not_proven"
+        ],
+        "evidence_need": "external economic methods review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_021_restricted_blockers_prevent_calibration"
+        ],
+        "evidence_need": "external legal/privacy/statistical review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_007_super_settings_not_employer_behaviour"
+        ],
+        "evidence_need": "external methods review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_041_evidence_maps_not_policy_readiness"
+        ],
+        "evidence_need": "external review findings"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_022_sanity_check_only"
+        ],
+        "evidence_need": "external review of labels"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_001_small_public_extract_set"
+        ],
+        "evidence_need": "external review of source coverage"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_038_reconciled_mistaken_verified"
+        ],
+        "evidence_need": "external source check process"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_012_placeholder_anchors_not_calibration",
+          "obj_023_no_statistical_inference"
+        ],
+        "evidence_need": "external statistical review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_034_pass_through_not_estimated"
+        ],
+        "evidence_need": "firm behaviour data"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_006_budget_aggregates_not_fiscal_impact"
+        ],
+        "evidence_need": "fiscal modelling review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_010_source_reference_only_not_loaded"
+        ],
+        "evidence_need": "future exact extract protocol"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_001_small_public_extract_set"
+        ],
+        "evidence_need": "future source selection protocol"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_037_dashboard_cards_mistaken_validation"
+        ],
+        "evidence_need": "hostile UI review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_008_help_thresholds_not_household_pressure"
+        ],
+        "evidence_need": "household microdata governance"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_006_budget_aggregates_not_fiscal_impact",
+          "obj_036_fiscal_sufficiency_not_proven"
+        ],
+        "evidence_need": "implementation-cost evidence"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_034_pass_through_not_estimated"
+        ],
+        "evidence_need": "incidence modelling"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_040_locator_metadata_not_source_verification"
+        ],
+        "evidence_need": "independent reviewer note"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_027_no_external_validation"
+        ],
+        "evidence_need": "independent reviewer process"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_027_no_external_validation"
+        ],
+        "evidence_need": "issue resolution log"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_035_labour_displacement_not_calibrated"
+        ],
+        "evidence_need": "labour displacement data"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_007_super_settings_not_employer_behaviour"
+        ],
+        "evidence_need": "labour economics review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_003_minimum_wage_not_labour_costs"
+        ],
+        "evidence_need": "labour-cost methods review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_001_small_public_extract_set"
+        ],
+        "evidence_need": "larger public aggregate catalogue"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_031_no_tax_payable_determination"
+        ],
+        "evidence_need": "legal authority"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_032_anti_avoidance_drafting_review"
+        ],
+        "evidence_need": "legal drafting instructions"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_004_ato_transparency_not_liability"
+        ],
+        "evidence_need": "legal drafting review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_028_legislative_architecture_non_operative"
+        ],
+        "evidence_need": "legal policy instructions"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_030_no_legal_sufficiency_review"
+        ],
+        "evidence_need": "legal review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_041_evidence_maps_not_policy_readiness"
+        ],
+        "evidence_need": "legal/economic/statistical assessment"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_019_no_licensed_longitudinal_microdata"
+        ],
+        "evidence_need": "licensed access process"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_010_source_reference_only_not_loaded"
+        ],
+        "evidence_need": "manual review of dashboard labels"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_040_locator_metadata_not_source_verification"
+        ],
+        "evidence_need": "manual source review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_011_placeholders_remain_placeholders"
+        ],
+        "evidence_need": "methods review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_037_dashboard_cards_mistaken_validation"
+        ],
+        "evidence_need": "non-claim prominence checks"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_025_no_behavioural_elasticity"
+        ],
+        "evidence_need": "observed response data"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_029_admin_workflow_not_ato_guidance"
+        ],
+        "evidence_need": "operational feasibility review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_020_no_abs_restricted_lab_microdata"
+        ],
+        "evidence_need": "output checking"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_007_super_settings_not_employer_behaviour"
+        ],
+        "evidence_need": "payroll and super contribution evidence"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_041_evidence_maps_not_policy_readiness"
+        ],
+        "evidence_need": "policy design review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_019_no_licensed_longitudinal_microdata"
+        ],
+        "evidence_need": "privacy review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_016_no_taxpayer_ato_data",
+          "obj_018_no_dss_services_records"
+        ],
+        "evidence_need": "privacy/secrecy review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_033_economic_incidence_not_proven"
+        ],
+        "evidence_need": "public and restricted data review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_008_help_thresholds_not_household_pressure"
+        ],
+        "evidence_need": "public threshold extract review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_011_placeholders_remain_placeholders"
+        ],
+        "evidence_need": "replacement criteria"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_015_weighted_subgroups_nonrepresentative"
+        ],
+        "evidence_need": "representativeness assessment"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_026_no_causal_relationship"
+        ],
+        "evidence_need": "reviewed data access"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_012_placeholder_anchors_not_calibration"
+        ],
+        "evidence_need": "reviewed target data"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_039_ready_manual_review_mistaken_reviewed"
+        ],
+        "evidence_need": "reviewer checklist execution"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_038_reconciled_mistaken_verified"
+        ],
+        "evidence_need": "reviewer handoff note"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_037_dashboard_cards_mistaken_validation"
+        ],
+        "evidence_need": "reviewer wording review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_022_sanity_check_only"
+        ],
+        "evidence_need": "reviewer-facing handoff notes"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_023_no_statistical_inference"
+        ],
+        "evidence_need": "sampling and weighting review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_035_labour_displacement_not_calibrated"
+        ],
+        "evidence_need": "sector review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_003_minimum_wage_not_labour_costs"
+        ],
+        "evidence_need": "sector wage aggregates"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_021_restricted_blockers_prevent_calibration"
+        ],
+        "evidence_need": "secure environment design"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_016_no_taxpayer_ato_data"
+        ],
+        "evidence_need": "secure external environment"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_039_ready_manual_review_mistaken_reviewed"
+        ],
+        "evidence_need": "signed review notes outside repo"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_010_source_reference_only_not_loaded"
+        ],
+        "evidence_need": "source-reference-only count audit"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_009_payroll_tax_state_variation"
+        ],
+        "evidence_need": "state-by-state public threshold map"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_023_no_statistical_inference"
+        ],
+        "evidence_need": "statistical methods design"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_002_public_extracts_not_calibration",
+          "obj_005_ato_statistics_not_ai_displacement",
+          "obj_013_public_anchors_not_validated",
+          "obj_019_no_licensed_longitudinal_microdata",
+          "obj_020_no_abs_restricted_lab_microdata"
+        ],
+        "evidence_need": "statistical methods review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_024_no_confidence_intervals"
+        ],
+        "evidence_need": "statistical peer review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_014_household_scenarios_synthetic"
+        ],
+        "evidence_need": "statistical representativeness review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_015_weighted_subgroups_nonrepresentative"
+        ],
+        "evidence_need": "statistical weighting review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_026_no_causal_relationship"
+        ],
+        "evidence_need": "statistical/economic methods review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_028_legislative_architecture_non_operative"
+        ],
+        "evidence_need": "statutory drafting process"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_015_weighted_subgroups_nonrepresentative"
+        ],
+        "evidence_need": "survey design evidence"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_017_no_firm_confidential_data"
+        ],
+        "evidence_need": "tax and legal review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_004_ato_transparency_not_liability",
+          "obj_031_no_tax_payable_determination"
+        ],
+        "evidence_need": "tax law review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_030_no_legal_sufficiency_review",
+          "obj_032_anti_avoidance_drafting_review"
+        ],
+        "evidence_need": "tax review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_039_ready_manual_review_mistaken_reviewed"
+        ],
+        "evidence_need": "terminology review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_024_no_confidence_intervals"
+        ],
+        "evidence_need": "uncertainty methodology"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_008_help_thresholds_not_household_pressure",
+          "obj_014_household_scenarios_synthetic",
+          "obj_018_no_dss_services_records"
+        ],
+        "evidence_need": "welfare policy review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_038_reconciled_mistaken_verified"
+        ],
+        "evidence_need": "wording review"
+      }
+    ],
+    "input_artifacts": [
+      "data/calibration/real_data_feasibility_map.yaml",
+      "reports/real_data_feasibility.json",
+      "reports/public_data_pilot.json",
+      "reports/public_data_evidence_map.json",
+      "reports/public_data_consistency_audit.json",
+      "reports/source_locator_verification_pack.json",
+      "docs/real_data_feasibility.md",
+      "docs/public_data_pilot.md",
+      "docs/public_data_evidence_map.md",
+      "docs/public_data_consistency_audit.md",
+      "docs/source_locator_verification_pack.md",
+      "simulator/pages/29_Public_Data_Evidence_Map.py"
+    ],
+    "non_claims": [
+      "This is a red-team reviewer objections pack only. No new data is loaded by this build. This does not externally verify source values, does not scrape public sources, and does not call external APIs. Objections being acknowledged does not mean they are resolved. Partially mitigated does not mean solved. This is not calibration; calibration has not been completed. Public data does not prove the model works. Realistic placeholders remain placeholders, realistic placeholders are not real data, realistic placeholders are not calibrated, source references are not loaded datasets, and restricted-data requirements are not data access. This is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab, HILDA microdata, DSS/Services Australia records, ATO taxpayer records, Treasury/PBO confidential material, or restricted government data, and does not modify firm-level CARSF liability. It only packages likely reviewer objections and honest responses.",
+      "This pack acknowledges weaknesses and does not claim objections are resolved.",
+      "Every response is an objection-handling note only, not a defence brief, validation result, approval, or calibration.",
+      "The pack adds no public values and uses only existing Build 26-29.5 artefacts."
+    ],
+    "objections": [
+      {
+        "affected_artifacts": [
+          "reports/public_data_pilot.json",
+          "reports/public_data_evidence_map.json",
+          "reports/public_data_consistency_audit.json",
+          "reports/source_locator_verification_pack.json"
+        ],
+        "current_project_response": "The project labels the pilot as a small public aggregate-data pilot and keeps counts visible.",
+        "evidence_needed_to_resolve": [
+          "larger public aggregate catalogue",
+          "external review of source coverage",
+          "future source selection protocol"
+        ],
+        "future_build_route": [
+          "Build 30 reviewer handoff",
+          "future public-data expansion build"
+        ],
+        "objection_category": "public_data_limitations",
+        "objection_id": "obj_001_small_public_extract_set",
+        "objection_title": "Only a small number of public aggregate extracts are loaded",
+        "reviewer_concern": "A reviewer may argue that five loaded public extracts are too small to support broad CARSF interpretation.",
+        "severity": "high",
+        "status": "partially_mitigated",
+        "unresolved_blockers": [
+          "small_public_extract_set",
+          "no_full_public_dataset_load",
+          "restricted_data_required_for_calibration"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say a small set of public aggregate records is present for reviewer inspection only."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because the pilot is intentionally narrow and cannot represent the full labour, tax, fiscal, household, or sector data environment."
+      },
+      {
+        "affected_artifacts": [
+          "reports/public_data_pilot.json",
+          "reports/public_data_evidence_map.json",
+          "reports/public_data_consistency_audit.json",
+          "reports/source_locator_verification_pack.json"
+        ],
+        "current_project_response": "The project keeps real_calibration_completed false and describes the pilot as sanity-check-only or placeholder-anchor-only.",
+        "evidence_needed_to_resolve": [
+          "authorised restricted data access",
+          "statistical methods review",
+          "calibration protocol"
+        ],
+        "future_build_route": [
+          "Build 30 handoff",
+          "external statistical review",
+          "future authorised data process"
+        ],
+        "objection_category": "calibration_limitations",
+        "objection_id": "obj_002_public_extracts_not_calibration",
+        "objection_title": "Public aggregate extracts are not enough to calibrate CARSF",
+        "reviewer_concern": "A reviewer may object that aggregate public records cannot calibrate firm-level, behavioural, fiscal, or household interactions.",
+        "severity": "critical",
+        "status": "unresolved",
+        "unresolved_blockers": [
+          "restricted_data_required",
+          "no_calibration_method_review",
+          "no_microdata"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say public aggregates may support limited sanity checks and placeholder transparency."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because public aggregates do not contain the restricted, entity-level, or household-level detail needed for calibration using real data."
+      },
+      {
+        "affected_artifacts": [
+          "reports/public_data_pilot.json",
+          "reports/source_locator_verification_pack.json"
+        ],
+        "current_project_response": "The project uses the value only as a placeholder anchor and arithmetic-check card, not as a labour-cost calibration.",
+        "evidence_needed_to_resolve": [
+          "sector wage aggregates",
+          "award and occupation review",
+          "labour-cost methods review"
+        ],
+        "future_build_route": [
+          "Build 30 handoff",
+          "future labour anchor expansion"
+        ],
+        "objection_category": "public_data_limitations",
+        "objection_id": "obj_003_minimum_wage_not_labour_costs",
+        "objection_title": "Fair Work minimum wage is not representative of all labour costs",
+        "reviewer_concern": "A reviewer may object that the national minimum wage cannot stand in for sector labour costs, overheads, or total employment cost.",
+        "severity": "high",
+        "status": "partially_mitigated",
+        "unresolved_blockers": [
+          "minimum_wage_not_representative",
+          "sector_wage_data_missing",
+          "on_costs_not_modelled"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say the Fair Work value is a public wage anchor with an internal arithmetic check."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because minimum wage is only one public wage anchor and does not represent all occupations, sectors, loadings, hours, or on-costs."
+      },
+      {
+        "affected_artifacts": [
+          "reports/public_data_pilot.json",
+          "reports/public_data_evidence_map.json",
+          "reports/public_data_consistency_audit.json",
+          "reports/source_locator_verification_pack.json"
+        ],
+        "current_project_response": "The project states the extract is context only and must not be used for firm-level CARSF liability.",
+        "evidence_needed_to_resolve": [
+          "tax law review",
+          "legal drafting review",
+          "authorised data governance"
+        ],
+        "future_build_route": [
+          "external tax review",
+          "external legal review"
+        ],
+        "objection_category": "public_data_limitations",
+        "objection_id": "obj_004_ato_transparency_not_liability",
+        "objection_title": "ATO corporate tax transparency data cannot infer CARSF firm liability",
+        "reviewer_concern": "A reviewer may argue that public ATO transparency records cannot infer CARSF liability for any firm.",
+        "severity": "critical",
+        "status": "requires_legal_review",
+        "unresolved_blockers": [
+          "no_firm_level_confidential_data",
+          "no_tax_base_review",
+          "no_liability_logic_change"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say public ATO records are source-locator context only."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_firm_liability_estimate",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because public transparency data is aggregate/contextual and CARSF liability would require legal, tax, and entity-specific analysis that is absent."
+      },
+      {
+        "affected_artifacts": [
+          "reports/public_data_pilot.json",
+          "reports/public_data_evidence_map.json",
+          "reports/public_data_consistency_audit.json",
+          "reports/source_locator_verification_pack.json"
+        ],
+        "current_project_response": "The project treats these records as source-locator context and not as displacement evidence.",
+        "evidence_needed_to_resolve": [
+          "AI adoption measures",
+          "causal identification design",
+          "statistical methods review"
+        ],
+        "future_build_route": [
+          "external statistical review",
+          "future methods build"
+        ],
+        "objection_category": "public_data_limitations",
+        "objection_id": "obj_005_ato_statistics_not_ai_displacement",
+        "objection_title": "ATO taxation statistics cannot prove AI-related revenue displacement",
+        "reviewer_concern": "A reviewer may object that aggregate tax statistics cannot isolate AI-related revenue or labour displacement.",
+        "severity": "high",
+        "status": "requires_statistical_review",
+        "unresolved_blockers": [
+          "no_ai_adoption_dataset",
+          "no_counterfactual_model",
+          "no_causal_design"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say aggregate tax statistics are not AI displacement evidence."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because the public statistics do not identify AI adoption, counterfactual employment, or causal displacement channels."
+      },
+      {
+        "affected_artifacts": [
+          "reports/public_data_pilot.json",
+          "reports/public_data_consistency_audit.json",
+          "reports/source_locator_verification_pack.json"
+        ],
+        "current_project_response": "The project labels Budget data as fiscal context only and not Treasury modelling.",
+        "evidence_needed_to_resolve": [
+          "Treasury methods review",
+          "fiscal modelling review",
+          "implementation-cost evidence"
+        ],
+        "future_build_route": [
+          "external Treasury methods review",
+          "Build 30 handoff"
+        ],
+        "objection_category": "public_data_limitations",
+        "objection_id": "obj_006_budget_aggregates_not_fiscal_impact",
+        "objection_title": "Budget Paper aggregates cannot prove CARSF fiscal impact",
+        "reviewer_concern": "A reviewer may object that Budget Paper aggregates are not evidence of CARSF revenue, cost, or fiscal sufficiency.",
+        "severity": "critical",
+        "status": "requires_economic_review",
+        "unresolved_blockers": [
+          "no_revenue_model_validation",
+          "no_treasury_costing",
+          "no_behavioural_fiscal_integration"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say a public fiscal source locator is recorded for context."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_treasury_modelling",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because public fiscal aggregates do not model CARSF tax bases, behavioural change, implementation costs, or transfer interactions."
+      },
+      {
+        "affected_artifacts": [
+          "reports/public_data_pilot.json",
+          "reports/public_data_evidence_map.json",
+          "reports/public_data_consistency_audit.json",
+          "reports/source_locator_verification_pack.json"
+        ],
+        "current_project_response": "The project uses the setting as a public threshold anchor only.",
+        "evidence_needed_to_resolve": [
+          "labour economics review",
+          "payroll and super contribution evidence",
+          "external methods review"
+        ],
+        "future_build_route": [
+          "future incidence review",
+          "Build 30 handoff"
+        ],
+        "objection_category": "public_data_limitations",
+        "objection_id": "obj_007_super_settings_not_employer_behaviour",
+        "objection_title": "Super guarantee settings do not model real employer contribution behaviour",
+        "reviewer_concern": "A reviewer may object that a statutory rate does not model actual contribution behaviour, compliance, wage offsets, or labour market responses.",
+        "severity": "medium",
+        "status": "partially_mitigated",
+        "unresolved_blockers": [
+          "no_employer_behaviour_data",
+          "no_wage_offset_estimate",
+          "no_compliance_data"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say the public setting is an anchor for reviewer inspection only."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_ato_guidance",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because a public setting is not an empirical behavioural model."
+      },
+      {
+        "affected_artifacts": [
+          "reports/public_data_pilot.json",
+          "reports/public_data_evidence_map.json",
+          "reports/public_data_consistency_audit.json",
+          "reports/source_locator_verification_pack.json"
+        ],
+        "current_project_response": "The project marks the HELP/HECS row as source-reference-only unless exact public values are loaded by a later build.",
+        "evidence_needed_to_resolve": [
+          "public threshold extract review",
+          "household microdata governance",
+          "welfare policy review"
+        ],
+        "future_build_route": [
+          "future public-data pilot expansion",
+          "external welfare review"
+        ],
+        "objection_category": "public_data_limitations",
+        "objection_id": "obj_008_help_thresholds_not_household_pressure",
+        "objection_title": "HELP / HECS thresholds do not model real household repayment pressure",
+        "reviewer_concern": "A reviewer may object that public thresholds cannot model household repayment pressure or eligibility interactions.",
+        "severity": "medium",
+        "status": "unresolved",
+        "unresolved_blockers": [
+          "no_household_microdata",
+          "no_individual_debt_data",
+          "source_reference_only"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say HELP/HECS is a source reference or placeholder anchor only."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because individual incomes, debts, repayment histories, and household circumstances are not loaded."
+      },
+      {
+        "affected_artifacts": [
+          "reports/public_data_pilot.json",
+          "reports/public_data_evidence_map.json",
+          "reports/public_data_consistency_audit.json",
+          "reports/source_locator_verification_pack.json"
+        ],
+        "current_project_response": "The project keeps payroll tax as source-reference-only or placeholder-anchor-only.",
+        "evidence_needed_to_resolve": [
+          "state-by-state public threshold map",
+          "employer payroll evidence governance",
+          "economic incidence review"
+        ],
+        "future_build_route": [
+          "future public threshold build",
+          "external economic review"
+        ],
+        "objection_category": "public_data_limitations",
+        "objection_id": "obj_009_payroll_tax_state_variation",
+        "objection_title": "Payroll tax thresholds vary by state and do not establish national incidence",
+        "reviewer_concern": "A reviewer may object that a payroll-tax source reference cannot support national incidence claims.",
+        "severity": "medium",
+        "status": "unresolved",
+        "unresolved_blockers": [
+          "state_variation",
+          "no_employer_payroll_data",
+          "no_incidence_estimate"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say state payroll-tax references identify future review needs only."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because state payroll-tax thresholds, exemptions, and bases differ and no employer-level payroll data is loaded."
+      },
+      {
+        "affected_artifacts": [
+          "reports/public_data_evidence_map.json",
+          "reports/source_locator_verification_pack.json"
+        ],
+        "current_project_response": "The project separates source-reference-only rows and excludes them from loaded public data counts.",
+        "evidence_needed_to_resolve": [
+          "manual review of dashboard labels",
+          "source-reference-only count audit",
+          "future exact extract protocol"
+        ],
+        "future_build_route": [
+          "Build 30 handoff",
+          "external reviewer checklist"
+        ],
+        "objection_category": "source_reference_limitations",
+        "objection_id": "obj_010_source_reference_only_not_loaded",
+        "objection_title": "Source-reference-only records are not loaded public data",
+        "reviewer_concern": "A reviewer may object that source-reference-only rows could be mistaken for loaded data.",
+        "severity": "high",
+        "status": "partially_mitigated",
+        "unresolved_blockers": [
+          "no_value_loaded",
+          "future_extract_required",
+          "dashboard_interpretation_risk"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say source-reference-only rows are not loaded public data."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because source references still have URLs and can look evidentiary in dashboards."
+      },
+      {
+        "affected_artifacts": [
+          "data/public_pilot/placeholders/realistic_placeholder_anchors.yaml",
+          "reports/public_data_pilot.json",
+          "reports/public_data_evidence_map.json"
+        ],
+        "current_project_response": "The project labels placeholders as realistic_placeholder and not real data.",
+        "evidence_needed_to_resolve": [
+          "replacement criteria",
+          "authorised data access",
+          "methods review"
+        ],
+        "future_build_route": [
+          "Build 30 handoff",
+          "future calibration governance"
+        ],
+        "objection_category": "placeholder_limitations",
+        "objection_id": "obj_011_placeholders_remain_placeholders",
+        "objection_title": "Realistic placeholders remain placeholders",
+        "reviewer_concern": "A reviewer may object that realistic placeholders could be overread as real data.",
+        "severity": "critical",
+        "status": "partially_mitigated",
+        "unresolved_blockers": [
+          "placeholder_not_replaced",
+          "restricted_data_missing",
+          "external_review_required"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say placeholders are transparently labelled and remain non-calibrated."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because public anchors can make placeholders appear more empirical than they are."
+      },
+      {
+        "affected_artifacts": [
+          "data/public_pilot/placeholders/realistic_placeholder_anchors.yaml",
+          "reports/public_data_pilot.json",
+          "reports/public_data_evidence_map.json"
+        ],
+        "current_project_response": "The project keeps real_calibration_completed false and states anchor-only status.",
+        "evidence_needed_to_resolve": [
+          "calibration method design",
+          "reviewed target data",
+          "external statistical review"
+        ],
+        "future_build_route": [
+          "future calibration design build",
+          "external methods review"
+        ],
+        "objection_category": "placeholder_limitations",
+        "objection_id": "obj_012_placeholder_anchors_not_calibration",
+        "objection_title": "Placeholder anchors do not equal calibration",
+        "reviewer_concern": "A reviewer may object that anchoring a placeholder to a public category is still not calibration.",
+        "severity": "critical",
+        "status": "unresolved",
+        "unresolved_blockers": [
+          "no_calibration_target",
+          "no_estimation_method",
+          "no_external_review"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say anchors clarify provenance but do not complete calibration."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because calibration requires a method, target variable, data quality review, and external scrutiny that are absent."
+      },
+      {
+        "affected_artifacts": [
+          "data/public_pilot/placeholders/realistic_placeholder_anchors.yaml",
+          "reports/public_data_pilot.json",
+          "reports/public_data_evidence_map.json"
+        ],
+        "current_project_response": "The project describes anchors as provenance aids and keeps validation_claimed false.",
+        "evidence_needed_to_resolve": [
+          "anchor relevance review",
+          "domain expert review",
+          "statistical methods review"
+        ],
+        "future_build_route": [
+          "Build 30 reviewer handoff",
+          "external review"
+        ],
+        "objection_category": "placeholder_limitations",
+        "objection_id": "obj_013_public_anchors_not_validated",
+        "objection_title": "Public anchors can make placeholders more transparent but not validated",
+        "reviewer_concern": "A reviewer may object that transparency is useful but does not establish validity.",
+        "severity": "high",
+        "status": "requires_external_review",
+        "unresolved_blockers": [
+          "anchor_relevance_unreviewed",
+          "validation_absent",
+          "restricted_data_missing"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say public anchors improve inspectability."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because a clear anchor can still be the wrong anchor for CARSF purposes."
+      },
+      {
+        "affected_artifacts": [
+          "reports/distributional_scenarios.json",
+          "reports/public_data_evidence_map.json"
+        ],
+        "current_project_response": "The project keeps household scenarios synthetic and warns against population-level estimate overread.",
+        "evidence_needed_to_resolve": [
+          "authorised household microdata process",
+          "welfare policy review",
+          "statistical representativeness review"
+        ],
+        "future_build_route": [
+          "external welfare review",
+          "future authorised data process"
+        ],
+        "objection_category": "placeholder_limitations",
+        "objection_id": "obj_014_household_scenarios_synthetic",
+        "objection_title": "Household distributional scenarios remain synthetic",
+        "reviewer_concern": "A reviewer may object that household scenarios cannot be interpreted as real household estimates.",
+        "severity": "high",
+        "status": "blocked_by_restricted_data",
+        "unresolved_blockers": [
+          "no_household_microdata",
+          "no_population_weights",
+          "no_welfare_records"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say household examples are synthetic-only."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_population_estimate",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because no household microdata, Census microdata, HILDA, or DSS records are used."
+      },
+      {
+        "affected_artifacts": [
+          "reports/household_weighting.json",
+          "reports/public_data_evidence_map.json"
+        ],
+        "current_project_response": "The project labels weighting as prototype-only and not population inference.",
+        "evidence_needed_to_resolve": [
+          "statistical weighting review",
+          "survey design evidence",
+          "representativeness assessment"
+        ],
+        "future_build_route": [
+          "external statistical review"
+        ],
+        "objection_category": "statistical_limitations",
+        "objection_id": "obj_015_weighted_subgroups_nonrepresentative",
+        "objection_title": "Weighted subgroup outputs remain non-representative",
+        "reviewer_concern": "A reviewer may object that subgroup weights are not population-representative.",
+        "severity": "high",
+        "status": "requires_statistical_review",
+        "unresolved_blockers": [
+          "no_survey_weight_design",
+          "no_population_frame",
+          "no_statistical_validation"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say weighting controls are display controls only."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_population_estimate",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because representative survey design, weights, and validation are absent."
+      },
+      {
+        "affected_artifacts": [
+          "reports/public_data_pilot.json",
+          "reports/public_data_evidence_map.json",
+          "reports/public_data_consistency_audit.json",
+          "reports/source_locator_verification_pack.json"
+        ],
+        "current_project_response": "The project explicitly forbids taxpayer-level ATO data in the repository.",
+        "evidence_needed_to_resolve": [
+          "ATO and legal access process",
+          "privacy/secrecy review",
+          "secure external environment"
+        ],
+        "future_build_route": [
+          "external legal and ATO-methods review"
+        ],
+        "objection_category": "restricted_data_blockers",
+        "objection_id": "obj_016_no_taxpayer_ato_data",
+        "objection_title": "No taxpayer-level ATO data is used",
+        "reviewer_concern": "A reviewer may object that no taxpayer-level ATO data means CARSF cannot be calibrated or operationalised.",
+        "severity": "critical",
+        "status": "blocked_by_restricted_data",
+        "unresolved_blockers": [
+          "taxpayer_data_forbidden",
+          "authorised_access_required",
+          "privacy_and_secrecy_review_required"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say taxpayer data is not loaded and remains forbidden for repo use."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because taxpayer-level data is necessary for many real tax-base and compliance questions and cannot be stored in this repo."
+      },
+      {
+        "affected_artifacts": [
+          "reports/public_data_pilot.json",
+          "reports/public_data_evidence_map.json",
+          "reports/public_data_consistency_audit.json",
+          "reports/source_locator_verification_pack.json"
+        ],
+        "current_project_response": "The project forbids firm-confidential records and does not modify firm-level liability logic.",
+        "evidence_needed_to_resolve": [
+          "authorised secure environment",
+          "tax and legal review",
+          "confidential data governance"
+        ],
+        "future_build_route": [
+          "external tax review",
+          "future authorised data process"
+        ],
+        "objection_category": "restricted_data_blockers",
+        "objection_id": "obj_017_no_firm_confidential_data",
+        "objection_title": "No firm-level confidential data is used",
+        "reviewer_concern": "A reviewer may object that no firm-confidential data means firm-level liability and attribution cannot be tested.",
+        "severity": "critical",
+        "status": "blocked_by_restricted_data",
+        "unresolved_blockers": [
+          "firm_confidential_data_forbidden",
+          "no_entity_attribution_evidence",
+          "no_liability_estimate"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say no firm-confidential data is present."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because entity attribution, transfer pricing, and firm-level CARSF exposure require confidential or authorised data not present here."
+      },
+      {
+        "affected_artifacts": [
+          "reports/payment_interactions.json",
+          "reports/public_data_evidence_map.json"
+        ],
+        "current_project_response": "The project treats welfare interactions as placeholder-only and blocked by restricted data.",
+        "evidence_needed_to_resolve": [
+          "welfare policy review",
+          "privacy/secrecy review",
+          "authorised secure data process"
+        ],
+        "future_build_route": [
+          "external welfare review"
+        ],
+        "objection_category": "restricted_data_blockers",
+        "objection_id": "obj_018_no_dss_services_records",
+        "objection_title": "No DSS / Services Australia records are used",
+        "reviewer_concern": "A reviewer may object that payment interaction analysis cannot be grounded without administrative welfare records.",
+        "severity": "high",
+        "status": "blocked_by_restricted_data",
+        "unresolved_blockers": [
+          "no_welfare_records",
+          "eligibility_law_review_required",
+          "restricted_access_required"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say DSS and Services Australia records are not loaded."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because real eligibility, payment histories, and cliffs require restricted records and legal authority."
+      },
+      {
+        "affected_artifacts": [
+          "reports/household_weighting.json",
+          "reports/distributional_scenarios.json"
+        ],
+        "current_project_response": "The project forbids HILDA microdata in the repo and keeps household outputs synthetic.",
+        "evidence_needed_to_resolve": [
+          "licensed access process",
+          "statistical methods review",
+          "privacy review"
+        ],
+        "future_build_route": [
+          "future authorised microdata review"
+        ],
+        "objection_category": "restricted_data_blockers",
+        "objection_id": "obj_019_no_licensed_longitudinal_microdata",
+        "objection_title": "No HILDA microdata is used",
+        "reviewer_concern": "A reviewer may object that HILDA-style longitudinal household patterns are absent.",
+        "severity": "medium",
+        "status": "blocked_by_restricted_data",
+        "unresolved_blockers": [
+          "hilda_not_loaded",
+          "licensed_microdata_forbidden",
+          "no_longitudinal_household_evidence"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say no HILDA microdata is loaded."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because HILDA microdata is licensed and cannot be treated as repo data."
+      },
+      {
+        "affected_artifacts": [
+          "reports/public_data_pilot.json",
+          "reports/public_data_evidence_map.json",
+          "reports/public_data_consistency_audit.json",
+          "reports/source_locator_verification_pack.json"
+        ],
+        "current_project_response": "The project forbids DataLab microdata and uses only safe public aggregate/source-reference records.",
+        "evidence_needed_to_resolve": [
+          "ABS access process",
+          "output checking",
+          "statistical methods review"
+        ],
+        "future_build_route": [
+          "future authorised ABS process"
+        ],
+        "objection_category": "restricted_data_blockers",
+        "objection_id": "obj_020_no_abs_restricted_lab_microdata",
+        "objection_title": "No ABS DataLab microdata is used",
+        "reviewer_concern": "A reviewer may object that ABS public aggregates cannot substitute for DataLab microdata.",
+        "severity": "high",
+        "status": "blocked_by_restricted_data",
+        "unresolved_blockers": [
+          "abs_restricted_lab_microdata_forbidden",
+          "no_microdata_output_clearance",
+          "no_population_estimate"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say ABS DataLab microdata is not present."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because DataLab microdata has access, confidentiality, and output-checking constraints absent from this repo."
+      },
+      {
+        "affected_artifacts": [
+          "reports/real_data_feasibility.json",
+          "reports/public_data_consistency_audit.json"
+        ],
+        "current_project_response": "The project preserves blockers and does not hide them behind public-data pilot outputs.",
+        "evidence_needed_to_resolve": [
+          "data access governance",
+          "secure environment design",
+          "external legal/privacy/statistical review"
+        ],
+        "future_build_route": [
+          "Build 30 handoff",
+          "external access planning"
+        ],
+        "objection_category": "restricted_data_blockers",
+        "objection_id": "obj_021_restricted_blockers_prevent_calibration",
+        "objection_title": "Restricted-data blockers prevent calibration using real data",
+        "reviewer_concern": "A reviewer may object that blockers mean the prototype cannot progress to calibration using real data inside the repo.",
+        "severity": "critical",
+        "status": "blocked_by_restricted_data",
+        "unresolved_blockers": [
+          "restricted_data_missing",
+          "secure_environment_required",
+          "external_review_required"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say calibration remains blocked without authorised external access."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because required restricted data categories are explicitly outside repo scope."
+      },
+      {
+        "affected_artifacts": [
+          "reports/public_data_pilot.json",
+          "reports/public_data_evidence_map.json",
+          "reports/public_data_consistency_audit.json",
+          "reports/source_locator_verification_pack.json"
+        ],
+        "current_project_response": "The project uses explicit claim-level labels and false flags.",
+        "evidence_needed_to_resolve": [
+          "reviewer-facing handoff notes",
+          "external review of labels",
+          "calibration protocol"
+        ],
+        "future_build_route": [
+          "Build 30 handoff"
+        ],
+        "objection_category": "calibration_limitations",
+        "objection_id": "obj_022_sanity_check_only",
+        "objection_title": "Public-data pilot is sanity-check-only",
+        "reviewer_concern": "A reviewer may object that sanity checks can be overstated as calibration.",
+        "severity": "critical",
+        "status": "partially_mitigated",
+        "unresolved_blockers": [
+          "claim_level_overread",
+          "no_calibration_protocol",
+          "dashboard_interpretation_risk"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say the pilot supports sanity-check-only and placeholder-anchor-only inspection."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because sanity-check language can still be overread if output tables look formal."
+      },
+      {
+        "affected_artifacts": [
+          "reports/public_data_pilot.json",
+          "reports/uncertainty_ranges.json"
+        ],
+        "current_project_response": "The project keeps statistical_validation_claimed false and avoids population-level inference.",
+        "evidence_needed_to_resolve": [
+          "statistical methods design",
+          "sampling and weighting review",
+          "external statistical review"
+        ],
+        "future_build_route": [
+          "external statistical review"
+        ],
+        "objection_category": "statistical_limitations",
+        "objection_id": "obj_023_no_statistical_inference",
+        "objection_title": "No statistical inference is performed",
+        "reviewer_concern": "A reviewer may object that no inference, estimation, or hypothesis testing occurs.",
+        "severity": "high",
+        "status": "requires_statistical_review",
+        "unresolved_blockers": [
+          "no_estimator",
+          "no_sampling_frame",
+          "no_uncertainty_model"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say no statistical inference is performed."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because the current public pilot carries source records and checks, not statistical analysis."
+      },
+      {
+        "affected_artifacts": [
+          "reports/uncertainty_ranges.json",
+          "reports/public_data_evidence_map.json"
+        ],
+        "current_project_response": "The project states no confidence intervals or population-level estimates are created.",
+        "evidence_needed_to_resolve": [
+          "uncertainty methodology",
+          "statistical peer review",
+          "calibration data"
+        ],
+        "future_build_route": [
+          "future statistical methods build"
+        ],
+        "objection_category": "statistical_limitations",
+        "objection_id": "obj_024_no_confidence_intervals",
+        "objection_title": "No confidence intervals or real uncertainty quantification are produced",
+        "reviewer_concern": "A reviewer may object that uncertainty ranges are deterministic placeholders and not confidence intervals.",
+        "severity": "high",
+        "status": "requires_statistical_review",
+        "unresolved_blockers": [
+          "no_sampling_distribution",
+          "no_estimation_error",
+          "no_confidence_interval_method"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say uncertainty outputs are placeholder ranges only."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_confidence_interval",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because uncertainty labels can be confused with statistical intervals."
+      },
+      {
+        "affected_artifacts": [
+          "reports/behavioural_response_simulation.json",
+          "reports/public_data_pilot.json"
+        ],
+        "current_project_response": "The project labels behavioural outputs as simulation/prototype only.",
+        "evidence_needed_to_resolve": [
+          "behavioural economics review",
+          "observed response data",
+          "econometric methods design"
+        ],
+        "future_build_route": [
+          "external economic review"
+        ],
+        "objection_category": "economic_incidence_limitations",
+        "objection_id": "obj_025_no_behavioural_elasticity",
+        "objection_title": "No behavioural elasticity is estimated",
+        "reviewer_concern": "A reviewer may object that behavioural responses are not empirically estimated.",
+        "severity": "high",
+        "status": "requires_economic_review",
+        "unresolved_blockers": [
+          "no_observed_behavioural_data",
+          "no_elasticity_estimation",
+          "no_econometric_review"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say behavioural response material is not an elasticity estimate."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because no observed behavioural data or econometric design is present."
+      },
+      {
+        "affected_artifacts": [
+          "reports/public_data_pilot.json",
+          "reports/public_data_evidence_map.json",
+          "reports/public_data_consistency_audit.json",
+          "reports/source_locator_verification_pack.json"
+        ],
+        "current_project_response": "The project avoids causal claims and keeps outputs as inspection aids.",
+        "evidence_needed_to_resolve": [
+          "causal design",
+          "reviewed data access",
+          "statistical/economic methods review"
+        ],
+        "future_build_route": [
+          "external statistical and economic review"
+        ],
+        "objection_category": "statistical_limitations",
+        "objection_id": "obj_026_no_causal_relationship",
+        "objection_title": "No causal relationship is established",
+        "reviewer_concern": "A reviewer may object that the public pilot cannot establish causality.",
+        "severity": "critical",
+        "status": "requires_statistical_review",
+        "unresolved_blockers": [
+          "no_identification_strategy",
+          "no_counterfactual",
+          "no_causal_evidence"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say no causal relationship is established."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because no causal design, counterfactual, or identification strategy is included."
+      },
+      {
+        "affected_artifacts": [
+          "reports/public_data_pilot.json",
+          "reports/public_data_evidence_map.json",
+          "reports/public_data_consistency_audit.json",
+          "reports/source_locator_verification_pack.json"
+        ],
+        "current_project_response": "The project keeps validation_claimed false and frames outputs as reviewer materials.",
+        "evidence_needed_to_resolve": [
+          "independent reviewer process",
+          "documented review findings",
+          "issue resolution log"
+        ],
+        "future_build_route": [
+          "Build 30 handoff",
+          "external review process"
+        ],
+        "objection_category": "external_review_required",
+        "objection_id": "obj_027_no_external_validation",
+        "objection_title": "No external validation has occurred",
+        "reviewer_concern": "A reviewer may object that internal checks are not external validation.",
+        "severity": "critical",
+        "status": "requires_external_review",
+        "unresolved_blockers": [
+          "external_review_not_completed",
+          "independent_validation_absent",
+          "source_values_not_externally_checked"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say external validation has not occurred."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because internal reconciliation, arithmetic checks, and source-locator cards do not substitute for independent review."
+      },
+      {
+        "affected_artifacts": [
+          "reports/legislative_architecture.json",
+          "reports/administrative_compliance_workflow.json",
+          "reports/public_data_pilot.json"
+        ],
+        "current_project_response": "The project labels legislative architecture as a skeleton and non-operative.",
+        "evidence_needed_to_resolve": [
+          "Parliamentary Counsel review",
+          "legal policy instructions",
+          "statutory drafting process"
+        ],
+        "future_build_route": [
+          "external legal review",
+          "Parliamentary Counsel review"
+        ],
+        "objection_category": "legal_and_tax_limitations",
+        "objection_id": "obj_028_legislative_architecture_non_operative",
+        "objection_title": "Legislative architecture is non-operative",
+        "reviewer_concern": "A reviewer may object that legislative architecture headings are not law.",
+        "severity": "critical",
+        "status": "requires_legal_review",
+        "unresolved_blockers": [
+          "no_operative_law",
+          "no_parliamentary_counsel_review",
+          "legal_sufficiency_absent"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say legislative material is a non-operative architecture sketch."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_operative_law",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because no Parliamentary Counsel drafting, enactment, definitions, rights, obligations, or operative provisions exist."
+      },
+      {
+        "affected_artifacts": [
+          "reports/administrative_compliance_workflow.json",
+          "reports/public_data_evidence_map.json"
+        ],
+        "current_project_response": "The project states administrative workflow is non-operative and not ATO guidance.",
+        "evidence_needed_to_resolve": [
+          "ATO methods review",
+          "administrative law review",
+          "operational feasibility review"
+        ],
+        "future_build_route": [
+          "external ATO methods review"
+        ],
+        "objection_category": "administrative_feasibility_limitations",
+        "objection_id": "obj_029_admin_workflow_not_ato_guidance",
+        "objection_title": "Administrative workflow is not ATO guidance",
+        "reviewer_concern": "A reviewer may object that workflow diagrams could be mistaken for ATO process or guidance.",
+        "severity": "critical",
+        "status": "requires_external_review",
+        "unresolved_blockers": [
+          "no_ato_review",
+          "no_operational_authority",
+          "no_notice_or_enforcement_power"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say workflow material is a prototype shell only."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_ato_guidance",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because administrative labels can imply operational authority if not bounded."
+      },
+      {
+        "affected_artifacts": [
+          "reports/legislative_architecture.json",
+          "reports/administrative_compliance_workflow.json",
+          "reports/public_data_pilot.json"
+        ],
+        "current_project_response": "The project keeps legal_sufficiency_claimed false.",
+        "evidence_needed_to_resolve": [
+          "legal review",
+          "tax review",
+          "Parliamentary Counsel review"
+        ],
+        "future_build_route": [
+          "external legal and tax review"
+        ],
+        "objection_category": "legal_and_tax_limitations",
+        "objection_id": "obj_030_no_legal_sufficiency_review",
+        "objection_title": "No legal sufficiency review has occurred",
+        "reviewer_concern": "A reviewer may object that legal sufficiency has not been assessed.",
+        "severity": "critical",
+        "status": "requires_legal_review",
+        "unresolved_blockers": [
+          "legal_review_absent",
+          "tax_review_absent",
+          "parliamentary_counsel_review_absent"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say legal review remains required."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because no legal advice, tax advice, constitutional review, administrative-law review, or Parliamentary Counsel review has occurred."
+      },
+      {
+        "affected_artifacts": [
+          "reports/legislative_architecture.json",
+          "reports/administrative_compliance_workflow.json",
+          "reports/public_data_pilot.json"
+        ],
+        "current_project_response": "The project keeps actual_tax_payable_determined false and preserves non-claim warnings.",
+        "evidence_needed_to_resolve": [
+          "tax law review",
+          "legal authority",
+          "authorised data process"
+        ],
+        "future_build_route": [
+          "external legal and tax review"
+        ],
+        "objection_category": "legal_and_tax_limitations",
+        "objection_id": "obj_031_no_tax_payable_determination",
+        "objection_title": "No tax-payable determination can be made",
+        "reviewer_concern": "A reviewer may object that outputs might be mistaken for tax payable.",
+        "severity": "critical",
+        "status": "requires_legal_review",
+        "unresolved_blockers": [
+          "no_operative_law",
+          "no_taxpayer_data",
+          "no_firm_liability_logic_change"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say no actual tax payable is determined."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because examples and reports can look numerical, but no operative law or real data exists."
+      },
+      {
+        "affected_artifacts": [
+          "reports/legislative_architecture.json",
+          "reports/transfer_pricing_results.json"
+        ],
+        "current_project_response": "The project treats these as prototype concepts and not operative law.",
+        "evidence_needed_to_resolve": [
+          "legal drafting instructions",
+          "tax review",
+          "Parliamentary Counsel review"
+        ],
+        "future_build_route": [
+          "external legal and tax review"
+        ],
+        "objection_category": "legal_and_tax_limitations",
+        "objection_id": "obj_032_anti_avoidance_drafting_review",
+        "objection_title": "Anti-avoidance and attribution rules require legal drafting review",
+        "reviewer_concern": "A reviewer may object that anti-avoidance and attribution concepts are placeholder-only until legally drafted.",
+        "severity": "high",
+        "status": "requires_legal_review",
+        "unresolved_blockers": [
+          "no_legal_drafting",
+          "no_tax_base_definition",
+          "review_rights_placeholder"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say legal drafting review is required before any operative interpretation."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_operative_law",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because attribution, transfer pricing, and avoidance provisions are legal constructs requiring precise drafting and safeguards."
+      },
+      {
+        "affected_artifacts": [
+          "reports/investment_guardrails.json",
+          "reports/public_data_pilot.json"
+        ],
+        "current_project_response": "The project labels incidence material as guardrails and limitations, not validation.",
+        "evidence_needed_to_resolve": [
+          "economic incidence study",
+          "public and restricted data review",
+          "external economic methods review"
+        ],
+        "future_build_route": [
+          "external economic review"
+        ],
+        "objection_category": "economic_incidence_limitations",
+        "objection_id": "obj_033_economic_incidence_not_proven",
+        "objection_title": "Economic incidence is not proven",
+        "reviewer_concern": "A reviewer may object that incidence is asserted structurally but not proven empirically.",
+        "severity": "critical",
+        "status": "requires_economic_review",
+        "unresolved_blockers": [
+          "no_incidence_estimate",
+          "no_pass_through_data",
+          "no_economic_review"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say economic incidence remains an unresolved review issue."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because no observed incidence data, pass-through model, or external economic review is included."
+      },
+      {
+        "affected_artifacts": [
+          "reports/behavioural_response_simulation.json",
+          "reports/investment_guardrails.json"
+        ],
+        "current_project_response": "The project keeps pass-through assumptions as placeholders or guardrails.",
+        "evidence_needed_to_resolve": [
+          "economic methods review",
+          "firm behaviour data",
+          "incidence modelling"
+        ],
+        "future_build_route": [
+          "external economic review"
+        ],
+        "objection_category": "economic_incidence_limitations",
+        "objection_id": "obj_034_pass_through_not_estimated",
+        "objection_title": "Employer pass-through behaviour is not estimated",
+        "reviewer_concern": "A reviewer may object that employer pass-through behaviour is not empirically estimated.",
+        "severity": "high",
+        "status": "requires_economic_review",
+        "unresolved_blockers": [
+          "no_pass_through_estimate",
+          "no_firm_behaviour_data",
+          "no_market_model"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say pass-through is not estimated."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because prices, wages, investment, and employment channels require data and modelling not present here."
+      },
+      {
+        "affected_artifacts": [
+          "reports/behavioural_response_simulation.json",
+          "reports/public_data_pilot.json"
+        ],
+        "current_project_response": "The project labels displacement assumptions as calibration blockers.",
+        "evidence_needed_to_resolve": [
+          "labour displacement data",
+          "sector review",
+          "economic/statistical review"
+        ],
+        "future_build_route": [
+          "future calibration planning",
+          "external review"
+        ],
+        "objection_category": "economic_incidence_limitations",
+        "objection_id": "obj_035_labour_displacement_not_calibrated",
+        "objection_title": "Labour displacement assumptions are not calibrated",
+        "reviewer_concern": "A reviewer may object that labour displacement assumptions are central but not calibrated.",
+        "severity": "critical",
+        "status": "unresolved",
+        "unresolved_blockers": [
+          "no_displacement_dataset",
+          "no_sector_substitution_measure",
+          "no_behavioural_calibration"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say displacement assumptions remain unresolved."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because the public pilot does not observe displacement or substitution pathways."
+      },
+      {
+        "affected_artifacts": [
+          "reports/fiscal_trajectory.json",
+          "reports/transition_funding.json",
+          "reports/public_data_pilot.json"
+        ],
+        "current_project_response": "The project labels fiscal material as prototype-only and not Treasury modelling or PBO costing.",
+        "evidence_needed_to_resolve": [
+          "Treasury methods review",
+          "PBO-style costing process",
+          "implementation-cost evidence"
+        ],
+        "future_build_route": [
+          "external Treasury methods review"
+        ],
+        "objection_category": "economic_incidence_limitations",
+        "objection_id": "obj_036_fiscal_sufficiency_not_proven",
+        "objection_title": "Revenue neutrality or fiscal sufficiency is not proven",
+        "reviewer_concern": "A reviewer may object that fiscal trajectory outputs could be overread as sufficiency analysis.",
+        "severity": "critical",
+        "status": "requires_economic_review",
+        "unresolved_blockers": [
+          "no_real_revenue_model",
+          "no_costing_review",
+          "no_transition_cost_evidence"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say fiscal sufficiency is not proven."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_pbo_costing",
+          "not_treasury_modelling",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because no real revenue model, costing, or Treasury/PBO review exists."
+      },
+      {
+        "affected_artifacts": [
+          "simulator/pages/29_Public_Data_Evidence_Map.py",
+          "reports/public_data_evidence_map.json"
+        ],
+        "current_project_response": "The project uses explicit warning text and avoids readiness, calibration, and validation scores.",
+        "evidence_needed_to_resolve": [
+          "hostile UI review",
+          "reviewer wording review",
+          "non-claim prominence checks"
+        ],
+        "future_build_route": [
+          "Build 30 handoff",
+          "hostile/red-team review"
+        ],
+        "objection_category": "dashboard_interpretation_risk",
+        "objection_id": "obj_037_dashboard_cards_mistaken_validation",
+        "objection_title": "Dashboard cards may be mistaken for validation",
+        "reviewer_concern": "A reviewer may object that dashboard cards and tables make outputs look more settled than they are.",
+        "severity": "high",
+        "status": "partially_mitigated",
+        "unresolved_blockers": [
+          "ui_overread_risk",
+          "summary_card_risk",
+          "non_claim_prominence_review_needed"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say dashboard content is reviewer navigation only."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because UI summaries can be overread even when warnings are present."
+      },
+      {
+        "affected_artifacts": [
+          "reports/public_data_consistency_audit.json",
+          "simulator/pages/29_Public_Data_Evidence_Map.py"
+        ],
+        "current_project_response": "The project states reconciled means internally consistent only.",
+        "evidence_needed_to_resolve": [
+          "wording review",
+          "external source check process",
+          "reviewer handoff note"
+        ],
+        "future_build_route": [
+          "Build 30 handoff"
+        ],
+        "objection_category": "reviewer_misinterpretation_risk",
+        "objection_id": "obj_038_reconciled_mistaken_verified",
+        "objection_title": "Reconciled may be mistaken for an external source check",
+        "reviewer_concern": "A reviewer may object that reconciled sounds like verified.",
+        "severity": "high",
+        "status": "partially_mitigated",
+        "unresolved_blockers": [
+          "wording_overread_risk",
+          "external_review_not_completed",
+          "source_values_not_externally_checked"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say reconciled means internal consistency only."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because reconciliation language can imply more assurance than internal consistency."
+      },
+      {
+        "affected_artifacts": [
+          "reports/source_locator_verification_pack.json",
+          "simulator/pages/29_Public_Data_Evidence_Map.py"
+        ],
+        "current_project_response": "The project states ready for manual review does not mean reviewed.",
+        "evidence_needed_to_resolve": [
+          "reviewer checklist execution",
+          "signed review notes outside repo",
+          "terminology review"
+        ],
+        "future_build_route": [
+          "Build 30 handoff"
+        ],
+        "objection_category": "reviewer_misinterpretation_risk",
+        "objection_id": "obj_039_ready_manual_review_mistaken_reviewed",
+        "objection_title": "Ready for manual review may be mistaken for reviewed",
+        "reviewer_concern": "A reviewer may object that ready_for_manual_review could be mistaken for completed review.",
+        "severity": "high",
+        "status": "partially_mitigated",
+        "unresolved_blockers": [
+          "manual_review_not_completed",
+          "external_check_absent",
+          "wording_overread_risk"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say locator metadata is sufficient for a reviewer to inspect manually."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because readiness language can be overread as a completed status."
+      },
+      {
+        "affected_artifacts": [
+          "reports/source_locator_verification_pack.json",
+          "docs/source_locator_verification_pack.md"
+        ],
+        "current_project_response": "The project keeps external_source_verification_claimed false.",
+        "evidence_needed_to_resolve": [
+          "manual source review",
+          "documented source check",
+          "independent reviewer note"
+        ],
+        "future_build_route": [
+          "external review process",
+          "Build 30 handoff"
+        ],
+        "objection_category": "non_claim_boundary_risk",
+        "objection_id": "obj_040_locator_metadata_not_source_verification",
+        "objection_title": "Source locator metadata may be mistaken for source verification",
+        "reviewer_concern": "A reviewer may object that locators can be confused with source verification.",
+        "severity": "high",
+        "status": "partially_mitigated",
+        "unresolved_blockers": [
+          "external_source_check_not_completed",
+          "manual_review_needed",
+          "locator_not_attestation"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say source locator metadata is recorded for manual review."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because a precise locator improves traceability but does not prove the extracted value was checked by an independent reviewer."
+      },
+      {
+        "affected_artifacts": [
+          "reports/public_data_evidence_map.json",
+          "reports/source_locator_verification_pack.json",
+          "reports/red_team_reviewer_objections.json"
+        ],
+        "current_project_response": "The project repeats non-claim boundaries and keeps readiness score creation false.",
+        "evidence_needed_to_resolve": [
+          "external review findings",
+          "policy design review",
+          "legal/economic/statistical assessment"
+        ],
+        "future_build_route": [
+          "Build 30 handoff",
+          "external review"
+        ],
+        "objection_category": "dashboard_interpretation_risk",
+        "objection_id": "obj_041_evidence_maps_not_policy_readiness",
+        "objection_title": "Reviewer evidence maps may be mistaken for policy readiness",
+        "reviewer_concern": "A reviewer may object that organised reviewer material could make the project look ready for policy use.",
+        "severity": "critical",
+        "status": "requires_external_review",
+        "unresolved_blockers": [
+          "policy_readiness_absent",
+          "external_review_not_completed",
+          "legal_economic_statistical_review_required"
+        ],
+        "what_the_project_can_say": [
+          "The repo can say reviewer materials organise weaknesses and inspection routes only."
+        ],
+        "what_the_project_must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "why_the_concern_is_valid": "The concern is valid because coherent documentation can be mistaken for readiness even where evidence gaps remain."
+      }
+    ],
+    "pack_id": "carsf_v1_5_red_team_reviewer_objections_pack",
+    "pack_name": "CARSF V1.5 Red-Team Reviewer Objections Pack",
+    "responses": [
+      {
+        "can_say": [
+          "The repo can say a small set of public aggregate records is present for reviewer inspection only."
+        ],
+        "current_project_response": "The project labels the pilot as a small public aggregate-data pilot and keeps counts visible.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_001_small_public_extract_set"
+      },
+      {
+        "can_say": [
+          "The repo can say public aggregates may support limited sanity checks and placeholder transparency."
+        ],
+        "current_project_response": "The project keeps real_calibration_completed false and describes the pilot as sanity-check-only or placeholder-anchor-only.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_002_public_extracts_not_calibration"
+      },
+      {
+        "can_say": [
+          "The repo can say the Fair Work value is a public wage anchor with an internal arithmetic check."
+        ],
+        "current_project_response": "The project uses the value only as a placeholder anchor and arithmetic-check card, not as a labour-cost calibration.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_003_minimum_wage_not_labour_costs"
+      },
+      {
+        "can_say": [
+          "The repo can say public ATO records are source-locator context only."
+        ],
+        "current_project_response": "The project states the extract is context only and must not be used for firm-level CARSF liability.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_firm_liability_estimate",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_004_ato_transparency_not_liability"
+      },
+      {
+        "can_say": [
+          "The repo can say aggregate tax statistics are not AI displacement evidence."
+        ],
+        "current_project_response": "The project treats these records as source-locator context and not as displacement evidence.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_005_ato_statistics_not_ai_displacement"
+      },
+      {
+        "can_say": [
+          "The repo can say a public fiscal source locator is recorded for context."
+        ],
+        "current_project_response": "The project labels Budget data as fiscal context only and not Treasury modelling.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_treasury_modelling",
+          "not_validation"
+        ],
+        "objection_id": "obj_006_budget_aggregates_not_fiscal_impact"
+      },
+      {
+        "can_say": [
+          "The repo can say the public setting is an anchor for reviewer inspection only."
+        ],
+        "current_project_response": "The project uses the setting as a public threshold anchor only.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_ato_guidance",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_007_super_settings_not_employer_behaviour"
+      },
+      {
+        "can_say": [
+          "The repo can say HELP/HECS is a source reference or placeholder anchor only."
+        ],
+        "current_project_response": "The project marks the HELP/HECS row as source-reference-only unless exact public values are loaded by a later build.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_008_help_thresholds_not_household_pressure"
+      },
+      {
+        "can_say": [
+          "The repo can say state payroll-tax references identify future review needs only."
+        ],
+        "current_project_response": "The project keeps payroll tax as source-reference-only or placeholder-anchor-only.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_009_payroll_tax_state_variation"
+      },
+      {
+        "can_say": [
+          "The repo can say source-reference-only rows are not loaded public data."
+        ],
+        "current_project_response": "The project separates source-reference-only rows and excludes them from loaded public data counts.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_010_source_reference_only_not_loaded"
+      },
+      {
+        "can_say": [
+          "The repo can say placeholders are transparently labelled and remain non-calibrated."
+        ],
+        "current_project_response": "The project labels placeholders as realistic_placeholder and not real data.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_011_placeholders_remain_placeholders"
+      },
+      {
+        "can_say": [
+          "The repo can say anchors clarify provenance but do not complete calibration."
+        ],
+        "current_project_response": "The project keeps real_calibration_completed false and states anchor-only status.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_012_placeholder_anchors_not_calibration"
+      },
+      {
+        "can_say": [
+          "The repo can say public anchors improve inspectability."
+        ],
+        "current_project_response": "The project describes anchors as provenance aids and keeps validation_claimed false.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_013_public_anchors_not_validated"
+      },
+      {
+        "can_say": [
+          "The repo can say household examples are synthetic-only."
+        ],
+        "current_project_response": "The project keeps household scenarios synthetic and warns against population-level estimate overread.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_population_estimate",
+          "not_validation"
+        ],
+        "objection_id": "obj_014_household_scenarios_synthetic"
+      },
+      {
+        "can_say": [
+          "The repo can say weighting controls are display controls only."
+        ],
+        "current_project_response": "The project labels weighting as prototype-only and not population inference.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_population_estimate",
+          "not_validation"
+        ],
+        "objection_id": "obj_015_weighted_subgroups_nonrepresentative"
+      },
+      {
+        "can_say": [
+          "The repo can say taxpayer data is not loaded and remains forbidden for repo use."
+        ],
+        "current_project_response": "The project explicitly forbids taxpayer-level ATO data in the repository.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_016_no_taxpayer_ato_data"
+      },
+      {
+        "can_say": [
+          "The repo can say no firm-confidential data is present."
+        ],
+        "current_project_response": "The project forbids firm-confidential records and does not modify firm-level liability logic.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_017_no_firm_confidential_data"
+      },
+      {
+        "can_say": [
+          "The repo can say DSS and Services Australia records are not loaded."
+        ],
+        "current_project_response": "The project treats welfare interactions as placeholder-only and blocked by restricted data.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_018_no_dss_services_records"
+      },
+      {
+        "can_say": [
+          "The repo can say no HILDA microdata is loaded."
+        ],
+        "current_project_response": "The project forbids HILDA microdata in the repo and keeps household outputs synthetic.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_019_no_licensed_longitudinal_microdata"
+      },
+      {
+        "can_say": [
+          "The repo can say ABS DataLab microdata is not present."
+        ],
+        "current_project_response": "The project forbids DataLab microdata and uses only safe public aggregate/source-reference records.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_020_no_abs_restricted_lab_microdata"
+      },
+      {
+        "can_say": [
+          "The repo can say calibration remains blocked without authorised external access."
+        ],
+        "current_project_response": "The project preserves blockers and does not hide them behind public-data pilot outputs.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_021_restricted_blockers_prevent_calibration"
+      },
+      {
+        "can_say": [
+          "The repo can say the pilot supports sanity-check-only and placeholder-anchor-only inspection."
+        ],
+        "current_project_response": "The project uses explicit claim-level labels and false flags.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_022_sanity_check_only"
+      },
+      {
+        "can_say": [
+          "The repo can say no statistical inference is performed."
+        ],
+        "current_project_response": "The project keeps statistical_validation_claimed false and avoids population-level inference.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_023_no_statistical_inference"
+      },
+      {
+        "can_say": [
+          "The repo can say uncertainty outputs are placeholder ranges only."
+        ],
+        "current_project_response": "The project states no confidence intervals or population-level estimates are created.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_confidence_interval",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_024_no_confidence_intervals"
+      },
+      {
+        "can_say": [
+          "The repo can say behavioural response material is not an elasticity estimate."
+        ],
+        "current_project_response": "The project labels behavioural outputs as simulation/prototype only.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_025_no_behavioural_elasticity"
+      },
+      {
+        "can_say": [
+          "The repo can say no causal relationship is established."
+        ],
+        "current_project_response": "The project avoids causal claims and keeps outputs as inspection aids.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_026_no_causal_relationship"
+      },
+      {
+        "can_say": [
+          "The repo can say external validation has not occurred."
+        ],
+        "current_project_response": "The project keeps validation_claimed false and frames outputs as reviewer materials.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_027_no_external_validation"
+      },
+      {
+        "can_say": [
+          "The repo can say legislative material is a non-operative architecture sketch."
+        ],
+        "current_project_response": "The project labels legislative architecture as a skeleton and non-operative.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_operative_law",
+          "not_validation"
+        ],
+        "objection_id": "obj_028_legislative_architecture_non_operative"
+      },
+      {
+        "can_say": [
+          "The repo can say workflow material is a prototype shell only."
+        ],
+        "current_project_response": "The project states administrative workflow is non-operative and not ATO guidance.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_ato_guidance",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_029_admin_workflow_not_ato_guidance"
+      },
+      {
+        "can_say": [
+          "The repo can say legal review remains required."
+        ],
+        "current_project_response": "The project keeps legal_sufficiency_claimed false.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_030_no_legal_sufficiency_review"
+      },
+      {
+        "can_say": [
+          "The repo can say no actual tax payable is determined."
+        ],
+        "current_project_response": "The project keeps actual_tax_payable_determined false and preserves non-claim warnings.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_031_no_tax_payable_determination"
+      },
+      {
+        "can_say": [
+          "The repo can say legal drafting review is required before any operative interpretation."
+        ],
+        "current_project_response": "The project treats these as prototype concepts and not operative law.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_operative_law",
+          "not_validation"
+        ],
+        "objection_id": "obj_032_anti_avoidance_drafting_review"
+      },
+      {
+        "can_say": [
+          "The repo can say economic incidence remains an unresolved review issue."
+        ],
+        "current_project_response": "The project labels incidence material as guardrails and limitations, not validation.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_033_economic_incidence_not_proven"
+      },
+      {
+        "can_say": [
+          "The repo can say pass-through is not estimated."
+        ],
+        "current_project_response": "The project keeps pass-through assumptions as placeholders or guardrails.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_034_pass_through_not_estimated"
+      },
+      {
+        "can_say": [
+          "The repo can say displacement assumptions remain unresolved."
+        ],
+        "current_project_response": "The project labels displacement assumptions as calibration blockers.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_035_labour_displacement_not_calibrated"
+      },
+      {
+        "can_say": [
+          "The repo can say fiscal sufficiency is not proven."
+        ],
+        "current_project_response": "The project labels fiscal material as prototype-only and not Treasury modelling or PBO costing.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_pbo_costing",
+          "not_treasury_modelling",
+          "not_validation"
+        ],
+        "objection_id": "obj_036_fiscal_sufficiency_not_proven"
+      },
+      {
+        "can_say": [
+          "The repo can say dashboard content is reviewer navigation only."
+        ],
+        "current_project_response": "The project uses explicit warning text and avoids readiness, calibration, and validation scores.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_037_dashboard_cards_mistaken_validation"
+      },
+      {
+        "can_say": [
+          "The repo can say reconciled means internal consistency only."
+        ],
+        "current_project_response": "The project states reconciled means internally consistent only.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_038_reconciled_mistaken_verified"
+      },
+      {
+        "can_say": [
+          "The repo can say locator metadata is sufficient for a reviewer to inspect manually."
+        ],
+        "current_project_response": "The project states ready for manual review does not mean reviewed.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_039_ready_manual_review_mistaken_reviewed"
+      },
+      {
+        "can_say": [
+          "The repo can say source locator metadata is recorded for manual review."
+        ],
+        "current_project_response": "The project keeps external_source_verification_claimed false.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_040_locator_metadata_not_source_verification"
+      },
+      {
+        "can_say": [
+          "The repo can say reviewer materials organise weaknesses and inspection routes only."
+        ],
+        "current_project_response": "The project repeats non-claim boundaries and keeps readiness score creation false.",
+        "must_not_claim": [
+          "not_actual_tax_payable",
+          "not_approval",
+          "not_calibration_completed",
+          "not_external_source_verification",
+          "not_firm_level_liability_change",
+          "not_legal_sufficiency",
+          "not_official_status",
+          "not_operational_readiness",
+          "not_validation"
+        ],
+        "objection_id": "obj_041_evidence_maps_not_policy_readiness"
+      }
+    ],
+    "severity_summaries": [
+      {
+        "count": 19,
+        "severity": "critical"
+      },
+      {
+        "count": 18,
+        "severity": "high"
+      },
+      {
+        "count": 0,
+        "severity": "informational"
+      },
+      {
+        "count": 0,
+        "severity": "low"
+      },
+      {
+        "count": 4,
+        "severity": "medium"
+      }
+    ],
+    "status": "red_team_reviewer_objections_pack_only",
+    "summary": {
+      "acknowledged_objections": 0,
+      "actual_tax_payable_determined": false,
+      "approval_claimed": false,
+      "blocked_by_restricted_data_objections": 7,
+      "calibration_limitations_visible": true,
+      "cannot_be_resolved_inside_repo_objections": 0,
+      "categories_covered": 13,
+      "critical_objections": 19,
+      "dashboard_misinterpretation_risks_visible": true,
+      "economic_review_required_objections": 5,
+      "external_review_required_objections": 4,
+      "external_source_verification_claimed": false,
+      "firm_level_liability_logic_modified": false,
+      "forbidden_claim_findings": 0,
+      "future_evidence_needs_total": 108,
+      "high_objections": 18,
+      "informational_objections": 0,
+      "legal_limitations_visible": true,
+      "legal_review_required_objections": 5,
+      "legal_sufficiency_claimed": false,
+      "low_objections": 0,
+      "medium_objections": 4,
+      "new_data_loaded": false,
+      "objections_acknowledged": true,
+      "official_status_claimed": false,
+      "operational_readiness_claimed": false,
+      "partially_mitigated_objections": 10,
+      "real_calibration_completed": false,
+      "red_team_pack_created": true,
+      "statistical_limitations_visible": true,
+      "statistical_review_required_objections": 5,
+      "total_categories": 13,
+      "total_objections": 41,
+      "unresolved_blockers_total": 111,
+      "unresolved_blockers_visible": true,
+      "unresolved_objections": 5,
+      "validation_claimed": false
+    },
+    "unresolved_blockers": [
+      {
+        "affected_objection_ids": [
+          "obj_020_no_abs_restricted_lab_microdata"
+        ],
+        "blocker": "abs_restricted_lab_microdata_forbidden"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_013_public_anchors_not_validated"
+        ],
+        "blocker": "anchor_relevance_unreviewed"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_016_no_taxpayer_ato_data"
+        ],
+        "blocker": "authorised_access_required"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_022_sanity_check_only"
+        ],
+        "blocker": "claim_level_overread"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_010_source_reference_only_not_loaded",
+          "obj_022_sanity_check_only"
+        ],
+        "blocker": "dashboard_interpretation_risk"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_018_no_dss_services_records"
+        ],
+        "blocker": "eligibility_law_review_required"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_039_ready_manual_review_mistaken_reviewed"
+        ],
+        "blocker": "external_check_absent"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_027_no_external_validation",
+          "obj_038_reconciled_mistaken_verified",
+          "obj_041_evidence_maps_not_policy_readiness"
+        ],
+        "blocker": "external_review_not_completed"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_011_placeholders_remain_placeholders",
+          "obj_021_restricted_blockers_prevent_calibration"
+        ],
+        "blocker": "external_review_required"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_040_locator_metadata_not_source_verification"
+        ],
+        "blocker": "external_source_check_not_completed"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_017_no_firm_confidential_data"
+        ],
+        "blocker": "firm_confidential_data_forbidden"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_010_source_reference_only_not_loaded"
+        ],
+        "blocker": "future_extract_required"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_019_no_licensed_longitudinal_microdata"
+        ],
+        "blocker": "hilda_not_loaded"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_027_no_external_validation"
+        ],
+        "blocker": "independent_validation_absent"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_041_evidence_maps_not_policy_readiness"
+        ],
+        "blocker": "legal_economic_statistical_review_required"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_030_no_legal_sufficiency_review"
+        ],
+        "blocker": "legal_review_absent"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_028_legislative_architecture_non_operative"
+        ],
+        "blocker": "legal_sufficiency_absent"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_019_no_licensed_longitudinal_microdata"
+        ],
+        "blocker": "licensed_microdata_forbidden"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_040_locator_metadata_not_source_verification"
+        ],
+        "blocker": "locator_not_attestation"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_040_locator_metadata_not_source_verification"
+        ],
+        "blocker": "manual_review_needed"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_039_ready_manual_review_mistaken_reviewed"
+        ],
+        "blocker": "manual_review_not_completed"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_003_minimum_wage_not_labour_costs"
+        ],
+        "blocker": "minimum_wage_not_representative"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_005_ato_statistics_not_ai_displacement"
+        ],
+        "blocker": "no_ai_adoption_dataset"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_029_admin_workflow_not_ato_guidance"
+        ],
+        "blocker": "no_ato_review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_035_labour_displacement_not_calibrated"
+        ],
+        "blocker": "no_behavioural_calibration"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_006_budget_aggregates_not_fiscal_impact"
+        ],
+        "blocker": "no_behavioural_fiscal_integration"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_002_public_extracts_not_calibration"
+        ],
+        "blocker": "no_calibration_method_review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_022_sanity_check_only"
+        ],
+        "blocker": "no_calibration_protocol"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_012_placeholder_anchors_not_calibration"
+        ],
+        "blocker": "no_calibration_target"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_005_ato_statistics_not_ai_displacement"
+        ],
+        "blocker": "no_causal_design"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_026_no_causal_relationship"
+        ],
+        "blocker": "no_causal_evidence"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_007_super_settings_not_employer_behaviour"
+        ],
+        "blocker": "no_compliance_data"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_024_no_confidence_intervals"
+        ],
+        "blocker": "no_confidence_interval_method"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_036_fiscal_sufficiency_not_proven"
+        ],
+        "blocker": "no_costing_review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_026_no_causal_relationship"
+        ],
+        "blocker": "no_counterfactual"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_005_ato_statistics_not_ai_displacement"
+        ],
+        "blocker": "no_counterfactual_model"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_035_labour_displacement_not_calibrated"
+        ],
+        "blocker": "no_displacement_dataset"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_025_no_behavioural_elasticity"
+        ],
+        "blocker": "no_econometric_review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_033_economic_incidence_not_proven"
+        ],
+        "blocker": "no_economic_review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_025_no_behavioural_elasticity"
+        ],
+        "blocker": "no_elasticity_estimation"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_007_super_settings_not_employer_behaviour"
+        ],
+        "blocker": "no_employer_behaviour_data"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_009_payroll_tax_state_variation"
+        ],
+        "blocker": "no_employer_payroll_data"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_017_no_firm_confidential_data"
+        ],
+        "blocker": "no_entity_attribution_evidence"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_024_no_confidence_intervals"
+        ],
+        "blocker": "no_estimation_error"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_012_placeholder_anchors_not_calibration"
+        ],
+        "blocker": "no_estimation_method"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_023_no_statistical_inference"
+        ],
+        "blocker": "no_estimator"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_012_placeholder_anchors_not_calibration"
+        ],
+        "blocker": "no_external_review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_034_pass_through_not_estimated"
+        ],
+        "blocker": "no_firm_behaviour_data"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_004_ato_transparency_not_liability"
+        ],
+        "blocker": "no_firm_level_confidential_data"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_031_no_tax_payable_determination"
+        ],
+        "blocker": "no_firm_liability_logic_change"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_001_small_public_extract_set"
+        ],
+        "blocker": "no_full_public_dataset_load"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_008_help_thresholds_not_household_pressure",
+          "obj_014_household_scenarios_synthetic"
+        ],
+        "blocker": "no_household_microdata"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_026_no_causal_relationship"
+        ],
+        "blocker": "no_identification_strategy"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_009_payroll_tax_state_variation",
+          "obj_033_economic_incidence_not_proven"
+        ],
+        "blocker": "no_incidence_estimate"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_008_help_thresholds_not_household_pressure"
+        ],
+        "blocker": "no_individual_debt_data"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_032_anti_avoidance_drafting_review"
+        ],
+        "blocker": "no_legal_drafting"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_017_no_firm_confidential_data"
+        ],
+        "blocker": "no_liability_estimate"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_004_ato_transparency_not_liability"
+        ],
+        "blocker": "no_liability_logic_change"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_019_no_licensed_longitudinal_microdata"
+        ],
+        "blocker": "no_longitudinal_household_evidence"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_034_pass_through_not_estimated"
+        ],
+        "blocker": "no_market_model"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_002_public_extracts_not_calibration"
+        ],
+        "blocker": "no_microdata"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_020_no_abs_restricted_lab_microdata"
+        ],
+        "blocker": "no_microdata_output_clearance"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_029_admin_workflow_not_ato_guidance"
+        ],
+        "blocker": "no_notice_or_enforcement_power"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_025_no_behavioural_elasticity"
+        ],
+        "blocker": "no_observed_behavioural_data"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_029_admin_workflow_not_ato_guidance"
+        ],
+        "blocker": "no_operational_authority"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_028_legislative_architecture_non_operative",
+          "obj_031_no_tax_payable_determination"
+        ],
+        "blocker": "no_operative_law"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_028_legislative_architecture_non_operative"
+        ],
+        "blocker": "no_parliamentary_counsel_review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_033_economic_incidence_not_proven"
+        ],
+        "blocker": "no_pass_through_data"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_034_pass_through_not_estimated"
+        ],
+        "blocker": "no_pass_through_estimate"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_020_no_abs_restricted_lab_microdata"
+        ],
+        "blocker": "no_population_estimate"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_015_weighted_subgroups_nonrepresentative"
+        ],
+        "blocker": "no_population_frame"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_014_household_scenarios_synthetic"
+        ],
+        "blocker": "no_population_weights"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_036_fiscal_sufficiency_not_proven"
+        ],
+        "blocker": "no_real_revenue_model"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_006_budget_aggregates_not_fiscal_impact"
+        ],
+        "blocker": "no_revenue_model_validation"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_024_no_confidence_intervals"
+        ],
+        "blocker": "no_sampling_distribution"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_023_no_statistical_inference"
+        ],
+        "blocker": "no_sampling_frame"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_035_labour_displacement_not_calibrated"
+        ],
+        "blocker": "no_sector_substitution_measure"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_015_weighted_subgroups_nonrepresentative"
+        ],
+        "blocker": "no_statistical_validation"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_015_weighted_subgroups_nonrepresentative"
+        ],
+        "blocker": "no_survey_weight_design"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_032_anti_avoidance_drafting_review"
+        ],
+        "blocker": "no_tax_base_definition"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_004_ato_transparency_not_liability"
+        ],
+        "blocker": "no_tax_base_review"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_031_no_tax_payable_determination"
+        ],
+        "blocker": "no_taxpayer_data"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_036_fiscal_sufficiency_not_proven"
+        ],
+        "blocker": "no_transition_cost_evidence"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_006_budget_aggregates_not_fiscal_impact"
+        ],
+        "blocker": "no_treasury_costing"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_023_no_statistical_inference"
+        ],
+        "blocker": "no_uncertainty_model"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_010_source_reference_only_not_loaded"
+        ],
+        "blocker": "no_value_loaded"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_007_super_settings_not_employer_behaviour"
+        ],
+        "blocker": "no_wage_offset_estimate"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_014_household_scenarios_synthetic",
+          "obj_018_no_dss_services_records"
+        ],
+        "blocker": "no_welfare_records"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_037_dashboard_cards_mistaken_validation"
+        ],
+        "blocker": "non_claim_prominence_review_needed"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_003_minimum_wage_not_labour_costs"
+        ],
+        "blocker": "on_costs_not_modelled"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_030_no_legal_sufficiency_review"
+        ],
+        "blocker": "parliamentary_counsel_review_absent"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_011_placeholders_remain_placeholders"
+        ],
+        "blocker": "placeholder_not_replaced"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_041_evidence_maps_not_policy_readiness"
+        ],
+        "blocker": "policy_readiness_absent"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_016_no_taxpayer_ato_data"
+        ],
+        "blocker": "privacy_and_secrecy_review_required"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_018_no_dss_services_records"
+        ],
+        "blocker": "restricted_access_required"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_011_placeholders_remain_placeholders",
+          "obj_013_public_anchors_not_validated",
+          "obj_021_restricted_blockers_prevent_calibration"
+        ],
+        "blocker": "restricted_data_missing"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_002_public_extracts_not_calibration"
+        ],
+        "blocker": "restricted_data_required"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_001_small_public_extract_set"
+        ],
+        "blocker": "restricted_data_required_for_calibration"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_032_anti_avoidance_drafting_review"
+        ],
+        "blocker": "review_rights_placeholder"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_003_minimum_wage_not_labour_costs"
+        ],
+        "blocker": "sector_wage_data_missing"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_021_restricted_blockers_prevent_calibration"
+        ],
+        "blocker": "secure_environment_required"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_001_small_public_extract_set"
+        ],
+        "blocker": "small_public_extract_set"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_008_help_thresholds_not_household_pressure"
+        ],
+        "blocker": "source_reference_only"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_027_no_external_validation",
+          "obj_038_reconciled_mistaken_verified"
+        ],
+        "blocker": "source_values_not_externally_checked"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_009_payroll_tax_state_variation"
+        ],
+        "blocker": "state_variation"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_037_dashboard_cards_mistaken_validation"
+        ],
+        "blocker": "summary_card_risk"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_030_no_legal_sufficiency_review"
+        ],
+        "blocker": "tax_review_absent"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_016_no_taxpayer_ato_data"
+        ],
+        "blocker": "taxpayer_data_forbidden"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_037_dashboard_cards_mistaken_validation"
+        ],
+        "blocker": "ui_overread_risk"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_013_public_anchors_not_validated"
+        ],
+        "blocker": "validation_absent"
+      },
+      {
+        "affected_objection_ids": [
+          "obj_038_reconciled_mistaken_verified",
+          "obj_039_ready_manual_review_mistaken_reviewed"
+        ],
+        "blocker": "wording_overread_risk"
+      }
+    ]
+  },
+  "summary": {
+    "acknowledged_objections": 0,
+    "actual_tax_payable_determined": false,
+    "approval_claimed": false,
+    "blocked_by_restricted_data_objections": 7,
+    "calibration_limitations_visible": true,
+    "cannot_be_resolved_inside_repo_objections": 0,
+    "categories_covered": 13,
+    "critical_objections": 19,
+    "dashboard_misinterpretation_risks_visible": true,
+    "economic_review_required_objections": 5,
+    "external_review_required_objections": 4,
+    "external_source_verification_claimed": false,
+    "firm_level_liability_logic_modified": false,
+    "forbidden_claim_findings": 0,
+    "future_evidence_needs_total": 108,
+    "high_objections": 18,
+    "informational_objections": 0,
+    "legal_limitations_visible": true,
+    "legal_review_required_objections": 5,
+    "legal_sufficiency_claimed": false,
+    "low_objections": 0,
+    "medium_objections": 4,
+    "new_data_loaded": false,
+    "objections_acknowledged": true,
+    "official_status_claimed": false,
+    "operational_readiness_claimed": false,
+    "partially_mitigated_objections": 10,
+    "real_calibration_completed": false,
+    "red_team_pack_created": true,
+    "statistical_limitations_visible": true,
+    "statistical_review_required_objections": 5,
+    "total_categories": 13,
+    "total_objections": 41,
+    "unresolved_blockers_total": 111,
+    "unresolved_blockers_visible": true,
+    "unresolved_objections": 5,
+    "validation_claimed": false
+  }
+}

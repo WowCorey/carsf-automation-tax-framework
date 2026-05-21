@@ -1,0 +1,151 @@
+pack_id: carsf_v1_5_red_team_reviewer_objections_pack
+pack_name: CARSF V1.5 Red-Team Reviewer Objections Pack
+status: red_team_reviewer_objections_pack_only
+non_claims:
+  - This is a red-team reviewer objections pack only. No new data is loaded by this build. This does not externally verify source values, does not scrape public sources, and does not call external APIs. Objections being acknowledged does not mean they are resolved. Partially mitigated does not mean solved. This is not calibration; calibration has not been completed. Public data does not prove the model works. Realistic placeholders remain placeholders, realistic placeholders are not real data, realistic placeholders are not calibrated, source references are not loaded datasets, and restricted-data requirements are not data access. This is not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable, does not use taxpayer-level data, firm-level confidential data, household microdata, ABS DataLab, HILDA microdata, DSS/Services Australia records, ATO taxpayer records, Treasury/PBO confidential material, or restricted government data, and does not modify firm-level CARSF liability. It only packages likely reviewer objections and honest responses.
+  - This pack acknowledges weaknesses and does not claim objections are resolved.
+  - Every response is an objection-handling note only, not a defence brief, validation result, approval, or calibration.
+  - The pack adds no public values and uses only existing Build 26-29.5 artefacts.
+input_artifacts:
+  - data/calibration/real_data_feasibility_map.yaml
+  - reports/real_data_feasibility.json
+  - reports/public_data_pilot.json
+  - reports/public_data_evidence_map.json
+  - reports/public_data_consistency_audit.json
+  - reports/source_locator_verification_pack.json
+  - docs/real_data_feasibility.md
+  - docs/public_data_pilot.md
+  - docs/public_data_evidence_map.md
+  - docs/public_data_consistency_audit.md
+  - docs/source_locator_verification_pack.md
+  - simulator/pages/29_Public_Data_Evidence_Map.py
+objection_status_taxonomy:
+  - acknowledged
+  - partially_mitigated
+  - unresolved
+  - blocked_by_restricted_data
+  - requires_external_review
+  - requires_legal_review
+  - requires_economic_review
+  - requires_statistical_review
+  - cannot_be_resolved_inside_repo
+severity_taxonomy:
+  - critical
+  - high
+  - medium
+  - low
+  - informational
+objection_category_taxonomy:
+  - public_data_limitations
+  - placeholder_limitations
+  - source_reference_limitations
+  - restricted_data_blockers
+  - calibration_limitations
+  - statistical_limitations
+  - legal_and_tax_limitations
+  - economic_incidence_limitations
+  - administrative_feasibility_limitations
+  - dashboard_interpretation_risk
+  - non_claim_boundary_risk
+  - external_review_required
+  - reviewer_misinterpretation_risk
+required_objection_categories:
+  - public_data_limitations
+  - placeholder_limitations
+  - source_reference_limitations
+  - restricted_data_blockers
+  - calibration_limitations
+  - statistical_limitations
+  - legal_and_tax_limitations
+  - economic_incidence_limitations
+  - administrative_feasibility_limitations
+  - dashboard_interpretation_risk
+  - non_claim_boundary_risk
+  - external_review_required
+  - reviewer_misinterpretation_risk
+minimum_objections_per_category: 1
+required_objections:
+  - obj_001_small_public_extract_set
+  - obj_002_public_extracts_not_calibration
+  - obj_003_minimum_wage_not_labour_costs
+  - obj_004_ato_transparency_not_liability
+  - obj_005_ato_statistics_not_ai_displacement
+  - obj_006_budget_aggregates_not_fiscal_impact
+  - obj_007_super_settings_not_employer_behaviour
+  - obj_008_help_thresholds_not_household_pressure
+  - obj_009_payroll_tax_state_variation
+  - obj_010_source_reference_only_not_loaded
+  - obj_011_placeholders_remain_placeholders
+  - obj_012_placeholder_anchors_not_calibration
+  - obj_013_public_anchors_not_validated
+  - obj_014_household_scenarios_synthetic
+  - obj_015_weighted_subgroups_nonrepresentative
+  - obj_016_no_taxpayer_ato_data
+  - obj_017_no_firm_confidential_data
+  - obj_018_no_dss_services_records
+  - obj_019_no_licensed_longitudinal_microdata
+  - obj_020_no_abs_restricted_lab_microdata
+  - obj_021_restricted_blockers_prevent_calibration
+  - obj_022_sanity_check_only
+  - obj_023_no_statistical_inference
+  - obj_024_no_confidence_intervals
+  - obj_025_no_behavioural_elasticity
+  - obj_026_no_causal_relationship
+  - obj_027_no_external_validation
+  - obj_028_legislative_architecture_non_operative
+  - obj_029_admin_workflow_not_ato_guidance
+  - obj_030_no_legal_sufficiency_review
+  - obj_031_no_tax_payable_determination
+  - obj_032_anti_avoidance_drafting_review
+  - obj_033_economic_incidence_not_proven
+  - obj_034_pass_through_not_estimated
+  - obj_035_labour_displacement_not_calibrated
+  - obj_036_fiscal_sufficiency_not_proven
+  - obj_037_dashboard_cards_mistaken_validation
+  - obj_038_reconciled_mistaken_verified
+  - obj_039_ready_manual_review_mistaken_reviewed
+  - obj_040_locator_metadata_not_source_verification
+  - obj_041_evidence_maps_not_policy_readiness
+forbidden_claims:
+  - calibrated
+  - calibration completed
+  - real calibration
+  - public data proves
+  - model works
+  - tax model works
+  - CARSF works
+  - ready for government
+  - ready for ATO
+  - ready for Treasury
+  - ready for Parliament
+  - ready for implementation
+  - ready for public release
+  - operationally ready
+  - legally sufficient
+  - official status
+  - official policy
+  - validated
+  - externally validated
+  - source verified
+  - externally verified
+  - Treasury validated
+  - ATO validated
+  - PBO validated
+  - economic validation complete
+  - welfare validation complete
+  - statistical validation complete
+  - actual tax payable
+  - real household estimate
+  - population estimate
+  - official sector ranking
+  - compliance score
+  - readiness score
+  - maturity score
+  - approved
+  - objections resolved
+  - all objections resolved
+  - no material limitations
+build_30_requirements:
+  - Package the feasibility map, public-data pilot, evidence map, consistency audit, source-locator pack, and red-team objections into a reviewer handoff bundle.
+  - Identify what reviewers should inspect, what evidence exists, what remains placeholder-only, what remains blocked, and what must not be inferred.
+  - Do not load new data or claim calibration, validation, actual tax payable, legal sufficiency, operational readiness, official status, or implementation readiness.

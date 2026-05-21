@@ -10,6 +10,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 REPORT_PATH = REPO_ROOT / "reports" / "public_data_evidence_map.json"
 CONSISTENCY_AUDIT_PATH = REPO_ROOT / "reports" / "public_data_consistency_audit.json"
 SOURCE_LOCATOR_PACK_PATH = REPO_ROOT / "reports" / "source_locator_verification_pack.json"
+RED_TEAM_OBJECTIONS_PATH = REPO_ROOT / "reports" / "red_team_reviewer_objections.json"
 WARNING = (
     "This is a reviewer evidence map and dashboard for the public data pilot only. No new data is loaded by this build. "
     "Build 27 public aggregate extracts remain sanity-check-only or placeholder-anchor-only. This is not calibration, "
@@ -55,6 +56,7 @@ if not report:
     raise SystemExit(0)
 audit_report = load_report(CONSISTENCY_AUDIT_PATH)
 source_locator_report = load_report(SOURCE_LOCATOR_PACK_PATH)
+red_team_report = load_report(RED_TEAM_OBJECTIONS_PATH)
 
 metadata = report.get("metadata", {})
 payload = report.get("public_data_evidence_map", {})
@@ -290,3 +292,72 @@ if source_locator_report:
     )
 else:
     st.info("Run `python scripts/run_source_locator_verification_pack.py` to generate the optional source-locator section.")
+
+st.markdown("### Red-Team Reviewer Objections")
+st.caption(
+    "Objections pack only. Acknowledging an objection does not mean it is resolved, and partially mitigated does not mean solved. "
+    "This section does not load data, complete calibration, validate CARSF, create legal sufficiency, or determine tax payable."
+)
+if red_team_report:
+    red_payload = red_team_report.get("red_team_reviewer_objections", {})
+    red_summary = red_team_report.get("summary", {})
+    st.table(
+        [
+            {"Metric": key, "Value": str(value)}
+            for key, value in red_summary.items()
+            if key
+            in {
+                "total_objections",
+                "critical_objections",
+                "high_objections",
+                "medium_objections",
+                "categories_covered",
+                "unresolved_blockers_total",
+                "future_evidence_needs_total",
+                "forbidden_claim_findings",
+                "new_data_loaded",
+                "external_source_verification_claimed",
+                "objections_acknowledged",
+                "unresolved_blockers_visible",
+                "calibration_limitations_visible",
+                "legal_limitations_visible",
+                "statistical_limitations_visible",
+                "dashboard_misinterpretation_risks_visible",
+                "real_calibration_completed",
+                "actual_tax_payable_determined",
+                "validation_claimed",
+                "approval_claimed",
+                "operational_readiness_claimed",
+                "legal_sufficiency_claimed",
+                "official_status_claimed",
+                "firm_level_liability_logic_modified",
+            }
+        ]
+    )
+    objection_rows = red_payload.get("objections", [])
+    st.markdown("#### Critical And High Objections")
+    st.table(
+        rows_with_lists(
+            [item for item in objection_rows if item.get("severity") in {"critical", "high"}],
+            [
+                "objection_id",
+                "severity",
+                "status",
+                "objection_category",
+                "objection_title",
+                "why_the_concern_is_valid",
+                "current_project_response",
+                "unresolved_blockers",
+            ],
+        )
+    )
+    st.markdown("#### Category Coverage")
+    st.table(rows(red_payload.get("category_summaries", []), ["objection_category", "count"]))
+    st.markdown("#### Unresolved Blockers")
+    st.table(rows_with_lists(red_payload.get("unresolved_blockers", []), ["blocker", "affected_objection_ids"]))
+    st.markdown("#### What The Project Can Say")
+    st.table(rows_with_lists(red_payload.get("responses", []), ["objection_id", "can_say"]))
+    st.markdown("#### What The Project Must Not Claim")
+    st.table(rows_with_lists(red_payload.get("responses", []), ["objection_id", "must_not_claim"]))
+else:
+    st.info("Run `python scripts/run_red_team_reviewer_objections.py` to generate the optional red-team objections section.")

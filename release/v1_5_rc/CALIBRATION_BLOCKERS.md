@@ -40,8 +40,10 @@ Build 29 reconciles existing public-data artefacts only. It loads no new data, d
 
 Build 29.5 packages existing source locators, value notes, source-reference-only rows, placeholder anchors, restricted blockers, and manual-review checklists only. It loads no new data, adds no values, does not externally verify source values, does not complete calibration, and does not remove any blocker. Ready for manual review does not mean reviewed or externally verified.
 
+Build 29.6 packages likely reviewer objections and honest responses only. It loads no new data, adds no public values, does not externally verify source values, does not complete calibration, and does not resolve objections. Objections being acknowledged does not mean they are resolved, and partially mitigated does not mean solved.
+
 ## Final RC Integrity Seal Note
 
 The final RC integrity seal checks that blocker documents, reports, manifests, attack-pack documents, non-claim boundaries, CI expectations, and guardrail expectations remain visible. It does not resolve any blocker and is not approval, validation, external review completion, legal sufficiency, operational readiness, legislative readiness, official status, a readiness score, a maturity score, or firm-level liability modification.
 
-Build 25 sealed the previous RC state. If Builds 26-29.5 are included in a later sealed RC, the integrity seal must be regenerated for that later state.
+Build 25 sealed the previous RC state. If Builds 26-29.6 are included in a later sealed RC, the integrity seal must be regenerated for that later state.

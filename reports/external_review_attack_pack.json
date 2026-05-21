@@ -310,7 +310,8 @@
           "public_data_pilot",
           "public_data_evidence_map",
           "public_data_consistency_audit",
-          "source_locator_verification_pack"
+          "source_locator_verification_pack",
+          "red_team_reviewer_objections"
         ],
         "affected_reports": [
           "reports/secure_ingestion_controls.md",
@@ -319,7 +320,8 @@
           "reports/public_data_pilot.md",
           "reports/public_data_evidence_map.md",
           "reports/public_data_consistency_audit.md",
-          "reports/source_locator_verification_pack.md"
+          "reports/source_locator_verification_pack.md",
+          "reports/red_team_reviewer_objections.md"
         ],
         "allowed_negative_warnings": [
           "no taxpayer-level real data",
@@ -434,7 +436,8 @@
           "public_data_pilot",
           "public_data_evidence_map",
           "public_data_consistency_audit",
-          "source_locator_verification_pack"
+          "source_locator_verification_pack",
+          "red_team_reviewer_objections"
         ],
         "target_reports": [
           "reports/example_results.md",
@@ -445,7 +448,8 @@
           "reports/public_data_pilot.md",
           "reports/public_data_evidence_map.md",
           "reports/public_data_consistency_audit.md",
-          "reports/source_locator_verification_pack.md"
+          "reports/source_locator_verification_pack.md",
+          "reports/red_team_reviewer_objections.md"
         ],
         "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
         "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -548,7 +552,8 @@
           "public_data_pilot",
           "public_data_evidence_map",
           "public_data_consistency_audit",
-          "source_locator_verification_pack"
+          "source_locator_verification_pack",
+          "red_team_reviewer_objections"
         ],
         "target_reports": [
           "reports/secure_ingestion_controls.md",
@@ -559,7 +564,8 @@
           "reports/public_data_pilot.md",
           "reports/public_data_evidence_map.md",
           "reports/public_data_consistency_audit.md",
-          "reports/source_locator_verification_pack.md"
+          "reports/source_locator_verification_pack.md",
+          "reports/red_team_reviewer_objections.md"
         ],
         "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
         "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -602,6 +608,8 @@
       "reports/public_data_pilot.md",
       "reports/real_data_feasibility.json",
       "reports/real_data_feasibility.md",
+      "reports/red_team_reviewer_objections.json",
+      "reports/red_team_reviewer_objections.md",
       "reports/repo_guardrails.json",
       "reports/repo_guardrails.md",
       "reports/reviewed_scenarios.json",
@@ -1529,6 +1537,62 @@
       },
       {
         "attack_categories": [
+          "calibration_gap",
+          "data_access_gap"
+        ],
+        "attack_tracks": [
+          "hostile_red_team_review",
+          "privacy_review",
+          "statistical_methods_review",
+          "technical_review"
+        ],
+        "failure_mode_ids": [],
+        "known_blockers": [
+          "Objections being acknowledged does not mean they are resolved.",
+          "Calibration, legal, tax, statistical, economic, incidence, restricted-data, and dashboard interpretation limits remain visible.",
+          "External reviewer inspection remains required before any objection can be treated as addressed."
+        ],
+        "layer_id": "red_team_reviewer_objections",
+        "layer_name": "Red-Team Reviewer Objections Pack",
+        "locked_until_review": [
+          "CI coverage completeness",
+          "all external-review claims",
+          "all firm-liability implications",
+          "all official-status language",
+          "all readiness language",
+          "all validation language",
+          "confidence treatment",
+          "fail-closed mutation coverage",
+          "generated-report traceability",
+          "guardrail allowlists",
+          "household representativeness",
+          "manifest drift controls"
+        ],
+        "missing_external_inputs": [
+          "CI run log",
+          "Calibration blocker list for the layer.",
+          "DLP review",
+          "External reviewer note separating challenge from validation.",
+          "Independent review memo with assumptions challenged.",
+          "Non-claim boundary check against the relevant report.",
+          "Source-report trace from manifest entry to generated report.",
+          "blocker coverage diff",
+          "forbidden phrase scan",
+          "forecast boundary review",
+          "guardrail fixture review",
+          "heading review"
+        ],
+        "must_not_infer": [
+          "Do not infer any firm-level CARSF liability change.",
+          "Do not infer approval, validation, operational readiness, legal sufficiency, or official endorsement.",
+          "Do not infer completed external review.",
+          "Do not infer that any output determines actual tax payable.",
+          "Do not infer use of taxpayer-level, firm-level, industry, ABS, ATO, DSS, Treasury, PBO, HILDA, or Census data."
+        ],
+        "not_validation_statement": "This layer attack row is a challenge prompt only and is not validation, approval, readiness, or an official review outcome."
+      },
+      {
+        "attack_categories": [
           "guardrail_coverage_gap",
           "hidden_assumption_risk",
           "manifest_drift_gap",
@@ -2276,6 +2340,7 @@
       "public_data_evidence_map",
       "public_data_pilot",
       "real_data_feasibility",
+      "red_team_reviewer_objections",
       "release_candidate_pack",
       "repo_guardrails",
       "reviewed_scenarios",
@@ -3401,6 +3466,68 @@
       },
       {
         "attack_question_ids": [
+          "common_calibration_gap",
+          "common_real_data_boundary"
+        ],
+        "calibration_or_review_blockers": [
+          "Objections being acknowledged does not mean they are resolved.",
+          "Calibration, legal, tax, statistical, economic, incidence, restricted-data, and dashboard interpretation limits remain visible.",
+          "External reviewer inspection remains required before any objection can be treated as addressed."
+        ],
+        "layer_id": "red_team_reviewer_objections",
+        "likely_overread_risk": "does not show: objections resolved calibration completed validation official status or tax-payable use",
+        "must_not_be_used_for": [
+          "objections resolved",
+          "external source verification",
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "readiness score"
+        ],
+        "not_validation_statement": "This report attack row is a challenge prompt only and is not validation, approval, readiness, or a finding of actual error.",
+        "primary_reviewer_tracks": [
+          "hostile_red_team_review",
+          "privacy_review",
+          "statistical_methods_review",
+          "technical_review"
+        ],
+        "report_path": "reports/red_team_reviewer_objections.json",
+        "required_follow_up": "External reviewer should test the report against its non-claims, blockers, source runner, and generated JSON payload."
+      },
+      {
+        "attack_question_ids": [
+          "common_calibration_gap",
+          "common_real_data_boundary"
+        ],
+        "calibration_or_review_blockers": [
+          "Objections being acknowledged does not mean they are resolved.",
+          "Calibration, legal, tax, statistical, economic, incidence, restricted-data, and dashboard interpretation limits remain visible.",
+          "External reviewer inspection remains required before any objection can be treated as addressed."
+        ],
+        "layer_id": "red_team_reviewer_objections",
+        "likely_overread_risk": "does not show: objections resolved calibration completed validation official status or tax-payable use",
+        "must_not_be_used_for": [
+          "objections resolved",
+          "external source verification",
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "readiness score"
+        ],
+        "not_validation_statement": "This report attack row is a challenge prompt only and is not validation, approval, readiness, or a finding of actual error.",
+        "primary_reviewer_tracks": [
+          "hostile_red_team_review",
+          "privacy_review",
+          "statistical_methods_review",
+          "technical_review"
+        ],
+        "report_path": "reports/red_team_reviewer_objections.md",
+        "required_follow_up": "External reviewer should test the report against its non-claims, blockers, source runner, and generated JSON payload."
+      },
+      {
+        "attack_question_ids": [
           "common_manifest_drift",
           "common_real_data_boundary",
           "privacy_real_data_exclusion",
@@ -4047,7 +4174,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/example_results.md",
@@ -4058,7 +4186,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -4079,7 +4208,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
@@ -4090,7 +4220,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -4411,7 +4542,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/example_results.md",
@@ -4422,7 +4554,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -4443,7 +4576,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
@@ -4454,7 +4588,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -4769,7 +4904,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/example_results.md",
@@ -4780,7 +4916,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -4801,7 +4938,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
@@ -4812,7 +4950,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -5079,7 +5218,8 @@
           "public_data_pilot",
           "public_data_evidence_map",
           "public_data_consistency_audit",
-          "source_locator_verification_pack"
+          "source_locator_verification_pack",
+          "red_team_reviewer_objections"
         ],
         "relevant_reports": [
           "reports/v1_5_release_candidate_pack.md",
@@ -5091,7 +5231,8 @@
           "reports/public_data_pilot.md",
           "reports/public_data_evidence_map.md",
           "reports/public_data_consistency_audit.md",
-          "reports/source_locator_verification_pack.md"
+          "reports/source_locator_verification_pack.md",
+          "reports/red_team_reviewer_objections.md"
         ],
         "report_attack_questions": [
           "Can a report be quoted as validation",
@@ -5152,7 +5293,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/example_results.md",
@@ -5163,7 +5305,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -5184,7 +5327,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
@@ -5195,7 +5339,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -5518,7 +5663,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/example_results.md",
@@ -5529,7 +5675,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -5550,7 +5697,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
@@ -5561,7 +5709,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -5878,7 +6027,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/example_results.md",
@@ -5889,7 +6039,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -5910,7 +6061,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
@@ -5921,7 +6073,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -6252,7 +6405,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/example_results.md",
@@ -6263,7 +6417,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -6284,7 +6439,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
@@ -6295,7 +6451,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -6560,7 +6717,8 @@
           "public_data_pilot",
           "public_data_evidence_map",
           "public_data_consistency_audit",
-          "source_locator_verification_pack"
+          "source_locator_verification_pack",
+          "red_team_reviewer_objections"
         ],
         "relevant_reports": [
           "reports/secure_ingestion_controls.md",
@@ -6571,7 +6729,8 @@
           "reports/public_data_pilot.md",
           "reports/public_data_evidence_map.md",
           "reports/public_data_consistency_audit.md",
-          "reports/source_locator_verification_pack.md"
+          "reports/source_locator_verification_pack.md",
+          "reports/red_team_reviewer_objections.md"
         ],
         "report_attack_questions": [
           "Does any report imply real data",
@@ -6632,7 +6791,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/example_results.md",
@@ -6643,7 +6803,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -6664,7 +6825,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
@@ -6675,7 +6837,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -6934,7 +7097,8 @@
           "public_data_pilot",
           "public_data_evidence_map",
           "public_data_consistency_audit",
-          "source_locator_verification_pack"
+          "source_locator_verification_pack",
+          "red_team_reviewer_objections"
         ],
         "relevant_reports": [
           "reports/uncertainty_ranges.md",
@@ -6945,7 +7109,8 @@
           "reports/public_data_pilot.md",
           "reports/public_data_evidence_map.md",
           "reports/public_data_consistency_audit.md",
-          "reports/source_locator_verification_pack.md"
+          "reports/source_locator_verification_pack.md",
+          "reports/red_team_reviewer_objections.md"
         ],
         "report_attack_questions": [
           "Does the range imply probability",
@@ -7006,7 +7171,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/example_results.md",
@@ -7017,7 +7183,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -7038,7 +7205,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
@@ -7049,7 +7217,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -7373,7 +7542,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/example_results.md",
@@ -7384,7 +7554,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -7405,7 +7576,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
@@ -7416,7 +7588,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -7682,7 +7855,8 @@
           "public_data_pilot",
           "public_data_evidence_map",
           "public_data_consistency_audit",
-          "source_locator_verification_pack"
+          "source_locator_verification_pack",
+          "red_team_reviewer_objections"
         ],
         "relevant_reports": [
           "reports/repo_guardrails.md",
@@ -7693,7 +7867,8 @@
           "reports/public_data_pilot.md",
           "reports/public_data_evidence_map.md",
           "reports/public_data_consistency_audit.md",
-          "reports/source_locator_verification_pack.md"
+          "reports/source_locator_verification_pack.md",
+          "reports/red_team_reviewer_objections.md"
         ],
         "report_attack_questions": [
           "Does the Markdown match JSON",
@@ -7753,7 +7928,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/example_results.md",
@@ -7764,7 +7940,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -7785,7 +7962,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
@@ -7796,7 +7974,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -8115,7 +8294,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/example_results.md",
@@ -8126,7 +8306,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any report path where placeholders are easier to see than the missing calibration basis.",
             "why_it_matters": "Placeholder values can look precise even when no external calibration has occurred."
@@ -8147,7 +8328,8 @@
               "public_data_pilot",
               "public_data_evidence_map",
               "public_data_consistency_audit",
-              "source_locator_verification_pack"
+              "source_locator_verification_pack",
+              "red_team_reviewer_objections"
             ],
             "target_reports": [
               "reports/secure_ingestion_controls.md",
@@ -8158,7 +8340,8 @@
               "reports/public_data_pilot.md",
               "reports/public_data_evidence_map.md",
               "reports/public_data_consistency_audit.md",
-              "reports/source_locator_verification_pack.md"
+              "reports/source_locator_verification_pack.md",
+              "reports/red_team_reviewer_objections.md"
             ],
             "what_would_fail": "Any committed artefact that looks like real evidence, restricted data, or government microdata.",
             "why_it_matters": "The repository must remain synthetic-only and data-free."
@@ -8449,7 +8632,7 @@
     "summary": {
       "approval_claimed": false,
       "firm_level_liability_logic_modified": false,
-      "layers_referenced": 29,
+      "layers_referenced": 30,
       "legal_sufficiency_claimed": false,
       "legislative_readiness_claimed": false,
       "non_claims": [
@@ -8464,14 +8647,14 @@
       "release_documents_missing": 0,
       "release_documents_present": 17,
       "reports_missing": 0,
-      "reports_referenced": 56,
+      "reports_referenced": 58,
       "review_completed": false,
       "total_attack_questions": 126,
       "total_boundary_checks": 18,
       "total_failure_modes": 60,
-      "total_layer_attack_rows": 29,
+      "total_layer_attack_rows": 30,
       "total_release_documents": 17,
-      "total_report_attack_rows": 56,
+      "total_report_attack_rows": 58,
       "total_review_tracks": 12,
       "tracks_missing_required_question_count": 0,
       "tracks_with_required_question_count": 12,
@@ -8490,7 +8673,7 @@
   "metadata": {
     "approval_claimed": false,
     "firm_level_liability_logic_modified": false,
-    "generated_at": "2026-05-20T12:20:50+00:00",
+    "generated_at": "2026-05-20T13:43:49+00:00",
     "legal_sufficiency_claimed": false,
     "legislative_readiness_claimed": false,
     "non_claims": [
@@ -8510,7 +8693,7 @@
   "summary": {
     "approval_claimed": false,
     "firm_level_liability_logic_modified": false,
-    "layers_referenced": 29,
+    "layers_referenced": 30,
     "legal_sufficiency_claimed": false,
     "legislative_readiness_claimed": false,
     "non_claims": [
@@ -8525,14 +8708,14 @@
     "release_documents_missing": 0,
     "release_documents_present": 17,
     "reports_missing": 0,
-    "reports_referenced": 56,
+    "reports_referenced": 58,
     "review_completed": false,
     "total_attack_questions": 126,
     "total_boundary_checks": 18,
     "total_failure_modes": 60,
-    "total_layer_attack_rows": 29,
+    "total_layer_attack_rows": 30,
     "total_release_documents": 17,
-    "total_report_attack_rows": 56,
+    "total_report_attack_rows": 58,
     "total_review_tracks": 12,
     "tracks_missing_required_question_count": 0,
     "tracks_with_required_question_count": 12,

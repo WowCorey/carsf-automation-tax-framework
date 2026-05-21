@@ -42,4 +42,6 @@ Dashboard section:
 
 Build 29.5 uses the consistency audit as an input to create source-locator cards and reviewer checklists. It does not load new data, add new public values, scrape sources, call APIs, externally verify source values, complete calibration, validate CARSF, determine actual tax payable, or modify firm-level CARSF liability.
 
-Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-29.5 are included in a later sealed RC.
+Build 29.6 uses the consistency audit as one input to create likely reviewer objections and honest responses. It does not load new data, add new public values, scrape sources, call APIs, externally verify source values, complete calibration, validate CARSF, determine actual tax payable, claim objections are resolved, or modify firm-level CARSF liability.
+
+Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-29.6 are included in a later sealed RC.
