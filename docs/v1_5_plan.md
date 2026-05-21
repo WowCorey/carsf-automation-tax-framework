@@ -140,3 +140,9 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 Build 32 adds the public data placeholder replacement map. It uses Build 31 loaded public aggregate values only, maps them to existing realistic placeholders, and keeps source candidates not loaded as future-only. It does not load new data, complete calibration, claim validation, prove the model works, determine actual tax payable, create official status, or modify firm-level CARSF liability.
 
 Build 33 should define public aggregate calibration boundaries without relaxing the no-calibration, no-validation, no-tax-payable, no-official-status, and no-liability-change boundaries.
+
+## Build 33 Public Aggregate Calibration Boundary Map
+
+Build 33 adds the public aggregate calibration-boundary map. It defines module-level and field-level allowed uses for Build 31 public aggregate values and Build 32 placeholder decisions. Allowed uses are limited to sanity checks, public aggregate anchors, public aggregate bounds, context, placeholder narrowing, and reviewer traceability.
+
+Build 34 should use those boundaries to constrain scenario outputs. No Build 33 output loads new data, performs calibration, claims validation, determines actual tax payable, creates official status, or modifies firm-level CARSF liability.

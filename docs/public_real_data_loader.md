@@ -36,4 +36,6 @@ The loader is not a calibrated model. It does not externally verify source value
 
 Build 32 uses these loaded public aggregate values to map placeholder replacement, narrowing, and context decisions. It loads no new data and does not convert public aggregate anchors into calibration, validation, actual tax payable, official status, legal sufficiency, Treasury modelling, ATO guidance, PBO costing, or firm-level CARSF liability logic.
 
-Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-32 are included in a later sealed RC.
+Build 33 uses these loaded public aggregate values to define allowed boundary uses across modules and fields. Allowed uses are limited to sanity checks, public aggregate anchors, public aggregate bounds, contextual references, placeholder narrowing, and reviewer traceability. It loads no new data and does not perform calibration, claim validation, determine actual tax payable, create official status, or modify firm-level CARSF liability.
+
+Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-33 are included in a later sealed RC.

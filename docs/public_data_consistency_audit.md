@@ -50,3 +50,7 @@ Build 25 sealed the earlier RC state. A new integrity seal must be regenerated i
 ## Build 32 Consistency Boundary
 
 Build 32 consumes the Build 31 public aggregate values and existing placeholder anchors to create replacement decisions. It does not add new values and does not turn the Build 29 consistency audit into external source verification. Public aggregate replacement, narrowing, or context labels remain internal mapping labels only and do not complete calibration, validate CARSF, determine actual tax payable, create official status, or modify firm-level CARSF liability.
+
+## Build 33 Consistency Boundary
+
+Build 33 consumes Build 31 values and Build 32 replacement decisions to create calibration-boundary decisions. It does not add values and does not turn internal consistency, source locators, or public aggregate boundary labels into calibration, validation, actual tax payable, legal sufficiency, official status, or firm-level CARSF liability.

@@ -103,3 +103,9 @@
 The public data placeholder replacement map can make some placeholders look more settled than they are. It loads no new data and does not complete calibration. Public aggregate anchors can replace, narrow, or inform placeholders only as mapping labels; replacement by public aggregate anchor does not mean validation, narrowing does not mean statistical estimation, and context does not mean representativeness. Restricted-data, legal, tax, Treasury, ATO-methods, statistical, economic, welfare, and hostile-review blockers remain.
 
 Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-32 are included in a later sealed RC.
+
+## Build 33 Public Aggregate Calibration Boundary Risks
+
+The public aggregate calibration-boundary map can make allowed-use labels look more permissive than they are. It loads no new data and does not perform calibration. Public aggregate values may support only sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability. Boundary mapping does not mean validation, statistical estimation, legal sufficiency, implementation readiness, official status, actual tax payable, or firm-level liability.
+
+The “Modules Requiring External Review” section is a review-needs section, not a statement that every boundary-limited use is fully blocked. Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-33 are included in a later sealed RC.

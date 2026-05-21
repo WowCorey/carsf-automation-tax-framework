@@ -195,6 +195,12 @@ Build 32 maps Build 31 loaded public aggregate values to existing realistic plac
 
 This is a placeholder replacement map only. No new data is loaded, calibration has not been completed, public data does not prove the model works, replacement by public aggregate anchor does not mean validation, narrowing by public aggregate anchor does not mean statistical estimation, and the map does not determine actual tax payable, create official status, or modify firm-level CARSF liability. Build 25 sealed the earlier RC state; a new integrity seal must be regenerated if Builds 26-32 are included in a later sealed RC.
 
+## Build 33 Public Aggregate Calibration Boundary Map
+
+Build 33 defines how loaded public aggregate values may be used across CARSF modules and fields. Allowed uses are limited to sanity checks, public aggregate anchors, public aggregate bounds, contextual references, placeholder narrowing, and reviewer traceability.
+
+This is a calibration-boundary map only. No new data is loaded, calibration has not been completed, public data does not prove the model works, boundary mapping does not mean validation or statistical estimation, source candidates not loaded remain not loaded, and restricted-data blockers remain blockers. The map does not determine actual tax payable, create legal sufficiency, create implementation readiness, create official status, or modify firm-level CARSF liability. Build 25 sealed the earlier RC state; a new integrity seal must be regenerated if Builds 26-33 are included in a later sealed RC.
+
 ## Next Claude Review Should Attack
 
 - Whether the example runner hides any policy assumptions inside code defaults.

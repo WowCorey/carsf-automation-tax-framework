@@ -1,0 +1,148 @@
+map_id: carsf_v1_5_public_aggregate_calibration_boundary_map
+map_name: CARSF V1.5 Public Aggregate Calibration Boundary Map
+status: public_aggregate_calibration_boundary_map_only
+non_claims:
+  - This is a public aggregate calibration-boundary map only. No new data is loaded by this build. Public aggregate data can support sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability only. Public aggregate data does not calibrate the model. Calibration has not been completed. Public data does not prove the model works. Boundary mapping does not mean validation, statistical estimation, legal sufficiency, or implementation readiness. Source candidates not loaded remain not loaded. Restricted-data blockers remain blockers. This is not validation, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable and does not modify firm-level CARSF liability.
+  - Build 33 uses Build 31 public aggregate values and Build 32 placeholder replacement decisions only; it does not add public values, scrape sources, call APIs, or load restricted, personal, taxpayer-level, firm-confidential, household microdata, ABS DataLab, HILDA, DSS / Services Australia, ATO taxpayer, confidential Treasury / PBO, bank, payroll-document, pay-record, or tax-file-identifier data.
+  - Allowed-use labels are boundary labels only; they are not calibration, validation, legal sufficiency, official status, implementation readiness, or liability determinations.
+input_artifacts:
+  - data/public_real/parsed/public_real_aggregate_values.json
+  - data/public_real/manifests/public_real_data_sources.yaml
+  - data/public_real/manifests/public_placeholder_replacement_manifest.yaml
+  - reports/public_real_data_loader.json
+  - reports/public_data_placeholder_replacement_map.json
+  - reports/public_data_pilot.json
+  - reports/public_data_evidence_map.json
+  - reports/public_data_consistency_audit.json
+  - reports/source_locator_verification_pack.json
+  - reports/red_team_reviewer_objections.json
+  - data/public_pilot/placeholders/realistic_placeholder_anchors.yaml
+  - data/public_pilot/public_data_pilot_manifest.yaml
+allowed_use_type_taxonomy:
+  - sanity_check_only
+  - public_aggregate_anchor_only
+  - public_aggregate_bound_only
+  - contextual_reference_only
+  - placeholder_narrowing_only
+  - reviewer_traceability_only
+forbidden_use_type_taxonomy:
+  - calibration_completed
+  - statistical_validation
+  - model_validation
+  - causal_inference
+  - actual_tax_payable
+  - firm_liability_determination
+  - taxpayer_behaviour_estimate
+  - household_population_estimate
+  - official_policy_status
+  - legal_sufficiency
+  - implementation_readiness
+boundary_status_taxonomy:
+  - allowed_as_boundary_only
+  - allowed_as_anchor_only
+  - allowed_as_context_only
+  - blocked_for_calibration
+  - requires_restricted_data
+  - requires_external_review
+  - forbidden_for_claim
+claim_level_taxonomy:
+  - public_aggregate_sanity_check
+  - public_aggregate_anchor
+  - public_aggregate_bound
+  - contextual_public_reference
+  - placeholder_boundary_only
+  - no_calibration_claim_allowed
+  - no_validation_claim_allowed
+blocker_type_taxonomy:
+  - restricted_tax_data_required
+  - firm_confidential_data_required
+  - household_microdata_required
+  - welfare_payment_records_required
+  - behavioural_elasticity_required
+  - legal_review_required
+  - tax_review_required
+  - economic_review_required
+  - statistical_review_required
+  - public_aggregate_data_insufficient
+  - external_domain_review_required
+required_module_boundaries:
+  - opfte_benchmark_module
+  - hle_assumptions_module
+  - qlc_weights_module
+  - fiscal_trajectory_assumptions
+  - payg_erosion_assumptions
+  - transition_funding_assumptions
+  - superannuation_contribution_pressure
+  - sector_schedule_values
+  - sector_stress_matrix
+  - behavioural_response_gaming_simulation
+  - administrative_compliance_workflow
+  - legislative_architecture_skeleton
+  - household_distributional_scenarios
+  - household_weighting
+  - uncertainty_ranges
+  - reviewed_scenario_comparison_layer
+  - executive_dashboard_consolidation
+  - public_data_evidence_map
+  - public_data_placeholder_replacement_map
+required_field_boundaries:
+  - anchor_opfte_minimum_wage
+  - anchor_hle_minimum_wage
+  - anchor_qlc_minimum_wage
+  - anchor_sector_schedule_source_reference
+  - anchor_fiscal_public_aggregates
+  - anchor_payg_public_tax_stats
+  - anchor_super_guarantee_rate
+  - anchor_help_source_reference
+  - anchor_payroll_tax_source_reference
+  - anchor_transition_public_reference
+  - anchor_uncertainty_source_reference_only
+required_public_value_coverage:
+  - fair_work_national_minimum_wage_hourly_2025
+  - fair_work_national_minimum_wage_weekly_2025
+  - fair_work_casual_loading_2025
+  - ato_large_corporate_income_tax_received_2022_23
+  - ato_large_corporate_entities_no_income_tax_percent_2022_23
+  - ato_total_tax_revenue_collected_2022_23
+  - ato_company_tax_revenue_2022_23
+  - treasury_total_receipts_2025_26_estimate
+  - treasury_taxation_receipts_2025_26_estimate
+  - ato_super_guarantee_rate_2025_26
+forbidden_claims:
+  - calibrated
+  - calibration completed
+  - model works
+  - public data proves
+  - actual tax payable
+  - validated
+  - externally validated
+  - source verified
+  - official policy
+  - official status
+  - ready for government
+  - ready for ATO
+  - ready for Treasury
+  - ready for Parliament
+  - ready for implementation
+  - operationally ready
+  - legally sufficient
+  - Treasury modelling
+  - PBO costing
+  - ATO guidance
+  - economic validation complete
+  - welfare validation complete
+  - statistical validation complete
+  - readiness score
+  - maturity score
+  - approved
+  - representative estimate
+  - population estimate
+  - firm liability
+  - CARSF liability determined
+  - calibrated boundary
+  - calibration boundary satisfied
+  - public aggregate calibration complete
+build_34_requirements:
+  - Constrain scenario outputs using the Build 33 allowed-use and forbidden-use taxonomies.
+  - Flag or suppress any scenario output that would imply calibration, validation, actual tax payable, firm liability, official status, or implementation readiness.
+  - Preserve source-candidate-not-loaded, restricted-data blocker, external-review, no-readiness-score, and no-liability-change boundaries.

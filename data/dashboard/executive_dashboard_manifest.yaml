@@ -1270,6 +1270,57 @@ layers:
       - Treasury modelling
       - PBO costing
       - readiness score
+  - layer_id: public_aggregate_calibration_boundary_map
+    layer_name: Public Aggregate Calibration Boundary Map
+    layer_group: calibration
+    purpose: Defines allowed and forbidden public aggregate uses across modules and fields without performing calibration.
+    primary_files:
+      - model/carsf/public_aggregate_calibration_boundary_map.py
+      - data/public_real/manifests/public_aggregate_calibration_boundary_manifest.yaml
+      - scripts/run_public_aggregate_calibration_boundary_map.py
+      - docs/public_aggregate_calibration_boundary_map.md
+    primary_reports:
+      - reports/public_aggregate_calibration_boundary_map.md
+      - reports/public_aggregate_calibration_boundary_map.json
+    streamlit_pages:
+      - simulator/pages/29_Public_Data_Evidence_Map.py
+    status_labels:
+      - implemented_prototype
+      - generated_report_available
+      - calibration_boundary_only
+      - external_review_required
+      - not_for_real_world_use
+    non_claim_flags:
+      - no_new_data_loaded
+      - not_calibrated
+      - not_validation
+      - not_actual_tax_payable
+      - not_operational_readiness
+      - not_official_status
+    calibration_blockers:
+      - Public aggregate values can support only sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability.
+      - Source candidates not loaded remain future-only.
+      - Restricted-data, legal, tax, Treasury, ATO-methods, statistical, economic, and welfare blockers remain.
+    external_review_blockers:
+      - External reviewer inspection remains required before boundary decisions can support any calibration design.
+    blocker_explanation: Build 33 maps public aggregate boundaries without loading data, completing calibration, or changing liability.
+    recommended_reviewer:
+      - technical_reviewer
+      - privacy_reviewer
+      - statistical_methods_reviewer
+      - treasury_methods_reviewer
+      - hostile_red_team_reviewer
+    read_order: 34
+    main_reason: Build 33 constrains public aggregate use types before any scenario constraint layer.
+    must_not_be_used_for:
+      - calibration completed
+      - validation
+      - official status
+      - actual tax payable
+      - ATO guidance
+      - Treasury modelling
+      - PBO costing
+      - readiness score
 report_entries:
   - report_path: reports/executive_dashboard.md
     layer_id: executive_dashboard
@@ -1721,6 +1772,22 @@ report_entries:
     must_not_be_used_for: [calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score, firm-level liability]
     linked_streamlit_page: simulator/pages/29_Public_Data_Evidence_Map.py
     recommended_read_order: 33
+  - report_path: reports/public_aggregate_calibration_boundary_map.md
+    layer_id: public_aggregate_calibration_boundary_map
+    report_type: markdown
+    generated_by: scripts/run_public_aggregate_calibration_boundary_map.py
+    interpretation_warning: Calibration-boundary map only; public aggregate values do not calibrate or validate CARSF.
+    must_not_be_used_for: [calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score, firm-level liability]
+    linked_streamlit_page: simulator/pages/29_Public_Data_Evidence_Map.py
+    recommended_read_order: 34
+  - report_path: reports/public_aggregate_calibration_boundary_map.json
+    layer_id: public_aggregate_calibration_boundary_map
+    report_type: json
+    generated_by: scripts/run_public_aggregate_calibration_boundary_map.py
+    interpretation_warning: Machine-readable module and field boundary decisions over Build 31 values and Build 32 replacement decisions only; no new data is loaded.
+    must_not_be_used_for: [calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score, firm-level liability]
+    linked_streamlit_page: simulator/pages/29_Public_Data_Evidence_Map.py
+    recommended_read_order: 34
 forbidden_claims:
   - ready for government
   - ready for ATO

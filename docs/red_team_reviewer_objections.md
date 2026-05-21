@@ -47,3 +47,7 @@ Build 31 adds a controlled public real aggregate-data loader over existing sourc
 ## Build 32 Placeholder Replacement Objection Boundary
 
 Build 32 may make public aggregate anchors look more concrete, but it remains a placeholder replacement map only. No new data is loaded, no objection is resolved, public aggregate replacement does not mean validation, public aggregate narrowing does not mean statistical estimation, and the map does not complete calibration, prove the model works, determine actual tax payable, create official status, or modify firm-level CARSF liability.
+
+## Build 33 Calibration Boundary Objection Boundary
+
+Build 33 may make allowed-use labels look more settled than they are, but it remains a boundary map only. No new data is loaded, no objection is resolved, public aggregate boundary mapping does not mean validation or statistical estimation, and the map does not complete calibration, prove the model works, determine actual tax payable, create legal sufficiency, create official status, or modify firm-level CARSF liability.
