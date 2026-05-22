@@ -128,3 +128,11 @@ Build 34 adds a public aggregate scenario constraint layer over the Build 31 pub
 No new data is loaded by Build 34. Scenario constraints do not calibrate the model, validate the model, prove the model works, determine actual tax payable, create firm-level liability, create legal sufficiency, create official status, or create implementation readiness. Public aggregate data can appear only as sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability. Outputs marked non-interpretable are not usable as evidence, and hidden outputs are hidden to prevent overclaiming.
 
 Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-34 are included in a later sealed RC.
+
+## Build 34.5 Full Repo Integrity Upgrade / Bug Check / Gap Audit Addendum
+
+Build 34.5 adds a full repo integrity audit over runners, reports, JSON outputs, manifests, dashboard references, documentation links, public-data boundaries, placeholder boundaries, calibration boundaries, scenario constraints, guardrails, non-claim language, missing factors, data dependencies, and external-review dependencies.
+
+No new data is loaded by Build 34.5. The audit does not fake missing data, calibrate the model, validate the model, prove the model works, determine actual tax payable, create firm-level liability, create legal sufficiency, create official status, or create implementation readiness. Public aggregate values remain boundary-limited, placeholders remain placeholders unless already mapped otherwise, and scenario constraints remain constraints rather than validation.
+
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-34.5 are included in a later sealed RC.

@@ -110,7 +110,7 @@ V1.5 is V1.4 plus two prototype sector schedules and a measurement appendix. It 
 
 ## Next Build Candidates
 
-- Add calibrated-threshold placeholders that can later be replaced by official data.
+- Add threshold placeholders that can later be replaced by reviewed official data.
 - Replace preview apportionment shares with evidence-backed activity allocation once official data and legal review exist.
 - Extend grouped aggregation to recompute full group-level outputs only after legal grouping and attribution rules are drafted.
 - Extend transfer-pricing, GST, and international tax review stubs into legally reviewed policy options.
@@ -151,4 +151,10 @@ Build 34 should use those boundaries to constrain scenario outputs. No Build 33 
 
 Build 34 adds the public aggregate scenario constraint layer. It uses Build 31 public aggregate values, Build 32 placeholder decisions, and Build 33 calibration-boundary decisions only. Scenario outputs are classified as sanity-check-only, public-aggregate-anchor-only, public-aggregate-bound-only, context-only, placeholder-narrowing-only, reviewer-traceability-only, non-interpretable, hidden, or fail-closed.
 
-Build 35 should package the public aggregate data, placeholder replacement, calibration boundaries, and scenario constraints into a reviewer-facing handoff bundle. No Build 34 output loads new data, performs calibration, claims validation, determines actual tax payable, creates legal sufficiency, creates official status, or modifies firm-level CARSF liability.
+Build 34.5 should audit the full repo before the next reviewer-facing handoff. No Build 34 output loads new data, performs calibration, claims validation, determines actual tax payable, creates legal sufficiency, creates official status, or modifies firm-level CARSF liability.
+
+## Build 34.5 Full Repo Integrity Upgrade / Gap Audit
+
+Build 34.5 adds a full repo integrity audit, safe-fix register, missing-factor register, data-dependency register, external-review dependency register, and result-coverage matrices. It checks whether runners, reports, JSON outputs, manifests, dashboards, docs, CI, guardrails, non-claim boundaries, public-data usage, placeholder boundaries, calibration boundaries, and scenario constraints remain wired together.
+
+Build 35 should either package Builds 31-34.5 into a reviewer-facing handoff bundle or address only safe internal non-data non-claim gaps. No Build 34.5 output loads new data, fakes missing data, performs calibration, claims validation, determines actual tax payable, creates legal sufficiency, creates official status, or modifies firm-level CARSF liability.

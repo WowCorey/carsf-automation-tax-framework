@@ -54,4 +54,8 @@ Build 34 constrains scenario outputs using the Build 33 calibration-boundary map
 
 The final RC integrity seal checks that blocker documents, reports, manifests, attack-pack documents, non-claim boundaries, CI expectations, and guardrail expectations remain visible. It does not resolve any blocker and is not approval, validation, external review completion, legal sufficiency, operational readiness, legislative readiness, official status, a readiness score, a maturity score, or firm-level liability modification.
 
-Build 25 sealed the previous RC state. If Builds 26-34 are included in a later sealed RC, the integrity seal must be regenerated for that later state.
+## Build 34.5 Full Repo Integrity Audit Blockers
+
+Build 34.5 audits repo-wide coverage, safe fixes, missing factors, data dependencies, external-review dependencies, guardrails, and non-claim boundaries. It loads no new data, performs no calibration, validates no model output, determines no actual tax payable, and modifies no firm-level liability logic. Missing factors requiring restricted data, legal review, tax review, economic review, statistical review, public finance review, welfare review, data governance review, administrative review, or domain review remain blockers.
+
+Build 25 sealed the previous RC state. If Builds 26-34.5 are included in a later sealed RC, the integrity seal must be regenerated for that later state.

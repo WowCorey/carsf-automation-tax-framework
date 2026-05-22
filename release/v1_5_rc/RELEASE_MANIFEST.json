@@ -51,7 +51,9 @@
     "reports/public_aggregate_calibration_boundary_map.md",
     "reports/public_aggregate_calibration_boundary_map.json",
     "reports/public_aggregate_scenario_constraint_layer.md",
-    "reports/public_aggregate_scenario_constraint_layer.json"
+    "reports/public_aggregate_scenario_constraint_layer.json",
+    "reports/full_repo_integrity_upgrade_audit.md",
+    "reports/full_repo_integrity_upgrade_audit.json"
   ],
   "attack_pack_summary": {
     "review_tracks": 12,
@@ -88,6 +90,9 @@
     "public_aggregate_scenario_constraint_layer_created_by_build_34": true,
     "new_data_loaded_by_scenario_constraint_layer": false,
     "public_source_candidates_treated_as_loaded_by_build_34": false,
+    "full_repo_integrity_audit_created_by_build_34_5": true,
+    "new_data_loaded_by_full_repo_integrity_audit": false,
+    "safe_fixes_recorded_by_build_34_5": true,
     "external_source_verification_claimed": false,
     "restricted_data_loaded": false,
     "real_data_loaded": false,

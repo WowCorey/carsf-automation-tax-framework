@@ -32,7 +32,7 @@
 - Calibration source categories may be incomplete until Treasury/ATO-style, legal, privacy, data-owner, and economic review occurs.
 - Destination and activity attribution may create treaty, trade, and compliance disputes.
 - Excessive liability may deter useful productivity-enhancing investment.
-- Under-calibrated caps may make the framework fiscally symbolic rather than stabilising.
+- Caps below any future reviewed threshold may make the framework fiscally symbolic rather than stabilising.
 - Investment guardrails may create false comfort if placeholder burden bands are mistaken for calibrated economic incidence modelling.
 - Pass-through previews may overstate or understate consumer, worker, supplier, or capital burden without real elasticity estimates.
 - Normal-return preservation proxies may be misleading until sector-specific capital returns and risk premia are calibrated.
@@ -115,3 +115,9 @@ The “Modules Requiring External Review” section is a review-needs section, n
 The public aggregate scenario constraint layer can make display labels look like evidence quality labels if non-claim warnings are removed. It loads no new data and does not perform calibration. Scenario outputs may show public aggregate values only as sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability.
 
 Outputs marked non-interpretable are not usable as evidence, and hidden outputs are hidden to prevent overclaiming. The layer does not validate CARSF, determine actual tax payable, create legal sufficiency, create operational readiness, create official status, or modify firm-level liability. Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-34 are included in a later sealed RC.
+
+## Build 34.5 Full Repo Integrity Audit Risks
+
+The full repo integrity audit can make coverage matrices look like quality approval if non-claim warnings are removed. It loads no new data, does not fake missing data, and does not perform calibration. Coverage means an internal artefact, runner, report, or reference was found or documented; it does not mean the model is validated, externally reviewed, legally sufficient, operationally ready, official, or usable for actual tax payable.
+
+Missing factors, data dependencies, and external-review dependencies remain blockers when they require restricted data, legal review, tax review, economic review, statistical review, public finance review, welfare review, data governance review, administrative review, or domain review. Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-34.5 are included in a later sealed RC.

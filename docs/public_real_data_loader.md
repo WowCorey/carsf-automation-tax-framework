@@ -42,3 +42,7 @@ Build 25 sealed the earlier RC state. A new integrity seal must be regenerated i
 Build 34 consumes these public aggregate values through the scenario constraint layer. It does not load new data and only permits scenario outputs to show the values as sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability.
 
 Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-34 are included in a later sealed RC.
+
+## Build 34.5 Integrity Audit Link
+
+Build 34.5 adds a full repo integrity audit that checks this loader's public-data boundary fields, false flags, digest/report coverage, and manifest/report references. The audit loads no new data, does not fake missing data, does not calibrate or validate the model, does not determine actual tax payable, and does not modify firm-level CARSF liability.

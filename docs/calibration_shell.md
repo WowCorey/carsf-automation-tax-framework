@@ -377,3 +377,9 @@ This is not calibration. Calibration has not been completed. Boundary mapping do
 Build 34 applies the Build 33 boundaries to scenario outputs. Scenario outputs may display public aggregate values only as sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability. Outputs implying calibration, validation, actual tax payable, firm liability, legal sufficiency, official status, statistical estimation, economic validation, welfare validation, or implementation readiness are marked non-interpretable, hidden, downgraded, or fail-closed.
 
 This is not calibration. No new data is loaded. Scenario constraints do not validate the model, do not determine actual tax payable, do not create ATO guidance, Treasury modelling, PBO costing, legal sufficiency, official status, or operational readiness, and do not modify firm-level CARSF liability.
+
+## Build 34.5 Full Repo Integrity Audit
+
+Build 34.5 audits repo-wide integrity, runner coverage, report coverage, dashboard/report alignment, release manifests, docs links, public-data boundaries, placeholder boundaries, calibration boundaries, scenario constraints, guardrails, non-claim language, missing factors, data dependencies, and external-review dependencies.
+
+This is not calibration. No new data is loaded, missing data is not faked, and the audit does not validate the model, determine actual tax payable, create ATO guidance, Treasury modelling, PBO costing, legal sufficiency, official status, operational readiness, or firm-level CARSF liability changes.

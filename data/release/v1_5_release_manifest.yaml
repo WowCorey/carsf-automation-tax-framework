@@ -1379,6 +1379,56 @@ prototype_layers:
       - treasury_methods_reviewer
       - hostile_red_team_reviewer
     main_reason: Build 34 enforces scenario display constraints without loading new data, claiming calibration, or changing liability.
+  - layer_id: full_repo_integrity_upgrade_audit
+    layer_name: Full Repo Integrity Upgrade / Bug Check / Gap Audit
+    layer_group: repo_integrity
+    summary: Audits repo-wide runner, report, manifest, dashboard, documentation, public-data boundary, placeholder boundary, calibration boundary, scenario constraint, guardrail, non-claim, missing-factor, data-dependency, and external-review dependency coverage without loading data or changing liability.
+    primary_files:
+      - model/carsf/full_repo_integrity_upgrade_audit.py
+      - data/audit/full_repo_integrity_upgrade_manifest.yaml
+      - scripts/run_full_repo_integrity_upgrade_audit.py
+      - docs/full_repo_integrity_upgrade_audit.md
+    primary_reports:
+      - reports/full_repo_integrity_upgrade_audit.md
+      - reports/full_repo_integrity_upgrade_audit.json
+    streamlit_pages: []
+    status_labels:
+      - prototype_only
+      - generated_report_available
+      - full_repo_integrity_audit_only
+      - gap_register_available
+      - external_review_required
+      - not_for_real_world_use
+    non_claim_flags:
+      - no_new_data_loaded
+      - not_calibrated
+      - not_validation
+      - not_actual_tax_payable
+      - not_official_status
+      - no_liability_change
+    calibration_blockers:
+      - The audit records coverage, gaps, missing factors, data dependencies, review dependencies, and safe fixes but does not perform calibration, validation, source verification, tax-payable determination, or liability changes.
+      - Missing factors that require restricted data, legal review, tax review, economic review, statistical review, public finance review, welfare review, domain review, or data governance review remain blocked.
+    external_review_blockers:
+      - Legal, tax, economic, statistical, public finance, welfare, administrative, data governance, and domain review remain required before any prototype output can be interpreted beyond its boundary labels.
+    must_not_be_used_for:
+      - calibration completed
+      - validation
+      - official status
+      - actual tax payable
+      - ATO guidance
+      - Treasury modelling
+      - PBO costing
+      - readiness score
+      - firm-level liability
+    recommended_reviewer:
+      - technical_reviewer
+      - privacy_reviewer
+      - statistical_methods_reviewer
+      - legal_reviewer
+      - tax_reviewer
+      - hostile_red_team_reviewer
+    main_reason: Build 34.5 checks repo-wide wiring and gap visibility before the next reviewer handoff pack.
 generated_reports:
   - {report_path: reports/v1_5_release_candidate_pack.md, layer_id: release_candidate_pack, generated_by: python scripts/run_v1_5_release_candidate_pack.py, what_it_shows: release-candidate pack summary, what_it_does_not_show: no readiness score or official status, primary_non_claim: release packaging only, recommended_reviewer: [policy_reviewer, technical_reviewer], suggested_read_order: 2, optional: true}
   - {report_path: reports/v1_5_release_candidate_pack.json, layer_id: release_candidate_pack, generated_by: python scripts/run_v1_5_release_candidate_pack.py, what_it_shows: release-candidate pack data, what_it_does_not_show: no readiness score or official status, primary_non_claim: release packaging only, recommended_reviewer: [technical_reviewer], suggested_read_order: 2, optional: true}
@@ -1404,6 +1454,8 @@ generated_reports:
   - {report_path: reports/public_aggregate_calibration_boundary_map.json, layer_id: public_aggregate_calibration_boundary_map, generated_by: python scripts/run_public_aggregate_calibration_boundary_map.py, what_it_shows: machine-readable allowed uses forbidden uses module boundaries field boundaries blockers and false flags, what_it_does_not_show: new data loaded calibration completed validation official status tax-payable use restricted data or proof that CARSF works, primary_non_claim: calibration-boundary map only, recommended_reviewer: [technical_reviewer], suggested_read_order: 12, optional: false}
   - {report_path: reports/public_aggregate_scenario_constraint_layer.md, layer_id: public_aggregate_scenario_constraint_layer, generated_by: python scripts/run_public_aggregate_scenario_constraint_layer.py, what_it_shows: module and field scenario display constraints using the public aggregate boundary map, what_it_does_not_show: new data loaded calibration completed validation official status tax-payable use firm liability restricted data or proof that CARSF works, primary_non_claim: scenario constraint layer only, recommended_reviewer: [technical_reviewer, privacy_reviewer, statistical_methods_reviewer, hostile_red_team_reviewer], suggested_read_order: 13, optional: false}
   - {report_path: reports/public_aggregate_scenario_constraint_layer.json, layer_id: public_aggregate_scenario_constraint_layer, generated_by: python scripts/run_public_aggregate_scenario_constraint_layer.py, what_it_shows: machine-readable scenario statuses display rules forbidden implications module constraints field constraints and false flags, what_it_does_not_show: new data loaded calibration completed validation official status tax-payable use firm liability restricted data or proof that CARSF works, primary_non_claim: scenario constraint layer only, recommended_reviewer: [technical_reviewer], suggested_read_order: 13, optional: false}
+  - {report_path: reports/full_repo_integrity_upgrade_audit.md, layer_id: full_repo_integrity_upgrade_audit, generated_by: python scripts/run_full_repo_integrity_upgrade_audit.py, what_it_shows: repo-wide coverage gaps missing factors data dependencies review dependencies guardrails and safe fixes, what_it_does_not_show: new data loaded calibration completed validation official status tax-payable use firm liability restricted data or proof that CARSF works, primary_non_claim: full repo integrity audit only, recommended_reviewer: [technical_reviewer, privacy_reviewer, statistical_methods_reviewer, hostile_red_team_reviewer], suggested_read_order: 14, optional: false}
+  - {report_path: reports/full_repo_integrity_upgrade_audit.json, layer_id: full_repo_integrity_upgrade_audit, generated_by: python scripts/run_full_repo_integrity_upgrade_audit.py, what_it_shows: machine-readable repo coverage summary flags gap registers data dependencies external-review dependencies and false flags, what_it_does_not_show: new data loaded calibration completed validation official status tax-payable use firm liability restricted data or proof that CARSF works, primary_non_claim: full repo integrity audit only, recommended_reviewer: [technical_reviewer], suggested_read_order: 14, optional: false}
   - {report_path: reports/example_results.md, layer_id: worked_examples, generated_by: python scripts/run_examples.py, what_it_shows: worked example formula outputs, what_it_does_not_show: calibrated firm outcomes, primary_non_claim: prototype placeholders only, recommended_reviewer: [technical_reviewer, policy_reviewer], suggested_read_order: 5}
   - {report_path: reports/example_results.json, layer_id: worked_examples, generated_by: python scripts/run_examples.py, what_it_shows: machine-readable worked example outputs, what_it_does_not_show: calibrated firm outcomes, primary_non_claim: prototype placeholders only, recommended_reviewer: [technical_reviewer], suggested_read_order: 5}
   - {report_path: reports/grouped_entity_results.md, layer_id: worked_examples, generated_by: python scripts/run_examples.py, what_it_shows: grouped-entity preview outputs, what_it_does_not_show: legal grouping results, primary_non_claim: non-operative preview only, recommended_reviewer: [legal_reviewer, tax_reviewer], suggested_read_order: 6}
