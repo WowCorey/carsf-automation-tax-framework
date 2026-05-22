@@ -120,3 +120,11 @@ Build 33 adds a public aggregate calibration-boundary map over Build 31 public a
 No new data is loaded by Build 33. Public aggregate data does not calibrate the model. Calibration has not been completed. Public data does not prove the model works. Boundary mapping does not mean validation, statistical estimation, legal sufficiency, implementation readiness, official status, actual tax payable, or firm-level CARSF liability modification. Source candidates not loaded remain not loaded and restricted-data blockers remain blockers.
 
 Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-33 are included in a later sealed RC.
+
+## Build 34 Public Aggregate Scenario Constraint Layer Addendum
+
+Build 34 adds a public aggregate scenario constraint layer over the Build 31 public aggregate values, Build 32 placeholder replacement map, and Build 33 calibration-boundary map. It classifies module and field scenario outputs as sanity-check-only, public aggregate anchor-only, public aggregate bound-only, context-only, placeholder narrowing-only, reviewer traceability-only, non-interpretable, hidden from reviewer dashboards, or fail-closed where a forbidden implication would be created.
+
+No new data is loaded by Build 34. Scenario constraints do not calibrate the model, validate the model, prove the model works, determine actual tax payable, create firm-level liability, create legal sufficiency, create official status, or create implementation readiness. Public aggregate data can appear only as sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability. Outputs marked non-interpretable are not usable as evidence, and hidden outputs are hidden to prevent overclaiming.
+
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-34 are included in a later sealed RC.

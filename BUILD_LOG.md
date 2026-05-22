@@ -1108,3 +1108,29 @@ Limitations:
 - Source candidates not loaded remain not loaded, restricted-data blockers remain blockers, and modules requiring external review are boundary-limited rather than fully blocked for every allowed use.
 - The build does not determine actual tax payable, does not use restricted, personal, taxpayer-level, firm-confidential, household microdata, ABS DataLab, HILDA, DSS / Services Australia, ATO taxpayer, confidential Treasury / PBO, bank, payroll-document, pay-record, or tax-file-identifier data.
 - It does not claim validation, approval, operational readiness, legal sufficiency, official status, ATO guidance, Treasury modelling, PBO costing, or modify firm-level CARSF liability logic.
+
+## V1.5 Public Aggregate Scenario Constraint Layer
+
+Branch: `v1.5-public-aggregate-scenario-constraint-layer`
+
+Baseline: Build 33 public aggregate calibration-boundary map merged into `main`.
+
+Purpose of this build:
+
+- Add a public aggregate scenario constraint layer for CARSF V1.5.
+- Use the Build 33 boundary map to constrain scenario outputs so public aggregate values can appear only as sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability.
+- Mark non-interpretable, hide, downgrade, or fail-close outputs that would imply calibration, validation, actual tax payable, firm liability, official status, legal sufficiency, statistical estimation, economic validation, welfare validation, or implementation readiness.
+- Add manifest, model validation, generated reports, tests, docs, Streamlit dashboard section, and CI runner without loading new data.
+
+Reports generated:
+
+- `reports/public_aggregate_scenario_constraint_layer.json`
+- `reports/public_aggregate_scenario_constraint_layer.md`
+
+Limitations:
+
+- The scenario constraint layer loads no new data and performs no calibration.
+- Scenario constraints do not validate the model and public aggregate data does not prove the model works.
+- Outputs marked non-interpretable are not usable as evidence, and hidden outputs are hidden to prevent overclaiming.
+- The build does not determine actual tax payable, does not use restricted, personal, taxpayer-level, firm-confidential, household microdata, ABS DataLab, HILDA, DSS / Services Australia, ATO taxpayer, confidential Treasury / PBO, bank, payroll-document, pay-record, or tax-file-identifier data.
+- It does not claim validation, approval, operational readiness, legal sufficiency, official status, ATO guidance, Treasury modelling, PBO costing, or modify firm-level CARSF liability logic.

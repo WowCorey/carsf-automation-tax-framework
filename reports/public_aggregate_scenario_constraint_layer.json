@@ -1,0 +1,3050 @@
+{
+  "metadata": {
+    "claim_level_values": [
+      "no_scenario_claim_allowed",
+      "scenario_context_only",
+      "scenario_non_interpretable",
+      "scenario_placeholder_narrowing_only",
+      "scenario_public_anchor_only",
+      "scenario_public_bound_only",
+      "scenario_sanity_check_only",
+      "scenario_traceability_only"
+    ],
+    "constraint_status_values": [
+      "compliant_boundary_output",
+      "fail_closed",
+      "hidden_for_reviewer_safety",
+      "non_interpretable",
+      "warning_boundary_limited"
+    ],
+    "display_rule_values": [
+      "fail_closed",
+      "hide",
+      "show_as_boundary_only",
+      "show_as_context_only",
+      "show_as_traceability_only",
+      "show_blocked",
+      "show_placeholder_only",
+      "show_with_non_claim_warning"
+    ],
+    "forbidden_implication_values": [
+      "actual_tax_payable",
+      "ato_guidance",
+      "calibration_completed",
+      "causal_inference",
+      "compliance_scoring",
+      "firm_liability_determination",
+      "household_population_estimate",
+      "implementation_readiness",
+      "legal_sufficiency",
+      "maturity_scoring",
+      "model_validation",
+      "official_policy_status",
+      "pbo_costing",
+      "readiness_scoring",
+      "statistical_validation",
+      "taxpayer_behaviour_estimate",
+      "treasury_modelling"
+    ],
+    "generated_at": "2026-05-22T01:44:38+00:00",
+    "non_claims": [
+      "This is a public aggregate scenario constraint layer only. No new data is loaded by this build. Scenario constraints do not calibrate the model and do not validate the model. Public aggregate data can only appear as sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability. Public aggregate data does not prove the model works. Outputs marked non-interpretable are not usable as evidence. Hidden outputs are hidden to prevent overclaiming. Source candidates not loaded remain not loaded. Restricted-data blockers remain blockers. This is not validation, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable and does not modify firm-level CARSF liability.",
+      "Build 34 uses existing Build 31 public aggregate values, Build 32 placeholder decisions, and Build 33 boundary decisions only.",
+      "Scenario output labels are display constraints only; they are not calibration, validation, legal sufficiency, official status, readiness, or liability determinations.",
+      "Outputs marked non-interpretable or hidden remain unavailable as reviewer-facing evidence until required data and reviews exist."
+    ],
+    "scenario_output_status_values": [
+      "display_as_context_only",
+      "display_as_placeholder_narrowing_only",
+      "display_as_public_aggregate_anchor_only",
+      "display_as_public_aggregate_bound_only",
+      "display_as_reviewer_traceability_only",
+      "display_as_sanity_check_only",
+      "fail_closed_forbidden_claim",
+      "hide_from_reviewer_dashboard",
+      "mark_non_interpretable"
+    ],
+    "status": "public_aggregate_scenario_constraint_layer_only",
+    "version": "CARSF V1.5 prototype"
+  },
+  "public_aggregate_scenario_constraint_layer": {
+    "constraint_layer_id": "carsf_v1_5_public_aggregate_scenario_constraint_layer",
+    "constraint_layer_name": "CARSF V1.5 Public Aggregate Scenario Constraint Layer",
+    "dashboard_display_rules": [
+      {
+        "display_rule": "show_as_context_only",
+        "explanation": "Show only as contextual public aggregate reference.",
+        "rule_id": "display_rule_display_as_context_only",
+        "scenario_output_status": "display_as_context_only"
+      },
+      {
+        "display_rule": "show_placeholder_only",
+        "explanation": "Show only as placeholder narrowing or placeholder-status context.",
+        "rule_id": "display_rule_display_as_placeholder_narrowing_only",
+        "scenario_output_status": "display_as_placeholder_narrowing_only"
+      },
+      {
+        "display_rule": "show_as_boundary_only",
+        "explanation": "Show only as a public aggregate anchor or boundary output.",
+        "rule_id": "display_rule_display_as_public_aggregate_anchor_only",
+        "scenario_output_status": "display_as_public_aggregate_anchor_only"
+      },
+      {
+        "display_rule": "show_as_boundary_only",
+        "explanation": "Show only as a public aggregate bound or boundary output.",
+        "rule_id": "display_rule_display_as_public_aggregate_bound_only",
+        "scenario_output_status": "display_as_public_aggregate_bound_only"
+      },
+      {
+        "display_rule": "show_as_traceability_only",
+        "explanation": "Show only as source, boundary, or reviewer traceability.",
+        "rule_id": "display_rule_display_as_reviewer_traceability_only",
+        "scenario_output_status": "display_as_reviewer_traceability_only"
+      },
+      {
+        "display_rule": "show_with_non_claim_warning",
+        "explanation": "Show only as a sanity-check output with visible non-claim warning.",
+        "rule_id": "display_rule_display_as_sanity_check_only",
+        "scenario_output_status": "display_as_sanity_check_only"
+      },
+      {
+        "display_rule": "fail_closed",
+        "explanation": "Fail closed if the scenario output contains a forbidden implication.",
+        "rule_id": "display_rule_fail_closed_forbidden_claim",
+        "scenario_output_status": "fail_closed_forbidden_claim"
+      },
+      {
+        "display_rule": "hide",
+        "explanation": "Hide from reviewer dashboard to prevent overclaiming.",
+        "rule_id": "display_rule_hide_from_reviewer_dashboard",
+        "scenario_output_status": "hide_from_reviewer_dashboard"
+      },
+      {
+        "display_rule": "show_blocked",
+        "explanation": "Show blocked or non-interpretable label instead of reviewer-facing scenario evidence.",
+        "rule_id": "display_rule_mark_non_interpretable",
+        "scenario_output_status": "mark_non_interpretable"
+      }
+    ],
+    "field_scenario_constraints": [
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "field boundary label",
+          "linked public value traceability",
+          "placeholder status"
+        ],
+        "blocked_display_outputs": [
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "firm liability determination"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_public_bound_only",
+        "constraint_id": "field_scenario_constraint_anchor_fiscal_public_aggregates",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_boundary_only",
+        "evidence_needed_to_lift_constraint": [
+          "CARSF behavioural response method",
+          "revenue capture method",
+          "fiscal incidence method"
+        ],
+        "field_id": "fiscal_trajectory_assumptions",
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "field_boundary_anchor_fiscal_public_aggregates",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_fiscal_public_aggregates"
+        ],
+        "linked_public_value_ids": [
+          "ato_large_corporate_income_tax_received_2022_23",
+          "ato_large_corporate_entities_no_income_tax_percent_2022_23",
+          "ato_total_tax_revenue_collected_2022_23",
+          "ato_company_tax_revenue_2022_23",
+          "treasury_total_receipts_2025_26_estimate",
+          "treasury_taxation_receipts_2025_26_estimate"
+        ],
+        "placeholder_id": "anchor_fiscal_public_aggregates",
+        "reviewer_warning": "Field scenario output is constrained to boundary display only; it is not calibration, validation, tax payable evidence, official status, or firm-level CARSF liability.",
+        "scenario_output_status": "display_as_public_aggregate_bound_only",
+        "validation_claimed": false
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "field boundary label",
+          "linked public value traceability",
+          "placeholder status"
+        ],
+        "blocked_display_outputs": [
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "firm liability determination"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_non_interpretable",
+        "constraint_id": "field_scenario_constraint_anchor_help_source_reference",
+        "constraint_status": "non_interpretable",
+        "display_rule": "show_blocked",
+        "evidence_needed_to_lift_constraint": [
+          "income distribution",
+          "individual repayment records",
+          "eligibility law review"
+        ],
+        "field_id": "help_hecs_repayment_pressure",
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "field_boundary_anchor_help_source_reference",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_help_source_reference"
+        ],
+        "linked_public_value_ids": [],
+        "placeholder_id": "anchor_help_source_reference",
+        "reviewer_warning": "Field scenario output is constrained to boundary display only; it is not calibration, validation, tax payable evidence, official status, or firm-level CARSF liability.",
+        "scenario_output_status": "mark_non_interpretable",
+        "validation_claimed": false
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "field boundary label",
+          "linked public value traceability",
+          "placeholder status"
+        ],
+        "blocked_display_outputs": [
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "firm liability determination"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_public_bound_only",
+        "constraint_id": "field_scenario_constraint_anchor_hle_minimum_wage",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_boundary_only",
+        "evidence_needed_to_lift_constraint": [
+          "human labour equivalent method",
+          "occupation mix",
+          "worker-hour evidence"
+        ],
+        "field_id": "hle_assumptions",
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "field_boundary_anchor_hle_minimum_wage",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_hle_minimum_wage"
+        ],
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_national_minimum_wage_weekly_2025",
+          "fair_work_casual_loading_2025"
+        ],
+        "placeholder_id": "anchor_hle_minimum_wage",
+        "reviewer_warning": "Field scenario output is constrained to boundary display only; it is not calibration, validation, tax payable evidence, official status, or firm-level CARSF liability.",
+        "scenario_output_status": "display_as_public_aggregate_bound_only",
+        "validation_claimed": false
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "field boundary label",
+          "linked public value traceability",
+          "placeholder status"
+        ],
+        "blocked_display_outputs": [
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "firm liability determination"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_public_anchor_only",
+        "constraint_id": "field_scenario_constraint_anchor_opfte_minimum_wage",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_boundary_only",
+        "evidence_needed_to_lift_constraint": [
+          "occupation-specific hours",
+          "sector-specific labour requirements",
+          "schedule authority method"
+        ],
+        "field_id": "opfte_benchmarks",
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "field_boundary_anchor_opfte_minimum_wage",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_opfte_minimum_wage"
+        ],
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_national_minimum_wage_weekly_2025"
+        ],
+        "placeholder_id": "anchor_opfte_minimum_wage",
+        "reviewer_warning": "Field scenario output is constrained to boundary display only; it is not calibration, validation, tax payable evidence, official status, or firm-level CARSF liability.",
+        "scenario_output_status": "display_as_public_aggregate_anchor_only",
+        "validation_claimed": false
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "field boundary label",
+          "linked public value traceability",
+          "placeholder status"
+        ],
+        "blocked_display_outputs": [
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "firm liability determination"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_context_only",
+        "constraint_id": "field_scenario_constraint_anchor_payg_public_tax_stats",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_context_only",
+        "evidence_needed_to_lift_constraint": [
+          "employment-tax pathway method",
+          "sector attribution",
+          "behavioural response method"
+        ],
+        "field_id": "payg_erosion_assumptions",
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "field_boundary_anchor_payg_public_tax_stats",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_payg_public_tax_stats"
+        ],
+        "linked_public_value_ids": [
+          "ato_total_tax_revenue_collected_2022_23",
+          "ato_company_tax_revenue_2022_23"
+        ],
+        "placeholder_id": "anchor_payg_public_tax_stats",
+        "reviewer_warning": "Field scenario output is constrained to boundary display only; it is not calibration, validation, tax payable evidence, official status, or firm-level CARSF liability.",
+        "scenario_output_status": "display_as_context_only",
+        "validation_claimed": false
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "field boundary label",
+          "linked public value traceability",
+          "placeholder status"
+        ],
+        "blocked_display_outputs": [
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "firm liability determination"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_traceability_only",
+        "constraint_id": "field_scenario_constraint_anchor_payroll_tax_source_reference",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_traceability_only",
+        "evidence_needed_to_lift_constraint": [
+          "jurisdiction-specific payroll base",
+          "employer records",
+          "tax-law review"
+        ],
+        "field_id": "state_payroll_tax_pressure",
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "field_boundary_anchor_payroll_tax_source_reference",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_payroll_tax_source_reference"
+        ],
+        "linked_public_value_ids": [],
+        "placeholder_id": "anchor_payroll_tax_source_reference",
+        "reviewer_warning": "Field scenario output is constrained to boundary display only; it is not calibration, validation, tax payable evidence, official status, or firm-level CARSF liability.",
+        "scenario_output_status": "display_as_reviewer_traceability_only",
+        "validation_claimed": false
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "field boundary label",
+          "linked public value traceability",
+          "placeholder status"
+        ],
+        "blocked_display_outputs": [
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "firm liability determination"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_public_bound_only",
+        "constraint_id": "field_scenario_constraint_anchor_qlc_minimum_wage",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_boundary_only",
+        "evidence_needed_to_lift_constraint": [
+          "qualified labour contribution method",
+          "task allocation evidence",
+          "sector labour mix"
+        ],
+        "field_id": "qlc_weights",
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "field_boundary_anchor_qlc_minimum_wage",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_qlc_minimum_wage"
+        ],
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_national_minimum_wage_weekly_2025"
+        ],
+        "placeholder_id": "anchor_qlc_minimum_wage",
+        "reviewer_warning": "Field scenario output is constrained to boundary display only; it is not calibration, validation, tax payable evidence, official status, or firm-level CARSF liability.",
+        "scenario_output_status": "display_as_public_aggregate_bound_only",
+        "validation_claimed": false
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "field boundary label",
+          "linked public value traceability",
+          "placeholder status"
+        ],
+        "blocked_display_outputs": [
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "firm liability determination"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_context_only",
+        "constraint_id": "field_scenario_constraint_anchor_sector_schedule_source_reference",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_context_only",
+        "evidence_needed_to_lift_constraint": [
+          "ABS public aggregate table extraction",
+          "sector schedule authority method",
+          "mixed-unit attribution"
+        ],
+        "field_id": "sector_schedule_values",
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "field_boundary_anchor_sector_schedule_source_reference",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_sector_schedule_source_reference"
+        ],
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_casual_loading_2025"
+        ],
+        "placeholder_id": "anchor_sector_schedule_source_reference",
+        "reviewer_warning": "Field scenario output is constrained to boundary display only; it is not calibration, validation, tax payable evidence, official status, or firm-level CARSF liability.",
+        "scenario_output_status": "display_as_context_only",
+        "validation_claimed": false
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "field boundary label",
+          "linked public value traceability",
+          "placeholder status"
+        ],
+        "blocked_display_outputs": [
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "firm liability determination"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_public_anchor_only",
+        "constraint_id": "field_scenario_constraint_anchor_super_guarantee_rate",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_boundary_only",
+        "evidence_needed_to_lift_constraint": [
+          "wage base",
+          "employer contribution records",
+          "payment interaction method"
+        ],
+        "field_id": "superannuation_contribution_pressure",
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "field_boundary_anchor_super_guarantee_rate",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_super_guarantee_rate"
+        ],
+        "linked_public_value_ids": [
+          "ato_super_guarantee_rate_2025_26"
+        ],
+        "placeholder_id": "anchor_super_guarantee_rate",
+        "reviewer_warning": "Field scenario output is constrained to boundary display only; it is not calibration, validation, tax payable evidence, official status, or firm-level CARSF liability.",
+        "scenario_output_status": "display_as_public_aggregate_anchor_only",
+        "validation_claimed": false
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "field boundary label",
+          "linked public value traceability",
+          "placeholder status"
+        ],
+        "blocked_display_outputs": [
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "firm liability determination"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_context_only",
+        "constraint_id": "field_scenario_constraint_anchor_transition_public_reference",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_context_only",
+        "evidence_needed_to_lift_constraint": [
+          "transition eligibility method",
+          "payment administrative data",
+          "fiscal design review"
+        ],
+        "field_id": "transition_payment_assumptions",
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "field_boundary_anchor_transition_public_reference",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_transition_public_reference"
+        ],
+        "linked_public_value_ids": [
+          "treasury_total_receipts_2025_26_estimate",
+          "treasury_taxation_receipts_2025_26_estimate",
+          "ato_super_guarantee_rate_2025_26"
+        ],
+        "placeholder_id": "anchor_transition_public_reference",
+        "reviewer_warning": "Field scenario output is constrained to boundary display only; it is not calibration, validation, tax payable evidence, official status, or firm-level CARSF liability.",
+        "scenario_output_status": "display_as_context_only",
+        "validation_claimed": false
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "field boundary label",
+          "linked public value traceability",
+          "placeholder status"
+        ],
+        "blocked_display_outputs": [
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "firm liability determination"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_context_only",
+        "constraint_id": "field_scenario_constraint_anchor_uncertainty_source_reference_only",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_context_only",
+        "evidence_needed_to_lift_constraint": [
+          "statistical sampling frame",
+          "confidence method",
+          "authorised microdata"
+        ],
+        "field_id": "uncertainty_range_assumptions",
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "field_boundary_anchor_uncertainty_source_reference_only",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_uncertainty_source_reference_only"
+        ],
+        "linked_public_value_ids": [
+          "ato_total_tax_revenue_collected_2022_23",
+          "ato_company_tax_revenue_2022_23"
+        ],
+        "placeholder_id": "anchor_uncertainty_source_reference_only",
+        "reviewer_warning": "Field scenario output is constrained to boundary display only; it is not calibration, validation, tax payable evidence, official status, or firm-level CARSF liability.",
+        "scenario_output_status": "display_as_context_only",
+        "validation_claimed": false
+      }
+    ],
+    "forbidden_scenario_implications": [
+      {
+        "constraint_action": "flag_hide_downgrade_or_mark_non_interpretable",
+        "implication": "actual_tax_payable",
+        "implication_id": "forbidden_actual_tax_payable",
+        "reviewer_warning": "Scenario output must not imply actual_tax_payable; if it does, the layer must fail closed or hide the output."
+      },
+      {
+        "constraint_action": "flag_hide_downgrade_or_mark_non_interpretable",
+        "implication": "ato_guidance",
+        "implication_id": "forbidden_ato_guidance",
+        "reviewer_warning": "Scenario output must not imply ato_guidance; if it does, the layer must fail closed or hide the output."
+      },
+      {
+        "constraint_action": "flag_hide_downgrade_or_mark_non_interpretable",
+        "implication": "calibration_completed",
+        "implication_id": "forbidden_calibration_completed",
+        "reviewer_warning": "Scenario output must not imply calibration_completed; if it does, the layer must fail closed or hide the output."
+      },
+      {
+        "constraint_action": "flag_hide_downgrade_or_mark_non_interpretable",
+        "implication": "causal_inference",
+        "implication_id": "forbidden_causal_inference",
+        "reviewer_warning": "Scenario output must not imply causal_inference; if it does, the layer must fail closed or hide the output."
+      },
+      {
+        "constraint_action": "flag_hide_downgrade_or_mark_non_interpretable",
+        "implication": "compliance_scoring",
+        "implication_id": "forbidden_compliance_scoring",
+        "reviewer_warning": "Scenario output must not imply compliance_scoring; if it does, the layer must fail closed or hide the output."
+      },
+      {
+        "constraint_action": "flag_hide_downgrade_or_mark_non_interpretable",
+        "implication": "firm_liability_determination",
+        "implication_id": "forbidden_firm_liability_determination",
+        "reviewer_warning": "Scenario output must not imply firm_liability_determination; if it does, the layer must fail closed or hide the output."
+      },
+      {
+        "constraint_action": "flag_hide_downgrade_or_mark_non_interpretable",
+        "implication": "household_population_estimate",
+        "implication_id": "forbidden_household_population_estimate",
+        "reviewer_warning": "Scenario output must not imply household_population_estimate; if it does, the layer must fail closed or hide the output."
+      },
+      {
+        "constraint_action": "flag_hide_downgrade_or_mark_non_interpretable",
+        "implication": "implementation_readiness",
+        "implication_id": "forbidden_implementation_readiness",
+        "reviewer_warning": "Scenario output must not imply implementation_readiness; if it does, the layer must fail closed or hide the output."
+      },
+      {
+        "constraint_action": "flag_hide_downgrade_or_mark_non_interpretable",
+        "implication": "legal_sufficiency",
+        "implication_id": "forbidden_legal_sufficiency",
+        "reviewer_warning": "Scenario output must not imply legal_sufficiency; if it does, the layer must fail closed or hide the output."
+      },
+      {
+        "constraint_action": "flag_hide_downgrade_or_mark_non_interpretable",
+        "implication": "maturity_scoring",
+        "implication_id": "forbidden_maturity_scoring",
+        "reviewer_warning": "Scenario output must not imply maturity_scoring; if it does, the layer must fail closed or hide the output."
+      },
+      {
+        "constraint_action": "flag_hide_downgrade_or_mark_non_interpretable",
+        "implication": "model_validation",
+        "implication_id": "forbidden_model_validation",
+        "reviewer_warning": "Scenario output must not imply model_validation; if it does, the layer must fail closed or hide the output."
+      },
+      {
+        "constraint_action": "flag_hide_downgrade_or_mark_non_interpretable",
+        "implication": "official_policy_status",
+        "implication_id": "forbidden_official_policy_status",
+        "reviewer_warning": "Scenario output must not imply official_policy_status; if it does, the layer must fail closed or hide the output."
+      },
+      {
+        "constraint_action": "flag_hide_downgrade_or_mark_non_interpretable",
+        "implication": "pbo_costing",
+        "implication_id": "forbidden_pbo_costing",
+        "reviewer_warning": "Scenario output must not imply pbo_costing; if it does, the layer must fail closed or hide the output."
+      },
+      {
+        "constraint_action": "flag_hide_downgrade_or_mark_non_interpretable",
+        "implication": "readiness_scoring",
+        "implication_id": "forbidden_readiness_scoring",
+        "reviewer_warning": "Scenario output must not imply readiness_scoring; if it does, the layer must fail closed or hide the output."
+      },
+      {
+        "constraint_action": "flag_hide_downgrade_or_mark_non_interpretable",
+        "implication": "statistical_validation",
+        "implication_id": "forbidden_statistical_validation",
+        "reviewer_warning": "Scenario output must not imply statistical_validation; if it does, the layer must fail closed or hide the output."
+      },
+      {
+        "constraint_action": "flag_hide_downgrade_or_mark_non_interpretable",
+        "implication": "taxpayer_behaviour_estimate",
+        "implication_id": "forbidden_taxpayer_behaviour_estimate",
+        "reviewer_warning": "Scenario output must not imply taxpayer_behaviour_estimate; if it does, the layer must fail closed or hide the output."
+      },
+      {
+        "constraint_action": "flag_hide_downgrade_or_mark_non_interpretable",
+        "implication": "treasury_modelling",
+        "implication_id": "forbidden_treasury_modelling",
+        "reviewer_warning": "Scenario output must not imply treasury_modelling; if it does, the layer must fail closed or hide the output."
+      }
+    ],
+    "future_build_35_requirements": [
+      "Package public aggregate values, placeholder replacement, calibration boundaries, and scenario constraints into a reviewer-facing handoff bundle.",
+      "Keep hidden and non-interpretable outputs clearly separated from reviewer-facing evidence.",
+      "Preserve no-calibration, no-validation, no-tax-payable, no-official-status, no-legal-sufficiency, no-readiness-score, and no-liability-change boundaries."
+    ],
+    "module_scenario_constraints": [
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "traceability and pathway concept only"
+        ],
+        "blocked_display_outputs": [
+          "ATO workflow",
+          "compliance scoring",
+          "enforcement",
+          "notices",
+          "operational readiness"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_traceability_only",
+        "constraint_id": "scenario_constraint_administrative_compliance_workflow",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_traceability_only",
+        "evidence_needed_to_lift_constraint": [
+          "ATO methods review",
+          "legal review",
+          "secure operational design"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "compliance_scoring",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "boundary_administrative_compliance_workflow",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_payg_public_tax_stats"
+        ],
+        "linked_public_value_ids": [
+          "ato_total_tax_revenue_collected_2022_23"
+        ],
+        "module_id": "administrative_compliance_workflow",
+        "module_name": "Administrative compliance workflow",
+        "official_status_claimed": false,
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_restricted_data": false,
+        "requires_statistical_review": false,
+        "requires_tax_review": true,
+        "reviewer_warning": "Scenario display is boundary-limited only; it is not calibration, validation, tax payable evidence, legal sufficiency, official status, implementation readiness, or firm-level CARSF liability.",
+        "safe_for_repo_use": true,
+        "scenario_output_status": "display_as_reviewer_traceability_only",
+        "validation_claimed": false,
+        "what_can_be_displayed": "Administrative compliance workflow may display traceability and pathway concept only only with non-claim warnings.",
+        "what_must_be_hidden_or_marked_non_interpretable": "Administrative compliance workflow must hide or mark non-interpretable any output implying ATO workflow, compliance scoring, enforcement, notices, operational readiness."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "context only",
+          "blocked warning"
+        ],
+        "blocked_display_outputs": [
+          "behavioural elasticity",
+          "avoidance estimate",
+          "gaming prediction",
+          "causal response"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_non_interpretable",
+        "constraint_id": "scenario_constraint_behavioural_response_gaming_simulation",
+        "constraint_status": "non_interpretable",
+        "display_rule": "show_blocked",
+        "evidence_needed_to_lift_constraint": [
+          "behavioural elasticity evidence",
+          "authorised administrative data",
+          "economic review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "boundary_behavioural_response_gaming_simulation",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_uncertainty_source_reference_only"
+        ],
+        "linked_public_value_ids": [
+          "ato_total_tax_revenue_collected_2022_23",
+          "ato_company_tax_revenue_2022_23"
+        ],
+        "module_id": "behavioural_response_gaming_simulation",
+        "module_name": "Behavioural response / gaming simulation",
+        "official_status_claimed": false,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "reviewer_warning": "Scenario display is boundary-limited only; it is not calibration, validation, tax payable evidence, legal sufficiency, official status, implementation readiness, or firm-level CARSF liability.",
+        "safe_for_repo_use": true,
+        "scenario_output_status": "mark_non_interpretable",
+        "validation_claimed": false,
+        "what_can_be_displayed": "Behavioural response / gaming simulation may display context only, blocked warning only with non-claim warnings.",
+        "what_must_be_hidden_or_marked_non_interpretable": "Behavioural response / gaming simulation must hide or mark non-interpretable any output implying behavioural elasticity, avoidance estimate, gaming prediction, causal response."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "boundary labels",
+          "non-claim warnings",
+          "source traceability"
+        ],
+        "blocked_display_outputs": [
+          "readiness scoring",
+          "calibration scoring",
+          "validation scoring",
+          "tax payable estimate",
+          "liability estimate"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_traceability_only",
+        "constraint_id": "scenario_constraint_executive_dashboard_consolidation",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_traceability_only",
+        "evidence_needed_to_lift_constraint": [
+          "reviewer feedback",
+          "dashboard interpretation testing",
+          "guardrail review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "maturity_scoring",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "readiness_scoring",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "boundary_executive_dashboard_consolidation",
+        "linked_placeholder_decision_ids": [],
+        "linked_public_value_ids": [],
+        "module_id": "executive_dashboard_consolidation",
+        "module_name": "Executive dashboard consolidation",
+        "official_status_claimed": false,
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_restricted_data": false,
+        "requires_statistical_review": false,
+        "requires_tax_review": true,
+        "reviewer_warning": "Scenario display is boundary-limited only; it is not calibration, validation, tax payable evidence, legal sufficiency, official status, implementation readiness, or firm-level CARSF liability.",
+        "safe_for_repo_use": true,
+        "scenario_output_status": "display_as_reviewer_traceability_only",
+        "validation_claimed": false,
+        "what_can_be_displayed": "Executive dashboard consolidation may display boundary labels, non-claim warnings, source traceability only with non-claim warnings.",
+        "what_must_be_hidden_or_marked_non_interpretable": "Executive dashboard consolidation must hide or mark non-interpretable any output implying readiness scoring, calibration scoring, validation scoring, tax payable estimate, liability estimate."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "fiscal context",
+          "public aggregate fiscal bounds"
+        ],
+        "blocked_display_outputs": [
+          "Treasury modelling",
+          "PBO costing",
+          "fiscal sufficiency",
+          "CARSF revenue estimate"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_public_bound_only",
+        "constraint_id": "scenario_constraint_fiscal_trajectory_assumptions",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_boundary_only",
+        "evidence_needed_to_lift_constraint": [
+          "revenue incidence method",
+          "behavioural response method",
+          "economic review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "boundary_fiscal_trajectory_assumptions",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_fiscal_public_aggregates"
+        ],
+        "linked_public_value_ids": [
+          "ato_large_corporate_income_tax_received_2022_23",
+          "ato_large_corporate_entities_no_income_tax_percent_2022_23",
+          "ato_total_tax_revenue_collected_2022_23",
+          "ato_company_tax_revenue_2022_23",
+          "treasury_total_receipts_2025_26_estimate",
+          "treasury_taxation_receipts_2025_26_estimate"
+        ],
+        "module_id": "fiscal_trajectory_assumptions",
+        "module_name": "Fiscal trajectory assumptions",
+        "official_status_claimed": false,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "reviewer_warning": "Scenario display is boundary-limited only; it is not calibration, validation, tax payable evidence, legal sufficiency, official status, implementation readiness, or firm-level CARSF liability.",
+        "safe_for_repo_use": true,
+        "scenario_output_status": "display_as_public_aggregate_bound_only",
+        "validation_claimed": false,
+        "what_can_be_displayed": "Fiscal trajectory assumptions may display fiscal context, public aggregate fiscal bounds only with non-claim warnings.",
+        "what_must_be_hidden_or_marked_non_interpretable": "Fiscal trajectory assumptions must hide or mark non-interpretable any output implying Treasury modelling, PBO costing, fiscal sufficiency, CARSF revenue estimate."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "wage boundary display",
+          "placeholder narrowing display"
+        ],
+        "blocked_display_outputs": [
+          "representative labour-cost estimate",
+          "occupation-specific wage model",
+          "automation substitution calibration"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_public_bound_only",
+        "constraint_id": "scenario_constraint_hle_assumptions_module",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_boundary_only",
+        "evidence_needed_to_lift_constraint": [
+          "human labour equivalent method",
+          "occupation mix evidence",
+          "behavioural elasticity review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "boundary_hle_assumptions_module",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_hle_minimum_wage"
+        ],
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_national_minimum_wage_weekly_2025",
+          "fair_work_casual_loading_2025"
+        ],
+        "module_id": "hle_assumptions_module",
+        "module_name": "HLE assumptions module",
+        "official_status_claimed": false,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "reviewer_warning": "Scenario display is boundary-limited only; it is not calibration, validation, tax payable evidence, legal sufficiency, official status, implementation readiness, or firm-level CARSF liability.",
+        "safe_for_repo_use": true,
+        "scenario_output_status": "display_as_public_aggregate_bound_only",
+        "validation_claimed": false,
+        "what_can_be_displayed": "HLE assumptions module may display wage boundary display, placeholder narrowing display only with non-claim warnings.",
+        "what_must_be_hidden_or_marked_non_interpretable": "HLE assumptions module must hide or mark non-interpretable any output implying representative labour-cost estimate, occupation-specific wage model, automation substitution calibration."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "synthetic placeholder context only"
+        ],
+        "blocked_display_outputs": [
+          "real household estimate",
+          "population estimate",
+          "welfare impact estimate",
+          "distributional calibration"
+        ],
+        "calibration_completed": false,
+        "claim_level": "no_scenario_claim_allowed",
+        "constraint_id": "scenario_constraint_household_distributional_scenarios",
+        "constraint_status": "hidden_for_reviewer_safety",
+        "display_rule": "hide",
+        "evidence_needed_to_lift_constraint": [
+          "authorised household microdata",
+          "welfare payment evidence",
+          "statistical review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "boundary_household_distributional_scenarios",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_help_source_reference",
+          "decision_anchor_transition_public_reference"
+        ],
+        "linked_public_value_ids": [
+          "treasury_total_receipts_2025_26_estimate"
+        ],
+        "module_id": "household_distributional_scenarios",
+        "module_name": "Household distributional scenarios",
+        "official_status_claimed": false,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "reviewer_warning": "Scenario display is boundary-limited only; it is not calibration, validation, tax payable evidence, legal sufficiency, official status, implementation readiness, or firm-level CARSF liability.",
+        "safe_for_repo_use": true,
+        "scenario_output_status": "hide_from_reviewer_dashboard",
+        "validation_claimed": false,
+        "what_can_be_displayed": "Household distributional scenarios may display synthetic placeholder context only only with non-claim warnings.",
+        "what_must_be_hidden_or_marked_non_interpretable": "Household distributional scenarios must hide or mark non-interpretable any output implying real household estimate, population estimate, welfare impact estimate, distributional calibration."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "synthetic placeholder context only"
+        ],
+        "blocked_display_outputs": [
+          "representative weighting",
+          "population estimate",
+          "household distributional estimate"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_non_interpretable",
+        "constraint_id": "scenario_constraint_household_weighting",
+        "constraint_status": "non_interpretable",
+        "display_rule": "show_blocked",
+        "evidence_needed_to_lift_constraint": [
+          "authorised household sample frame",
+          "weighting method",
+          "statistical review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "boundary_household_weighting",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_help_source_reference"
+        ],
+        "linked_public_value_ids": [],
+        "module_id": "household_weighting",
+        "module_name": "Household weighting",
+        "official_status_claimed": false,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "reviewer_warning": "Scenario display is boundary-limited only; it is not calibration, validation, tax payable evidence, legal sufficiency, official status, implementation readiness, or firm-level CARSF liability.",
+        "safe_for_repo_use": true,
+        "scenario_output_status": "mark_non_interpretable",
+        "validation_claimed": false,
+        "what_can_be_displayed": "Household weighting may display synthetic placeholder context only only with non-claim warnings.",
+        "what_must_be_hidden_or_marked_non_interpretable": "Household weighting must hide or mark non-interpretable any output implying representative weighting, population estimate, household distributional estimate."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "non-operative architecture traceability"
+        ],
+        "blocked_display_outputs": [
+          "operative law",
+          "legal sufficiency",
+          "drafting readiness",
+          "official policy"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_traceability_only",
+        "constraint_id": "scenario_constraint_legislative_architecture_skeleton",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_traceability_only",
+        "evidence_needed_to_lift_constraint": [
+          "legal drafting review",
+          "tax review",
+          "Parliamentary Counsel review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "boundary_legislative_architecture_skeleton",
+        "linked_placeholder_decision_ids": [],
+        "linked_public_value_ids": [],
+        "module_id": "legislative_architecture_skeleton",
+        "module_name": "Legislative architecture skeleton",
+        "official_status_claimed": false,
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_restricted_data": false,
+        "requires_statistical_review": false,
+        "requires_tax_review": true,
+        "reviewer_warning": "Scenario display is boundary-limited only; it is not calibration, validation, tax payable evidence, legal sufficiency, official status, implementation readiness, or firm-level CARSF liability.",
+        "safe_for_repo_use": true,
+        "scenario_output_status": "display_as_reviewer_traceability_only",
+        "validation_claimed": false,
+        "what_can_be_displayed": "Legislative architecture skeleton may display non-operative architecture traceability only with non-claim warnings.",
+        "what_must_be_hidden_or_marked_non_interpretable": "Legislative architecture skeleton must hide or mark non-interpretable any output implying operative law, legal sufficiency, drafting readiness, official policy."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "Fair Work public wage anchors",
+          "visible sanity checks",
+          "public aggregate wage bounds"
+        ],
+        "blocked_display_outputs": [
+          "OPFTE calibration",
+          "representative labour-cost estimate",
+          "firm liability determination",
+          "actual tax payable"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_public_anchor_only",
+        "constraint_id": "scenario_constraint_opfte_benchmark_module",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_boundary_only",
+        "evidence_needed_to_lift_constraint": [
+          "occupation-specific labour evidence",
+          "sector schedule authority method",
+          "statistical review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "boundary_opfte_benchmark_module",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_opfte_minimum_wage"
+        ],
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_national_minimum_wage_weekly_2025"
+        ],
+        "module_id": "opfte_benchmark_module",
+        "module_name": "OPFTE benchmark module",
+        "official_status_claimed": false,
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "reviewer_warning": "Scenario display is boundary-limited only; it is not calibration, validation, tax payable evidence, legal sufficiency, official status, implementation readiness, or firm-level CARSF liability.",
+        "safe_for_repo_use": true,
+        "scenario_output_status": "display_as_public_aggregate_anchor_only",
+        "validation_claimed": false,
+        "what_can_be_displayed": "OPFTE benchmark module may display Fair Work public wage anchors, visible sanity checks, public aggregate wage bounds only with non-claim warnings.",
+        "what_must_be_hidden_or_marked_non_interpretable": "OPFTE benchmark module must hide or mark non-interpretable any output implying OPFTE calibration, representative labour-cost estimate, firm liability determination, actual tax payable."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "tax aggregate context only"
+        ],
+        "blocked_display_outputs": [
+          "PAYG erosion calibration",
+          "taxpayer behaviour estimate",
+          "CARSF revenue estimate"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_non_interpretable",
+        "constraint_id": "scenario_constraint_payg_erosion_assumptions",
+        "constraint_status": "non_interpretable",
+        "display_rule": "show_blocked",
+        "evidence_needed_to_lift_constraint": [
+          "taxpayer behaviour evidence",
+          "employment tax pathway method",
+          "authorised tax data governance"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "boundary_payg_erosion_assumptions",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_payg_public_tax_stats"
+        ],
+        "linked_public_value_ids": [
+          "ato_total_tax_revenue_collected_2022_23",
+          "ato_company_tax_revenue_2022_23"
+        ],
+        "module_id": "payg_erosion_assumptions",
+        "module_name": "PAYG erosion assumptions",
+        "official_status_claimed": false,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "reviewer_warning": "Scenario display is boundary-limited only; it is not calibration, validation, tax payable evidence, legal sufficiency, official status, implementation readiness, or firm-level CARSF liability.",
+        "safe_for_repo_use": true,
+        "scenario_output_status": "mark_non_interpretable",
+        "validation_claimed": false,
+        "what_can_be_displayed": "PAYG erosion assumptions may display tax aggregate context only only with non-claim warnings.",
+        "what_must_be_hidden_or_marked_non_interpretable": "PAYG erosion assumptions must hide or mark non-interpretable any output implying PAYG erosion calibration, taxpayer behaviour estimate, CARSF revenue estimate."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "evidence map traceability",
+          "source-reference labels"
+        ],
+        "blocked_display_outputs": [
+          "validation evidence",
+          "calibration evidence",
+          "policy readiness evidence"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_traceability_only",
+        "constraint_id": "scenario_constraint_public_data_evidence_map",
+        "constraint_status": "compliant_boundary_output",
+        "display_rule": "show_as_traceability_only",
+        "evidence_needed_to_lift_constraint": [
+          "manual reviewer inspection",
+          "statistical review where relevant"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "boundary_public_data_evidence_map",
+        "linked_placeholder_decision_ids": [],
+        "linked_public_value_ids": [],
+        "module_id": "public_data_evidence_map",
+        "module_name": "Public data evidence map",
+        "official_status_claimed": false,
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": false,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "reviewer_warning": "Scenario display is boundary-limited only; it is not calibration, validation, tax payable evidence, legal sufficiency, official status, implementation readiness, or firm-level CARSF liability.",
+        "safe_for_repo_use": true,
+        "scenario_output_status": "display_as_reviewer_traceability_only",
+        "validation_claimed": false,
+        "what_can_be_displayed": "Public data evidence map may display evidence map traceability, source-reference labels only with non-claim warnings.",
+        "what_must_be_hidden_or_marked_non_interpretable": "Public data evidence map must hide or mark non-interpretable any output implying validation evidence, calibration evidence, policy readiness evidence."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "placeholder replacement labels",
+          "placeholder narrowing labels",
+          "context labels"
+        ],
+        "blocked_display_outputs": [
+          "calibration replacement",
+          "validation replacement",
+          "liability replacement"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_placeholder_narrowing_only",
+        "constraint_id": "scenario_constraint_public_data_placeholder_replacement_map",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_placeholder_only",
+        "evidence_needed_to_lift_constraint": [
+          "reviewer inspection",
+          "restricted-data governance",
+          "statistical review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "boundary_public_data_placeholder_replacement_map",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_opfte_minimum_wage",
+          "decision_anchor_hle_minimum_wage",
+          "decision_anchor_qlc_minimum_wage",
+          "decision_anchor_fiscal_public_aggregates",
+          "decision_anchor_super_guarantee_rate"
+        ],
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_national_minimum_wage_weekly_2025",
+          "fair_work_casual_loading_2025",
+          "ato_company_tax_revenue_2022_23",
+          "ato_super_guarantee_rate_2025_26"
+        ],
+        "module_id": "public_data_placeholder_replacement_map",
+        "module_name": "Public data placeholder replacement map",
+        "official_status_claimed": false,
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "reviewer_warning": "Scenario display is boundary-limited only; it is not calibration, validation, tax payable evidence, legal sufficiency, official status, implementation readiness, or firm-level CARSF liability.",
+        "safe_for_repo_use": true,
+        "scenario_output_status": "display_as_placeholder_narrowing_only",
+        "validation_claimed": false,
+        "what_can_be_displayed": "Public data placeholder replacement map may display placeholder replacement labels, placeholder narrowing labels, context labels only with non-claim warnings.",
+        "what_must_be_hidden_or_marked_non_interpretable": "Public data placeholder replacement map must hide or mark non-interpretable any output implying calibration replacement, validation replacement, liability replacement."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "placeholder narrowing display",
+          "wage-threshold context"
+        ],
+        "blocked_display_outputs": [
+          "QLC calibration",
+          "labour-quality validation",
+          "legal attribution"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_placeholder_narrowing_only",
+        "constraint_id": "scenario_constraint_qlc_weights_module",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_placeholder_only",
+        "evidence_needed_to_lift_constraint": [
+          "QLC weighting method",
+          "sector labour evidence",
+          "tax-method review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "boundary_qlc_weights_module",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_qlc_minimum_wage"
+        ],
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_national_minimum_wage_weekly_2025"
+        ],
+        "module_id": "qlc_weights_module",
+        "module_name": "QLC weights module",
+        "official_status_claimed": false,
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "reviewer_warning": "Scenario display is boundary-limited only; it is not calibration, validation, tax payable evidence, legal sufficiency, official status, implementation readiness, or firm-level CARSF liability.",
+        "safe_for_repo_use": true,
+        "scenario_output_status": "display_as_placeholder_narrowing_only",
+        "validation_claimed": false,
+        "what_can_be_displayed": "QLC weights module may display placeholder narrowing display, wage-threshold context only with non-claim warnings.",
+        "what_must_be_hidden_or_marked_non_interpretable": "QLC weights module must hide or mark non-interpretable any output implying QLC calibration, labour-quality validation, legal attribution."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "reviewer-facing comparison labels",
+          "non-claim warnings"
+        ],
+        "blocked_display_outputs": [
+          "policy ranking",
+          "validation ranking",
+          "implementation recommendation"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_traceability_only",
+        "constraint_id": "scenario_constraint_reviewed_scenario_comparison_layer",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_traceability_only",
+        "evidence_needed_to_lift_constraint": [
+          "scenario review protocol",
+          "statistical review",
+          "economic review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "boundary_reviewed_scenario_comparison_layer",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_uncertainty_source_reference_only"
+        ],
+        "linked_public_value_ids": [
+          "ato_total_tax_revenue_collected_2022_23"
+        ],
+        "module_id": "reviewed_scenario_comparison_layer",
+        "module_name": "Reviewed scenario comparison layer",
+        "official_status_claimed": false,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": false,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "reviewer_warning": "Scenario display is boundary-limited only; it is not calibration, validation, tax payable evidence, legal sufficiency, official status, implementation readiness, or firm-level CARSF liability.",
+        "safe_for_repo_use": true,
+        "scenario_output_status": "display_as_reviewer_traceability_only",
+        "validation_claimed": false,
+        "what_can_be_displayed": "Reviewed scenario comparison layer may display reviewer-facing comparison labels, non-claim warnings only with non-claim warnings.",
+        "what_must_be_hidden_or_marked_non_interpretable": "Reviewed scenario comparison layer must hide or mark non-interpretable any output implying policy ranking, validation ranking, implementation recommendation."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "sector schedule context",
+          "reviewer traceability"
+        ],
+        "blocked_display_outputs": [
+          "official sector ranking",
+          "schedule calibration",
+          "legal attribution"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_context_only",
+        "constraint_id": "scenario_constraint_sector_schedule_values",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_context_only",
+        "evidence_needed_to_lift_constraint": [
+          "sector-specific public aggregates",
+          "schedule authority method",
+          "legal review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "boundary_sector_schedule_values",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_sector_schedule_source_reference"
+        ],
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_casual_loading_2025"
+        ],
+        "module_id": "sector_schedule_values",
+        "module_name": "Sector schedule values",
+        "official_status_claimed": false,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "reviewer_warning": "Scenario display is boundary-limited only; it is not calibration, validation, tax payable evidence, legal sufficiency, official status, implementation readiness, or firm-level CARSF liability.",
+        "safe_for_repo_use": true,
+        "scenario_output_status": "display_as_context_only",
+        "validation_claimed": false,
+        "what_can_be_displayed": "Sector schedule values may display sector schedule context, reviewer traceability only with non-claim warnings.",
+        "what_must_be_hidden_or_marked_non_interpretable": "Sector schedule values must hide or mark non-interpretable any output implying official sector ranking, schedule calibration, legal attribution."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "stress assumption sanity checks",
+          "public aggregate context"
+        ],
+        "blocked_display_outputs": [
+          "validated sector stress",
+          "official sector ranking",
+          "population estimate"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_sanity_check_only",
+        "constraint_id": "scenario_constraint_sector_stress_matrix",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_with_non_claim_warning",
+        "evidence_needed_to_lift_constraint": [
+          "sector exposure evidence",
+          "economic incidence review",
+          "statistical review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "boundary_sector_stress_matrix",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_sector_schedule_source_reference",
+          "decision_anchor_uncertainty_source_reference_only"
+        ],
+        "linked_public_value_ids": [
+          "fair_work_national_minimum_wage_hourly_2025",
+          "ato_total_tax_revenue_collected_2022_23"
+        ],
+        "module_id": "sector_stress_matrix",
+        "module_name": "Sector stress matrix",
+        "official_status_claimed": false,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "reviewer_warning": "Scenario display is boundary-limited only; it is not calibration, validation, tax payable evidence, legal sufficiency, official status, implementation readiness, or firm-level CARSF liability.",
+        "safe_for_repo_use": true,
+        "scenario_output_status": "display_as_sanity_check_only",
+        "validation_claimed": false,
+        "what_can_be_displayed": "Sector stress matrix may display stress assumption sanity checks, public aggregate context only with non-claim warnings.",
+        "what_must_be_hidden_or_marked_non_interpretable": "Sector stress matrix must hide or mark non-interpretable any output implying validated sector stress, official sector ranking, population estimate."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "public contribution-rate anchor",
+          "payment interaction context"
+        ],
+        "blocked_display_outputs": [
+          "individual super estimate",
+          "employer behaviour estimate",
+          "payroll estimate",
+          "ATO guidance claim"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_public_anchor_only",
+        "constraint_id": "scenario_constraint_superannuation_contribution_pressure",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_boundary_only",
+        "evidence_needed_to_lift_constraint": [
+          "wage base evidence",
+          "employer contribution behaviour evidence",
+          "tax review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "boundary_superannuation_contribution_pressure",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_super_guarantee_rate"
+        ],
+        "linked_public_value_ids": [
+          "ato_super_guarantee_rate_2025_26"
+        ],
+        "module_id": "superannuation_contribution_pressure",
+        "module_name": "Superannuation contribution pressure",
+        "official_status_claimed": false,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": true,
+        "requires_statistical_review": false,
+        "requires_tax_review": true,
+        "reviewer_warning": "Scenario display is boundary-limited only; it is not calibration, validation, tax payable evidence, legal sufficiency, official status, implementation readiness, or firm-level CARSF liability.",
+        "safe_for_repo_use": true,
+        "scenario_output_status": "display_as_public_aggregate_anchor_only",
+        "validation_claimed": false,
+        "what_can_be_displayed": "Superannuation contribution pressure may display public contribution-rate anchor, payment interaction context only with non-claim warnings.",
+        "what_must_be_hidden_or_marked_non_interpretable": "Superannuation contribution pressure must hide or mark non-interpretable any output implying individual super estimate, employer behaviour estimate, payroll estimate, ATO guidance claim."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "transition funding scale context",
+          "public aggregate fiscal bounds"
+        ],
+        "blocked_display_outputs": [
+          "fiscal sufficiency",
+          "welfare impact estimate",
+          "policy implementation readiness"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_context_only",
+        "constraint_id": "scenario_constraint_transition_funding_assumptions",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_context_only",
+        "evidence_needed_to_lift_constraint": [
+          "transition design review",
+          "welfare payment evidence",
+          "economic review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "boundary_transition_funding_assumptions",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_transition_public_reference"
+        ],
+        "linked_public_value_ids": [
+          "treasury_total_receipts_2025_26_estimate",
+          "treasury_taxation_receipts_2025_26_estimate",
+          "ato_super_guarantee_rate_2025_26"
+        ],
+        "module_id": "transition_funding_assumptions",
+        "module_name": "Transition funding assumptions",
+        "official_status_claimed": false,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "reviewer_warning": "Scenario display is boundary-limited only; it is not calibration, validation, tax payable evidence, legal sufficiency, official status, implementation readiness, or firm-level CARSF liability.",
+        "safe_for_repo_use": true,
+        "scenario_output_status": "display_as_context_only",
+        "validation_claimed": false,
+        "what_can_be_displayed": "Transition funding assumptions may display transition funding scale context, public aggregate fiscal bounds only with non-claim warnings.",
+        "what_must_be_hidden_or_marked_non_interpretable": "Transition funding assumptions must hide or mark non-interpretable any output implying fiscal sufficiency, welfare impact estimate, policy implementation readiness."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "uncertainty label context",
+          "blocked evidence traceability"
+        ],
+        "blocked_display_outputs": [
+          "real uncertainty quantification",
+          "confidence interval",
+          "statistical estimation"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_context_only",
+        "constraint_id": "scenario_constraint_uncertainty_ranges",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_context_only",
+        "evidence_needed_to_lift_constraint": [
+          "uncertainty method",
+          "sample design",
+          "statistical review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "boundary_uncertainty_ranges",
+        "linked_placeholder_decision_ids": [
+          "decision_anchor_uncertainty_source_reference_only"
+        ],
+        "linked_public_value_ids": [
+          "ato_total_tax_revenue_collected_2022_23",
+          "ato_company_tax_revenue_2022_23"
+        ],
+        "module_id": "uncertainty_ranges",
+        "module_name": "Uncertainty ranges",
+        "official_status_claimed": false,
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "reviewer_warning": "Scenario display is boundary-limited only; it is not calibration, validation, tax payable evidence, legal sufficiency, official status, implementation readiness, or firm-level CARSF liability.",
+        "safe_for_repo_use": true,
+        "scenario_output_status": "display_as_context_only",
+        "validation_claimed": false,
+        "what_can_be_displayed": "Uncertainty ranges may display uncertainty label context, blocked evidence traceability only with non-claim warnings.",
+        "what_must_be_hidden_or_marked_non_interpretable": "Uncertainty ranges must hide or mark non-interpretable any output implying real uncertainty quantification, confidence interval, statistical estimation."
+      },
+      {
+        "actual_tax_payable_determined": false,
+        "allowed_display_outputs": [
+          "boundary labels",
+          "allowed-use labels",
+          "forbidden-use labels",
+          "reviewer traceability"
+        ],
+        "blocked_display_outputs": [
+          "calibration boundary satisfaction",
+          "validation evidence",
+          "implementation recommendation"
+        ],
+        "calibration_completed": false,
+        "claim_level": "scenario_traceability_only",
+        "constraint_id": "scenario_constraint_public_aggregate_calibration_boundary_map",
+        "constraint_status": "compliant_boundary_output",
+        "display_rule": "show_as_traceability_only",
+        "evidence_needed_to_lift_constraint": [
+          "restricted data governance",
+          "legal review",
+          "economic review",
+          "statistical review",
+          "external domain review"
+        ],
+        "firm_level_liability_logic_modified": false,
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "compliance_scoring",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "maturity_scoring",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "readiness_scoring",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "linked_boundary_decision_id": "public_aggregate_calibration_boundary_map_report",
+        "linked_placeholder_decision_ids": [],
+        "linked_public_value_ids": [
+          "ato_company_tax_revenue_2022_23",
+          "ato_large_corporate_entities_no_income_tax_percent_2022_23",
+          "ato_large_corporate_income_tax_received_2022_23",
+          "ato_super_guarantee_rate_2025_26",
+          "ato_total_tax_revenue_collected_2022_23",
+          "fair_work_casual_loading_2025",
+          "fair_work_national_minimum_wage_hourly_2025",
+          "fair_work_national_minimum_wage_weekly_2025",
+          "treasury_taxation_receipts_2025_26_estimate",
+          "treasury_total_receipts_2025_26_estimate"
+        ],
+        "module_id": "public_aggregate_calibration_boundary_map",
+        "module_name": "Public aggregate calibration boundary map",
+        "official_status_claimed": false,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_restricted_data": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "reviewer_warning": "Boundary-map display is traceability only; it is not calibration, validation, legal sufficiency, official status, implementation readiness, or firm-level CARSF liability.",
+        "safe_for_repo_use": true,
+        "scenario_output_status": "display_as_reviewer_traceability_only",
+        "validation_claimed": false,
+        "what_can_be_displayed": "The boundary map may display allowed-use labels, forbidden-use labels, blockers, and reviewer traceability.",
+        "what_must_be_hidden_or_marked_non_interpretable": "The boundary map must hide or mark non-interpretable any output implying calibration satisfaction, validation, legal sufficiency, official status, implementation readiness, tax payable, or firm liability."
+      }
+    ],
+    "non_claims": [
+      "This is a public aggregate scenario constraint layer only. No new data is loaded by this build. Scenario constraints do not calibrate the model and do not validate the model. Public aggregate data can only appear as sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability. Public aggregate data does not prove the model works. Outputs marked non-interpretable are not usable as evidence. Hidden outputs are hidden to prevent overclaiming. Source candidates not loaded remain not loaded. Restricted-data blockers remain blockers. This is not validation, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable and does not modify firm-level CARSF liability.",
+      "Build 34 uses existing Build 31 public aggregate values, Build 32 placeholder replacement decisions, and Build 33 public aggregate calibration-boundary decisions only; it does not add public values, scrape sources, call APIs, or load restricted, personal, taxpayer-level, firm-confidential, household microdata, ABS DataLab, HILDA, DSS / Services Australia, ATO taxpayer, confidential Treasury / PBO, bank, payroll-document, pay-record, or tax-file-identifier data.",
+      "Scenario output labels are display constraints only; they are not calibration, validation, legal sufficiency, official status, implementation readiness, or liability determinations."
+    ],
+    "public_aggregate_values": [
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "extraction_method": "manually_recorded_from_existing_public_pilot_locator",
+        "geography": "Australia",
+        "industry_or_sector": "all_award_free_national_minimum_wage_reference",
+        "metric_name": "National minimum wage hourly rate",
+        "must_not_infer": [
+          "not_calibration",
+          "not_validation",
+          "not_actual_tax_payable",
+          "not_official_status"
+        ],
+        "not_used_for": [
+          "calibration_completed",
+          "actual_tax_payable",
+          "legal_wage_sufficiency",
+          "validation"
+        ],
+        "period": "from 2025-07-01",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Fair Work Ombudsman",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "fair_work_minimum_wage_2025",
+        "source_locator": "Fair Work Ombudsman minimum wages fact sheet, national minimum wage paragraph for the 1 July 2025 rate and 38-hour week reference.",
+        "source_name": "National minimum wage public threshold",
+        "source_url": "https://www.fairwork.gov.au/how-we-will-help/templates-and-guides/fact-sheets/minimum-workplace-entitlements/minimum-wages",
+        "unit": "AUD_per_hour",
+        "used_for": [
+          "opfTE_hle_qlc_placeholder_anchor_context"
+        ],
+        "value": 24.95,
+        "value_id": "fair_work_national_minimum_wage_hourly_2025",
+        "value_review_status": "manually_recorded_public_source_value"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "extraction_method": "arithmetic_from_hourly_rate_times_38_hours",
+        "geography": "Australia",
+        "industry_or_sector": "all_award_free_national_minimum_wage_reference",
+        "metric_name": "National minimum wage weekly rate",
+        "must_not_infer": [
+          "not_calibration",
+          "not_validation",
+          "not_actual_tax_payable",
+          "not_official_status"
+        ],
+        "not_used_for": [
+          "calibration_completed",
+          "actual_tax_payable",
+          "legal_wage_sufficiency",
+          "validation"
+        ],
+        "period": "from 2025-07-01",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Fair Work Ombudsman",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "fair_work_minimum_wage_2025",
+        "source_locator": "Fair Work Ombudsman minimum wages fact sheet, national minimum wage paragraph for the 1 July 2025 rate and 38-hour week reference.",
+        "source_name": "National minimum wage public threshold",
+        "source_url": "https://www.fairwork.gov.au/how-we-will-help/templates-and-guides/fact-sheets/minimum-workplace-entitlements/minimum-wages",
+        "unit": "AUD_per_week",
+        "used_for": [
+          "opfTE_hle_qlc_placeholder_anchor_context"
+        ],
+        "value": 948.1,
+        "value_id": "fair_work_national_minimum_wage_weekly_2025",
+        "value_review_status": "arithmetic_checked_only"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "extraction_method": "manually_recorded_from_existing_public_pilot_locator",
+        "geography": "Australia",
+        "industry_or_sector": "all_award_free_national_minimum_wage_reference",
+        "metric_name": "Casual loading percentage",
+        "must_not_infer": [
+          "not_calibration",
+          "not_validation",
+          "not_actual_tax_payable",
+          "not_official_status"
+        ],
+        "not_used_for": [
+          "calibration_completed",
+          "actual_tax_payable",
+          "legal_wage_sufficiency",
+          "validation"
+        ],
+        "period": "from 2025-07-01",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Fair Work Ombudsman",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "fair_work_minimum_wage_2025",
+        "source_locator": "Fair Work Ombudsman minimum wages fact sheet, national minimum wage paragraph for the 1 July 2025 rate and 38-hour week reference.",
+        "source_name": "National minimum wage public threshold",
+        "source_url": "https://www.fairwork.gov.au/how-we-will-help/templates-and-guides/fact-sheets/minimum-workplace-entitlements/minimum-wages",
+        "unit": "percent",
+        "used_for": [
+          "labour_cost_placeholder_anchor_context"
+        ],
+        "value": 25.0,
+        "value_id": "fair_work_casual_loading_2025",
+        "value_review_status": "manually_recorded_public_source_value"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "extraction_method": "manually_recorded_from_existing_public_pilot_locator",
+        "geography": "Australia",
+        "industry_or_sector": "large_corporate_public_aggregate",
+        "metric_name": "Income tax received from large corporates",
+        "must_not_infer": [
+          "not_firm_liability",
+          "not_actual_tax_payable",
+          "not_compliance_score",
+          "not_calibration"
+        ],
+        "not_used_for": [
+          "firm_level_liability",
+          "actual_tax_payable",
+          "compliance_score",
+          "calibration_completed",
+          "ato_validation"
+        ],
+        "period": "2022-23",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Australian Taxation Office",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "ato_corporate_tax_transparency_2022_23",
+        "source_locator": "ATO media-centre article \"ATO collects $100 billion dollars from large corporates\", public summary of 2022-23 corporate tax transparency results.",
+        "source_name": "Corporate tax transparency public aggregate summary",
+        "source_url": "https://www.ato.gov.au/media-centre/ato-collects-100-billion-dollars-from-large-corporates",
+        "unit": "AUD_billion",
+        "used_for": [
+          "fiscal_trajectory_sanity_context",
+          "corporate_tax_scale_context"
+        ],
+        "value": 97.9,
+        "value_id": "ato_large_corporate_income_tax_received_2022_23",
+        "value_review_status": "manually_recorded_public_source_value"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "extraction_method": "manually_recorded_from_existing_public_pilot_locator",
+        "geography": "Australia",
+        "industry_or_sector": "large_corporate_public_aggregate",
+        "metric_name": "Entities with no income tax payable in public report",
+        "must_not_infer": [
+          "not_firm_liability",
+          "not_actual_tax_payable",
+          "not_compliance_score",
+          "not_calibration"
+        ],
+        "not_used_for": [
+          "firm_level_liability",
+          "actual_tax_payable",
+          "compliance_score",
+          "calibration_completed",
+          "ato_validation"
+        ],
+        "period": "2022-23",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Australian Taxation Office",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "ato_corporate_tax_transparency_2022_23",
+        "source_locator": "ATO media-centre article \"ATO collects $100 billion dollars from large corporates\", public summary of 2022-23 corporate tax transparency results.",
+        "source_name": "Corporate tax transparency public aggregate summary",
+        "source_url": "https://www.ato.gov.au/media-centre/ato-collects-100-billion-dollars-from-large-corporates",
+        "unit": "percent",
+        "used_for": [
+          "corporate_tax_scale_context"
+        ],
+        "value": 31.0,
+        "value_id": "ato_large_corporate_entities_no_income_tax_percent_2022_23",
+        "value_review_status": "manually_recorded_public_source_value"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "extraction_method": "manually_recorded_from_existing_public_pilot_locator",
+        "geography": "Australia",
+        "industry_or_sector": "taxation_statistics_public_aggregate",
+        "metric_name": "Total tax revenue collected",
+        "must_not_infer": [
+          "not_taxpayer_level_inference",
+          "not_actual_tax_payable",
+          "not_calibration",
+          "not_validation"
+        ],
+        "not_used_for": [
+          "taxpayer_level_inference",
+          "actual_tax_payable",
+          "calibration_completed",
+          "validation"
+        ],
+        "period": "2022-23",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Australian Taxation Office",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "ato_taxation_statistics_2022_23",
+        "source_locator": "ATO media-centre article \"2022-23 taxation statistics released\", public headline aggregate values.",
+        "source_name": "Taxation statistics public aggregate summary",
+        "source_url": "https://www.ato.gov.au/media-centre/2022-23-taxation-statistics-released",
+        "unit": "AUD_billion",
+        "used_for": [
+          "fiscal_trajectory_sanity_context"
+        ],
+        "value": 577.4,
+        "value_id": "ato_total_tax_revenue_collected_2022_23",
+        "value_review_status": "manually_recorded_public_source_value"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "extraction_method": "manually_recorded_from_existing_public_pilot_locator",
+        "geography": "Australia",
+        "industry_or_sector": "taxation_statistics_public_aggregate",
+        "metric_name": "Company tax revenue",
+        "must_not_infer": [
+          "not_taxpayer_level_inference",
+          "not_actual_tax_payable",
+          "not_calibration",
+          "not_validation"
+        ],
+        "not_used_for": [
+          "taxpayer_level_inference",
+          "actual_tax_payable",
+          "calibration_completed",
+          "validation"
+        ],
+        "period": "2022-23",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Australian Taxation Office",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "ato_taxation_statistics_2022_23",
+        "source_locator": "ATO media-centre article \"2022-23 taxation statistics released\", public headline aggregate values.",
+        "source_name": "Taxation statistics public aggregate summary",
+        "source_url": "https://www.ato.gov.au/media-centre/2022-23-taxation-statistics-released",
+        "unit": "AUD_billion",
+        "used_for": [
+          "fiscal_trajectory_sanity_context",
+          "corporate_tax_scale_context"
+        ],
+        "value": 140.0,
+        "value_id": "ato_company_tax_revenue_2022_23",
+        "value_review_status": "manually_recorded_public_source_value"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "extraction_method": "manually_recorded_from_existing_public_pilot_locator",
+        "geography": "Australia",
+        "industry_or_sector": "australian_government_general_government_receipts",
+        "metric_name": "Total receipts estimate",
+        "must_not_infer": [
+          "not_treasury_modelling",
+          "not_pbo_costing",
+          "not_calibration",
+          "not_actual_tax_payable"
+        ],
+        "not_used_for": [
+          "treasury_modelling",
+          "pbo_costing",
+          "calibration_completed",
+          "validation",
+          "actual_tax_payable"
+        ],
+        "period": "2025-26 estimate in Budget Paper No. 1 2026-27",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Australian Government Treasury",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "treasury_budget_2026_27_bp1",
+        "source_locator": "Budget Paper No. 1 2026-27, Statement 5 Revenue, Table 5.1 Australian Government general government receipts, 2025-26 estimates.",
+        "source_name": "Budget Paper No. 1 public receipts aggregate",
+        "source_url": "https://budget.gov.au/content/bp1/",
+        "unit": "AUD_billion",
+        "used_for": [
+          "fiscal_trajectory_sanity_context",
+          "transition_funding_context"
+        ],
+        "value": 759.8,
+        "value_id": "treasury_total_receipts_2025_26_estimate",
+        "value_review_status": "manually_recorded_public_source_value"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "extraction_method": "manually_recorded_from_existing_public_pilot_locator",
+        "geography": "Australia",
+        "industry_or_sector": "australian_government_general_government_receipts",
+        "metric_name": "Taxation receipts estimate",
+        "must_not_infer": [
+          "not_treasury_modelling",
+          "not_pbo_costing",
+          "not_calibration",
+          "not_actual_tax_payable"
+        ],
+        "not_used_for": [
+          "treasury_modelling",
+          "pbo_costing",
+          "calibration_completed",
+          "validation",
+          "actual_tax_payable"
+        ],
+        "period": "2025-26 estimate in Budget Paper No. 1 2026-27",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Australian Government Treasury",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "treasury_budget_2026_27_bp1",
+        "source_locator": "Budget Paper No. 1 2026-27, Statement 5 Revenue, Table 5.1 Australian Government general government receipts, 2025-26 estimates.",
+        "source_name": "Budget Paper No. 1 public receipts aggregate",
+        "source_url": "https://budget.gov.au/content/bp1/",
+        "unit": "AUD_billion",
+        "used_for": [
+          "fiscal_trajectory_sanity_context",
+          "transition_funding_context"
+        ],
+        "value": 699.5,
+        "value_id": "treasury_taxation_receipts_2025_26_estimate",
+        "value_review_status": "manually_recorded_public_source_value"
+      },
+      {
+        "claim_level": "real_public_aggregate_data",
+        "data_status": "loaded_public_aggregate",
+        "extraction_method": "manually_recorded_from_existing_public_pilot_locator",
+        "geography": "Australia",
+        "industry_or_sector": "superannuation_guarantee_public_rate_setting",
+        "metric_name": "Super guarantee percentage",
+        "must_not_infer": [
+          "not_ato_guidance",
+          "not_individual_estimate",
+          "not_calibration",
+          "not_actual_tax_payable"
+        ],
+        "not_used_for": [
+          "ato_guidance",
+          "individual_estimate",
+          "calibration_completed",
+          "actual_tax_payable"
+        ],
+        "period": "from 2025-07-01",
+        "personal_data": false,
+        "public_aggregate_only": true,
+        "publisher": "Australian Taxation Office",
+        "restricted_data": false,
+        "safe_for_repo_use": true,
+        "source_id": "ato_super_guarantee_2025_26",
+        "source_locator": "ATO key superannuation rates and thresholds page, super guarantee percentage table for the period from 1 July 2025.",
+        "source_name": "Super guarantee public rate setting",
+        "source_url": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/super-guarantee",
+        "unit": "percent",
+        "used_for": [
+          "superannuation_contribution_pressure_placeholder_context"
+        ],
+        "value": 12.0,
+        "value_id": "ato_super_guarantee_rate_2025_26",
+        "value_review_status": "manually_recorded_public_source_value"
+      }
+    ],
+    "scenario_output_constraints": [
+      {
+        "claim_level": "scenario_traceability_only",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_traceability_only",
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "compliance_scoring",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "output_id": "output_administrative_compliance_workflow",
+        "scenario_output_status": "display_as_reviewer_traceability_only",
+        "source_id": "administrative_compliance_workflow"
+      },
+      {
+        "claim_level": "scenario_non_interpretable",
+        "constraint_status": "non_interpretable",
+        "display_rule": "show_blocked",
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "output_id": "output_behavioural_response_gaming_simulation",
+        "scenario_output_status": "mark_non_interpretable",
+        "source_id": "behavioural_response_gaming_simulation"
+      },
+      {
+        "claim_level": "scenario_traceability_only",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_traceability_only",
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "maturity_scoring",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "readiness_scoring",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "output_id": "output_executive_dashboard_consolidation",
+        "scenario_output_status": "display_as_reviewer_traceability_only",
+        "source_id": "executive_dashboard_consolidation"
+      },
+      {
+        "claim_level": "scenario_public_bound_only",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_boundary_only",
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "output_id": "output_fiscal_trajectory_assumptions",
+        "scenario_output_status": "display_as_public_aggregate_bound_only",
+        "source_id": "fiscal_trajectory_assumptions"
+      },
+      {
+        "claim_level": "scenario_public_bound_only",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_boundary_only",
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "output_id": "output_hle_assumptions_module",
+        "scenario_output_status": "display_as_public_aggregate_bound_only",
+        "source_id": "hle_assumptions_module"
+      },
+      {
+        "claim_level": "no_scenario_claim_allowed",
+        "constraint_status": "hidden_for_reviewer_safety",
+        "display_rule": "hide",
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "output_id": "output_household_distributional_scenarios",
+        "scenario_output_status": "hide_from_reviewer_dashboard",
+        "source_id": "household_distributional_scenarios"
+      },
+      {
+        "claim_level": "scenario_non_interpretable",
+        "constraint_status": "non_interpretable",
+        "display_rule": "show_blocked",
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "output_id": "output_household_weighting",
+        "scenario_output_status": "mark_non_interpretable",
+        "source_id": "household_weighting"
+      },
+      {
+        "claim_level": "scenario_traceability_only",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_traceability_only",
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "output_id": "output_legislative_architecture_skeleton",
+        "scenario_output_status": "display_as_reviewer_traceability_only",
+        "source_id": "legislative_architecture_skeleton"
+      },
+      {
+        "claim_level": "scenario_public_anchor_only",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_boundary_only",
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "output_id": "output_opfte_benchmark_module",
+        "scenario_output_status": "display_as_public_aggregate_anchor_only",
+        "source_id": "opfte_benchmark_module"
+      },
+      {
+        "claim_level": "scenario_non_interpretable",
+        "constraint_status": "non_interpretable",
+        "display_rule": "show_blocked",
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "output_id": "output_payg_erosion_assumptions",
+        "scenario_output_status": "mark_non_interpretable",
+        "source_id": "payg_erosion_assumptions"
+      },
+      {
+        "claim_level": "scenario_traceability_only",
+        "constraint_status": "compliant_boundary_output",
+        "display_rule": "show_as_traceability_only",
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "output_id": "output_public_data_evidence_map",
+        "scenario_output_status": "display_as_reviewer_traceability_only",
+        "source_id": "public_data_evidence_map"
+      },
+      {
+        "claim_level": "scenario_placeholder_narrowing_only",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_placeholder_only",
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "output_id": "output_public_data_placeholder_replacement_map",
+        "scenario_output_status": "display_as_placeholder_narrowing_only",
+        "source_id": "public_data_placeholder_replacement_map"
+      },
+      {
+        "claim_level": "scenario_placeholder_narrowing_only",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_placeholder_only",
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "output_id": "output_qlc_weights_module",
+        "scenario_output_status": "display_as_placeholder_narrowing_only",
+        "source_id": "qlc_weights_module"
+      },
+      {
+        "claim_level": "scenario_traceability_only",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_traceability_only",
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "output_id": "output_reviewed_scenario_comparison_layer",
+        "scenario_output_status": "display_as_reviewer_traceability_only",
+        "source_id": "reviewed_scenario_comparison_layer"
+      },
+      {
+        "claim_level": "scenario_context_only",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_context_only",
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "output_id": "output_sector_schedule_values",
+        "scenario_output_status": "display_as_context_only",
+        "source_id": "sector_schedule_values"
+      },
+      {
+        "claim_level": "scenario_sanity_check_only",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_with_non_claim_warning",
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "output_id": "output_sector_stress_matrix",
+        "scenario_output_status": "display_as_sanity_check_only",
+        "source_id": "sector_stress_matrix"
+      },
+      {
+        "claim_level": "scenario_public_anchor_only",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_boundary_only",
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "output_id": "output_superannuation_contribution_pressure",
+        "scenario_output_status": "display_as_public_aggregate_anchor_only",
+        "source_id": "superannuation_contribution_pressure"
+      },
+      {
+        "claim_level": "scenario_context_only",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_context_only",
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "output_id": "output_transition_funding_assumptions",
+        "scenario_output_status": "display_as_context_only",
+        "source_id": "transition_funding_assumptions"
+      },
+      {
+        "claim_level": "scenario_context_only",
+        "constraint_status": "warning_boundary_limited",
+        "display_rule": "show_as_context_only",
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "output_id": "output_uncertainty_ranges",
+        "scenario_output_status": "display_as_context_only",
+        "source_id": "uncertainty_ranges"
+      },
+      {
+        "claim_level": "scenario_traceability_only",
+        "constraint_status": "compliant_boundary_output",
+        "display_rule": "show_as_traceability_only",
+        "forbidden_implications": [
+          "actual_tax_payable",
+          "ato_guidance",
+          "calibration_completed",
+          "causal_inference",
+          "compliance_scoring",
+          "firm_liability_determination",
+          "household_population_estimate",
+          "implementation_readiness",
+          "legal_sufficiency",
+          "maturity_scoring",
+          "model_validation",
+          "official_policy_status",
+          "pbo_costing",
+          "readiness_scoring",
+          "statistical_validation",
+          "taxpayer_behaviour_estimate",
+          "treasury_modelling"
+        ],
+        "output_id": "output_public_aggregate_calibration_boundary_map",
+        "scenario_output_status": "display_as_reviewer_traceability_only",
+        "source_id": "public_aggregate_calibration_boundary_map"
+      }
+    ],
+    "source_candidates_not_loaded": [
+      {
+        "loaded_status": "source_candidate_not_loaded",
+        "publisher": "Australian Government StudyAssist",
+        "reason_if_not_loaded": "Exact public threshold value was not safely recorded in local Build 31 source metadata.",
+        "source_id": "study_assist_help_thresholds_2025_26",
+        "source_name": "HELP repayment public threshold source",
+        "treated_as_loaded": false
+      },
+      {
+        "loaded_status": "source_candidate_not_loaded",
+        "publisher": "Queensland Revenue Office",
+        "reason_if_not_loaded": "Exact jurisdiction threshold value was not safely recorded in local Build 31 source metadata.",
+        "source_id": "qld_payroll_tax_threshold_2025_26",
+        "source_name": "Queensland payroll tax public threshold source",
+        "treated_as_loaded": false
+      },
+      {
+        "loaded_status": "source_candidate_not_loaded",
+        "publisher": "Australian Bureau of Statistics",
+        "reason_if_not_loaded": "Exact public aggregate table selection remains deferred until a later loader expansion.",
+        "source_id": "abs_labour_wage_aggregate_source_reference",
+        "source_name": "ABS labour aggregate source candidate",
+        "treated_as_loaded": false
+      }
+    ],
+    "status": "public_aggregate_scenario_constraint_layer_only",
+    "summary": {
+      "actual_tax_payable_determined": false,
+      "calibration_completed": false,
+      "field_constraints_mapped": 11,
+      "firm_confidential_data_loaded": false,
+      "firm_level_liability_logic_modified": false,
+      "forbidden_claim_findings": 0,
+      "forbidden_implications_mapped": 17,
+      "household_microdata_loaded": false,
+      "loaded_public_values_used": 10,
+      "module_constraints_mapped": 20,
+      "new_data_loaded": false,
+      "official_status_claimed": false,
+      "outputs_display_as_context_only": 3,
+      "outputs_display_as_placeholder_narrowing_only": 2,
+      "outputs_display_as_public_anchor_only": 2,
+      "outputs_display_as_public_bound_only": 2,
+      "outputs_display_as_reviewer_traceability_only": 6,
+      "outputs_display_as_sanity_check_only": 1,
+      "outputs_fail_closed_forbidden_claim": 0,
+      "outputs_hidden_from_reviewer_dashboard": 1,
+      "outputs_marked_non_interpretable": 3,
+      "personal_data_loaded": false,
+      "public_aggregate_scenario_constraint_layer_created": true,
+      "public_source_candidates_treated_as_loaded": false,
+      "restricted_data_loaded": false,
+      "taxpayer_level_data_loaded": false,
+      "validation_claimed": false
+    }
+  },
+  "summary": {
+    "actual_tax_payable_determined": false,
+    "calibration_completed": false,
+    "field_constraints_mapped": 11,
+    "firm_confidential_data_loaded": false,
+    "firm_level_liability_logic_modified": false,
+    "forbidden_claim_findings": 0,
+    "forbidden_implications_mapped": 17,
+    "household_microdata_loaded": false,
+    "loaded_public_values_used": 10,
+    "module_constraints_mapped": 20,
+    "new_data_loaded": false,
+    "official_status_claimed": false,
+    "outputs_display_as_context_only": 3,
+    "outputs_display_as_placeholder_narrowing_only": 2,
+    "outputs_display_as_public_anchor_only": 2,
+    "outputs_display_as_public_bound_only": 2,
+    "outputs_display_as_reviewer_traceability_only": 6,
+    "outputs_display_as_sanity_check_only": 1,
+    "outputs_fail_closed_forbidden_claim": 0,
+    "outputs_hidden_from_reviewer_dashboard": 1,
+    "outputs_marked_non_interpretable": 3,
+    "personal_data_loaded": false,
+    "public_aggregate_scenario_constraint_layer_created": true,
+    "public_source_candidates_treated_as_loaded": false,
+    "restricted_data_loaded": false,
+    "taxpayer_level_data_loaded": false,
+    "validation_claimed": false
+  }
+}

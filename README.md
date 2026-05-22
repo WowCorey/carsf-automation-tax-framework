@@ -14,7 +14,7 @@ Current status: private research/prototype.
 
 All sector values, schedule values, examples, caps, Fiscal Replacement Value values, AAVA settings, and behavioural assumptions are placeholders unless explicitly labelled as confirmed baseline figures from official sources.
 
-The current Build 31 layer adds a controlled public real aggregate-data loader over existing public-pilot source records. It records only source-located, public, aggregate-level, non-personal, non-confidential values that are safe for repository use, keeps source candidates not loaded where exact safe local values are unavailable, and writes parsed values plus digest metadata. It does not load restricted data, personal data, taxpayer-level data, firm-confidential data, or household microdata; it does not complete calibration, imply validation, prove the model works, determine actual tax payable, claim official status, or change firm-level liability.
+The current Build 34 layer adds a public aggregate scenario constraint layer over the Build 33 calibration-boundary map. It constrains scenario outputs so loaded public aggregate values can appear only as sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability; outputs implying calibration, validation, tax payable, firm liability, official status, legal sufficiency, statistical estimation, economic validation, welfare validation, or implementation readiness are marked non-interpretable, hidden, downgraded, or fail-closed. It loads no new data and does not modify firm-level liability.
 
 ## Repository Structure
 
@@ -22,7 +22,7 @@ The current Build 31 layer adds a controlled public real aggregate-data loader o
 - `release/v1_5_rc/` - V1.5 release-candidate pack with release notes, reviewer briefing, report map, calibration blockers, non-claim boundaries, external-review routing, and release manifest snapshot.
 - `release/v1_5_rc/attack_pack/` - V1.5 external review attack-pack documents for policy, technical, legal, tax, ATO methods, Treasury methods, privacy/secrecy, statistical, economic, welfare, Parliamentary Counsel, and hostile/red-team review.
 - `audits/` - review notes, responses, and red-team register.
-- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, repository guardrails, investment/incidence guardrails, national fiscal trajectory modelling, transition funding, payment interactions, synthetic distributional scenarios, synthetic household weighting, deterministic uncertainty ranges, reviewed scenario display-control classifications, metadata-only sector stress matrix review, synthetic behavioural response simulation, prototype administrative workflow routing, non-operative legislative architecture mapping, executive dashboard consolidation, release-candidate packaging, external review attack-pack validation, final RC integrity seal validation, real-data feasibility intake mapping, public aggregate-data pilot validation, public-data reviewer evidence mapping, public-data consistency auditing, source-locator pack generation, red-team reviewer objection packaging, and public real aggregate-data loader validation.
+- `model/carsf/` - minimal Python concept model for QLC, LIBC/HLE, AII, AAVA, levies, caps, coverage, safe-harbour classification, anti-avoidance heuristics, grouping review flags, transfer-pricing previews, mixed-unit handling, evidence governance, repository guardrails, investment/incidence guardrails, national fiscal trajectory modelling, transition funding, payment interactions, synthetic distributional scenarios, synthetic household weighting, deterministic uncertainty ranges, reviewed scenario display-control classifications, metadata-only sector stress matrix review, synthetic behavioural response simulation, prototype administrative workflow routing, non-operative legislative architecture mapping, executive dashboard consolidation, release-candidate packaging, external review attack-pack validation, final RC integrity seal validation, real-data feasibility intake mapping, public aggregate-data pilot validation, public-data reviewer evidence mapping, public-data consistency auditing, source-locator pack generation, red-team reviewer objection packaging, public real aggregate-data loader validation, public aggregate calibration-boundary mapping, and public aggregate scenario constraint validation.
 - `model/tests/` - pytest coverage for formula bounds, caps, examples, and avoidance flags.
 - `data/` - source-category registry, placeholder policy, and public-pilot source-reference records. Restricted, confidential, taxpayer-level, firm-level confidential, person-level, household microdata, real evidence, and unauthorised data are not committed.
 - `data/public_pilot/` - small public aggregate/source-reference records, realistic-placeholder anchors, and digest metadata for the Build 27 public-data pilot.
@@ -50,6 +50,8 @@ The current Build 31 layer adds a controlled public real aggregate-data loader o
 - `docs/source_locator_verification_pack.md` - source-locator card and manual-review checklist notes for public-data pilot outputs.
 - `docs/red_team_reviewer_objections.md` - red-team reviewer objection catalogue notes for public-data pilot and reviewer materials.
 - `docs/public_real_data_loader.md` - controlled real public aggregate-data loader notes and boundaries.
+- `docs/public_aggregate_calibration_boundary_map.md` - public aggregate calibration-boundary notes and allowed-use limits.
+- `docs/public_aggregate_scenario_constraint_layer.md` - scenario output constraint notes for public aggregate values.
 - `simulator/` - Streamlit interface for policy review, tax model inputs, worked examples, red-team tests, and audit log.
 - `docs/` - data requirements, limitations, implementation notes, known risks, and V1.5 plan.
 
@@ -430,6 +432,13 @@ Generated public aggregate calibration-boundary reports:
 - `reports/public_aggregate_calibration_boundary_map.json`
 
 The calibration-boundary map defines where public aggregate values may be used for sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability. It loads no new data and does not perform calibration. Boundary mapping does not mean validation, statistical estimation, legal sufficiency, implementation readiness, official status, actual tax payable, or firm-level CARSF liability change.
+
+Generated public aggregate scenario-constraint reports:
+
+- `reports/public_aggregate_scenario_constraint_layer.md`
+- `reports/public_aggregate_scenario_constraint_layer.json`
+
+The scenario constraint layer uses the Build 33 boundary map to classify scenario outputs as sanity-check-only, public-aggregate-anchor-only, public-aggregate-bound-only, context-only, placeholder-narrowing-only, reviewer-traceability-only, non-interpretable, hidden, or fail-closed. It loads no new data and does not calibrate, validate, determine actual tax payable, create legal sufficiency, create official status, or modify firm-level CARSF liability.
 
 ## Run the Simulator
 

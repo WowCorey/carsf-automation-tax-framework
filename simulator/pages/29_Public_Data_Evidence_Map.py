@@ -14,6 +14,7 @@ RED_TEAM_OBJECTIONS_PATH = REPO_ROOT / "reports" / "red_team_reviewer_objections
 PUBLIC_REAL_DATA_LOADER_PATH = REPO_ROOT / "reports" / "public_real_data_loader.json"
 PLACEHOLDER_REPLACEMENT_MAP_PATH = REPO_ROOT / "reports" / "public_data_placeholder_replacement_map.json"
 CALIBRATION_BOUNDARY_MAP_PATH = REPO_ROOT / "reports" / "public_aggregate_calibration_boundary_map.json"
+SCENARIO_CONSTRAINT_LAYER_PATH = REPO_ROOT / "reports" / "public_aggregate_scenario_constraint_layer.json"
 WARNING = (
     "This is a reviewer evidence map and dashboard for the public data pilot only. No new data is loaded by this build. "
     "Build 27 public aggregate extracts remain sanity-check-only or placeholder-anchor-only. This is not calibration, "
@@ -63,6 +64,7 @@ red_team_report = load_report(RED_TEAM_OBJECTIONS_PATH)
 public_real_report = load_report(PUBLIC_REAL_DATA_LOADER_PATH)
 placeholder_replacement_report = load_report(PLACEHOLDER_REPLACEMENT_MAP_PATH)
 calibration_boundary_report = load_report(CALIBRATION_BOUNDARY_MAP_PATH)
+scenario_constraint_report = load_report(SCENARIO_CONSTRAINT_LAYER_PATH)
 
 metadata = report.get("metadata", {})
 payload = report.get("public_data_evidence_map", {})
@@ -503,8 +505,8 @@ st.markdown("### Public Aggregate Calibration Boundary Map")
 st.caption(
     "Calibration-boundary map only. No new data is loaded. Public aggregate values may support sanity checks, "
     "anchors, bounds, context, placeholder narrowing, or reviewer traceability only; they do not calibrate the "
-    "model, validate CARSF, determine tax payable, create legal sufficiency, create official status, or modify "
-    "firm-level CARSF liability logic."
+    "model, validate CARSF, determine tax payable, or modify firm-level CARSF liability logic. They do not create "
+    "legal sufficiency or official-status claims."
 )
 if calibration_boundary_report:
     boundary_payload = calibration_boundary_report.get("public_aggregate_calibration_boundary_map", {})
@@ -582,3 +584,106 @@ if calibration_boundary_report:
     )
 else:
     st.info("Run `python scripts/run_public_aggregate_calibration_boundary_map.py` to generate the optional calibration-boundary map section.")
+
+st.markdown("### Public Aggregate Scenario Constraint Layer")
+st.caption(
+    "Scenario constraint layer only. No new data is loaded. Scenario outputs may show public aggregate values only "
+    "as sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability. Scenario outputs "
+    "must not imply calibration, validation, tax payable, firm-level liability, official status, legal sufficiency, statistical "
+    "estimation, economic validation, welfare validation, or implementation readiness. Boundary breaches are marked "
+    "non-interpretable, hidden, downgraded, or fail closed."
+)
+if scenario_constraint_report:
+    scenario_payload = scenario_constraint_report.get("public_aggregate_scenario_constraint_layer", {})
+    scenario_summary = scenario_constraint_report.get("summary", {})
+    st.table(
+        [
+            {"Metric": key, "Value": str(value)}
+            for key, value in scenario_summary.items()
+            if key
+            in {
+                "public_aggregate_scenario_constraint_layer_created",
+                "new_data_loaded",
+                "loaded_public_values_used",
+                "module_constraints_mapped",
+                "field_constraints_mapped",
+                "outputs_display_as_sanity_check_only",
+                "outputs_display_as_public_anchor_only",
+                "outputs_display_as_public_bound_only",
+                "outputs_display_as_context_only",
+                "outputs_display_as_placeholder_narrowing_only",
+                "outputs_display_as_reviewer_traceability_only",
+                "outputs_marked_non_interpretable",
+                "outputs_hidden_from_reviewer_dashboard",
+                "outputs_fail_closed_forbidden_claim",
+                "forbidden_implications_mapped",
+                "public_source_candidates_treated_as_loaded",
+                "restricted_data_loaded",
+                "personal_data_loaded",
+                "taxpayer_level_data_loaded",
+                "firm_confidential_data_loaded",
+                "household_microdata_loaded",
+                "calibration_completed",
+                "validation_claimed",
+                "actual_tax_payable_determined",
+                "official_status_claimed",
+                "firm_level_liability_logic_modified",
+            }
+        ]
+    )
+    st.markdown("#### Module Scenario Constraints")
+    st.table(
+        rows_with_lists(
+            scenario_payload.get("module_scenario_constraints", []),
+            [
+                "module_id",
+                "scenario_output_status",
+                "display_rule",
+                "constraint_status",
+                "claim_level",
+                "allowed_display_outputs",
+                "blocked_display_outputs",
+                "forbidden_implications",
+                "evidence_needed_to_lift_constraint",
+            ],
+        )
+    )
+    st.markdown("#### Outputs Marked Non-Interpretable")
+    st.table(
+        rows_with_lists(
+            [
+                item
+                for item in scenario_payload.get("module_scenario_constraints", [])
+                if item.get("scenario_output_status") == "mark_non_interpretable"
+            ],
+            ["module_id", "display_rule", "blocked_display_outputs", "forbidden_implications"],
+        )
+    )
+    st.markdown("#### Outputs Hidden From Reviewer Dashboard")
+    st.table(
+        rows_with_lists(
+            [
+                item
+                for item in scenario_payload.get("module_scenario_constraints", [])
+                if item.get("scenario_output_status") == "hide_from_reviewer_dashboard"
+            ],
+            ["module_id", "display_rule", "blocked_display_outputs", "evidence_needed_to_lift_constraint"],
+        )
+    )
+    st.markdown("#### Field Scenario Constraints")
+    st.table(
+        rows_with_lists(
+            scenario_payload.get("field_scenario_constraints", []),
+            [
+                "field_id",
+                "placeholder_id",
+                "scenario_output_status",
+                "display_rule",
+                "constraint_status",
+                "claim_level",
+                "linked_public_value_ids",
+            ],
+        )
+    )
+else:
+    st.info("Run `python scripts/run_public_aggregate_scenario_constraint_layer.py` to generate the optional scenario constraint layer section.")

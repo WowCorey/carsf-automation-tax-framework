@@ -54,3 +54,9 @@ Build 32 consumes the Build 31 public aggregate values and existing placeholder 
 ## Build 33 Consistency Boundary
 
 Build 33 consumes Build 31 values and Build 32 replacement decisions to create calibration-boundary decisions. It does not add values and does not turn internal consistency, source locators, or public aggregate boundary labels into calibration, validation, actual tax payable, legal sufficiency, official status, or firm-level CARSF liability.
+
+## Build 34 Scenario Constraint Boundary
+
+Build 34 consumes the Build 33 calibration-boundary decisions to constrain scenario outputs. It does not add values and does not turn internal consistency, public aggregate boundaries, or scenario display labels into calibration, validation, actual tax payable, legal sufficiency, official status, implementation readiness, or firm-level CARSF liability.
+
+Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-34 are included in a later sealed RC.

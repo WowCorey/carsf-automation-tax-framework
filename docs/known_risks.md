@@ -96,7 +96,7 @@
 - The source-locator verification pack may create false comfort if readers treat ready-for-manual-review cards, source locators, value notes, or checklists as completed manual review, external source verification, calibration, validation, approval, actual tax payable, legal sufficiency, official status, Treasury modelling, ATO guidance, or PBO costing.
 - The red-team reviewer objections pack may create false comfort if readers treat acknowledged objections as resolved, partially mitigated objections as solved, or bounded responses as calibration, validation, approval, actual tax payable, legal sufficiency, official status, Treasury modelling, ATO guidance, PBO costing, or evidence that CARSF works as a real tax model.
 - Public source references may become stale, and licence/access notes may be incomplete without source-owner, legal, tax, privacy, statistical, Treasury-methods, and ATO-methods review.
-- Build 25 sealed the previous RC state. Builds 26-31 add new artefacts; if those artefacts become part of a later sealed RC, the final RC integrity seal must be regenerated rather than described as already covering them.
+- Build 25 sealed the previous RC state. Builds 26-34 add new artefacts; if those artefacts become part of a later sealed RC, the final RC integrity seal must be regenerated rather than described as already covering them.
 - Disclosure obligations may overlap with AI safety, privacy, modern slavery, and significant global entity reporting.
 ## Build 32 Public Data Placeholder Replacement Risks
 
@@ -109,3 +109,9 @@ Build 25 sealed the earlier RC state. A new integrity seal must be regenerated i
 The public aggregate calibration-boundary map can make allowed-use labels look more permissive than they are. It loads no new data and does not perform calibration. Public aggregate values may support only sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability. Boundary mapping does not mean validation, statistical estimation, legal sufficiency, implementation readiness, official status, actual tax payable, or firm-level liability.
 
 The “Modules Requiring External Review” section is a review-needs section, not a statement that every boundary-limited use is fully blocked. Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-33 are included in a later sealed RC.
+
+## Build 34 Public Aggregate Scenario Constraint Risks
+
+The public aggregate scenario constraint layer can make display labels look like evidence quality labels if non-claim warnings are removed. It loads no new data and does not perform calibration. Scenario outputs may show public aggregate values only as sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability.
+
+Outputs marked non-interpretable are not usable as evidence, and hidden outputs are hidden to prevent overclaiming. The layer does not validate CARSF, determine actual tax payable, create legal sufficiency, create operational readiness, create official status, or modify firm-level liability. Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-34 are included in a later sealed RC.

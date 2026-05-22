@@ -1,0 +1,161 @@
+constraint_layer_id: carsf_v1_5_public_aggregate_scenario_constraint_layer
+constraint_layer_name: CARSF V1.5 Public Aggregate Scenario Constraint Layer
+status: public_aggregate_scenario_constraint_layer_only
+non_claims:
+  - This is a public aggregate scenario constraint layer only. No new data is loaded by this build. Scenario constraints do not calibrate the model and do not validate the model. Public aggregate data can only appear as sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability. Public aggregate data does not prove the model works. Outputs marked non-interpretable are not usable as evidence. Hidden outputs are hidden to prevent overclaiming. Source candidates not loaded remain not loaded. Restricted-data blockers remain blockers. This is not validation, not legal advice, not tax advice, not ATO guidance, not Treasury modelling, not PBO costing, not economic validation, not welfare validation, not statistical validation, not operational readiness, not legal sufficiency, and not official status. It does not determine actual tax payable and does not modify firm-level CARSF liability.
+  - Build 34 uses existing Build 31 public aggregate values, Build 32 placeholder replacement decisions, and Build 33 public aggregate calibration-boundary decisions only; it does not add public values, scrape sources, call APIs, or load restricted, personal, taxpayer-level, firm-confidential, household microdata, ABS DataLab, HILDA, DSS / Services Australia, ATO taxpayer, confidential Treasury / PBO, bank, payroll-document, pay-record, or tax-file-identifier data.
+  - Scenario output labels are display constraints only; they are not calibration, validation, legal sufficiency, official status, implementation readiness, or liability determinations.
+input_artifacts:
+  - data/public_real/parsed/public_real_aggregate_values.json
+  - data/public_real/manifests/public_real_data_sources.yaml
+  - data/public_real/manifests/public_placeholder_replacement_manifest.yaml
+  - data/public_real/manifests/public_aggregate_calibration_boundary_manifest.yaml
+  - reports/public_real_data_loader.json
+  - reports/public_data_placeholder_replacement_map.json
+  - reports/public_aggregate_calibration_boundary_map.json
+  - reports/public_data_pilot.json
+  - reports/public_data_evidence_map.json
+  - reports/public_data_consistency_audit.json
+  - reports/source_locator_verification_pack.json
+  - reports/red_team_reviewer_objections.json
+  - reports/reviewed_scenarios.json
+  - reports/sector_stress_matrix.json
+  - reports/behavioural_response_simulation.json
+  - reports/executive_dashboard.json
+  - data/public_pilot/placeholders/realistic_placeholder_anchors.yaml
+  - data/public_pilot/public_data_pilot_manifest.yaml
+scenario_output_status_taxonomy:
+  - display_as_sanity_check_only
+  - display_as_public_aggregate_anchor_only
+  - display_as_public_aggregate_bound_only
+  - display_as_context_only
+  - display_as_placeholder_narrowing_only
+  - display_as_reviewer_traceability_only
+  - mark_non_interpretable
+  - hide_from_reviewer_dashboard
+  - fail_closed_forbidden_claim
+display_rule_taxonomy:
+  - show_with_non_claim_warning
+  - show_as_boundary_only
+  - show_as_context_only
+  - show_as_traceability_only
+  - show_placeholder_only
+  - show_blocked
+  - hide
+  - fail_closed
+forbidden_implication_taxonomy:
+  - calibration_completed
+  - statistical_validation
+  - model_validation
+  - causal_inference
+  - actual_tax_payable
+  - firm_liability_determination
+  - taxpayer_behaviour_estimate
+  - household_population_estimate
+  - official_policy_status
+  - legal_sufficiency
+  - implementation_readiness
+  - treasury_modelling
+  - ato_guidance
+  - pbo_costing
+  - compliance_scoring
+  - readiness_scoring
+  - maturity_scoring
+constraint_status_taxonomy:
+  - compliant_boundary_output
+  - warning_boundary_limited
+  - non_interpretable
+  - hidden_for_reviewer_safety
+  - fail_closed
+claim_level_taxonomy:
+  - scenario_sanity_check_only
+  - scenario_public_anchor_only
+  - scenario_public_bound_only
+  - scenario_context_only
+  - scenario_placeholder_narrowing_only
+  - scenario_traceability_only
+  - scenario_non_interpretable
+  - no_scenario_claim_allowed
+required_module_constraints:
+  - opfte_benchmark_module
+  - hle_assumptions_module
+  - qlc_weights_module
+  - fiscal_trajectory_assumptions
+  - payg_erosion_assumptions
+  - transition_funding_assumptions
+  - superannuation_contribution_pressure
+  - sector_schedule_values
+  - sector_stress_matrix
+  - behavioural_response_gaming_simulation
+  - administrative_compliance_workflow
+  - legislative_architecture_skeleton
+  - household_distributional_scenarios
+  - household_weighting
+  - uncertainty_ranges
+  - reviewed_scenario_comparison_layer
+  - executive_dashboard_consolidation
+  - public_data_evidence_map
+  - public_data_placeholder_replacement_map
+  - public_aggregate_calibration_boundary_map
+required_field_constraints:
+  - anchor_opfte_minimum_wage
+  - anchor_hle_minimum_wage
+  - anchor_qlc_minimum_wage
+  - anchor_sector_schedule_source_reference
+  - anchor_fiscal_public_aggregates
+  - anchor_payg_public_tax_stats
+  - anchor_super_guarantee_rate
+  - anchor_help_source_reference
+  - anchor_payroll_tax_source_reference
+  - anchor_transition_public_reference
+  - anchor_uncertainty_source_reference_only
+required_dashboard_rules:
+  - show_with_non_claim_warning
+  - show_as_boundary_only
+  - show_as_context_only
+  - show_as_traceability_only
+  - show_placeholder_only
+  - show_blocked
+  - hide
+  - fail_closed
+forbidden_claims:
+  - calibrated
+  - calibration completed
+  - model works
+  - public data proves
+  - actual tax payable
+  - validated
+  - externally validated
+  - source verified
+  - official policy
+  - official status
+  - ready for government
+  - ready for ATO
+  - ready for Treasury
+  - ready for Parliament
+  - ready for implementation
+  - operationally ready
+  - legally sufficient
+  - Treasury modelling
+  - PBO costing
+  - ATO guidance
+  - economic validation complete
+  - welfare validation complete
+  - statistical validation complete
+  - readiness score
+  - maturity score
+  - approved
+  - representative estimate
+  - population estimate
+  - firm liability
+  - CARSF liability determined
+  - calibrated scenario
+  - scenario validated
+  - scenario proves
+  - implementation ready
+  - compliance score
+  - enforcement score
+build_35_requirements:
+  - Package public aggregate values, placeholder replacement, calibration boundaries, and scenario constraints into a reviewer-facing handoff bundle.
+  - Keep hidden and non-interpretable outputs clearly separated from reviewer-facing evidence.
+  - Preserve no-calibration, no-validation, no-tax-payable, no-official-status, no-legal-sufficiency, no-readiness-score, and no-liability-change boundaries.

@@ -371,3 +371,9 @@ Build 32 maps Build 31 public aggregate values to realistic placeholders, but th
 Build 33 defines the allowed boundary uses of loaded public aggregate values. Those values may support sanity checks, public aggregate anchors, public aggregate bounds, contextual references, placeholder narrowing, and reviewer traceability only.
 
 This is not calibration. Calibration has not been completed. Boundary mapping does not mean validation, statistical estimation, legal sufficiency, implementation readiness, official status, actual tax payable, or firm-level CARSF liability changes. Source candidates not loaded remain not loaded, and restricted-data blockers remain blockers.
+
+## Build 34 Public Aggregate Scenario Constraints
+
+Build 34 applies the Build 33 boundaries to scenario outputs. Scenario outputs may display public aggregate values only as sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability. Outputs implying calibration, validation, actual tax payable, firm liability, legal sufficiency, official status, statistical estimation, economic validation, welfare validation, or implementation readiness are marked non-interpretable, hidden, downgraded, or fail-closed.
+
+This is not calibration. No new data is loaded. Scenario constraints do not validate the model, do not determine actual tax payable, do not create ATO guidance, Treasury modelling, PBO costing, legal sufficiency, official status, or operational readiness, and do not modify firm-level CARSF liability.
