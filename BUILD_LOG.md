@@ -1134,3 +1134,28 @@ Limitations:
 - Outputs marked non-interpretable are not usable as evidence, and hidden outputs are hidden to prevent overclaiming.
 - The build does not determine actual tax payable, does not use restricted, personal, taxpayer-level, firm-confidential, household microdata, ABS DataLab, HILDA, DSS / Services Australia, ATO taxpayer, confidential Treasury / PBO, bank, payroll-document, pay-record, or tax-file-identifier data.
 - It does not claim validation, approval, operational readiness, legal sufficiency, official status, ATO guidance, Treasury modelling, PBO costing, or modify firm-level CARSF liability logic.
+
+## V1.5 Full Repo Integrity Upgrade / Bug Check / Gap Audit
+
+Branch: `v1.5-full-repo-integrity-upgrade-gap-audit`
+
+Baseline: Build 34 public aggregate scenario constraint layer merged into `main`.
+
+Purpose of this build:
+
+- Add a full repo integrity audit for CARSF V1.5.
+- Check runner coverage, report coverage, JSON/Markdown output coverage, CI wiring, dashboard/report alignment, release-manifest references, documentation links, public-data boundaries, placeholder boundaries, calibration boundaries, scenario constraints, guardrails, non-claim language, missing factors, data dependencies, and external-review dependencies.
+- Apply safe internal fixes for CI YAML parse coverage, runner wiring, report-map entries, release/dashboard manifest entries, and documentation cross-links.
+- Add manifest, model audit mechanics, generated reports, tests, and CI runner without loading new data.
+
+Reports generated:
+
+- `reports/full_repo_integrity_upgrade_audit.json`
+- `reports/full_repo_integrity_upgrade_audit.md`
+
+Limitations:
+
+- The full repo integrity audit loads no new data and does not fake missing data.
+- The audit does not complete calibration, claim validation, prove the model works, determine actual tax payable, create official status, or modify firm-level CARSF liability.
+- Missing factors requiring data, legal review, tax review, economic review, statistical review, public finance review, welfare review, data governance review, administrative review, or domain review remain blocked.
+- Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-34.5 are included in a later sealed RC.

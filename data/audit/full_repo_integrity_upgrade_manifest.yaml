@@ -1,0 +1,127 @@
+audit_id: full_repo_integrity_upgrade_audit_build_34_5
+audit_name: Build 34.5 Full Repo Integrity Upgrade / Bug Check / Gap Audit
+status: full_repo_integrity_audit_only
+input_artifacts:
+  - .github/workflows/ci.yml
+  - data/dashboard/executive_dashboard_manifest.yaml
+  - data/release/v1_5_release_manifest.yaml
+  - data/public_real/parsed/public_real_aggregate_values.json
+  - data/public_real/manifests/public_real_data_sources.yaml
+  - data/public_real/manifests/public_placeholder_replacement_manifest.yaml
+  - data/public_real/manifests/public_aggregate_calibration_boundary_manifest.yaml
+  - data/public_real/manifests/public_aggregate_scenario_constraint_manifest.yaml
+  - data/public_pilot/placeholders/realistic_placeholder_anchors.yaml
+  - reports/public_real_data_loader.json
+  - reports/public_data_placeholder_replacement_map.json
+  - reports/public_aggregate_calibration_boundary_map.json
+  - reports/public_aggregate_scenario_constraint_layer.json
+  - reports/repo_guardrails.json
+required_audit_sections:
+  - purpose
+  - non_claims
+  - audit_scope
+  - build_coverage_matrix
+  - runner_coverage_matrix
+  - report_coverage_matrix
+  - json_markdown_result_coverage
+  - ci_coverage
+  - dashboard_coverage
+  - release_manifest_coverage
+  - documentation_coverage
+  - public_data_boundary_audit
+  - placeholder_boundary_audit
+  - calibration_boundary_audit
+  - scenario_constraint_audit
+  - guardrail_audit
+  - non_claim_boundary_audit
+  - safe_fixes_applied
+  - bugs_fixed
+  - missing_factor_register
+  - data_dependency_register
+  - external_review_dependency_register
+required_runner_checks:
+  - runner_exists
+  - ci_references_runner
+  - full_runner_chain_represented
+  - repo_guardrails_run_after_audit
+required_report_checks:
+  - markdown_report_exists
+  - json_report_exists
+  - report_map_reference_present
+  - generated_report_companions_present
+required_dashboard_checks:
+  - dashboard_manifest_reference_present
+  - dashboard_report_entry_present
+  - dashboard_non_claim_boundary_present
+required_manifest_checks:
+  - release_manifest_reference_present
+  - release_report_entry_present
+  - public_data_manifest_boundaries_present
+required_docs_checks:
+  - docs_file_exists
+  - readme_reference_present
+  - current_status_reference_present
+  - known_risks_reference_present
+  - calibration_shell_reference_present
+  - v1_5_plan_reference_present
+required_guardrail_checks:
+  - restricted_data_blocked
+  - personal_data_blocked
+  - taxpayer_level_data_blocked
+  - firm_confidential_data_blocked
+  - household_microdata_blocked
+  - confidential_treasury_pbo_material_blocked
+  - actual_tax_payable_claim_blocked
+  - firm_liability_claim_blocked
+  - readiness_or_maturity_score_blocked
+required_non_claim_checks:
+  - not_calibration
+  - not_validation
+  - does_not_determine_actual_tax_payable
+  - does_not_modify_firm_level_carsf_liability
+  - no_new_data_loaded
+required_gap_registers:
+  - missing_factor_register
+  - data_dependency_register
+  - external_review_dependency_register
+  - items_blocked_inside_repo
+forbidden_claims:
+  - calibrated
+  - calibration completed
+  - model works
+  - public data proves
+  - actual tax payable
+  - validated
+  - externally validated
+  - source verified
+  - official policy
+  - official status
+  - ready for government
+  - ready for ATO
+  - ready for Treasury
+  - ready for Parliament
+  - ready for implementation
+  - operationally ready
+  - legally sufficient
+  - Treasury modelling
+  - PBO costing
+  - ATO guidance
+  - economic validation complete
+  - welfare validation complete
+  - statistical validation complete
+  - readiness score
+  - maturity score
+  - approved
+  - representative estimate
+  - population estimate
+  - firm liability
+  - CARSF liability determined
+  - calibrated scenario
+  - scenario validated
+  - scenario proves
+  - implementation ready
+  - compliance score
+  - enforcement score
+next_build_requirements:
+  - Build 35 Public Data Reviewer Handoff Pack V2 may package Builds 31-34.5 for reviewers.
+  - Build 35 Gap Closure Sprint 1 may address only safe internal non-data non-claim gaps.

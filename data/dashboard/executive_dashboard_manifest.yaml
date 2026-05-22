@@ -1375,6 +1375,59 @@ layers:
       - PBO costing
       - readiness score
       - firm-level liability
+  - layer_id: full_repo_integrity_upgrade_audit
+    layer_name: Full Repo Integrity Upgrade / Bug Check / Gap Audit
+    layer_group: repo_integrity
+    purpose: Audits repo-wide runners, reports, manifests, dashboard references, documentation links, public-data boundaries, placeholder boundaries, calibration boundaries, scenario constraints, guardrails, non-claim language, missing factors, data dependencies, and external-review dependencies.
+    primary_files:
+      - model/carsf/full_repo_integrity_upgrade_audit.py
+      - data/audit/full_repo_integrity_upgrade_manifest.yaml
+      - scripts/run_full_repo_integrity_upgrade_audit.py
+      - docs/full_repo_integrity_upgrade_audit.md
+    primary_reports:
+      - reports/full_repo_integrity_upgrade_audit.md
+      - reports/full_repo_integrity_upgrade_audit.json
+    streamlit_pages: []
+    status_labels:
+      - implemented_prototype
+      - generated_report_available
+      - full_repo_integrity_audit_only
+      - gap_register_available
+      - external_review_required
+      - not_for_real_world_use
+    non_claim_flags:
+      - no_new_data_loaded
+      - not_calibrated
+      - not_validation
+      - not_actual_tax_payable
+      - not_operational_readiness
+      - not_official_status
+      - no_liability_change
+    calibration_blockers:
+      - The audit identifies coverage and gaps but does not perform calibration, validation, source verification, tax-payable determination, or liability changes.
+      - Missing factors requiring data, legal review, tax review, economic review, statistical review, public finance review, welfare review, domain review, or data governance review remain blocked.
+    external_review_blockers:
+      - Legal, tax, economic, statistical, public finance, welfare, data governance, administrative, and domain review remain required before any boundary-limited output can be interpreted beyond prototype review.
+    blocker_explanation: Build 34.5 audits repo integrity and documents remaining gaps without loading data, creating calibration, validating outputs, or changing liability.
+    recommended_reviewer:
+      - technical_reviewer
+      - privacy_reviewer
+      - statistical_methods_reviewer
+      - legal_reviewer
+      - tax_reviewer
+      - hostile_red_team_reviewer
+    read_order: 36
+    main_reason: Build 34.5 checks repo-wide wiring and gap visibility before the next reviewer handoff pack.
+    must_not_be_used_for:
+      - calibration completed
+      - validation
+      - official status
+      - actual tax payable
+      - ATO guidance
+      - Treasury modelling
+      - PBO costing
+      - readiness score
+      - firm-level liability
 report_entries:
   - report_path: reports/executive_dashboard.md
     layer_id: executive_dashboard
@@ -1858,6 +1911,22 @@ report_entries:
     must_not_be_used_for: [calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score, firm-level liability]
     linked_streamlit_page: simulator/pages/29_Public_Data_Evidence_Map.py
     recommended_read_order: 35
+  - report_path: reports/full_repo_integrity_upgrade_audit.md
+    layer_id: full_repo_integrity_upgrade_audit
+    report_type: markdown
+    generated_by: scripts/run_full_repo_integrity_upgrade_audit.py
+    interpretation_warning: Full repo integrity audit only; gaps and coverage checks do not load data, complete calibration, validate outputs, determine tax payable, or change liability.
+    must_not_be_used_for: [calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score, firm-level liability]
+    linked_streamlit_page:
+    recommended_read_order: 36
+  - report_path: reports/full_repo_integrity_upgrade_audit.json
+    layer_id: full_repo_integrity_upgrade_audit
+    report_type: json
+    generated_by: scripts/run_full_repo_integrity_upgrade_audit.py
+    interpretation_warning: Machine-readable repo-wide coverage, gap, data dependency, external-review dependency, guardrail, and non-claim audit output only; no new data is loaded.
+    must_not_be_used_for: [calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score, firm-level liability]
+    linked_streamlit_page:
+    recommended_read_order: 36
 forbidden_claims:
   - ready for government
   - ready for ATO

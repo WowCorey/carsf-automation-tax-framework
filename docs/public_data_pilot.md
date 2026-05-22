@@ -63,3 +63,7 @@ Build 32 maps Build 31 loaded public aggregate values back to the public-pilot p
 
 Build 33 defines module-level and field-level boundaries for the same public aggregate values and placeholder decisions. It loads no new data and keeps public aggregate uses limited to sanity checks, anchors, bounds, context, placeholder narrowing, and reviewer traceability. It does not complete calibration, validate CARSF, determine actual tax payable, create legal sufficiency, create official status, or modify firm-level CARSF liability.
 Build 34 uses the later boundary and scenario constraint layers to prevent public-pilot outputs from being overread as calibration, validation, tax-payable estimates, legal sufficiency, official status, or implementation readiness.
+
+## Build 34.5 Integrity Audit Link
+
+Build 34.5 adds a full repo integrity audit that checks public-data pilot report coverage, source-reference boundaries, placeholder boundaries, non-claim language, and downstream public aggregate constraints. The audit loads no new data, does not fake missing data, does not calibrate or validate the model, does not determine actual tax payable, and does not modify firm-level CARSF liability.

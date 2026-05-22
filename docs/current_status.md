@@ -207,6 +207,12 @@ Build 34 uses the Build 33 calibration-boundary map to constrain scenario output
 
 This is a scenario constraint layer only. No new data is loaded, scenario constraints do not calibrate or validate the model, public aggregate data does not prove the model works, source candidates not loaded remain not loaded, and restricted-data blockers remain blockers. The layer does not determine actual tax payable, create legal sufficiency, create operational readiness, create official status, or modify firm-level CARSF liability. Build 25 sealed the earlier RC state; a new integrity seal must be regenerated if Builds 26-34 are included in a later sealed RC.
 
+## Build 34.5 Full Repo Integrity Upgrade / Bug Check / Gap Audit
+
+Build 34.5 checks the repo as one connected prototype. It covers runner wiring, report generation coverage, JSON/Markdown report coverage, dashboard/report alignment, release manifests, docs links, public-data boundaries, placeholder boundaries, calibration boundaries, scenario constraints, guardrails, non-claim language, missing factors, data dependencies, and external-review dependencies.
+
+This is a full repo integrity audit only. No new data is loaded, missing data is not faked, calibration has not been completed, public data does not prove the model works, scenario constraints remain constraints, and missing factors requiring data or review remain blocked. The audit does not determine actual tax payable, create legal sufficiency, create operational readiness, create official status, or modify firm-level CARSF liability. Build 25 sealed the earlier RC state; a new integrity seal must be regenerated if Builds 26-34.5 are included in a later sealed RC.
+
 ## Next Claude Review Should Attack
 
 - Whether the example runner hides any policy assumptions inside code defaults.

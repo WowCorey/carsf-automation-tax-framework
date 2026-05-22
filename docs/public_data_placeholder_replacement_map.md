@@ -32,3 +32,7 @@ Build 25 sealed the earlier RC state. A new integrity seal must be regenerated i
 Build 34 constrains scenario outputs that use these placeholder replacement decisions. Replacement, narrowing, and context labels remain display constraints only; they do not calibrate or validate CARSF and do not determine actual tax payable.
 
 Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-34 are included in a later sealed RC.
+
+## Build 34.5 Integrity Audit Link
+
+Build 34.5 adds a full repo integrity audit that checks this map's report coverage, placeholder-boundary flags, calibration-boundary false flags, scenario-constraint inputs, and manifest/report references. The audit loads no new data, does not fake missing data, does not calibrate or validate the model, does not determine actual tax payable, and does not modify firm-level CARSF liability.

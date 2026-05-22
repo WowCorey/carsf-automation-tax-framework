@@ -14,7 +14,7 @@ Current status: private research/prototype.
 
 All sector values, schedule values, examples, caps, Fiscal Replacement Value values, AAVA settings, and behavioural assumptions are placeholders unless explicitly labelled as confirmed baseline figures from official sources.
 
-The current Build 34 layer adds a public aggregate scenario constraint layer over the Build 33 calibration-boundary map. It constrains scenario outputs so loaded public aggregate values can appear only as sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability; outputs implying calibration, validation, tax payable, firm liability, official status, legal sufficiency, statistical estimation, economic validation, welfare validation, or implementation readiness are marked non-interpretable, hidden, downgraded, or fail-closed. It loads no new data and does not modify firm-level liability.
+The current Build 34.5 layer adds a full repo integrity upgrade, bug-check, result-coverage, and gap audit over the Build 31-34 public aggregate stack and the wider V1.5 prototype. It checks runner wiring, reports, JSON outputs, manifests, dashboards, docs, public-data boundaries, placeholder boundaries, calibration boundaries, scenario constraints, guardrails, non-claim language, missing factors, data dependencies, and external-review dependencies. It loads no new data, does not fake missing data, does not calibrate or validate the model, does not determine actual tax payable, and does not modify firm-level liability.
 
 ## Repository Structure
 
@@ -52,6 +52,7 @@ The current Build 34 layer adds a public aggregate scenario constraint layer ove
 - `docs/public_real_data_loader.md` - controlled real public aggregate-data loader notes and boundaries.
 - `docs/public_aggregate_calibration_boundary_map.md` - public aggregate calibration-boundary notes and allowed-use limits.
 - `docs/public_aggregate_scenario_constraint_layer.md` - scenario output constraint notes for public aggregate values.
+- `docs/full_repo_integrity_upgrade_audit.md` - repo-wide integrity, bug-check, result-coverage, and gap audit notes.
 - `simulator/` - Streamlit interface for policy review, tax model inputs, worked examples, red-team tests, and audit log.
 - `docs/` - data requirements, limitations, implementation notes, known risks, and V1.5 plan.
 
@@ -439,6 +440,13 @@ Generated public aggregate scenario-constraint reports:
 - `reports/public_aggregate_scenario_constraint_layer.json`
 
 The scenario constraint layer uses the Build 33 boundary map to classify scenario outputs as sanity-check-only, public-aggregate-anchor-only, public-aggregate-bound-only, context-only, placeholder-narrowing-only, reviewer-traceability-only, non-interpretable, hidden, or fail-closed. It loads no new data and does not calibrate, validate, determine actual tax payable, create legal sufficiency, create official status, or modify firm-level CARSF liability.
+
+Generated full repo integrity upgrade audit reports:
+
+- `reports/full_repo_integrity_upgrade_audit.md`
+- `reports/full_repo_integrity_upgrade_audit.json`
+
+The full repo integrity audit checks runner coverage, report coverage, JSON/Markdown result coverage, CI wiring, dashboard and release-manifest references, documentation coverage, public-data boundaries, placeholder boundaries, calibration boundaries, scenario constraints, guardrails, non-claim language, missing factors, data dependencies, external-review dependencies, and safe fixes. It loads no new data, does not fake missing data, does not calibrate, does not validate, does not determine actual tax payable, does not create official status, and does not modify firm-level CARSF liability.
 
 ## Run the Simulator
 

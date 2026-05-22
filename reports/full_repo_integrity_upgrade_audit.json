@@ -1,0 +1,2534 @@
+{
+  "full_repo_integrity_upgrade_audit": {
+    "audit_id": "full_repo_integrity_upgrade_audit_build_34_5",
+    "audit_name": "Build 34.5 Full Repo Integrity Upgrade / Bug Check / Gap Audit",
+    "build_coverage_matrix": [
+      {
+        "build_or_layer": "example_results",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "grouped_entity_results",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "transfer_pricing_results",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "evidence_requirements",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "calibration_requirements",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "sector_schedule_expansion",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "sector_stress_matrix",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "behavioural_response_simulation",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "administrative_compliance_workflow",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "legislative_architecture",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "executive_dashboard",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "v1_5_release_candidate_pack",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "external_review_attack_pack",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "v1_5_final_rc_integrity_seal",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "real_data_feasibility",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "public_data_pilot",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "public_data_evidence_map",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "public_data_consistency_audit",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "source_locator_verification_pack",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "red_team_reviewer_objections",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "public_real_data_loader",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "public_data_placeholder_replacement_map",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "public_aggregate_calibration_boundary_map",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "public_aggregate_scenario_constraint_layer",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "full_repo_integrity_upgrade_audit",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "mock_evidence_workflow",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "secure_ingestion_controls",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "investment_guardrails",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "fiscal_trajectory",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "transition_funding",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "payment_interactions",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "distributional_scenarios",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "household_weighting",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "uncertainty_ranges",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "reviewed_scenarios",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      },
+      {
+        "build_or_layer": "repo_guardrails",
+        "ci_referenced": true,
+        "json_report_exists": true,
+        "markdown_report_exists": true,
+        "runner_exists": true,
+        "status": "covered"
+      }
+    ],
+    "calibration_boundary_audit": [
+      {
+        "category": "calibration_boundary",
+        "covered": true,
+        "evidence": "new_data_loaded",
+        "guardrail_id": "calibration_boundary_new_data_loaded",
+        "status": "clean"
+      },
+      {
+        "category": "calibration_boundary",
+        "covered": true,
+        "evidence": "calibration_completed",
+        "guardrail_id": "calibration_boundary_calibration_completed",
+        "status": "clean"
+      },
+      {
+        "category": "calibration_boundary",
+        "covered": true,
+        "evidence": "validation_claimed",
+        "guardrail_id": "calibration_boundary_validation_claimed",
+        "status": "clean"
+      },
+      {
+        "category": "calibration_boundary",
+        "covered": true,
+        "evidence": "actual_tax_payable_determined",
+        "guardrail_id": "calibration_boundary_actual_tax_payable_determined",
+        "status": "clean"
+      },
+      {
+        "category": "calibration_boundary",
+        "covered": true,
+        "evidence": "official_status_claimed",
+        "guardrail_id": "calibration_boundary_official_status_claimed",
+        "status": "clean"
+      },
+      {
+        "category": "calibration_boundary",
+        "covered": true,
+        "evidence": "firm_level_liability_logic_modified",
+        "guardrail_id": "calibration_boundary_firm_level_liability_logic_modified",
+        "status": "clean"
+      }
+    ],
+    "dashboard_coverage_matrix": [
+      {
+        "artifact": "data/dashboard/executive_dashboard_manifest.yaml",
+        "coverage_id": "dashboard_1",
+        "expected_reference": "full_repo_integrity_upgrade_audit",
+        "reference_present": true,
+        "status": "covered"
+      },
+      {
+        "artifact": "data/dashboard/executive_dashboard_manifest.yaml",
+        "coverage_id": "dashboard_2",
+        "expected_reference": "reports/full_repo_integrity_upgrade_audit.md",
+        "reference_present": true,
+        "status": "covered"
+      },
+      {
+        "artifact": "data/dashboard/executive_dashboard_manifest.yaml",
+        "coverage_id": "dashboard_3",
+        "expected_reference": "reports/full_repo_integrity_upgrade_audit.json",
+        "reference_present": true,
+        "status": "covered"
+      }
+    ],
+    "data_dependencies": [
+      {
+        "can_be_loaded_now": false,
+        "claim_still_forbidden_even_if_obtained": [
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "official status",
+          "firm-level liability"
+        ],
+        "claim_unlocked_if_obtained": "May support review design only after governance and expert review.",
+        "current_status": "not loaded",
+        "data_needed": "ATO taxpayer-level records",
+        "dependency_id": "restricted_ato_taxpayer",
+        "public_data_available": "unknown",
+        "related_modules": [
+          "PAYG erosion",
+          "corporate tax scale"
+        ],
+        "restricted_data_required": true,
+        "review_required": [
+          "legal",
+          "tax",
+          "data governance"
+        ],
+        "safe_for_repo_use": "false",
+        "why_needed": "Needed for tax attribution and PAYG behaviour.",
+        "why_not_loaded": "Out of repo scope or requires authorised access and review."
+      },
+      {
+        "can_be_loaded_now": false,
+        "claim_still_forbidden_even_if_obtained": [
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "official status",
+          "firm-level liability"
+        ],
+        "claim_unlocked_if_obtained": "May support review design only after governance and expert review.",
+        "current_status": "not loaded",
+        "data_needed": "Firm confidential revenue/cost records",
+        "dependency_id": "firm_confidential",
+        "public_data_available": "unknown",
+        "related_modules": [
+          "AAVA",
+          "sector schedules"
+        ],
+        "restricted_data_required": true,
+        "review_required": [
+          "legal",
+          "tax",
+          "data governance"
+        ],
+        "safe_for_repo_use": "false",
+        "why_needed": "Needed for firm-level calibration and attribution.",
+        "why_not_loaded": "Out of repo scope or requires authorised access and review."
+      },
+      {
+        "can_be_loaded_now": false,
+        "claim_still_forbidden_even_if_obtained": [
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "official status",
+          "firm-level liability"
+        ],
+        "claim_unlocked_if_obtained": "May support review design only after governance and expert review.",
+        "current_status": "not loaded",
+        "data_needed": "Household microdata",
+        "dependency_id": "household_microdata",
+        "public_data_available": "unknown",
+        "related_modules": [
+          "household distributional",
+          "household weighting"
+        ],
+        "restricted_data_required": true,
+        "review_required": [
+          "statistical",
+          "welfare",
+          "data governance"
+        ],
+        "safe_for_repo_use": "false",
+        "why_needed": "Needed for distributional representativeness.",
+        "why_not_loaded": "Out of repo scope or requires authorised access and review."
+      },
+      {
+        "can_be_loaded_now": false,
+        "claim_still_forbidden_even_if_obtained": [
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "official status",
+          "firm-level liability"
+        ],
+        "claim_unlocked_if_obtained": "May support review design only after governance and expert review.",
+        "current_status": "not loaded",
+        "data_needed": "DSS / Services Australia payment records",
+        "dependency_id": "welfare_records",
+        "public_data_available": "unknown",
+        "related_modules": [
+          "payment interactions",
+          "transition funding"
+        ],
+        "restricted_data_required": true,
+        "review_required": [
+          "welfare",
+          "legal",
+          "data governance"
+        ],
+        "safe_for_repo_use": "false",
+        "why_needed": "Needed for welfare/payment interaction calibration.",
+        "why_not_loaded": "Out of repo scope or requires authorised access and review."
+      },
+      {
+        "can_be_loaded_now": false,
+        "claim_still_forbidden_even_if_obtained": [
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "official status",
+          "firm-level liability"
+        ],
+        "claim_unlocked_if_obtained": "May support review design only after governance and expert review.",
+        "current_status": "not loaded",
+        "data_needed": "ABS DataLab labour and industry microdata",
+        "dependency_id": "abs_datalab",
+        "public_data_available": "unknown",
+        "related_modules": [
+          "OPFTE",
+          "HLE",
+          "sector stress"
+        ],
+        "restricted_data_required": true,
+        "review_required": [
+          "statistical",
+          "data governance"
+        ],
+        "safe_for_repo_use": "false",
+        "why_needed": "Needed for labour and sector calibration.",
+        "why_not_loaded": "Out of repo scope or requires authorised access and review."
+      },
+      {
+        "can_be_loaded_now": false,
+        "claim_still_forbidden_even_if_obtained": [
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "official status",
+          "firm-level liability"
+        ],
+        "claim_unlocked_if_obtained": "May support review design only after governance and expert review.",
+        "current_status": "not loaded",
+        "data_needed": "HILDA microdata",
+        "dependency_id": "hilda",
+        "public_data_available": "unknown",
+        "related_modules": [
+          "household distributional"
+        ],
+        "restricted_data_required": true,
+        "review_required": [
+          "statistical",
+          "welfare",
+          "data governance"
+        ],
+        "safe_for_repo_use": "false",
+        "why_needed": "Needed for longitudinal household pressure analysis.",
+        "why_not_loaded": "Out of repo scope or requires authorised access and review."
+      },
+      {
+        "can_be_loaded_now": false,
+        "claim_still_forbidden_even_if_obtained": [
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "official status",
+          "firm-level liability"
+        ],
+        "claim_unlocked_if_obtained": "May support review design only after governance and expert review.",
+        "current_status": "not loaded",
+        "data_needed": "Confidential Treasury / PBO material",
+        "dependency_id": "treasury_pbo",
+        "public_data_available": "unknown",
+        "related_modules": [
+          "fiscal trajectory",
+          "transition funding"
+        ],
+        "restricted_data_required": true,
+        "review_required": [
+          "public finance",
+          "economic"
+        ],
+        "safe_for_repo_use": "false",
+        "why_needed": "Needed only for official fiscal costing review outside repo.",
+        "why_not_loaded": "Out of repo scope or requires authorised access and review."
+      },
+      {
+        "can_be_loaded_now": false,
+        "claim_still_forbidden_even_if_obtained": [
+          "calibration",
+          "validation",
+          "actual tax payable",
+          "official status",
+          "firm-level liability"
+        ],
+        "claim_unlocked_if_obtained": "May support review design only after governance and expert review.",
+        "current_status": "not loaded",
+        "data_needed": "Behavioural elasticity evidence",
+        "dependency_id": "behavioural",
+        "public_data_available": "true",
+        "related_modules": [
+          "behavioural response"
+        ],
+        "restricted_data_required": false,
+        "review_required": [
+          "economic",
+          "statistical"
+        ],
+        "safe_for_repo_use": "unknown",
+        "why_needed": "Needed for response/gaming estimation.",
+        "why_not_loaded": "Out of repo scope or requires authorised access and review."
+      }
+    ],
+    "docs_coverage": [
+      {
+        "artifact": "README.md",
+        "coverage_id": "doc_1",
+        "expected_reference": "file exists",
+        "reference_present": true,
+        "status": "covered"
+      },
+      {
+        "artifact": "BUILD_LOG.md",
+        "coverage_id": "doc_2",
+        "expected_reference": "file exists",
+        "reference_present": true,
+        "status": "covered"
+      },
+      {
+        "artifact": "docs/current_status.md",
+        "coverage_id": "doc_3",
+        "expected_reference": "file exists",
+        "reference_present": true,
+        "status": "covered"
+      },
+      {
+        "artifact": "docs/known_risks.md",
+        "coverage_id": "doc_4",
+        "expected_reference": "file exists",
+        "reference_present": true,
+        "status": "covered"
+      },
+      {
+        "artifact": "docs/calibration_shell.md",
+        "coverage_id": "doc_5",
+        "expected_reference": "file exists",
+        "reference_present": true,
+        "status": "covered"
+      },
+      {
+        "artifact": "docs/v1_5_plan.md",
+        "coverage_id": "doc_6",
+        "expected_reference": "file exists",
+        "reference_present": true,
+        "status": "covered"
+      },
+      {
+        "artifact": "docs/public_data_pilot.md",
+        "coverage_id": "doc_7",
+        "expected_reference": "file exists",
+        "reference_present": true,
+        "status": "covered"
+      },
+      {
+        "artifact": "docs/public_real_data_loader.md",
+        "coverage_id": "doc_8",
+        "expected_reference": "file exists",
+        "reference_present": true,
+        "status": "covered"
+      },
+      {
+        "artifact": "docs/public_data_placeholder_replacement_map.md",
+        "coverage_id": "doc_9",
+        "expected_reference": "file exists",
+        "reference_present": true,
+        "status": "covered"
+      },
+      {
+        "artifact": "docs/public_aggregate_calibration_boundary_map.md",
+        "coverage_id": "doc_10",
+        "expected_reference": "file exists",
+        "reference_present": true,
+        "status": "covered"
+      },
+      {
+        "artifact": "docs/public_aggregate_scenario_constraint_layer.md",
+        "coverage_id": "doc_11",
+        "expected_reference": "file exists",
+        "reference_present": true,
+        "status": "covered"
+      },
+      {
+        "artifact": "docs/full_repo_integrity_upgrade_audit.md",
+        "coverage_id": "doc_12",
+        "expected_reference": "file exists",
+        "reference_present": true,
+        "status": "covered"
+      },
+      {
+        "artifact": "release/v1_5_rc/RELEASE_NOTES.md",
+        "coverage_id": "doc_13",
+        "expected_reference": "file exists",
+        "reference_present": true,
+        "status": "covered"
+      },
+      {
+        "artifact": "release/v1_5_rc/CALIBRATION_BLOCKERS.md",
+        "coverage_id": "doc_14",
+        "expected_reference": "file exists",
+        "reference_present": true,
+        "status": "covered"
+      },
+      {
+        "artifact": "release/v1_5_rc/NON_CLAIM_BOUNDARIES.md",
+        "coverage_id": "doc_15",
+        "expected_reference": "file exists",
+        "reference_present": true,
+        "status": "covered"
+      },
+      {
+        "artifact": "release/v1_5_rc/REPORT_MAP.md",
+        "coverage_id": "doc_16",
+        "expected_reference": "file exists",
+        "reference_present": true,
+        "status": "covered"
+      },
+      {
+        "artifact": "release/v1_5_rc/RELEASE_MANIFEST.json",
+        "coverage_id": "doc_17",
+        "expected_reference": "file exists",
+        "reference_present": true,
+        "status": "covered"
+      }
+    ],
+    "external_review_dependencies": [
+      {
+        "blocking_status": "requires_external_review",
+        "recommended_reviewer_profile": "legal reviewer with CARSF boundary brief",
+        "related_modules": [
+          "legislative architecture",
+          "administrative workflow"
+        ],
+        "review_id": "review_legal",
+        "review_type": "legal",
+        "what_review_cannot_imply": "Review cannot imply calibration, validation, official status, tax payable, readiness, or liability determination.",
+        "what_review_must_check": "Check assumptions, data requirements, non-claim boundaries, and required evidence.",
+        "why_required": "Legal review is required for legislative architecture, powers, attribution, safeguards, and boundaries."
+      },
+      {
+        "blocking_status": "requires_external_review",
+        "recommended_reviewer_profile": "tax reviewer with CARSF boundary brief",
+        "related_modules": [
+          "core formula",
+          "AAVA",
+          "PAYG erosion"
+        ],
+        "review_id": "review_tax",
+        "review_type": "tax",
+        "what_review_cannot_imply": "Review cannot imply calibration, validation, official status, tax payable, readiness, or liability determination.",
+        "what_review_must_check": "Check assumptions, data requirements, non-claim boundaries, and required evidence.",
+        "why_required": "Tax review is required for attribution, deductibility, PAYG, company tax, and ATO-methods boundaries."
+      },
+      {
+        "blocking_status": "requires_external_review",
+        "recommended_reviewer_profile": "economic reviewer with CARSF boundary brief",
+        "related_modules": [
+          "investment",
+          "fiscal trajectory",
+          "sector stress"
+        ],
+        "review_id": "review_economic",
+        "review_type": "economic",
+        "what_review_cannot_imply": "Review cannot imply calibration, validation, official status, tax payable, readiness, or liability determination.",
+        "what_review_must_check": "Check assumptions, data requirements, non-claim boundaries, and required evidence.",
+        "why_required": "Economic review is required for incidence, pass-through, labour displacement, and fiscal interpretation."
+      },
+      {
+        "blocking_status": "requires_external_review",
+        "recommended_reviewer_profile": "statistical reviewer with CARSF boundary brief",
+        "related_modules": [
+          "household weighting",
+          "uncertainty ranges"
+        ],
+        "review_id": "review_statistical",
+        "review_type": "statistical",
+        "what_review_cannot_imply": "Review cannot imply calibration, validation, official status, tax payable, readiness, or liability determination.",
+        "what_review_must_check": "Check assumptions, data requirements, non-claim boundaries, and required evidence.",
+        "why_required": "Statistical review is required for representativeness, uncertainty, weighting, and scenario interpretation."
+      },
+      {
+        "blocking_status": "requires_external_review",
+        "recommended_reviewer_profile": "administrative reviewer with CARSF boundary brief",
+        "related_modules": [
+          "administrative workflow",
+          "secure ingestion"
+        ],
+        "review_id": "review_administrative",
+        "review_type": "administrative",
+        "what_review_cannot_imply": "Review cannot imply calibration, validation, official status, tax payable, readiness, or liability determination.",
+        "what_review_must_check": "Check assumptions, data requirements, non-claim boundaries, and required evidence.",
+        "why_required": "Administrative review is required for workflow feasibility and evidence process boundaries."
+      },
+      {
+        "blocking_status": "requires_external_review",
+        "recommended_reviewer_profile": "domain reviewer with CARSF boundary brief",
+        "related_modules": [
+          "sector schedules",
+          "sector stress"
+        ],
+        "review_id": "review_domain",
+        "review_type": "domain",
+        "what_review_cannot_imply": "Review cannot imply calibration, validation, official status, tax payable, readiness, or liability determination.",
+        "what_review_must_check": "Check assumptions, data requirements, non-claim boundaries, and required evidence.",
+        "why_required": "Domain review is required for sector schedules and sector stress assumptions."
+      },
+      {
+        "blocking_status": "requires_external_review",
+        "recommended_reviewer_profile": "public finance reviewer with CARSF boundary brief",
+        "related_modules": [
+          "fiscal trajectory",
+          "transition funding"
+        ],
+        "review_id": "review_public_finance",
+        "review_type": "public finance",
+        "what_review_cannot_imply": "Review cannot imply calibration, validation, official status, tax payable, readiness, or liability determination.",
+        "what_review_must_check": "Check assumptions, data requirements, non-claim boundaries, and required evidence.",
+        "why_required": "Public finance review is required before fiscal context can be interpreted beyond public aggregate bounds."
+      },
+      {
+        "blocking_status": "requires_external_review",
+        "recommended_reviewer_profile": "welfare reviewer with CARSF boundary brief",
+        "related_modules": [
+          "payment interactions",
+          "transition funding"
+        ],
+        "review_id": "review_welfare",
+        "review_type": "welfare",
+        "what_review_cannot_imply": "Review cannot imply calibration, validation, official status, tax payable, readiness, or liability determination.",
+        "what_review_must_check": "Check assumptions, data requirements, non-claim boundaries, and required evidence.",
+        "why_required": "Welfare review is required for payment interactions, support adequacy, and household pressure boundaries."
+      },
+      {
+        "blocking_status": "requires_external_review",
+        "recommended_reviewer_profile": "data governance reviewer with CARSF boundary brief",
+        "related_modules": [
+          "public real data loader",
+          "repo guardrails"
+        ],
+        "review_id": "review_data_governance",
+        "review_type": "data governance",
+        "what_review_cannot_imply": "Review cannot imply calibration, validation, official status, tax payable, readiness, or liability determination.",
+        "what_review_must_check": "Check assumptions, data requirements, non-claim boundaries, and required evidence.",
+        "why_required": "Data governance review is required before any restricted or confidential source could be considered."
+      }
+    ],
+    "findings": [
+      {
+        "category": "ci_gap",
+        "details": "The parse step now covers schedules, examples, data, and release.",
+        "evidence": [
+          ".github/workflows/ci.yml"
+        ],
+        "finding_id": "ci_release_yaml_parse_gap",
+        "safe_fix_applied": true,
+        "severity": "low",
+        "status": "fixed",
+        "title": "CI YAML parse did not include release YAML files."
+      },
+      {
+        "category": "runner_gap",
+        "details": "Build 34.5 adds the runner, report, manifest, tests, and CI entry.",
+        "evidence": [
+          "scripts/run_full_repo_integrity_upgrade_audit.py"
+        ],
+        "finding_id": "full_repo_audit_missing_before_build_34_5",
+        "safe_fix_applied": true,
+        "severity": "medium",
+        "status": "fixed",
+        "title": "No whole-repo integrity/gap audit runner existed before this build."
+      }
+    ],
+    "gaps": [
+      {
+        "category": "data_gap",
+        "description": "Restricted administrative and microdata dependencies remain outside repo scope.",
+        "gap_id": "gap_restricted_data",
+        "recommended_action": "Carry into data dependency register.",
+        "status": "blocked"
+      },
+      {
+        "category": "external_review_gap",
+        "description": "Legal, tax, economic, statistical, welfare, data governance, and domain review remain unresolved.",
+        "gap_id": "gap_external_review",
+        "recommended_action": "Carry into reviewer handoff.",
+        "status": "requires_external_review"
+      },
+      {
+        "category": "calibration_gap",
+        "description": "Calibration has not been performed and cannot be performed from current public aggregate data alone.",
+        "gap_id": "gap_calibration",
+        "recommended_action": "Preserve boundary maps and do not overclaim.",
+        "status": "blocked"
+      },
+      {
+        "category": "docs_gap",
+        "description": "Build 35 should package the audit outputs for reviewers.",
+        "gap_id": "gap_reviewer_pack",
+        "recommended_action": "Proceed to reviewer handoff pack or safe gap closure sprint.",
+        "status": "documented"
+      }
+    ],
+    "guardrail_audit": [
+      {
+        "category": "guardrail_boundary",
+        "covered": true,
+        "evidence": "restricted data",
+        "guardrail_id": "guardrail_1",
+        "status": "clean"
+      },
+      {
+        "category": "guardrail_boundary",
+        "covered": true,
+        "evidence": "personal data",
+        "guardrail_id": "guardrail_2",
+        "status": "clean"
+      },
+      {
+        "category": "guardrail_boundary",
+        "covered": true,
+        "evidence": "taxpayer-level data",
+        "guardrail_id": "guardrail_3",
+        "status": "clean"
+      },
+      {
+        "category": "guardrail_boundary",
+        "covered": true,
+        "evidence": "firm-confidential data",
+        "guardrail_id": "guardrail_4",
+        "status": "clean"
+      },
+      {
+        "category": "guardrail_boundary",
+        "covered": true,
+        "evidence": "household microdata",
+        "guardrail_id": "guardrail_5",
+        "status": "clean"
+      },
+      {
+        "category": "guardrail_boundary",
+        "covered": true,
+        "evidence": "ABS DataLab microdata",
+        "guardrail_id": "guardrail_6",
+        "status": "clean"
+      },
+      {
+        "category": "guardrail_boundary",
+        "covered": true,
+        "evidence": "HILDA microdata",
+        "guardrail_id": "guardrail_7",
+        "status": "clean"
+      },
+      {
+        "category": "guardrail_boundary",
+        "covered": true,
+        "evidence": "DSS / Services Australia records",
+        "guardrail_id": "guardrail_8",
+        "status": "clean"
+      },
+      {
+        "category": "guardrail_boundary",
+        "covered": true,
+        "evidence": "ATO taxpayer records",
+        "guardrail_id": "guardrail_9",
+        "status": "clean"
+      },
+      {
+        "category": "guardrail_boundary",
+        "covered": true,
+        "evidence": "confidential Treasury / PBO material",
+        "guardrail_id": "guardrail_10",
+        "status": "clean"
+      },
+      {
+        "category": "guardrail_boundary",
+        "covered": true,
+        "evidence": "bank records",
+        "guardrail_id": "guardrail_11",
+        "status": "clean"
+      },
+      {
+        "category": "guardrail_boundary",
+        "covered": true,
+        "evidence": "pay-record documents",
+        "guardrail_id": "guardrail_12",
+        "status": "clean"
+      },
+      {
+        "category": "guardrail_boundary",
+        "covered": true,
+        "evidence": "tax-file identifiers",
+        "guardrail_id": "guardrail_13",
+        "status": "clean"
+      },
+      {
+        "category": "guardrail_boundary",
+        "covered": true,
+        "evidence": "calibration-complete claims",
+        "guardrail_id": "guardrail_14",
+        "status": "clean"
+      },
+      {
+        "category": "guardrail_boundary",
+        "covered": true,
+        "evidence": "validation claims",
+        "guardrail_id": "guardrail_15",
+        "status": "clean"
+      },
+      {
+        "category": "guardrail_boundary",
+        "covered": true,
+        "evidence": "actual tax payable claims",
+        "guardrail_id": "guardrail_16",
+        "status": "clean"
+      },
+      {
+        "category": "guardrail_boundary",
+        "covered": true,
+        "evidence": "firm liability claims",
+        "guardrail_id": "guardrail_17",
+        "status": "clean"
+      },
+      {
+        "category": "guardrail_boundary",
+        "covered": true,
+        "evidence": "official status claims",
+        "guardrail_id": "guardrail_18",
+        "status": "clean"
+      },
+      {
+        "category": "guardrail_boundary",
+        "covered": true,
+        "evidence": "readiness or maturity scores",
+        "guardrail_id": "guardrail_19",
+        "status": "clean"
+      }
+    ],
+    "items_blocked_inside_repo": [
+      {
+        "category": "data_gap",
+        "description": "Restricted administrative and microdata dependencies remain outside repo scope.",
+        "gap_id": "gap_restricted_data",
+        "recommended_action": "Carry into data dependency register.",
+        "status": "blocked"
+      },
+      {
+        "category": "external_review_gap",
+        "description": "Legal, tax, economic, statistical, welfare, data governance, and domain review remain unresolved.",
+        "gap_id": "gap_external_review",
+        "recommended_action": "Carry into reviewer handoff.",
+        "status": "requires_external_review"
+      },
+      {
+        "category": "calibration_gap",
+        "description": "Calibration has not been performed and cannot be performed from current public aggregate data alone.",
+        "gap_id": "gap_calibration",
+        "recommended_action": "Preserve boundary maps and do not overclaim.",
+        "status": "blocked"
+      }
+    ],
+    "missing_factors": [
+      {
+        "blocking_status": "requires_data",
+        "can_fix_inside_repo": false,
+        "category": "public_data",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Labour cost anchors",
+        "gap_description": "Fair Work anchors exist but do not represent all labour costs.",
+        "missing_factor_id": "missing_factor_01_labour_cost_anchors",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": true,
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "safe_fix_applied": false,
+        "why_it_matters": "Labour cost anchors affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "requires_data",
+        "can_fix_inside_repo": false,
+        "category": "data_gap",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Wage variation",
+        "gap_description": "Public wage anchors do not cover occupation, region, award, enterprise agreement, or hours variation.",
+        "missing_factor_id": "missing_factor_02_wage_variation",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": true,
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "safe_fix_applied": false,
+        "why_it_matters": "Wage variation affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "requires_data",
+        "can_fix_inside_repo": false,
+        "category": "public_data",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Casual loading",
+        "gap_description": "Casual loading is represented as a public anchor but not full casual employment cost.",
+        "missing_factor_id": "missing_factor_03_casual_loading",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": true,
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "safe_fix_applied": false,
+        "why_it_matters": "Casual loading affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "requires_data",
+        "can_fix_inside_repo": false,
+        "category": "public_data",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Superannuation contribution pressure",
+        "gap_description": "Super guarantee rate is loaded but employer behaviour remains unknown.",
+        "missing_factor_id": "missing_factor_04_super_pressure",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": true,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_statistical_review": false,
+        "requires_tax_review": false,
+        "safe_fix_applied": false,
+        "why_it_matters": "Superannuation contribution pressure affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "requires_data",
+        "can_fix_inside_repo": false,
+        "category": "calibration_gap",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "PAYG erosion assumptions",
+        "gap_description": "PAYG erosion cannot be estimated from the current public aggregate set.",
+        "missing_factor_id": "missing_factor_05_payg_erosion",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": true,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "safe_fix_applied": false,
+        "why_it_matters": "PAYG erosion assumptions affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "documented",
+        "can_fix_inside_repo": false,
+        "category": "public_data",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Corporate tax scale",
+        "gap_description": "ATO public aggregate values provide scale context only.",
+        "missing_factor_id": "missing_factor_06_corporate_tax_scale",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": false,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "safe_fix_applied": false,
+        "why_it_matters": "Corporate tax scale affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "documented",
+        "can_fix_inside_repo": false,
+        "category": "public_data",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Fiscal trajectory context",
+        "gap_description": "Budget aggregates provide context and bounds only.",
+        "missing_factor_id": "missing_factor_07_fiscal_context",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": false,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "safe_fix_applied": false,
+        "why_it_matters": "Fiscal trajectory context affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "requires_data",
+        "can_fix_inside_repo": false,
+        "category": "public_data",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Transition funding context",
+        "gap_description": "Transition funding remains placeholder/context-only.",
+        "missing_factor_id": "missing_factor_08_transition_funding",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": true,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "safe_fix_applied": false,
+        "why_it_matters": "Transition funding context affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "requires_data",
+        "can_fix_inside_repo": false,
+        "category": "restricted_data",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Household distributional limits",
+        "gap_description": "Household outputs remain synthetic without microdata.",
+        "missing_factor_id": "missing_factor_09_household_limits",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": true,
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "safe_fix_applied": false,
+        "why_it_matters": "Household distributional limits affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "requires_data",
+        "can_fix_inside_repo": false,
+        "category": "restricted_data",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Welfare/payment interaction limits",
+        "gap_description": "Payment interactions need welfare records and policy review.",
+        "missing_factor_id": "missing_factor_10_payment_limits",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": true,
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "safe_fix_applied": false,
+        "why_it_matters": "Welfare/payment interaction limits affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "requires_data",
+        "can_fix_inside_repo": false,
+        "category": "external_review",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Sector schedule limits",
+        "gap_description": "Sector schedules remain placeholder and need sector review.",
+        "missing_factor_id": "missing_factor_11_sector_schedule_limits",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": true,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "safe_fix_applied": false,
+        "why_it_matters": "Sector schedule limits affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "requires_data",
+        "can_fix_inside_repo": false,
+        "category": "external_review",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Sector stress limits",
+        "gap_description": "Stress bands are metadata-only.",
+        "missing_factor_id": "missing_factor_12_sector_stress_limits",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": true,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "safe_fix_applied": false,
+        "why_it_matters": "Sector stress limits affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "requires_data",
+        "can_fix_inside_repo": false,
+        "category": "calibration_gap",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Behavioural response/gaming risks",
+        "gap_description": "Behavioural pathways remain synthetic.",
+        "missing_factor_id": "missing_factor_13_behavioural_response",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": true,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "safe_fix_applied": false,
+        "why_it_matters": "Behavioural response/gaming risks affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "requires_data",
+        "can_fix_inside_repo": false,
+        "category": "legal_review",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Administrative compliance limits",
+        "gap_description": "Workflow is synthetic and not ATO process.",
+        "missing_factor_id": "missing_factor_14_admin_limits",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": true,
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_statistical_review": false,
+        "requires_tax_review": false,
+        "safe_fix_applied": false,
+        "why_it_matters": "Administrative compliance limits affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "requires_data",
+        "can_fix_inside_repo": false,
+        "category": "legal_review",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Legislative architecture limits",
+        "gap_description": "Legislative skeleton is non-operative.",
+        "missing_factor_id": "missing_factor_15_legislative_limits",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": true,
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_statistical_review": false,
+        "requires_tax_review": false,
+        "safe_fix_applied": false,
+        "why_it_matters": "Legislative architecture limits affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "documented",
+        "can_fix_inside_repo": false,
+        "category": "public_data",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Data provenance",
+        "gap_description": "Public aggregate provenance is recorded; external verification remains absent.",
+        "missing_factor_id": "missing_factor_16_data_provenance",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": false,
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "safe_fix_applied": false,
+        "why_it_matters": "Data provenance affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "documented",
+        "can_fix_inside_repo": false,
+        "category": "public_data",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Source locators",
+        "gap_description": "Locators are recorded for loaded values but not externally verified.",
+        "missing_factor_id": "missing_factor_17_source_locators",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": false,
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "safe_fix_applied": false,
+        "why_it_matters": "Source locators affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "documented",
+        "can_fix_inside_repo": false,
+        "category": "public_data",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Real public aggregate values",
+        "gap_description": "Ten public aggregate values are loaded but boundary-limited.",
+        "missing_factor_id": "missing_factor_18_real_public_values",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": false,
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "safe_fix_applied": false,
+        "why_it_matters": "Real public aggregate values affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "requires_data",
+        "can_fix_inside_repo": false,
+        "category": "placeholder_boundary",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Placeholder replacement",
+        "gap_description": "Some placeholders are replaced or narrowed by anchors but not calibrated.",
+        "missing_factor_id": "missing_factor_19_placeholder_replacement",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": true,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "safe_fix_applied": false,
+        "why_it_matters": "Placeholder replacement affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "requires_data",
+        "can_fix_inside_repo": false,
+        "category": "calibration_gap",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Calibration boundaries",
+        "gap_description": "Boundaries are mapped but calibration remains absent.",
+        "missing_factor_id": "missing_factor_20_calibration_boundaries",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": true,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "safe_fix_applied": false,
+        "why_it_matters": "Calibration boundaries affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "requires_data",
+        "can_fix_inside_repo": false,
+        "category": "scenario_constraint",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Scenario constraints",
+        "gap_description": "Scenario outputs are constrained but not validated.",
+        "missing_factor_id": "missing_factor_21_scenario_constraints",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": true,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "safe_fix_applied": false,
+        "why_it_matters": "Scenario constraints affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "documented",
+        "can_fix_inside_repo": false,
+        "category": "scenario_constraint",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Non-interpretable outputs",
+        "gap_description": "Non-interpretable treatment is present but needs reviewer handoff clarity.",
+        "missing_factor_id": "missing_factor_22_non_interpretable",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": false,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "safe_fix_applied": false,
+        "why_it_matters": "Non-interpretable outputs affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "documented",
+        "can_fix_inside_repo": false,
+        "category": "dashboard_gap",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Hidden dashboard outputs",
+        "gap_description": "Hidden outputs are documented but should be packaged for reviewers.",
+        "missing_factor_id": "missing_factor_23_hidden_dashboard",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": false,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "safe_fix_applied": false,
+        "why_it_matters": "Hidden dashboard outputs affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "requires_data",
+        "can_fix_inside_repo": false,
+        "category": "external_review",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "External review dependencies",
+        "gap_description": "External review remains unresolved.",
+        "missing_factor_id": "missing_factor_24_external_review",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": true,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "safe_fix_applied": false,
+        "why_it_matters": "External review dependencies affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "requires_data",
+        "can_fix_inside_repo": false,
+        "category": "legal_review",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Legal review dependencies",
+        "gap_description": "Legal sufficiency is out of repo.",
+        "missing_factor_id": "missing_factor_25_legal_review",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": true,
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_statistical_review": false,
+        "requires_tax_review": false,
+        "safe_fix_applied": false,
+        "why_it_matters": "Legal review dependencies affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "requires_data",
+        "can_fix_inside_repo": false,
+        "category": "tax_review",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Tax review dependencies",
+        "gap_description": "Tax treatment and ATO methods remain external.",
+        "missing_factor_id": "missing_factor_26_tax_review",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": true,
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_statistical_review": false,
+        "requires_tax_review": true,
+        "safe_fix_applied": false,
+        "why_it_matters": "Tax review dependencies affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "requires_data",
+        "can_fix_inside_repo": false,
+        "category": "economic_review",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Economic review dependencies",
+        "gap_description": "Incidence, pass-through, and sufficiency remain external.",
+        "missing_factor_id": "missing_factor_27_economic_review",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": true,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_statistical_review": false,
+        "requires_tax_review": false,
+        "safe_fix_applied": false,
+        "why_it_matters": "Economic review dependencies affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "requires_data",
+        "can_fix_inside_repo": false,
+        "category": "statistical_review",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Statistical review dependencies",
+        "gap_description": "Representativeness and uncertainty remain external.",
+        "missing_factor_id": "missing_factor_28_statistical_review",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": true,
+        "requires_economic_review": false,
+        "requires_external_review": true,
+        "requires_legal_review": false,
+        "requires_statistical_review": true,
+        "requires_tax_review": false,
+        "safe_fix_applied": false,
+        "why_it_matters": "Statistical review dependencies affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "requires_data",
+        "can_fix_inside_repo": false,
+        "category": "data_gap",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Restricted-data blockers",
+        "gap_description": "Taxpayer, firm, household, and welfare microdata remain unavailable in repo.",
+        "missing_factor_id": "missing_factor_29_restricted_blockers",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": true,
+        "requires_economic_review": true,
+        "requires_external_review": true,
+        "requires_legal_review": true,
+        "requires_statistical_review": true,
+        "requires_tax_review": true,
+        "safe_fix_applied": false,
+        "why_it_matters": "Restricted-data blockers affects whether reviewer-facing outputs can be interpreted safely."
+      },
+      {
+        "blocking_status": "documented",
+        "can_fix_inside_repo": true,
+        "category": "docs_gap",
+        "current_repo_coverage": "Covered as a boundary, placeholder, source locator, or report map entry.",
+        "factor_name": "Reviewer handoff readiness",
+        "gap_description": "A next handoff pack should package audit outputs for reviewers.",
+        "missing_factor_id": "missing_factor_30_reviewer_handoff",
+        "recommended_next_action": "Carry into Build 35 reviewer handoff or a later gap closure sprint.",
+        "requires_data": false,
+        "requires_economic_review": false,
+        "requires_external_review": false,
+        "requires_legal_review": false,
+        "requires_statistical_review": false,
+        "requires_tax_review": false,
+        "safe_fix_applied": true,
+        "why_it_matters": "Reviewer handoff readiness affects whether reviewer-facing outputs can be interpreted safely."
+      }
+    ],
+    "non_claim_boundary_audit": [
+      {
+        "artifact": "reports/public_aggregate_scenario_constraint_layer.md",
+        "missing_phrases": [],
+        "required_phrases_present": true,
+        "status": "clean"
+      },
+      {
+        "artifact": "reports/public_aggregate_calibration_boundary_map.md",
+        "missing_phrases": [],
+        "required_phrases_present": true,
+        "status": "clean"
+      },
+      {
+        "artifact": "reports/public_data_placeholder_replacement_map.md",
+        "missing_phrases": [],
+        "required_phrases_present": true,
+        "status": "clean"
+      },
+      {
+        "artifact": "release/v1_5_rc/NON_CLAIM_BOUNDARIES.md",
+        "missing_phrases": [],
+        "required_phrases_present": true,
+        "status": "clean"
+      },
+      {
+        "artifact": "docs/full_repo_integrity_upgrade_audit.md",
+        "missing_phrases": [],
+        "required_phrases_present": true,
+        "status": "clean"
+      }
+    ],
+    "non_claims": [
+      "This is a full repo integrity audit only.",
+      "No new data is loaded by this build.",
+      "This does not fake missing data.",
+      "This does not calibrate the model.",
+      "This does not validate the model.",
+      "This does not prove the model works.",
+      "This does not determine actual tax payable.",
+      "This does not modify firm-level CARSF liability.",
+      "Missing factors requiring data or review remain blocked.",
+      "Public aggregate values remain boundary-limited.",
+      "Placeholders remain placeholders unless already mapped otherwise.",
+      "Scenario constraints remain constraints, not validation."
+    ],
+    "placeholder_boundary_audit": [
+      {
+        "category": "placeholder_boundary",
+        "covered": true,
+        "evidence": "placeholders_are_realistic_placeholder",
+        "guardrail_id": "placeholders_are_realistic_placeholder",
+        "status": "clean"
+      },
+      {
+        "category": "placeholder_boundary",
+        "covered": true,
+        "evidence": "placeholders_not_real_data",
+        "guardrail_id": "placeholders_not_real_data",
+        "status": "clean"
+      },
+      {
+        "category": "placeholder_boundary",
+        "covered": true,
+        "evidence": "placeholders_not_calibrated",
+        "guardrail_id": "placeholders_not_calibrated",
+        "status": "clean"
+      }
+    ],
+    "public_data_boundary_audit": [
+      {
+        "category": "public_data_boundary",
+        "covered": true,
+        "evidence": "source_url",
+        "guardrail_id": "public_value_source_url",
+        "status": "clean"
+      },
+      {
+        "category": "public_data_boundary",
+        "covered": true,
+        "evidence": "source_locator",
+        "guardrail_id": "public_value_source_locator",
+        "status": "clean"
+      },
+      {
+        "category": "public_data_boundary",
+        "covered": true,
+        "evidence": "unit",
+        "guardrail_id": "public_value_unit",
+        "status": "clean"
+      },
+      {
+        "category": "public_data_boundary",
+        "covered": true,
+        "evidence": "period",
+        "guardrail_id": "public_value_period",
+        "status": "clean"
+      },
+      {
+        "category": "public_data_boundary",
+        "covered": true,
+        "evidence": "geography",
+        "guardrail_id": "public_value_geography",
+        "status": "clean"
+      },
+      {
+        "category": "public_data_boundary",
+        "covered": true,
+        "evidence": "must_not_infer",
+        "guardrail_id": "public_value_must_not_infer",
+        "status": "clean"
+      },
+      {
+        "category": "public_data_boundary",
+        "covered": true,
+        "evidence": "loaded public aggregate values keep restricted/private flags false",
+        "guardrail_id": "public_values_forbidden_flags",
+        "status": "clean"
+      }
+    ],
+    "recommended_next_builds": [
+      "Option A: Build 35 - Public Data Reviewer Handoff Pack V2.",
+      "Option B: Build 35 - Gap Closure Sprint 1 for safe, internal, non-data, non-claim gaps."
+    ],
+    "release_manifest_coverage": [
+      {
+        "artifact": "data/release/v1_5_release_manifest.yaml",
+        "coverage_id": "release_manifest_1",
+        "expected_reference": "full_repo_integrity_upgrade_audit",
+        "reference_present": true,
+        "status": "covered"
+      },
+      {
+        "artifact": "data/release/v1_5_release_manifest.yaml",
+        "coverage_id": "release_manifest_2",
+        "expected_reference": "reports/full_repo_integrity_upgrade_audit.md",
+        "reference_present": true,
+        "status": "covered"
+      },
+      {
+        "artifact": "data/release/v1_5_release_manifest.yaml",
+        "coverage_id": "release_manifest_3",
+        "expected_reference": "reports/full_repo_integrity_upgrade_audit.json",
+        "reference_present": true,
+        "status": "covered"
+      },
+      {
+        "artifact": "release/v1_5_rc/REPORT_MAP.md",
+        "coverage_id": "release_report_map_1",
+        "expected_reference": "reports/full_repo_integrity_upgrade_audit.md",
+        "reference_present": true,
+        "status": "covered"
+      },
+      {
+        "artifact": "release/v1_5_rc/REPORT_MAP.md",
+        "coverage_id": "release_report_map_2",
+        "expected_reference": "run_full_repo_integrity_upgrade_audit.py",
+        "reference_present": true,
+        "status": "covered"
+      }
+    ],
+    "report_coverage_matrix": [
+      {
+        "json_exists": true,
+        "json_report": "reports/example_results.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/example_results.md",
+        "report_stem": "example_results",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/grouped_entity_results.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/grouped_entity_results.md",
+        "report_stem": "grouped_entity_results",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/transfer_pricing_results.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/transfer_pricing_results.md",
+        "report_stem": "transfer_pricing_results",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/evidence_requirements.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/evidence_requirements.md",
+        "report_stem": "evidence_requirements",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/calibration_requirements.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/calibration_requirements.md",
+        "report_stem": "calibration_requirements",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/sector_schedule_expansion.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/sector_schedule_expansion.md",
+        "report_stem": "sector_schedule_expansion",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/sector_stress_matrix.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/sector_stress_matrix.md",
+        "report_stem": "sector_stress_matrix",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/behavioural_response_simulation.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/behavioural_response_simulation.md",
+        "report_stem": "behavioural_response_simulation",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/administrative_compliance_workflow.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/administrative_compliance_workflow.md",
+        "report_stem": "administrative_compliance_workflow",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/legislative_architecture.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/legislative_architecture.md",
+        "report_stem": "legislative_architecture",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/executive_dashboard.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/executive_dashboard.md",
+        "report_stem": "executive_dashboard",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/v1_5_release_candidate_pack.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/v1_5_release_candidate_pack.md",
+        "report_stem": "v1_5_release_candidate_pack",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/external_review_attack_pack.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/external_review_attack_pack.md",
+        "report_stem": "external_review_attack_pack",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/v1_5_final_rc_integrity_seal.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/v1_5_final_rc_integrity_seal.md",
+        "report_stem": "v1_5_final_rc_integrity_seal",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/real_data_feasibility.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/real_data_feasibility.md",
+        "report_stem": "real_data_feasibility",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/public_data_pilot.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/public_data_pilot.md",
+        "report_stem": "public_data_pilot",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/public_data_evidence_map.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/public_data_evidence_map.md",
+        "report_stem": "public_data_evidence_map",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/public_data_consistency_audit.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/public_data_consistency_audit.md",
+        "report_stem": "public_data_consistency_audit",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/source_locator_verification_pack.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/source_locator_verification_pack.md",
+        "report_stem": "source_locator_verification_pack",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/red_team_reviewer_objections.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/red_team_reviewer_objections.md",
+        "report_stem": "red_team_reviewer_objections",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/public_real_data_loader.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/public_real_data_loader.md",
+        "report_stem": "public_real_data_loader",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/public_data_placeholder_replacement_map.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/public_data_placeholder_replacement_map.md",
+        "report_stem": "public_data_placeholder_replacement_map",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/public_aggregate_calibration_boundary_map.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/public_aggregate_calibration_boundary_map.md",
+        "report_stem": "public_aggregate_calibration_boundary_map",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/public_aggregate_scenario_constraint_layer.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/public_aggregate_scenario_constraint_layer.md",
+        "report_stem": "public_aggregate_scenario_constraint_layer",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/full_repo_integrity_upgrade_audit.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/full_repo_integrity_upgrade_audit.md",
+        "report_stem": "full_repo_integrity_upgrade_audit",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/mock_evidence_workflow.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/mock_evidence_workflow.md",
+        "report_stem": "mock_evidence_workflow",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/secure_ingestion_controls.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/secure_ingestion_controls.md",
+        "report_stem": "secure_ingestion_controls",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/investment_guardrails.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/investment_guardrails.md",
+        "report_stem": "investment_guardrails",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/fiscal_trajectory.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/fiscal_trajectory.md",
+        "report_stem": "fiscal_trajectory",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/transition_funding.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/transition_funding.md",
+        "report_stem": "transition_funding",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/payment_interactions.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/payment_interactions.md",
+        "report_stem": "payment_interactions",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/distributional_scenarios.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/distributional_scenarios.md",
+        "report_stem": "distributional_scenarios",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/household_weighting.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/household_weighting.md",
+        "report_stem": "household_weighting",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/uncertainty_ranges.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/uncertainty_ranges.md",
+        "report_stem": "uncertainty_ranges",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/reviewed_scenarios.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/reviewed_scenarios.md",
+        "report_stem": "reviewed_scenarios",
+        "status": "covered"
+      },
+      {
+        "json_exists": true,
+        "json_report": "reports/repo_guardrails.json",
+        "markdown_exists": true,
+        "markdown_report": "reports/repo_guardrails.md",
+        "report_stem": "repo_guardrails",
+        "status": "covered"
+      }
+    ],
+    "result_coverage_matrix": [
+      {
+        "false_flags_clean": true,
+        "report_path": "reports/public_real_data_loader.json",
+        "status": "clean",
+        "summary_flags": {
+          "actual_tax_payable_determined": false,
+          "calibration_completed": false,
+          "firm_confidential_data_loaded": false,
+          "firm_level_liability_logic_modified": false,
+          "household_microdata_loaded": false,
+          "official_status_claimed": false,
+          "personal_data_loaded": false,
+          "restricted_data_loaded": false,
+          "taxpayer_level_data_loaded": false,
+          "validation_claimed": false
+        }
+      },
+      {
+        "false_flags_clean": true,
+        "report_path": "reports/public_data_placeholder_replacement_map.json",
+        "status": "clean",
+        "summary_flags": {
+          "actual_tax_payable_determined": false,
+          "calibration_completed": false,
+          "firm_confidential_data_loaded": false,
+          "firm_level_liability_logic_modified": false,
+          "household_microdata_loaded": false,
+          "new_data_loaded": false,
+          "official_status_claimed": false,
+          "personal_data_loaded": false,
+          "restricted_data_loaded": false,
+          "taxpayer_level_data_loaded": false,
+          "validation_claimed": false
+        }
+      },
+      {
+        "false_flags_clean": true,
+        "report_path": "reports/public_aggregate_calibration_boundary_map.json",
+        "status": "clean",
+        "summary_flags": {
+          "actual_tax_payable_determined": false,
+          "calibration_completed": false,
+          "firm_confidential_data_loaded": false,
+          "firm_level_liability_logic_modified": false,
+          "household_microdata_loaded": false,
+          "new_data_loaded": false,
+          "official_status_claimed": false,
+          "personal_data_loaded": false,
+          "restricted_data_loaded": false,
+          "taxpayer_level_data_loaded": false,
+          "validation_claimed": false
+        }
+      },
+      {
+        "false_flags_clean": true,
+        "report_path": "reports/public_aggregate_scenario_constraint_layer.json",
+        "status": "clean",
+        "summary_flags": {
+          "actual_tax_payable_determined": false,
+          "calibration_completed": false,
+          "firm_confidential_data_loaded": false,
+          "firm_level_liability_logic_modified": false,
+          "household_microdata_loaded": false,
+          "new_data_loaded": false,
+          "official_status_claimed": false,
+          "personal_data_loaded": false,
+          "restricted_data_loaded": false,
+          "taxpayer_level_data_loaded": false,
+          "validation_claimed": false
+        }
+      }
+    ],
+    "runner_coverage_matrix": [
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_examples.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_sector_schedule_expansion.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_sector_stress_matrix.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_behavioural_response_simulation.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_administrative_compliance_workflow.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_legislative_architecture.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_executive_dashboard.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_v1_5_release_candidate_pack.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_external_review_attack_pack.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_v1_5_final_rc_integrity_seal.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_real_data_feasibility.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_public_data_pilot.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_public_data_evidence_map.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_public_data_consistency_audit.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_source_locator_verification_pack.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_red_team_reviewer_objections.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_public_real_data_loader.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_public_data_placeholder_replacement_map.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_public_aggregate_calibration_boundary_map.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_public_aggregate_scenario_constraint_layer.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_full_repo_integrity_upgrade_audit.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_evidence_workflow.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_ingestion_controls.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_investment_guardrails.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_fiscal_trajectory.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_transition_funding.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_payment_interactions.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_distributional_scenarios.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_household_weighting.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_uncertainty_ranges.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_reviewed_scenarios.py",
+        "status": "covered"
+      },
+      {
+        "ci_referenced": true,
+        "exists": true,
+        "runner_path": "scripts/run_repo_guardrails.py",
+        "status": "covered"
+      }
+    ],
+    "safe_fixes": [
+      {
+        "description": "Extended CI YAML parsing to include release YAML files.",
+        "files_changed": [
+          ".github/workflows/ci.yml"
+        ],
+        "fix_id": "safe_fix_ci_release_yaml_parse",
+        "status": "fixed"
+      },
+      {
+        "description": "Added full repo audit runner, manifest, reports, CI entry, and report/release/dashboard references.",
+        "files_changed": [
+          "scripts/run_full_repo_integrity_upgrade_audit.py",
+          "data/audit/full_repo_integrity_upgrade_manifest.yaml",
+          "reports/full_repo_integrity_upgrade_audit.md",
+          "reports/full_repo_integrity_upgrade_audit.json"
+        ],
+        "fix_id": "safe_fix_full_audit_runner_wiring",
+        "status": "fixed"
+      },
+      {
+        "description": "Added Build 34.5 documentation and release references without changing data or liability logic.",
+        "files_changed": [
+          "docs/full_repo_integrity_upgrade_audit.md",
+          "release/v1_5_rc/REPORT_MAP.md"
+        ],
+        "fix_id": "safe_fix_handoff_docs",
+        "status": "fixed"
+      }
+    ],
+    "scenario_constraint_audit": [
+      {
+        "category": "scenario_constraint",
+        "covered": true,
+        "evidence": "new_data_loaded",
+        "guardrail_id": "scenario_constraint_new_data_loaded",
+        "status": "clean"
+      },
+      {
+        "category": "scenario_constraint",
+        "covered": true,
+        "evidence": "calibration_completed",
+        "guardrail_id": "scenario_constraint_calibration_completed",
+        "status": "clean"
+      },
+      {
+        "category": "scenario_constraint",
+        "covered": true,
+        "evidence": "validation_claimed",
+        "guardrail_id": "scenario_constraint_validation_claimed",
+        "status": "clean"
+      },
+      {
+        "category": "scenario_constraint",
+        "covered": true,
+        "evidence": "actual_tax_payable_determined",
+        "guardrail_id": "scenario_constraint_actual_tax_payable_determined",
+        "status": "clean"
+      },
+      {
+        "category": "scenario_constraint",
+        "covered": true,
+        "evidence": "official_status_claimed",
+        "guardrail_id": "scenario_constraint_official_status_claimed",
+        "status": "clean"
+      },
+      {
+        "category": "scenario_constraint",
+        "covered": true,
+        "evidence": "firm_level_liability_logic_modified",
+        "guardrail_id": "scenario_constraint_firm_level_liability_logic_modified",
+        "status": "clean"
+      }
+    ],
+    "status": "full_repo_integrity_audit_only",
+    "summary": {
+      "actual_tax_payable_determined": false,
+      "calibration_boundary_clean": true,
+      "calibration_completed": false,
+      "critical_findings_fixed": 0,
+      "critical_findings_remaining": 0,
+      "critical_findings_total": 0,
+      "dashboard_coverage_complete": true,
+      "docs_coverage_complete": true,
+      "firm_confidential_data_loaded": false,
+      "firm_level_liability_logic_modified": false,
+      "forbidden_claim_findings": 0,
+      "full_repo_integrity_audit_created": true,
+      "guardrails_clean": true,
+      "high_findings_fixed": 0,
+      "high_findings_remaining": 0,
+      "high_findings_total": 0,
+      "household_microdata_loaded": false,
+      "json_report_coverage_complete": true,
+      "medium_findings_fixed": 1,
+      "medium_findings_remaining": 0,
+      "medium_findings_total": 1,
+      "new_data_loaded": false,
+      "non_claim_boundaries_clean": true,
+      "official_status_claimed": false,
+      "personal_data_loaded": false,
+      "placeholder_boundary_clean": true,
+      "public_data_boundary_clean": true,
+      "release_manifest_coverage_complete": true,
+      "report_coverage_complete": true,
+      "restricted_data_loaded": false,
+      "runner_coverage_complete": true,
+      "safe_fixes_applied": true,
+      "scenario_constraint_boundary_clean": true,
+      "taxpayer_level_data_loaded": false,
+      "validation_claimed": false
+    },
+    "what_repo_can_currently_claim": [
+      "The repo contains prototype reports, manifests, guardrails, and public aggregate boundary maps for reviewer inspection.",
+      "Build 31 public aggregate values are source-located and boundary-limited.",
+      "Builds 32-34 map placeholder, calibration-boundary, and scenario-display constraints without loading new data.",
+      "Repository guardrails currently report no denied findings."
+    ],
+    "what_repo_must_not_claim": [
+      "calibration",
+      "validation",
+      "actual tax payable",
+      "firm-level CARSF liability",
+      "official status",
+      "legal sufficiency",
+      "operational readiness",
+      "ATO guidance",
+      "Treasury modelling",
+      "PBO costing",
+      "readiness score",
+      "maturity score"
+    ]
+  },
+  "metadata": {
+    "finding_category_values": [
+      "bug",
+      "calibration_gap",
+      "ci_gap",
+      "dashboard_gap",
+      "data_gap",
+      "docs_gap",
+      "duplicate_logic",
+      "economic_review_gap",
+      "external_review_gap",
+      "guardrail_gap",
+      "legal_review_gap",
+      "manifest_gap",
+      "missing_factor",
+      "naming_inconsistency",
+      "non_claim_boundary_gap",
+      "placeholder_boundary_gap",
+      "release_pack_gap",
+      "report_gap",
+      "runner_gap",
+      "scenario_constraint_gap",
+      "stale_reference",
+      "statistical_review_gap",
+      "tax_review_gap",
+      "test_gap"
+    ],
+    "finding_severity_values": [
+      "critical",
+      "high",
+      "informational",
+      "low",
+      "medium"
+    ],
+    "finding_status_values": [
+      "blocked",
+      "cannot_fix_inside_repo",
+      "documented",
+      "fixed",
+      "requires_data",
+      "requires_economic_review",
+      "requires_external_review",
+      "requires_legal_review",
+      "requires_statistical_review",
+      "requires_tax_review"
+    ],
+    "generated_at": "2026-05-22T02:27:02+00:00",
+    "non_claims": [
+      "This is a full repo integrity audit only.",
+      "No new data is loaded by this build.",
+      "This does not fake missing data.",
+      "This does not calibrate the model.",
+      "This does not validate the model.",
+      "This does not prove the model works.",
+      "This does not determine actual tax payable.",
+      "This does not modify firm-level CARSF liability.",
+      "Missing factors requiring data or review remain blocked.",
+      "Public aggregate values remain boundary-limited.",
+      "Placeholders remain placeholders unless already mapped otherwise.",
+      "Scenario constraints remain constraints, not validation."
+    ],
+    "status": "full_repo_integrity_upgrade_gap_audit_only",
+    "version": "CARSF V1.5 prototype"
+  },
+  "summary": {
+    "actual_tax_payable_determined": false,
+    "calibration_boundary_clean": true,
+    "calibration_completed": false,
+    "critical_findings_fixed": 0,
+    "critical_findings_remaining": 0,
+    "critical_findings_total": 0,
+    "dashboard_coverage_complete": true,
+    "docs_coverage_complete": true,
+    "firm_confidential_data_loaded": false,
+    "firm_level_liability_logic_modified": false,
+    "forbidden_claim_findings": 0,
+    "full_repo_integrity_audit_created": true,
+    "guardrails_clean": true,
+    "high_findings_fixed": 0,
+    "high_findings_remaining": 0,
+    "high_findings_total": 0,
+    "household_microdata_loaded": false,
+    "json_report_coverage_complete": true,
+    "medium_findings_fixed": 1,
+    "medium_findings_remaining": 0,
+    "medium_findings_total": 1,
+    "new_data_loaded": false,
+    "non_claim_boundaries_clean": true,
+    "official_status_claimed": false,
+    "personal_data_loaded": false,
+    "placeholder_boundary_clean": true,
+    "public_data_boundary_clean": true,
+    "release_manifest_coverage_complete": true,
+    "report_coverage_complete": true,
+    "restricted_data_loaded": false,
+    "runner_coverage_complete": true,
+    "safe_fixes_applied": true,
+    "scenario_constraint_boundary_clean": true,
+    "taxpayer_level_data_loaded": false,
+    "validation_claimed": false
+  }
+}

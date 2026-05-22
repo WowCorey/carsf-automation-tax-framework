@@ -1,6 +1,6 @@
 # CARSF V1.5 Release Candidate Pack
 
-Generated at: `2026-05-22T01:43:00+00:00`
+Generated at: `2026-05-22T02:21:35+00:00`
 
 ## A. Purpose
 
@@ -15,24 +15,24 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 
 ## C. Release Pack Contents
 
-- Total layers: 35
-- Total reports indexed: 68
-- Reports present: 68
+- Total layers: 36
+- Total reports indexed: 70
+- Reports present: 70
 - Reports missing: 0
 - Total release documents: 10
 - Release documents present: 10
 - Release documents missing: 0
 - Paper files checked: 6
 - Working paper updated: True
-- Layers requiring calibration: 17
-- Layers requiring legal review: 11
-- Layers requiring tax review: 8
+- Layers requiring calibration: 18
+- Layers requiring legal review: 12
+- Layers requiring tax review: 9
 - Layers requiring ATO methods review: 12
 - Layers requiring Treasury methods review: 26
-- Layers requiring privacy review: 21
-- Layers requiring statistical review: 17
-- Layers requiring economic review: 15
-- Layers requiring welfare review: 12
+- Layers requiring privacy review: 22
+- Layers requiring statistical review: 18
+- Layers requiring economic review: 16
+- Layers requiring welfare review: 13
 - Layers requiring Parliamentary Counsel review: 3
 - real_data_used: False
 - readiness_score_created: False
@@ -63,6 +63,7 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | executive_dashboard | Executive Dashboard | executive_dashboard | Consolidated dashboard and report index for navigating the V1.5 prototype stack. | prototype_only, placeholder_only, generated_report_available | reports/executive_dashboard.md, reports/executive_dashboard.json | simulator/pages/25_Executive_Dashboard.py | policy_reviewer, technical_reviewer | Dashboard is navigation only. |
 | final_rc_integrity_seal | V1.5 Final RC Integrity Seal | documentation | Internal artefact integrity check for release documents, attack-pack documents, reports, manifests, scripts, CI expectations, guardrail expectations, digest metadata, and false readiness/legal/validation flags. | prototype_only, generated_report_available, not_for_real_world_use | reports/v1_5_final_rc_integrity_seal.md, reports/v1_5_final_rc_integrity_seal.json | simulator/pages/25_Executive_Dashboard.py | technical_reviewer, policy_reviewer, hostile_red_team_reviewer | Seal verifies internal artefact consistency only. |
 | fiscal_trajectory | Fiscal Trajectory | fiscal_trajectory | Placeholder national fiscal trajectory for PAYG erosion, support pressure, automation revenue capture, and residual gaps. | prototype_only, placeholder_only, calibration_required | reports/fiscal_trajectory.md, reports/fiscal_trajectory.json | simulator/pages/13_Fiscal_Trajectory.py | treasury_methods_reviewer, economic_methods_reviewer, technical_reviewer | Fiscal trajectory is placeholder accounting only. |
+| full_repo_integrity_upgrade_audit | Full Repo Integrity Upgrade / Bug Check / Gap Audit | repo_integrity | Audits repo-wide runner, report, manifest, dashboard, documentation, public-data boundary, placeholder boundary, calibration boundary, scenario constraint, guardrail, non-claim, missing-factor, data-dependency, and external-review dependency coverage without loading data or changing liability. | prototype_only, generated_report_available, full_repo_integrity_audit_only, gap_register_available, external_review_required, not_for_real_world_use | reports/full_repo_integrity_upgrade_audit.md, reports/full_repo_integrity_upgrade_audit.json | None | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, legal_reviewer, tax_reviewer, hostile_red_team_reviewer | Build 34.5 checks repo-wide wiring and gap visibility before the next reviewer handoff pack. |
 | household_distributional | Household Distributional Scenarios | household_distributional | Synthetic household budget, re-employment, regional stress, payment cliff, and shock-band scenarios. | prototype_only, synthetic_only, statistical_methods_review_required | reports/distributional_scenarios.md, reports/distributional_scenarios.json | simulator/pages/16_Distributional_Scenarios.py | statistical_methods_reviewer, welfare_policy_reviewer, privacy_reviewer | Household cases are synthetic only. |
 | household_weighting | Household Weighting | household_weighting | Synthetic subgroup weights, weighted residual gaps, high/critical shares, and calibration-readiness shell. | prototype_only, synthetic_only, not_population_estimate | reports/household_weighting.md, reports/household_weighting.json | simulator/pages/17_Household_Weighting.py | statistical_methods_reviewer, privacy_reviewer, welfare_policy_reviewer | Weighting shell is synthetic and not representative. |
 | investment_incidence | Investment and Incidence Guardrails | investment_incidence | Placeholder burden, pass-through, investment, incidence, under-capture, and over-capture guardrails. | prototype_only, placeholder_only, economic_methods_review_required | reports/investment_guardrails.md, reports/investment_guardrails.json | simulator/pages/12_Investment_and_Incidence_Guardrails.py | economic_methods_reviewer, treasury_methods_reviewer, tax_reviewer | Guardrails flag sensitivity only. |
@@ -141,6 +142,8 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | reports/public_aggregate_scenario_constraint_layer.md | public_aggregate_scenario_constraint_layer | True | python scripts/run_public_aggregate_scenario_constraint_layer.py | module and field scenario display constraints using the public aggregate boundary map | does not show: new data loaded calibration completed validation official status tax-payable use firm liability restricted data or proof that CARSF works | scenario constraint layer only | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, hostile_red_team_reviewer | 13 |
 | reports/fiscal_trajectory.json | fiscal_trajectory | True | python scripts/run_fiscal_trajectory.py | fiscal trajectory data | does not show: fiscal forecasts | placeholder fiscal accounting only | technical_reviewer | 14 |
 | reports/fiscal_trajectory.md | fiscal_trajectory | True | python scripts/run_fiscal_trajectory.py | placeholder fiscal trajectory outputs | does not show: fiscal forecasts | placeholder fiscal accounting only | treasury_methods_reviewer, economic_methods_reviewer | 14 |
+| reports/full_repo_integrity_upgrade_audit.json | full_repo_integrity_upgrade_audit | True | python scripts/run_full_repo_integrity_upgrade_audit.py | machine-readable repo coverage summary flags gap registers data dependencies external-review dependencies and false flags | does not show: new data loaded calibration completed validation official status tax-payable use firm liability restricted data or proof that CARSF works | full repo integrity audit only | technical_reviewer | 14 |
+| reports/full_repo_integrity_upgrade_audit.md | full_repo_integrity_upgrade_audit | True | python scripts/run_full_repo_integrity_upgrade_audit.py | repo-wide coverage gaps missing factors data dependencies review dependencies guardrails and safe fixes | does not show: new data loaded calibration completed validation official status tax-payable use firm liability restricted data or proof that CARSF works | full repo integrity audit only | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, hostile_red_team_reviewer | 14 |
 | reports/transition_funding.json | transition_funding | True | python scripts/run_transition_funding.py | transition funding data | does not show: welfare policy or costing | placeholder transition funding only | technical_reviewer | 15 |
 | reports/transition_funding.md | transition_funding | True | python scripts/run_transition_funding.py | transition funding coverage previews | does not show: welfare policy or costing | placeholder transition funding only | welfare_policy_reviewer, treasury_methods_reviewer | 15 |
 | reports/payment_interactions.json | payment_interactions | True | python scripts/run_payment_interactions.py | payment interaction data | does not show: welfare advice or eligibility law | placeholder payment interactions only | technical_reviewer | 16 |
@@ -250,6 +253,8 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | public_aggregate_scenario_constraint_layer | calibration | Outputs implying calibration, validation, tax payable, firm liability, official status, legal sufficiency, statistical estimation, economic validation, welfare validation, ATO guidance, Treasury modelling, PBO costing, or implementation readiness must be marked non-interpretable, hidden, or fail closed. | calibration | Build 34 enforces scenario display constraints without loading new data, claiming calibration, or changing liability. |
 | public_aggregate_scenario_constraint_layer | calibration | Restricted-data, legal, tax, Treasury, ATO-methods, statistical, economic, and welfare blockers remain. | calibration | Build 34 enforces scenario display constraints without loading new data, claiming calibration, or changing liability. |
 | public_aggregate_scenario_constraint_layer | calibration | Source candidates not loaded remain future-only and are not counted as loaded data. | calibration | Build 34 enforces scenario display constraints without loading new data, claiming calibration, or changing liability. |
+| full_repo_integrity_upgrade_audit | calibration | The audit records coverage, gaps, missing factors, data dependencies, review dependencies, and safe fixes but does not perform calibration, validation, source verification, tax-payable determination, or liability changes. | calibration | Build 34.5 checks repo-wide wiring and gap visibility before the next reviewer handoff pack. |
+| full_repo_integrity_upgrade_audit | calibration | Missing factors that require restricted data, legal review, tax review, economic review, statistical review, public finance review, welfare review, domain review, or data governance review remain blocked. | calibration | Build 34.5 checks repo-wide wiring and gap visibility before the next reviewer handoff pack. |
 
 ## J. External Review Blockers
 
@@ -290,6 +295,7 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | public_data_placeholder_replacement_map | external_review | Legal, tax, economic, statistical, Treasury, ATO-methods, welfare, and hostile red-team review remain required before any calibration claim can be considered. | external_review | Build 32 maps public aggregate anchors to placeholders without loading new data, claiming calibration, or changing liability. |
 | public_aggregate_calibration_boundary_map | external_review | Legal, tax, economic, statistical, Treasury, ATO-methods, welfare, and hostile red-team review remain required before any calibration claim can be considered. | external_review | Build 33 constrains public aggregate use types without loading new data, claiming calibration, or changing liability. |
 | public_aggregate_scenario_constraint_layer | external_review | Legal, tax, economic, statistical, Treasury, ATO-methods, welfare, and hostile red-team review remain required before scenario outputs can be interpreted beyond their allowed boundary labels. | external_review | Build 34 enforces scenario display constraints without loading new data, claiming calibration, or changing liability. |
+| full_repo_integrity_upgrade_audit | external_review | Legal, tax, economic, statistical, public finance, welfare, administrative, data governance, and domain review remain required before any prototype output can be interpreted beyond its boundary labels. | external_review | Build 34.5 checks repo-wide wiring and gap visibility before the next reviewer handoff pack. |
 
 ## K. Guardrail / Safety Status
 

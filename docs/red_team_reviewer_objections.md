@@ -52,3 +52,7 @@ Build 32 may make public aggregate anchors look more concrete, but it remains a 
 
 Build 33 may make allowed-use labels look more settled than they are, but it remains a boundary map only. No new data is loaded, no objection is resolved, public aggregate boundary mapping does not mean validation or statistical estimation, and the map does not complete calibration, prove the model works, determine actual tax payable, create legal sufficiency, create official status, or modify firm-level CARSF liability.
 Build 34 turns several red-team risks into explicit scenario constraints. Outputs that could be mistaken for calibration, validation, tax payable, firm liability, legal sufficiency, official status, statistical estimation, economic validation, welfare validation, or implementation readiness are marked non-interpretable, hidden, downgraded, or fail-closed.
+
+## Build 34.5 Integrity Audit Link
+
+Build 34.5 adds a full repo integrity audit that carries red-team concerns into missing-factor, data-dependency, external-review dependency, guardrail, and non-claim coverage registers. The audit loads no new data, does not resolve objections, does not calibrate or validate the model, does not determine actual tax payable, and does not modify firm-level CARSF liability.
