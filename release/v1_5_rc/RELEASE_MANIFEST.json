@@ -49,7 +49,9 @@
     "reports/public_data_placeholder_replacement_map.md",
     "reports/public_data_placeholder_replacement_map.json",
     "reports/public_aggregate_calibration_boundary_map.md",
-    "reports/public_aggregate_calibration_boundary_map.json"
+    "reports/public_aggregate_calibration_boundary_map.json",
+    "reports/public_aggregate_scenario_constraint_layer.md",
+    "reports/public_aggregate_scenario_constraint_layer.json"
   ],
   "attack_pack_summary": {
     "review_tracks": 12,
@@ -83,6 +85,9 @@
     "public_aggregate_calibration_boundary_map_created_by_build_33": true,
     "new_data_loaded_by_calibration_boundary_map": false,
     "public_source_candidates_treated_as_loaded_by_build_33": false,
+    "public_aggregate_scenario_constraint_layer_created_by_build_34": true,
+    "new_data_loaded_by_scenario_constraint_layer": false,
+    "public_source_candidates_treated_as_loaded_by_build_34": false,
     "external_source_verification_claimed": false,
     "restricted_data_loaded": false,
     "real_data_loaded": false,

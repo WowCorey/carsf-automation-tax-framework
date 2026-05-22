@@ -1,6 +1,6 @@
 # CARSF V1.5 Executive Dashboard Consolidation
 
-Generated at: `2026-05-21T05:58:28+00:00`
+Generated at: `2026-05-22T01:43:00+00:00`
 
 ## A. Purpose
 
@@ -19,22 +19,22 @@ Use this as a review navigation index. Read order is suggested review navigation
 
 ## D. Prototype Stack Overview
 
-- Total layers: 32
-- Total reports indexed: 58
-- Reports present: 58
+- Total layers: 33
+- Total reports indexed: 60
+- Reports present: 60
 - Reports missing: 0
-- Layers with generated reports: 31
+- Layers with generated reports: 32
 - Synthetic-only layers: 10
 - Placeholder-only layers: 25
 - Non-operative layers: 3
-- External-review-required layers: 29
-- Calibration-required layers: 25
+- External-review-required layers: 30
+- Calibration-required layers: 26
 - Legal-review-required layers: 13
 - Tax-review-required layers: 10
 - ATO-methods-review-required layers: 17
-- Treasury-methods-review-required layers: 23
-- Privacy-review-required layers: 18
-- Statistical-methods-review-required layers: 14
+- Treasury-methods-review-required layers: 24
+- Privacy-review-required layers: 19
+- Statistical-methods-review-required layers: 15
 - real_data_used: False
 - readiness_score_created: False
 - operational_readiness_claimed: False
@@ -78,6 +78,7 @@ Use this as a review navigation index. Read order is suggested review navigation
 | 32 | public_real_data_loader | Public Real Aggregate Data Loader | Controlled public aggregate-data loader over existing public-pilot source records, parsed values, source candidates not loaded, guardrails, and digest metadata. | False | Suggested review navigation only; not an official process. |
 | 33 | public_data_placeholder_replacement_map | Public Data Placeholder Replacement Map | Maps Build 31 public aggregate values to existing realistic placeholders as anchors, bounds, context, blockers, or public-aggregate-insufficient items. | False | Suggested review navigation only; not an official process. |
 | 34 | public_aggregate_calibration_boundary_map | Public Aggregate Calibration Boundary Map | Defines allowed and forbidden public aggregate uses across modules and fields without performing calibration. | False | Suggested review navigation only; not an official process. |
+| 35 | public_aggregate_scenario_constraint_layer | Public Aggregate Scenario Constraint Layer | Constrains scenario outputs using the public aggregate calibration-boundary map without loading data, performing calibration, or changing liability. | False | Suggested review navigation only; not an official process. |
 
 ## F. Layer Index
 
@@ -115,6 +116,7 @@ Use this as a review navigation index. Read order is suggested review navigation
 | public_real_data_loader | Public Real Aggregate Data Loader | calibration | Controlled public aggregate-data loader over existing public-pilot source records, parsed values, source candidates not loaded, guardrails, and digest metadata. | implemented_prototype, generated_report_available, public_aggregate_only, calibration_required, external_review_required, not_for_real_world_use | reports/public_real_data_loader.md, reports/public_real_data_loader.json | simulator/pages/29_Public_Data_Evidence_Map.py | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer | 32 | Build 31 makes source-located public aggregate values reproducible from local repo files while preserving non-claim boundaries. |
 | public_data_placeholder_replacement_map | Public Data Placeholder Replacement Map | calibration | Maps Build 31 public aggregate values to existing realistic placeholders as anchors, bounds, context, blockers, or public-aggregate-insufficient items. | implemented_prototype, generated_report_available, placeholder_mapping_only, calibration_required, external_review_required, not_for_real_world_use | reports/public_data_placeholder_replacement_map.md, reports/public_data_placeholder_replacement_map.json | simulator/pages/29_Public_Data_Evidence_Map.py | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, hostile_red_team_reviewer | 33 | Build 32 makes placeholder status changes explicit while preserving non-claim boundaries. |
 | public_aggregate_calibration_boundary_map | Public Aggregate Calibration Boundary Map | calibration | Defines allowed and forbidden public aggregate uses across modules and fields without performing calibration. | implemented_prototype, generated_report_available, calibration_boundary_only, external_review_required, not_for_real_world_use | reports/public_aggregate_calibration_boundary_map.md, reports/public_aggregate_calibration_boundary_map.json | simulator/pages/29_Public_Data_Evidence_Map.py | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, hostile_red_team_reviewer | 34 | Build 33 constrains public aggregate use types before any scenario constraint layer. |
+| public_aggregate_scenario_constraint_layer | Public Aggregate Scenario Constraint Layer | scenario_constraints | Constrains scenario outputs using the public aggregate calibration-boundary map without loading data, performing calibration, or changing liability. | implemented_prototype, generated_report_available, scenario_constraint_layer_only, external_review_required, not_for_real_world_use | reports/public_aggregate_scenario_constraint_layer.md, reports/public_aggregate_scenario_constraint_layer.json | simulator/pages/29_Public_Data_Evidence_Map.py | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, hostile_red_team_reviewer | 35 | Build 34 turns the public aggregate boundary map into dashboard-safe scenario output constraints. |
 
 ## G. Report Index
 
@@ -178,6 +180,8 @@ Use this as a review navigation index. Read order is suggested review navigation
 | reports/public_data_placeholder_replacement_map.md | public_data_placeholder_replacement_map | True | scripts/run_public_data_placeholder_replacement_map.py | Placeholder replacement map only; public aggregate anchors can replace, narrow, or inform placeholders but do not calibrate or validate CARSF. | must not use for: calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score, firm-level liability | 33 |
 | reports/public_aggregate_calibration_boundary_map.json | public_aggregate_calibration_boundary_map | True | scripts/run_public_aggregate_calibration_boundary_map.py | Machine-readable module and field boundary decisions over Build 31 values and Build 32 replacement decisions only; no new data is loaded. | must not use for: calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score, firm-level liability | 34 |
 | reports/public_aggregate_calibration_boundary_map.md | public_aggregate_calibration_boundary_map | True | scripts/run_public_aggregate_calibration_boundary_map.py | Calibration-boundary map only; public aggregate values do not calibrate or validate CARSF. | must not use for: calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score, firm-level liability | 34 |
+| reports/public_aggregate_scenario_constraint_layer.json | public_aggregate_scenario_constraint_layer | True | scripts/run_public_aggregate_scenario_constraint_layer.py | Machine-readable module and field scenario constraints derived from Build 31 values, Build 32 replacement decisions, and Build 33 boundary decisions only; no new data is loaded. | must not use for: calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score, firm-level liability | 35 |
+| reports/public_aggregate_scenario_constraint_layer.md | public_aggregate_scenario_constraint_layer | True | scripts/run_public_aggregate_scenario_constraint_layer.py | Scenario constraint layer only; public aggregate values remain bounded to sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability. | must not use for: calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score, firm-level liability | 35 |
 
 ## H. Streamlit Page Index
 
@@ -243,6 +247,7 @@ Use this as a review navigation index. Read order is suggested review navigation
 | public_real_data_loader | not_calibrated, not_validation, not_actual_tax_payable, not_operational_readiness, not_official_status | must not use for: calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score | True |
 | public_data_placeholder_replacement_map | no_new_data_loaded, not_calibrated, not_validation, not_actual_tax_payable, not_operational_readiness, not_official_status | must not use for: calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score | True |
 | public_aggregate_calibration_boundary_map | no_new_data_loaded, not_calibrated, not_validation, not_actual_tax_payable, not_operational_readiness, not_official_status | must not use for: calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score | True |
+| public_aggregate_scenario_constraint_layer | no_new_data_loaded, not_calibrated, not_validation, not_actual_tax_payable, not_operational_readiness, not_official_status, no_liability_change | must not use for: calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score, firm-level liability | True |
 
 ## J. Calibration Blockers
 
@@ -291,6 +296,10 @@ Use this as a review navigation index. Read order is suggested review navigation
 | public_aggregate_calibration_boundary_map | calibration | Public aggregate values can support only sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability. | False | Build 33 constrains public aggregate use types before any scenario constraint layer. |
 | public_aggregate_calibration_boundary_map | calibration | Source candidates not loaded remain future-only. | False | Build 33 constrains public aggregate use types before any scenario constraint layer. |
 | public_aggregate_calibration_boundary_map | calibration | Restricted-data, legal, tax, Treasury, ATO-methods, statistical, economic, and welfare blockers remain. | False | Build 33 constrains public aggregate use types before any scenario constraint layer. |
+| public_aggregate_scenario_constraint_layer | calibration | Scenario outputs may use public aggregate values only as sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability. | False | Build 34 turns the public aggregate boundary map into dashboard-safe scenario output constraints. |
+| public_aggregate_scenario_constraint_layer | calibration | Outputs implying calibration, validation, tax payable, firm liability, official status, legal sufficiency, statistical estimation, economic validation, welfare validation, ATO guidance, Treasury modelling, PBO costing, or implementation readiness must be marked non-interpretable, hidden, or fail closed. | False | Build 34 turns the public aggregate boundary map into dashboard-safe scenario output constraints. |
+| public_aggregate_scenario_constraint_layer | calibration | Source candidates not loaded remain future-only. | False | Build 34 turns the public aggregate boundary map into dashboard-safe scenario output constraints. |
+| public_aggregate_scenario_constraint_layer | calibration | Restricted-data, legal, tax, Treasury, ATO-methods, statistical, economic, and welfare blockers remain. | False | Build 34 turns the public aggregate boundary map into dashboard-safe scenario output constraints. |
 
 ## K. External Review Blockers
 
@@ -328,6 +337,7 @@ Use this as a review navigation index. Read order is suggested review navigation
 | public_real_data_loader | external_review | External reviewer inspection remains required before any loaded public aggregate value can support calibration design. | True | Build 31 makes source-located public aggregate values reproducible from local repo files while preserving non-claim boundaries. |
 | public_data_placeholder_replacement_map | external_review | External reviewer inspection remains required before replacement decisions can support calibration design. | True | Build 32 makes placeholder status changes explicit while preserving non-claim boundaries. |
 | public_aggregate_calibration_boundary_map | external_review | External reviewer inspection remains required before boundary decisions can support any calibration design. | True | Build 33 constrains public aggregate use types before any scenario constraint layer. |
+| public_aggregate_scenario_constraint_layer | external_review | External reviewer inspection remains required before any scenario output can be interpreted beyond the allowed boundary labels. | True | Build 34 turns the public aggregate boundary map into dashboard-safe scenario output constraints. |
 
 ## L. Guardrail / Safety Status
 
@@ -362,15 +372,15 @@ Use this as a review navigation index. Read order is suggested review navigation
 | --- | --- |
 | ato_methods_reviewer | working_paper, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, behavioural_response, administrative_workflow, legislative_architecture, evidence_workflow, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack, red_team_reviewer_objections, public_real_data_loader |
 | economic_methods_reviewer | behavioural_response, fiscal_trajectory, investment_incidence |
-| hostile_red_team_reviewer | red_team_reviewer_objections, public_data_placeholder_replacement_map, public_aggregate_calibration_boundary_map |
+| hostile_red_team_reviewer | red_team_reviewer_objections, public_data_placeholder_replacement_map, public_aggregate_calibration_boundary_map, public_aggregate_scenario_constraint_layer |
 | legal_reviewer | working_paper, status_risks_docs, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, behavioural_response, administrative_workflow, legislative_architecture, payment_interactions, evidence_workflow, secure_ingestion, repo_guardrails |
 | parliamentary_counsel_reviewer | legislative_architecture |
 | policy_reviewer | executive_dashboard, working_paper, status_risks_docs, worked_examples, behavioural_response, fiscal_trajectory, transition_funding, household_weighting, uncertainty_ranges, reviewed_scenarios |
-| privacy_reviewer | administrative_workflow, legislative_architecture, household_distributional, household_weighting, evidence_workflow, secure_ingestion, repo_guardrails, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack, red_team_reviewer_objections, public_real_data_loader, public_data_placeholder_replacement_map, public_aggregate_calibration_boundary_map |
-| statistical_methods_reviewer | household_distributional, household_weighting, uncertainty_ranges, reviewed_scenarios, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack, red_team_reviewer_objections, public_real_data_loader, public_data_placeholder_replacement_map, public_aggregate_calibration_boundary_map |
+| privacy_reviewer | administrative_workflow, legislative_architecture, household_distributional, household_weighting, evidence_workflow, secure_ingestion, repo_guardrails, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack, red_team_reviewer_objections, public_real_data_loader, public_data_placeholder_replacement_map, public_aggregate_calibration_boundary_map, public_aggregate_scenario_constraint_layer |
+| statistical_methods_reviewer | household_distributional, household_weighting, uncertainty_ranges, reviewed_scenarios, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack, red_team_reviewer_objections, public_real_data_loader, public_data_placeholder_replacement_map, public_aggregate_calibration_boundary_map, public_aggregate_scenario_constraint_layer |
 | tax_reviewer | working_paper, status_risks_docs, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, behavioural_response, administrative_workflow, legislative_architecture, investment_incidence |
-| technical_reviewer | executive_dashboard, status_risks_docs, worked_examples, reviewed_scenarios, evidence_workflow, secure_ingestion, repo_guardrails, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack, red_team_reviewer_objections, public_real_data_loader, public_data_placeholder_replacement_map, public_aggregate_calibration_boundary_map |
-| treasury_methods_reviewer | working_paper, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, legislative_architecture, fiscal_trajectory, transition_funding, payment_interactions, investment_incidence, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack, red_team_reviewer_objections, public_real_data_loader, public_data_placeholder_replacement_map, public_aggregate_calibration_boundary_map |
+| technical_reviewer | executive_dashboard, status_risks_docs, worked_examples, reviewed_scenarios, evidence_workflow, secure_ingestion, repo_guardrails, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack, red_team_reviewer_objections, public_real_data_loader, public_data_placeholder_replacement_map, public_aggregate_calibration_boundary_map, public_aggregate_scenario_constraint_layer |
+| treasury_methods_reviewer | working_paper, core_formula_model, sector_schedule_expansion, sector_schedules, sector_stress_matrix, legislative_architecture, fiscal_trajectory, transition_funding, payment_interactions, investment_incidence, calibration_shell, real_data_feasibility, public_data_pilot, public_data_evidence_map, public_data_consistency_audit, source_locator_verification_pack, red_team_reviewer_objections, public_real_data_loader, public_data_placeholder_replacement_map, public_aggregate_calibration_boundary_map, public_aggregate_scenario_constraint_layer |
 | welfare_policy_reviewer | transition_funding, payment_interactions, household_distributional |
 
 ## R. Plain-English Interpretation

@@ -48,8 +48,10 @@ Build 32 maps Build 31 public aggregate values to existing realistic placeholder
 
 Build 33 defines public aggregate calibration boundaries only. It does not load new data, perform calibration, validate CARSF, prove the model works, determine actual tax payable, modify firm-level liability logic, or remove restricted-data, legal, tax, Treasury, ATO, statistical, economic, welfare, or Parliamentary Counsel blockers. Public aggregate values may support only sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability.
 
+Build 34 constrains scenario outputs using the Build 33 calibration-boundary map only. It loads no new data, performs no calibration, validates no model output, determines no actual tax payable, and modifies no firm-level liability logic. Scenario outputs that would imply calibration, validation, tax payable, firm liability, official status, legal sufficiency, statistical estimation, economic validation, welfare validation, ATO guidance, Treasury modelling, PBO costing, or implementation readiness must be displayed only within allowed boundaries, marked non-interpretable, hidden, or fail closed.
+
 ## Final RC Integrity Seal Note
 
 The final RC integrity seal checks that blocker documents, reports, manifests, attack-pack documents, non-claim boundaries, CI expectations, and guardrail expectations remain visible. It does not resolve any blocker and is not approval, validation, external review completion, legal sufficiency, operational readiness, legislative readiness, official status, a readiness score, a maturity score, or firm-level liability modification.
 
-Build 25 sealed the previous RC state. If Builds 26-33 are included in a later sealed RC, the integrity seal must be regenerated for that later state.
+Build 25 sealed the previous RC state. If Builds 26-34 are included in a later sealed RC, the integrity seal must be regenerated for that later state.

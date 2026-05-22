@@ -201,6 +201,12 @@ Build 33 defines how loaded public aggregate values may be used across CARSF mod
 
 This is a calibration-boundary map only. No new data is loaded, calibration has not been completed, public data does not prove the model works, boundary mapping does not mean validation or statistical estimation, source candidates not loaded remain not loaded, and restricted-data blockers remain blockers. The map does not determine actual tax payable, create legal sufficiency, create implementation readiness, create official status, or modify firm-level CARSF liability. Build 25 sealed the earlier RC state; a new integrity seal must be regenerated if Builds 26-33 are included in a later sealed RC.
 
+## Build 34 Public Aggregate Scenario Constraint Layer
+
+Build 34 uses the Build 33 calibration-boundary map to constrain scenario outputs. Outputs may be displayed only as sanity-check-only, public-aggregate-anchor-only, public-aggregate-bound-only, context-only, placeholder-narrowing-only, or reviewer-traceability-only. Outputs that would imply calibration, validation, tax payable, firm liability, official status, legal sufficiency, statistical estimation, economic validation, welfare validation, or implementation readiness are marked non-interpretable, hidden from reviewer dashboards, downgraded, or fail-closed.
+
+This is a scenario constraint layer only. No new data is loaded, scenario constraints do not calibrate or validate the model, public aggregate data does not prove the model works, source candidates not loaded remain not loaded, and restricted-data blockers remain blockers. The layer does not determine actual tax payable, create legal sufficiency, create operational readiness, create official status, or modify firm-level CARSF liability. Build 25 sealed the earlier RC state; a new integrity seal must be regenerated if Builds 26-34 are included in a later sealed RC.
+
 ## Next Claude Review Should Attack
 
 - Whether the example runner hides any policy assumptions inside code defaults.

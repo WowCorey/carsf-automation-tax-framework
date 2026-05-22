@@ -62,3 +62,4 @@ Build 32 maps Build 31 loaded public aggregate values back to the public-pilot p
 ## Build 33 Calibration Boundary Follow-On
 
 Build 33 defines module-level and field-level boundaries for the same public aggregate values and placeholder decisions. It loads no new data and keeps public aggregate uses limited to sanity checks, anchors, bounds, context, placeholder narrowing, and reviewer traceability. It does not complete calibration, validate CARSF, determine actual tax payable, create legal sufficiency, create official status, or modify firm-level CARSF liability.
+Build 34 uses the later boundary and scenario constraint layers to prevent public-pilot outputs from being overread as calibration, validation, tax-payable estimates, legal sufficiency, official status, or implementation readiness.

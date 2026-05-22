@@ -98,6 +98,9 @@ jobs:
       - name: Run public aggregate calibration boundary map
         run: python scripts/run_public_aggregate_calibration_boundary_map.py
 
+      - name: Run public aggregate scenario constraint layer
+        run: python scripts/run_public_aggregate_scenario_constraint_layer.py
+
       - name: Run mock evidence workflow
         run: python scripts/run_evidence_workflow.py
 

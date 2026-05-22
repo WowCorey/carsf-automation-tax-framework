@@ -1,6 +1,6 @@
 # CARSF V1.5 Release Candidate Pack
 
-Generated at: `2026-05-21T05:58:28+00:00`
+Generated at: `2026-05-22T01:43:00+00:00`
 
 ## A. Purpose
 
@@ -15,24 +15,24 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 
 ## C. Release Pack Contents
 
-- Total layers: 34
-- Total reports indexed: 66
-- Reports present: 66
+- Total layers: 35
+- Total reports indexed: 68
+- Reports present: 68
 - Reports missing: 0
 - Total release documents: 10
 - Release documents present: 10
 - Release documents missing: 0
 - Paper files checked: 6
 - Working paper updated: True
-- Layers requiring calibration: 16
+- Layers requiring calibration: 17
 - Layers requiring legal review: 11
 - Layers requiring tax review: 8
 - Layers requiring ATO methods review: 12
-- Layers requiring Treasury methods review: 25
-- Layers requiring privacy review: 20
-- Layers requiring statistical review: 16
-- Layers requiring economic review: 14
-- Layers requiring welfare review: 11
+- Layers requiring Treasury methods review: 26
+- Layers requiring privacy review: 21
+- Layers requiring statistical review: 17
+- Layers requiring economic review: 15
+- Layers requiring welfare review: 12
 - Layers requiring Parliamentary Counsel review: 3
 - real_data_used: False
 - readiness_score_created: False
@@ -69,6 +69,7 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | legislative_architecture | Legislative Architecture Skeleton | legislative_architecture | Non-operative architecture skeleton for proposed Parts, Divisions, definitions, schedules, safeguards, and placeholders. | prototype_only, non_operative, legal_review_required, parliamentary_counsel_review_required | reports/legislative_architecture.md, reports/legislative_architecture.json | simulator/pages/24_Legislative_Architecture.py | legal_reviewer, tax_reviewer, parliamentary_counsel_reviewer | Architecture maps conceptual locations only. |
 | payment_interactions | Payment Interactions | payment_interactions | Placeholder baseline transfer separation, targeting, phase rules, payment stacks, double-counting, and support-incidence previews. | prototype_only, placeholder_only, welfare_policy_review_required | reports/payment_interactions.md, reports/payment_interactions.json | simulator/pages/15_Payment_Interactions.py | welfare_policy_reviewer, legal_reviewer, treasury_methods_reviewer | Payment interaction outputs are placeholders only. |
 | public_aggregate_calibration_boundary_map | Public Aggregate Calibration Boundary Map | calibration | Defines module-level and field-level allowed uses for public aggregate values without loading data, performing calibration, or changing liability. | prototype_only, generated_report_available, calibration_boundary_only, external_review_required, not_for_real_world_use | reports/public_aggregate_calibration_boundary_map.md, reports/public_aggregate_calibration_boundary_map.json | simulator/pages/29_Public_Data_Evidence_Map.py | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, hostile_red_team_reviewer | Build 33 constrains public aggregate use types without loading new data, claiming calibration, or changing liability. |
+| public_aggregate_scenario_constraint_layer | Public Aggregate Scenario Constraint Layer | scenario_constraints | Constrains scenario outputs using the public aggregate calibration-boundary map without loading data, performing calibration, validating outputs, or changing liability. | prototype_only, generated_report_available, scenario_constraint_layer_only, external_review_required, not_for_real_world_use | reports/public_aggregate_scenario_constraint_layer.md, reports/public_aggregate_scenario_constraint_layer.json | simulator/pages/29_Public_Data_Evidence_Map.py | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, hostile_red_team_reviewer | Build 34 enforces scenario display constraints without loading new data, claiming calibration, or changing liability. |
 | public_data_consistency_audit | Public Data Pilot Consistency Audit | calibration | Internal consistency and source-reconciliation audit over Build 27 and Build 28 public-data pilot artefacts without loading new data. | prototype_only, placeholder_only, generated_report_available, calibration_required, external_review_required, not_for_real_world_use | reports/public_data_consistency_audit.md, reports/public_data_consistency_audit.json | simulator/pages/29_Public_Data_Evidence_Map.py | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer | Build 29 checks internal consistency across source records, reports, digests, dashboard source, and non-claim boundaries. |
 | public_data_evidence_map | Public Data Pilot Reviewer Evidence Map | calibration | Reviewer-facing evidence map over Build 27 public-data pilot outputs without loading new data. | prototype_only, placeholder_only, generated_report_available, calibration_required, external_review_required, not_for_real_world_use | reports/public_data_evidence_map.md, reports/public_data_evidence_map.json | simulator/pages/29_Public_Data_Evidence_Map.py | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer | Build 28 makes the public-data pilot reviewable without adding data or calibration claims. |
 | public_data_pilot | Public Data Pilot and Placeholder Anchor Layer | calibration | Small public aggregate/source-reference pilot that anchors realistic placeholders while keeping calibration incomplete and restricted data excluded. | prototype_only, placeholder_only, generated_report_available, calibration_required, external_review_required, not_for_real_world_use | reports/public_data_pilot.md, reports/public_data_pilot.json | None | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, treasury_methods_reviewer, ato_methods_reviewer | Build 27 tests safe public aggregate intake and placeholder anchoring without real calibration. |
@@ -136,6 +137,8 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | reports/public_aggregate_calibration_boundary_map.md | public_aggregate_calibration_boundary_map | True | python scripts/run_public_aggregate_calibration_boundary_map.py | module and field boundary decisions for public aggregate allowed uses and forbidden claims | does not show: new data loaded calibration completed validation official status tax-payable use restricted data or proof that CARSF works | calibration-boundary map only | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, hostile_red_team_reviewer | 12 |
 | reports/investment_guardrails.json | investment_incidence | True | python scripts/run_investment_guardrails.py | investment and incidence data | does not show: economic validation | placeholder incidence guardrails only | technical_reviewer | 13 |
 | reports/investment_guardrails.md | investment_incidence | True | python scripts/run_investment_guardrails.py | investment and incidence guardrails | does not show: economic validation | placeholder incidence guardrails only | economic_methods_reviewer | 13 |
+| reports/public_aggregate_scenario_constraint_layer.json | public_aggregate_scenario_constraint_layer | True | python scripts/run_public_aggregate_scenario_constraint_layer.py | machine-readable scenario statuses display rules forbidden implications module constraints field constraints and false flags | does not show: new data loaded calibration completed validation official status tax-payable use firm liability restricted data or proof that CARSF works | scenario constraint layer only | technical_reviewer | 13 |
+| reports/public_aggregate_scenario_constraint_layer.md | public_aggregate_scenario_constraint_layer | True | python scripts/run_public_aggregate_scenario_constraint_layer.py | module and field scenario display constraints using the public aggregate boundary map | does not show: new data loaded calibration completed validation official status tax-payable use firm liability restricted data or proof that CARSF works | scenario constraint layer only | technical_reviewer, privacy_reviewer, statistical_methods_reviewer, hostile_red_team_reviewer | 13 |
 | reports/fiscal_trajectory.json | fiscal_trajectory | True | python scripts/run_fiscal_trajectory.py | fiscal trajectory data | does not show: fiscal forecasts | placeholder fiscal accounting only | technical_reviewer | 14 |
 | reports/fiscal_trajectory.md | fiscal_trajectory | True | python scripts/run_fiscal_trajectory.py | placeholder fiscal trajectory outputs | does not show: fiscal forecasts | placeholder fiscal accounting only | treasury_methods_reviewer, economic_methods_reviewer | 14 |
 | reports/transition_funding.json | transition_funding | True | python scripts/run_transition_funding.py | transition funding data | does not show: welfare policy or costing | placeholder transition funding only | technical_reviewer | 15 |
@@ -243,6 +246,10 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | public_aggregate_calibration_boundary_map | calibration | Public aggregate values can support only sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability. | calibration | Build 33 constrains public aggregate use types without loading new data, claiming calibration, or changing liability. |
 | public_aggregate_calibration_boundary_map | calibration | Restricted-data, legal, tax, Treasury, ATO-methods, statistical, economic, and welfare blockers remain. | calibration | Build 33 constrains public aggregate use types without loading new data, claiming calibration, or changing liability. |
 | public_aggregate_calibration_boundary_map | calibration | Source candidates not loaded remain future-only and are not counted as loaded data. | calibration | Build 33 constrains public aggregate use types without loading new data, claiming calibration, or changing liability. |
+| public_aggregate_scenario_constraint_layer | calibration | Scenario outputs may use public aggregate values only as sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability. | calibration | Build 34 enforces scenario display constraints without loading new data, claiming calibration, or changing liability. |
+| public_aggregate_scenario_constraint_layer | calibration | Outputs implying calibration, validation, tax payable, firm liability, official status, legal sufficiency, statistical estimation, economic validation, welfare validation, ATO guidance, Treasury modelling, PBO costing, or implementation readiness must be marked non-interpretable, hidden, or fail closed. | calibration | Build 34 enforces scenario display constraints without loading new data, claiming calibration, or changing liability. |
+| public_aggregate_scenario_constraint_layer | calibration | Restricted-data, legal, tax, Treasury, ATO-methods, statistical, economic, and welfare blockers remain. | calibration | Build 34 enforces scenario display constraints without loading new data, claiming calibration, or changing liability. |
+| public_aggregate_scenario_constraint_layer | calibration | Source candidates not loaded remain future-only and are not counted as loaded data. | calibration | Build 34 enforces scenario display constraints without loading new data, claiming calibration, or changing liability. |
 
 ## J. External Review Blockers
 
@@ -282,6 +289,7 @@ This release-candidate pack consolidates the CARSF V1.5 private research prototy
 | public_real_data_loader | external_review | External reviewer inspection remains required before any loaded public aggregate value can support calibration design. | external_review | Build 31 records controlled public aggregate values without loading restricted data or changing liability. |
 | public_data_placeholder_replacement_map | external_review | Legal, tax, economic, statistical, Treasury, ATO-methods, welfare, and hostile red-team review remain required before any calibration claim can be considered. | external_review | Build 32 maps public aggregate anchors to placeholders without loading new data, claiming calibration, or changing liability. |
 | public_aggregate_calibration_boundary_map | external_review | Legal, tax, economic, statistical, Treasury, ATO-methods, welfare, and hostile red-team review remain required before any calibration claim can be considered. | external_review | Build 33 constrains public aggregate use types without loading new data, claiming calibration, or changing liability. |
+| public_aggregate_scenario_constraint_layer | external_review | Legal, tax, economic, statistical, Treasury, ATO-methods, welfare, and hostile red-team review remain required before scenario outputs can be interpreted beyond their allowed boundary labels. | external_review | Build 34 enforces scenario display constraints without loading new data, claiming calibration, or changing liability. |
 
 ## K. Guardrail / Safety Status
 

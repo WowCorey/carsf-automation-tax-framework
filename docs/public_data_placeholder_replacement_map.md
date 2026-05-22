@@ -29,3 +29,6 @@ This is a public data placeholder replacement map only. No new data is loaded by
 Build 33 adds a public aggregate calibration-boundary map over these replacement decisions. It defines allowed uses for sanity checks, anchors, bounds, context, placeholder narrowing, and reviewer traceability only. It does not load new data, perform calibration, claim validation, determine actual tax payable, or modify firm-level CARSF liability.
 
 Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-33 are included in a later sealed RC.
+Build 34 constrains scenario outputs that use these placeholder replacement decisions. Replacement, narrowing, and context labels remain display constraints only; they do not calibrate or validate CARSF and do not determine actual tax payable.
+
+Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-34 are included in a later sealed RC.

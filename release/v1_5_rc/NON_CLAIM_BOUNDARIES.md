@@ -72,6 +72,11 @@ It does not determine actual tax payable, does not use taxpayer-level data, firm
 - Build 33 allowed-use labels are limited to sanity checks, public aggregate anchors, public aggregate bounds, contextual references, placeholder narrowing, and reviewer traceability.
 - Build 33 boundary mapping does not mean validation, statistical estimation, legal sufficiency, implementation readiness, official status, actual tax payable, or firm-level CARSF liability evidence.
 - Build 33 source candidates not loaded remain not loaded and restricted-data blockers remain blockers.
+- Build 34 public aggregate scenario constraint outputs load no new data.
+- Build 34 scenario constraints do not calibrate the model, validate the model, prove the model works, determine actual tax payable, or modify firm-level CARSF liability.
+- Build 34 public aggregate data can appear only as sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability.
+- Build 34 outputs marked non-interpretable are not usable as evidence, and hidden outputs are hidden to prevent overclaiming.
+- Build 34 source candidates not loaded remain not loaded and restricted-data blockers remain blockers.
 - Source references are not loaded datasets.
 
 ## Interpretation Rule
@@ -84,4 +89,4 @@ The final RC integrity seal is an internal artefact check only. It verifies rele
 
 It does not mean approval, validation, external review completion, operational readiness, legal sufficiency, legislative readiness, official status, implementation readiness, or firm-level CARSF liability modification.
 
-Build 25 sealed the previous RC state. Builds 26-33 add artefacts after that seal; a later sealed RC must regenerate the integrity seal if those builds are included.
+Build 25 sealed the previous RC state. Builds 26-34 add artefacts after that seal; a later sealed RC must regenerate the integrity seal if those builds are included.

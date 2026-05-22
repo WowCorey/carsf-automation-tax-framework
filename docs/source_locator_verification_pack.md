@@ -36,3 +36,4 @@ Build 32 uses the source-located Build 31 public aggregate values to map placeho
 ## Build 33 Calibration Boundary Follow-On
 
 Build 33 uses the same source-located public aggregate values and Build 32 decisions to define calibration boundaries. It does not add values or treat source-locator metadata as external source verification. Public aggregate values may support only sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability; they do not complete calibration, validate CARSF, determine actual tax payable, create official status, or modify firm-level CARSF liability.
+Build 34 preserves source-locator cards as reviewer traceability only. Locator metadata may support constrained scenario display, but it does not make a scenario calibrated, validated, legally sufficient, official, or usable for actual tax payable.

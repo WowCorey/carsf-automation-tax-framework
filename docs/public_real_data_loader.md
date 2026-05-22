@@ -39,3 +39,6 @@ Build 32 uses these loaded public aggregate values to map placeholder replacemen
 Build 33 uses these loaded public aggregate values to define allowed boundary uses across modules and fields. Allowed uses are limited to sanity checks, public aggregate anchors, public aggregate bounds, contextual references, placeholder narrowing, and reviewer traceability. It loads no new data and does not perform calibration, claim validation, determine actual tax payable, create official status, or modify firm-level CARSF liability.
 
 Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-33 are included in a later sealed RC.
+Build 34 consumes these public aggregate values through the scenario constraint layer. It does not load new data and only permits scenario outputs to show the values as sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability.
+
+Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-34 are included in a later sealed RC.

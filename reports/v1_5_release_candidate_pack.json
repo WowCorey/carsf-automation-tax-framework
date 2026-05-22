@@ -2,7 +2,7 @@
   "metadata": {
     "economic_validation_claimed": false,
     "firm_level_liability_logic_modified": false,
-    "generated_at": "2026-05-21T05:58:28+00:00",
+    "generated_at": "2026-05-22T01:43:00+00:00",
     "legal_sufficiency_claimed": false,
     "legislative_readiness_claimed": false,
     "non_claims": [
@@ -342,6 +342,34 @@
         "layer_id": "public_aggregate_calibration_boundary_map",
         "main_reason": "Build 33 constrains public aggregate use types without loading new data, claiming calibration, or changing liability.",
         "review_needed": "calibration"
+      },
+      {
+        "blocker": "Scenario outputs may use public aggregate values only as sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability.",
+        "blocker_type": "calibration",
+        "layer_id": "public_aggregate_scenario_constraint_layer",
+        "main_reason": "Build 34 enforces scenario display constraints without loading new data, claiming calibration, or changing liability.",
+        "review_needed": "calibration"
+      },
+      {
+        "blocker": "Outputs implying calibration, validation, tax payable, firm liability, official status, legal sufficiency, statistical estimation, economic validation, welfare validation, ATO guidance, Treasury modelling, PBO costing, or implementation readiness must be marked non-interpretable, hidden, or fail closed.",
+        "blocker_type": "calibration",
+        "layer_id": "public_aggregate_scenario_constraint_layer",
+        "main_reason": "Build 34 enforces scenario display constraints without loading new data, claiming calibration, or changing liability.",
+        "review_needed": "calibration"
+      },
+      {
+        "blocker": "Restricted-data, legal, tax, Treasury, ATO-methods, statistical, economic, and welfare blockers remain.",
+        "blocker_type": "calibration",
+        "layer_id": "public_aggregate_scenario_constraint_layer",
+        "main_reason": "Build 34 enforces scenario display constraints without loading new data, claiming calibration, or changing liability.",
+        "review_needed": "calibration"
+      },
+      {
+        "blocker": "Source candidates not loaded remain future-only and are not counted as loaded data.",
+        "blocker_type": "calibration",
+        "layer_id": "public_aggregate_scenario_constraint_layer",
+        "main_reason": "Build 34 enforces scenario display constraints without loading new data, claiming calibration, or changing liability.",
+        "review_needed": "calibration"
       }
     ],
     "external_review_blockers": [
@@ -581,6 +609,13 @@
         "blocker_type": "external_review",
         "layer_id": "public_aggregate_calibration_boundary_map",
         "main_reason": "Build 33 constrains public aggregate use types without loading new data, claiming calibration, or changing liability.",
+        "review_needed": "external_review"
+      },
+      {
+        "blocker": "Legal, tax, economic, statistical, Treasury, ATO-methods, welfare, and hostile red-team review remain required before scenario outputs can be interpreted beyond their allowed boundary labels.",
+        "blocker_type": "external_review",
+        "layer_id": "public_aggregate_scenario_constraint_layer",
+        "main_reason": "Build 34 enforces scenario display constraints without loading new data, claiming calibration, or changing liability.",
         "review_needed": "external_review"
       }
     ],
@@ -1207,6 +1242,37 @@
         "suggested_read_order": 13,
         "what_it_does_not_show": "economic validation",
         "what_it_shows": "investment and incidence guardrails"
+      },
+      {
+        "exists": true,
+        "generated_by": "python scripts/run_public_aggregate_scenario_constraint_layer.py",
+        "layer_id": "public_aggregate_scenario_constraint_layer",
+        "optional": false,
+        "primary_non_claim": "scenario constraint layer only",
+        "recommended_reviewer": [
+          "technical_reviewer"
+        ],
+        "report_path": "reports/public_aggregate_scenario_constraint_layer.json",
+        "suggested_read_order": 13,
+        "what_it_does_not_show": "new data loaded calibration completed validation official status tax-payable use firm liability restricted data or proof that CARSF works",
+        "what_it_shows": "machine-readable scenario statuses display rules forbidden implications module constraints field constraints and false flags"
+      },
+      {
+        "exists": true,
+        "generated_by": "python scripts/run_public_aggregate_scenario_constraint_layer.py",
+        "layer_id": "public_aggregate_scenario_constraint_layer",
+        "optional": false,
+        "primary_non_claim": "scenario constraint layer only",
+        "recommended_reviewer": [
+          "technical_reviewer",
+          "privacy_reviewer",
+          "statistical_methods_reviewer",
+          "hostile_red_team_reviewer"
+        ],
+        "report_path": "reports/public_aggregate_scenario_constraint_layer.md",
+        "suggested_read_order": 13,
+        "what_it_does_not_show": "new data loaded calibration completed validation official status tax-payable use firm liability restricted data or proof that CARSF works",
+        "what_it_shows": "module and field scenario display constraints using the public aggregate boundary map"
       },
       {
         "exists": true,
@@ -2111,6 +2177,28 @@
           "not_official_status",
           "no_liability_change"
         ]
+      },
+      {
+        "layer_id": "public_aggregate_scenario_constraint_layer",
+        "must_not_be_used_for": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "ATO guidance",
+          "Treasury modelling",
+          "PBO costing",
+          "readiness score",
+          "firm-level liability"
+        ],
+        "non_claim_flags": [
+          "no_new_data_loaded",
+          "not_calibrated",
+          "not_validation",
+          "not_actual_tax_payable",
+          "not_official_status",
+          "no_liability_change"
+        ]
       }
     ],
     "non_claims": [
@@ -2797,6 +2885,69 @@
           "simulator/pages/29_Public_Data_Evidence_Map.py"
         ],
         "summary": "Defines module-level and field-level allowed uses for public aggregate values without loading data, performing calibration, or changing liability."
+      },
+      {
+        "calibration_blockers": [
+          "Scenario outputs may use public aggregate values only as sanity checks, anchors, bounds, context, placeholder narrowing, or reviewer traceability.",
+          "Outputs implying calibration, validation, tax payable, firm liability, official status, legal sufficiency, statistical estimation, economic validation, welfare validation, ATO guidance, Treasury modelling, PBO costing, or implementation readiness must be marked non-interpretable, hidden, or fail closed.",
+          "Restricted-data, legal, tax, Treasury, ATO-methods, statistical, economic, and welfare blockers remain.",
+          "Source candidates not loaded remain future-only and are not counted as loaded data."
+        ],
+        "external_review_blockers": [
+          "Legal, tax, economic, statistical, Treasury, ATO-methods, welfare, and hostile red-team review remain required before scenario outputs can be interpreted beyond their allowed boundary labels."
+        ],
+        "layer_group": "scenario_constraints",
+        "layer_id": "public_aggregate_scenario_constraint_layer",
+        "layer_name": "Public Aggregate Scenario Constraint Layer",
+        "main_reason": "Build 34 enforces scenario display constraints without loading new data, claiming calibration, or changing liability.",
+        "must_not_be_used_for": [
+          "calibration completed",
+          "validation",
+          "official status",
+          "actual tax payable",
+          "ATO guidance",
+          "Treasury modelling",
+          "PBO costing",
+          "readiness score",
+          "firm-level liability"
+        ],
+        "non_claim_flags": [
+          "no_new_data_loaded",
+          "not_calibrated",
+          "not_validation",
+          "not_actual_tax_payable",
+          "not_official_status",
+          "no_liability_change"
+        ],
+        "primary_files": [
+          "model/carsf/public_aggregate_scenario_constraint_layer.py",
+          "data/public_real/manifests/public_aggregate_scenario_constraint_manifest.yaml",
+          "scripts/run_public_aggregate_scenario_constraint_layer.py",
+          "simulator/pages/29_Public_Data_Evidence_Map.py",
+          "docs/public_aggregate_scenario_constraint_layer.md"
+        ],
+        "primary_reports": [
+          "reports/public_aggregate_scenario_constraint_layer.md",
+          "reports/public_aggregate_scenario_constraint_layer.json"
+        ],
+        "recommended_reviewer": [
+          "technical_reviewer",
+          "privacy_reviewer",
+          "statistical_methods_reviewer",
+          "treasury_methods_reviewer",
+          "hostile_red_team_reviewer"
+        ],
+        "status_labels": [
+          "prototype_only",
+          "generated_report_available",
+          "scenario_constraint_layer_only",
+          "external_review_required",
+          "not_for_real_world_use"
+        ],
+        "streamlit_pages": [
+          "simulator/pages/29_Public_Data_Evidence_Map.py"
+        ],
+        "summary": "Constrains scenario outputs using the public aggregate calibration-boundary map without loading data, performing calibration, validating outputs, or changing liability."
       },
       {
         "calibration_blockers": [
@@ -4136,15 +4287,15 @@
       "economic_validation_claimed": false,
       "firm_level_liability_logic_modified": false,
       "layers_requiring_ato_methods_review": 12,
-      "layers_requiring_calibration": 16,
-      "layers_requiring_economic_review": 14,
+      "layers_requiring_calibration": 17,
+      "layers_requiring_economic_review": 15,
       "layers_requiring_legal_review": 11,
       "layers_requiring_parliamentary_counsel_review": 3,
-      "layers_requiring_privacy_review": 20,
-      "layers_requiring_statistical_review": 16,
+      "layers_requiring_privacy_review": 21,
+      "layers_requiring_statistical_review": 17,
       "layers_requiring_tax_review": 8,
-      "layers_requiring_treasury_methods_review": 25,
-      "layers_requiring_welfare_review": 11,
+      "layers_requiring_treasury_methods_review": 26,
+      "layers_requiring_welfare_review": 12,
       "legal_sufficiency_claimed": false,
       "legislative_readiness_claimed": false,
       "non_claims": [
@@ -4160,11 +4311,11 @@
       "release_documents_missing": 0,
       "release_documents_present": 10,
       "reports_missing": 0,
-      "reports_present": 66,
+      "reports_present": 68,
       "statistical_validation_claimed": false,
-      "total_layers": 34,
+      "total_layers": 35,
       "total_release_documents": 10,
-      "total_reports_indexed": 66,
+      "total_reports_indexed": 68,
       "warnings": [
         "Release-candidate pack is packaging and review navigation only.",
         "No readiness score, official status, validation, legal sufficiency, operational readiness, or liability change is created."
@@ -4181,15 +4332,15 @@
     "economic_validation_claimed": false,
     "firm_level_liability_logic_modified": false,
     "layers_requiring_ato_methods_review": 12,
-    "layers_requiring_calibration": 16,
-    "layers_requiring_economic_review": 14,
+    "layers_requiring_calibration": 17,
+    "layers_requiring_economic_review": 15,
     "layers_requiring_legal_review": 11,
     "layers_requiring_parliamentary_counsel_review": 3,
-    "layers_requiring_privacy_review": 20,
-    "layers_requiring_statistical_review": 16,
+    "layers_requiring_privacy_review": 21,
+    "layers_requiring_statistical_review": 17,
     "layers_requiring_tax_review": 8,
-    "layers_requiring_treasury_methods_review": 25,
-    "layers_requiring_welfare_review": 11,
+    "layers_requiring_treasury_methods_review": 26,
+    "layers_requiring_welfare_review": 12,
     "legal_sufficiency_claimed": false,
     "legislative_readiness_claimed": false,
     "non_claims": [
@@ -4205,11 +4356,11 @@
     "release_documents_missing": 0,
     "release_documents_present": 10,
     "reports_missing": 0,
-    "reports_present": 66,
+    "reports_present": 68,
     "statistical_validation_claimed": false,
-    "total_layers": 34,
+    "total_layers": 35,
     "total_release_documents": 10,
-    "total_reports_indexed": 66,
+    "total_reports_indexed": 68,
     "warnings": [
       "Release-candidate pack is packaging and review navigation only.",
       "No readiness score, official status, validation, legal sufficiency, operational readiness, or liability change is created."

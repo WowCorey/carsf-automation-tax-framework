@@ -146,3 +146,9 @@ Build 33 should define public aggregate calibration boundaries without relaxing 
 Build 33 adds the public aggregate calibration-boundary map. It defines module-level and field-level allowed uses for Build 31 public aggregate values and Build 32 placeholder decisions. Allowed uses are limited to sanity checks, public aggregate anchors, public aggregate bounds, context, placeholder narrowing, and reviewer traceability.
 
 Build 34 should use those boundaries to constrain scenario outputs. No Build 33 output loads new data, performs calibration, claims validation, determines actual tax payable, creates official status, or modifies firm-level CARSF liability.
+
+## Build 34 Public Aggregate Scenario Constraint Layer
+
+Build 34 adds the public aggregate scenario constraint layer. It uses Build 31 public aggregate values, Build 32 placeholder decisions, and Build 33 calibration-boundary decisions only. Scenario outputs are classified as sanity-check-only, public-aggregate-anchor-only, public-aggregate-bound-only, context-only, placeholder-narrowing-only, reviewer-traceability-only, non-interpretable, hidden, or fail-closed.
+
+Build 35 should package the public aggregate data, placeholder replacement, calibration boundaries, and scenario constraints into a reviewer-facing handoff bundle. No Build 34 output loads new data, performs calibration, claims validation, determines actual tax payable, creates legal sufficiency, creates official status, or modifies firm-level CARSF liability.

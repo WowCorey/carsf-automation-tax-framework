@@ -64,3 +64,9 @@ The evidence-map dashboard now includes an optional public data placeholder repl
 ## Build 33 Dashboard Follow-On
 
 The evidence-map dashboard now includes an optional public aggregate calibration-boundary map section. It loads `reports/public_aggregate_calibration_boundary_map.json` only. The section does not load new data, does not show a readiness score, calibration score, validation score, tax payable estimate, or liability estimate, and does not convert boundary mapping into calibration, validation, legal sufficiency, official status, or firm-level CARSF liability.
+
+## Build 34 Dashboard Follow-On
+
+The evidence-map dashboard now includes an optional public aggregate scenario constraint layer section. It loads `reports/public_aggregate_scenario_constraint_layer.json` only. The section does not load new data, does not show a readiness score, calibration score, validation score, tax payable estimate, liability estimate, or implementation score, and it marks boundary-limited scenario outputs as sanity-check-only, anchor-only, bound-only, context-only, placeholder-narrowing-only, traceability-only, non-interpretable, hidden, or fail-closed where required.
+
+Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-34 are included in a later sealed RC.
