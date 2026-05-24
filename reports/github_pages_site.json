@@ -1,0 +1,429 @@
+{
+  "github_pages_site": {
+    "count_reconciliations": [
+      {
+        "count_name": "loaded_public_aggregate_sources",
+        "reconciled": true,
+        "site_manifest_value": 5,
+        "source_report_value": 5
+      },
+      {
+        "count_name": "loaded_public_aggregate_values",
+        "reconciled": true,
+        "site_manifest_value": 10,
+        "source_report_value": 10
+      },
+      {
+        "count_name": "source_candidates_not_loaded",
+        "reconciled": true,
+        "site_manifest_value": 3,
+        "source_report_value": 3
+      },
+      {
+        "count_name": "placeholders_mapped",
+        "reconciled": true,
+        "site_manifest_value": 11,
+        "source_report_value": 11
+      },
+      {
+        "count_name": "placeholders_replaced_by_public_anchor",
+        "reconciled": true,
+        "site_manifest_value": 2,
+        "source_report_value": 2
+      },
+      {
+        "count_name": "placeholders_narrowed_by_public_anchor",
+        "reconciled": true,
+        "site_manifest_value": 3,
+        "source_report_value": 3
+      },
+      {
+        "count_name": "placeholders_informed_by_public_anchor",
+        "reconciled": true,
+        "site_manifest_value": 3,
+        "source_report_value": 3
+      },
+      {
+        "count_name": "placeholders_blocked_until_restricted_data",
+        "reconciled": true,
+        "site_manifest_value": 1,
+        "source_report_value": 1
+      },
+      {
+        "count_name": "placeholders_blocked_until_external_review",
+        "reconciled": true,
+        "site_manifest_value": 1,
+        "source_report_value": 1
+      },
+      {
+        "count_name": "module_boundaries_mapped",
+        "reconciled": true,
+        "site_manifest_value": 19,
+        "source_report_value": 19
+      },
+      {
+        "count_name": "field_boundaries_mapped",
+        "reconciled": true,
+        "site_manifest_value": 11,
+        "source_report_value": 11
+      },
+      {
+        "count_name": "module_scenario_constraints",
+        "reconciled": true,
+        "site_manifest_value": 20,
+        "source_report_value": 20
+      },
+      {
+        "count_name": "field_scenario_constraints",
+        "reconciled": true,
+        "site_manifest_value": 11,
+        "source_report_value": 11
+      },
+      {
+        "count_name": "full_repo_critical_findings_remaining",
+        "reconciled": true,
+        "site_manifest_value": 0,
+        "source_report_value": 0
+      }
+    ],
+    "external_dependency_check": {
+      "no_external_dependencies": true,
+      "scope": "external scripts, stylesheets, images, fonts, analytics, tracking, fetch calls, and XMLHttpRequest"
+    },
+    "forbidden_claim_findings": [],
+    "manual_pages_setup_steps": [
+      "Go to repository Settings.",
+      "Open Pages.",
+      "Set the source to GitHub Actions or deploy from a branch/folder.",
+      "If using branch/folder, choose main and the site folder if GitHub Pages exposes that folder option for this repository.",
+      "Save.",
+      "Open the repository Pages URL shown by GitHub."
+    ],
+    "non_claim_checks": [
+      {
+        "present": true,
+        "text": "private research/prototype"
+      },
+      {
+        "present": true,
+        "text": "not law"
+      },
+      {
+        "present": true,
+        "text": "not legal advice"
+      },
+      {
+        "present": true,
+        "text": "not tax advice"
+      },
+      {
+        "present": true,
+        "text": "not ATO guidance"
+      },
+      {
+        "present": true,
+        "text": "not Treasury modelling"
+      },
+      {
+        "present": true,
+        "text": "not PBO costing"
+      },
+      {
+        "present": true,
+        "text": "not official policy"
+      },
+      {
+        "present": true,
+        "text": "not calibrated"
+      },
+      {
+        "present": true,
+        "text": "not validated"
+      },
+      {
+        "present": true,
+        "text": "No tax payable estimate"
+      },
+      {
+        "present": true,
+        "text": "No firm liability calculation"
+      },
+      {
+        "present": true,
+        "text": "does not determine actual tax payable"
+      },
+      {
+        "present": true,
+        "text": "does not determine firm-level liability"
+      }
+    ],
+    "required_sections": [
+      {
+        "marker": "CARSF Automation Tax Framework",
+        "present": true,
+        "section": "hero"
+      },
+      {
+        "marker": "Commonwealth Automation Revenue Stabilisation Framework",
+        "present": true,
+        "section": "what_carsf_is"
+      },
+      {
+        "marker": "What Problem It Tests",
+        "present": true,
+        "section": "what_problem_it_tests"
+      },
+      {
+        "marker": "What The Model Currently Does",
+        "present": true,
+        "section": "what_the_model_currently_does"
+      },
+      {
+        "marker": "What Is Calculated",
+        "present": true,
+        "section": "what_is_calculated"
+      },
+      {
+        "marker": "What Is Not Calculated",
+        "present": true,
+        "section": "what_is_not_calculated"
+      },
+      {
+        "marker": "Public Aggregate Data Loaded",
+        "present": true,
+        "section": "public_aggregate_data_loaded"
+      },
+      {
+        "marker": "Placeholder Replacement Map",
+        "present": true,
+        "section": "placeholder_replacement_map"
+      },
+      {
+        "marker": "Calibration Boundary Map",
+        "present": true,
+        "section": "calibration_boundary_map"
+      },
+      {
+        "marker": "Scenario Constraint Layer",
+        "present": true,
+        "section": "scenario_constraint_layer"
+      },
+      {
+        "marker": "Full Repo Integrity / Gap Audit",
+        "present": true,
+        "section": "full_repo_integrity_gap_audit"
+      },
+      {
+        "marker": "What Data Is Still Missing?",
+        "present": true,
+        "section": "missing_data"
+      },
+      {
+        "marker": "How To Test The Model",
+        "present": true,
+        "section": "how_to_test_the_model"
+      },
+      {
+        "marker": "How To Read The Reports",
+        "present": true,
+        "section": "how_to_read_reports"
+      },
+      {
+        "marker": "What Review Is Still Required?",
+        "present": true,
+        "section": "reviewer_pathway"
+      },
+      {
+        "marker": "GitHub Pages setup",
+        "present": true,
+        "section": "github_pages_setup"
+      }
+    ],
+    "site_files": [
+      {
+        "exists": true,
+        "path": "site/index.html"
+      },
+      {
+        "exists": true,
+        "path": "site/styles.css"
+      },
+      {
+        "exists": true,
+        "path": "site/app.js"
+      },
+      {
+        "exists": true,
+        "path": "site/assets/carsf-logo.svg"
+      },
+      {
+        "exists": true,
+        "path": "site/site_manifest.json"
+      },
+      {
+        "exists": true,
+        "path": "site/README.md"
+      }
+    ],
+    "source_reports": [
+      {
+        "exists": true,
+        "path": "reports/public_real_data_loader.json",
+        "report": "public_real_data_loader"
+      },
+      {
+        "exists": true,
+        "path": "reports/public_data_placeholder_replacement_map.json",
+        "report": "public_data_placeholder_replacement_map"
+      },
+      {
+        "exists": true,
+        "path": "reports/public_aggregate_calibration_boundary_map.json",
+        "report": "public_aggregate_calibration_boundary_map"
+      },
+      {
+        "exists": true,
+        "path": "reports/public_aggregate_scenario_constraint_layer.json",
+        "report": "public_aggregate_scenario_constraint_layer"
+      },
+      {
+        "exists": true,
+        "path": "reports/full_repo_integrity_upgrade_audit.json",
+        "report": "full_repo_integrity_upgrade_audit"
+      },
+      {
+        "exists": true,
+        "path": "reports/repo_guardrails.json",
+        "report": "repo_guardrails"
+      }
+    ],
+    "source_summary": {
+      "field_boundaries_mapped": 11,
+      "field_scenario_constraints": 11,
+      "full_repo_critical_findings_remaining": 0,
+      "loaded_public_aggregate_sources": 5,
+      "loaded_public_aggregate_values": 10,
+      "module_boundaries_mapped": 19,
+      "module_scenario_constraints": 20,
+      "placeholders_blocked_until_external_review": 1,
+      "placeholders_blocked_until_restricted_data": 1,
+      "placeholders_informed_by_public_anchor": 3,
+      "placeholders_mapped": 11,
+      "placeholders_narrowed_by_public_anchor": 3,
+      "placeholders_replaced_by_public_anchor": 2,
+      "source_candidates_not_loaded": 3
+    },
+    "summary": {
+      "actual_tax_payable_determined": false,
+      "analytics_or_tracking": false,
+      "backend_required": false,
+      "calibration_completed": false,
+      "external_api_calls": false,
+      "external_cdn_dependencies": false,
+      "firm_confidential_data_loaded": false,
+      "firm_level_liability_logic_modified": false,
+      "forbidden_claim_findings": 0,
+      "full_repo_audit_referenced": true,
+      "github_pages_site_created": true,
+      "github_pages_workflow_added": false,
+      "household_microdata_loaded": false,
+      "loaded_public_aggregate_values_displayed": 10,
+      "module_boundaries_mapped_displayed": 19,
+      "new_data_loaded": false,
+      "non_claim_boundaries_visible": true,
+      "official_status_claimed": false,
+      "personal_data_loaded": false,
+      "placeholders_mapped_displayed": 11,
+      "required_sections_present": true,
+      "required_site_files_present": true,
+      "restricted_data_loaded": false,
+      "scenario_constraints_mapped_displayed": 20,
+      "scraping": false,
+      "source_candidates_not_loaded_displayed": 3,
+      "source_report_counts_reconciled": true,
+      "source_reports_available": true,
+      "static_site_only": true,
+      "taxpayer_level_data_loaded": false,
+      "validation_claimed": false
+    },
+    "what_the_site_can_claim": [
+      "The repo contains a structured private research prototype.",
+      "The repo contains public aggregate-data anchors and source-locator metadata.",
+      "The repo contains placeholder replacement mapping, calibration-boundary mapping, scenario-output constraints, and a full repo integrity/gap audit.",
+      "The repo can be reviewed and tested locally."
+    ],
+    "what_the_site_must_not_claim": [
+      "law",
+      "legal advice",
+      "tax advice",
+      "ATO guidance",
+      "Treasury modelling",
+      "PBO costing",
+      "official policy",
+      "calibrated modelling",
+      "validated modelling",
+      "actual tax payable calculation",
+      "firm-level liability determination",
+      "economic validation",
+      "welfare validation",
+      "statistical validation",
+      "implementation readiness"
+    ]
+  },
+  "metadata": {
+    "non_claims": [
+      "CARSF is a private research/prototype policy and modelling framework.",
+      "This site is static and reviewer-facing only.",
+      "This site does not load private, restricted, personal, taxpayer-level, firm-confidential, or household microdata.",
+      "This site does not scrape sources or call external APIs.",
+      "CARSF is not law.",
+      "CARSF is not legal advice.",
+      "CARSF is not tax advice.",
+      "CARSF is not ATO guidance.",
+      "CARSF is not Treasury modelling.",
+      "CARSF is not PBO costing.",
+      "CARSF is not official policy.",
+      "CARSF is not calibrated modelling.",
+      "CARSF is not validated modelling.",
+      "CARSF does not determine actual tax payable.",
+      "CARSF does not determine firm-level liability.",
+      "CARSF does not claim economic validation, welfare validation, statistical validation, legal sufficiency, operational readiness, or implementation readiness."
+    ],
+    "report_id": "github_pages_site",
+    "report_name": "CARSF V1.5 GitHub Pages Project Website",
+    "status": "static_site_validated"
+  },
+  "summary": {
+    "actual_tax_payable_determined": false,
+    "analytics_or_tracking": false,
+    "backend_required": false,
+    "calibration_completed": false,
+    "external_api_calls": false,
+    "external_cdn_dependencies": false,
+    "firm_confidential_data_loaded": false,
+    "firm_level_liability_logic_modified": false,
+    "forbidden_claim_findings": 0,
+    "full_repo_audit_referenced": true,
+    "github_pages_site_created": true,
+    "github_pages_workflow_added": false,
+    "household_microdata_loaded": false,
+    "loaded_public_aggregate_values_displayed": 10,
+    "module_boundaries_mapped_displayed": 19,
+    "new_data_loaded": false,
+    "non_claim_boundaries_visible": true,
+    "official_status_claimed": false,
+    "personal_data_loaded": false,
+    "placeholders_mapped_displayed": 11,
+    "required_sections_present": true,
+    "required_site_files_present": true,
+    "restricted_data_loaded": false,
+    "scenario_constraints_mapped_displayed": 20,
+    "scraping": false,
+    "source_candidates_not_loaded_displayed": 3,
+    "source_report_counts_reconciled": true,
+    "source_reports_available": true,
+    "static_site_only": true,
+    "taxpayer_level_data_loaded": false,
+    "validation_claimed": false
+  }
+}

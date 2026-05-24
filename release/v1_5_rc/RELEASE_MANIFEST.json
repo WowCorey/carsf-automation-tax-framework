@@ -53,7 +53,11 @@
     "reports/public_aggregate_scenario_constraint_layer.md",
     "reports/public_aggregate_scenario_constraint_layer.json",
     "reports/full_repo_integrity_upgrade_audit.md",
-    "reports/full_repo_integrity_upgrade_audit.json"
+    "reports/full_repo_integrity_upgrade_audit.json",
+    "reports/github_pages_site.md",
+    "reports/github_pages_site.json",
+    "site/index.html",
+    "site/site_manifest.json"
   ],
   "attack_pack_summary": {
     "review_tracks": 12,
@@ -97,6 +101,11 @@
     "restricted_data_loaded": false,
     "real_data_loaded": false,
     "actual_tax_payable_determined": false,
-    "firm_level_liability_logic_modified": false
+    "firm_level_liability_logic_modified": false,
+    "github_pages_site_created_by_build_35": true,
+    "new_data_loaded_by_github_pages_site": false,
+    "github_pages_site_static_only": true,
+    "github_pages_site_external_api_calls": false,
+    "github_pages_site_scraping": false
   }
 }

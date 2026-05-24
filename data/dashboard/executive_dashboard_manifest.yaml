@@ -1428,6 +1428,57 @@ layers:
       - PBO costing
       - readiness score
       - firm-level liability
+  - layer_id: github_pages_project_website
+    layer_name: GitHub Pages Project Website
+    layer_group: reviewer_site
+    purpose: Static reviewer-facing project website that explains CARSF, report navigation, public aggregate data, placeholder boundaries, calibration boundaries, scenario constraints, missing data, and local test commands.
+    primary_files:
+      - site/index.html
+      - site/styles.css
+      - site/app.js
+      - site/site_manifest.json
+      - docs/github_pages_site.md
+      - scripts/build_github_pages_site.py
+    primary_reports:
+      - reports/github_pages_site.md
+      - reports/github_pages_site.json
+    streamlit_pages: []
+    status_labels:
+      - implemented_static_site
+      - github_pages_ready
+      - reviewer_navigation_only
+      - no_new_data_loaded
+      - not_for_real_world_use
+    non_claim_flags:
+      - no_new_data_loaded
+      - not_calibrated
+      - not_validation
+      - not_actual_tax_payable
+      - not_official_status
+      - no_liability_change
+    calibration_blockers:
+      - The website explains existing outputs and cannot remove calibration, data, legal, tax, economic, statistical, public finance, welfare, or data governance blockers.
+    external_review_blockers:
+      - Reviewer-facing website wording still requires hostile review so it is not mistaken for validation, approval, legal sufficiency, official status, implementation readiness, or tax-payable evidence.
+    blocker_explanation: Build 35 is a static project website and does not load data, calibrate, validate, or change liability.
+    recommended_reviewer:
+      - policy_reviewer
+      - technical_reviewer
+      - legal_reviewer
+      - tax_reviewer
+      - hostile_red_team_reviewer
+    read_order: 37
+    main_reason: Build 35 gives reviewers a polished site entry point without changing model outputs or claims.
+    must_not_be_used_for:
+      - calibration completed
+      - validation
+      - official status
+      - actual tax payable
+      - ATO guidance
+      - Treasury modelling
+      - PBO costing
+      - readiness score
+      - firm-level liability
 report_entries:
   - report_path: reports/executive_dashboard.md
     layer_id: executive_dashboard
@@ -1927,6 +1978,22 @@ report_entries:
     must_not_be_used_for: [calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score, firm-level liability]
     linked_streamlit_page:
     recommended_read_order: 36
+  - report_path: reports/github_pages_site.md
+    layer_id: github_pages_project_website
+    report_type: markdown
+    generated_by: scripts/build_github_pages_site.py
+    interpretation_warning: Static website validation only; the site does not load data, calibrate, validate, determine tax payable, or change liability.
+    must_not_be_used_for: [calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score, firm-level liability]
+    linked_streamlit_page:
+    recommended_read_order: 37
+  - report_path: reports/github_pages_site.json
+    layer_id: github_pages_project_website
+    report_type: json
+    generated_by: scripts/build_github_pages_site.py
+    interpretation_warning: Machine-readable static site checks, source report count reconciliation, non-claim checks, and external dependency checks only.
+    must_not_be_used_for: [calibration completed, validation, official status, actual tax payable, ATO guidance, Treasury modelling, PBO costing, readiness score, firm-level liability]
+    linked_streamlit_page:
+    recommended_read_order: 37
 forbidden_claims:
   - ready for government
   - ready for ATO

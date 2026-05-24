@@ -1,0 +1,93 @@
+{
+  "site_id": "carsf_github_pages_project_website",
+  "site_name": "CARSF Automation Tax Framework Project Website",
+  "build": "Build 35",
+  "status": "github_pages_ready_static_site",
+  "static_site_only": true,
+  "backend_required": false,
+  "external_api_calls": false,
+  "scraping": false,
+  "analytics_or_tracking": false,
+  "external_cdn_dependencies": false,
+  "expected_pages_url": "https://wowcorey.github.io/carsf-automation-tax-framework/",
+  "source_reports": [
+    "reports/public_real_data_loader.json",
+    "reports/public_data_placeholder_replacement_map.json",
+    "reports/public_aggregate_calibration_boundary_map.json",
+    "reports/public_aggregate_scenario_constraint_layer.json",
+    "reports/full_repo_integrity_upgrade_audit.json",
+    "reports/repo_guardrails.json"
+  ],
+  "site_files": [
+    "site/index.html",
+    "site/styles.css",
+    "site/app.js",
+    "site/assets/carsf-logo.svg",
+    "site/site_manifest.json",
+    "site/README.md"
+  ],
+  "required_sections": [
+    "hero",
+    "what_carsf_is",
+    "what_problem_it_tests",
+    "what_the_model_currently_does",
+    "what_is_calculated",
+    "what_is_not_calculated",
+    "public_aggregate_data_loaded",
+    "placeholder_replacement_map",
+    "calibration_boundary_map",
+    "scenario_constraint_layer",
+    "full_repo_integrity_gap_audit",
+    "missing_data",
+    "how_to_test_the_model",
+    "how_to_read_reports",
+    "reviewer_pathway",
+    "github_pages_setup"
+  ],
+  "source_summary": {
+    "loaded_public_aggregate_sources": 5,
+    "loaded_public_aggregate_values": 10,
+    "source_candidates_not_loaded": 3,
+    "placeholders_mapped": 11,
+    "placeholders_replaced_by_public_anchor": 2,
+    "placeholders_narrowed_by_public_anchor": 3,
+    "placeholders_informed_by_public_anchor": 3,
+    "placeholders_blocked_until_restricted_data": 1,
+    "placeholders_blocked_until_external_review": 1,
+    "module_boundaries_mapped": 19,
+    "field_boundaries_mapped": 11,
+    "module_scenario_constraints": 20,
+    "field_scenario_constraints": 11,
+    "full_repo_critical_findings_remaining": 0
+  },
+  "non_claims": [
+    "CARSF is a private research/prototype policy and modelling framework.",
+    "This site is static and reviewer-facing only.",
+    "This site does not load private, restricted, personal, taxpayer-level, firm-confidential, or household microdata.",
+    "This site does not scrape sources or call external APIs.",
+    "CARSF is not law.",
+    "CARSF is not legal advice.",
+    "CARSF is not tax advice.",
+    "CARSF is not ATO guidance.",
+    "CARSF is not Treasury modelling.",
+    "CARSF is not PBO costing.",
+    "CARSF is not official policy.",
+    "CARSF is not calibrated modelling.",
+    "CARSF is not validated modelling.",
+    "CARSF does not determine actual tax payable.",
+    "CARSF does not determine firm-level liability.",
+    "CARSF does not claim economic validation, welfare validation, statistical validation, legal sufficiency, operational readiness, or implementation readiness."
+  ],
+  "manual_pages_setup_steps": [
+    "Go to repository Settings.",
+    "Open Pages.",
+    "Set the source to GitHub Actions or deploy from a branch/folder.",
+    "If using branch/folder, choose main and the site folder if GitHub Pages exposes that folder option for this repository.",
+    "Save.",
+    "Open the repository Pages URL shown by GitHub."
+  ],
+  "generated_reports": [
+    "reports/github_pages_site.md",
+    "reports/github_pages_site.json"
+  ]
+}

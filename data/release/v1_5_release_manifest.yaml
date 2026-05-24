@@ -1429,6 +1429,55 @@ prototype_layers:
       - tax_reviewer
       - hostile_red_team_reviewer
     main_reason: Build 34.5 checks repo-wide wiring and gap visibility before the next reviewer handoff pack.
+  - layer_id: github_pages_project_website
+    layer_name: GitHub Pages Project Website
+    layer_group: reviewer_site
+    summary: Static reviewer-facing project website that explains CARSF, report navigation, public aggregate data, placeholder replacement, calibration boundaries, scenario constraints, missing data, and local test commands without loading data or changing model logic.
+    primary_files:
+      - site/index.html
+      - site/styles.css
+      - site/app.js
+      - site/site_manifest.json
+      - docs/github_pages_site.md
+      - scripts/build_github_pages_site.py
+    primary_reports:
+      - reports/github_pages_site.md
+      - reports/github_pages_site.json
+    streamlit_pages: []
+    status_labels:
+      - prototype_only
+      - static_site_only
+      - github_pages_ready
+      - reviewer_navigation_only
+      - no_new_data_loaded
+    non_claim_flags:
+      - no_new_data_loaded
+      - not_calibrated
+      - not_validation
+      - not_actual_tax_payable
+      - not_official_status
+      - no_liability_change
+    calibration_blockers:
+      - The site packages existing reports and cannot remove calibration, data, legal, tax, economic, statistical, public finance, welfare, or data governance blockers.
+    external_review_blockers:
+      - Website wording requires hostile review so it is not mistaken for validation, approval, legal sufficiency, official status, implementation readiness, or tax-payable evidence.
+    must_not_be_used_for:
+      - calibration completed
+      - validation
+      - official status
+      - actual tax payable
+      - ATO guidance
+      - Treasury modelling
+      - PBO costing
+      - readiness score
+      - firm-level liability
+    recommended_reviewer:
+      - policy_reviewer
+      - technical_reviewer
+      - legal_reviewer
+      - tax_reviewer
+      - hostile_red_team_reviewer
+    main_reason: Build 35 gives reviewers a polished static entry point without changing model outputs or claims.
 generated_reports:
   - {report_path: reports/v1_5_release_candidate_pack.md, layer_id: release_candidate_pack, generated_by: python scripts/run_v1_5_release_candidate_pack.py, what_it_shows: release-candidate pack summary, what_it_does_not_show: no readiness score or official status, primary_non_claim: release packaging only, recommended_reviewer: [policy_reviewer, technical_reviewer], suggested_read_order: 2, optional: true}
   - {report_path: reports/v1_5_release_candidate_pack.json, layer_id: release_candidate_pack, generated_by: python scripts/run_v1_5_release_candidate_pack.py, what_it_shows: release-candidate pack data, what_it_does_not_show: no readiness score or official status, primary_non_claim: release packaging only, recommended_reviewer: [technical_reviewer], suggested_read_order: 2, optional: true}
@@ -1456,6 +1505,8 @@ generated_reports:
   - {report_path: reports/public_aggregate_scenario_constraint_layer.json, layer_id: public_aggregate_scenario_constraint_layer, generated_by: python scripts/run_public_aggregate_scenario_constraint_layer.py, what_it_shows: machine-readable scenario statuses display rules forbidden implications module constraints field constraints and false flags, what_it_does_not_show: new data loaded calibration completed validation official status tax-payable use firm liability restricted data or proof that CARSF works, primary_non_claim: scenario constraint layer only, recommended_reviewer: [technical_reviewer], suggested_read_order: 13, optional: false}
   - {report_path: reports/full_repo_integrity_upgrade_audit.md, layer_id: full_repo_integrity_upgrade_audit, generated_by: python scripts/run_full_repo_integrity_upgrade_audit.py, what_it_shows: repo-wide coverage gaps missing factors data dependencies review dependencies guardrails and safe fixes, what_it_does_not_show: new data loaded calibration completed validation official status tax-payable use firm liability restricted data or proof that CARSF works, primary_non_claim: full repo integrity audit only, recommended_reviewer: [technical_reviewer, privacy_reviewer, statistical_methods_reviewer, hostile_red_team_reviewer], suggested_read_order: 14, optional: false}
   - {report_path: reports/full_repo_integrity_upgrade_audit.json, layer_id: full_repo_integrity_upgrade_audit, generated_by: python scripts/run_full_repo_integrity_upgrade_audit.py, what_it_shows: machine-readable repo coverage summary flags gap registers data dependencies external-review dependencies and false flags, what_it_does_not_show: new data loaded calibration completed validation official status tax-payable use firm liability restricted data or proof that CARSF works, primary_non_claim: full repo integrity audit only, recommended_reviewer: [technical_reviewer], suggested_read_order: 14, optional: false}
+  - {report_path: reports/github_pages_site.md, layer_id: github_pages_project_website, generated_by: python scripts/build_github_pages_site.py, what_it_shows: static website validation source report count reconciliation required sections non-claim checks and external dependency checks, what_it_does_not_show: new data loaded calibration completed validation official status tax-payable use firm liability restricted data or proof that CARSF works, primary_non_claim: static project website only, recommended_reviewer: [policy_reviewer, technical_reviewer, hostile_red_team_reviewer], suggested_read_order: 15, optional: false}
+  - {report_path: reports/github_pages_site.json, layer_id: github_pages_project_website, generated_by: python scripts/build_github_pages_site.py, what_it_shows: machine-readable static site checks source summary counts non-claim checks and false flags, what_it_does_not_show: new data loaded calibration completed validation official status tax-payable use firm liability restricted data or proof that CARSF works, primary_non_claim: static project website only, recommended_reviewer: [technical_reviewer], suggested_read_order: 15, optional: false}
   - {report_path: reports/example_results.md, layer_id: worked_examples, generated_by: python scripts/run_examples.py, what_it_shows: worked example formula outputs, what_it_does_not_show: calibrated firm outcomes, primary_non_claim: prototype placeholders only, recommended_reviewer: [technical_reviewer, policy_reviewer], suggested_read_order: 5}
   - {report_path: reports/example_results.json, layer_id: worked_examples, generated_by: python scripts/run_examples.py, what_it_shows: machine-readable worked example outputs, what_it_does_not_show: calibrated firm outcomes, primary_non_claim: prototype placeholders only, recommended_reviewer: [technical_reviewer], suggested_read_order: 5}
   - {report_path: reports/grouped_entity_results.md, layer_id: worked_examples, generated_by: python scripts/run_examples.py, what_it_shows: grouped-entity preview outputs, what_it_does_not_show: legal grouping results, primary_non_claim: non-operative preview only, recommended_reviewer: [legal_reviewer, tax_reviewer], suggested_read_order: 6}

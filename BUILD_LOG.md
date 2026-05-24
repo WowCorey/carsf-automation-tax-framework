@@ -1,5 +1,23 @@
 # Build Log
 
+## V1.5 GitHub Pages Project Website
+
+Branch: `v1.5-github-pages-project-website`
+
+Purpose of this build:
+
+- Add a static GitHub Pages-ready project website under `site/`.
+- Explain CARSF, the model stack, loaded public aggregate values, placeholder replacement mapping, calibration boundaries, scenario constraints, the full repo integrity/gap audit, missing data, test commands, report reading order, and reviewer pathway.
+- Add `scripts/build_github_pages_site.py` to validate static site files, source report count reconciliation, required sections, non-claim text, and absence of external web dependencies.
+- Generate `reports/github_pages_site.md` and `reports/github_pages_site.json`.
+
+Limitations:
+
+- Static project website only.
+- No backend, no analytics, no tracking, no scraping, no external API calls, no external CDN dependency, and no new data loaded.
+- Not calibration, validation, legal advice, tax advice, ATO guidance, Treasury modelling, PBO costing, economic validation, welfare validation, statistical validation, operational readiness, legal sufficiency, official status, or actual-tax-payable evidence.
+- Does not modify firm-level CARSF liability.
+
 ## V1.5 Public Real Aggregate Data Loader
 
 Branch: `v1.5-public-data-expansion-real-aggregate-loader`

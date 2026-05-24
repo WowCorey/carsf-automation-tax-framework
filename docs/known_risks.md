@@ -121,3 +121,9 @@ Outputs marked non-interpretable are not usable as evidence, and hidden outputs 
 The full repo integrity audit can make coverage matrices look like quality approval if non-claim warnings are removed. It loads no new data, does not fake missing data, and does not perform calibration. Coverage means an internal artefact, runner, report, or reference was found or documented; it does not mean the model is validated, externally reviewed, legally sufficient, operationally ready, official, or usable for actual tax payable.
 
 Missing factors, data dependencies, and external-review dependencies remain blockers when they require restricted data, legal review, tax review, economic review, statistical review, public finance review, welfare review, data governance review, administrative review, or domain review. Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-34.5 are included in a later sealed RC.
+
+## Build 35 GitHub Pages Project Website Risks
+
+The static project website can make the prototype look more finished than it is if non-claim warnings are removed or report cards are read as endorsement. The site is a reviewer-facing navigation and explanation layer only. It loads no data, does not scrape, does not call APIs, does not enable GitHub Pages by itself, and does not change model calculations.
+
+Public aggregate values remain boundary-limited, placeholder replacement remains a mapping layer, calibration boundaries remain boundaries, scenario constraints remain constraints, and full repo audit gaps remain unresolved unless safe data or qualified review becomes available. Build 25 sealed the earlier RC state. A new integrity seal must be regenerated if Builds 26-35 are included in a later sealed RC.

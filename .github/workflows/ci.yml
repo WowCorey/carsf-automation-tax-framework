@@ -134,5 +134,8 @@ jobs:
       - name: Run full repo integrity upgrade audit
         run: python scripts/run_full_repo_integrity_upgrade_audit.py
 
+      - name: Build GitHub Pages project website report
+        run: python scripts/build_github_pages_site.py
+
       - name: Run repository guardrails
         run: python scripts/run_repo_guardrails.py

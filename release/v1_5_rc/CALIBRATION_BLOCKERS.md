@@ -59,3 +59,9 @@ The final RC integrity seal checks that blocker documents, reports, manifests, a
 Build 34.5 audits repo-wide coverage, safe fixes, missing factors, data dependencies, external-review dependencies, guardrails, and non-claim boundaries. It loads no new data, performs no calibration, validates no model output, determines no actual tax payable, and modifies no firm-level liability logic. Missing factors requiring restricted data, legal review, tax review, economic review, statistical review, public finance review, welfare review, data governance review, administrative review, or domain review remain blockers.
 
 Build 25 sealed the previous RC state. If Builds 26-34.5 are included in a later sealed RC, the integrity seal must be regenerated for that later state.
+
+## Build 35 GitHub Pages Project Website Blockers
+
+Build 35 adds a static project website only. It can improve reviewer navigation, but it does not remove any calibration blocker, data dependency, legal/tax/economic/statistical review dependency, public finance review need, data governance blocker, or restricted-data blocker.
+
+The site must remain tied to generated reports and non-claim language so it is not mistaken for model validation, external review completion, legal sufficiency, official status, implementation readiness, actual tax payable, or firm-level liability evidence. Build 25 sealed the previous RC state. If Builds 26-35 are included in a later sealed RC, the integrity seal must be regenerated for that later state.
