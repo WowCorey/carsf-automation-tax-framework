@@ -158,3 +158,9 @@ Build 34.5 should audit the full repo before the next reviewer-facing handoff. N
 Build 34.5 adds a full repo integrity audit, safe-fix register, missing-factor register, data-dependency register, external-review dependency register, and result-coverage matrices. It checks whether runners, reports, JSON outputs, manifests, dashboards, docs, CI, guardrails, non-claim boundaries, public-data usage, placeholder boundaries, calibration boundaries, and scenario constraints remain wired together.
 
 Build 35 should either package Builds 31-34.5 into a reviewer-facing handoff bundle or address only safe internal non-data non-claim gaps. No Build 34.5 output loads new data, fakes missing data, performs calibration, claims validation, determines actual tax payable, creates legal sufficiency, creates official status, or modifies firm-level CARSF liability.
+
+## Build 35 GitHub Pages Project Website
+
+Build 35 adds a static GitHub Pages-ready project website under `site/`. It presents the CARSF project, model stack, loaded public aggregate values, placeholder replacement map, calibration-boundary map, scenario constraint layer, full repo integrity/gap audit, missing data, local test commands, report map, and reviewer pathway in a polished static page.
+
+The website is not a reviewer handoff pack and not a model upgrade. It loads no new data, does not scrape, does not call APIs, does not calibrate, does not validate, does not determine actual tax payable, does not claim official status, and does not modify firm-level CARSF liability. A later reviewer handoff pack can still bundle reviewer artifacts if needed.

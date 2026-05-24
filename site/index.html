@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="CARSF Automation Tax Framework: a private research prototype for reviewing automation-driven labour-tax-base risk, public aggregate anchors, placeholder boundaries, and scenario constraints."
+    />
+    <title>CARSF Automation Tax Framework</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="CARSF home">
+          <img src="./assets/carsf-logo.svg" alt="" width="36" height="36" />
+          <span>CARSF</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          Menu
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="#project">Project</a>
+          <a href="#model">Model</a>
+          <a href="#public-data">Public Data</a>
+          <a href="#boundaries">Boundaries</a>
+          <a href="#reports">Reports</a>
+          <a href="#run">Run</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Reviewer-facing project website</p>
+            <h1>CARSF Automation Tax Framework</h1>
+            <p class="subtitle">
+              A prototype Australian policy and modelling framework for examining automation-driven labour-tax-base risk.
+            </p>
+            <p class="hero-body">
+              If productive capacity moves from labour to capital, the fiscal base may need to follow it.
+              CARSF explores that idea as a structured prototype, not as law, official policy, or validated modelling.
+            </p>
+            <div class="badge-row" aria-label="Project status badges">
+              <span class="badge badge-neutral">Private research/prototype</span>
+              <span class="badge badge-info">Public aggregate anchors only</span>
+              <span class="badge badge-info">Placeholder-boundary protected</span>
+              <span class="badge badge-warning">Not calibrated</span>
+              <span class="badge badge-warning">Not validated</span>
+              <span class="badge badge-danger">No tax payable estimate</span>
+              <span class="badge badge-danger">No firm liability calculation</span>
+            </div>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#reports">Open report map</a>
+              <a class="button button-secondary" href="#run">Run locally</a>
+            </div>
+          </div>
+          <aside class="hero-panel" aria-label="Current repo status">
+            <div class="panel-header">
+              <span class="panel-kicker">Build stack</span>
+              <strong>V1.5 reviewer materials</strong>
+            </div>
+            <dl class="metric-grid">
+              <div>
+                <dt>Loaded public aggregate values</dt>
+                <dd>10</dd>
+              </div>
+              <div>
+                <dt>Source candidates not loaded</dt>
+                <dd>3</dd>
+              </div>
+              <div>
+                <dt>Scenario constraints mapped</dt>
+                <dd>20</dd>
+              </div>
+              <div>
+                <dt>Full repo audit critical findings</dt>
+                <dd>0</dd>
+              </div>
+            </dl>
+            <p class="small-note">
+              Counts are copied from generated repo reports and checked by `python scripts/build_github_pages_site.py`.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="project">
+        <div class="section-heading">
+          <p class="eyebrow">Project</p>
+          <h2>What CARSF Is</h2>
+        </div>
+        <div class="split">
+          <div class="copy">
+            <p>
+              CARSF stands for <strong>Commonwealth Automation Revenue Stabilisation Framework</strong>.
+              It is a private research/prototype policy and modelling framework for examining whether automation-heavy
+              production can create labour-tax-base risk and how that risk could be made visible for review.
+            </p>
+            <p>
+              The project is structured as code, data manifests, report runners, generated reports, dashboards,
+              guardrails, and reviewer packs. Its role is to make assumptions inspectable. It is not a replacement
+              for restricted data access, public finance analysis, legal drafting, tax administration review, or
+              statistical validation.
+            </p>
+          </div>
+          <div class="callout callout-boundary">
+            <h3>Core non-claim boundary</h3>
+            <p>
+              CARSF is not law, not legal advice, not tax advice, not ATO guidance, not Treasury modelling,
+              not PBO costing, not official policy, not calibrated modelling, not validated modelling,
+              not an actual tax payable calculation, not a firm-level liability determination,
+              not economic validation, not welfare validation, not statistical validation, and not implementation readiness.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted" id="problem">
+        <div class="section-heading">
+          <p class="eyebrow">Policy question</p>
+          <h2>What Problem It Tests</h2>
+        </div>
+        <div class="three-col">
+          <article class="text-card">
+            <h3>Labour share risk</h3>
+            <p>
+              Automation may reduce labour share in some sectors if productive work shifts toward capital, software,
+              robotics, AI systems, or automation-heavy business structures.
+            </p>
+          </article>
+          <article class="text-card">
+            <h3>Revenue-base visibility</h3>
+            <p>
+              Australia relies heavily on labour and income flows. CARSF tests whether a structured prototype can
+              surface revenue-base risk without pretending the risk is already proven.
+            </p>
+          </article>
+          <article class="text-card">
+            <h3>Review before claims</h3>
+            <p>
+              The repo separates public aggregate anchors, placeholders, boundaries, constraints, missing data,
+              and review dependencies so reviewers can see what evidence is present and what remains blocked.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="model">
+        <div class="section-heading">
+          <p class="eyebrow">Current system</p>
+          <h2>What The Model Currently Does</h2>
+          <p>
+            Each layer has a runner, generated report, and conservative interpretation boundary. The cards below
+            link to local repo reports when this site is served from the repository.
+          </p>
+        </div>
+        <div class="module-grid">
+          <article class="module-card">
+            <span class="status-pill">Prototype examples</span>
+            <h3>Worked examples</h3>
+            <p>Shows formula plumbing and illustrative placeholder examples.</p>
+            <p class="does-not">Does not show calibrated firm results.</p>
+            <a href="../reports/example_results.md">Report</a>
+          </article>
+          <article class="module-card">
+            <span class="status-pill">Schedule metadata</span>
+            <h3>Sector schedules</h3>
+            <p>Classifies sector placeholder settings and schedule coverage.</p>
+            <p class="does-not">Does not create official sector schedules.</p>
+            <a href="../reports/sector_schedule_expansion.md">Report</a>
+          </article>
+          <article class="module-card">
+            <span class="status-pill">Boundary-limited</span>
+            <h3>Sector stress matrix</h3>
+            <p>Maps synthetic stress metadata and review categories.</p>
+            <p class="does-not">Does not create real sector rankings.</p>
+            <a href="../reports/sector_stress_matrix.md">Report</a>
+          </article>
+          <article class="module-card">
+            <span class="status-pill">Synthetic</span>
+            <h3>Behavioural response / gaming simulation</h3>
+            <p>Surfaces possible gaming pathways as review prompts.</p>
+            <p class="does-not">Does not estimate taxpayer behaviour.</p>
+            <a href="../reports/behavioural_response_simulation.md">Report</a>
+          </article>
+          <article class="module-card">
+            <span class="status-pill">Traceability only</span>
+            <h3>Administrative workflow</h3>
+            <p>Shows a non-operative administrative review concept.</p>
+            <p class="does-not">Does not create ATO workflow, notices, or enforcement.</p>
+            <a href="../reports/administrative_compliance_workflow.md">Report</a>
+          </article>
+          <article class="module-card">
+            <span class="status-pill">Non-operative</span>
+            <h3>Legislative architecture skeleton</h3>
+            <p>Organises draft legislative concepts for legal review.</p>
+            <p class="does-not">Does not establish law or legal sufficiency.</p>
+            <a href="../reports/legislative_architecture.md">Report</a>
+          </article>
+          <article class="module-card">
+            <span class="status-pill">Dashboard only</span>
+            <h3>Executive dashboard</h3>
+            <p>Consolidates report status, links, and non-claim warnings.</p>
+            <p class="does-not">Does not create a readiness, calibration, or validation score.</p>
+            <a href="../reports/executive_dashboard.md">Report</a>
+          </article>
+          <article class="module-card">
+            <span class="status-pill">Public pilot</span>
+            <h3>Public data pilot</h3>
+            <p>Introduces public aggregate extracts, source references, and placeholder anchors.</p>
+            <p class="does-not">Does not complete calibration or validate the model.</p>
+            <a href="../reports/public_data_pilot.md">Report</a>
+          </article>
+          <article class="module-card">
+            <span class="status-pill">Public aggregate</span>
+            <h3>Public real aggregate data loader</h3>
+            <p>Loads controlled public aggregate values with source URLs, locators, units, periods, and geography.</p>
+            <p class="does-not">Does not load restricted, personal, taxpayer-level, or firm-confidential data.</p>
+            <a href="../reports/public_real_data_loader.md">Report</a>
+          </article>
+          <article class="module-card">
+            <span class="status-pill">Mapping</span>
+            <h3>Placeholder replacement map</h3>
+            <p>Maps loaded public values to placeholder replacement, narrowing, context, or blockers.</p>
+            <p class="does-not">Does not turn placeholders into validation.</p>
+            <a href="../reports/public_data_placeholder_replacement_map.md">Report</a>
+          </article>
+          <article class="module-card">
+            <span class="status-pill">Boundary map</span>
+            <h3>Calibration-boundary map</h3>
+            <p>Defines allowed and forbidden public aggregate uses by module and field.</p>
+            <p class="does-not">Does not perform calibration.</p>
+            <a href="../reports/public_aggregate_calibration_boundary_map.md">Report</a>
+          </article>
+          <article class="module-card">
+            <span class="status-pill">Constraint layer</span>
+            <h3>Scenario constraint layer</h3>
+            <p>Flags, hides, or downgrades outputs that could be overread.</p>
+            <p class="does-not">Does not make scenario outputs legally, statistically, or economically interpretable.</p>
+            <a href="../reports/public_aggregate_scenario_constraint_layer.md">Report</a>
+          </article>
+          <article class="module-card module-card-wide">
+            <span class="status-pill">Repo audit</span>
+            <h3>Full repo integrity / gap audit</h3>
+            <p>
+              Checks runner, report, JSON, manifest, dashboard, docs, guardrail, non-claim, missing-factor,
+              data-dependency, and review-dependency coverage.
+            </p>
+            <p class="does-not">A gap register documents unresolved issues; it does not solve them.</p>
+            <a href="../reports/full_repo_integrity_upgrade_audit.md">Report</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-muted" id="calculated">
+        <div class="section-heading">
+          <p class="eyebrow">Interpretation</p>
+          <h2>What Is Calculated</h2>
+          <p>
+            The prototype calculates or classifies reviewable intermediate artifacts. These are prototype
+            calculations/classifications, not legal, tax, economic, welfare, statistical, or official determinations.
+          </p>
+        </div>
+        <ul class="check-list">
+          <li>Illustrative placeholder examples and formula plumbing.</li>
+          <li>Fiscal Replacement Value style outputs where relevant to examples.</li>
+          <li>Sector schedule placeholder classifications and sector stress metadata.</li>
+          <li>Synthetic household and distributional scenario outputs.</li>
+          <li>Deterministic uncertainty ranges and reviewed scenario display classifications.</li>
+          <li>Public aggregate value anchors and source-locator records.</li>
+          <li>Placeholder replacement, narrowing, and context classifications.</li>
+          <li>Calibration-boundary decisions and scenario display constraints.</li>
+          <li>Missing-factor, data-dependency, and review-dependency registers.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="not-calculated">
+        <div class="section-heading">
+          <p class="eyebrow">Non-calculation boundary</p>
+          <h2>What Is Not Calculated</h2>
+        </div>
+        <div class="warning-grid">
+          <article class="warning-card">Actual tax payable</article>
+          <article class="warning-card">Actual CARSF liability</article>
+          <article class="warning-card">Actual firm liability</article>
+          <article class="warning-card">Actual taxpayer behaviour</article>
+          <article class="warning-card">Real household welfare impact</article>
+          <article class="warning-card">Real population distributional effects</article>
+          <article class="warning-card">Official Treasury modelling</article>
+          <article class="warning-card">PBO costing</article>
+          <article class="warning-card">ATO compliance scores</article>
+          <article class="warning-card">Legal sufficiency</article>
+          <article class="warning-card">Implementation readiness</article>
+          <article class="warning-card">Official policy status</article>
+        </div>
+      </section>
+
+      <section class="section section-muted" id="public-data">
+        <div class="section-heading">
+          <p class="eyebrow">Build 31</p>
+          <h2>Public Aggregate Data Loaded</h2>
+          <p>
+            Build 31 loaded controlled public aggregate values only. Public aggregate data can anchor, bound,
+            contextualise, or narrow placeholders only. It does not calibrate or validate the model.
+          </p>
+        </div>
+        <dl class="stat-strip">
+          <div>
+            <dt>Loaded sources</dt>
+            <dd>5</dd>
+          </div>
+          <div>
+            <dt>Loaded values</dt>
+            <dd>10</dd>
+          </div>
+          <div>
+            <dt>Source candidates not loaded</dt>
+            <dd>3</dd>
+          </div>
+          <div>
+            <dt>Restricted data loaded</dt>
+            <dd>No</dd>
+          </div>
+        </dl>
+        <div class="data-grid">
+          <article class="data-card">
+            <h3>Fair Work minimum wage values</h3>
+            <p>Hourly rate, weekly rate, and casual loading public anchors for labour-cost placeholder context.</p>
+            <p class="data-note">The weekly value is arithmetic-checked as 24.95 * 38 = 948.10.</p>
+          </article>
+          <article class="data-card">
+            <h3>ATO corporate tax and tax statistics values</h3>
+            <p>Public aggregate tax-scale context for corporate and fiscal placeholders.</p>
+            <p class="data-note">These values do not imply ATO validation or firm-level CARSF liability.</p>
+          </article>
+          <article class="data-card">
+            <h3>Treasury Budget receipt values</h3>
+            <p>Public Budget Paper receipt aggregates for fiscal trajectory and transition-funding scale context.</p>
+            <p class="data-note">These values do not imply Treasury modelling or PBO costing.</p>
+          </article>
+          <article class="data-card">
+            <h3>Super guarantee rate</h3>
+            <p>Public contribution-rate anchor for payment interaction and employer contribution context.</p>
+            <p class="data-note">This does not imply ATO guidance or employer behaviour estimation.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="replacement">
+        <div class="section-heading">
+          <p class="eyebrow">Build 32</p>
+          <h2>Placeholder Replacement Map</h2>
+          <p>
+            The replacement map classifies how loaded public aggregate values affect existing realistic placeholders.
+            Replacement by public aggregate anchor does not mean validation, and narrowing does not mean statistical estimation.
+          </p>
+        </div>
+        <div class="status-table" role="table" aria-label="Placeholder replacement summary">
+          <div role="row">
+            <span role="columnheader">Category</span>
+            <span role="columnheader">Count</span>
+            <span role="columnheader">Meaning</span>
+          </div>
+          <div role="row">
+            <span>Replaced by public aggregate anchor</span>
+            <strong>2</strong>
+            <span>A directly relevant public aggregate anchor can stand in for a placeholder anchor only.</span>
+          </div>
+          <div role="row">
+            <span>Narrowed by public aggregate anchor</span>
+            <strong>3</strong>
+            <span>A public aggregate value can bound or narrow a placeholder range.</span>
+          </div>
+          <div role="row">
+            <span>Informed by public aggregate anchor</span>
+            <strong>3</strong>
+            <span>Public data gives context but does not replace or narrow the placeholder.</span>
+          </div>
+          <div role="row">
+            <span>Still placeholder-only</span>
+            <strong>0</strong>
+            <span>No additional status is claimed beyond placeholder handling in the generated map.</span>
+          </div>
+          <div role="row">
+            <span>Blocked until restricted data</span>
+            <strong>1</strong>
+            <span>Cannot progress inside the repo without authorised data access.</span>
+          </div>
+          <div role="row">
+            <span>Blocked until external review</span>
+            <strong>1</strong>
+            <span>Requires legal, tax, economic, statistical, or domain review.</span>
+          </div>
+          <div role="row">
+            <span>Cannot replace with public aggregate data</span>
+            <strong>1</strong>
+            <span>Public aggregate data is structurally insufficient for the placeholder.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted" id="boundaries">
+        <div class="section-heading">
+          <p class="eyebrow">Build 33</p>
+          <h2>Calibration Boundary Map</h2>
+          <p>
+            The calibration-boundary map defines exactly how public aggregate values may and may not be used.
+            It is a boundary map only; it does not perform calibration.
+          </p>
+        </div>
+        <div class="two-col">
+          <div class="list-panel">
+            <h3>Allowed uses</h3>
+            <ul>
+              <li>Sanity check only</li>
+              <li>Public aggregate anchor only</li>
+              <li>Public aggregate bound only</li>
+              <li>Contextual reference only</li>
+              <li>Placeholder narrowing only</li>
+              <li>Reviewer traceability only</li>
+            </ul>
+          </div>
+          <div class="list-panel list-panel-danger">
+            <h3>Forbidden uses</h3>
+            <ul>
+              <li>Calibration completed</li>
+              <li>Statistical validation</li>
+              <li>Actual tax payable</li>
+              <li>Firm liability determination</li>
+              <li>Taxpayer behaviour estimate</li>
+              <li>Household population estimate</li>
+              <li>Official policy status</li>
+              <li>Legal sufficiency</li>
+              <li>Implementation readiness</li>
+            </ul>
+          </div>
+        </div>
+        <dl class="stat-strip">
+          <div>
+            <dt>Module boundaries mapped</dt>
+            <dd>19</dd>
+          </div>
+          <div>
+            <dt>Field boundaries mapped</dt>
+            <dd>11</dd>
+          </div>
+          <div>
+            <dt>Modules blocked for calibration</dt>
+            <dd>11</dd>
+          </div>
+          <div>
+            <dt>Modules requiring external review</dt>
+            <dd>19</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="section" id="constraints">
+        <div class="section-heading">
+          <p class="eyebrow">Build 34</p>
+          <h2>Scenario Constraint Layer</h2>
+          <p>
+            This layer prevents scenario outputs from being misread as calibrated, validated, official, legally
+            meaningful, tax meaningful, or implementation-ready.
+          </p>
+        </div>
+        <div class="constraint-grid">
+          <article>
+            <h3>Allowed to display</h3>
+            <p>Sanity-check, public-anchor, public-bound, context, placeholder-narrowing, and reviewer-traceability outputs with warnings.</p>
+          </article>
+          <article>
+            <h3>Marked non-interpretable</h3>
+            <p>3 output groups are marked non-interpretable where they go beyond the allowed public aggregate boundary.</p>
+          </article>
+          <article>
+            <h3>Hidden from reviewer dashboard</h3>
+            <p>1 output group is hidden from reviewer-facing display to prevent overclaiming.</p>
+          </article>
+          <article>
+            <h3>Forbidden implications mapped</h3>
+            <p>17 forbidden implications are mapped, including calibration, validation, tax payable, firm liability, official status, and implementation readiness.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-muted" id="audit">
+        <div class="section-heading">
+          <p class="eyebrow">Build 34.5</p>
+          <h2>Full Repo Integrity / Gap Audit</h2>
+          <p>
+            The full repo audit checks coverage across runners, reports, JSON outputs, manifests, dashboard references,
+            docs, guardrails, public-data boundaries, placeholders, calibration boundaries, scenario constraints, and
+            non-claim language.
+          </p>
+        </div>
+        <div class="audit-grid">
+          <article class="audit-card">
+            <span>Runner coverage</span>
+            <strong>Complete</strong>
+          </article>
+          <article class="audit-card">
+            <span>Report coverage</span>
+            <strong>Complete</strong>
+          </article>
+          <article class="audit-card">
+            <span>Dashboard coverage</span>
+            <strong>Complete</strong>
+          </article>
+          <article class="audit-card">
+            <span>Release/docs coverage</span>
+            <strong>Complete</strong>
+          </article>
+          <article class="audit-card">
+            <span>Guardrail status</span>
+            <strong>Clean</strong>
+          </article>
+          <article class="audit-card">
+            <span>Critical findings remaining</span>
+            <strong>0</strong>
+          </article>
+        </div>
+        <p class="callout callout-warning">
+          A gap register is not a solved issue. It documents missing factors, data dependencies, and review dependencies
+          that remain blocked unless safe data or qualified external review becomes available.
+        </p>
+      </section>
+
+      <section class="section" id="missing-data">
+        <div class="section-heading">
+          <p class="eyebrow">Blocked evidence</p>
+          <h2>What Data Is Still Missing?</h2>
+          <p>
+            These categories are not loaded by the repo. If obtained through authorised channels, they would still
+            require legal, tax, economic, statistical, privacy, and data-governance review before stronger claims
+            could even be considered.
+          </p>
+        </div>
+        <div class="missing-grid">
+          <article>
+            <h3>Restricted tax data</h3>
+            <p>Needed to examine taxpayer-level or firm-level fiscal behaviour. Not loaded because it is restricted and not safe for the repo.</p>
+          </article>
+          <article>
+            <h3>Firm-level confidential data</h3>
+            <p>Needed for firm-specific liability or automation exposure review. Not loaded because it is confidential and outside repo scope.</p>
+          </article>
+          <article>
+            <h3>Payroll and labour-cost data</h3>
+            <p>Needed to move beyond wage anchors. It would not automatically prove CARSF liability or labour substitution.</p>
+          </article>
+          <article>
+            <h3>Household microdata</h3>
+            <p>Needed for distributional and welfare review. ABS DataLab, HILDA, DSS, and Services Australia records are not loaded.</p>
+          </article>
+          <article>
+            <h3>Behavioural elasticity evidence</h3>
+            <p>Needed before behavioural response claims. It would still require economic and statistical review.</p>
+          </article>
+          <article>
+            <h3>Sector-specific automation exposure data</h3>
+            <p>Needed for sector incidence review. Public aggregates alone do not establish causal exposure.</p>
+          </article>
+          <article>
+            <h3>Legal and tax review</h3>
+            <p>Needed to assess drafting, authority, administration, and tax-law boundaries. The repo does not provide advice.</p>
+          </article>
+          <article>
+            <h3>Economic, statistical, and public finance review</h3>
+            <p>Needed to test incidence, uncertainty, fiscal sufficiency, and methodology. The repo does not validate these claims.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-muted" id="reports">
+        <div class="section-heading">
+          <p class="eyebrow">Reviewer map</p>
+          <h2>How To Read The Reports</h2>
+          <p>
+            Start with the executive dashboard and report map, then read the public-data stack from feasibility to
+            constraints. Treat each report as a boundary-limited artifact.
+          </p>
+        </div>
+        <div class="report-list">
+          <a href="../reports/executive_dashboard.md"><span>Executive dashboard</span><small>Navigation and report status</small></a>
+          <a href="../release/v1_5_rc/REPORT_MAP.md"><span>Release report map</span><small>Read order and reviewer routing</small></a>
+          <a href="../reports/public_real_data_loader.md"><span>Public real aggregate data loader</span><small>Loaded public values and guardrails</small></a>
+          <a href="../reports/public_data_placeholder_replacement_map.md"><span>Placeholder replacement map</span><small>Replacement, narrowing, context, blockers</small></a>
+          <a href="../reports/public_aggregate_calibration_boundary_map.md"><span>Calibration-boundary map</span><small>Allowed and forbidden public aggregate uses</small></a>
+          <a href="../reports/public_aggregate_scenario_constraint_layer.md"><span>Scenario constraint layer</span><small>Display, hidden, and non-interpretable outputs</small></a>
+          <a href="../reports/full_repo_integrity_upgrade_audit.md"><span>Full repo integrity / gap audit</span><small>Coverage, missing factors, data and review dependencies</small></a>
+          <a href="../reports/repo_guardrails.md"><span>Repository guardrails</span><small>Forbidden data and false-claim scan</small></a>
+        </div>
+      </section>
+
+      <section class="section" id="run">
+        <div class="section-heading">
+          <p class="eyebrow">Local review</p>
+          <h2>How To Test The Model</h2>
+          <p>Run these commands from the repository root in PowerShell.</p>
+        </div>
+        <div class="code-panel">
+          <button class="copy-button" type="button" data-copy-target="test-commands">Copy commands</button>
+          <pre id="test-commands"><code>python -m pip install -r requirements.txt
+python -m pytest
+python -m compileall -q model simulator scripts
+python scripts/run_examples.py
+python scripts/run_public_real_data_loader.py
+python scripts/run_public_data_placeholder_replacement_map.py
+python scripts/run_public_aggregate_calibration_boundary_map.py
+python scripts/run_public_aggregate_scenario_constraint_layer.py
+python scripts/run_full_repo_integrity_upgrade_audit.py
+python scripts/build_github_pages_site.py
+python scripts/run_repo_guardrails.py</code></pre>
+        </div>
+        <div class="callout">
+          <h3>GitHub Pages setup</h3>
+          <ol>
+            <li>Go to repository Settings.</li>
+            <li>Open Pages.</li>
+            <li>Set the source to deploy from a branch/folder.</li>
+            <li>Choose `main` and `/site` if GitHub Pages allows that folder for this repository; otherwise use a GitHub Actions Pages workflow in a later change.</li>
+            <li>Save and open `https://wowcorey.github.io/carsf-automation-tax-framework/` or the repository-specific Pages URL shown by GitHub.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section section-muted" id="review-path">
+        <div class="section-heading">
+          <p class="eyebrow">Next review path</p>
+          <h2>What Review Is Still Required?</h2>
+        </div>
+        <div class="timeline">
+          <article>
+            <span>1</span>
+            <h3>Technical reproducibility review</h3>
+            <p>Run the repo, compare generated JSON and Markdown, and inspect guardrail tests.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Public data and source-locator review</h3>
+            <p>Manually inspect public source URLs, locators, units, periods, geography, and value notes.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Legal, tax, and administrative review</h3>
+            <p>Assess whether any framework design is legally plausible without treating the repo as advice.</p>
+          </article>
+          <article>
+            <span>4</span>
+            <h3>Economic and statistical review</h3>
+            <p>Evaluate incidence, behavioural assumptions, uncertainty, and data sufficiency.</p>
+          </article>
+          <article>
+            <span>5</span>
+            <h3>Data governance review</h3>
+            <p>Decide whether restricted or confidential data could ever be reviewed in an authorised environment.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>CARSF Automation Tax Framework</strong>
+        <p>
+          Private research prototype. Static GitHub Pages site. No backend, tracking, external API calls, restricted
+          data, calibration claim, validation claim, tax payable estimate, firm liability determination, or official
+          policy claim. It does not determine actual tax payable and does not determine firm-level liability.
+        </p>
+      </div>
+      <a href="https://github.com/WowCorey/carsf-automation-tax-framework">GitHub repository</a>
+    </footer>
+    <script src="./app.js"></script>
+  </body>
+</html>

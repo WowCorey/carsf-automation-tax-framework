@@ -14,7 +14,7 @@ Current status: private research/prototype.
 
 All sector values, schedule values, examples, caps, Fiscal Replacement Value values, AAVA settings, and behavioural assumptions are placeholders unless explicitly labelled as confirmed baseline figures from official sources.
 
-The current Build 34.5 layer adds a full repo integrity upgrade, bug-check, result-coverage, and gap audit over the Build 31-34 public aggregate stack and the wider V1.5 prototype. It checks runner wiring, reports, JSON outputs, manifests, dashboards, docs, public-data boundaries, placeholder boundaries, calibration boundaries, scenario constraints, guardrails, non-claim language, missing factors, data dependencies, and external-review dependencies. It loads no new data, does not fake missing data, does not calibrate or validate the model, does not determine actual tax payable, and does not modify firm-level liability.
+The current Build 35 layer adds a static GitHub Pages-ready project website under `site/`. It turns existing generated report outputs, public aggregate-data summaries, placeholder replacement counts, calibration-boundary counts, scenario-constraint counts, and full repo integrity/gap audit status into a polished reviewer-facing project page. It loads no new data, does not scrape, does not call external APIs, does not calibrate or validate the model, does not determine actual tax payable, and does not modify firm-level liability.
 
 ## Repository Structure
 
@@ -27,6 +27,7 @@ The current Build 34.5 layer adds a full repo integrity upgrade, bug-check, resu
 - `data/` - source-category registry, placeholder policy, and public-pilot source-reference records. Restricted, confidential, taxpayer-level, firm-level confidential, person-level, household microdata, real evidence, and unauthorised data are not committed.
 - `data/public_pilot/` - small public aggregate/source-reference records, realistic-placeholder anchors, and digest metadata for the Build 27 public-data pilot.
 - `data/public_real/` - controlled Build 31 public aggregate source manifest, parsed values, raw-data staging note, and digest metadata. It must not contain restricted, personal, taxpayer-level, firm-confidential, household microdata, or confidential source material.
+- `site/` - static GitHub Pages-ready project website for reviewer navigation. It is a local static site only and does not use a backend, external API calls, scraping, analytics, tracking, external fonts, or CDN dependencies.
 - `data/mock_evidence/` - synthetic mock evidence packets for workflow testing only; no real evidence or personal data is committed.
 - `schedules/` - prototype sector schedules for automotive repair, logistics / warehousing, call centres / customer support, accounting / administration, retail self-checkout / fulfilment, and software / digital platforms.
 - `examples/` - illustrative placeholder firm cases.
@@ -53,6 +54,7 @@ The current Build 34.5 layer adds a full repo integrity upgrade, bug-check, resu
 - `docs/public_aggregate_calibration_boundary_map.md` - public aggregate calibration-boundary notes and allowed-use limits.
 - `docs/public_aggregate_scenario_constraint_layer.md` - scenario output constraint notes for public aggregate values.
 - `docs/full_repo_integrity_upgrade_audit.md` - repo-wide integrity, bug-check, result-coverage, and gap audit notes.
+- `docs/github_pages_site.md` - static GitHub Pages project website notes, setup steps, validation command, and non-claim boundaries.
 - `simulator/` - Streamlit interface for policy review, tax model inputs, worked examples, red-team tests, and audit log.
 - `docs/` - data requirements, limitations, implementation notes, known risks, and V1.5 plan.
 
@@ -447,6 +449,19 @@ Generated full repo integrity upgrade audit reports:
 - `reports/full_repo_integrity_upgrade_audit.json`
 
 The full repo integrity audit checks runner coverage, report coverage, JSON/Markdown result coverage, CI wiring, dashboard and release-manifest references, documentation coverage, public-data boundaries, placeholder boundaries, calibration boundaries, scenario constraints, guardrails, non-claim language, missing factors, data dependencies, external-review dependencies, and safe fixes. It loads no new data, does not fake missing data, does not calibrate, does not validate, does not determine actual tax payable, does not create official status, and does not modify firm-level CARSF liability.
+
+Run the GitHub Pages static project website validation:
+
+```powershell
+python scripts/build_github_pages_site.py
+```
+
+Generated GitHub Pages site validation reports:
+
+- `reports/github_pages_site.md`
+- `reports/github_pages_site.json`
+
+The static website lives in `site/` and is intended for GitHub Pages after repository Pages settings are enabled. It is a reviewer-facing project page only. It does not load new data, scrape, call APIs, calibrate, validate, prove the model works, determine actual tax payable, create official policy status, or modify firm-level CARSF liability.
 
 ## Run the Simulator
 

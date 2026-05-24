@@ -136,3 +136,11 @@ Build 34.5 adds a full repo integrity audit over runners, reports, JSON outputs,
 No new data is loaded by Build 34.5. The audit does not fake missing data, calibrate the model, validate the model, prove the model works, determine actual tax payable, create firm-level liability, create legal sufficiency, create official status, or create implementation readiness. Public aggregate values remain boundary-limited, placeholders remain placeholders unless already mapped otherwise, and scenario constraints remain constraints rather than validation.
 
 Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-34.5 are included in a later sealed RC.
+
+## Build 35 GitHub Pages Project Website Addendum
+
+Build 35 adds a static GitHub Pages-ready project website under `site/`. It explains the CARSF project, policy question, model stack, loaded public aggregate values, placeholder replacement map, calibration-boundary map, scenario constraint layer, full repo integrity/gap audit, missing data, local test commands, report reading order, and reviewer pathway.
+
+No new data is loaded by Build 35. The site has no backend, analytics, tracking, scraping, external API calls, or external CDN dependency. It does not calibrate the model, validate the model, prove the model works, determine actual tax payable, create firm-level liability, create legal sufficiency, create official status, or create implementation readiness.
+
+Build 25 sealed the previous RC state. A new integrity seal must be regenerated if Builds 26-35 are included in a later sealed RC.

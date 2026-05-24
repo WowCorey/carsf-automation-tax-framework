@@ -213,6 +213,12 @@ Build 34.5 checks the repo as one connected prototype. It covers runner wiring, 
 
 This is a full repo integrity audit only. No new data is loaded, missing data is not faked, calibration has not been completed, public data does not prove the model works, scenario constraints remain constraints, and missing factors requiring data or review remain blocked. The audit does not determine actual tax payable, create legal sufficiency, create operational readiness, create official status, or modify firm-level CARSF liability. Build 25 sealed the earlier RC state; a new integrity seal must be regenerated if Builds 26-34.5 are included in a later sealed RC.
 
+## Build 35 GitHub Pages Project Website
+
+Build 35 adds a polished static website for reviewer-facing project navigation. The site explains CARSF, the policy question, the model stack, public aggregate data loaded, placeholder replacement mapping, calibration boundaries, scenario constraints, the full repo integrity/gap audit, missing data, local test commands, report reading order, and reviewer pathways.
+
+This is a static website only. It has no backend, no analytics, no tracking, no scraping, no external API calls, and no external CDN dependency. It loads no new data and does not calibrate, validate, prove the model works, determine actual tax payable, create official policy status, create legal sufficiency, create implementation readiness, or modify firm-level CARSF liability. Build 25 sealed the earlier RC state; a new integrity seal must be regenerated if Builds 26-35 are included in a later sealed RC.
+
 ## Next Claude Review Should Attack
 
 - Whether the example runner hides any policy assumptions inside code defaults.
