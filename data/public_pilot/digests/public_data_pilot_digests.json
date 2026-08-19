@@ -19,16 +19,16 @@
       "sha256": "5bee9f85eea80d3e60bb401b53edc6c856f30c7d0319d2dd3fecf5a7a947125f"
     },
     {
-      "bytes": 19139,
+      "bytes": 18964,
       "digest_scope": "public_data_pilot_integrity_metadata_only",
       "path": "reports/public_data_pilot.md",
-      "sha256": "b1e30e102a57a786767957fe3f008038def0db3395681b36732ff4d9d813fbb2"
+      "sha256": "454fcfbf8d78afc7286ed6fe09c80379781fb39ccb5093094dcfa31819f36589"
     },
     {
-      "bytes": 65881,
+      "bytes": 64266,
       "digest_scope": "public_data_pilot_integrity_metadata_only",
       "path": "reports/public_data_pilot.json",
-      "sha256": "cbd10f68055e5359c42711b16473a6216dc12569d6f5c65542e7ca88922db079"
+      "sha256": "ae4b9d778e5874ff92967b8f86fd5408f1cc80fecdc5c62083fca7bbca06d54c"
     }
   ],
   "metadata": {
